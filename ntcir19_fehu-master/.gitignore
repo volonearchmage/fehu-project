@@ -1,0 +1,43 @@
+# Python 
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python 
+env/
+venv/
+ENV/
+VENV/
+
+# IDE 
+.vscode/
+.idea/
+*.iml
+
+# Mac 
+.DS_Store
+
+# log
+*.log
+
+# temps
+tmp/
+temp/
+
+# dataset files
+*.sqlite3
+*.db
+
+# Node modules 
+node_modules/
+
+# environment info
+.env
+
+# .idea information
+.idea/*
+
+# . others
+.DS_Store
+**/.DS_Store

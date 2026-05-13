@@ -1,0 +1,37 @@
+[
+    {
+        "guid": "3-16996-4-t",
+        "article_human_values":[
+            {
+                "actor": "3-16996-4-t-0", 
+                "direction": "0",
+                "l1_value": "1"
+            },
+            {
+                "actor": "3-16996-4-t-0", 
+                "direction": "1",
+                "l1_value": "0"
+            },
+            {
+                "actor": "3-16996-4-t-1", 
+                "direction": "1",
+                "l1_value": "5"
+            }
+        ]
+    },
+    {
+        "guid": "0-4480-4-t",
+        "article_human_values":[
+            {
+                "actor": "3-16996-4-t-1", 
+                "direction": "0",
+                "l1_value": "22"
+            },
+            {
+                "actor": "3-16996-4-t-0", 
+                "direction": "0",
+                "l1_value": "3"
+            }
+        ]
+    }
+]

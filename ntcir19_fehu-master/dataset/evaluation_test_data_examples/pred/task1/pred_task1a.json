@@ -1,0 +1,32 @@
+[
+    {
+        "guid": "3-16996-4-t",
+        "article_human_values":[
+            {
+                "actor": "3-16996-4-t-0", 
+                "l2_value": "1"
+            },
+            {
+                "actor": "3-16996-4-t-0", 
+                "l2_value": "1"
+            },
+            {
+                "actor": "3-16996-4-t-1", 
+                "l2_value": "5"
+            }
+        ]
+    },
+    {
+        "guid": "0-4480-4-t",
+        "article_human_values":[
+            {
+                "actor": "3-16996-4-t-1", 
+                "l2_value": "22"
+            },
+            {
+                "actor": "3-16996-4-t-0", 
+                "l2_value": "1"
+            }
+        ]
+    }
+]
