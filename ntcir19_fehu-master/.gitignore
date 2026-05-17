@@ -41,3 +41,17 @@ node_modules/
 # . others
 .DS_Store
 **/.DS_Store
+.env
+__pycache__/
+*.pyc
+checkpoints/
+models/
+wandb/
+.cache/
+output/
+logs/
+checkpoints/
+.env
+__pycache__/
+*.pyc
+.cache/
