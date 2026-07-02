@@ -1,0 +1,9 @@
+method_name,output_dir,pred_task1a_exists,pred_task1b_exists,run_config_exists,detected_provider,detected_model,detected_version,detected_mode,detected_limit,is_full_dev_likely,notes
+Prompt_OAI,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_prompt,True,True,False,unknown,unknown,Prompt_OAI,unknown,unknown,True,Valid full-dev method
+Prompt_DS_Flash,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_prompt_deepseek_v4_flash,True,True,True,deepseek,deepseek-v4-flash,prompt_deepseek_v4_flash,dev,None,True,Valid full-dev method
+DeBERTa_only,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_deberta,True,True,False,unknown,unknown,DeBERTa_only,unknown,unknown,True,Valid full-dev method
+Hybrid_v1,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_hybrid,True,True,True,unknown,gpt-4o-mini,Hybrid_v1,dev,None,True,Valid full-dev method
+Hybrid_v2_DS_Pro,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_hybrid_v2_deepseek_deepseek_v4_pro,True,True,True,deepseek,deepseek-v4-pro,Hybrid_v2_DS_Pro,dev,None,True,Valid full-dev method
+Hybrid_v2_DS_Flash,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_hybrid_v2_deepseek_deepseek_v4_flash,True,True,True,deepseek,deepseek-v4-flash,Hybrid_v2_DS_Flash,dev,None,True,Valid full-dev method
+Hybrid_v2_OAI_old,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_hybrid_v2,True,True,True,unknown,gpt-4o-mini,Hybrid_v2_OAI_old,dev,None,True,Valid full-dev method
+Hybrid_v2_OAI_mini,/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_hybrid_v2_openai_gpt_4o_mini,False,False,False,unknown,unknown,unknown,unknown,unknown,False,Directory does not exist — skipped

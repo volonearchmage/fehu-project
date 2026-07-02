@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260614_163649",
+  "plan_dir": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/research_augmentation_plan/20260614_131524",
+  "profile": "tiny_pilot_v1",
+  "max_total_requests": 20,
+  "quotas_target": {
+    "paraphrase": 4,
+    "rare_positive": 4,
+    "hard_negative": 4,
+    "direction_contrastive": 8
+  },
+  "quotas_actual": {
+    "paraphrase": 4,
+    "rare_positive": 4,
+    "hard_negative": 4,
+    "direction_contrastive": 6
+  },
+  "n_requests": 18,
+  "n_train_seeds_used": 8,
+  "skipped_notes": [],
+  "preview_only": true,
+  "api_called": false,
+  "training_run": false,
+  "notes": "Generation preview only. No API call, no augmented data produced."
+}

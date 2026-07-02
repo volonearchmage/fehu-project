@@ -1,0 +1,56 @@
+# Commands run during this session (chronological; all read-only or audit-folder-only writes)
+
+## 1. Audit-folder creation
+mkdir -p output/research_project_state_review/20260614_235821/{01_REPORT_CHRONOLOGY,02_FILE_INVENTORY,03_PREVIEW_V2_AUDIT,04_SAFETY_AND_SUBMISSION_GATES,05_RESEARCH_DECISION,06_SESSION_REPORT}
+
+## 2. State verification (read-only)
+git status --short
+git diff --stat
+git diff --quiet HEAD -- evaluation.py        # exit 0 = unchanged
+git log -1 --format="%h %ai %s" -- evaluation.py
+find dataset -type f -newermt '2026-06-14 00:00'                      # empty
+find output/task1* -type f -newermt '2026-06-14 00:00'                # empty
+find logs -name 'cache_*.json' -newermt '2026-06-14 00:00'            # empty
+find checkpoints -type f -newermt '2026-06-14 00:00'                  # empty
+test -e .env && echo "exists" || echo "does not exist"
+stat output/research_generation_preview/20260614_163649/generation_requests_preview.jsonl  # 16:36
+stat output/research_generation_preview/20260614_171644/generation_requests_preview.jsonl  # 17:16
+stat output/research_project_state_review/20260614_173346/00_PROJECT_DASHBOARD.md          # 17:52
+
+## 3. Preview v2 + direction-mapping cross-check
+python3 -c "import json; reqs=[json.loads(l) for l in open('output/research_generation_preview/20260614_171644/generation_requests_preview.jsonl') if l.strip()]; from collections import Counter; print(Counter(r['augmentation_type'] for r in reqs))"
+cat dataset/hv_categories/direction_mapping.json
+grep -n 'DIRECTION_NAME\s*=' research/fehu_augmentation_generation_preview_v1/run_generation_preview.py
+grep -n 'DIR_VALID\s*=' research/fehu_submission_safety/fehu_prediction_format_guard.py
+
+## 4. Python audit scripts (heredocs; read-only on existing files; write only into audit folder)
+#   - build preview_v2_request_matrix.csv + preview_v2_warning_items.csv
+#   - build report_claims_matrix.csv + report_chronology.md
+#   - build current_file_inventory.md + generated_artifact_manifest.json + important_paths_table.csv
+
+## 5. Writes (only inside output/research_project_state_review/20260614_235821/)
+#   00_PROJECT_DASHBOARD.md
+#   01_REPORT_CHRONOLOGY/report_chronology.md
+#   01_REPORT_CHRONOLOGY/report_claims_matrix.csv
+#   02_FILE_INVENTORY/current_file_inventory.md
+#   02_FILE_INVENTORY/generated_artifact_manifest.json
+#   02_FILE_INVENTORY/important_paths_table.csv
+#   03_PREVIEW_V2_AUDIT/preview_v2_quality_audit.md
+#   03_PREVIEW_V2_AUDIT/preview_v2_request_matrix.csv
+#   03_PREVIEW_V2_AUDIT/preview_v2_warning_items.csv
+#   04_SAFETY_AND_SUBMISSION_GATES/safety_gate_checklist.md
+#   04_SAFETY_AND_SUBMISSION_GATES/forbidden_modification_check.md
+#   04_SAFETY_AND_SUBMISSION_GATES/direction_mapping_audit.md
+#   05_RESEARCH_DECISION/go_no_go_decision.md
+#   05_RESEARCH_DECISION/recommended_next_steps.md
+#   06_SESSION_REPORT/actions_performed_report.md
+#   06_SESSION_REPORT/commands_run.log
+#   06_SESSION_REPORT/files_created_or_modified.md
+
+## Commands NOT run (and why)
+# python research/fehu_augmentation_v1/run_generation.py       # script does not exist; not authored this session
+# python research/fehu_submission_safety/fehu_prediction_format_guard.py ...
+#                                                              # would write to a new timestamped folder;
+#                                                              # not needed for this audit; previous CLEAN
+#                                                              # run from 2026-06-14 16:38 is referenced
+# conda activate fehu / pip install / git commit / git push   # not needed; read-only audit

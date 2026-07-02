@@ -1,0 +1,102 @@
+method,l1_value_id,l1_value_name,train_gold_count_l1,dev_gold_count_l1,precision_value,recall_value,f1_value,precision_dir,recall_dir,f1_dir,suggested_future_action
+DeBERTa_only,43,Have loyalty towards friends,90,13,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,32,Be behaving properly,60,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,7,Have an exciting life,58,8,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,4,Be independent,57,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,17,Have the right to command,47,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,10,Have pleasure,45,9,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,49,Have a world of beauty,44,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,51,Have the wisdom to accept others,36,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,8,Have a varied life,35,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,9,Be daring,35,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,31,Be self-disciplined,34,11,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,39,Be forgiving,30,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,48,Have harmony with nature,28,4,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,35,Be humble,25,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+DeBERTa_only,24,Be neat and tidy,4,1,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,43,Have loyalty towards friends,90,13,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,32,Be behaving properly,60,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,7,Have an exciting life,58,8,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,4,Be independent,57,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,17,Have the right to command,47,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,10,Have pleasure,45,9,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,49,Have a world of beauty,44,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,51,Have the wisdom to accept others,36,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,8,Have a varied life,35,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,9,Be daring,35,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,31,Be self-disciplined,34,11,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,39,Be forgiving,30,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,48,Have harmony with nature,28,4,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,35,Be humble,25,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v1,24,Be neat and tidy,4,1,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,43,Have loyalty towards friends,90,13,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,32,Be behaving properly,60,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,7,Have an exciting life,58,8,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,4,Be independent,57,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,17,Have the right to command,47,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,10,Have pleasure,45,9,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,49,Have a world of beauty,44,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,51,Have the wisdom to accept others,36,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,8,Have a varied life,35,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,9,Be daring,35,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,31,Be self-disciplined,34,11,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,39,Be forgiving,30,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,48,Have harmony with nature,28,4,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,35,Be humble,25,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Flash,24,Be neat and tidy,4,1,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,43,Have loyalty towards friends,90,13,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,32,Be behaving properly,60,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,7,Have an exciting life,58,8,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,4,Be independent,57,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,17,Have the right to command,47,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,10,Have pleasure,45,9,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,49,Have a world of beauty,44,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,51,Have the wisdom to accept others,36,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,8,Have a varied life,35,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,9,Be daring,35,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,31,Be self-disciplined,34,11,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,39,Be forgiving,30,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,48,Have harmony with nature,28,4,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,35,Be humble,25,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_DS_Pro,24,Be neat and tidy,4,1,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,43,Have loyalty towards friends,90,13,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,32,Be behaving properly,60,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,7,Have an exciting life,58,8,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,4,Be independent,57,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,17,Have the right to command,47,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,10,Have pleasure,45,9,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,49,Have a world of beauty,44,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,51,Have the wisdom to accept others,36,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,8,Have a varied life,35,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,9,Be daring,35,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,31,Be self-disciplined,34,11,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,39,Be forgiving,30,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,48,Have harmony with nature,28,4,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,35,Be humble,25,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Hybrid_v2_OAI_old,24,Be neat and tidy,4,1,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,43,Have loyalty towards friends,90,13,0.3333,0.1538,0.2105,0.3333,0.1538,0.2105,paraphrase_existing_samples
+Prompt_DS_Flash,32,Be behaving properly,60,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,7,Have an exciting life,58,8,0.1429,0.1429,0.1429,0.1429,0.125,0.1333,hard_negative_needed
+Prompt_DS_Flash,4,Be independent,57,10,1.0,0.1,0.1818,1.0,0.1,0.1818,paraphrase_existing_samples
+Prompt_DS_Flash,17,Have the right to command,47,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,10,Have pleasure,45,9,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,49,Have a world of beauty,44,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,8,Have a varied life,35,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,31,Be self-disciplined,34,11,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,39,Be forgiving,30,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_DS_Flash,48,Have harmony with nature,28,4,0.5,0.25,0.3333,0.5,0.25,0.3333,paraphrase_existing_samples
+Prompt_DS_Flash,24,Be neat and tidy,4,1,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,43,Have loyalty towards friends,90,13,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,32,Be behaving properly,60,10,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,7,Have an exciting life,58,8,1.0,0.2857,0.4444,1.0,0.25,0.4,paraphrase_existing_samples
+Prompt_OAI,4,Be independent,57,10,1.0,0.1,0.1818,1.0,0.1,0.1818,paraphrase_existing_samples
+Prompt_OAI,17,Have the right to command,47,2,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,10,Have pleasure,45,9,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,49,Have a world of beauty,44,6,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,8,Have a varied life,35,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,9,Be daring,35,6,1.0,0.1667,0.2857,1.0,0.1667,0.2857,paraphrase_existing_samples
+Prompt_OAI,31,Be self-disciplined,34,11,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,39,Be forgiving,30,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,48,Have harmony with nature,28,4,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,35,Be humble,25,3,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation
+Prompt_OAI,24,Be neat and tidy,4,1,0.0,0.0,0.0,0.0,0.0,0.0,rare_positive_augmentation

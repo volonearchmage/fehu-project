@@ -1,0 +1,12 @@
+{
+  "method": "prompt_only",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "version": "prompt_deepseek_v4_flash",
+  "output_dir": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_prompt_deepseek_v4_flash",
+  "cache_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/logs/cache_dev_deepseek_v4_flash.json",
+  "mode": "dev",
+  "limit": 5,
+  "timestamp": "2026-05-19T11:01:57.306487+00:00",
+  "notes": "Prompt-only pipeline based on run_pipeline.py, with only LLM provider/model changed to DeepSeek V4 Flash."
+}

@@ -1,0 +1,16 @@
+method,l1_value_id,l1_value_name,train_gold_count_l1,dev_gold_count_l1,pred_count_value,TP_value,FP_value,FN_value,precision_value,recall_value,f1_value
+DeBERTa_only,37,Be helpful,682,106,418,95,323,11,0.2273,0.8962,0.3626
+Hybrid_v1,22,Have good health,883,122,300,78,222,41,0.26,0.6555,0.3723
+Hybrid_v1,37,Be helpful,682,106,435,106,329,0,0.2437,1.0,0.3919
+Hybrid_v1,30,Be compliant,638,81,173,29,144,52,0.1676,0.358,0.2283
+Hybrid_v1,5,Have freedom of action,553,72,20,4,16,64,0.2,0.0588,0.0909
+Hybrid_v1,38,Be honest,486,72,283,38,245,31,0.1343,0.5507,0.2159
+Hybrid_v1,15,Be courageous,369,64,373,63,310,1,0.1689,0.9844,0.2883
+Hybrid_v1,12,Have success,338,54,394,51,343,1,0.1294,0.9808,0.2287
+Hybrid_v1,29,Be holding religious faith,255,37,306,28,278,5,0.0915,0.8485,0.1652
+Prompt_DS_Flash,32,Be behaving properly,60,10,12,0,12,10,0.0,0.0,0.0
+Prompt_DS_Flash,7,Have an exciting life,58,8,7,1,6,6,0.1429,0.1429,0.1429
+Prompt_DS_Flash,51,Have the wisdom to accept others,36,2,6,1,5,1,0.1667,0.5,0.25
+Prompt_OAI,46,Have a world at peace,364,48,24,7,17,41,0.2917,0.1458,0.1944
+Prompt_OAI,41,Be loving,133,27,43,9,34,18,0.2093,0.3333,0.2571
+Prompt_OAI,3,Be choosing own goals,123,16,7,2,5,14,0.2857,0.125,0.1739

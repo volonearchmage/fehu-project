@@ -1,0 +1,56 @@
+{
+  "deberta_only": {
+    "task1a": {
+      "micro_f1": 0.5056210584041677,
+      "macro_f1": 0.13419957946795175,
+      "precision": 0.5162374020156775,
+      "recall": 0.4954325631380978
+    },
+    "task1b": {
+      "micro_f1": 0.2988904299583911,
+      "macro_f1": 0.03284690786046727,
+      "precision": 0.2551805802249852,
+      "recall": 0.3606694560669456,
+      "drr": 0.2376237623762376
+    },
+    "total_predictions_1a": 1786,
+    "total_predictions_1b": 3378,
+    "avg_labels_per_article_1a": 10.09
+  },
+  "hybrid": {
+    "task1a": {
+      "micro_f1": 0.4651706404862085,
+      "macro_f1": 0.1957786023413828,
+      "precision": 0.41166735622672734,
+      "recall": 0.5346587855991403
+    },
+    "task1b": {
+      "micro_f1": 0.23896858543671692,
+      "macro_f1": 0.03343242520435679,
+      "precision": 0.2111004170676933,
+      "recall": 0.27531380753138074,
+      "drr": 0.07425742574257425
+    },
+    "total_predictions_1a": 2417,
+    "total_predictions_1b": 3117,
+    "avg_labels_per_article_1a": 13.66
+  },
+  "prompt_only": {
+    "task1a": {
+      "micro_f1": 0.4810035842293906,
+      "macro_f1": 0.2740299925364281,
+      "precision": 0.7222820236813778,
+      "recall": 0.36055883933369154
+    },
+    "task1b": {
+      "micro_f1": 0.34240561896400357,
+      "macro_f1": 0.14955869685261353,
+      "precision": 0.569620253164557,
+      "recall": 0.24476987447698745,
+      "drr": 0.02115211521152115
+    },
+    "total_predictions_1a": 929,
+    "total_predictions_1b": 1027,
+    "avg_labels_per_article_1a": 5.25
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-15T17:34:56.568003+00:00",
+  "model": "deepseek-v4-pro",
+  "base_url": "https://api.deepseek.com",
+  "endpoint_path": "/chat/completions",
+  "temperature": 0.2,
+  "max_tokens": 1800,
+  "response_format_requested": true,
+  "manifest_path": "output/research_human_approval/20260616_004845/02b_human_approved_manifest.jsonl",
+  "outdir": "output/research_generation_tiny_pilot/20260615_171954",
+  "approved_request_count": 6,
+  "execute_mode": true,
+  "api_key_present": true,
+  "api_key_value_logged": false,
+  "retry_policy": "max_1_retry_per_request",
+  "official_data_modified": false
+}

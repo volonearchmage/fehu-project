@@ -1,0 +1,12 @@
+output_dir,exists,pred_task1a_exists,pred_task1b_exists,metrics_exists,run_config_exists,comparison_table_exists,detected_method,detected_provider,detected_model,detected_version,detected_limit,likely_full_dev,risk_notes
+output/task1,yes,yes,yes,no,no,no,prompt_only_or_deberta_ambiguous,unknown,unknown,unknown,unknown,yes,"OVERWRITE COLLISION — run_pipeline.py and train_deberta.py both target this; currently identical to task1_prompt/"
+output/task1_prompt,yes,yes,yes,no,no,no,prompt_only_openai,openai,unknown_gpt-4o-mini_likely,unknown,unknown,yes,"No run_config; identical hash to output/task1/"
+output/task1_prompt_deepseek_v4_flash,yes,yes,yes,yes,yes,yes,prompt_only,deepseek,deepseek-v4-flash,prompt_deepseek_v4_flash,null,yes,Trustworthy
+output/task1_prompt_deepseek_v4_flash_limit5,yes,yes,yes,yes,yes,yes,prompt_only,deepseek,deepseek-v4-flash,prompt_deepseek_v4_flash,5,NO,Limit run — exclude from main comparison
+output/task1_deberta,yes,yes,yes,no,no,no,deberta_only,n/a,microsoft/deberta-v3-base+LoRA,unknown,unknown,yes,No run_config; threshold=0.3 assumed from train_deberta.py
+output/task1_hybrid,yes,yes,yes,yes,yes,no,hybrid_v1,openai_implicit,gpt-4o-mini,n/a,null,yes,run_config has llm_model but no provider field
+output/task1_hybrid_v2,yes,yes,yes,yes,yes,yes,hybrid_v2_orphan,unknown,gpt-4o-mini,n/a,null,yes,"ORPHAN — predates provider-aware naming; canonical task1_hybrid_v2_openai_gpt_4o_mini/ missing"
+output/task1_hybrid_v2_limit20,yes,yes,yes,yes,yes,yes,hybrid_v2,unknown,gpt-4o-mini,n/a,20,NO,Limit run
+output/task1_hybrid_v2_deepseek_deepseek_v4_pro,yes,yes,yes,yes,yes,yes,hybrid_v2,deepseek,deepseek-v4-pro,n/a,null,yes,Trustworthy
+output/task1_hybrid_v2_deepseek_deepseek_v4_flash,yes,yes,yes,yes,yes,yes,hybrid_v2,deepseek,deepseek-v4-flash,n/a,null,yes,Trustworthy
+output/task1_hybrid_v2_openai_gpt_4o_mini,NO,NO,NO,NO,NO,NO,n/a,n/a,n/a,n/a,n/a,n/a,Canonical Hybrid v2 OAI dir is MISSING (script's COMPARE_DIRS expects it)
