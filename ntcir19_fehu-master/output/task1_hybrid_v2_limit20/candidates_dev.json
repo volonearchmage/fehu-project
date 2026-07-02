@@ -1,0 +1,4802 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "title": "4 Civilians Killed, 10 Wounded in Faryab Mortar Attack",
+    "actors": [
+      {
+        "actor_id": "1-15231-2-1-0",
+        "actor_name": "Taliban",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.492598,
+            "aligned_score": 0.492598,
+            "contradictory_score": 0.246369
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.419882,
+            "aligned_score": 0.279551,
+            "contradictory_score": 0.419882
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.331777,
+            "aligned_score": 0.331777,
+            "contradictory_score": 0.299633
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.308855,
+            "aligned_score": 0.308855,
+            "contradictory_score": 0.286023
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.29324,
+            "aligned_score": 0.29324,
+            "contradictory_score": 0.066443
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.273231,
+            "aligned_score": 0.273231,
+            "contradictory_score": 0.092556
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.259474,
+            "aligned_score": 0.259474,
+            "contradictory_score": 0.246735
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.246582,
+            "aligned_score": 0.246582,
+            "contradictory_score": 0.119868
+          },
+          {
+            "l1_value_id": "5",
+            "l1_value_name": "Have freedom of action",
+            "confidence": 0.236931,
+            "aligned_score": 0.236931,
+            "contradictory_score": 0.218671
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.225697,
+            "aligned_score": 0.225697,
+            "contradictory_score": 0.202648
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.223412,
+            "aligned_score": 0.223412,
+            "contradictory_score": 0.022131
+          },
+          {
+            "l1_value_id": "13",
+            "l1_value_name": "Be capable",
+            "confidence": 0.214395,
+            "aligned_score": 0.214395,
+            "contradictory_score": 0.073444
+          }
+        ]
+      },
+      {
+        "actor_id": "1-15231-2-1-1",
+        "actor_name": "Civilians",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.492635,
+            "aligned_score": 0.492635,
+            "contradictory_score": 0.245908
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.419772,
+            "aligned_score": 0.280944,
+            "contradictory_score": 0.419772
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.331481,
+            "aligned_score": 0.331481,
+            "contradictory_score": 0.300163
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.308552,
+            "aligned_score": 0.308552,
+            "contradictory_score": 0.286576
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.293774,
+            "aligned_score": 0.293774,
+            "contradictory_score": 0.066674
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.27341,
+            "aligned_score": 0.27341,
+            "contradictory_score": 0.09289
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.259819,
+            "aligned_score": 0.259819,
+            "contradictory_score": 0.246884
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.246926,
+            "aligned_score": 0.246926,
+            "contradictory_score": 0.120196
+          },
+          {
+            "l1_value_id": "5",
+            "l1_value_name": "Have freedom of action",
+            "confidence": 0.236661,
+            "aligned_score": 0.236661,
+            "contradictory_score": 0.218439
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.226003,
+            "aligned_score": 0.226003,
+            "contradictory_score": 0.20314
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.224608,
+            "aligned_score": 0.224608,
+            "contradictory_score": 0.022251
+          },
+          {
+            "l1_value_id": "13",
+            "l1_value_name": "Be capable",
+            "confidence": 0.214304,
+            "aligned_score": 0.214304,
+            "contradictory_score": 0.073277
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4495-1-1",
+    "title": "Tunisia: How a cooking contest has brought rural voters to the ballot box",
+    "actors": [
+      {
+        "actor_id": "0-4495-1-1-0",
+        "actor_name": "Tunisia Youth Impact and Volunteers",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518784,
+            "aligned_score": 0.518784,
+            "contradictory_score": 0.232811
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.42335,
+            "aligned_score": 0.3685,
+            "contradictory_score": 0.42335
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348239,
+            "aligned_score": 0.33194,
+            "contradictory_score": 0.348239
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332257,
+            "aligned_score": 0.332257,
+            "contradictory_score": 0.090315
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.318358,
+            "aligned_score": 0.301399,
+            "contradictory_score": 0.318358
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291041,
+            "aligned_score": 0.291041,
+            "contradictory_score": 0.115256
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.281919,
+            "aligned_score": 0.281919,
+            "contradictory_score": 0.036146
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.276698,
+            "aligned_score": 0.276698,
+            "contradictory_score": 0.125765
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268923,
+            "aligned_score": 0.268923,
+            "contradictory_score": 0.263745
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257962,
+            "aligned_score": 0.257962,
+            "contradictory_score": 0.144054
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.251144,
+            "aligned_score": 0.251144,
+            "contradictory_score": 0.250374
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.231214,
+            "aligned_score": 0.231214,
+            "contradictory_score": 0.205754
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4495-1-1-1",
+        "actor_name": "Rural Women Participants and Local Community",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519018,
+            "aligned_score": 0.519018,
+            "contradictory_score": 0.232595
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.42318,
+            "aligned_score": 0.368699,
+            "contradictory_score": 0.42318
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348384,
+            "aligned_score": 0.332079,
+            "contradictory_score": 0.348384
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.33236,
+            "aligned_score": 0.33236,
+            "contradictory_score": 0.090337
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.318368,
+            "aligned_score": 0.301215,
+            "contradictory_score": 0.318368
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291054,
+            "aligned_score": 0.291054,
+            "contradictory_score": 0.11536
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.281916,
+            "aligned_score": 0.281916,
+            "contradictory_score": 0.036193
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.276893,
+            "aligned_score": 0.276893,
+            "contradictory_score": 0.125744
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268884,
+            "aligned_score": 0.268884,
+            "contradictory_score": 0.26382
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.258093,
+            "aligned_score": 0.258093,
+            "contradictory_score": 0.14412
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.251174,
+            "aligned_score": 0.251174,
+            "contradictory_score": 0.250521
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.231107,
+            "aligned_score": 0.231107,
+            "contradictory_score": 0.205715
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4495-1-1-2",
+        "actor_name": "Election Authorities and Observers",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.521606,
+            "aligned_score": 0.521606,
+            "contradictory_score": 0.232275
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422887,
+            "aligned_score": 0.372781,
+            "contradictory_score": 0.422887
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.35134,
+            "aligned_score": 0.33479,
+            "contradictory_score": 0.35134
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.336696,
+            "aligned_score": 0.336696,
+            "contradictory_score": 0.093599
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.320349,
+            "aligned_score": 0.300494,
+            "contradictory_score": 0.320349
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.292105,
+            "aligned_score": 0.292105,
+            "contradictory_score": 0.118482
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.285735,
+            "aligned_score": 0.285735,
+            "contradictory_score": 0.038133
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.281672,
+            "aligned_score": 0.281672,
+            "contradictory_score": 0.12577
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269505,
+            "aligned_score": 0.269505,
+            "contradictory_score": 0.266048
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.264216,
+            "aligned_score": 0.264216,
+            "contradictory_score": 0.145571
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.256716,
+            "aligned_score": 0.255537,
+            "contradictory_score": 0.256716
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.233263,
+            "aligned_score": 0.233263,
+            "contradictory_score": 0.207177
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "6-18979-2-t",
+    "title": "Defining Organized Crime",
+    "actors": [
+      {
+        "actor_id": "6-18979-2-t-0",
+        "actor_name": "Organized Crime Groups and Criminal Enterprises",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518096,
+            "aligned_score": 0.518096,
+            "contradictory_score": 0.232523
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.424285,
+            "aligned_score": 0.369943,
+            "contradictory_score": 0.424285
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348058,
+            "aligned_score": 0.332165,
+            "contradictory_score": 0.348058
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333484,
+            "aligned_score": 0.333484,
+            "contradictory_score": 0.090483
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.320542,
+            "aligned_score": 0.30189,
+            "contradictory_score": 0.320542
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289602,
+            "aligned_score": 0.289602,
+            "contradictory_score": 0.115447
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.281116,
+            "aligned_score": 0.281116,
+            "contradictory_score": 0.036189
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.277464,
+            "aligned_score": 0.277464,
+            "contradictory_score": 0.125426
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269026,
+            "aligned_score": 0.269026,
+            "contradictory_score": 0.262816
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257991,
+            "aligned_score": 0.257991,
+            "contradictory_score": 0.144185
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.250347,
+            "aligned_score": 0.249959,
+            "contradictory_score": 0.250347
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230357,
+            "aligned_score": 0.230357,
+            "contradictory_score": 0.205953
+          }
+        ]
+      },
+      {
+        "actor_id": "6-18979-2-t-1",
+        "actor_name": "Law Enforcement, Justice System, and Broader Society",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518075,
+            "aligned_score": 0.518075,
+            "contradictory_score": 0.232534
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.424009,
+            "aligned_score": 0.370063,
+            "contradictory_score": 0.424009
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347867,
+            "aligned_score": 0.331952,
+            "contradictory_score": 0.347867
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333898,
+            "aligned_score": 0.333898,
+            "contradictory_score": 0.090523
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.320668,
+            "aligned_score": 0.301982,
+            "contradictory_score": 0.320668
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289532,
+            "aligned_score": 0.289532,
+            "contradictory_score": 0.115577
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.28153,
+            "aligned_score": 0.28153,
+            "contradictory_score": 0.036144
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.277078,
+            "aligned_score": 0.277078,
+            "contradictory_score": 0.125315
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269158,
+            "aligned_score": 0.269158,
+            "contradictory_score": 0.26283
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257892,
+            "aligned_score": 0.257892,
+            "contradictory_score": 0.144182
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.250326,
+            "aligned_score": 0.249914,
+            "contradictory_score": 0.250326
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230232,
+            "aligned_score": 0.230232,
+            "contradictory_score": 0.206198
+          }
+        ]
+      },
+      {
+        "actor_id": "6-18979-2-t-2",
+        "actor_name": "Crime Experts and Policy Makers",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.5181,
+            "aligned_score": 0.5181,
+            "contradictory_score": 0.232643
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.424044,
+            "aligned_score": 0.369828,
+            "contradictory_score": 0.424044
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347989,
+            "aligned_score": 0.331938,
+            "contradictory_score": 0.347989
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333501,
+            "aligned_score": 0.333501,
+            "contradictory_score": 0.090502
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.320488,
+            "aligned_score": 0.302068,
+            "contradictory_score": 0.320488
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289619,
+            "aligned_score": 0.289619,
+            "contradictory_score": 0.115472
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.281159,
+            "aligned_score": 0.281159,
+            "contradictory_score": 0.036199
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.277338,
+            "aligned_score": 0.277338,
+            "contradictory_score": 0.125439
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268993,
+            "aligned_score": 0.268993,
+            "contradictory_score": 0.262694
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257744,
+            "aligned_score": 0.257744,
+            "contradictory_score": 0.144164
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.250351,
+            "aligned_score": 0.249948,
+            "contradictory_score": 0.250351
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.23054,
+            "aligned_score": 0.23054,
+            "contradictory_score": 0.206082
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "13-wiki-img/24416-1/24416-1-1",
+    "title": "Inter-city traffic movement to be suspended during Tsagaan Sar",
+    "actors": [
+      {
+        "actor_id": "13-wiki-img/24416-1/24416-1-1-0",
+        "actor_name": "State Emergency Commission / Government Authorities",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.502796,
+            "aligned_score": 0.502796,
+            "contradictory_score": 0.245254
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.42061,
+            "aligned_score": 0.275462,
+            "contradictory_score": 0.42061
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.336185,
+            "aligned_score": 0.336185,
+            "contradictory_score": 0.297529
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.305339,
+            "aligned_score": 0.305339,
+            "contradictory_score": 0.280274
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.291732,
+            "aligned_score": 0.291732,
+            "contradictory_score": 0.065314
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.271824,
+            "aligned_score": 0.271824,
+            "contradictory_score": 0.091458
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.256529,
+            "aligned_score": 0.256529,
+            "contradictory_score": 0.245219
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.250656,
+            "aligned_score": 0.250656,
+            "contradictory_score": 0.116663
+          },
+          {
+            "l1_value_id": "5",
+            "l1_value_name": "Have freedom of action",
+            "confidence": 0.240912,
+            "aligned_score": 0.240912,
+            "contradictory_score": 0.219427
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.225603,
+            "aligned_score": 0.225603,
+            "contradictory_score": 0.199662
+          },
+          {
+            "l1_value_id": "13",
+            "l1_value_name": "Be capable",
+            "confidence": 0.214981,
+            "aligned_score": 0.214981,
+            "contradictory_score": 0.074527
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.210953,
+            "aligned_score": 0.210953,
+            "contradictory_score": 0.021446
+          }
+        ]
+      },
+      {
+        "actor_id": "13-wiki-img/24416-1/24416-1-1-1",
+        "actor_name": "Citizens and Families (Affected by Travel Restrictions)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.502576,
+            "aligned_score": 0.502576,
+            "contradictory_score": 0.243385
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420608,
+            "aligned_score": 0.278646,
+            "contradictory_score": 0.420608
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.335924,
+            "aligned_score": 0.335924,
+            "contradictory_score": 0.299691
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.30561,
+            "aligned_score": 0.30561,
+            "contradictory_score": 0.282353
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.293657,
+            "aligned_score": 0.293657,
+            "contradictory_score": 0.066023
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.272275,
+            "aligned_score": 0.272275,
+            "contradictory_score": 0.092797
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.258816,
+            "aligned_score": 0.258816,
+            "contradictory_score": 0.246178
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.250802,
+            "aligned_score": 0.250802,
+            "contradictory_score": 0.117855
+          },
+          {
+            "l1_value_id": "5",
+            "l1_value_name": "Have freedom of action",
+            "confidence": 0.23971,
+            "aligned_score": 0.23971,
+            "contradictory_score": 0.217804
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.226362,
+            "aligned_score": 0.226362,
+            "contradictory_score": 0.201009
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.216229,
+            "aligned_score": 0.216229,
+            "contradictory_score": 0.021754
+          },
+          {
+            "l1_value_id": "13",
+            "l1_value_name": "Be capable",
+            "confidence": 0.214574,
+            "aligned_score": 0.214574,
+            "contradictory_score": 0.074006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4931-1-4",
+    "title": "Clutha crash: Inquiry says pilot 'took a chance' to ignore fuel warnings",
+    "actors": [
+      {
+        "actor_id": "0-4931-1-4-0",
+        "actor_name": "Pilot (Captain David Traill)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518854,
+            "aligned_score": 0.518854,
+            "contradictory_score": 0.229512
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.423233,
+            "aligned_score": 0.368194,
+            "contradictory_score": 0.423233
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.349371,
+            "aligned_score": 0.334056,
+            "contradictory_score": 0.349371
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.334965,
+            "aligned_score": 0.334965,
+            "contradictory_score": 0.09041
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.319277,
+            "aligned_score": 0.300317,
+            "contradictory_score": 0.319277
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291287,
+            "aligned_score": 0.291287,
+            "contradictory_score": 0.115788
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.282567,
+            "aligned_score": 0.282567,
+            "contradictory_score": 0.036057
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.278822,
+            "aligned_score": 0.278822,
+            "contradictory_score": 0.126338
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267997,
+            "aligned_score": 0.267997,
+            "contradictory_score": 0.264315
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257839,
+            "aligned_score": 0.257839,
+            "contradictory_score": 0.144552
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248934,
+            "aligned_score": 0.248934,
+            "contradictory_score": 0.247076
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230648,
+            "aligned_score": 0.230648,
+            "contradictory_score": 0.205596
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4931-1-4-1",
+        "actor_name": "Authorities and Inquiry Officials (Sheriff, Crown Office, Investigation Bodies)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518649,
+            "aligned_score": 0.518649,
+            "contradictory_score": 0.229936
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422848,
+            "aligned_score": 0.367773,
+            "contradictory_score": 0.422848
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348497,
+            "aligned_score": 0.334279,
+            "contradictory_score": 0.348497
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.334556,
+            "aligned_score": 0.334556,
+            "contradictory_score": 0.089982
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.318746,
+            "aligned_score": 0.300512,
+            "contradictory_score": 0.318746
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291221,
+            "aligned_score": 0.291221,
+            "contradictory_score": 0.115946
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.281078,
+            "aligned_score": 0.281078,
+            "contradictory_score": 0.035946
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.278736,
+            "aligned_score": 0.278736,
+            "contradictory_score": 0.125918
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268351,
+            "aligned_score": 0.268351,
+            "contradictory_score": 0.264132
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257539,
+            "aligned_score": 0.257539,
+            "contradictory_score": 0.144825
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248375,
+            "aligned_score": 0.248375,
+            "contradictory_score": 0.247397
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229789,
+            "aligned_score": 0.229789,
+            "contradictory_score": 0.205927
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4931-1-4-2",
+        "actor_name": "Victims' Families and Bar Owner",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518862,
+            "aligned_score": 0.518862,
+            "contradictory_score": 0.229625
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.423184,
+            "aligned_score": 0.368377,
+            "contradictory_score": 0.423184
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.349271,
+            "aligned_score": 0.333914,
+            "contradictory_score": 0.349271
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.334851,
+            "aligned_score": 0.334851,
+            "contradictory_score": 0.090449
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.319168,
+            "aligned_score": 0.300459,
+            "contradictory_score": 0.319168
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291279,
+            "aligned_score": 0.291279,
+            "contradictory_score": 0.115726
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.282385,
+            "aligned_score": 0.282385,
+            "contradictory_score": 0.03609
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.278872,
+            "aligned_score": 0.278872,
+            "contradictory_score": 0.126396
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267992,
+            "aligned_score": 0.267992,
+            "contradictory_score": 0.264349
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257766,
+            "aligned_score": 0.257766,
+            "contradictory_score": 0.144602
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248999,
+            "aligned_score": 0.248999,
+            "contradictory_score": 0.247129
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.23057,
+            "aligned_score": 0.23057,
+            "contradictory_score": 0.205671
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4931-1-4-3",
+        "actor_name": "Aircraft Manufacturer (Airbus Helicopters)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519056,
+            "aligned_score": 0.519056,
+            "contradictory_score": 0.229516
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.423381,
+            "aligned_score": 0.368214,
+            "contradictory_score": 0.423381
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.349305,
+            "aligned_score": 0.334297,
+            "contradictory_score": 0.349305
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.335009,
+            "aligned_score": 0.335009,
+            "contradictory_score": 0.090434
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.31909,
+            "aligned_score": 0.300337,
+            "contradictory_score": 0.31909
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291203,
+            "aligned_score": 0.291203,
+            "contradictory_score": 0.115795
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.282466,
+            "aligned_score": 0.282466,
+            "contradictory_score": 0.036042
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.278846,
+            "aligned_score": 0.278846,
+            "contradictory_score": 0.126309
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268054,
+            "aligned_score": 0.268054,
+            "contradictory_score": 0.264281
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257742,
+            "aligned_score": 0.257742,
+            "contradictory_score": 0.144609
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248911,
+            "aligned_score": 0.248911,
+            "contradictory_score": 0.247004
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230569,
+            "aligned_score": 0.230569,
+            "contradictory_score": 0.205747
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "3-17441-15-t",
+    "title": "Italy's EconMin sees 6% fall in 2020 GDP as 'realistic' estimate",
+    "actors": [
+      {
+        "actor_id": "3-17441-15-t-0",
+        "actor_name": "Italian Government and Officials",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.508277,
+            "aligned_score": 0.508277,
+            "contradictory_score": 0.244909
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.414716,
+            "aligned_score": 0.341825,
+            "contradictory_score": 0.414716
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.333472,
+            "aligned_score": 0.330172,
+            "contradictory_score": 0.333472
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.31054,
+            "aligned_score": 0.31054,
+            "contradictory_score": 0.079799
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.306884,
+            "aligned_score": 0.306884,
+            "contradictory_score": 0.302982
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.282034,
+            "aligned_score": 0.282034,
+            "contradictory_score": 0.108216
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.265728,
+            "aligned_score": 0.265728,
+            "contradictory_score": 0.124097
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.265638,
+            "aligned_score": 0.265638,
+            "contradictory_score": 0.262261
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.257752,
+            "aligned_score": 0.257752,
+            "contradictory_score": 0.032702
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.245437,
+            "aligned_score": 0.245437,
+            "contradictory_score": 0.240536
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.244187,
+            "aligned_score": 0.244187,
+            "contradictory_score": 0.138247
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.228117,
+            "aligned_score": 0.228117,
+            "contradictory_score": 0.202288
+          }
+        ]
+      },
+      {
+        "actor_id": "3-17441-15-t-1",
+        "actor_name": "Business Associations (Confindustria and Allies)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.508175,
+            "aligned_score": 0.508175,
+            "contradictory_score": 0.245274
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.414156,
+            "aligned_score": 0.340628,
+            "contradictory_score": 0.414156
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.333059,
+            "aligned_score": 0.330348,
+            "contradictory_score": 0.333059
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.310095,
+            "aligned_score": 0.310095,
+            "contradictory_score": 0.07954
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.307147,
+            "aligned_score": 0.307147,
+            "contradictory_score": 0.3028
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.28183,
+            "aligned_score": 0.28183,
+            "contradictory_score": 0.10813
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.265626,
+            "aligned_score": 0.265626,
+            "contradictory_score": 0.124194
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.26544,
+            "aligned_score": 0.26544,
+            "contradictory_score": 0.262288
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.257397,
+            "aligned_score": 0.257397,
+            "contradictory_score": 0.032628
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.245275,
+            "aligned_score": 0.245275,
+            "contradictory_score": 0.240358
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.244304,
+            "aligned_score": 0.244304,
+            "contradictory_score": 0.138097
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.228017,
+            "aligned_score": 0.228017,
+            "contradictory_score": 0.202246
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "21-31050-3-1",
+    "title": "Tokyo Olympics chief Yoshiro Mori resigns after sexist remarks",
+    "actors": [
+      {
+        "actor_id": "21-31050-3-1-0",
+        "actor_name": "Yoshiro Mori and Conservative Olympic Leadership",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518918,
+            "aligned_score": 0.518918,
+            "contradictory_score": 0.234074
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422745,
+            "aligned_score": 0.368464,
+            "contradictory_score": 0.422745
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347097,
+            "aligned_score": 0.332118,
+            "contradictory_score": 0.347097
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332426,
+            "aligned_score": 0.332426,
+            "contradictory_score": 0.089669
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316127,
+            "aligned_score": 0.301393,
+            "contradictory_score": 0.316127
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289915,
+            "aligned_score": 0.289915,
+            "contradictory_score": 0.114835
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.280092,
+            "aligned_score": 0.280092,
+            "contradictory_score": 0.035835
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.275164,
+            "aligned_score": 0.275164,
+            "contradictory_score": 0.126086
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267499,
+            "aligned_score": 0.267499,
+            "contradictory_score": 0.26397
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.256249,
+            "aligned_score": 0.256249,
+            "contradictory_score": 0.144495
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.24968,
+            "aligned_score": 0.24968,
+            "contradictory_score": 0.248665
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229901,
+            "aligned_score": 0.229901,
+            "contradictory_score": 0.205421
+          }
+        ]
+      },
+      {
+        "actor_id": "21-31050-3-1-1",
+        "actor_name": "Japanese Public, Athletes, and Reformist Lawmakers",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519314,
+            "aligned_score": 0.519314,
+            "contradictory_score": 0.233944
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422567,
+            "aligned_score": 0.368793,
+            "contradictory_score": 0.422567
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347152,
+            "aligned_score": 0.332318,
+            "contradictory_score": 0.347152
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332644,
+            "aligned_score": 0.332644,
+            "contradictory_score": 0.089832
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316338,
+            "aligned_score": 0.301458,
+            "contradictory_score": 0.316338
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289858,
+            "aligned_score": 0.289858,
+            "contradictory_score": 0.114992
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.280544,
+            "aligned_score": 0.280544,
+            "contradictory_score": 0.035888
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.275186,
+            "aligned_score": 0.275186,
+            "contradictory_score": 0.125999
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267542,
+            "aligned_score": 0.267542,
+            "contradictory_score": 0.264228
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.256357,
+            "aligned_score": 0.256357,
+            "contradictory_score": 0.144502
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249692,
+            "aligned_score": 0.249692,
+            "contradictory_score": 0.248853
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229738,
+            "aligned_score": 0.229738,
+            "contradictory_score": 0.205479
+          }
+        ]
+      },
+      {
+        "actor_id": "21-31050-3-1-2",
+        "actor_name": "International Olympic Committee (IOC)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519173,
+            "aligned_score": 0.519173,
+            "contradictory_score": 0.234015
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.423011,
+            "aligned_score": 0.368743,
+            "contradictory_score": 0.423011
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347132,
+            "aligned_score": 0.332206,
+            "contradictory_score": 0.347132
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332574,
+            "aligned_score": 0.332574,
+            "contradictory_score": 0.089683
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315966,
+            "aligned_score": 0.301206,
+            "contradictory_score": 0.315966
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289853,
+            "aligned_score": 0.289853,
+            "contradictory_score": 0.114844
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.279974,
+            "aligned_score": 0.279974,
+            "contradictory_score": 0.035831
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.275114,
+            "aligned_score": 0.275114,
+            "contradictory_score": 0.125958
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267459,
+            "aligned_score": 0.267459,
+            "contradictory_score": 0.26396
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.256214,
+            "aligned_score": 0.256214,
+            "contradictory_score": 0.144536
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249474,
+            "aligned_score": 0.249474,
+            "contradictory_score": 0.24865
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229763,
+            "aligned_score": 0.229763,
+            "contradictory_score": 0.205364
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "33-2542-7-1",
+    "title": "Marines Took Out Iranian Drone for the Cost of a Tank of Gas",
+    "actors": [
+      {
+        "actor_id": "33-2542-7-1-0",
+        "actor_name": "U.S. Military (Navy and Marines)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.52213,
+            "aligned_score": 0.52213,
+            "contradictory_score": 0.230718
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422478,
+            "aligned_score": 0.369724,
+            "contradictory_score": 0.422478
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.350059,
+            "aligned_score": 0.333521,
+            "contradictory_score": 0.350059
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333429,
+            "aligned_score": 0.333429,
+            "contradictory_score": 0.090044
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315478,
+            "aligned_score": 0.299372,
+            "contradictory_score": 0.315478
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290466,
+            "aligned_score": 0.290466,
+            "contradictory_score": 0.1157
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.279973,
+            "aligned_score": 0.279973,
+            "contradictory_score": 0.036011
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279165,
+            "aligned_score": 0.279165,
+            "contradictory_score": 0.126015
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269456,
+            "aligned_score": 0.269456,
+            "contradictory_score": 0.264731
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255946,
+            "aligned_score": 0.255946,
+            "contradictory_score": 0.14492
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249922,
+            "aligned_score": 0.249922,
+            "contradictory_score": 0.249044
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230291,
+            "aligned_score": 0.230291,
+            "contradictory_score": 0.206036
+          }
+        ]
+      },
+      {
+        "actor_id": "33-2542-7-1-1",
+        "actor_name": "Iranian Military/State (hostile drone operator)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.522151,
+            "aligned_score": 0.522151,
+            "contradictory_score": 0.230745
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422633,
+            "aligned_score": 0.369709,
+            "contradictory_score": 0.422633
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.350172,
+            "aligned_score": 0.333647,
+            "contradictory_score": 0.350172
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333367,
+            "aligned_score": 0.333367,
+            "contradictory_score": 0.090068
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315649,
+            "aligned_score": 0.299352,
+            "contradictory_score": 0.315649
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290591,
+            "aligned_score": 0.290591,
+            "contradictory_score": 0.115738
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.279879,
+            "aligned_score": 0.279879,
+            "contradictory_score": 0.036062
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279314,
+            "aligned_score": 0.279314,
+            "contradictory_score": 0.126113
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269374,
+            "aligned_score": 0.269374,
+            "contradictory_score": 0.264764
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.256042,
+            "aligned_score": 0.256042,
+            "contradictory_score": 0.144877
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249881,
+            "aligned_score": 0.249881,
+            "contradictory_score": 0.249178
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230401,
+            "aligned_score": 0.230401,
+            "contradictory_score": 0.205909
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15230-2-1",
+    "title": "Successes and challenges in Afghan girls' education",
+    "actors": [
+      {
+        "actor_id": "1-15230-2-1-0",
+        "actor_name": "Progressive Afghan Society (Girls, Families, Reformers, Humanitarian Groups)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519757,
+            "aligned_score": 0.519757,
+            "contradictory_score": 0.232421
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422073,
+            "aligned_score": 0.365619,
+            "contradictory_score": 0.422073
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347295,
+            "aligned_score": 0.333403,
+            "contradictory_score": 0.347295
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332303,
+            "aligned_score": 0.332303,
+            "contradictory_score": 0.08895
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.313447,
+            "aligned_score": 0.301846,
+            "contradictory_score": 0.313447
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289884,
+            "aligned_score": 0.289884,
+            "contradictory_score": 0.113692
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.276366,
+            "aligned_score": 0.276366,
+            "contradictory_score": 0.035693
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.275735,
+            "aligned_score": 0.275735,
+            "contradictory_score": 0.124314
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267928,
+            "aligned_score": 0.267928,
+            "contradictory_score": 0.262432
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.254589,
+            "aligned_score": 0.254589,
+            "contradictory_score": 0.145197
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249876,
+            "aligned_score": 0.249876,
+            "contradictory_score": 0.24659
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229469,
+            "aligned_score": 0.229469,
+            "contradictory_score": 0.204515
+          }
+        ]
+      },
+      {
+        "actor_id": "1-15230-2-1-1",
+        "actor_name": "Conservative Traditionalists (Taliban, Religious Leaders, Patriarchal Establishment)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519542,
+            "aligned_score": 0.519542,
+            "contradictory_score": 0.23227
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422307,
+            "aligned_score": 0.365618,
+            "contradictory_score": 0.422307
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347512,
+            "aligned_score": 0.333421,
+            "contradictory_score": 0.347512
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.33239,
+            "aligned_score": 0.33239,
+            "contradictory_score": 0.089014
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.313597,
+            "aligned_score": 0.301917,
+            "contradictory_score": 0.313597
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289816,
+            "aligned_score": 0.289816,
+            "contradictory_score": 0.113662
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.276714,
+            "aligned_score": 0.276714,
+            "contradictory_score": 0.035703
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.27558,
+            "aligned_score": 0.27558,
+            "contradictory_score": 0.124362
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267985,
+            "aligned_score": 0.267985,
+            "contradictory_score": 0.26247
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.254682,
+            "aligned_score": 0.254682,
+            "contradictory_score": 0.145126
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.250061,
+            "aligned_score": 0.250061,
+            "contradictory_score": 0.246651
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229693,
+            "aligned_score": 0.229693,
+            "contradictory_score": 0.204452
+          }
+        ]
+      },
+      {
+        "actor_id": "1-15230-2-1-2",
+        "actor_name": "Afghan Government and Officials",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.521992,
+            "aligned_score": 0.521992,
+            "contradictory_score": 0.231825
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422443,
+            "aligned_score": 0.370531,
+            "contradictory_score": 0.422443
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.35103,
+            "aligned_score": 0.335573,
+            "contradictory_score": 0.35103
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.337143,
+            "aligned_score": 0.337143,
+            "contradictory_score": 0.092764
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316176,
+            "aligned_score": 0.30123,
+            "contradictory_score": 0.316176
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290781,
+            "aligned_score": 0.290781,
+            "contradictory_score": 0.1167
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.281986,
+            "aligned_score": 0.281986,
+            "contradictory_score": 0.037851
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.280373,
+            "aligned_score": 0.280373,
+            "contradictory_score": 0.125032
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268028,
+            "aligned_score": 0.268028,
+            "contradictory_score": 0.265129
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.261288,
+            "aligned_score": 0.261288,
+            "contradictory_score": 0.146319
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.255039,
+            "aligned_score": 0.255039,
+            "contradictory_score": 0.252617
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.232714,
+            "aligned_score": 0.232714,
+            "contradictory_score": 0.205919
+          }
+        ]
+      },
+      {
+        "actor_id": "1-15230-2-1-3",
+        "actor_name": "International Community (Foreign NGOs, Charities, UNICEF, Foreign Governments)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519588,
+            "aligned_score": 0.519588,
+            "contradictory_score": 0.232506
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422228,
+            "aligned_score": 0.366008,
+            "contradictory_score": 0.422228
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347285,
+            "aligned_score": 0.333225,
+            "contradictory_score": 0.347285
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332433,
+            "aligned_score": 0.332433,
+            "contradictory_score": 0.089005
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.313665,
+            "aligned_score": 0.301958,
+            "contradictory_score": 0.313665
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289978,
+            "aligned_score": 0.289978,
+            "contradictory_score": 0.113685
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.276605,
+            "aligned_score": 0.276605,
+            "contradictory_score": 0.035716
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.27564,
+            "aligned_score": 0.27564,
+            "contradictory_score": 0.124409
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267883,
+            "aligned_score": 0.267883,
+            "contradictory_score": 0.262489
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.254696,
+            "aligned_score": 0.254696,
+            "contradictory_score": 0.145204
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.2501,
+            "aligned_score": 0.2501,
+            "contradictory_score": 0.246752
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229506,
+            "aligned_score": 0.229506,
+            "contradictory_score": 0.204573
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "6-19726-1-1",
+    "title": "Exclusive: Canada gets Biomerieux formula for free to produce virus testing chemicals",
+    "actors": [
+      {
+        "actor_id": "6-19726-1-1-0",
+        "actor_name": "Biomérieux and Private Sector Suppliers",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.52316,
+            "aligned_score": 0.52316,
+            "contradictory_score": 0.230762
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.42296,
+            "aligned_score": 0.368786,
+            "contradictory_score": 0.42296
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348308,
+            "aligned_score": 0.33427,
+            "contradictory_score": 0.348308
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.331785,
+            "aligned_score": 0.331785,
+            "contradictory_score": 0.089314
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315845,
+            "aligned_score": 0.298868,
+            "contradictory_score": 0.315845
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.28983,
+            "aligned_score": 0.28983,
+            "contradictory_score": 0.114874
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.27955,
+            "aligned_score": 0.27955,
+            "contradictory_score": 0.125694
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.279408,
+            "aligned_score": 0.279408,
+            "contradictory_score": 0.035776
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269297,
+            "aligned_score": 0.269297,
+            "contradictory_score": 0.2636
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255986,
+            "aligned_score": 0.255986,
+            "contradictory_score": 0.144384
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248825,
+            "aligned_score": 0.248825,
+            "contradictory_score": 0.248675
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.22848,
+            "aligned_score": 0.22848,
+            "contradictory_score": 0.204611
+          }
+        ]
+      },
+      {
+        "actor_id": "6-19726-1-1-1",
+        "actor_name": "Canadian Government and Public Health Agencies",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.52329,
+            "aligned_score": 0.52329,
+            "contradictory_score": 0.230692
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422794,
+            "aligned_score": 0.368979,
+            "contradictory_score": 0.422794
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348404,
+            "aligned_score": 0.334453,
+            "contradictory_score": 0.348404
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.3318,
+            "aligned_score": 0.3318,
+            "contradictory_score": 0.08934
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315728,
+            "aligned_score": 0.298771,
+            "contradictory_score": 0.315728
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289719,
+            "aligned_score": 0.289719,
+            "contradictory_score": 0.114867
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.2798,
+            "aligned_score": 0.2798,
+            "contradictory_score": 0.125773
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.279255,
+            "aligned_score": 0.279255,
+            "contradictory_score": 0.03579
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269482,
+            "aligned_score": 0.269482,
+            "contradictory_score": 0.263429
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255936,
+            "aligned_score": 0.255936,
+            "contradictory_score": 0.144321
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248849,
+            "aligned_score": 0.248849,
+            "contradictory_score": 0.248602
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.228514,
+            "aligned_score": 0.228514,
+            "contradictory_score": 0.20445
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "9-21075-1-t",
+    "title": "Novo confinamento. A lista de tudo o que vai fechar. E as 52 exceções, com hotéis, mas não centros de explicação (que saíram à última hora)",
+    "actors": [
+      {
+        "actor_id": "9-21075-1-t-0",
+        "actor_name": "Government Authorities (Policy Makers)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519769,
+            "aligned_score": 0.519769,
+            "contradictory_score": 0.231824
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.416254,
+            "aligned_score": 0.371824,
+            "contradictory_score": 0.416254
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.347045,
+            "aligned_score": 0.333283,
+            "contradictory_score": 0.347045
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.336042,
+            "aligned_score": 0.336042,
+            "contradictory_score": 0.091429
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.318143,
+            "aligned_score": 0.297354,
+            "contradictory_score": 0.318143
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290452,
+            "aligned_score": 0.290452,
+            "contradictory_score": 0.1175
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.286689,
+            "aligned_score": 0.286689,
+            "contradictory_score": 0.03552
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.277337,
+            "aligned_score": 0.277337,
+            "contradictory_score": 0.128684
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.270908,
+            "aligned_score": 0.270908,
+            "contradictory_score": 0.270758
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.259765,
+            "aligned_score": 0.259765,
+            "contradictory_score": 0.14505
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249259,
+            "aligned_score": 0.249259,
+            "contradictory_score": 0.248011
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.2302,
+            "aligned_score": 0.2302,
+            "contradictory_score": 0.207844
+          }
+        ]
+      },
+      {
+        "actor_id": "9-21075-1-t-1",
+        "actor_name": "General Public and Affected Business Operators",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.519475,
+            "aligned_score": 0.519475,
+            "contradictory_score": 0.232126
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.416167,
+            "aligned_score": 0.371779,
+            "contradictory_score": 0.416167
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.346833,
+            "aligned_score": 0.333163,
+            "contradictory_score": 0.346833
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.335902,
+            "aligned_score": 0.335902,
+            "contradictory_score": 0.091362
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.31801,
+            "aligned_score": 0.297471,
+            "contradictory_score": 0.31801
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290544,
+            "aligned_score": 0.290544,
+            "contradictory_score": 0.117503
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.286548,
+            "aligned_score": 0.286548,
+            "contradictory_score": 0.03551
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.27707,
+            "aligned_score": 0.27707,
+            "contradictory_score": 0.128741
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.27092,
+            "aligned_score": 0.27092,
+            "contradictory_score": 0.270725
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.259916,
+            "aligned_score": 0.259916,
+            "contradictory_score": 0.145043
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.24939,
+            "aligned_score": 0.24939,
+            "contradictory_score": 0.248098
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230205,
+            "aligned_score": 0.230205,
+            "contradictory_score": 0.207846
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-14903-2-2",
+    "title": "Chile protesters: ‘The rich and powerful threw the first stone’",
+    "actors": [
+      {
+        "actor_id": "1-14903-2-2-0",
+        "actor_name": "Protesters and Marginalized Citizens",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.518879,
+            "aligned_score": 0.518879,
+            "contradictory_score": 0.232839
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.425366,
+            "aligned_score": 0.367539,
+            "contradictory_score": 0.425366
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348038,
+            "aligned_score": 0.332973,
+            "contradictory_score": 0.348038
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332962,
+            "aligned_score": 0.332962,
+            "contradictory_score": 0.089878
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316433,
+            "aligned_score": 0.302184,
+            "contradictory_score": 0.316433
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289938,
+            "aligned_score": 0.289938,
+            "contradictory_score": 0.11495
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.278959,
+            "aligned_score": 0.278959,
+            "contradictory_score": 0.03604
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.275454,
+            "aligned_score": 0.275454,
+            "contradictory_score": 0.125148
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268071,
+            "aligned_score": 0.268071,
+            "contradictory_score": 0.262122
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255957,
+            "aligned_score": 0.255957,
+            "contradictory_score": 0.144549
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249404,
+            "aligned_score": 0.249404,
+            "contradictory_score": 0.24842
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.230543,
+            "aligned_score": 0.230543,
+            "contradictory_score": 0.204899
+          }
+        ]
+      },
+      {
+        "actor_id": "1-14903-2-2-1",
+        "actor_name": "Government and Political Elite",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.521915,
+            "aligned_score": 0.521915,
+            "contradictory_score": 0.232166
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.4249,
+            "aligned_score": 0.371555,
+            "contradictory_score": 0.4249
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.350822,
+            "aligned_score": 0.335375,
+            "contradictory_score": 0.350822
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.337241,
+            "aligned_score": 0.337241,
+            "contradictory_score": 0.09288
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.317909,
+            "aligned_score": 0.30141,
+            "contradictory_score": 0.317909
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290982,
+            "aligned_score": 0.290982,
+            "contradictory_score": 0.117845
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.282778,
+            "aligned_score": 0.282778,
+            "contradictory_score": 0.037864
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279898,
+            "aligned_score": 0.279898,
+            "contradictory_score": 0.125128
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268801,
+            "aligned_score": 0.268801,
+            "contradictory_score": 0.26439
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.261684,
+            "aligned_score": 0.261684,
+            "contradictory_score": 0.146044
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.254034,
+            "aligned_score": 0.253543,
+            "contradictory_score": 0.254034
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.232647,
+            "aligned_score": 0.232647,
+            "contradictory_score": 0.206119
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4407-1-1",
+    "title": "Up to eight people seriously injured after double-decker overturns in Devon road",
+    "actors": [
+      {
+        "actor_id": "0-4407-1-1-0",
+        "actor_name": "Emergency Services and Authorities",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.499803,
+            "aligned_score": 0.499803,
+            "contradictory_score": 0.239674
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.418872,
+            "aligned_score": 0.306374,
+            "contradictory_score": 0.418872
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.329931,
+            "aligned_score": 0.329931,
+            "contradictory_score": 0.317112
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.308406,
+            "aligned_score": 0.308406,
+            "contradictory_score": 0.292593
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.304634,
+            "aligned_score": 0.304634,
+            "contradictory_score": 0.071725
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.275733,
+            "aligned_score": 0.275733,
+            "contradictory_score": 0.09801
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.265356,
+            "aligned_score": 0.265356,
+            "contradictory_score": 0.253452
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.25126,
+            "aligned_score": 0.25126,
+            "contradictory_score": 0.122657
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.245894,
+            "aligned_score": 0.245894,
+            "contradictory_score": 0.025315
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.228947,
+            "aligned_score": 0.228947,
+            "contradictory_score": 0.213216
+          },
+          {
+            "l1_value_id": "5",
+            "l1_value_name": "Have freedom of action",
+            "confidence": 0.227567,
+            "aligned_score": 0.227567,
+            "contradictory_score": 0.213666
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.223559,
+            "aligned_score": 0.223559,
+            "contradictory_score": 0.138262
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4407-1-1-1",
+        "actor_name": "Injured Passengers and General Public",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.500256,
+            "aligned_score": 0.500256,
+            "contradictory_score": 0.239319
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.419018,
+            "aligned_score": 0.307101,
+            "contradictory_score": 0.419018
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.329817,
+            "aligned_score": 0.329817,
+            "contradictory_score": 0.317596
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.308352,
+            "aligned_score": 0.308352,
+            "contradictory_score": 0.292921
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.305209,
+            "aligned_score": 0.305209,
+            "contradictory_score": 0.071902
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.276055,
+            "aligned_score": 0.276055,
+            "contradictory_score": 0.098225
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.265365,
+            "aligned_score": 0.265365,
+            "contradictory_score": 0.253495
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.251506,
+            "aligned_score": 0.251506,
+            "contradictory_score": 0.122799
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.246572,
+            "aligned_score": 0.246572,
+            "contradictory_score": 0.025398
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.228993,
+            "aligned_score": 0.228993,
+            "contradictory_score": 0.21337
+          },
+          {
+            "l1_value_id": "5",
+            "l1_value_name": "Have freedom of action",
+            "confidence": 0.227543,
+            "aligned_score": 0.227543,
+            "contradictory_score": 0.213639
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.223785,
+            "aligned_score": 0.223785,
+            "contradictory_score": 0.138257
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-14955-1-t",
+    "title": "Why Belgium's Death Rate Is So High: It Counts Lots Of Suspected COVID-19 Case",
+    "actors": [
+      {
+        "actor_id": "1-14955-1-t-0",
+        "actor_name": "Belgian Authorities and Government Officials",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.520765,
+            "aligned_score": 0.520765,
+            "contradictory_score": 0.233524
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422283,
+            "aligned_score": 0.370087,
+            "contradictory_score": 0.422283
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348396,
+            "aligned_score": 0.333138,
+            "contradictory_score": 0.348396
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333055,
+            "aligned_score": 0.333055,
+            "contradictory_score": 0.089487
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.314354,
+            "aligned_score": 0.299982,
+            "contradictory_score": 0.314354
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290726,
+            "aligned_score": 0.290726,
+            "contradictory_score": 0.115
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.279718,
+            "aligned_score": 0.279718,
+            "contradictory_score": 0.035885
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.275933,
+            "aligned_score": 0.275933,
+            "contradictory_score": 0.125498
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268267,
+            "aligned_score": 0.268267,
+            "contradictory_score": 0.263979
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255953,
+            "aligned_score": 0.255953,
+            "contradictory_score": 0.144586
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.25076,
+            "aligned_score": 0.25076,
+            "contradictory_score": 0.248926
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229596,
+            "aligned_score": 0.229596,
+            "contradictory_score": 0.204533
+          }
+        ]
+      },
+      {
+        "actor_id": "1-14955-1-t-1",
+        "actor_name": "US Government / President Trump",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.520812,
+            "aligned_score": 0.520812,
+            "contradictory_score": 0.233538
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422397,
+            "aligned_score": 0.370139,
+            "contradictory_score": 0.422397
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348407,
+            "aligned_score": 0.33314,
+            "contradictory_score": 0.348407
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333129,
+            "aligned_score": 0.333129,
+            "contradictory_score": 0.089506
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.314494,
+            "aligned_score": 0.300025,
+            "contradictory_score": 0.314494
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290786,
+            "aligned_score": 0.290786,
+            "contradictory_score": 0.115062
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.279937,
+            "aligned_score": 0.279937,
+            "contradictory_score": 0.035879
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.275794,
+            "aligned_score": 0.275794,
+            "contradictory_score": 0.125592
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268385,
+            "aligned_score": 0.268385,
+            "contradictory_score": 0.264025
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.256045,
+            "aligned_score": 0.256045,
+            "contradictory_score": 0.14455
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.250675,
+            "aligned_score": 0.250675,
+            "contradictory_score": 0.248871
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229564,
+            "aligned_score": 0.229564,
+            "contradictory_score": 0.20457
+          }
+        ]
+      },
+      {
+        "actor_id": "1-14955-1-t-2",
+        "actor_name": "Other National Governments",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.523314,
+            "aligned_score": 0.523314,
+            "contradictory_score": 0.233188
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.421957,
+            "aligned_score": 0.374064,
+            "contradictory_score": 0.421957
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.351174,
+            "aligned_score": 0.335833,
+            "contradictory_score": 0.351174
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.337392,
+            "aligned_score": 0.337392,
+            "contradictory_score": 0.092654
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316265,
+            "aligned_score": 0.299379,
+            "contradictory_score": 0.316265
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291834,
+            "aligned_score": 0.291834,
+            "contradictory_score": 0.118116
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.283593,
+            "aligned_score": 0.283593,
+            "contradictory_score": 0.037745
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.280383,
+            "aligned_score": 0.280383,
+            "contradictory_score": 0.125414
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269097,
+            "aligned_score": 0.269097,
+            "contradictory_score": 0.266095
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.262281,
+            "aligned_score": 0.262281,
+            "contradictory_score": 0.145949
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.255062,
+            "aligned_score": 0.25471,
+            "contradictory_score": 0.255062
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.23176,
+            "aligned_score": 0.23176,
+            "contradictory_score": 0.205957
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "7-36661-5-2",
+    "title": "Devices for rapid diagnosis of coronavirus under development",
+    "actors": [
+      {
+        "actor_id": "7-36661-5-2-0",
+        "actor_name": "Scientific Researchers and Medical Innovators",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.523102,
+            "aligned_score": 0.523102,
+            "contradictory_score": 0.231166
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.421714,
+            "aligned_score": 0.368731,
+            "contradictory_score": 0.421714
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348786,
+            "aligned_score": 0.334868,
+            "contradictory_score": 0.348786
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333381,
+            "aligned_score": 0.333381,
+            "contradictory_score": 0.089577
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316055,
+            "aligned_score": 0.300085,
+            "contradictory_score": 0.316055
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289796,
+            "aligned_score": 0.289796,
+            "contradictory_score": 0.115024
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.281021,
+            "aligned_score": 0.281021,
+            "contradictory_score": 0.035881
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.277651,
+            "aligned_score": 0.277651,
+            "contradictory_score": 0.124842
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.270395,
+            "aligned_score": 0.270395,
+            "contradictory_score": 0.263408
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.258371,
+            "aligned_score": 0.258371,
+            "contradictory_score": 0.144234
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.250012,
+            "aligned_score": 0.249598,
+            "contradictory_score": 0.250012
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229975,
+            "aligned_score": 0.229975,
+            "contradictory_score": 0.204187
+          }
+        ]
+      },
+      {
+        "actor_id": "7-36661-5-2-1",
+        "actor_name": "Healthcare System and Public Health Institutions",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.522924,
+            "aligned_score": 0.522924,
+            "contradictory_score": 0.231109
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.421633,
+            "aligned_score": 0.368463,
+            "contradictory_score": 0.421633
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.348488,
+            "aligned_score": 0.33464,
+            "contradictory_score": 0.348488
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.333437,
+            "aligned_score": 0.333437,
+            "contradictory_score": 0.089486
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316027,
+            "aligned_score": 0.30004,
+            "contradictory_score": 0.316027
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.289693,
+            "aligned_score": 0.289693,
+            "contradictory_score": 0.114944
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.280976,
+            "aligned_score": 0.280976,
+            "contradictory_score": 0.035792
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.277374,
+            "aligned_score": 0.277374,
+            "contradictory_score": 0.124766
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.270365,
+            "aligned_score": 0.270365,
+            "contradictory_score": 0.263395
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.258312,
+            "aligned_score": 0.258312,
+            "contradictory_score": 0.144261
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249834,
+            "aligned_score": 0.249531,
+            "contradictory_score": 0.249834
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229834,
+            "aligned_score": 0.229834,
+            "contradictory_score": 0.204142
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "2-35026-1-t",
+    "title": "UK decries France's seizure of fishing boat as post-Brexit row deepens",
+    "actors": [
+      {
+        "actor_id": "2-35026-1-t-0",
+        "actor_name": "French Authorities and Government",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.525404,
+            "aligned_score": 0.525404,
+            "contradictory_score": 0.230059
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.42245,
+            "aligned_score": 0.373266,
+            "contradictory_score": 0.42245
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.352079,
+            "aligned_score": 0.335878,
+            "contradictory_score": 0.352079
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.336959,
+            "aligned_score": 0.336959,
+            "contradictory_score": 0.092589
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316846,
+            "aligned_score": 0.297953,
+            "contradictory_score": 0.316846
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.292313,
+            "aligned_score": 0.292313,
+            "contradictory_score": 0.118237
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.283602,
+            "aligned_score": 0.283602,
+            "contradictory_score": 0.1257
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.282161,
+            "aligned_score": 0.282161,
+            "contradictory_score": 0.03769
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269072,
+            "aligned_score": 0.269072,
+            "contradictory_score": 0.266407
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.26198,
+            "aligned_score": 0.26198,
+            "contradictory_score": 0.146464
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.253844,
+            "aligned_score": 0.252716,
+            "contradictory_score": 0.253844
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.231474,
+            "aligned_score": 0.231474,
+            "contradictory_score": 0.205769
+          }
+        ]
+      },
+      {
+        "actor_id": "2-35026-1-t-1",
+        "actor_name": "British Authorities and Government",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.525383,
+            "aligned_score": 0.525383,
+            "contradictory_score": 0.229929
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422491,
+            "aligned_score": 0.37309,
+            "contradictory_score": 0.422491
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.351972,
+            "aligned_score": 0.335979,
+            "contradictory_score": 0.351972
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.336968,
+            "aligned_score": 0.336968,
+            "contradictory_score": 0.092542
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316809,
+            "aligned_score": 0.298009,
+            "contradictory_score": 0.316809
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.292181,
+            "aligned_score": 0.292181,
+            "contradictory_score": 0.118128
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.283348,
+            "aligned_score": 0.283348,
+            "contradictory_score": 0.125704
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.282282,
+            "aligned_score": 0.282282,
+            "contradictory_score": 0.037664
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269041,
+            "aligned_score": 0.269041,
+            "contradictory_score": 0.266344
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.261896,
+            "aligned_score": 0.261896,
+            "contradictory_score": 0.146401
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.253664,
+            "aligned_score": 0.252579,
+            "contradictory_score": 0.253664
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.231486,
+            "aligned_score": 0.231486,
+            "contradictory_score": 0.205773
+          }
+        ]
+      },
+      {
+        "actor_id": "2-35026-1-t-2",
+        "actor_name": "French Fishing Industry and Fishermen",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.52332,
+            "aligned_score": 0.52332,
+            "contradictory_score": 0.230146
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.422993,
+            "aligned_score": 0.369631,
+            "contradictory_score": 0.422993
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.349692,
+            "aligned_score": 0.33354,
+            "contradictory_score": 0.349692
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332972,
+            "aligned_score": 0.332972,
+            "contradictory_score": 0.089541
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315169,
+            "aligned_score": 0.298536,
+            "contradictory_score": 0.315169
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291311,
+            "aligned_score": 0.291311,
+            "contradictory_score": 0.115185
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279199,
+            "aligned_score": 0.279199,
+            "contradictory_score": 0.125625
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.278656,
+            "aligned_score": 0.278656,
+            "contradictory_score": 0.035836
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268476,
+            "aligned_score": 0.268476,
+            "contradictory_score": 0.264312
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255764,
+            "aligned_score": 0.255764,
+            "contradictory_score": 0.145072
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248533,
+            "aligned_score": 0.248533,
+            "contradictory_score": 0.247761
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.22913,
+            "aligned_score": 0.22913,
+            "contradictory_score": 0.204456
+          }
+        ]
+      },
+      {
+        "actor_id": "2-35026-1-t-3",
+        "actor_name": "British Fishing Industry and Fishermen",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.523253,
+            "aligned_score": 0.523253,
+            "contradictory_score": 0.230176
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.423035,
+            "aligned_score": 0.36931,
+            "contradictory_score": 0.423035
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.349625,
+            "aligned_score": 0.333571,
+            "contradictory_score": 0.349625
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332756,
+            "aligned_score": 0.332756,
+            "contradictory_score": 0.089467
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315043,
+            "aligned_score": 0.298711,
+            "contradictory_score": 0.315043
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291194,
+            "aligned_score": 0.291194,
+            "contradictory_score": 0.115109
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279019,
+            "aligned_score": 0.279019,
+            "contradictory_score": 0.125586
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.278561,
+            "aligned_score": 0.278561,
+            "contradictory_score": 0.035811
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268613,
+            "aligned_score": 0.268613,
+            "contradictory_score": 0.264288
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255674,
+            "aligned_score": 0.255674,
+            "contradictory_score": 0.145036
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.248362,
+            "aligned_score": 0.248362,
+            "contradictory_score": 0.247702
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229248,
+            "aligned_score": 0.229248,
+            "contradictory_score": 0.204392
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4882-1-2",
+    "title": "X-37B breaks record, lands after 780 days in orbit",
+    "actors": [
+      {
+        "actor_id": "0-4882-1-2-0",
+        "actor_name": "United States Air Force and Associated Space Program Personnel",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.522391,
+            "aligned_score": 0.522391,
+            "contradictory_score": 0.229297
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420895,
+            "aligned_score": 0.370564,
+            "contradictory_score": 0.420895
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.349847,
+            "aligned_score": 0.334837,
+            "contradictory_score": 0.349847
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.335074,
+            "aligned_score": 0.335074,
+            "contradictory_score": 0.090418
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.317536,
+            "aligned_score": 0.297562,
+            "contradictory_score": 0.317536
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291041,
+            "aligned_score": 0.291041,
+            "contradictory_score": 0.115403
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.282221,
+            "aligned_score": 0.282221,
+            "contradictory_score": 0.036069
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279953,
+            "aligned_score": 0.279953,
+            "contradictory_score": 0.126686
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.270865,
+            "aligned_score": 0.270865,
+            "contradictory_score": 0.266612
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.257957,
+            "aligned_score": 0.257957,
+            "contradictory_score": 0.145277
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.25037,
+            "aligned_score": 0.25037,
+            "contradictory_score": 0.24855
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229904,
+            "aligned_score": 0.229904,
+            "contradictory_score": 0.206428
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4882-1-2-1",
+        "actor_name": "Government and Industry Partners",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.525064,
+            "aligned_score": 0.525064,
+            "contradictory_score": 0.228829
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420783,
+            "aligned_score": 0.374746,
+            "contradictory_score": 0.420783
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.352851,
+            "aligned_score": 0.337592,
+            "contradictory_score": 0.352851
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.339406,
+            "aligned_score": 0.339406,
+            "contradictory_score": 0.093797
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.319829,
+            "aligned_score": 0.296599,
+            "contradictory_score": 0.319829
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.292213,
+            "aligned_score": 0.292213,
+            "contradictory_score": 0.118614
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.286266,
+            "aligned_score": 0.286266,
+            "contradictory_score": 0.038036
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.284904,
+            "aligned_score": 0.284904,
+            "contradictory_score": 0.126717
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.271495,
+            "aligned_score": 0.271495,
+            "contradictory_score": 0.269066
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.264692,
+            "aligned_score": 0.264692,
+            "contradictory_score": 0.146853
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.254959,
+            "aligned_score": 0.25487,
+            "contradictory_score": 0.254959
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.232424,
+            "aligned_score": 0.232424,
+            "contradictory_score": 0.207895
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "9-21348-5-1",
+    "title": "Today’s Migrant Flow Is Different",
+    "actors": [
+      {
+        "actor_id": "9-21348-5-1-0",
+        "actor_name": "Central American Migrant Families",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.520983,
+            "aligned_score": 0.520983,
+            "contradictory_score": 0.232819
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420546,
+            "aligned_score": 0.373833,
+            "contradictory_score": 0.420546
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.350922,
+            "aligned_score": 0.334766,
+            "contradictory_score": 0.350922
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.338268,
+            "aligned_score": 0.338268,
+            "contradictory_score": 0.093224
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.317041,
+            "aligned_score": 0.300531,
+            "contradictory_score": 0.317041
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291978,
+            "aligned_score": 0.291978,
+            "contradictory_score": 0.117263
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.284571,
+            "aligned_score": 0.284571,
+            "contradictory_score": 0.037902
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279201,
+            "aligned_score": 0.279201,
+            "contradictory_score": 0.126514
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269063,
+            "aligned_score": 0.269063,
+            "contradictory_score": 0.267264
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.261711,
+            "aligned_score": 0.261711,
+            "contradictory_score": 0.14629
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.256453,
+            "aligned_score": 0.256453,
+            "contradictory_score": 0.253669
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.232864,
+            "aligned_score": 0.232864,
+            "contradictory_score": 0.207111
+          }
+        ]
+      },
+      {
+        "actor_id": "9-21348-5-1-1",
+        "actor_name": "Gangs (e.g., MS-13, Barrio 18)",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.517712,
+            "aligned_score": 0.517712,
+            "contradictory_score": 0.234459
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.419635,
+            "aligned_score": 0.368286,
+            "contradictory_score": 0.419635
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.346533,
+            "aligned_score": 0.331787,
+            "contradictory_score": 0.346533
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332821,
+            "aligned_score": 0.332821,
+            "contradictory_score": 0.089206
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.314216,
+            "aligned_score": 0.301602,
+            "contradictory_score": 0.314216
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290585,
+            "aligned_score": 0.290585,
+            "contradictory_score": 0.114158
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.278868,
+            "aligned_score": 0.278868,
+            "contradictory_score": 0.035706
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.273654,
+            "aligned_score": 0.273654,
+            "contradictory_score": 0.125693
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268244,
+            "aligned_score": 0.268244,
+            "contradictory_score": 0.264523
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255356,
+            "aligned_score": 0.255356,
+            "contradictory_score": 0.144817
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.251891,
+            "aligned_score": 0.251891,
+            "contradictory_score": 0.24795
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229739,
+            "aligned_score": 0.229739,
+            "contradictory_score": 0.205895
+          }
+        ]
+      },
+      {
+        "actor_id": "9-21348-5-1-2",
+        "actor_name": "Security Forces / Police",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.521016,
+            "aligned_score": 0.521016,
+            "contradictory_score": 0.232921
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.42045,
+            "aligned_score": 0.37422,
+            "contradictory_score": 0.42045
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.35092,
+            "aligned_score": 0.334709,
+            "contradictory_score": 0.35092
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.338523,
+            "aligned_score": 0.338523,
+            "contradictory_score": 0.093277
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.317162,
+            "aligned_score": 0.30044,
+            "contradictory_score": 0.317162
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.291982,
+            "aligned_score": 0.291982,
+            "contradictory_score": 0.117397
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.284624,
+            "aligned_score": 0.284624,
+            "contradictory_score": 0.037936
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279432,
+            "aligned_score": 0.279432,
+            "contradictory_score": 0.126524
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.269018,
+            "aligned_score": 0.269018,
+            "contradictory_score": 0.267201
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.261843,
+            "aligned_score": 0.261843,
+            "contradictory_score": 0.146333
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.256559,
+            "aligned_score": 0.256559,
+            "contradictory_score": 0.253806
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.232781,
+            "aligned_score": 0.232781,
+            "contradictory_score": 0.207113
+          }
+        ]
+      },
+      {
+        "actor_id": "9-21348-5-1-3",
+        "actor_name": "Central American Governments",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.520878,
+            "aligned_score": 0.520878,
+            "contradictory_score": 0.232731
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420677,
+            "aligned_score": 0.374212,
+            "contradictory_score": 0.420677
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.351037,
+            "aligned_score": 0.33454,
+            "contradictory_score": 0.351037
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.338505,
+            "aligned_score": 0.338505,
+            "contradictory_score": 0.09328
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.317323,
+            "aligned_score": 0.300499,
+            "contradictory_score": 0.317323
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.292049,
+            "aligned_score": 0.292049,
+            "contradictory_score": 0.117334
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.284478,
+            "aligned_score": 0.284478,
+            "contradictory_score": 0.037906
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.279218,
+            "aligned_score": 0.279218,
+            "contradictory_score": 0.126457
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268947,
+            "aligned_score": 0.268947,
+            "contradictory_score": 0.267236
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.261908,
+            "aligned_score": 0.261908,
+            "contradictory_score": 0.146297
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.256465,
+            "aligned_score": 0.256465,
+            "contradictory_score": 0.253914
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.232851,
+            "aligned_score": 0.232851,
+            "contradictory_score": 0.207184
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4546-1-2",
+    "title": "3 Dead In Southern California Wildfires",
+    "actors": [
+      {
+        "actor_id": "0-4546-1-2-0",
+        "actor_name": "Emergency Responders and Officials",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.517689,
+            "aligned_score": 0.517689,
+            "contradictory_score": 0.233125
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420203,
+            "aligned_score": 0.36989,
+            "contradictory_score": 0.420203
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.346422,
+            "aligned_score": 0.332771,
+            "contradictory_score": 0.346422
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.334304,
+            "aligned_score": 0.334304,
+            "contradictory_score": 0.090079
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.31636,
+            "aligned_score": 0.300345,
+            "contradictory_score": 0.31636
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290498,
+            "aligned_score": 0.290498,
+            "contradictory_score": 0.114223
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.28066,
+            "aligned_score": 0.28066,
+            "contradictory_score": 0.035828
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.27674,
+            "aligned_score": 0.27674,
+            "contradictory_score": 0.126647
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267739,
+            "aligned_score": 0.267739,
+            "contradictory_score": 0.264202
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.256299,
+            "aligned_score": 0.256299,
+            "contradictory_score": 0.144871
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249875,
+            "aligned_score": 0.249875,
+            "contradictory_score": 0.246736
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229333,
+            "aligned_score": 0.229333,
+            "contradictory_score": 0.205353
+          }
+        ]
+      },
+      {
+        "actor_id": "0-4546-1-2-1",
+        "actor_name": "Wildfires/Natural Forces",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.517867,
+            "aligned_score": 0.517867,
+            "contradictory_score": 0.233149
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420166,
+            "aligned_score": 0.370117,
+            "contradictory_score": 0.420166
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.346501,
+            "aligned_score": 0.333003,
+            "contradictory_score": 0.346501
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.334341,
+            "aligned_score": 0.334341,
+            "contradictory_score": 0.090127
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.316431,
+            "aligned_score": 0.300355,
+            "contradictory_score": 0.316431
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290555,
+            "aligned_score": 0.290555,
+            "contradictory_score": 0.114339
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.280906,
+            "aligned_score": 0.280906,
+            "contradictory_score": 0.035882
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.276846,
+            "aligned_score": 0.276846,
+            "contradictory_score": 0.126663
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.267803,
+            "aligned_score": 0.267803,
+            "contradictory_score": 0.264354
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.256305,
+            "aligned_score": 0.256305,
+            "contradictory_score": 0.14498
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.249792,
+            "aligned_score": 0.249792,
+            "contradictory_score": 0.246709
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229296,
+            "aligned_score": 0.229296,
+            "contradictory_score": 0.205387
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15178-2-1",
+    "title": "Portugal’s Catholic bishops suspend public Masses amid rising COVID-19 cases",
+    "actors": [
+      {
+        "actor_id": "1-15178-2-1-0",
+        "actor_name": "Portuguese Catholic Church Leadership and Religious Institutions",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.517312,
+            "aligned_score": 0.517312,
+            "contradictory_score": 0.235113
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420477,
+            "aligned_score": 0.368896,
+            "contradictory_score": 0.420477
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.346055,
+            "aligned_score": 0.331099,
+            "contradictory_score": 0.346055
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332809,
+            "aligned_score": 0.332809,
+            "contradictory_score": 0.089791
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315457,
+            "aligned_score": 0.300771,
+            "contradictory_score": 0.315457
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290312,
+            "aligned_score": 0.290312,
+            "contradictory_score": 0.114032
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.280917,
+            "aligned_score": 0.280917,
+            "contradictory_score": 0.035671
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.273068,
+            "aligned_score": 0.273068,
+            "contradictory_score": 0.126337
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268295,
+            "aligned_score": 0.268295,
+            "contradictory_score": 0.264291
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255604,
+            "aligned_score": 0.255604,
+            "contradictory_score": 0.144655
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.25058,
+            "aligned_score": 0.25058,
+            "contradictory_score": 0.24737
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229628,
+            "aligned_score": 0.229628,
+            "contradictory_score": 0.205141
+          }
+        ]
+      },
+      {
+        "actor_id": "1-15178-2-1-1",
+        "actor_name": "Lay Faithful and General Public",
+        "candidates": [
+          {
+            "l1_value_id": "42",
+            "l1_value_name": "Be responsible",
+            "confidence": 0.516966,
+            "aligned_score": 0.516966,
+            "contradictory_score": 0.235304
+          },
+          {
+            "l1_value_id": "27",
+            "l1_value_name": "Have a stable society",
+            "confidence": 0.420436,
+            "aligned_score": 0.369059,
+            "contradictory_score": 0.420436
+          },
+          {
+            "l1_value_id": "45",
+            "l1_value_name": "Be just",
+            "confidence": 0.345787,
+            "aligned_score": 0.330998,
+            "contradictory_score": 0.345787
+          },
+          {
+            "l1_value_id": "37",
+            "l1_value_name": "Be helpful",
+            "confidence": 0.332866,
+            "aligned_score": 0.332866,
+            "contradictory_score": 0.089908
+          },
+          {
+            "l1_value_id": "26",
+            "l1_value_name": "Have a safe country",
+            "confidence": 0.315726,
+            "aligned_score": 0.300892,
+            "contradictory_score": 0.315726
+          },
+          {
+            "l1_value_id": "12",
+            "l1_value_name": "Have success",
+            "confidence": 0.290358,
+            "aligned_score": 0.290358,
+            "contradictory_score": 0.114109
+          },
+          {
+            "l1_value_id": "15",
+            "l1_value_name": "Be courageous",
+            "confidence": 0.28082,
+            "aligned_score": 0.28082,
+            "contradictory_score": 0.035731
+          },
+          {
+            "l1_value_id": "29",
+            "l1_value_name": "Be holding religious faith",
+            "confidence": 0.272915,
+            "aligned_score": 0.272915,
+            "contradictory_score": 0.126365
+          },
+          {
+            "l1_value_id": "22",
+            "l1_value_name": "Have good health",
+            "confidence": 0.268312,
+            "aligned_score": 0.268312,
+            "contradictory_score": 0.264181
+          },
+          {
+            "l1_value_id": "38",
+            "l1_value_name": "Be honest",
+            "confidence": 0.255849,
+            "aligned_score": 0.255849,
+            "contradictory_score": 0.144649
+          },
+          {
+            "l1_value_id": "30",
+            "l1_value_name": "Be compliant",
+            "confidence": 0.250513,
+            "aligned_score": 0.250513,
+            "contradictory_score": 0.247546
+          },
+          {
+            "l1_value_id": "25",
+            "l1_value_name": "Have a comfortable life",
+            "confidence": 0.229716,
+            "aligned_score": 0.229716,
+            "contradictory_score": 0.205135
+          }
+        ]
+      }
+    ]
+  }
+]

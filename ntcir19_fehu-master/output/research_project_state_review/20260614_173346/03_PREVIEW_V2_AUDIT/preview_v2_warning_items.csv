@@ -1,0 +1,7 @@
+request_id,augmentation_type,target_l1_value_id,severity,warning
+prev_paraphrase_32_001_735dc24587,paraphrase,32,warn,seed excerpt truncated (smart-cut); prompt explicitly warns generator
+prev_paraphrase_51_002_e5406084c6,paraphrase,51,warn,seed excerpt truncated (smart-cut); prompt explicitly warns generator
+prev_paraphrase_7_003_97e379f741,paraphrase,7,warn,seed excerpt truncated (smart-cut); prompt explicitly warns generator
+prev_paraphrase_24_004_fc69036780,paraphrase,24,warn,seed excerpt truncated (smart-cut); prompt explicitly warns generator
+prev_hard_negative_51_002_10a7cdd970,hard_negative,51,warn,alternative_label_id is null — generator must pick (per prompt)
+prev_hard_negative_29_004_6883966fd8,hard_negative,29,warn,alternative_label_id is null — generator must pick (per prompt)

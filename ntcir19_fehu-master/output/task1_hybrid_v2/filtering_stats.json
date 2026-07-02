@@ -1,0 +1,19 @@
+{
+  "mode": "dev",
+  "total_articles_processed": 177,
+  "total_actor_pairs": 459,
+  "total_candidates": 5507,
+  "total_kept_labels": 1098,
+  "avg_candidates_per_actor": 12.0,
+  "avg_kept_labels_per_actor": 2.39,
+  "kept_ratio": 0.1994,
+  "invalid_llm_items": 4,
+  "empty_llm_articles": 1,
+  "json_parse_failures": 0,
+  "api_failures": 0,
+  "cache_hits": 20,
+  "cache_misses": 157,
+  "articles_with_no_predictions": 1,
+  "max_candidates_per_actor_observed": 12,
+  "min_candidates_per_actor_observed": 11
+}

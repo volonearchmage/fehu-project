@@ -1,0 +1,34 @@
+{
+  "timestamp": "20260613_145847",
+  "script_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/research/fehu_label_diagnosis/label_diagnosis.py",
+  "project_root": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master",
+  "train_gold_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/dataset/gold_labels/train/train_human_values.json",
+  "dev_gold_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/dataset/gold_labels/dev/dev_human_values.json",
+  "analyzed_methods": [
+    "Prompt_OAI",
+    "Prompt_DS_Flash",
+    "DeBERTa_only",
+    "Hybrid_v1",
+    "Hybrid_v2_DS_Pro",
+    "Hybrid_v2_DS_Flash",
+    "Hybrid_v2_OAI_old"
+  ],
+  "skipped_methods": [
+    {
+      "method": "Hybrid_v2_OAI_mini",
+      "reason": "directory does not exist"
+    }
+  ],
+  "output_dir": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/research_label_diagnosis/20260613_145847",
+  "frequency_group_definition": {
+    "tertile": "top-18 / middle-18 / bottom-18 labels by train gold count",
+    "threshold": {
+      "zero_train": "count == 0",
+      "very_rare": "1 ≤ count ≤ 5",
+      "rare": "6 ≤ count ≤ 15",
+      "medium": "16 ≤ count ≤ 40",
+      "frequent": "count > 40"
+    }
+  },
+  "notes": "Diagnostic analysis only. No augmentation, training, or API calls performed. Responds to professor's request for recall/precision per label class."
+}

@@ -1,0 +1,68 @@
+category,path,kind,exists,mtime,size_bytes
+Official benchmark,evaluation.py,file,True,2026-05-17T17:39:23,11718
+Official benchmark,dataset/dev/dev_event_base.json,file,True,2026-05-17T17:39:23,1138358
+Official benchmark,dataset/train/train_event_base.json,file,True,2026-05-17T17:39:23,8010742
+Official benchmark,dataset/test/test_article_event_base.json,file,True,2026-05-17T17:39:23,865214
+Official benchmark,dataset/test/test_subevent_event_base.json,file,True,2026-05-17T17:39:23,1072171
+Official benchmark,dataset/gold_labels/train/train_human_values.json,file,True,2026-05-17T17:39:23,13220101
+Official benchmark,dataset/gold_labels/dev/dev_human_values.json,file,True,2026-05-17T17:39:23,1918804
+Official benchmark,dataset/hv_categories/direction_mapping.json,file,True,2026-05-17T17:39:23,48
+Official benchmark,dataset/hv_categories/human_value_level1_values.json,file,True,2026-05-17T17:39:23,1569
+Official benchmark,dataset/hv_categories/human_value_level2_values.json,file,True,2026-05-17T17:39:23,573
+Official benchmark,dataset/hv_categories/level_1_to_level_2.json,file,True,2026-05-17T17:39:23,2544
+"Legacy patched scripts (tracked, modified)",src/run_pipeline.py,file,True,2026-06-13T23:29:09,25822
+"Legacy patched scripts (tracked, modified)",src/train_deberta.py,file,True,2026-06-13T23:34:00,21423
+"Legacy patched scripts (tracked, modified)",src/hybrid_pipeline.py,file,True,2026-06-13T23:34:38,25367
+Untracked but present scripts,src/run_pipeline_deepseek_flash.py,file,True,2026-05-19T19:53:20,23900
+Untracked but present scripts,src/hybrid_v2.py,file,True,2026-05-19T19:29:04,37089
+Untracked but present scripts,src/collect_results.py,file,True,2026-06-14T00:20:11,14185
+Untracked but present scripts,src/regenerate_deberta_predictions.py,file,True,2026-06-14T00:36:41,6495
+Untracked but present scripts,src/prompts.py,file,True,2026-05-17T17:39:23,7038
+Research modules,research/fehu_label_diagnosis/label_diagnosis.py,file,True,2026-06-13T14:50:55,68746
+Research modules,research/fehu_project_audit/README.md,file,True,2026-06-13T17:40:33,1755
+Research modules,research/fehu_repair_and_augmentation_v1/WORKLOG.md,file,True,2026-06-13T18:18:14,5818
+Research modules,research/fehu_repair_and_augmentation_v1/FINAL_SUMMARY.md,file,True,2026-06-14T15:27:11,12830
+Research modules,research/fehu_experiment_management/experiment_registry.py,file,True,2026-06-14T01:16:21,9855
+Research modules,research/fehu_experiment_management/visualize_results.py,file,True,2026-06-14T01:50:15,16069
+Research modules,research/fehu_experiment_management/OUTPUT_NAMING.md,file,True,2026-06-14T00:54:13,5670
+Research modules,research/fehu_augmentation_v1/build_augmentation_plan.py,file,True,2026-06-14T12:35:19,41058
+Research modules,research/fehu_augmentation_v1/validate_augmented_data.py,file,True,2026-06-14T01:53:03,10960
+Research modules,research/fehu_augmentation_v1/augmentation_schema.json,file,True,2026-06-14T01:52:01,4746
+Research modules,research/fehu_augmentation_v1/METHOD_DESIGN.md,file,True,2026-06-14T01:51:59,10628
+Research modules,research/fehu_augmentation_generation_preview_v1/run_generation_preview.py,file,True,2026-06-14T17:16:07,55512
+Research modules,research/fehu_augmentation_generation_preview_v1/inspect_generation_preview.py,file,True,2026-06-14T16:33:26,6957
+Research modules,research/fehu_augmentation_generation_preview_v1/README.md,file,True,2026-06-14T17:18:05,3748
+Research modules,research/fehu_augmentation_generation_preview_v1/WORKLOG.md,file,True,2026-06-14T16:23:24,2847
+Research modules,research/fehu_augmentation_generation_preview_v1/FINAL_REPORT.md,file,True,2026-06-14T16:41:48,10943
+Research modules,research/fehu_augmentation_generation_preview_v1/PREVIEW_REVISION_REPORT.md,file,True,2026-06-14T17:19:23,10852
+Research modules,research/fehu_submission_safety/fehu_prediction_format_guard.py,file,True,2026-06-14T16:34:49,18893
+Research modules,research/fehu_submission_safety/augmented_training_data_guard.py,file,True,2026-06-14T16:36:25,14019
+Research modules,research/fehu_submission_safety/FORMAT_REQUIREMENTS.md,file,True,2026-06-14T16:25:23,7613
+Research modules,research/fehu_submission_safety/README.md,file,True,2026-06-14T16:23:30,3599
+Research modules,research/fehu_generation_model_strategy/MODEL_SELECTION_AND_COST_STRATEGY.md,file,True,2026-06-14T16:25:28,6212
+Output / prediction folders (must remain untouched here),output/task1/,dir,True,2026-05-17T22:11:00,418519
+Output / prediction folders (must remain untouched here),output/task1_prompt/,dir,True,2026-05-18T18:48:32,202495
+Output / prediction folders (must remain untouched here),output/task1_deberta/,dir,True,2026-05-18T19:08:50,510564
+Output / prediction folders (must remain untouched here),output/task1_hybrid/,dir,True,2026-05-17T21:30:47,1617412
+Output / prediction folders (must remain untouched here),output/task1_hybrid_v2/,dir,True,2026-05-18T19:59:11,1558089
+Output / prediction folders (must remain untouched here),output/task1_hybrid_v2_deepseek_deepseek_v4_pro/,dir,True,2026-05-18T20:31:37,1571252
+Output / prediction folders (must remain untouched here),output/task1_hybrid_v2_deepseek_deepseek_v4_flash/,dir,True,2026-05-19T19:30:07,1579843
+Output / prediction folders (must remain untouched here),output/task1_prompt_deepseek_v4_flash/,dir,True,2026-05-19T20:01:57,321203
+Output / prediction folders (must remain untouched here),output/task1_prompt_deepseek_v4_flash_limit5/,dir,True,2026-05-19T20:02:40,11740
+Output / prediction folders (must remain untouched here),output/task1_hybrid_v2_limit20/,dir,True,2026-05-18T20:04:57,184837
+Research outputs (timestamped),output/research_label_diagnosis/20260613_145549/,dir,True,2026-06-13T14:55:49,833020
+Research outputs (timestamped),output/research_label_diagnosis/20260613_145847/,dir,True,2026-06-13T14:58:48,2021505
+Research outputs (timestamped),output/research_project_audit/20260613_151432/,dir,True,2026-06-13T17:58:05,83827
+Research outputs (timestamped),output/research_experiment_registry/20260614_123732/,dir,True,2026-06-14T12:37:32,15530
+Research outputs (timestamped),output/research_visualization_dashboard/20260614_123742/,dir,True,2026-06-14T12:37:43,508671
+Research outputs (timestamped),output/research_augmentation_plan/20260614_131524/,dir,True,2026-06-14T13:15:24,737536
+Research outputs (timestamped),output/research_submission_safety/20260614_163804/,dir,True,2026-06-14T16:38:04,2307
+Research outputs (timestamped),output/research_generation_preview/20260614_163649/,dir,True,2026-06-14T16:36:49,225381
+Research outputs (timestamped),output/research_generation_preview/20260614_171644/,dir,True,2026-06-14T17:16:44,271558
+Caches (must remain untouched here),logs/cache_dev.json,file,True,2026-05-17T17:39:23,234426
+Caches (must remain untouched here),logs/cache_dev_deepseek_v4_flash.json,file,True,2026-05-19T20:22:33,389579
+Caches (must remain untouched here),logs/cache_hybrid_dev.json,file,True,2026-05-17T22:05:48,224223
+Caches (must remain untouched here),logs/cache_hybrid_v2_dev.json,file,True,2026-05-18T20:18:02,254423
+Caches (must remain untouched here),logs/cache_hybrid_v2_dev_deepseek_deepseek_v4_pro.json,file,True,2026-05-18T21:03:16,284035
+Caches (must remain untouched here),logs/cache_hybrid_v2_dev_deepseek_deepseek_v4_flash.json,file,True,2026-05-19T19:39:30,294753
+Caches (must remain untouched here),logs/cache_test_openai.json,file,True,2026-05-17T17:39:23,242150

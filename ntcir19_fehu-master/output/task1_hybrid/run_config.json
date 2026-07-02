@@ -1,0 +1,10 @@
+{
+  "mode": "dev",
+  "llm_model": "gpt-4o-mini",
+  "deberta_threshold": 0.2,
+  "top_k": 12,
+  "max_candidates_per_actor": 15,
+  "limit": null,
+  "skip_deberta": false,
+  "timestamp": "2026-05-17T13:05:48.694838Z"
+}

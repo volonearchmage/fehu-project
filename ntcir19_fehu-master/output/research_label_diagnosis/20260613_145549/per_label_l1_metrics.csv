@@ -1,0 +1,379 @@
+method,l1_value_id,l1_value_name,l2_value_id,l2_value_name,rank_by_train_frequency,tertile_group,threshold_group,train_gold_count_l1,dev_gold_count_l1,pred_count_value,TP_value,FP_value,FN_value,precision_value,recall_value,f1_value,pred_count_dir,TP_dir,FP_dir,FN_dir,precision_dir,recall_dir,f1_dir,direction_reverse_count,direction_reverse_rate_label
+DeBERTa_only,42,Be responsible,15,Benevolence: dependability,1,frequent,frequent,2031,282,456,266,190,0,0.5833,1.0,0.7368,456,236,220,46,0.5175,0.8369,0.6396,30,0.1064
+DeBERTa_only,27,Have a stable society,9,Security: societal,2,frequent,frequent,1590,229,456,214,242,0,0.4693,1.0,0.6388,883,222,661,7,0.2514,0.9694,0.3993,192,0.8384
+DeBERTa_only,45,Be just,16,Universalism: concern,3,frequent,frequent,1538,206,456,197,259,0,0.432,1.0,0.6034,896,203,693,3,0.2266,0.9854,0.3684,186,0.9029
+DeBERTa_only,26,Have a safe country,9,Security: societal,4,frequent,frequent,1018,147,456,141,315,0,0.3092,1.0,0.4724,725,115,610,32,0.1586,0.7823,0.2638,111,0.7551
+DeBERTa_only,22,Have good health,8,Security: personal,5,frequent,frequent,883,122,0,0,0,119,0.0,0.0,0.0,0,0,0,122,0.0,0.0,0.0,0,0.0
+DeBERTa_only,37,Be helpful,14,Benevolence: caring,6,frequent,frequent,682,106,418,95,323,11,0.2273,0.8962,0.3626,418,86,332,20,0.2057,0.8113,0.3282,9,0.0849
+DeBERTa_only,30,Be compliant,11,Conformity: rules,7,frequent,frequent,638,81,0,0,0,81,0.0,0.0,0.0,0,0,0,81,0.0,0.0,0.0,0,0.0
+DeBERTa_only,5,Have freedom of action,1,Self-direction: action,8,frequent,frequent,553,72,0,0,0,68,0.0,0.0,0.0,0,0,0,72,0.0,0.0,0.0,0,0.0
+DeBERTa_only,38,Be honest,14,Benevolence: caring,9,frequent,frequent,486,72,0,0,0,69,0.0,0.0,0.0,0,0,0,72,0.0,0.0,0.0,0,0.0
+DeBERTa_only,44,Have equality,16,Universalism: concern,10,frequent,frequent,460,66,0,0,0,63,0.0,0.0,0.0,0,0,0,66,0.0,0.0,0.0,0,0.0
+DeBERTa_only,25,Have a comfortable life,8,Security: personal,11,frequent,frequent,431,65,0,0,0,61,0.0,0.0,0.0,0,0,0,65,0.0,0.0,0.0,0,0.0
+DeBERTa_only,47,Be protecting the environment,17,Universalism: nature,12,frequent,frequent,399,39,0,0,0,37,0.0,0.0,0.0,0,0,0,39,0.0,0.0,0.0,0,0.0
+DeBERTa_only,13,Be capable,4,Achievement,13,frequent,frequent,389,55,0,0,0,54,0.0,0.0,0.0,0,0,0,55,0.0,0.0,0.0,0,0.0
+DeBERTa_only,21,Have a sense of belonging,8,Security: personal,14,frequent,frequent,382,57,0,0,0,56,0.0,0.0,0.0,0,0,0,57,0.0,0.0,0.0,0,0.0
+DeBERTa_only,15,Be courageous,4,Achievement,15,frequent,frequent,369,64,0,0,0,64,0.0,0.0,0.0,0,0,0,64,0.0,0.0,0.0,0,0.0
+DeBERTa_only,28,Be respecting traditions,10,Tradition,16,frequent,frequent,368,58,0,0,0,57,0.0,0.0,0.0,0,0,0,58,0.0,0.0,0.0,0,0.0
+DeBERTa_only,46,Have a world at peace,16,Universalism: concern,17,frequent,frequent,364,48,0,0,0,48,0.0,0.0,0.0,0,0,0,48,0.0,0.0,0.0,0,0.0
+DeBERTa_only,12,Have success,4,Achievement,18,frequent,frequent,338,54,0,0,0,52,0.0,0.0,0.0,0,0,0,54,0.0,0.0,0.0,0,0.0
+DeBERTa_only,50,Be broadminded,18,Universalism: tolerance,19,medium,frequent,311,43,0,0,0,43,0.0,0.0,0.0,0,0,0,43,0.0,0.0,0.0,0,0.0
+DeBERTa_only,52,Be logical,19,Universalism: objectivity,20,medium,frequent,286,37,0,0,0,35,0.0,0.0,0.0,0,0,0,37,0.0,0.0,0.0,0,0.0
+DeBERTa_only,19,Have social recognition,7,Face,21,medium,frequent,268,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+DeBERTa_only,29,Be holding religious faith,10,Tradition,22,medium,frequent,255,37,0,0,0,33,0.0,0.0,0.0,0,0,0,37,0.0,0.0,0.0,0,0.0
+DeBERTa_only,16,Have influence,5,Power: dominance,23,medium,frequent,243,36,0,0,0,35,0.0,0.0,0.0,0,0,0,36,0.0,0.0,0.0,0,0.0
+DeBERTa_only,14,Be intellectual,4,Achievement,24,medium,frequent,201,33,0,0,0,33,0.0,0.0,0.0,0,0,0,33,0.0,0.0,0.0,0,0.0
+DeBERTa_only,53,Have an objective view,19,Universalism: objectivity,25,medium,frequent,197,29,0,0,0,29,0.0,0.0,0.0,0,0,0,29,0.0,0.0,0.0,0,0.0
+DeBERTa_only,11,Be ambitious,4,Achievement,26,medium,frequent,194,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+DeBERTa_only,18,Have wealth,6,Power: resources,27,medium,frequent,178,25,0,0,0,24,0.0,0.0,0.0,0,0,0,25,0.0,0.0,0.0,0,0.0
+DeBERTa_only,40,Have the own family secured,14,Benevolence: caring,28,medium,frequent,174,21,0,0,0,20,0.0,0.0,0.0,0,0,0,21,0.0,0.0,0.0,0,0.0
+DeBERTa_only,0,Be creative,0,Self-direction: thought,29,medium,frequent,163,30,0,0,0,30,0.0,0.0,0.0,0,0,0,30,0.0,0.0,0.0,0,0.0
+DeBERTa_only,2,Have freedom of thought,0,Self-direction: thought,30,medium,frequent,133,16,0,0,0,15,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+DeBERTa_only,41,Be loving,14,Benevolence: caring,31,medium,frequent,133,27,0,0,0,27,0.0,0.0,0.0,0,0,0,27,0.0,0.0,0.0,0,0.0
+DeBERTa_only,6,Have privacy,1,Self-direction: action,32,medium,frequent,130,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+DeBERTa_only,3,Be choosing own goals,1,Self-direction: action,33,medium,frequent,123,16,0,0,0,16,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+DeBERTa_only,1,Be curious,0,Self-direction: thought,34,medium,frequent,122,18,0,0,0,17,0.0,0.0,0.0,0,0,0,18,0.0,0.0,0.0,0,0.0
+DeBERTa_only,20,Have a good reputation,7,Face,35,medium,frequent,115,11,0,0,0,9,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+DeBERTa_only,33,Be polite,12,Conformity: interpersonal,36,medium,frequent,103,14,0,0,0,14,0.0,0.0,0.0,0,0,0,14,0.0,0.0,0.0,0,0.0
+DeBERTa_only,43,Have loyalty towards friends,15,Benevolence: dependability,37,rare,frequent,90,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+DeBERTa_only,32,Be behaving properly,11,Conformity: rules,38,rare,frequent,60,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+DeBERTa_only,7,Have an exciting life,2,Stimulation,39,rare,frequent,58,8,0,0,0,7,0.0,0.0,0.0,0,0,0,8,0.0,0.0,0.0,0,0.0
+DeBERTa_only,4,Be independent,1,Self-direction: action,40,rare,frequent,57,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+DeBERTa_only,17,Have the right to command,5,Power: dominance,41,rare,frequent,47,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+DeBERTa_only,10,Have pleasure,3,Hedonism,42,rare,frequent,45,9,0,0,0,9,0.0,0.0,0.0,0,0,0,9,0.0,0.0,0.0,0,0.0
+DeBERTa_only,49,Have a world of beauty,17,Universalism: nature,43,rare,frequent,44,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+DeBERTa_only,51,Have the wisdom to accept others,18,Universalism: tolerance,44,rare,medium,36,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+DeBERTa_only,8,Have a varied life,2,Stimulation,45,rare,medium,35,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+DeBERTa_only,9,Be daring,2,Stimulation,46,rare,medium,35,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+DeBERTa_only,31,Be self-disciplined,11,Conformity: rules,47,rare,medium,34,11,0,0,0,11,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+DeBERTa_only,39,Be forgiving,14,Benevolence: caring,48,rare,medium,30,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+DeBERTa_only,48,Have harmony with nature,17,Universalism: nature,49,rare,medium,28,4,0,0,0,4,0.0,0.0,0.0,0,0,0,4,0.0,0.0,0.0,0,0.0
+DeBERTa_only,35,Be humble,13,Humility,50,rare,medium,25,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+DeBERTa_only,34,Be honoring elders,12,Conformity: interpersonal,51,rare,rare,12,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+DeBERTa_only,36,Have life accepted as is,13,Humility,52,rare,rare,11,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+DeBERTa_only,23,Have no debts,8,Security: personal,53,rare,rare,6,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+DeBERTa_only,24,Be neat and tidy,8,Security: personal,54,rare,very_rare,4,1,0,0,0,1,0.0,0.0,0.0,0,0,0,1,0.0,0.0,0.0,0,0.0
+Hybrid_v1,42,Be responsible,15,Benevolence: dependability,1,frequent,frequent,2031,282,443,261,182,5,0.5892,0.9812,0.7362,443,234,209,48,0.5282,0.8298,0.6455,27,0.0957
+Hybrid_v1,27,Have a stable society,9,Security: societal,2,frequent,frequent,1590,229,49,17,32,197,0.3469,0.0794,0.1293,49,7,42,222,0.1429,0.0306,0.0504,10,0.0437
+Hybrid_v1,45,Be just,16,Universalism: concern,3,frequent,frequent,1538,206,189,91,98,106,0.4815,0.4619,0.4715,189,63,126,143,0.3333,0.3058,0.319,28,0.1359
+Hybrid_v1,26,Have a safe country,9,Security: societal,4,frequent,frequent,1018,147,152,57,95,84,0.375,0.4043,0.3891,152,37,115,110,0.2434,0.2517,0.2475,20,0.1361
+Hybrid_v1,22,Have good health,8,Security: personal,5,frequent,frequent,883,122,300,78,222,41,0.26,0.6555,0.3723,300,40,260,82,0.1333,0.3279,0.1896,38,0.3115
+Hybrid_v1,37,Be helpful,14,Benevolence: caring,6,frequent,frequent,682,106,435,106,329,0,0.2437,1.0,0.3919,435,97,338,9,0.223,0.9151,0.3586,9,0.0849
+Hybrid_v1,30,Be compliant,11,Conformity: rules,7,frequent,frequent,638,81,173,29,144,52,0.1676,0.358,0.2283,173,18,155,63,0.104,0.2222,0.1417,11,0.1358
+Hybrid_v1,5,Have freedom of action,1,Self-direction: action,8,frequent,frequent,553,72,20,4,16,64,0.2,0.0588,0.0909,20,1,19,71,0.05,0.0139,0.0217,3,0.0417
+Hybrid_v1,38,Be honest,14,Benevolence: caring,9,frequent,frequent,486,72,283,38,245,31,0.1343,0.5507,0.2159,283,26,257,46,0.0919,0.3611,0.1465,12,0.1667
+Hybrid_v1,44,Have equality,16,Universalism: concern,10,frequent,frequent,460,66,0,0,0,63,0.0,0.0,0.0,0,0,0,66,0.0,0.0,0.0,0,0.0
+Hybrid_v1,25,Have a comfortable life,8,Security: personal,11,frequent,frequent,431,65,0,0,0,61,0.0,0.0,0.0,0,0,0,65,0.0,0.0,0.0,0,0.0
+Hybrid_v1,47,Be protecting the environment,17,Universalism: nature,12,frequent,frequent,399,39,0,0,0,37,0.0,0.0,0.0,0,0,0,39,0.0,0.0,0.0,0,0.0
+Hybrid_v1,13,Be capable,4,Achievement,13,frequent,frequent,389,55,0,0,0,54,0.0,0.0,0.0,0,0,0,55,0.0,0.0,0.0,0,0.0
+Hybrid_v1,21,Have a sense of belonging,8,Security: personal,14,frequent,frequent,382,57,0,0,0,56,0.0,0.0,0.0,0,0,0,57,0.0,0.0,0.0,0,0.0
+Hybrid_v1,15,Be courageous,4,Achievement,15,frequent,frequent,369,64,373,63,310,1,0.1689,0.9844,0.2883,373,63,310,1,0.1689,0.9844,0.2883,0,0.0
+Hybrid_v1,28,Be respecting traditions,10,Tradition,16,frequent,frequent,368,58,0,0,0,57,0.0,0.0,0.0,0,0,0,58,0.0,0.0,0.0,0,0.0
+Hybrid_v1,46,Have a world at peace,16,Universalism: concern,17,frequent,frequent,364,48,0,0,0,48,0.0,0.0,0.0,0,0,0,48,0.0,0.0,0.0,0,0.0
+Hybrid_v1,12,Have success,4,Achievement,18,frequent,frequent,338,54,394,51,343,1,0.1294,0.9808,0.2287,394,46,348,8,0.1168,0.8519,0.2054,5,0.0926
+Hybrid_v1,50,Be broadminded,18,Universalism: tolerance,19,medium,frequent,311,43,0,0,0,43,0.0,0.0,0.0,0,0,0,43,0.0,0.0,0.0,0,0.0
+Hybrid_v1,52,Be logical,19,Universalism: objectivity,20,medium,frequent,286,37,0,0,0,35,0.0,0.0,0.0,0,0,0,37,0.0,0.0,0.0,0,0.0
+Hybrid_v1,19,Have social recognition,7,Face,21,medium,frequent,268,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v1,29,Be holding religious faith,10,Tradition,22,medium,frequent,255,37,306,28,278,5,0.0915,0.8485,0.1652,306,26,280,11,0.085,0.7027,0.1516,2,0.0541
+Hybrid_v1,16,Have influence,5,Power: dominance,23,medium,frequent,243,36,0,0,0,35,0.0,0.0,0.0,0,0,0,36,0.0,0.0,0.0,0,0.0
+Hybrid_v1,14,Be intellectual,4,Achievement,24,medium,frequent,201,33,0,0,0,33,0.0,0.0,0.0,0,0,0,33,0.0,0.0,0.0,0,0.0
+Hybrid_v1,53,Have an objective view,19,Universalism: objectivity,25,medium,frequent,197,29,0,0,0,29,0.0,0.0,0.0,0,0,0,29,0.0,0.0,0.0,0,0.0
+Hybrid_v1,11,Be ambitious,4,Achievement,26,medium,frequent,194,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v1,18,Have wealth,6,Power: resources,27,medium,frequent,178,25,0,0,0,24,0.0,0.0,0.0,0,0,0,25,0.0,0.0,0.0,0,0.0
+Hybrid_v1,40,Have the own family secured,14,Benevolence: caring,28,medium,frequent,174,21,0,0,0,20,0.0,0.0,0.0,0,0,0,21,0.0,0.0,0.0,0,0.0
+Hybrid_v1,0,Be creative,0,Self-direction: thought,29,medium,frequent,163,30,0,0,0,30,0.0,0.0,0.0,0,0,0,30,0.0,0.0,0.0,0,0.0
+Hybrid_v1,2,Have freedom of thought,0,Self-direction: thought,30,medium,frequent,133,16,0,0,0,15,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v1,41,Be loving,14,Benevolence: caring,31,medium,frequent,133,27,0,0,0,27,0.0,0.0,0.0,0,0,0,27,0.0,0.0,0.0,0,0.0
+Hybrid_v1,6,Have privacy,1,Self-direction: action,32,medium,frequent,130,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v1,3,Be choosing own goals,1,Self-direction: action,33,medium,frequent,123,16,0,0,0,16,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v1,1,Be curious,0,Self-direction: thought,34,medium,frequent,122,18,0,0,0,17,0.0,0.0,0.0,0,0,0,18,0.0,0.0,0.0,0,0.0
+Hybrid_v1,20,Have a good reputation,7,Face,35,medium,frequent,115,11,0,0,0,9,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v1,33,Be polite,12,Conformity: interpersonal,36,medium,frequent,103,14,0,0,0,14,0.0,0.0,0.0,0,0,0,14,0.0,0.0,0.0,0,0.0
+Hybrid_v1,43,Have loyalty towards friends,15,Benevolence: dependability,37,rare,frequent,90,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v1,32,Be behaving properly,11,Conformity: rules,38,rare,frequent,60,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v1,7,Have an exciting life,2,Stimulation,39,rare,frequent,58,8,0,0,0,7,0.0,0.0,0.0,0,0,0,8,0.0,0.0,0.0,0,0.0
+Hybrid_v1,4,Be independent,1,Self-direction: action,40,rare,frequent,57,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v1,17,Have the right to command,5,Power: dominance,41,rare,frequent,47,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v1,10,Have pleasure,3,Hedonism,42,rare,frequent,45,9,0,0,0,9,0.0,0.0,0.0,0,0,0,9,0.0,0.0,0.0,0,0.0
+Hybrid_v1,49,Have a world of beauty,17,Universalism: nature,43,rare,frequent,44,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v1,51,Have the wisdom to accept others,18,Universalism: tolerance,44,rare,medium,36,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v1,8,Have a varied life,2,Stimulation,45,rare,medium,35,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v1,9,Be daring,2,Stimulation,46,rare,medium,35,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v1,31,Be self-disciplined,11,Conformity: rules,47,rare,medium,34,11,0,0,0,11,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v1,39,Be forgiving,14,Benevolence: caring,48,rare,medium,30,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v1,48,Have harmony with nature,17,Universalism: nature,49,rare,medium,28,4,0,0,0,4,0.0,0.0,0.0,0,0,0,4,0.0,0.0,0.0,0,0.0
+Hybrid_v1,35,Be humble,13,Humility,50,rare,medium,25,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v1,34,Be honoring elders,12,Conformity: interpersonal,51,rare,rare,12,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v1,36,Have life accepted as is,13,Humility,52,rare,rare,11,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v1,23,Have no debts,8,Security: personal,53,rare,rare,6,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v1,24,Be neat and tidy,8,Security: personal,54,rare,very_rare,4,1,0,0,0,1,0.0,0.0,0.0,0,0,0,1,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,42,Be responsible,15,Benevolence: dependability,1,frequent,frequent,2031,282,301,217,84,49,0.7209,0.8158,0.7654,301,205,96,77,0.6811,0.727,0.7033,12,0.0426
+Hybrid_v2_DS_Flash,27,Have a stable society,9,Security: societal,2,frequent,frequent,1590,229,192,122,70,92,0.6354,0.5701,0.601,192,105,87,124,0.5469,0.4585,0.4988,17,0.0742
+Hybrid_v2_DS_Flash,45,Be just,16,Universalism: concern,3,frequent,frequent,1538,206,153,111,42,86,0.7255,0.5635,0.6343,153,106,47,100,0.6928,0.5146,0.5905,5,0.0243
+Hybrid_v2_DS_Flash,26,Have a safe country,9,Security: societal,4,frequent,frequent,1018,147,190,110,80,31,0.5789,0.7801,0.6647,190,97,93,50,0.5105,0.6599,0.5757,13,0.0884
+Hybrid_v2_DS_Flash,22,Have good health,8,Security: personal,5,frequent,frequent,883,122,68,45,23,74,0.6618,0.3782,0.4813,68,40,28,82,0.5882,0.3279,0.4211,5,0.041
+Hybrid_v2_DS_Flash,37,Be helpful,14,Benevolence: caring,6,frequent,frequent,682,106,125,73,52,33,0.584,0.6887,0.632,125,70,55,36,0.56,0.6604,0.6061,3,0.0283
+Hybrid_v2_DS_Flash,30,Be compliant,11,Conformity: rules,7,frequent,frequent,638,81,30,12,18,69,0.4,0.1481,0.2162,30,12,18,69,0.4,0.1481,0.2162,0,0.0
+Hybrid_v2_DS_Flash,5,Have freedom of action,1,Self-direction: action,8,frequent,frequent,553,72,2,2,0,66,1.0,0.0294,0.0571,2,2,0,70,1.0,0.0278,0.0541,0,0.0
+Hybrid_v2_DS_Flash,38,Be honest,14,Benevolence: caring,9,frequent,frequent,486,72,33,17,16,52,0.5152,0.2464,0.3333,33,16,17,56,0.4848,0.2222,0.3048,1,0.0139
+Hybrid_v2_DS_Flash,44,Have equality,16,Universalism: concern,10,frequent,frequent,460,66,0,0,0,63,0.0,0.0,0.0,0,0,0,66,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,25,Have a comfortable life,8,Security: personal,11,frequent,frequent,431,65,11,8,3,53,0.7273,0.1311,0.2222,11,8,3,57,0.7273,0.1231,0.2105,0,0.0
+Hybrid_v2_DS_Flash,47,Be protecting the environment,17,Universalism: nature,12,frequent,frequent,399,39,0,0,0,37,0.0,0.0,0.0,0,0,0,39,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,13,Be capable,4,Achievement,13,frequent,frequent,389,55,4,1,3,53,0.25,0.0185,0.0345,4,1,3,54,0.25,0.0182,0.0339,0,0.0
+Hybrid_v2_DS_Flash,21,Have a sense of belonging,8,Security: personal,14,frequent,frequent,382,57,0,0,0,56,0.0,0.0,0.0,0,0,0,57,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,15,Be courageous,4,Achievement,15,frequent,frequent,369,64,64,41,23,23,0.6406,0.6406,0.6406,64,41,23,23,0.6406,0.6406,0.6406,0,0.0
+Hybrid_v2_DS_Flash,28,Be respecting traditions,10,Tradition,16,frequent,frequent,368,58,0,0,0,57,0.0,0.0,0.0,0,0,0,58,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,46,Have a world at peace,16,Universalism: concern,17,frequent,frequent,364,48,0,0,0,48,0.0,0.0,0.0,0,0,0,48,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,12,Have success,4,Achievement,18,frequent,frequent,338,54,62,32,30,20,0.5161,0.6154,0.5614,62,32,30,22,0.5161,0.5926,0.5517,0,0.0
+Hybrid_v2_DS_Flash,50,Be broadminded,18,Universalism: tolerance,19,medium,frequent,311,43,0,0,0,43,0.0,0.0,0.0,0,0,0,43,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,52,Be logical,19,Universalism: objectivity,20,medium,frequent,286,37,0,0,0,35,0.0,0.0,0.0,0,0,0,37,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,19,Have social recognition,7,Face,21,medium,frequent,268,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,29,Be holding religious faith,10,Tradition,22,medium,frequent,255,37,35,26,9,7,0.7429,0.7879,0.7647,35,25,10,12,0.7143,0.6757,0.6944,1,0.027
+Hybrid_v2_DS_Flash,16,Have influence,5,Power: dominance,23,medium,frequent,243,36,0,0,0,35,0.0,0.0,0.0,0,0,0,36,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,14,Be intellectual,4,Achievement,24,medium,frequent,201,33,0,0,0,33,0.0,0.0,0.0,0,0,0,33,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,53,Have an objective view,19,Universalism: objectivity,25,medium,frequent,197,29,0,0,0,29,0.0,0.0,0.0,0,0,0,29,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,11,Be ambitious,4,Achievement,26,medium,frequent,194,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,18,Have wealth,6,Power: resources,27,medium,frequent,178,25,0,0,0,24,0.0,0.0,0.0,0,0,0,25,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,40,Have the own family secured,14,Benevolence: caring,28,medium,frequent,174,21,0,0,0,20,0.0,0.0,0.0,0,0,0,21,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,0,Be creative,0,Self-direction: thought,29,medium,frequent,163,30,0,0,0,30,0.0,0.0,0.0,0,0,0,30,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,2,Have freedom of thought,0,Self-direction: thought,30,medium,frequent,133,16,0,0,0,15,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,41,Be loving,14,Benevolence: caring,31,medium,frequent,133,27,0,0,0,27,0.0,0.0,0.0,0,0,0,27,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,6,Have privacy,1,Self-direction: action,32,medium,frequent,130,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,3,Be choosing own goals,1,Self-direction: action,33,medium,frequent,123,16,0,0,0,16,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,1,Be curious,0,Self-direction: thought,34,medium,frequent,122,18,0,0,0,17,0.0,0.0,0.0,0,0,0,18,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,20,Have a good reputation,7,Face,35,medium,frequent,115,11,0,0,0,9,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,33,Be polite,12,Conformity: interpersonal,36,medium,frequent,103,14,0,0,0,14,0.0,0.0,0.0,0,0,0,14,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,43,Have loyalty towards friends,15,Benevolence: dependability,37,rare,frequent,90,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,32,Be behaving properly,11,Conformity: rules,38,rare,frequent,60,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,7,Have an exciting life,2,Stimulation,39,rare,frequent,58,8,0,0,0,7,0.0,0.0,0.0,0,0,0,8,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,4,Be independent,1,Self-direction: action,40,rare,frequent,57,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,17,Have the right to command,5,Power: dominance,41,rare,frequent,47,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,10,Have pleasure,3,Hedonism,42,rare,frequent,45,9,0,0,0,9,0.0,0.0,0.0,0,0,0,9,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,49,Have a world of beauty,17,Universalism: nature,43,rare,frequent,44,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,51,Have the wisdom to accept others,18,Universalism: tolerance,44,rare,medium,36,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,8,Have a varied life,2,Stimulation,45,rare,medium,35,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,9,Be daring,2,Stimulation,46,rare,medium,35,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,31,Be self-disciplined,11,Conformity: rules,47,rare,medium,34,11,0,0,0,11,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,39,Be forgiving,14,Benevolence: caring,48,rare,medium,30,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,48,Have harmony with nature,17,Universalism: nature,49,rare,medium,28,4,0,0,0,4,0.0,0.0,0.0,0,0,0,4,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,35,Be humble,13,Humility,50,rare,medium,25,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,34,Be honoring elders,12,Conformity: interpersonal,51,rare,rare,12,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,36,Have life accepted as is,13,Humility,52,rare,rare,11,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,23,Have no debts,8,Security: personal,53,rare,rare,6,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Flash,24,Be neat and tidy,8,Security: personal,54,rare,very_rare,4,1,0,0,0,1,0.0,0.0,0.0,0,0,0,1,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,42,Be responsible,15,Benevolence: dependability,1,frequent,frequent,2031,282,282,220,62,46,0.7801,0.8271,0.8029,282,206,76,76,0.7305,0.7305,0.7305,14,0.0496
+Hybrid_v2_DS_Pro,27,Have a stable society,9,Security: societal,2,frequent,frequent,1590,229,157,115,42,99,0.7325,0.5374,0.6199,157,100,57,129,0.6369,0.4367,0.5181,15,0.0655
+Hybrid_v2_DS_Pro,45,Be just,16,Universalism: concern,3,frequent,frequent,1538,206,140,117,23,80,0.8357,0.5939,0.6944,140,113,27,93,0.8071,0.5485,0.6532,4,0.0194
+Hybrid_v2_DS_Pro,26,Have a safe country,9,Security: societal,4,frequent,frequent,1018,147,161,109,52,32,0.677,0.773,0.7219,161,101,60,46,0.6273,0.6871,0.6558,8,0.0544
+Hybrid_v2_DS_Pro,22,Have good health,8,Security: personal,5,frequent,frequent,883,122,97,66,31,53,0.6804,0.5546,0.6111,98,60,38,62,0.6122,0.4918,0.5455,7,0.0574
+Hybrid_v2_DS_Pro,37,Be helpful,14,Benevolence: caring,6,frequent,frequent,682,106,107,71,36,35,0.6636,0.6698,0.6667,107,69,38,37,0.6449,0.6509,0.6479,2,0.0189
+Hybrid_v2_DS_Pro,30,Be compliant,11,Conformity: rules,7,frequent,frequent,638,81,48,26,22,55,0.5417,0.321,0.4031,48,23,25,58,0.4792,0.284,0.3566,3,0.037
+Hybrid_v2_DS_Pro,5,Have freedom of action,1,Self-direction: action,8,frequent,frequent,553,72,6,4,2,64,0.6667,0.0588,0.1081,6,4,2,68,0.6667,0.0556,0.1026,0,0.0
+Hybrid_v2_DS_Pro,38,Be honest,14,Benevolence: caring,9,frequent,frequent,486,72,46,24,22,45,0.5217,0.3478,0.4174,46,23,23,49,0.5,0.3194,0.3898,1,0.0139
+Hybrid_v2_DS_Pro,44,Have equality,16,Universalism: concern,10,frequent,frequent,460,66,0,0,0,63,0.0,0.0,0.0,0,0,0,66,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,25,Have a comfortable life,8,Security: personal,11,frequent,frequent,431,65,20,12,8,49,0.6,0.1967,0.2963,20,11,9,54,0.55,0.1692,0.2588,1,0.0154
+Hybrid_v2_DS_Pro,47,Be protecting the environment,17,Universalism: nature,12,frequent,frequent,399,39,0,0,0,37,0.0,0.0,0.0,0,0,0,39,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,13,Be capable,4,Achievement,13,frequent,frequent,389,55,1,1,0,53,1.0,0.0185,0.0364,1,1,0,54,1.0,0.0182,0.0357,0,0.0
+Hybrid_v2_DS_Pro,21,Have a sense of belonging,8,Security: personal,14,frequent,frequent,382,57,0,0,0,56,0.0,0.0,0.0,0,0,0,57,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,15,Be courageous,4,Achievement,15,frequent,frequent,369,64,60,42,18,22,0.7,0.6562,0.6774,60,42,18,22,0.7,0.6562,0.6774,0,0.0
+Hybrid_v2_DS_Pro,28,Be respecting traditions,10,Tradition,16,frequent,frequent,368,58,0,0,0,57,0.0,0.0,0.0,0,0,0,58,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,46,Have a world at peace,16,Universalism: concern,17,frequent,frequent,364,48,0,0,0,48,0.0,0.0,0.0,0,0,0,48,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,12,Have success,4,Achievement,18,frequent,frequent,338,54,46,30,16,22,0.6522,0.5769,0.6122,46,30,16,24,0.6522,0.5556,0.6,0,0.0
+Hybrid_v2_DS_Pro,50,Be broadminded,18,Universalism: tolerance,19,medium,frequent,311,43,0,0,0,43,0.0,0.0,0.0,0,0,0,43,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,52,Be logical,19,Universalism: objectivity,20,medium,frequent,286,37,0,0,0,35,0.0,0.0,0.0,0,0,0,37,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,19,Have social recognition,7,Face,21,medium,frequent,268,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,29,Be holding religious faith,10,Tradition,22,medium,frequent,255,37,30,24,6,9,0.8,0.7273,0.7619,30,23,7,14,0.7667,0.6216,0.6866,1,0.027
+Hybrid_v2_DS_Pro,16,Have influence,5,Power: dominance,23,medium,frequent,243,36,0,0,0,35,0.0,0.0,0.0,0,0,0,36,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,14,Be intellectual,4,Achievement,24,medium,frequent,201,33,0,0,0,33,0.0,0.0,0.0,0,0,0,33,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,53,Have an objective view,19,Universalism: objectivity,25,medium,frequent,197,29,0,0,0,29,0.0,0.0,0.0,0,0,0,29,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,11,Be ambitious,4,Achievement,26,medium,frequent,194,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,18,Have wealth,6,Power: resources,27,medium,frequent,178,25,0,0,0,24,0.0,0.0,0.0,0,0,0,25,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,40,Have the own family secured,14,Benevolence: caring,28,medium,frequent,174,21,0,0,0,20,0.0,0.0,0.0,0,0,0,21,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,0,Be creative,0,Self-direction: thought,29,medium,frequent,163,30,0,0,0,30,0.0,0.0,0.0,0,0,0,30,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,2,Have freedom of thought,0,Self-direction: thought,30,medium,frequent,133,16,0,0,0,15,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,41,Be loving,14,Benevolence: caring,31,medium,frequent,133,27,0,0,0,27,0.0,0.0,0.0,0,0,0,27,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,6,Have privacy,1,Self-direction: action,32,medium,frequent,130,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,3,Be choosing own goals,1,Self-direction: action,33,medium,frequent,123,16,0,0,0,16,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,1,Be curious,0,Self-direction: thought,34,medium,frequent,122,18,0,0,0,17,0.0,0.0,0.0,0,0,0,18,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,20,Have a good reputation,7,Face,35,medium,frequent,115,11,0,0,0,9,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,33,Be polite,12,Conformity: interpersonal,36,medium,frequent,103,14,0,0,0,14,0.0,0.0,0.0,0,0,0,14,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,43,Have loyalty towards friends,15,Benevolence: dependability,37,rare,frequent,90,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,32,Be behaving properly,11,Conformity: rules,38,rare,frequent,60,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,7,Have an exciting life,2,Stimulation,39,rare,frequent,58,8,0,0,0,7,0.0,0.0,0.0,0,0,0,8,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,4,Be independent,1,Self-direction: action,40,rare,frequent,57,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,17,Have the right to command,5,Power: dominance,41,rare,frequent,47,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,10,Have pleasure,3,Hedonism,42,rare,frequent,45,9,0,0,0,9,0.0,0.0,0.0,0,0,0,9,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,49,Have a world of beauty,17,Universalism: nature,43,rare,frequent,44,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,51,Have the wisdom to accept others,18,Universalism: tolerance,44,rare,medium,36,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,8,Have a varied life,2,Stimulation,45,rare,medium,35,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,9,Be daring,2,Stimulation,46,rare,medium,35,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,31,Be self-disciplined,11,Conformity: rules,47,rare,medium,34,11,0,0,0,11,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,39,Be forgiving,14,Benevolence: caring,48,rare,medium,30,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,48,Have harmony with nature,17,Universalism: nature,49,rare,medium,28,4,0,0,0,4,0.0,0.0,0.0,0,0,0,4,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,35,Be humble,13,Humility,50,rare,medium,25,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,34,Be honoring elders,12,Conformity: interpersonal,51,rare,rare,12,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,36,Have life accepted as is,13,Humility,52,rare,rare,11,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,23,Have no debts,8,Security: personal,53,rare,rare,6,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_DS_Pro,24,Be neat and tidy,8,Security: personal,54,rare,very_rare,4,1,0,0,0,1,0.0,0.0,0.0,0,0,0,1,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,42,Be responsible,15,Benevolence: dependability,1,frequent,frequent,2031,282,312,209,103,57,0.6699,0.7857,0.7232,312,193,119,89,0.6186,0.6844,0.6498,16,0.0567
+Hybrid_v2_OAI_old,27,Have a stable society,9,Security: societal,2,frequent,frequent,1590,229,76,49,27,165,0.6447,0.229,0.3379,76,39,37,190,0.5132,0.1703,0.2557,10,0.0437
+Hybrid_v2_OAI_old,45,Be just,16,Universalism: concern,3,frequent,frequent,1538,206,187,123,64,74,0.6578,0.6244,0.6406,187,111,76,95,0.5936,0.5388,0.5649,12,0.0583
+Hybrid_v2_OAI_old,26,Have a safe country,9,Security: societal,4,frequent,frequent,1018,147,137,81,56,60,0.5912,0.5745,0.5827,137,68,69,79,0.4964,0.4626,0.4789,13,0.0884
+Hybrid_v2_OAI_old,22,Have good health,8,Security: personal,5,frequent,frequent,883,122,56,31,25,88,0.5536,0.2605,0.3543,56,24,32,98,0.4286,0.1967,0.2697,7,0.0574
+Hybrid_v2_OAI_old,37,Be helpful,14,Benevolence: caring,6,frequent,frequent,682,106,150,67,83,39,0.4467,0.6321,0.5234,150,62,88,44,0.4133,0.5849,0.4844,5,0.0472
+Hybrid_v2_OAI_old,30,Be compliant,11,Conformity: rules,7,frequent,frequent,638,81,26,11,15,70,0.4231,0.1358,0.2056,26,10,16,71,0.3846,0.1235,0.1869,1,0.0123
+Hybrid_v2_OAI_old,5,Have freedom of action,1,Self-direction: action,8,frequent,frequent,553,72,2,0,2,68,0.0,0.0,0.0,2,0,2,72,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,38,Be honest,14,Benevolence: caring,9,frequent,frequent,486,72,16,7,9,62,0.4375,0.1014,0.1647,16,7,9,65,0.4375,0.0972,0.1591,0,0.0
+Hybrid_v2_OAI_old,44,Have equality,16,Universalism: concern,10,frequent,frequent,460,66,0,0,0,63,0.0,0.0,0.0,0,0,0,66,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,25,Have a comfortable life,8,Security: personal,11,frequent,frequent,431,65,3,0,3,61,0.0,0.0,0.0,3,0,3,65,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,47,Be protecting the environment,17,Universalism: nature,12,frequent,frequent,399,39,0,0,0,37,0.0,0.0,0.0,0,0,0,39,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,13,Be capable,4,Achievement,13,frequent,frequent,389,55,2,0,2,54,0.0,0.0,0.0,2,0,2,55,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,21,Have a sense of belonging,8,Security: personal,14,frequent,frequent,382,57,0,0,0,56,0.0,0.0,0.0,0,0,0,57,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,15,Be courageous,4,Achievement,15,frequent,frequent,369,64,60,31,29,33,0.5167,0.4844,0.5,60,31,29,33,0.5167,0.4844,0.5,0,0.0
+Hybrid_v2_OAI_old,28,Be respecting traditions,10,Tradition,16,frequent,frequent,368,58,0,0,0,57,0.0,0.0,0.0,0,0,0,58,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,46,Have a world at peace,16,Universalism: concern,17,frequent,frequent,364,48,0,0,0,48,0.0,0.0,0.0,0,0,0,48,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,12,Have success,4,Achievement,18,frequent,frequent,338,54,51,25,26,27,0.4902,0.4808,0.4854,51,25,26,29,0.4902,0.463,0.4762,0,0.0
+Hybrid_v2_OAI_old,50,Be broadminded,18,Universalism: tolerance,19,medium,frequent,311,43,0,0,0,43,0.0,0.0,0.0,0,0,0,43,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,52,Be logical,19,Universalism: objectivity,20,medium,frequent,286,37,0,0,0,35,0.0,0.0,0.0,0,0,0,37,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,19,Have social recognition,7,Face,21,medium,frequent,268,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,29,Be holding religious faith,10,Tradition,22,medium,frequent,255,37,18,12,6,21,0.6667,0.3636,0.4706,18,11,7,26,0.6111,0.2973,0.4,1,0.027
+Hybrid_v2_OAI_old,16,Have influence,5,Power: dominance,23,medium,frequent,243,36,2,0,2,35,0.0,0.0,0.0,2,0,2,36,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,14,Be intellectual,4,Achievement,24,medium,frequent,201,33,0,0,0,33,0.0,0.0,0.0,0,0,0,33,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,53,Have an objective view,19,Universalism: objectivity,25,medium,frequent,197,29,0,0,0,29,0.0,0.0,0.0,0,0,0,29,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,11,Be ambitious,4,Achievement,26,medium,frequent,194,35,0,0,0,35,0.0,0.0,0.0,0,0,0,35,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,18,Have wealth,6,Power: resources,27,medium,frequent,178,25,0,0,0,24,0.0,0.0,0.0,0,0,0,25,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,40,Have the own family secured,14,Benevolence: caring,28,medium,frequent,174,21,0,0,0,20,0.0,0.0,0.0,0,0,0,21,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,0,Be creative,0,Self-direction: thought,29,medium,frequent,163,30,0,0,0,30,0.0,0.0,0.0,0,0,0,30,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,2,Have freedom of thought,0,Self-direction: thought,30,medium,frequent,133,16,0,0,0,15,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,41,Be loving,14,Benevolence: caring,31,medium,frequent,133,27,0,0,0,27,0.0,0.0,0.0,0,0,0,27,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,6,Have privacy,1,Self-direction: action,32,medium,frequent,130,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,3,Be choosing own goals,1,Self-direction: action,33,medium,frequent,123,16,0,0,0,16,0.0,0.0,0.0,0,0,0,16,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,1,Be curious,0,Self-direction: thought,34,medium,frequent,122,18,0,0,0,17,0.0,0.0,0.0,0,0,0,18,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,20,Have a good reputation,7,Face,35,medium,frequent,115,11,0,0,0,9,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,33,Be polite,12,Conformity: interpersonal,36,medium,frequent,103,14,0,0,0,14,0.0,0.0,0.0,0,0,0,14,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,43,Have loyalty towards friends,15,Benevolence: dependability,37,rare,frequent,90,13,0,0,0,13,0.0,0.0,0.0,0,0,0,13,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,32,Be behaving properly,11,Conformity: rules,38,rare,frequent,60,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,7,Have an exciting life,2,Stimulation,39,rare,frequent,58,8,0,0,0,7,0.0,0.0,0.0,0,0,0,8,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,4,Be independent,1,Self-direction: action,40,rare,frequent,57,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,17,Have the right to command,5,Power: dominance,41,rare,frequent,47,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,10,Have pleasure,3,Hedonism,42,rare,frequent,45,9,0,0,0,9,0.0,0.0,0.0,0,0,0,9,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,49,Have a world of beauty,17,Universalism: nature,43,rare,frequent,44,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,51,Have the wisdom to accept others,18,Universalism: tolerance,44,rare,medium,36,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,8,Have a varied life,2,Stimulation,45,rare,medium,35,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,9,Be daring,2,Stimulation,46,rare,medium,35,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,31,Be self-disciplined,11,Conformity: rules,47,rare,medium,34,11,0,0,0,11,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,39,Be forgiving,14,Benevolence: caring,48,rare,medium,30,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,48,Have harmony with nature,17,Universalism: nature,49,rare,medium,28,4,0,0,0,4,0.0,0.0,0.0,0,0,0,4,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,35,Be humble,13,Humility,50,rare,medium,25,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,34,Be honoring elders,12,Conformity: interpersonal,51,rare,rare,12,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,36,Have life accepted as is,13,Humility,52,rare,rare,11,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,23,Have no debts,8,Security: personal,53,rare,rare,6,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Hybrid_v2_OAI_old,24,Be neat and tidy,8,Security: personal,54,rare,very_rare,4,1,0,0,0,1,0.0,0.0,0.0,0,0,0,1,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,42,Be responsible,15,Benevolence: dependability,1,frequent,frequent,2031,282,301,227,74,39,0.7542,0.8534,0.8007,302,217,85,65,0.7185,0.7695,0.7432,11,0.039
+Prompt_DS_Flash,27,Have a stable society,9,Security: societal,2,frequent,frequent,1590,229,52,42,10,172,0.8077,0.1963,0.3158,52,39,13,190,0.75,0.1703,0.2776,3,0.0131
+Prompt_DS_Flash,45,Be just,16,Universalism: concern,3,frequent,frequent,1538,206,206,152,54,45,0.7379,0.7716,0.7543,206,142,64,64,0.6893,0.6893,0.6893,10,0.0485
+Prompt_DS_Flash,26,Have a safe country,9,Security: societal,4,frequent,frequent,1018,147,118,80,38,61,0.678,0.5674,0.6178,118,70,48,77,0.5932,0.4762,0.5283,10,0.068
+Prompt_DS_Flash,22,Have good health,8,Security: personal,5,frequent,frequent,883,122,124,69,55,50,0.5565,0.5798,0.5679,124,65,59,57,0.5242,0.5328,0.5285,4,0.0328
+Prompt_DS_Flash,37,Be helpful,14,Benevolence: caring,6,frequent,frequent,682,106,170,88,82,18,0.5176,0.8302,0.6377,170,84,86,22,0.4941,0.7925,0.6087,4,0.0377
+Prompt_DS_Flash,30,Be compliant,11,Conformity: rules,7,frequent,frequent,638,81,53,33,20,48,0.6226,0.4074,0.4925,53,30,23,51,0.566,0.3704,0.4478,3,0.037
+Prompt_DS_Flash,5,Have freedom of action,1,Self-direction: action,8,frequent,frequent,553,72,66,29,37,39,0.4394,0.4265,0.4328,66,24,42,48,0.3636,0.3333,0.3478,5,0.0694
+Prompt_DS_Flash,38,Be honest,14,Benevolence: caring,9,frequent,frequent,486,72,84,42,42,27,0.5,0.6087,0.549,84,42,42,30,0.5,0.5833,0.5385,0,0.0
+Prompt_DS_Flash,44,Have equality,16,Universalism: concern,10,frequent,frequent,460,66,30,22,8,41,0.7333,0.3492,0.4731,30,22,8,44,0.7333,0.3333,0.4583,0,0.0
+Prompt_DS_Flash,25,Have a comfortable life,8,Security: personal,11,frequent,frequent,431,65,74,32,42,29,0.4324,0.5246,0.4741,74,28,46,37,0.3784,0.4308,0.4029,4,0.0615
+Prompt_DS_Flash,47,Be protecting the environment,17,Universalism: nature,12,frequent,frequent,399,39,31,23,8,14,0.7419,0.6216,0.6765,31,22,9,17,0.7097,0.5641,0.6286,1,0.0256
+Prompt_DS_Flash,13,Be capable,4,Achievement,13,frequent,frequent,389,55,21,15,6,39,0.7143,0.2778,0.4,21,15,6,40,0.7143,0.2727,0.3947,0,0.0
+Prompt_DS_Flash,21,Have a sense of belonging,8,Security: personal,14,frequent,frequent,382,57,14,9,5,47,0.6429,0.1607,0.2571,14,8,6,49,0.5714,0.1404,0.2254,1,0.0175
+Prompt_DS_Flash,15,Be courageous,4,Achievement,15,frequent,frequent,369,64,20,16,4,48,0.8,0.25,0.381,20,16,4,48,0.8,0.25,0.381,0,0.0
+Prompt_DS_Flash,28,Be respecting traditions,10,Tradition,16,frequent,frequent,368,58,28,19,9,38,0.6786,0.3333,0.4471,29,17,12,41,0.5862,0.2931,0.3908,3,0.0517
+Prompt_DS_Flash,46,Have a world at peace,16,Universalism: concern,17,frequent,frequent,364,48,13,9,4,39,0.6923,0.1875,0.2951,13,9,4,39,0.6923,0.1875,0.2951,0,0.0
+Prompt_DS_Flash,12,Have success,4,Achievement,18,frequent,frequent,338,54,23,16,7,36,0.6957,0.3077,0.4267,23,16,7,38,0.6957,0.2963,0.4156,0,0.0
+Prompt_DS_Flash,50,Be broadminded,18,Universalism: tolerance,19,medium,frequent,311,43,27,19,8,24,0.7037,0.4419,0.5429,27,19,8,24,0.7037,0.4419,0.5429,0,0.0
+Prompt_DS_Flash,52,Be logical,19,Universalism: objectivity,20,medium,frequent,286,37,47,19,28,16,0.4043,0.5429,0.4634,47,19,28,18,0.4043,0.5135,0.4524,0,0.0
+Prompt_DS_Flash,19,Have social recognition,7,Face,21,medium,frequent,268,35,5,1,4,34,0.2,0.0286,0.05,5,1,4,34,0.2,0.0286,0.05,0,0.0
+Prompt_DS_Flash,29,Be holding religious faith,10,Tradition,22,medium,frequent,255,37,18,16,2,17,0.8889,0.4848,0.6275,18,15,3,22,0.8333,0.4054,0.5455,1,0.027
+Prompt_DS_Flash,16,Have influence,5,Power: dominance,23,medium,frequent,243,36,14,6,8,29,0.4286,0.1714,0.2449,14,6,8,30,0.4286,0.1667,0.24,0,0.0
+Prompt_DS_Flash,14,Be intellectual,4,Achievement,24,medium,frequent,201,33,10,8,2,25,0.8,0.2424,0.3721,10,8,2,25,0.8,0.2424,0.3721,0,0.0
+Prompt_DS_Flash,53,Have an objective view,19,Universalism: objectivity,25,medium,frequent,197,29,20,15,5,14,0.75,0.5172,0.6122,20,15,5,14,0.75,0.5172,0.6122,0,0.0
+Prompt_DS_Flash,11,Be ambitious,4,Achievement,26,medium,frequent,194,35,25,20,5,15,0.8,0.5714,0.6667,25,20,5,15,0.8,0.5714,0.6667,0,0.0
+Prompt_DS_Flash,18,Have wealth,6,Power: resources,27,medium,frequent,178,25,8,7,1,17,0.875,0.2917,0.4375,8,7,1,18,0.875,0.28,0.4242,0,0.0
+Prompt_DS_Flash,40,Have the own family secured,14,Benevolence: caring,28,medium,frequent,174,21,15,5,10,15,0.3333,0.25,0.2857,15,3,12,18,0.2,0.1429,0.1667,2,0.0952
+Prompt_DS_Flash,0,Be creative,0,Self-direction: thought,29,medium,frequent,163,30,3,3,0,27,1.0,0.1,0.1818,3,3,0,27,1.0,0.1,0.1818,0,0.0
+Prompt_DS_Flash,2,Have freedom of thought,0,Self-direction: thought,30,medium,frequent,133,16,3,1,2,14,0.3333,0.0667,0.1111,3,1,2,15,0.3333,0.0625,0.1053,0,0.0
+Prompt_DS_Flash,41,Be loving,14,Benevolence: caring,31,medium,frequent,133,27,11,7,4,20,0.6364,0.2593,0.3684,11,7,4,20,0.6364,0.2593,0.3684,0,0.0
+Prompt_DS_Flash,6,Have privacy,1,Self-direction: action,32,medium,frequent,130,13,7,5,2,8,0.7143,0.3846,0.5,7,5,2,8,0.7143,0.3846,0.5,0,0.0
+Prompt_DS_Flash,3,Be choosing own goals,1,Self-direction: action,33,medium,frequent,123,16,13,5,8,11,0.3846,0.3125,0.3448,13,5,8,11,0.3846,0.3125,0.3448,0,0.0
+Prompt_DS_Flash,1,Be curious,0,Self-direction: thought,34,medium,frequent,122,18,29,15,14,2,0.5172,0.8824,0.6522,29,15,14,3,0.5172,0.8333,0.6383,0,0.0
+Prompt_DS_Flash,20,Have a good reputation,7,Face,35,medium,frequent,115,11,1,0,1,9,0.0,0.0,0.0,1,0,1,11,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,33,Be polite,12,Conformity: interpersonal,36,medium,frequent,103,14,0,0,0,14,0.0,0.0,0.0,0,0,0,14,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,43,Have loyalty towards friends,15,Benevolence: dependability,37,rare,frequent,90,13,6,2,4,11,0.3333,0.1538,0.2105,6,2,4,11,0.3333,0.1538,0.2105,0,0.0
+Prompt_DS_Flash,32,Be behaving properly,11,Conformity: rules,38,rare,frequent,60,10,12,0,12,10,0.0,0.0,0.0,12,0,12,10,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,7,Have an exciting life,2,Stimulation,39,rare,frequent,58,8,7,1,6,6,0.1429,0.1429,0.1429,7,1,6,7,0.1429,0.125,0.1333,0,0.0
+Prompt_DS_Flash,4,Be independent,1,Self-direction: action,40,rare,frequent,57,10,1,1,0,9,1.0,0.1,0.1818,1,1,0,9,1.0,0.1,0.1818,0,0.0
+Prompt_DS_Flash,17,Have the right to command,5,Power: dominance,41,rare,frequent,47,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,10,Have pleasure,3,Hedonism,42,rare,frequent,45,9,1,0,1,9,0.0,0.0,0.0,1,0,1,9,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,49,Have a world of beauty,17,Universalism: nature,43,rare,frequent,44,6,0,0,0,6,0.0,0.0,0.0,0,0,0,6,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,51,Have the wisdom to accept others,18,Universalism: tolerance,44,rare,medium,36,2,6,1,5,1,0.1667,0.5,0.25,6,1,5,1,0.1667,0.5,0.25,0,0.0
+Prompt_DS_Flash,8,Have a varied life,2,Stimulation,45,rare,medium,35,3,2,0,2,3,0.0,0.0,0.0,2,0,2,3,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,9,Be daring,2,Stimulation,46,rare,medium,35,6,6,2,4,4,0.3333,0.3333,0.3333,6,2,4,4,0.3333,0.3333,0.3333,0,0.0
+Prompt_DS_Flash,31,Be self-disciplined,11,Conformity: rules,47,rare,medium,34,11,2,0,2,11,0.0,0.0,0.0,2,0,2,11,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,39,Be forgiving,14,Benevolence: caring,48,rare,medium,30,3,2,0,2,3,0.0,0.0,0.0,2,0,2,3,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,48,Have harmony with nature,17,Universalism: nature,49,rare,medium,28,4,2,1,1,3,0.5,0.25,0.3333,2,1,1,3,0.5,0.25,0.3333,0,0.0
+Prompt_DS_Flash,35,Be humble,13,Humility,50,rare,medium,25,3,2,1,1,2,0.5,0.3333,0.4,2,1,1,2,0.5,0.3333,0.4,0,0.0
+Prompt_DS_Flash,34,Be honoring elders,12,Conformity: interpersonal,51,rare,rare,12,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,36,Have life accepted as is,13,Humility,52,rare,rare,11,0,1,0,1,0,0.0,0.0,0.0,1,0,1,0,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,23,Have no debts,8,Security: personal,53,rare,rare,6,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Prompt_DS_Flash,24,Be neat and tidy,8,Security: personal,54,rare,very_rare,4,1,0,0,0,1,0.0,0.0,0.0,0,0,0,1,0.0,0.0,0.0,0,0.0
+Prompt_OAI,42,Be responsible,15,Benevolence: dependability,1,frequent,frequent,2031,282,241,175,66,91,0.7261,0.6579,0.6903,241,159,82,123,0.6598,0.5638,0.608,16,0.0567
+Prompt_OAI,27,Have a stable society,9,Security: societal,2,frequent,frequent,1590,229,0,0,0,214,0.0,0.0,0.0,0,0,0,229,0.0,0.0,0.0,0,0.0
+Prompt_OAI,45,Be just,16,Universalism: concern,3,frequent,frequent,1538,206,160,113,47,84,0.7063,0.5736,0.6331,160,107,53,99,0.6687,0.5194,0.5847,6,0.0291
+Prompt_OAI,26,Have a safe country,9,Security: societal,4,frequent,frequent,1018,147,61,44,17,97,0.7213,0.3121,0.4356,61,38,23,109,0.623,0.2585,0.3654,6,0.0408
+Prompt_OAI,22,Have good health,8,Security: personal,5,frequent,frequent,883,122,72,37,35,82,0.5139,0.3109,0.3874,72,31,41,91,0.4306,0.2541,0.3196,6,0.0492
+Prompt_OAI,37,Be helpful,14,Benevolence: caring,6,frequent,frequent,682,106,117,67,50,39,0.5726,0.6321,0.6009,117,67,50,39,0.5726,0.6321,0.6009,0,0.0
+Prompt_OAI,30,Be compliant,11,Conformity: rules,7,frequent,frequent,638,81,16,8,8,73,0.5,0.0988,0.1649,16,7,9,74,0.4375,0.0864,0.1443,1,0.0123
+Prompt_OAI,5,Have freedom of action,1,Self-direction: action,8,frequent,frequent,553,72,1,1,0,67,1.0,0.0147,0.029,1,1,0,71,1.0,0.0139,0.0274,0,0.0
+Prompt_OAI,38,Be honest,14,Benevolence: caring,9,frequent,frequent,486,72,28,10,18,59,0.3571,0.1449,0.2062,28,10,18,62,0.3571,0.1389,0.2,0,0.0
+Prompt_OAI,44,Have equality,16,Universalism: concern,10,frequent,frequent,460,66,36,22,14,41,0.6111,0.3492,0.4444,36,20,16,46,0.5556,0.303,0.3922,2,0.0303
+Prompt_OAI,25,Have a comfortable life,8,Security: personal,11,frequent,frequent,431,65,43,21,22,40,0.4884,0.3443,0.4038,43,18,25,47,0.4186,0.2769,0.3333,3,0.0462
+Prompt_OAI,47,Be protecting the environment,17,Universalism: nature,12,frequent,frequent,399,39,18,9,9,28,0.5,0.2432,0.3273,18,8,10,31,0.4444,0.2051,0.2807,1,0.0256
+Prompt_OAI,13,Be capable,4,Achievement,13,frequent,frequent,389,55,0,0,0,54,0.0,0.0,0.0,0,0,0,55,0.0,0.0,0.0,0,0.0
+Prompt_OAI,21,Have a sense of belonging,8,Security: personal,14,frequent,frequent,382,57,32,18,14,38,0.5625,0.3214,0.4091,32,16,16,41,0.5,0.2807,0.3596,2,0.0351
+Prompt_OAI,15,Be courageous,4,Achievement,15,frequent,frequent,369,64,23,18,5,46,0.7826,0.2812,0.4138,23,18,5,46,0.7826,0.2812,0.4138,0,0.0
+Prompt_OAI,28,Be respecting traditions,10,Tradition,16,frequent,frequent,368,58,8,7,1,50,0.875,0.1228,0.2154,8,6,2,52,0.75,0.1034,0.1818,1,0.0172
+Prompt_OAI,46,Have a world at peace,16,Universalism: concern,17,frequent,frequent,364,48,24,7,17,41,0.2917,0.1458,0.1944,24,5,19,43,0.2083,0.1042,0.1389,2,0.0417
+Prompt_OAI,12,Have success,4,Achievement,18,frequent,frequent,338,54,11,7,4,45,0.6364,0.1346,0.2222,11,7,4,47,0.6364,0.1296,0.2154,0,0.0
+Prompt_OAI,50,Be broadminded,18,Universalism: tolerance,19,medium,frequent,311,43,0,0,0,43,0.0,0.0,0.0,0,0,0,43,0.0,0.0,0.0,0,0.0
+Prompt_OAI,52,Be logical,19,Universalism: objectivity,20,medium,frequent,286,37,8,6,2,29,0.75,0.1714,0.2791,8,6,2,31,0.75,0.1622,0.2667,0,0.0
+Prompt_OAI,19,Have social recognition,7,Face,21,medium,frequent,268,35,4,2,2,33,0.5,0.0571,0.1026,4,2,2,33,0.5,0.0571,0.1026,0,0.0
+Prompt_OAI,29,Be holding religious faith,10,Tradition,22,medium,frequent,255,37,2,2,0,31,1.0,0.0606,0.1143,2,2,0,35,1.0,0.0541,0.1026,0,0.0
+Prompt_OAI,16,Have influence,5,Power: dominance,23,medium,frequent,243,36,1,0,1,35,0.0,0.0,0.0,1,0,1,36,0.0,0.0,0.0,0,0.0
+Prompt_OAI,14,Be intellectual,4,Achievement,24,medium,frequent,201,33,14,11,3,22,0.7857,0.3333,0.4681,14,11,3,22,0.7857,0.3333,0.4681,0,0.0
+Prompt_OAI,53,Have an objective view,19,Universalism: objectivity,25,medium,frequent,197,29,2,2,0,27,1.0,0.069,0.129,2,2,0,27,1.0,0.069,0.129,0,0.0
+Prompt_OAI,11,Be ambitious,4,Achievement,26,medium,frequent,194,35,14,12,2,23,0.8571,0.3429,0.4898,14,12,2,23,0.8571,0.3429,0.4898,0,0.0
+Prompt_OAI,18,Have wealth,6,Power: resources,27,medium,frequent,178,25,4,4,0,20,1.0,0.1667,0.2857,4,4,0,21,1.0,0.16,0.2759,0,0.0
+Prompt_OAI,40,Have the own family secured,14,Benevolence: caring,28,medium,frequent,174,21,4,1,3,19,0.25,0.05,0.0833,4,0,4,21,0.0,0.0,0.0,1,0.0476
+Prompt_OAI,0,Be creative,0,Self-direction: thought,29,medium,frequent,163,30,2,2,0,28,1.0,0.0667,0.125,2,2,0,28,1.0,0.0667,0.125,0,0.0
+Prompt_OAI,2,Have freedom of thought,0,Self-direction: thought,30,medium,frequent,133,16,1,0,1,15,0.0,0.0,0.0,1,0,1,16,0.0,0.0,0.0,0,0.0
+Prompt_OAI,41,Be loving,14,Benevolence: caring,31,medium,frequent,133,27,43,9,34,18,0.2093,0.3333,0.2571,43,9,34,18,0.2093,0.3333,0.2571,0,0.0
+Prompt_OAI,6,Have privacy,1,Self-direction: action,32,medium,frequent,130,13,3,3,0,10,1.0,0.2308,0.375,3,3,0,10,1.0,0.2308,0.375,0,0.0
+Prompt_OAI,3,Be choosing own goals,1,Self-direction: action,33,medium,frequent,123,16,7,2,5,14,0.2857,0.125,0.1739,7,2,5,14,0.2857,0.125,0.1739,0,0.0
+Prompt_OAI,1,Be curious,0,Self-direction: thought,34,medium,frequent,122,18,13,7,6,10,0.5385,0.4118,0.4667,13,7,6,11,0.5385,0.3889,0.4516,0,0.0
+Prompt_OAI,20,Have a good reputation,7,Face,35,medium,frequent,115,11,1,0,1,9,0.0,0.0,0.0,1,0,1,11,0.0,0.0,0.0,0,0.0
+Prompt_OAI,33,Be polite,12,Conformity: interpersonal,36,medium,frequent,103,14,0,0,0,14,0.0,0.0,0.0,0,0,0,14,0.0,0.0,0.0,0,0.0
+Prompt_OAI,43,Have loyalty towards friends,15,Benevolence: dependability,37,rare,frequent,90,13,1,0,1,13,0.0,0.0,0.0,1,0,1,13,0.0,0.0,0.0,0,0.0
+Prompt_OAI,32,Be behaving properly,11,Conformity: rules,38,rare,frequent,60,10,0,0,0,10,0.0,0.0,0.0,0,0,0,10,0.0,0.0,0.0,0,0.0
+Prompt_OAI,7,Have an exciting life,2,Stimulation,39,rare,frequent,58,8,2,2,0,5,1.0,0.2857,0.4444,2,2,0,6,1.0,0.25,0.4,0,0.0
+Prompt_OAI,4,Be independent,1,Self-direction: action,40,rare,frequent,57,10,1,1,0,9,1.0,0.1,0.1818,1,1,0,9,1.0,0.1,0.1818,0,0.0
+Prompt_OAI,17,Have the right to command,5,Power: dominance,41,rare,frequent,47,2,0,0,0,2,0.0,0.0,0.0,0,0,0,2,0.0,0.0,0.0,0,0.0
+Prompt_OAI,10,Have pleasure,3,Hedonism,42,rare,frequent,45,9,2,0,2,9,0.0,0.0,0.0,2,0,2,9,0.0,0.0,0.0,0,0.0
+Prompt_OAI,49,Have a world of beauty,17,Universalism: nature,43,rare,frequent,44,6,1,0,1,6,0.0,0.0,0.0,1,0,1,6,0.0,0.0,0.0,0,0.0
+Prompt_OAI,51,Have the wisdom to accept others,18,Universalism: tolerance,44,rare,medium,36,2,5,1,4,1,0.2,0.5,0.2857,5,1,4,1,0.2,0.5,0.2857,0,0.0
+Prompt_OAI,8,Have a varied life,2,Stimulation,45,rare,medium,35,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Prompt_OAI,9,Be daring,2,Stimulation,46,rare,medium,35,6,1,1,0,5,1.0,0.1667,0.2857,1,1,0,5,1.0,0.1667,0.2857,0,0.0
+Prompt_OAI,31,Be self-disciplined,11,Conformity: rules,47,rare,medium,34,11,0,0,0,11,0.0,0.0,0.0,0,0,0,11,0.0,0.0,0.0,0,0.0
+Prompt_OAI,39,Be forgiving,14,Benevolence: caring,48,rare,medium,30,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Prompt_OAI,48,Have harmony with nature,17,Universalism: nature,49,rare,medium,28,4,0,0,0,4,0.0,0.0,0.0,0,0,0,4,0.0,0.0,0.0,0,0.0
+Prompt_OAI,35,Be humble,13,Humility,50,rare,medium,25,3,0,0,0,3,0.0,0.0,0.0,0,0,0,3,0.0,0.0,0.0,0,0.0
+Prompt_OAI,34,Be honoring elders,12,Conformity: interpersonal,51,rare,rare,12,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Prompt_OAI,36,Have life accepted as is,13,Humility,52,rare,rare,11,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Prompt_OAI,23,Have no debts,8,Security: personal,53,rare,rare,6,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0,0.0
+Prompt_OAI,24,Be neat and tidy,8,Security: personal,54,rare,very_rare,4,1,0,0,0,1,0.0,0.0,0.0,0,0,0,1,0.0,0.0,0.0,0,0.0

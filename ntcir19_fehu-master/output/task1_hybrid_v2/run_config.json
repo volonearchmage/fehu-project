@@ -1,0 +1,14 @@
+{
+  "mode": "dev",
+  "model": "gpt-4o-mini",
+  "deberta_threshold": 0.2,
+  "top_k": 10,
+  "max_candidates_per_actor": 12,
+  "limit": null,
+  "temperature": 0.0,
+  "output_dir": "output/task1_hybrid_v2",
+  "timestamp": "2026-05-18T11:18:02.757686+00:00",
+  "device": "cuda",
+  "checkpoint_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/checkpoints/best_model",
+  "cache_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/logs/cache_hybrid_v2_dev.json"
+}

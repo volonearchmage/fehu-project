@@ -1,0 +1,90 @@
+{
+  "Prompt-only": {
+    "task1a": {
+      "micro_f1": 0.4810035842293906,
+      "macro_f1": 0.2740299925364281,
+      "micro_precision": 0.7222820236813778,
+      "micro_recall": 0.36055883933369154
+    },
+    "task1b": {
+      "micro_f1": 0.34240561896400357,
+      "macro_f1": 0.14955869685261353,
+      "micro_precision": 0.569620253164557,
+      "micro_recall": 0.24476987447698745,
+      "direction_reverse_rate": 0.02115211521152115,
+      "reversed_count": 47,
+      "denominator_count": 2222,
+      "ambiguous_count": 84
+    },
+    "total_task1a_predictions": 929,
+    "total_task1b_predictions": 1027,
+    "average_task1a_predictions_per_article": 5.25,
+    "average_task1b_predictions_per_article": 5.8
+  },
+  "DeBERTa-only": {
+    "task1a": {
+      "micro_f1": 0.5056210584041677,
+      "macro_f1": 0.13419957946795175,
+      "micro_precision": 0.5162374020156775,
+      "micro_recall": 0.4954325631380978
+    },
+    "task1b": {
+      "micro_f1": 0.2988904299583911,
+      "macro_f1": 0.03284690786046727,
+      "micro_precision": 0.2551805802249852,
+      "micro_recall": 0.3606694560669456,
+      "direction_reverse_rate": 0.2376237623762376,
+      "reversed_count": 528,
+      "denominator_count": 2222,
+      "ambiguous_count": 84
+    },
+    "total_task1a_predictions": 1786,
+    "total_task1b_predictions": 3378,
+    "average_task1a_predictions_per_article": 10.09,
+    "average_task1b_predictions_per_article": 19.08
+  },
+  "Hybrid v1": {
+    "task1a": {
+      "micro_f1": 0.4651706404862085,
+      "macro_f1": 0.1957786023413828,
+      "micro_precision": 0.41166735622672734,
+      "micro_recall": 0.5346587855991403
+    },
+    "task1b": {
+      "micro_f1": 0.23896858543671692,
+      "macro_f1": 0.03343242520435679,
+      "micro_precision": 0.2111004170676933,
+      "micro_recall": 0.27531380753138074,
+      "direction_reverse_rate": 0.07425742574257425,
+      "reversed_count": 165,
+      "denominator_count": 2222,
+      "ambiguous_count": 84
+    },
+    "total_task1a_predictions": 2417,
+    "total_task1b_predictions": 3117,
+    "average_task1a_predictions_per_article": 13.66,
+    "average_task1b_predictions_per_article": 17.61
+  },
+  "Hybrid v2 DS Pro": {
+    "task1a": {
+      "micro_f1": 0.5720136518771332,
+      "macro_f1": 0.2503988795128279,
+      "micro_precision": 0.7839101964452759,
+      "micro_recall": 0.4502955400322407
+    },
+    "task1b": {
+      "micro_f1": 0.4487750556792873,
+      "macro_f1": 0.1258338457597538,
+      "micro_precision": 0.670549084858569,
+      "micro_recall": 0.3372384937238494,
+      "direction_reverse_rate": 0.025202520252025202,
+      "reversed_count": 56,
+      "denominator_count": 2222,
+      "ambiguous_count": 84
+    },
+    "total_task1a_predictions": 1069,
+    "total_task1b_predictions": 1202,
+    "average_task1a_predictions_per_article": 6.04,
+    "average_task1b_predictions_per_article": 6.79
+  }
+}

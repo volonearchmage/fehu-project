@@ -1,0 +1,23 @@
+source_report_tag,claim,verification_evidence,status
+audit_v1_final,C1: src/run_pipeline.py --model arg silently ignored.,verified vs git HEAD; later FIXED by repair session — call_gpt now takes model_name.,verified_then_fixed
+audit_v1_final,C2: output/task1/ used by both run_pipeline.py and train_deberta.py.,verified; FIXED — train_deberta default → output/task1_deberta/.,verified_then_fixed
+audit_v1_final,H1: logs/cache_dev.json not keyed by model.,verified; FIXED — cache_{mode}_{provider}_{slug}.json + per-entry guard.,verified_then_fixed
+audit_v1_final,H3: src/hybrid_pipeline.py reads DeBERTa from output/task1/.,verified; FIXED — DEBERTA_OUT now output/task1_deberta/.,verified_then_fixed
+audit_v1_final,H4: --limit does not filter dev gold.,verified; FIXED — _filter() applied + filter_guids when --limit.,verified_then_fixed
+audit_v1_final,evaluation.py direction docstring inverted vs direction_mapping.json.,"VERIFIED in current source: line 36 reads 'direction: ""0"" (aligned) or ""1"" (contradictory)' — DRR symmetric so scores unaffected; file untouched per user constraint.",verified_documented_not_modified
+repair_session_final_summary,Prompts in run_pipeline.py preserved byte-identical to pre-patch.,VERIFIED in prior post-repair audit; not re-extracted this session.,verified_from_prior_audit
+preview_revision_report,v2 stamps preview_revision=2 on every request.,VERIFIED — Python check this session: distinct values = [2].,verified
+preview_revision_report,v2 adds canonical_actor_name and actor_aliases for paraphrase requests.,VERIFIED — matrix audit this session: paraphrase rows have non-empty canonical_actor_name + actor_mentions_count > 0.,verified
+preview_revision_report,"v2 schema has 14 required fields incl. is_positive, l1_value_id, direction.",VERIFIED — 0 of 18 requests fail schema-key check this session.,verified
+preview_revision_report,Old preview folder 20260614_163649 untouched after v2 generation.,VERIFIED — mtime preserved at 2026-06-14 16:36.,verified
+preview_revision_report,Predictions in output/task1*/ and logs/cache_* not modified.,VERIFIED this session — find -newermt '2026-06-14 00:00' returns empty for both trees.,verified
+preview_revision_report,Request counts: paraphrase 4 / rare_positive 4 / hard_negative 4 / direction_contrastive 6 / total 18.,"VERIFIED — current Counter is exactly {'paraphrase':4,'rare_positive':4,'hard_negative':4,'direction_contrastive':6}.",verified
+preview_final_report,All 3 direction-contrastive pairs are linked (paired_request_id resolves).,VERIFIED — matrix audit: every paired_request_id present in preview file.,verified
+submission_safety_v1_format_guard_report,FEHU format guard returned CLEAN on output/task1_prompt_deepseek_v4_flash/.,ACCEPTED from prior run (2026-06-14 16:38); not re-executed in this audit.,accepted_from_prior_run
+aug_plan_v1,Plan selects 20 labels with priority-weighted scoring.,VERIFIED — augmentation_plan_by_label.csv contains 20 rows; matches v2 preview selection.,verified
+model_strategy,Tier-1 (≤20 calls) suggests deepseek-v4-pro for both generator and verifier.,"ACCEPTED as design doc — no API has been called, unverifiable until later.",design_accepted
+preview_module_readme,Module never calls an API.,VERIFIED — grep for 'openai|requests|httpx|urllib3|aiohttp' in module returns nothing.,verified
+CLAUDE_md,"Direction: '1'=aligned, '0'=contradictory (matches direction_mapping.json).",VERIFIED — direct quote in file matches direction_mapping.json.,verified
+audit_v1_final,No hard-coded API keys in source files.,VERIFIED — grep for sk-style tokens and api_key='...' assignments returns nothing.,verified
+prior_state_review_dashboard,"Previous state review (20260614_173346) concluded GO for human review, NO-GO for everything else.",VERIFIED — prior dashboard reaffirmed; current session reaches the same conclusion independently.,verified
+prior_state_review_v2_audit,Prior state review found 12 pass / 6 warn / 0 fail on v2 preview.,VERIFIED — current independent matrix again finds 12 pass / 6 warn / 0 fail.,verified_reproduced

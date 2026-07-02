@@ -1,0 +1,90 @@
+{
+  "Hybrid v2": {
+    "task1a": {
+      "micro_f1": 0.5070422535211268,
+      "macro_f1": 0.21020958382395252,
+      "micro_precision": 0.6617647058823529,
+      "micro_recall": 0.410958904109589
+    },
+    "task1b": {
+      "micro_f1": 0.35294117647058826,
+      "macro_f1": 0.11939322153240163,
+      "micro_precision": 0.5165562913907285,
+      "micro_recall": 0.26804123711340205,
+      "direction_reverse_rate": 0.019157088122605363,
+      "reversed_count": 5,
+      "denominator_count": 261,
+      "ambiguous_count": 15
+    },
+    "total_task1a_predictions": 136,
+    "total_task1b_predictions": 151,
+    "average_task1a_predictions_per_article": 6.8,
+    "average_task1b_predictions_per_article": 7.55
+  },
+  "Prompt-only": {
+    "task1a": {
+      "micro_f1": 0.46153846153846145,
+      "macro_f1": 0.18889475581299758,
+      "micro_precision": 0.7075471698113207,
+      "micro_recall": 0.3424657534246575
+    },
+    "task1b": {
+      "micro_f1": 0.3414634146341463,
+      "macro_f1": 0.14057646658144918,
+      "micro_precision": 0.5882352941176471,
+      "micro_recall": 0.24054982817869416,
+      "direction_reverse_rate": 0.011494252873563218,
+      "reversed_count": 3,
+      "denominator_count": 261,
+      "ambiguous_count": 15
+    },
+    "total_task1a_predictions": 106,
+    "total_task1b_predictions": 119,
+    "average_task1a_predictions_per_article": 5.3,
+    "average_task1b_predictions_per_article": 5.95
+  },
+  "DeBERTa-only": {
+    "task1a": {
+      "micro_f1": 0.5476190476190477,
+      "macro_f1": 0.1503470348963626,
+      "micro_precision": 0.572139303482587,
+      "micro_recall": 0.5251141552511416
+    },
+    "task1b": {
+      "micro_f1": 0.3219076005961252,
+      "macro_f1": 0.051574298349330944,
+      "micro_precision": 0.28421052631578947,
+      "micro_recall": 0.3711340206185567,
+      "direction_reverse_rate": 0.2720306513409962,
+      "reversed_count": 71,
+      "denominator_count": 261,
+      "ambiguous_count": 15
+    },
+    "total_task1a_predictions": 201,
+    "total_task1b_predictions": 380,
+    "average_task1a_predictions_per_article": 10.05,
+    "average_task1b_predictions_per_article": 19.0
+  },
+  "Hybrid v1": {
+    "task1a": {
+      "micro_f1": 0.42462845010615713,
+      "macro_f1": 0.17807505430389667,
+      "micro_precision": 0.3968253968253968,
+      "micro_recall": 0.45662100456621
+    },
+    "task1b": {
+      "micro_f1": 0.2298850574712644,
+      "macro_f1": 0.0424322119632971,
+      "micro_precision": 0.22012578616352202,
+      "micro_recall": 0.24054982817869416,
+      "direction_reverse_rate": 0.04980842911877394,
+      "reversed_count": 13,
+      "denominator_count": 261,
+      "ambiguous_count": 15
+    },
+    "total_task1a_predictions": 252,
+    "total_task1b_predictions": 318,
+    "average_task1a_predictions_per_article": 12.6,
+    "average_task1b_predictions_per_article": 15.9
+  }
+}

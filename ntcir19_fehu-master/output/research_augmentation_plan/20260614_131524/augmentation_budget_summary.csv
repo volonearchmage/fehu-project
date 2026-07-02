@@ -1,0 +1,6 @@
+category,n_samples,budget_profile
+rare_positive,45,pilot
+paraphrase,135,pilot
+hard_negative,24,pilot
+direction_contrastive,12,pilot
+TOTAL,216,pilot

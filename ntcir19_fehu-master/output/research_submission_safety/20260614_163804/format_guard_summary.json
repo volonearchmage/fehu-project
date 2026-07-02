@@ -1,0 +1,42 @@
+{
+  "event_base": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/dataset/dev/dev_event_base.json",
+  "pred_task1a": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_prompt_deepseek_v4_flash/pred_task1a.json",
+  "pred_task1b": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_prompt_deepseek_v4_flash/pred_task1b.json",
+  "mode": "dev",
+  "strict": false,
+  "event_guid_count": 177,
+  "task1a": {
+    "n_articles": 177,
+    "n_predictions": 1500,
+    "n_unique_guids": 177,
+    "n_duplicates": 0,
+    "n_bad_actor": 0,
+    "n_bad_l2": 0,
+    "n_unknown_guid": 0,
+    "n_extra_fields": 0,
+    "n_entries_missing_actor": 0,
+    "n_entries_missing_l2": 0,
+    "avg_preds_per_article": 8.474576271186441
+  },
+  "task1b": {
+    "n_articles": 177,
+    "n_predictions": 1736,
+    "n_unique_guids": 177,
+    "n_duplicates": 0,
+    "n_bad_actor": 0,
+    "n_bad_l1": 0,
+    "n_bad_direction": 0,
+    "n_unknown_guid": 0,
+    "n_extra_fields": 0,
+    "n_entries_missing_actor": 0,
+    "n_entries_missing_l1": 0,
+    "n_entries_missing_direction": 0,
+    "avg_preds_per_article": 9.807909604519773
+  },
+  "cross_issues": [],
+  "likely_full_submission": true,
+  "status": "clean",
+  "n_invalid_entries": 0,
+  "out_dir": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/research_submission_safety/20260614_163804",
+  "timestamp": "20260614_163804"
+}

@@ -1,0 +1,414 @@
+{
+  "32": {
+    "l1_value_id": "32",
+    "l1_value_name": "Be behaving properly",
+    "l2_value_id": "11",
+    "l2_value_name": "Conformity: rules",
+    "train_count": 60,
+    "dev_count": 10,
+    "tertile_group": "rare",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase",
+      "hard_negative"
+    ],
+    "suggested_actions": [
+      "hard_negative_needed",
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=60, group=frequent); low recall (mean_recall_dir=0.000); low precision / over-predicted (mean_prec=0.000)"
+  },
+  "51": {
+    "l1_value_id": "51",
+    "l1_value_name": "Have the wisdom to accept others",
+    "l2_value_id": "18",
+    "l2_value_name": "Universalism: tolerance",
+    "train_count": 36,
+    "dev_count": 2,
+    "tertile_group": "rare",
+    "threshold_group": "medium",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase",
+      "hard_negative"
+    ],
+    "suggested_actions": [
+      "hard_negative_needed",
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=36, group=medium); low recall (mean_recall_dir=0.000); low precision / over-predicted (mean_prec=0.167)"
+  },
+  "7": {
+    "l1_value_id": "7",
+    "l1_value_name": "Have an exciting life",
+    "l2_value_id": "2",
+    "l2_value_name": "Stimulation",
+    "train_count": 58,
+    "dev_count": 8,
+    "tertile_group": "rare",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 0.0536,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase",
+      "hard_negative"
+    ],
+    "suggested_actions": [
+      "hard_negative_needed",
+      "paraphrase_existing_samples",
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=58, group=frequent); low recall (mean_recall_dir=0.054); low precision / over-predicted (mean_prec=0.143)"
+  },
+  "24": {
+    "l1_value_id": "24",
+    "l1_value_name": "Be neat and tidy",
+    "l2_value_id": "8",
+    "l2_value_name": "Security: personal",
+    "train_count": 4,
+    "dev_count": 1,
+    "tertile_group": "rare",
+    "threshold_group": "very_rare",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=4, group=very_rare); low recall (mean_recall_dir=0.000)"
+  },
+  "35": {
+    "l1_value_id": "35",
+    "l1_value_name": "Be humble",
+    "l2_value_id": "13",
+    "l2_value_name": "Humility",
+    "train_count": 25,
+    "dev_count": 3,
+    "tertile_group": "rare",
+    "threshold_group": "medium",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=25, group=medium); low recall (mean_recall_dir=0.000)"
+  },
+  "39": {
+    "l1_value_id": "39",
+    "l1_value_name": "Be forgiving",
+    "l2_value_id": "14",
+    "l2_value_name": "Benevolence: caring",
+    "train_count": 30,
+    "dev_count": 3,
+    "tertile_group": "rare",
+    "threshold_group": "medium",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=30, group=medium); low recall (mean_recall_dir=0.000)"
+  },
+  "31": {
+    "l1_value_id": "31",
+    "l1_value_name": "Be self-disciplined",
+    "l2_value_id": "11",
+    "l2_value_name": "Conformity: rules",
+    "train_count": 34,
+    "dev_count": 11,
+    "tertile_group": "rare",
+    "threshold_group": "medium",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=34, group=medium); low recall (mean_recall_dir=0.000)"
+  },
+  "8": {
+    "l1_value_id": "8",
+    "l1_value_name": "Have a varied life",
+    "l2_value_id": "2",
+    "l2_value_name": "Stimulation",
+    "train_count": 35,
+    "dev_count": 3,
+    "tertile_group": "rare",
+    "threshold_group": "medium",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=35, group=medium); low recall (mean_recall_dir=0.000)"
+  },
+  "49": {
+    "l1_value_id": "49",
+    "l1_value_name": "Have a world of beauty",
+    "l2_value_id": "17",
+    "l2_value_name": "Universalism: nature",
+    "train_count": 44,
+    "dev_count": 6,
+    "tertile_group": "rare",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=44, group=frequent); low recall (mean_recall_dir=0.000)"
+  },
+  "10": {
+    "l1_value_id": "10",
+    "l1_value_name": "Have pleasure",
+    "l2_value_id": "3",
+    "l2_value_name": "Hedonism",
+    "train_count": 45,
+    "dev_count": 9,
+    "tertile_group": "rare",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=45, group=frequent); low recall (mean_recall_dir=0.000)"
+  },
+  "17": {
+    "l1_value_id": "17",
+    "l1_value_name": "Have the right to command",
+    "l2_value_id": "5",
+    "l2_value_name": "Power: dominance",
+    "train_count": 47,
+    "dev_count": 2,
+    "tertile_group": "rare",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 0.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=47, group=frequent); low recall (mean_recall_dir=0.000)"
+  },
+  "9": {
+    "l1_value_id": "9",
+    "l1_value_name": "Be daring",
+    "l2_value_id": "2",
+    "l2_value_name": "Stimulation",
+    "train_count": 35,
+    "dev_count": 6,
+    "tertile_group": "rare",
+    "threshold_group": "medium",
+    "mean_recall_dir": 0.0278,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "paraphrase_existing_samples",
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=35, group=medium); low recall (mean_recall_dir=0.028)"
+  },
+  "48": {
+    "l1_value_id": "48",
+    "l1_value_name": "Have harmony with nature",
+    "l2_value_id": "17",
+    "l2_value_name": "Universalism: nature",
+    "train_count": 28,
+    "dev_count": 4,
+    "tertile_group": "rare",
+    "threshold_group": "medium",
+    "mean_recall_dir": 0.0357,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "paraphrase_existing_samples",
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=28, group=medium); low recall (mean_recall_dir=0.036)"
+  },
+  "4": {
+    "l1_value_id": "4",
+    "l1_value_name": "Be independent",
+    "l2_value_id": "1",
+    "l2_value_name": "Self-direction: action",
+    "train_count": 57,
+    "dev_count": 10,
+    "tertile_group": "rare",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 0.0286,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "paraphrase_existing_samples",
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=57, group=frequent); low recall (mean_recall_dir=0.029)"
+  },
+  "43": {
+    "l1_value_id": "43",
+    "l1_value_name": "Have loyalty towards friends",
+    "l2_value_id": "15",
+    "l2_value_name": "Benevolence: dependability",
+    "train_count": 90,
+    "dev_count": 13,
+    "tertile_group": "rare",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 0.022,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "rare_positive",
+      "paraphrase"
+    ],
+    "suggested_actions": [
+      "paraphrase_existing_samples",
+      "rare_positive_augmentation"
+    ],
+    "augmentation_rationale": "rare (train=90, group=frequent); low recall (mean_recall_dir=0.022)"
+  },
+  "29": {
+    "l1_value_id": "29",
+    "l1_value_name": "Be holding religious faith",
+    "l2_value_id": "10",
+    "l2_value_name": "Tradition",
+    "train_count": 255,
+    "dev_count": 37,
+    "tertile_group": "medium",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 1.0,
+    "mean_direction_reverse_rate": 0.0324,
+    "augmentation_types": [
+      "hard_negative",
+      "direction_contrastive"
+    ],
+    "suggested_actions": [
+      "direction_contrastive_augmentation",
+      "hard_negative_needed"
+    ],
+    "augmentation_rationale": "low precision / over-predicted (mean_prec=0.091)"
+  },
+  "41": {
+    "l1_value_id": "41",
+    "l1_value_name": "Be loving",
+    "l2_value_id": "14",
+    "l2_value_name": "Benevolence: caring",
+    "train_count": 133,
+    "dev_count": 27,
+    "tertile_group": "medium",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 1.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "hard_negative"
+    ],
+    "suggested_actions": [
+      "hard_negative_needed"
+    ],
+    "augmentation_rationale": "low precision / over-predicted (mean_prec=0.209)"
+  },
+  "12": {
+    "l1_value_id": "12",
+    "l1_value_name": "Have success",
+    "l2_value_id": "4",
+    "l2_value_name": "Achievement",
+    "train_count": 338,
+    "dev_count": 54,
+    "tertile_group": "frequent",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 1.0,
+    "mean_direction_reverse_rate": 0.0926,
+    "augmentation_types": [
+      "hard_negative",
+      "direction_contrastive"
+    ],
+    "suggested_actions": [
+      "direction_contrastive_augmentation",
+      "hard_negative_needed"
+    ],
+    "augmentation_rationale": "low precision / over-predicted (mean_prec=0.129)"
+  },
+  "3": {
+    "l1_value_id": "3",
+    "l1_value_name": "Be choosing own goals",
+    "l2_value_id": "1",
+    "l2_value_name": "Self-direction: action",
+    "train_count": 123,
+    "dev_count": 16,
+    "tertile_group": "medium",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 1.0,
+    "mean_direction_reverse_rate": 0.0,
+    "augmentation_types": [
+      "hard_negative"
+    ],
+    "suggested_actions": [
+      "hard_negative_needed"
+    ],
+    "augmentation_rationale": "low precision / over-predicted (mean_prec=0.286)"
+  },
+  "38": {
+    "l1_value_id": "38",
+    "l1_value_name": "Be honest",
+    "l2_value_id": "14",
+    "l2_value_name": "Benevolence: caring",
+    "train_count": 486,
+    "dev_count": 72,
+    "tertile_group": "frequent",
+    "threshold_group": "frequent",
+    "mean_recall_dir": 1.0,
+    "mean_direction_reverse_rate": 0.0648,
+    "augmentation_types": [
+      "hard_negative",
+      "direction_contrastive"
+    ],
+    "suggested_actions": [
+      "direction_contrastive_augmentation",
+      "hard_negative_needed"
+    ],
+    "augmentation_rationale": "low precision / over-predicted (mean_prec=0.134)"
+  }
+}

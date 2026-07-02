@@ -1,0 +1,21 @@
+source_report_tag,claim,verification_evidence,status
+audit_v1_final,C1: src/run_pipeline.py --model arg silently ignored (uses module-level MODEL).,verified vs HEAD; later FIXED by repair session (call_gpt now takes model_name).,verified_then_fixed
+audit_v1_final,C2: output/task1/ written by both run_pipeline.py and train_deberta.py (collision).,"verified; later FIXED — train_deberta default now output/task1_deberta/, run_pipeline default output/task1_prompt_openai_{slug}/.",verified_then_fixed
+audit_v1_final,H1: logs/cache_dev.json not keyed by model.,verified; FIXED — cache_{mode}_{provider}_{slug}.json.,verified_then_fixed
+audit_v1_final,H3: src/hybrid_pipeline.py reads DeBERTa from output/task1/ (stale).,verified; FIXED — DEBERTA_OUT now output/task1_deberta/.,verified_then_fixed
+audit_v1_final,H4: --limit run does not filter dev gold (recall deflated).,verified; FIXED — _filter() applied + filter_guids derived from --limit.,verified_then_fixed
+audit_v1_final,evaluation.py direction docstring inverted but DRR math symmetric.,"VERIFIED — direction_mapping.json says aligned='1', evaluation.py line 36 says reverse. DRR computation is symmetric. evaluation.py left untouched per user constraint.",verified_documented_not_modified
+repair_session_final_summary,Prompts in run_pipeline.py preserved byte-identical to pre-patch.,VERIFIED (prior post-repair audit; smart-extraction yielded identical body for system+user+example blocks).,verified
+preview_revision_report,v2 adds preview_revision=2 stamp to every request.,VERIFIED — matrix CSV confirms all 18 requests carry preview_revision=2.,verified
+preview_revision_report,v2 adds canonical_actor_name and actor_aliases for paraphrase requests.,VERIFIED — first paraphrase request has 6 aliases extracted from long Identitarian name.,verified
+preview_revision_report,"v2 schema has 14 fields including is_positive, l1_value_id, direction.",VERIFIED — matrix audit checked all 18 requests for these 14 keys; no schema is missing keys.,verified
+preview_revision_report,Old preview folder (20260614_163649) untouched.,VERIFIED — mtime stays at 2026-06-14 16:36.,verified
+preview_revision_report,Existing predictions in output/task1*/ and logs/cache_* not modified.,VERIFIED — find -newermt 2026-06-14 returns empty for both trees.,verified
+preview_revision_report,Request counts: paraphrase 4 / rare_positive 4 / hard_negative 4 / direction_contrastive 6 / total 18.,VERIFIED — current matrix shows exactly these counts.,verified
+preview_final_report,All 3 direction-contrastive pairs are linked (paired_request_id resolves).,VERIFIED — matrix audit re-checks each pair partner is present in preview.,verified
+submission_safety_v1_format_guard_report,FEHU format guard returned CLEAN on output/task1_prompt_deepseek_v4_flash/.,ACCEPTED on basis of run config; not re-run in this audit (would write to a new timestamped folder).,accepted_from_prior_run
+aug_plan_v1,Augmentation plan selects 20 labels with priority-weighted scoring.,VERIFIED — augmentation_plan_by_label.csv has 20 rows; matches preview's selection.,verified
+model_strategy,Tier-1 (≤20 calls) suggests deepseek-v4-pro generator + verifier or manual review.,"ACCEPTED as design doc — no API has been called, so unverifiable until later.",design_accepted
+preview_module_readme,Module never calls an API.,VERIFIED — grep for 'import openai|requests|httpx|urllib3' in module returns nothing.,verified
+CLAUDE_md,"Direction convention: '1' = aligned, '0' = contradictory (matches direction_mapping.json).",VERIFIED — file contents direct quote.,verified
+audit_v1_final,No hard-coded API keys in source files.,VERIFIED in this audit — grep for sk-style tokens and api_key='...' assignments returns nothing.,verified

@@ -8,14 +8,27 @@ DeBERTa-v3-base + LoRA fine-tuning for FEHU Task-1 human value classification.
 
 Run from project root:
     python src/train_deberta.py
+    python src/train_deberta.py --threshold 0.2 --version v2
+
+Post-audit changes (no behavior change for training itself):
+  • Default output dir is now `output/task1_deberta/` (was `output/task1/`,
+    which collided with run_pipeline.py).
+  • CLI args added: --output_dir / --version / --threshold / --force_overwrite.
+  • A run_config.json is emitted next to the predictions recording the model,
+    LoRA config, threshold, hyperparameters, and timestamp.
 """
 
+import argparse
 import json
 import math
 import os
+import re
+import shlex
+import subprocess
 import sys
 import tempfile
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 import torch
@@ -41,10 +54,41 @@ LR           = 2e-4
 WEIGHT_DECAY = 0.01
 WARMUP_RATIO = 0.1
 PATIENCE     = 4
-THRESHOLD    = 0.3
+
+# Default inference threshold; can be overridden by --threshold.
+DEFAULT_THRESHOLD = 0.3
+THRESHOLD         = DEFAULT_THRESHOLD   # global, set in main()
 
 CHECKPOINT_DIR = BASE_DIR / "checkpoints" / "best_model"
-OUTPUT_DIR     = BASE_DIR / "output" / "task1"
+
+# Canonical DeBERTa-only output (was output/task1/ before the audit fix).
+DEFAULT_OUTPUT_DIR = BASE_DIR / "output" / "task1_deberta"
+
+# OUTPUT_DIR is set in main() after CLI parsing.
+OUTPUT_DIR = DEFAULT_OUTPUT_DIR
+
+
+def _safe_output_dir(base: Path, force_overwrite: bool):
+    """Return (dir, used_timestamped_fallback)."""
+    p1a = base / "pred_task1a.json"
+    p1b = base / "pred_task1b.json"
+    if base.exists() and (p1a.exists() or p1b.exists()) and not force_overwrite:
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        fallback = base.parent / f"{base.name}_{ts}"
+        fallback.mkdir(parents=True, exist_ok=True)
+        return fallback, True
+    base.mkdir(parents=True, exist_ok=True)
+    return base, False
+
+
+def _current_git_commit():
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(BASE_DIR), stderr=subprocess.DEVNULL,
+        ).decode().strip()
+    except Exception:
+        return "unknown"
 
 TRAIN_ARTICLES = BASE_DIR / "dataset/train/train_event_base.json"
 TRAIN_LABELS   = BASE_DIR / "dataset/gold_labels/train/train_human_values.json"
@@ -307,11 +351,46 @@ def load_ckpt(device):
     return model
 
 
+# ── CLI ────────────────────────────────────────────────────────────────────────
+def parse_args():
+    ap = argparse.ArgumentParser(description="DeBERTa-v3 + LoRA training for FEHU Task-1 (post-audit).")
+    ap.add_argument("--output_dir", type=str, default=None,
+                    help="Override prediction output dir. "
+                         "Default: output/task1_deberta/  (was output/task1/ before audit fix).")
+    ap.add_argument("--version", type=str, default=None,
+                    help="Optional version tag appended to the output dir.")
+    ap.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD,
+                    help=f"Sigmoid threshold for final inference (default: {DEFAULT_THRESHOLD}).")
+    ap.add_argument("--force_overwrite", action="store_true",
+                    help="Overwrite existing predictions; otherwise a timestamped "
+                         "sibling folder is used.")
+    return ap.parse_args()
+
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
+    global THRESHOLD, OUTPUT_DIR
+    args = parse_args()
+    THRESHOLD = args.threshold
+
+    # Resolve output dir (overwrite-safe).
+    if args.output_dir:
+        out_root = Path(args.output_dir)
+        if not out_root.is_absolute():
+            out_root = BASE_DIR / out_root
+    else:
+        suffix = f"_{args.version}" if args.version else ""
+        out_root = DEFAULT_OUTPUT_DIR if not suffix else (
+            BASE_DIR / "output" / f"task1_deberta{suffix}"
+        )
+    OUTPUT_DIR, used_fallback = _safe_output_dir(out_root, args.force_overwrite)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Device: {device}")
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    print(f"Device:    {device}")
+    print(f"Output:    {OUTPUT_DIR}")
+    if used_fallback:
+        print("  [INFO] Target folder existed → wrote to timestamped sibling.")
+    print(f"Threshold: {THRESHOLD}")
 
     l1l2 = load_l1_to_l2()
 
@@ -366,6 +445,53 @@ def main():
         json.dumps(t1b, ensure_ascii=False, indent=2)
     )
     print(f"Written to {OUTPUT_DIR}/")
+
+    # ── run_config.json (post-audit provenance) ────────────────────────────────
+    run_config = {
+        "script":      "src/train_deberta.py",
+        "method":      "deberta_lora",
+        "base_model":  MODEL_NAME,
+        "num_labels":  NUM_LABELS,
+        "max_length":  MAX_LENGTH,
+        "lora_config": {
+            "r": 16, "lora_alpha": 32, "lora_dropout": 0.1,
+            "task_type": "SEQ_CLS",
+        },
+        "threshold":   THRESHOLD,
+        "hyperparameters": {
+            "batch_size":   BATCH_SIZE,
+            "grad_accum":   GRAD_ACCUM,
+            "max_epochs":   MAX_EPOCHS,
+            "lr":           LR,
+            "weight_decay": WEIGHT_DECAY,
+            "warmup_ratio": WARMUP_RATIO,
+            "patience":     PATIENCE,
+        },
+        "best_dev_task1b_micro_f1": best_f1,
+        "output_dir":    str(OUTPUT_DIR),
+        "checkpoint_dir": str(CHECKPOINT_DIR),
+        "version":       args.version,
+        "command_line":  " ".join(shlex.quote(a) for a in sys.argv),
+        "git_commit":    _current_git_commit(),
+        "device":        str(device),
+        "timestamp":     datetime.now(timezone.utc).isoformat(),
+        "dataset_paths": {
+            "train_articles": str(TRAIN_ARTICLES),
+            "train_labels":   str(TRAIN_LABELS),
+            "dev_articles":   str(DEV_ARTICLES),
+            "dev_labels":     str(DEV_LABELS),
+            "l1_file":        str(L1_FILE),
+            "l2_file":        str(L2_FILE),
+            "l1_to_l2_file":  str(L1_TO_L2_FILE),
+        },
+        "notes": (
+            "DeBERTa-v3 + LoRA training (post-audit). Default output dir is "
+            "output/task1_deberta/. Pass --threshold to control inference cutoff."
+        ),
+    }
+    (OUTPUT_DIR / "run_config.json").write_text(
+        json.dumps(run_config, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
     # Final evaluation
     from evaluation import (

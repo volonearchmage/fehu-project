@@ -1,0 +1,122 @@
+{
+  "0": {
+    "l2_name": "Self-direction: thought",
+    "gold_count": 54,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "1": {
+    "l2_name": "Self-direction: action",
+    "gold_count": 94,
+    "pred_count": 20,
+    "recall_ratio": 0.2128
+  },
+  "2": {
+    "l2_name": "Stimulation",
+    "gold_count": 13,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "3": {
+    "l2_name": "Hedonism",
+    "gold_count": 9,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "4": {
+    "l2_name": "Achievement",
+    "gold_count": 147,
+    "pred_count": 396,
+    "recall_ratio": 2.6939
+  },
+  "5": {
+    "l2_name": "Power: dominance",
+    "gold_count": 35,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "6": {
+    "l2_name": "Power: resources",
+    "gold_count": 24,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "7": {
+    "l2_name": "Face",
+    "gold_count": 42,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "8": {
+    "l2_name": "Security: personal",
+    "gold_count": 189,
+    "pred_count": 300,
+    "recall_ratio": 1.5873
+  },
+  "9": {
+    "l2_name": "Security: societal",
+    "gold_count": 264,
+    "pred_count": 154,
+    "recall_ratio": 0.5833
+  },
+  "10": {
+    "l2_name": "Tradition",
+    "gold_count": 71,
+    "pred_count": 306,
+    "recall_ratio": 4.3099
+  },
+  "11": {
+    "l2_name": "Conformity: rules",
+    "gold_count": 90,
+    "pred_count": 173,
+    "recall_ratio": 1.9222
+  },
+  "12": {
+    "l2_name": "Conformity: interpersonal",
+    "gold_count": 14,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "13": {
+    "l2_name": "Humility",
+    "gold_count": 3,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "14": {
+    "l2_name": "Benevolence: caring",
+    "gold_count": 179,
+    "pred_count": 436,
+    "recall_ratio": 2.4358
+  },
+  "15": {
+    "l2_name": "Benevolence: dependability",
+    "gold_count": 270,
+    "pred_count": 443,
+    "recall_ratio": 1.6407
+  },
+  "16": {
+    "l2_name": "Universalism: concern",
+    "gold_count": 225,
+    "pred_count": 189,
+    "recall_ratio": 0.84
+  },
+  "17": {
+    "l2_name": "Universalism: nature",
+    "gold_count": 41,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "18": {
+    "l2_name": "Universalism: tolerance",
+    "gold_count": 44,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  },
+  "19": {
+    "l2_name": "Universalism: objectivity",
+    "gold_count": 53,
+    "pred_count": 0,
+    "recall_ratio": 0.0
+  }
+}

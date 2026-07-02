@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "fehu_augmentation_v1/augmentation_schema.json",
+  "title": "FEHU Augmented Sample",
+  "description": "Strict schema for a single augmented training sample produced by the FEHU augmentation pipeline. Every generated sample must validate against this schema before entering the training pool. No API keys, secrets, or PII may be stored in any field.",
+  "type": "object",
+  "required": [
+    "augmentation_id",
+    "augmentation_type",
+    "source_label_id",
+    "source_label_name",
+    "l2_value_id",
+    "l2_value_name",
+    "direction",
+    "direction_name",
+    "title",
+    "content",
+    "actor_name",
+    "actor_id",
+    "evidence_sentence",
+    "explanation",
+    "is_positive"
+  ],
+  "properties": {
+    "augmentation_id": {
+      "type": "string",
+      "description": "Globally unique ID. Convention: aug_{type}_{l1_id}_{counter}_{shorthash}.",
+      "pattern": "^aug_[a-z_]+_[0-9]+_[0-9]+_[a-f0-9]{6,12}$"
+    },
+    "augmentation_type": {
+      "type": "string",
+      "enum": [
+        "paraphrase",
+        "rare_positive",
+        "hard_negative",
+        "direction_contrastive"
+      ]
+    },
+    "source_label_id": {
+      "type": "string",
+      "description": "L1 value ID as string. Range '0'..'53'.",
+      "pattern": "^([0-9]|[1-4][0-9]|5[0-3])$"
+    },
+    "source_label_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "l2_value_id": {
+      "type": "string",
+      "description": "L2 category ID as string. Range '0'..'19'. Must match the L1→L2 mapping for source_label_id.",
+      "pattern": "^([0-9]|1[0-9])$"
+    },
+    "l2_value_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "direction": {
+      "type": "string",
+      "enum": ["0", "1"],
+      "description": "Per direction_mapping.json: '1' = aligned, '0' = contradictory."
+    },
+    "direction_name": {
+      "type": "string",
+      "enum": ["aligned", "contradictory"]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 400
+    },
+    "content": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 8000,
+      "description": "Synthetic article body. Must mention actor_name."
+    },
+    "actor_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Synthetic actor ID convention: 'aug-<augmentation_id-tail>-A0'. Must NOT clash with any real actor_id from dataset/dev or dataset/train."
+    },
+    "evidence_sentence": {
+      "type": "string",
+      "minLength": 10,
+      "description": "One sentence from content that justifies the (label, direction) assignment for actor_name. Should appear verbatim in content, or be marked as a derived paraphrase via the prefix '[derived] '."
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 600
+    },
+    "is_positive": {
+      "type": "boolean",
+      "description": "True for paraphrase, rare_positive, and the positive sample of a direction_contrastive pair. False for hard_negative."
+    },
+    "negative_target_label_id": {
+      "type": "string",
+      "description": "Required for hard_negative samples — the L1 value the model is being trained NOT to predict.",
+      "pattern": "^([0-9]|[1-4][0-9]|5[0-3])$"
+    },
+    "paired_augmentation_id": {
+      "type": "string",
+      "description": "Required for direction_contrastive samples — the augmentation_id of the partner sample."
+    },
+    "seed_guid": {
+      "type": "string",
+      "description": "Original training article guid that seeded this augmentation (paraphrase / rare_positive)."
+    },
+    "seed_actor_id": {
+      "type": "string",
+      "description": "Original training actor_id that seeded this augmentation."
+    },
+    "generation_model": {
+      "type": "string",
+      "description": "Provider/model used to generate the sample, e.g. 'deepseek:deepseek-v4-pro'."
+    },
+    "generation_prompt_id": {
+      "type": "string",
+      "description": "Identifier of the prompt blueprint used (see augmentation_prompt_blueprints.md)."
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["pending", "accepted", "rejected", "needs_human_review"]
+    },
+    "verification_reason": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "verifier_model": {
+      "type": "string"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{12,64}$"
+    },
+    "token_count_estimate": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO-8601 UTC timestamp."
+    }
+  },
+  "additionalProperties": false
+}
