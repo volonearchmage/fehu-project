@@ -1,0 +1,44 @@
+check_name,status,explanation
+ablation_input_folder_exists,PASS,output/research_ablation_inputs/20260702_193701 present.
+all_required_ablation_input_files_exist,PASS,All 9 ablation input files present.
+baseline_event_base_json_parse_valid,PASS,Parsed 1228 baseline event records.
+baseline_human_values_json_parse_valid,PASS,Parsed 1228 baseline gold records.
+augmented_event_base_json_parse_valid,PASS,Parsed 1234 augmented event records.
+augmented_human_values_json_parse_valid,PASS,Parsed 1234 augmented gold records.
+synthetic_event_additions_json_parse_valid,PASS,Parsed 6 synthetic events.
+synthetic_human_value_additions_json_parse_valid,PASS,Parsed 6 synthetic gold records.
+manifest_json_parse_valid,PASS,Manifest parsed.
+baseline_event_count_1228,PASS,1228 baseline events.
+baseline_gold_count_1228,PASS,1228 baseline gold.
+augmented_event_count_1234,PASS,1234 augmented events.
+augmented_gold_count_1234,PASS,1234 augmented gold.
+synthetic_event_count_6,PASS,6 synthetic events.
+synthetic_gold_count_6,PASS,6 synthetic gold.
+augmented_equals_baseline_plus_synthetic_events,PASS,Augmented events == baseline ++ 6 synthetic (order preserved).
+augmented_equals_baseline_plus_synthetic_gold,PASS,Augmented gold == baseline ++ 6 synthetic (order preserved).
+synthetic_guid_unique,PASS,6 unique synthetic guids.
+synthetic_guid_no_collision,PASS,No synthetic guid in official train.
+synthetic_actor_id_unique,PASS,6 unique synthetic actor ids.
+synthetic_actor_id_no_collision,PASS,No synthetic actor id in official train.
+synthetic_event_schema_valid,PASS,Each synthetic event has guid/title/content/actors/subevents and exactly one actor.
+synthetic_gold_schema_valid,PASS,Each synthetic gold has guid/article_human_values/subevents_human_values and full label fields.
+synthetic_guid_actor_link_valid,PASS,Actor id follows aug_<candidate_id>-0 and matches the gold label actor for the same guid.
+l1_l2_mapping_valid,PASS,"Every synthetic (l1,l2) matches hv_categories."
+direction_values_valid,PASS,All synthetic directions are '0' or '1'.
+direction_mapping_consistent_1_aligned_0_contradictory,PASS,"Each synthetic direction code matches candidate target_direction (1=aligned, 0=contradictory)."
+no_task2_subevent_labels_added,PASS,All synthetic subevents_human_values are empty (no Task-2 labels).
+no_extra_synthetic_labels_added,PASS,Exactly one article-level label per synthetic sample.
+evaluation_py_readable,PASS,evaluation.py parsed and understood.
+evaluator_cli_understood,PASS,"CLI uses --gold_task1 + --pred_task1b; label '{direction}:{l1}'. Discovered line 262 DEBUG=True overwrites sys.argv with hardcoded /tmp paths, so the shipped CLI cannot accept arbitrary files."
+evaluator_task1b_dryrun_executed,PASS,Ran official parse_task1b+evaluate+DRR via module import on 6 gold / 6 pred instances (labels accepted). Real CLI attempt recorded: exit=1.
+evaluator_task1b_drr_zero_for_identical_gold_pred,PASS,DRR=0.0 for identical gold/pred.
+evaluator_task1b_f1_perfect_or_explained,PASS,"micro_f1=1.0, macro_f1=1.0 (perfect for identical gold/pred)."
+official_train_files_unchanged,PASS,train event_base+gold sha256 unchanged.
+official_dev_files_unchanged,PASS,dev event_base+gold sha256 unchanged.
+official_hv_category_files_unchanged,PASS,hv_categories sha256 unchanged.
+evaluation_py_unchanged,PASS,evaluation.py sha256 unchanged.
+source_files_unchanged,PASS,git status invariant (no source change beyond pre-existing set).
+only_new_dryrun_folder_written,PASS,Only path written is output/research_ablation_dryrun/20260702_194637 (output/ gitignored).
+no_training_run,PASS,No training invoked.
+no_ablation_run,PASS,No ablation invoked.
+no_fallback_implementation,PASS,No fallback logic; CLI blocker exposed honestly and dry-run used the real evaluator functions.

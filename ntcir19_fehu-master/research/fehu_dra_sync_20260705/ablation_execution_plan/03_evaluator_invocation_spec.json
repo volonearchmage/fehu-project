@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-07-02T20:08:24",
+  "evaluator_file_path": "evaluation.py",
+  "cli_status": "BLOCKED_FOR_ARBITRARY_PATHS",
+  "cli_blocking_reason": "evaluation.py line 262 sets DEBUG=True, which overwrites sys.argv with hardcoded /tmp/ntcir19_fehu/... paths before argparse runs. Any --gold_task1/--pred_task1b arguments are ignored and the process fails with FileNotFoundError on the hardcoded test path (verified: exit code 1 in the dry-run). The CLI therefore cannot score arbitrary files as shipped.",
+  "approved_evaluator_invocation_method": "Import evaluation.py as a module and call its official functions programmatically. Importing is side-effect free because main() runs only under `if __name__ == \"__main__\"`. Do NOT invoke the CLI for arbitrary files and do NOT modify evaluation.py.",
+  "official_functions_to_use": {
+    "parse_task1b": "parse_task1b(path) -> Dict[(guid,actor), Set['{direction}:{l1}']]; validates/accepts the Task-1b JSON format.",
+    "evaluate": "evaluate(gold, pred, l1_dir_universe()) -> {micro_f1, macro_f1, micro_precision, micro_recall, support_*}.",
+    "direction_reverse_rate_gold_excl": "direction_reverse_rate_gold_excl(gold, pred) -> (drr, reverse_count, denom_gold_excl, ambiguous_count).",
+    "l1_dir_universe": "l1_dir_universe() -> label universe {'0:0'..'1:53'} for macro-F1."
+  },
+  "direction_mapping_policy": {
+    "authoritative_source": "dataset/hv_categories/direction_mapping.json",
+    "convention": {"aligned": "1", "contradictory": "0"},
+    "evaluation_py_internal_naming": {"note": "DRR internal variables treat 0=aligned, 1=contradictory (INVERTED vs authoritative). Symmetric aggregates are unaffected; do not narrate direction meaning from evaluation.py variable names.", "action": "document_only_do_not_modify"},
+    "f1_effect": "none (exact-string matching; gold and pred share the same convention)",
+    "drr_aggregate_effect": "none (symmetric reversal counting; rate/count/denom/ambiguous are correct)",
+    "drr_interpretation_effect": "directional decomposition would be mislabeled if read from evaluation.py variable names; compute any per-direction breakdown from raw labels using the authoritative mapping"
+  },
+  "prohibited_evaluator_changes": [
+    "Do not edit evaluation.py (including flipping DEBUG or renaming DRR variables).",
+    "Do not create an evaluator-driver script in this planning task.",
+    "Do not reimplement F1/DRR (use the official functions).",
+    "Do not add fallback scoring logic."
+  ],
+  "required_manifest_fields_for_future_runs": [
+    "created_at",
+    "condition (A_baseline | B_augmented)",
+    "train_event_base_path",
+    "train_human_values_path",
+    "dev_event_base_path",
+    "dev_gold_path",
+    "prediction_path",
+    "model_and_config_id",
+    "seed",
+    "official_file_sha256_before",
+    "official_file_sha256_after",
+    "evaluation_py_sha256_before",
+    "evaluation_py_sha256_after",
+    "evaluator_invocation_method"
+  ],
+  "required_metric_outputs": [
+    "task1b_micro_f1",
+    "task1b_macro_f1",
+    "task1b_direction_reverse_rate",
+    "task1b_direction_reverse_count",
+    "task1b_direction_reverse_denom_gold_excl",
+    "task1b_ambiguous_gold_values_filtered",
+    "rare_label_recall_per_target",
+    "per_target_breakdown_L1_12_aligned_and_contradictory",
+    "per_target_breakdown_L1_38_aligned_and_contradictory"
+  ],
+  "no_training_run": true,
+  "no_ablation_run": true,
+  "no_fallback_implementation": true
+}

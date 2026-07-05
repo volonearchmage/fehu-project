@@ -1,0 +1,37 @@
+usage: train_deberta.py [-h] [--output_dir OUTPUT_DIR] [--version VERSION]
+                        [--threshold THRESHOLD] [--force_overwrite]
+                        [--train_articles TRAIN_ARTICLES]
+                        [--train_labels TRAIN_LABELS] [--seed SEED]
+                        [--checkpoint_dir CHECKPOINT_DIR]
+
+DeBERTa-v3 + LoRA training for FEHU Task-1 (post-audit).
+
+options:
+  -h, --help            show this help message and exit
+  --output_dir OUTPUT_DIR
+                        Override prediction output dir. Default:
+                        output/task1_deberta/ (was output/task1/ before audit
+                        fix).
+  --version VERSION     Optional version tag appended to the output dir.
+  --threshold THRESHOLD
+                        Sigmoid threshold for final inference (default: 0.3).
+  --force_overwrite     Overwrite existing predictions; otherwise a
+                        timestamped sibling folder is used.
+  --train_articles TRAIN_ARTICLES
+                        Path to the train event_base JSON (default: official
+                        train). If explicitly set to a missing/invalid path,
+                        the run fails loudly; there is no silent fallback to
+                        the official file.
+  --train_labels TRAIN_LABELS
+                        Path to the train human_values (gold) JSON (default:
+                        official train). If explicitly set to a
+                        missing/invalid path, the run fails loudly; there is
+                        no silent fallback to the official file.
+  --seed SEED           If set, deterministically seed
+                        Python/NumPy/PyTorch/CUDA/Transformers. Default None
+                        preserves the prior (unseeded) behavior.
+  --checkpoint_dir CHECKPOINT_DIR
+                        Override checkpoint dir (default:
+                        /home/szf-4090/projects/fehu-project/ntcir19_fehu-
+                        master/checkpoints/best_model). Use per-condition dirs
+                        to isolate baseline vs augmented checkpoints.

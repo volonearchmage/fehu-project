@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-07-04T19:30:38",
+  "readiness_classification": "BLOCKED_NEEDS_EXPLICIT_SOURCE_CHANGE",
+  "pipeline_entrypoint": "src/train_deberta.py::main()",
+  "baseline_command_if_ready": null,
+  "augmented_command_if_ready": null,
+  "evaluator_invocation_method": "Programmatic: train_deberta.py already imports and calls evaluation.parse_task1b / evaluate / direction_reverse_rate_gold_excl / l1_dir_universe directly (lines 309-312, 497-500). The evaluation.py CLI is NOT used (DEBUG=True overwrites sys.argv). This part is ready and requires no change.",
+  "required_input_paths": {
+    "baseline_train_event_base": "output/research_ablation_inputs/20260702_193701/01_baseline_train_event_base.json",
+    "baseline_train_human_values": "output/research_ablation_inputs/20260702_193701/02_baseline_train_human_values.json",
+    "augmented_train_event_base": "output/research_ablation_inputs/20260702_193701/03_augmented_train_event_base.json",
+    "augmented_train_human_values": "output/research_ablation_inputs/20260702_193701/04_augmented_train_human_values.json",
+    "official_dev_event_base": "dataset/dev/dev_event_base.json",
+    "official_dev_gold": "dataset/gold_labels/dev/dev_human_values.json"
+  },
+  "required_output_paths": {
+    "baseline_output_dir": "output/research_ablation_runs/<timestamp>/baseline/",
+    "augmented_output_dir": "output/research_ablation_runs/<timestamp>/augmented/"
+  },
+  "invariant_settings_to_lock": {
+    "model": "microsoft/deberta-v3-base + LoRA (r=16, alpha=32, dropout=0.1)",
+    "hyperparameters": "BATCH_SIZE=8, GRAD_ACCUM=4, MAX_EPOCHS=15, LR=2e-4, WEIGHT_DECAY=0.01, WARMUP_RATIO=0.1, PATIENCE=4",
+    "threshold": "identical --threshold for A and B",
+    "seed": "MUST be fixed identically for A and B (currently NOT settable — see blockers)",
+    "dev_evaluation_set": "official dev (hardcoded, acceptable)",
+    "checkpoint_isolation": "per-condition checkpoint dir required (currently shared — see blockers)",
+    "prediction_formatting": "to_submission -> Task-1b JSON (already compatible)"
+  },
+  "unavailable_arguments_or_blockers": [
+    {
+      "blocker": "No CLI/env override for training input paths",
+      "location": "src/train_deberta.py lines 93-94 (TRAIN_ARTICLES/TRAIN_LABELS constants) consumed at line 401",
+      "impact": "Augmented condition cannot be loaded; only the coincidental official-train baseline could run.",
+      "minimal_future_change": "Add optional CLI args --train_articles/--train_labels (and optionally --dev_articles/--dev_labels) that default to the current constants, overriding TRAIN_ARTICLES/TRAIN_LABELS when provided."
+    },
+    {
+      "blocker": "No seed control",
+      "location": "src/train_deberta.py (no torch/random/numpy seed anywhere; DataLoader shuffle=True at line 406)",
+      "impact": "The 'same seed' invariant cannot be enforced; A vs B differences would be confounded by run-to-run nondeterminism.",
+      "minimal_future_change": "Add --seed and set torch.manual_seed / numpy / random / DataLoader generator before training."
+    },
+    {
+      "blocker": "Shared checkpoint directory",
+      "location": "src/train_deberta.py line 62 (CHECKPOINT_DIR fixed) used by save_ckpt/load_ckpt",
+      "impact": "Baseline and augmented runs overwrite the same best-model checkpoint.",
+      "minimal_future_change": "Add --checkpoint_dir (or derive it from --output_dir) so each condition keeps its own checkpoint."
+    }
+  ],
+  "future_smoke_run_command_if_ready": null,
+  "notes": "All *_command_if_ready and future_smoke_run_command fields are null because the controlled A/B ablation cannot run without the source changes above. The changes are minimal and backward-compatible (defaults preserve current behavior), but they edit the official training script and affect reproducibility/provenance, so they MUST be explicitly approved in a later task. No change is implemented now; no fallback is introduced."
+}

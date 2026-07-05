@@ -1,0 +1,73 @@
+candidate_id,batch_id,target_l1_value_id,target_l1_value_name,target_direction,local_validation_status,review_priority,likely_acceptability,main_risk,notes
+exp_22_aligned_00_69b442ce25,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_01_dbe26b9ba0,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_02_a49f19292d,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_03_0ed3fd4ba1,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_04_652281b9d0,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_05_be8e5b1547,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_06_b75722b07f,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_07_37b82b2324,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_aligned_08_ec066660c6,batch_01_aligned,22,Have good health,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_contradictory_00_b41fba8c59,batch_01_contradictory,22,Have good health,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_contradictory_01_070eec4529,batch_01_contradictory,22,Have good health,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_contradictory_02_5254c402fc,batch_01_contradictory,22,Have good health,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_contradictory_03_8a281862d9,batch_01_contradictory,22,Have good health,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_contradictory_04_67b39b8387,batch_01_contradictory,22,Have good health,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_contradictory_05_7d538daa72,batch_01_contradictory,22,Have good health,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_22_contradictory_06_41b18d21ef,batch_01_contradictory,22,Have good health,0 contradictory,REVIEW,medium,medium,evidence sentence uses generic actor reference,pending semantic verification
+exp_22_contradictory_07_b0387043a2,batch_01_contradictory,22,Have good health,0 contradictory,REVIEW,medium,medium,evidence sentence uses generic actor reference,pending semantic verification
+exp_22_contradictory_08_34a7739a23,batch_01_contradictory,22,Have good health,0 contradictory,REVIEW,medium,medium,evidence sentence uses generic actor reference,pending semantic verification
+exp_30_aligned_00_53668dd5bf,batch_02_aligned,30,Be compliant,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_contradictory_00_231833e45c,batch_02_contradictory,30,Be compliant,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_contradictory_01_466e47f139,batch_02_contradictory,30,Be compliant,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_contradictory_02_24a46bb60d,batch_02_contradictory,30,Be compliant,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_contradictory_03_99eed47d20,batch_02_contradictory,30,Be compliant,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_contradictory_04_1fe07a09f8,batch_02_contradictory,30,Be compliant,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_contradictory_05_16d2adcdaf,batch_02_contradictory,30,Be compliant,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_aligned_00_7e360bec56,batch_03_aligned,38,Be honest,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_aligned_01_c834ad852d,batch_03_aligned,38,Be honest,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_aligned_02_3818389f0f,batch_03_aligned,38,Be honest,1 aligned,REVIEW,medium,medium,evidence sentence uses generic actor reference,pending semantic verification
+exp_38_aligned_03_db5558f393,batch_03_aligned,38,Be honest,1 aligned,REVIEW,medium,medium,overlap with verified pool,pending semantic verification
+exp_38_aligned_04_1f55b5c26c,batch_03_aligned,38,Be honest,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_aligned_05_7a89a29c5c,batch_03_aligned,38,Be honest,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_contradictory_00_8795163e95,batch_03_contradictory,38,Be honest,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_contradictory_01_30cb68c6de,batch_03_contradictory,38,Be honest,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_contradictory_02_3e2cc72092,batch_03_contradictory,38,Be honest,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_aligned_00_c44d92c22a,batch_04_aligned,12,Have success,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_aligned_01_4e5511e863,batch_04_aligned,12,Have success,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_aligned_02_fd339a8c74,batch_04_aligned,12,Have success,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_aligned_03_96d6bea48e,batch_04_aligned,12,Have success,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_aligned_04_0358857697,batch_04_aligned,12,Have success,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_aligned_05_749bc6e709,batch_04_aligned,12,Have success,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_contradictory_00_bbb47a9efc,batch_04_contradictory,12,Have success,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_contradictory_01_18f6d4cc0f,batch_04_contradictory,12,Have success,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_contradictory_02_6aa6fc8054,batch_04_contradictory,12,Have success,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_contradictory_03_01ac1d76be,batch_04_contradictory,12,Have success,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_contradictory_04_58eea251f3,batch_04_contradictory,12,Have success,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_12_contradictory_05_f191b21d69,batch_04_contradictory,12,Have success,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_aligned_00_f72beb5296,batch_05_aligned,5,Have freedom of action,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_aligned_01_5e37fbd104,batch_05_aligned,5,Have freedom of action,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_aligned_02_bca8fcda7c,batch_05_aligned,5,Have freedom of action,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_aligned_03_628fc4fa5e,batch_05_aligned,5,Have freedom of action,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_aligned_04_7961fc8fe6,batch_05_aligned,5,Have freedom of action,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_aligned_05_e20ac48d54,batch_05_aligned,5,Have freedom of action,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_contradictory_01_5d978aa34d,batch_05_contradictory,5,Have freedom of action,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_contradictory_02_aad6f806fa,batch_05_contradictory,5,Have freedom of action,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_contradictory_03_d9c2042aa1,batch_05_contradictory,5,Have freedom of action,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_contradictory_05_0ef024ccef,batch_05_contradictory,5,Have freedom of action,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_46_aligned_00_b9c5cac847,batch_06_aligned,46,Have a world at peace,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_46_aligned_01_167290d738,batch_06_aligned,46,Have a world at peace,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_46_aligned_02_6152cb28bd,batch_06_aligned,46,Have a world at peace,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_46_contradictory_00_634da14b01,batch_06_contradictory,46,Have a world at peace,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_46_contradictory_01_1e46013d81,batch_06_contradictory,46,Have a world at peace,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_46_contradictory_02_0d01a219de,batch_06_contradictory,46,Have a world at peace,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_aligned_r1_00_45ee78df72,batch_02_aligned,30,Be compliant,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_aligned_r1_01_c505977bc9,batch_02_aligned,30,Be compliant,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_aligned_r1_02_1821203775,batch_02_aligned,30,Be compliant,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_aligned_r1_03_a0aacc9deb,batch_02_aligned,30,Be compliant,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_30_aligned_r1_04_2ab5ecd2de,batch_02_aligned,30,Be compliant,1 aligned,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_contradictory_r1_00_d42bf6d43c,batch_03_contradictory,38,Be honest,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_contradictory_r1_01_8f3004d27a,batch_03_contradictory,38,Be honest,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_38_contradictory_r1_02_cd5f421b9d,batch_03_contradictory,38,Be honest,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_contradictory_r1_00_f43569c26d,batch_05_contradictory,5,Have freedom of action,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification
+exp_5_contradictory_r1_01_a4b94fe1bd,batch_05_contradictory,5,Have freedom of action,0 contradictory,PASS,low,high,none flagged structurally (semantic quality unverified),pending semantic verification

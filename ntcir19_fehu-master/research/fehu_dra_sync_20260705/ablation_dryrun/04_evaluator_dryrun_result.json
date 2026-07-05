@@ -1,0 +1,26 @@
+{
+  "method": "Imported official evaluation.py functions (parse_task1b, evaluate, direction_reverse_rate_gold_excl) on the dry-run gold/pred. The shipped CLI (main) cannot be used on arbitrary paths because evaluation.py line 262 sets DEBUG=True and overwrites sys.argv with hardcoded /tmp paths.",
+  "gold_instances_parsed": 6,
+  "pred_instances_parsed": 6,
+  "task1b_labels_accepted": true,
+  "metrics": {
+    "micro_f1": 1.0,
+    "macro_f1": 1.0,
+    "micro_precision": 1.0,
+    "micro_recall": 1.0,
+    "support_instances": 6,
+    "support_gold_labels": 6,
+    "support_pred_labels": 6,
+    "direction_reverse_rate": 0.0,
+    "direction_reverse_count": 0,
+    "direction_reverse_denom_gold_excl": 6,
+    "ambiguous_gold_values_filtered": 0
+  },
+  "cli_attempt": {
+    "command": "/home/szf-4090/桌面/hpy/company-research-agent/.venv/bin/python3 evaluation.py --gold_task1 output/research_ablation_dryrun/20260702_194637/02_evaluator_format_dryrun_gold_task1b.json --pred_task1b output/research_ablation_dryrun/20260702_194637/03_evaluator_format_dryrun_pred_task1b.json",
+    "exit_code": 1,
+    "stdout_tail": "",
+    "stderr_tail": "^^^^^^^^^^^\n  File \"/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/evaluation.py\", line 188, in parse_task1a\n    data = load_json(path)\n           ^^^^^^^^^^^^^^^\n  File \"/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/evaluation.py\", line 184, in load_json\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/tmp/ntcir19_fehu/dataset/gold_labels/test/test_article_human_values.json'"
+  },
+  "note_direction_convention": "evaluation.py DRR internally labels direction '0' as aligned and '1' as contradictory (opposite of the project convention where '1'=aligned). This is symmetric bucketing and does not affect identical gold/pred: DRR=0 and F1=1.0 regardless. F1 uses exact-string label matching '{direction}:{l1}', which is convention-agnostic."
+}

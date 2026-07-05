@@ -1,62 +1,117 @@
 """
-FEHU Task-1: Article-level Human Value Classification
-Prompt-based Pipeline - Supports OpenAI GPT and Google Gemini
+FEHU Task-1: Article-level Human Value Classification — Prompt-only OpenAI pipeline.
 
-Usage:
-    # Run on dev set (to evaluate)
+Usage (from project root):
+    # dev evaluation
     python src/run_pipeline.py --mode dev
+    python src/run_pipeline.py --mode dev --model gpt-4o
+    python src/run_pipeline.py --mode dev --limit 5
 
-    # Use Gemini for full dev set
-    python src/run_pipeline.py --mode dev --provider gemini
+    # test submission (no eval)
+    python src/run_pipeline.py --mode test --model gpt-4o
 
-    # Use OpenAI for final test submission
-    python src/run_pipeline.py --mode test --provider openai --model gpt-4o
+API Key Setup — Create '.env' in project root or `export OPENAI_API_KEY=sk-...`:
+    OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 
-    # Use OpenAI gpt-4o-mini (default)
-    python src/run_pipeline.py --mode dev --provider openai
-
-API Key Setup - Create '.env' file in project root:
-    OPENAI_API_KEY=sk-your-key-here
-    GEMINI_API_KEY=your-gemini-key-here
+This script is the post-audit version. Changes vs. the original:
+  • --model now actually flows into the API call (was silently ignored).
+  • Cache path includes provider + model slug → no cross-model contamination.
+  • Default output directory is `output/task1_prompt_openai_{model_slug}/`
+    (no longer writes to ambiguous `output/task1/`).
+  • Overwrite-safe: existing predictions are never overwritten unless
+    --force_overwrite is given; otherwise a timestamped sibling is created.
+  • run_config.json + metrics.json (dev mode) are emitted next to predictions.
+  • --limit N correctly filters the dev gold to the same N guids before
+    scoring (recall is no longer deflated).
 """
 
+import argparse
 import json
 import os
+import re
+import shlex
+import subprocess
 import sys
 import time
-import argparse
+from datetime import datetime, timezone
+from pathlib import Path
+
 from openai import OpenAI
 from tqdm import tqdm
 
 # ============================================================
-# CONFIG - Change these paths if your folder structure differs
+# CONFIG — paths derived from project root
 # ============================================================
 
-# Base directory: the root of ntcir19_fehu-master
-# This script assumes it's run from the project root:
-#   python src/run_pipeline.py
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Data paths
-TEST_ARTICLES = os.path.join(BASE_DIR, "dataset", "test", "test_article_event_base.json")
-DEV_ARTICLES = os.path.join(BASE_DIR, "dataset", "dev", "dev_event_base.json")
-TRAIN_ARTICLES = os.path.join(BASE_DIR, "dataset", "train", "train_event_base.json")
-TRAIN_LABELS = os.path.join(BASE_DIR, "dataset", "gold_labels", "train", "train_human_values.json")
-DEV_LABELS = os.path.join(BASE_DIR, "dataset", "gold_labels", "dev", "dev_human_values.json")
+TEST_ARTICLES  = BASE_DIR / "dataset" / "test" / "test_article_event_base.json"
+DEV_ARTICLES   = BASE_DIR / "dataset" / "dev"  / "dev_event_base.json"
+TRAIN_ARTICLES = BASE_DIR / "dataset" / "train" / "train_event_base.json"
+TRAIN_LABELS   = BASE_DIR / "dataset" / "gold_labels" / "train" / "train_human_values.json"
+DEV_LABELS     = BASE_DIR / "dataset" / "gold_labels" / "dev"   / "dev_human_values.json"
 
-# Taxonomy paths
-HV_DIR = os.path.join(BASE_DIR, "dataset", "hv_categories")
-L1_VALUES_PATH = os.path.join(HV_DIR, "human_value_level1_values.json")
-L2_VALUES_PATH = os.path.join(HV_DIR, "human_value_level2_values.json")
-L1_TO_L2_PATH = os.path.join(HV_DIR, "level_1_to_level_2.json")
+HV_DIR         = BASE_DIR / "dataset" / "hv_categories"
+L1_VALUES_PATH = HV_DIR / "human_value_level1_values.json"
+L2_VALUES_PATH = HV_DIR / "human_value_level2_values.json"
+L1_TO_L2_PATH  = HV_DIR / "level_1_to_level_2.json"
 
-# Output paths
-OUTPUT_DIR = os.path.join(BASE_DIR, "output", "task1")
+LOGS_DIR = BASE_DIR / "logs"
 
-# Model config
-MODEL = "gpt-4o-mini"  # Use gpt-4o-mini for dev; switch to gpt-4o for final
+# Default model used when --model is not provided.
+DEFAULT_MODEL = "gpt-4o-mini"
+PROVIDER      = "openai"
+METHOD_NAME   = "prompt_only"
+
 TEMPERATURE = 0.1
 MAX_RETRIES = 3
+
+
+# ============================================================
+# HELPERS
+# ============================================================
+
+def model_slug(name: str) -> str:
+    """Lower-case, alphanumeric+underscore slug for filenames."""
+    s = name.lower()
+    s = re.sub(r"[/.:\-]", "_", s)
+    s = re.sub(r"[^a-z0-9_]", "_", s)
+    s = re.sub(r"_+", "_", s).strip("_")
+    return s
+
+
+def stable_text_hash(text: str) -> str:
+    import hashlib
+    return hashlib.md5(text.encode("utf-8")).hexdigest()[:12]
+
+
+def safe_output_dir(base: Path, force_overwrite: bool) -> tuple[Path, bool]:
+    """
+    Return an output directory that does not clobber existing predictions.
+
+    Returns (dir, used_timestamped_fallback).
+    """
+    p1a = base / "pred_task1a.json"
+    p1b = base / "pred_task1b.json"
+    if base.exists() and (p1a.exists() or p1b.exists()) and not force_overwrite:
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        fallback = base.parent / f"{base.name}_{ts}"
+        fallback.mkdir(parents=True, exist_ok=True)
+        return fallback, True
+    base.mkdir(parents=True, exist_ok=True)
+    return base, False
+
+
+def current_git_commit() -> str:
+    try:
+        out = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(BASE_DIR), stderr=subprocess.DEVNULL,
+        ).decode().strip()
+        return out
+    except Exception:
+        return "unknown"
+
 
 # ============================================================
 # LOAD TAXONOMY
@@ -65,16 +120,12 @@ MAX_RETRIES = 3
 def load_taxonomy():
     """Load all value category definitions."""
     with open(L1_VALUES_PATH, "r", encoding="utf-8") as f:
-        l1_name_to_id = json.load(f)  # {"Be creative": "0", ...}
-
+        l1_name_to_id = json.load(f)
     with open(L2_VALUES_PATH, "r", encoding="utf-8") as f:
-        l2_name_to_id = json.load(f)  # {"Self-direction: thought": "0", ...}
-
+        l2_name_to_id = json.load(f)
     with open(L1_TO_L2_PATH, "r", encoding="utf-8") as f:
         l1_to_l2_raw = json.load(f)["level_1_to_level_2"]
-        # {"Be creative": "Self-direction: thought", ...}
 
-    # Build L1 id -> L2 id mapping
     l1_id_to_l2_id = {}
     for l1_name, l2_name in l1_to_l2_raw.items():
         l1_id = l1_name_to_id[l1_name]
@@ -85,81 +136,69 @@ def load_taxonomy():
 
 
 # ============================================================
-# BUILD FEW-SHOT EXAMPLES FROM TRAINING DATA
+# FEW-SHOT EXAMPLES
 # ============================================================
 
 def load_few_shot_examples(n=2):
-    """
-    Load n training articles with their gold labels as few-shot examples.
-    Pick articles with moderate number of actors and clear value assignments.
-    """
+    """Load n training articles with their gold labels as few-shot examples."""
     with open(TRAIN_ARTICLES, "r", encoding="utf-8") as f:
         train_articles = json.load(f)
     with open(TRAIN_LABELS, "r", encoding="utf-8") as f:
         train_labels = json.load(f)
 
-    # Build guid -> labels mapping
-    guid_to_labels = {item["guid"]: item for item in train_labels}
-
-    # Build guid -> article mapping
+    guid_to_labels  = {item["guid"]: item for item in train_labels}
     guid_to_article = {item["guid"]: item for item in train_articles}
 
-    # Select good examples: articles with 2-3 actors and 4-8 total labels
     candidates = []
     for item in train_labels:
         guid = item["guid"]
-        hvs = item.get("article_human_values", [])
+        hvs  = item.get("article_human_values", [])
         if guid in guid_to_article:
             actors = guid_to_article[guid].get("actors", [])
             if 2 <= len(actors) <= 3 and 4 <= len(hvs) <= 8:
                 candidates.append(guid)
 
-    # Take first n candidates
     selected = candidates[:n]
 
     examples = []
     for guid in selected:
         article = guid_to_article[guid]
-        labels = guid_to_labels[guid]
+        labels  = guid_to_labels[guid]
 
-        # Format actor list
         actor_list = []
         for actor_dict in article["actors"]:
             for name, aid in actor_dict.items():
                 actor_list.append({"name": name, "id": aid})
 
-        # Format gold labels for the example output
         output_values = []
         for hv in labels["article_human_values"]:
-            # Reverse lookup l1 name from id
-            l1_id = hv["l1_value"]
+            l1_id   = hv["l1_value"]
             l1_name = [k for k, v in l1_name_to_id.items() if v == l1_id][0]
             output_values.append({
-                "actor_id": hv["actor"],
+                "actor_id":      hv["actor"],
                 "l1_value_name": l1_name,
-                "l1_value_id": hv["l1_value"],
-                "direction": "aligned" if hv["direction"] == "1" else "contradictory",
-                "reasoning": hv.get("explanation", "")[:150]  # Truncate for prompt length
+                "l1_value_id":   hv["l1_value"],
+                "direction":     "aligned" if hv["direction"] == "1" else "contradictory",
+                "reasoning":     hv.get("explanation", "")[:150],
             })
 
         examples.append({
-            "title": article["title"],
-            "content": article["content"][:1500],  # Truncate long articles
-            "actors": actor_list,
-            "output": output_values
+            "title":   article["title"],
+            "content": article["content"][:1500],
+            "actors":  actor_list,
+            "output":  output_values,
         })
 
     return examples
 
 
 # ============================================================
-# BUILD THE PROMPT
+# PROMPT TEMPLATES — preserved verbatim from the pre-patch version
 # ============================================================
 
 def build_system_prompt(few_shot_examples):
     """Build the system prompt with task description and few-shot examples."""
 
-    # Build the L1 value list string
     l1_list_str = ""
     for name, vid in sorted(l1_name_to_id.items(), key=lambda x: int(x[1])):
         l1_list_str += f"  {vid}: {name}\n"
@@ -194,12 +233,11 @@ OUTPUT FORMAT: Return ONLY a valid JSON array. Each element must have:
 
 Do NOT include any text before or after the JSON array. No markdown, no explanation."""
 
-    # Add few-shot examples
     if few_shot_examples:
         system_prompt += "\n\nEXAMPLES:\n"
         for i, ex in enumerate(few_shot_examples):
-            actor_str = ", ".join([f'{a["name"]} (ID: {a["id"]})' for a in ex["actors"]])
-            output_str = json.dumps(ex["output"][:4], indent=2, ensure_ascii=False)  # Show first 4 for brevity
+            actor_str  = ", ".join([f'{a["name"]} (ID: {a["id"]})' for a in ex["actors"]])
+            output_str = json.dumps(ex["output"][:4], indent=2, ensure_ascii=False)
             system_prompt += f"""
 --- Example {i+1} ---
 Title: {ex["title"]}
@@ -214,14 +252,12 @@ Output:
 
 def build_user_prompt(article):
     """Build the user prompt for a single article."""
-    # Build actor list
     actor_lines = []
     for actor_dict in article["actors"]:
         for name, aid in actor_dict.items():
             actor_lines.append(f"- {name} (ID: {aid})")
     actor_str = "\n".join(actor_lines)
 
-    # Truncate very long articles to fit context window
     content = article["content"]
     if len(content) > 12000:
         content = content[:6000] + "\n...[truncated]...\n" + content[-3000:]
@@ -238,18 +274,18 @@ Identify the human values for each actor. Return ONLY a JSON array."""
 
 
 # ============================================================
-# CALL OPENAI API
+# API CALL — model_name now flows through correctly (audit C1)
 # ============================================================
 
-def call_gpt(client, system_prompt, user_prompt, article_guid):
+def call_gpt(client, system_prompt, user_prompt, article_guid, model_name):
     """Call OpenAI API with retry logic."""
     for attempt in range(MAX_RETRIES):
         try:
             response = client.chat.completions.create(
-                model=MODEL,
+                model=model_name,
                 messages=[
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
+                    {"role": "user",   "content": user_prompt},
                 ],
                 temperature=TEMPERATURE,
                 max_completion_tokens=4000,
@@ -257,8 +293,6 @@ def call_gpt(client, system_prompt, user_prompt, article_guid):
 
             content = response.choices[0].message.content.strip()
 
-            # Try to extract JSON from response
-            # Sometimes GPT wraps it in ```json ... ```
             if content.startswith("```"):
                 content = content.split("```")[1]
                 if content.startswith("json"):
@@ -275,7 +309,6 @@ def call_gpt(client, system_prompt, user_prompt, article_guid):
 
         except json.JSONDecodeError as e:
             print(f"  [WARN] {article_guid}: JSON parse error (attempt {attempt+1}): {e}")
-            print(f"  Response was: {content[:200]}...")
             if attempt < MAX_RETRIES - 1:
                 time.sleep(2)
             continue
@@ -291,239 +324,321 @@ def call_gpt(client, system_prompt, user_prompt, article_guid):
 
 
 # ============================================================
-# PROCESS RESULTS -> OUTPUT FORMAT
+# RESULT PROCESSING — preserved verbatim from pre-patch
 # ============================================================
 
 def process_results(article_guid, actors, gpt_results):
-    """
-    Convert GPT output to the official submission format.
-    Produces entries for both task1a and task1b.
-    """
-    # Get valid actor IDs for this article
+    """Convert GPT output to the official submission format."""
     valid_actor_ids = set()
     for actor_dict in actors:
-        for name, aid in actor_dict.items():
+        for _, aid in actor_dict.items():
             valid_actor_ids.add(aid)
 
-    task1a_values = []  # For pred_task1a.json
-    task1b_values = []  # For pred_task1b.json
-
-    seen_task1a = set()  # Deduplicate (actor, l2_value)
-    seen_task1b = set()  # Deduplicate (actor, direction, l1_value)
+    task1a_values = []
+    task1b_values = []
+    seen_task1a   = set()
+    seen_task1b   = set()
 
     for item in gpt_results:
-        actor_id = str(item.get("actor_id", ""))
-        l1_id = str(item.get("l1_value_id", ""))
+        actor_id      = str(item.get("actor_id", ""))
+        l1_id         = str(item.get("l1_value_id", ""))
         direction_str = item.get("direction", "aligned")
 
-        # Validate actor_id
         if actor_id not in valid_actor_ids:
             continue
-
-        # Validate l1_value_id
         if not l1_id.isdigit() or int(l1_id) < 0 or int(l1_id) > 53:
             continue
 
-        # Convert direction
-        if direction_str == "contradictory":
-            direction = "0"
-        else:
-            direction = "1"  # Default to aligned
+        # direction_mapping.json: aligned="1", contradictory="0"
+        direction = "0" if direction_str == "contradictory" else "1"
 
-        # Map L1 -> L2
         l2_id = l1_id_to_l2_id.get(l1_id, None)
         if l2_id is None:
             continue
 
-        # Task 1a: (actor, l2_value) - deduplicate
         key_1a = (actor_id, l2_id)
         if key_1a not in seen_task1a:
             seen_task1a.add(key_1a)
-            task1a_values.append({
-                "actor": actor_id,
-                "l2_value": l2_id
-            })
+            task1a_values.append({"actor": actor_id, "l2_value": l2_id})
 
-        # Task 1b: (actor, direction, l1_value) - deduplicate
         key_1b = (actor_id, direction, l1_id)
         if key_1b not in seen_task1b:
             seen_task1b.add(key_1b)
             task1b_values.append({
-                "actor": actor_id,
-                "l1_value": l1_id,
-                "direction": direction
+                "actor": actor_id, "l1_value": l1_id, "direction": direction
             })
 
     return task1a_values, task1b_values
 
 
 # ============================================================
-# MAIN PIPELINE
+# EVALUATION — filters gold to processed guids when --limit is set
 # ============================================================
 
+def _filter(d, guids):
+    return {k: v for k, v in d.items() if k[0] in guids} if guids else d
+
+
+def run_dev_evaluation(pred_1a_path, pred_1b_path, processed_guids=None):
+    """
+    Run official evaluation on dev predictions.
+
+    When `processed_guids` is provided (e.g. --limit run), the dev gold
+    is filtered to the same guid set before scoring, so recall is not
+    deflated.
+    """
+    sys.path.insert(0, str(BASE_DIR))
+    from evaluation import (
+        parse_task1a, parse_task1b, evaluate,
+        l2_universe, l1_dir_universe,
+        direction_reverse_rate_gold_excl,
+    )
+
+    gold_1a = _filter(parse_task1a(str(DEV_LABELS)),    processed_guids)
+    pred_1a = _filter(parse_task1a(str(pred_1a_path)),  processed_guids)
+    gold_1b = _filter(parse_task1b(str(DEV_LABELS)),    processed_guids)
+    pred_1b = _filter(parse_task1b(str(pred_1b_path)),  processed_guids)
+
+    r1a = evaluate(gold_1a, pred_1a, l2_universe())
+    r1b = evaluate(gold_1b, pred_1b, l1_dir_universe())
+    drr, rev_cnt, denom, amb = direction_reverse_rate_gold_excl(gold_1b, pred_1b)
+
+    print("\nTask-1a (Level-2, no direction):")
+    print(f"  Micro F1:  {r1a['micro_f1']:.4f}")
+    print(f"  Macro F1:  {r1a['macro_f1']:.4f}")
+    print(f"  Precision: {r1a['micro_precision']:.4f}")
+    print(f"  Recall:    {r1a['micro_recall']:.4f}")
+
+    print("\nTask-1b (Level-1 + direction):")
+    print(f"  Micro F1:  {r1b['micro_f1']:.4f}")
+    print(f"  Macro F1:  {r1b['macro_f1']:.4f}")
+    print(f"  Precision: {r1b['micro_precision']:.4f}")
+    print(f"  Recall:    {r1b['micro_recall']:.4f}")
+    print(f"  DRR:       {drr:.4f}  ({rev_cnt}/{denom},  ambiguous={amb})")
+
+    return {
+        "task1a": {
+            "micro_f1":         r1a["micro_f1"],
+            "macro_f1":         r1a["macro_f1"],
+            "micro_precision":  r1a["micro_precision"],
+            "micro_recall":     r1a["micro_recall"],
+        },
+        "task1b": {
+            "micro_f1":               r1b["micro_f1"],
+            "macro_f1":               r1b["macro_f1"],
+            "micro_precision":        r1b["micro_precision"],
+            "micro_recall":           r1b["micro_recall"],
+            "direction_reverse_rate": drr,
+            "reversed_count":         rev_cnt,
+            "denominator_count":      denom,
+            "ambiguous_count":        amb,
+        },
+    }
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def parse_args():
+    ap = argparse.ArgumentParser(description="FEHU Task-1 Prompt-only OAI Pipeline (post-audit).")
+    ap.add_argument("--mode", choices=["dev", "test"], default="dev")
+    ap.add_argument("--limit", type=int, default=None,
+                    help="Process only first N articles (debug). "
+                         "Dev gold is filtered to those guids for fair scoring.")
+    ap.add_argument("--model", type=str, default=DEFAULT_MODEL,
+                    help=f"OpenAI model to use (default: {DEFAULT_MODEL})")
+    ap.add_argument("--api_key", type=str, default=None,
+                    help="OpenAI API key (or set OPENAI_API_KEY env var).")
+    ap.add_argument("--output_dir", type=str, default=None,
+                    help="Override output directory. "
+                         "Default: output/task1_prompt_openai_{model_slug}/")
+    ap.add_argument("--version", type=str, default=None,
+                    help="Optional version tag appended to the output dir.")
+    ap.add_argument("--force_overwrite", action="store_true",
+                    help="Overwrite existing predictions instead of writing "
+                         "to a timestamped sibling folder.")
+    return ap.parse_args()
+
+
 def main():
-    parser = argparse.ArgumentParser(description="FEHU Task-1 Prompt Pipeline")
-    parser.add_argument("--mode", choices=["dev", "test"], default="dev",
-                        help="Run on dev set (for evaluation) or test set (for submission)")
-    parser.add_argument("--limit", type=int, default=None,
-                        help="Process only N articles (for quick testing)")
-    parser.add_argument("--model", type=str, default=MODEL,
-                        help="OpenAI model to use (default: gpt-4o-mini)")
-    parser.add_argument("--api_key", type=str, default=None,
-                        help="OpenAI API key (or set OPENAI_API_KEY env var)")
-    args = parser.parse_args()
+    args = parse_args()
 
-   # Set model (passed to call_gpt via args)
+    # ── Validate model + API key ────────────────────────────────────────────
     model_name = args.model
+    slug       = model_slug(model_name)
 
-    # Initialize OpenAI client
     api_key = args.api_key or os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        print("ERROR: No API key provided!")
-        print("Either pass --api_key YOUR_KEY or set environment variable:")
-        print('  Windows CMD:   set OPENAI_API_KEY=your_key_here')
-        print('  Windows PS:    $env:OPENAI_API_KEY="your_key_here"')
-        print('  Linux/Mac:     export OPENAI_API_KEY=your_key_here')
+        print("ERROR: No OpenAI API key provided.")
+        print("  Pass --api_key or set OPENAI_API_KEY in the environment.")
         sys.exit(1)
-
     client = OpenAI(api_key=api_key)
 
-    # Load taxonomy (global for use in other functions)
+    # ── Resolve output dir (overwrite-safe) ─────────────────────────────────
+    if args.output_dir:
+        out_root = Path(args.output_dir)
+        if not out_root.is_absolute():
+            out_root = BASE_DIR / out_root
+    else:
+        suffix = f"_{args.version}" if args.version else ""
+        out_root = BASE_DIR / "output" / f"task1_prompt_{PROVIDER}_{slug}{suffix}"
+
+    OUTPUT_DIR, used_fallback = safe_output_dir(out_root, args.force_overwrite)
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # ── Resolve cache path (provider + model keyed) ─────────────────────────
+    cache_filename = f"cache_{args.mode}_{PROVIDER}_{slug}.json"
+    cache_path     = LOGS_DIR / cache_filename
+
+    # ── Load taxonomy + globals for prompt builders ─────────────────────────
     global l1_name_to_id, l2_name_to_id, l1_id_to_l2_id
     l1_name_to_id, l2_name_to_id, l1_id_to_l2_id = load_taxonomy()
 
-    # Load articles
+    # ── Load articles ───────────────────────────────────────────────────────
     if args.mode == "dev":
         articles_path = DEV_ARTICLES
-        print(f"Mode: DEV (will evaluate against gold labels)")
+        print("Mode: DEV (will evaluate against gold labels)")
     else:
         articles_path = TEST_ARTICLES
-        print(f"Mode: TEST (will produce submission files)")
+        print("Mode: TEST (will produce submission files; no evaluation)")
 
     with open(articles_path, "r", encoding="utf-8") as f:
         articles = json.load(f)
 
     if args.limit:
         articles = articles[:args.limit]
+    processed_guids = {str(a["guid"]) for a in articles}
 
-    print(f"Loaded {len(articles)} articles")
-    print(f"Model: {MODEL}")
+    print(f"Provider:  {PROVIDER}")
+    print(f"Model:     {model_name}  (slug: {slug})")
+    print(f"Articles:  {len(articles)}")
+    print(f"Output:    {OUTPUT_DIR}")
+    if used_fallback:
+        print(f"  [INFO] Target folder existed → wrote to timestamped sibling.")
+    print(f"Cache:     {cache_path.name}")
 
-    # Load few-shot examples from training data
+    # ── Few-shot + system prompt ────────────────────────────────────────────
     print("Loading few-shot examples from training data...")
     few_shot_examples = load_few_shot_examples(n=2)
     print(f"Loaded {len(few_shot_examples)} few-shot examples")
-
-    # Build system prompt (same for all articles)
     system_prompt = build_system_prompt(few_shot_examples)
 
-    # Process each article
+    # ── Cache ───────────────────────────────────────────────────────────────
+    cache = {}
+    if cache_path.exists():
+        try:
+            cache = json.loads(cache_path.read_text(encoding="utf-8"))
+            print(f"Loaded cache: {len(cache)} entries")
+        except json.JSONDecodeError:
+            print("  [WARN] Cache file corrupted; starting fresh.")
+            cache = {}
+
+    # ── Process articles ────────────────────────────────────────────────────
     all_task1a = []
     all_task1b = []
 
-    # Cache file for resuming interrupted runs
-    cache_path = os.path.join(BASE_DIR, "logs", f"cache_{args.mode}.json")
-    os.makedirs(os.path.join(BASE_DIR, "logs"), exist_ok=True)
-    cache = {}
-    if os.path.exists(cache_path):
-        with open(cache_path, "r", encoding="utf-8") as f:
-            cache = json.load(f)
-        print(f"Loaded cache with {len(cache)} processed articles")
-
     for article in tqdm(articles, desc="Processing articles"):
-        guid = article["guid"]
+        guid = str(article["guid"])
 
-        # Check cache
-        if guid in cache:
-            gpt_results = cache[guid]
+        cached = cache.get(guid)
+        # Per-entry provider+model guard so future cache reuse is safe even
+        # if filenames are ever consolidated.
+        use_cache = (
+            isinstance(cached, dict)
+            and cached.get("provider") == PROVIDER
+            and cached.get("model") == model_name
+            and "result" in cached
+        )
+        if use_cache:
+            gpt_results = cached["result"]
         else:
-            # Build prompt and call API
             user_prompt = build_user_prompt(article)
-            gpt_results = call_gpt(client, system_prompt, user_prompt, guid)
+            gpt_results = call_gpt(client, system_prompt, user_prompt, guid, model_name)
+            cache[guid] = {
+                "guid":     guid,
+                "provider": PROVIDER,
+                "model":    model_name,
+                "result":   gpt_results,
+            }
+            cache_path.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
 
-            # Save to cache
-            cache[guid] = gpt_results
-            with open(cache_path, "w", encoding="utf-8") as f:
-                json.dump(cache, f, ensure_ascii=False)
-
-        # Process results
         task1a_values, task1b_values = process_results(guid, article["actors"], gpt_results)
+        all_task1a.append({"guid": guid, "article_human_values": task1a_values})
+        all_task1b.append({"guid": guid, "article_human_values": task1b_values})
 
-        all_task1a.append({
-            "guid": guid,
-            "article_human_values": task1a_values
-        })
+    # ── Write predictions ───────────────────────────────────────────────────
+    task1a_path = OUTPUT_DIR / "pred_task1a.json"
+    task1b_path = OUTPUT_DIR / "pred_task1b.json"
+    task1a_path.write_text(json.dumps(all_task1a, ensure_ascii=False, indent=2), encoding="utf-8")
+    task1b_path.write_text(json.dumps(all_task1b, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"\nSaved Task-1a → {task1a_path}")
+    print(f"Saved Task-1b → {task1b_path}")
 
-        all_task1b.append({
-            "guid": guid,
-            "article_human_values": task1b_values
-        })
+    total_1a = sum(len(x["article_human_values"]) for x in all_task1a)
+    total_1b = sum(len(x["article_human_values"]) for x in all_task1b)
+    n = max(len(articles), 1)
+    print(f"Stats: 1a={total_1a} ({total_1a/n:.1f}/article)  "
+          f"1b={total_1b} ({total_1b/n:.1f}/article)")
 
-    # Save output files
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-    task1a_path = os.path.join(OUTPUT_DIR, "pred_task1a.json")
-    task1b_path = os.path.join(OUTPUT_DIR, "pred_task1b.json")
-
-    with open(task1a_path, "w", encoding="utf-8") as f:
-        json.dump(all_task1a, f, indent=2, ensure_ascii=False)
-    print(f"\nSaved Task-1a predictions to: {task1a_path}")
-
-    with open(task1b_path, "w", encoding="utf-8") as f:
-        json.dump(all_task1b, f, indent=2, ensure_ascii=False)
-    print(f"Saved Task-1b predictions to: {task1b_path}")
-
-    # Print stats
-    total_1a = sum(len(item["article_human_values"]) for item in all_task1a)
-    total_1b = sum(len(item["article_human_values"]) for item in all_task1b)
-    print(f"\nStats:")
-    print(f"  Articles processed: {len(articles)}")
-    print(f"  Task-1a predictions: {total_1a} (avg {total_1a/len(articles):.1f} per article)")
-    print(f"  Task-1b predictions: {total_1b} (avg {total_1b/len(articles):.1f} per article)")
-
-    # If dev mode, run evaluation
-    if args.mode == "dev":
-        print("\n" + "="*60)
-        print("RUNNING EVALUATION ON DEV SET")
-        print("="*60)
-        run_dev_evaluation(task1a_path, task1b_path)
-
-
-def run_dev_evaluation(pred_1a_path, pred_1b_path):
-    """Run the official evaluation script on dev predictions."""
-    # Import evaluation functions directly
-    sys.path.insert(0, BASE_DIR)
-    from evaluation import (
-        parse_task1a, parse_task1b, evaluate,
-        l2_universe, l1_dir_universe,
-        direction_reverse_rate_gold_excl
+    # ── run_config.json ─────────────────────────────────────────────────────
+    run_config = {
+        "script":         "src/run_pipeline.py",
+        "method":         METHOD_NAME,
+        "provider":       PROVIDER,
+        "model":          model_name,
+        "model_slug":     slug,
+        "version":        args.version,
+        "mode":           args.mode,
+        "limit":          args.limit,
+        "is_limit_run":   bool(args.limit),
+        "output_dir":     str(OUTPUT_DIR),
+        "cache_path":     str(cache_path),
+        "timestamp":      datetime.now(timezone.utc).isoformat(),
+        "git_commit":     current_git_commit(),
+        "command_line":   " ".join(shlex.quote(a) for a in sys.argv),
+        "dataset_paths": {
+            "train_articles": str(TRAIN_ARTICLES),
+            "dev_articles":   str(DEV_ARTICLES),
+            "test_articles":  str(TEST_ARTICLES),
+            "train_labels":   str(TRAIN_LABELS),
+            "dev_labels":     str(DEV_LABELS),
+            "l1_values":      str(L1_VALUES_PATH),
+            "l2_values":      str(L2_VALUES_PATH),
+            "l1_to_l2":       str(L1_TO_L2_PATH),
+        },
+        "prompt_template_hash": stable_text_hash(system_prompt),
+        "taxonomy_hash":        stable_text_hash(json.dumps(
+            {"l1": l1_name_to_id, "l2": l2_name_to_id}, sort_keys=True
+        )),
+        "stats": {
+            "n_articles":         n,
+            "total_predictions_1a": total_1a,
+            "total_predictions_1b": total_1b,
+        },
+        "notes": (
+            "Prompt-only OAI pipeline (post-audit). "
+            "--model now flows into the API call; cache and output dir are "
+            "model-keyed; --limit filters the dev gold for fair scoring."
+        ),
+    }
+    (OUTPUT_DIR / "run_config.json").write_text(
+        json.dumps(run_config, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
-    # Parse gold and predictions
-    gold_1a = parse_task1a(DEV_LABELS)
-    pred_1a = parse_task1a(pred_1a_path)
-    gold_1b = parse_task1b(DEV_LABELS)
-    pred_1b = parse_task1b(pred_1b_path)
-
-    # Evaluate Task 1a
-    results_1a = evaluate(gold_1a, pred_1a, l2_universe())
-    print(f"\nTask-1a (Level-2, no direction):")
-    print(f"  Micro F1: {results_1a['micro_f1']:.4f}")
-    print(f"  Macro F1: {results_1a['macro_f1']:.4f}")
-    print(f"  Precision: {results_1a['micro_precision']:.4f}")
-    print(f"  Recall: {results_1a['micro_recall']:.4f}")
-
-    # Evaluate Task 1b
-    results_1b = evaluate(gold_1b, pred_1b, l1_dir_universe())
-    drr, rev_cnt, denom_cnt, amb_cnt = direction_reverse_rate_gold_excl(gold_1b, pred_1b)
-    print(f"\nTask-1b (Level-1 + direction):")
-    print(f"  Micro F1: {results_1b['micro_f1']:.4f}")
-    print(f"  Macro F1: {results_1b['macro_f1']:.4f}")
-    print(f"  Precision: {results_1b['micro_precision']:.4f}")
-    print(f"  Recall: {results_1b['micro_recall']:.4f}")
-    print(f"  Direction Reverse Rate: {drr:.4f} ({rev_cnt}/{denom_cnt})")
-
-    return results_1a, results_1b
+    # ── Evaluation (dev only) ───────────────────────────────────────────────
+    if args.mode == "dev":
+        print("\n" + "=" * 60)
+        print("DEV EVALUATION")
+        print("=" * 60)
+        filter_guids = processed_guids if args.limit else None
+        metrics = run_dev_evaluation(task1a_path, task1b_path, filter_guids)
+        (OUTPUT_DIR / "metrics.json").write_text(
+            json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(f"\nMetrics saved → {OUTPUT_DIR / 'metrics.json'}")
+    else:
+        print("Test mode: skipped evaluation.")
 
 
 if __name__ == "__main__":

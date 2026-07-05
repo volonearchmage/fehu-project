@@ -1,0 +1,12 @@
+metric,baseline,augmented,delta,interpretation_note
+task1b_micro_f1,0.30231716147719045,0.3059687786960515,0.003652,Tiny gain; within single-seed noise range.
+task1b_macro_f1,0.03049637427228421,0.03090085431103878,0.000404,Essentially unchanged; both models predict few distinct labels.
+direction_reverse_rate,0.21647164716471648,0.162016201620162,-0.054455,"Notable drop (-25% relative). Encouraging for direction consistency, but single seed - not causal proof."
+direction_reverse_count,481,360,-121,481 -> 360 reversals on 2222 gold-exclusive values.
+predicted_label_count,3134,3055,-79,"Augmented predicts slightly fewer labels (precision up, recall ~flat)."
+gold_label_count,2390,2390,0,Same dev gold for both conditions.
+exact_match_count,835,833,-2,Nearly identical true positives.
+L1_12_aligned_recall,0.0,0.0,0.0,Label never predicted in either condition (support 47).
+L1_12_contradictory_recall,0.0,0.0,0.0,Label never predicted in either condition (support 7). Augmentation target NOT yet achieved.
+L1_38_aligned_recall,0.0,0.0,0.0,Label never predicted in either condition (support 44).
+L1_38_contradictory_recall,0.0,0.0,0.0,Label never predicted in either condition (support 28). Augmentation target NOT yet achieved.

@@ -15,10 +15,13 @@ Run from project root:
 import argparse
 import json
 import os
+import re
+import shlex
+import subprocess
 import sys
 import time
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import torch
@@ -43,8 +46,30 @@ L1_FILE       = BASE_DIR / "dataset/hv_categories/human_value_level1_values.json
 L2_FILE       = BASE_DIR / "dataset/hv_categories/human_value_level2_values.json"
 L1_TO_L2_FILE = BASE_DIR / "dataset/hv_categories/level_1_to_level_2.json"
 HYBRID_OUT    = BASE_DIR / "output/task1_hybrid"
-DEBERTA_OUT   = BASE_DIR / "output/task1"
+# NOTE: output/task1/ is legacy ambiguous (both run_pipeline.py and the older
+# train_deberta.py used to write there). After the audit (2026-06-13) the
+# canonical DeBERTa-only predictions live at output/task1_deberta/. Never use
+# output/task1/ as a DeBERTa baseline — its contents may be prompt-only.
+DEBERTA_OUT   = BASE_DIR / "output/task1_deberta"
 LOGS_DIR      = BASE_DIR / "logs"
+
+
+def _model_slug(name: str) -> str:
+    s = name.lower()
+    s = re.sub(r"[/.:\-]", "_", s)
+    s = re.sub(r"[^a-z0-9_]", "_", s)
+    s = re.sub(r"_+", "_", s).strip("_")
+    return s
+
+
+def _current_git_commit() -> str:
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(BASE_DIR), stderr=subprocess.DEVNULL,
+        ).decode().strip()
+    except Exception:
+        return "unknown"
 
 CONTENT_MAX = 10_000
 
@@ -435,7 +460,10 @@ def main():
             )
 
     # ── Part 3 & 4: LLM verification with caching ────────────────────────────
-    cache_path = LOGS_DIR / f"cache_hybrid_{args.mode}.json"
+    # Cache is now keyed by mode + LLM model. This prevents reusing
+    # gpt-4o-mini results for a gpt-4o run (and vice versa).
+    llm_slug   = _model_slug(args.model)
+    cache_path = LOGS_DIR / f"cache_hybrid_v1_{args.mode}_openai_{llm_slug}.json"
     cache: dict = json.loads(cache_path.read_text()) if cache_path.exists() else {}
 
     verified_by_guid: dict = {}
@@ -513,14 +541,28 @@ def main():
     (HYBRID_OUT / "metrics.json").write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
 
     config = {
+        "script":                   "src/hybrid_pipeline.py",
+        "method":                   "hybrid_v1",
         "mode":                     args.mode,
+        "provider":                 "openai",
         "llm_model":                args.model,
+        "llm_model_slug":           llm_slug,
         "deberta_threshold":        args.deberta_threshold,
         "top_k":                    args.top_k,
         "max_candidates_per_actor": args.max_candidates_per_actor,
         "limit":                    args.limit,
+        "is_limit_run":             bool(args.limit),
         "skip_deberta":             args.skip_deberta,
-        "timestamp":                datetime.utcnow().isoformat() + "Z",
+        "output_dir":               str(HYBRID_OUT),
+        "cache_path":               str(cache_path),
+        "deberta_baseline_dir":     str(DEBERTA_OUT),
+        "command_line":             " ".join(shlex.quote(a) for a in sys.argv),
+        "git_commit":               _current_git_commit(),
+        "timestamp":                datetime.now(timezone.utc).isoformat(),
+        "notes": (
+            "Hybrid v1 (post-audit). DeBERTa baseline now read from "
+            "output/task1_deberta/. Cache file is provider+LLM-model-keyed."
+        ),
     }
     (HYBRID_OUT / "run_config.json").write_text(json.dumps(config, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Metrics and config saved to {HYBRID_OUT}/")

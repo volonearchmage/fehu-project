@@ -8,21 +8,36 @@ DeBERTa-v3-base + LoRA fine-tuning for FEHU Task-1 human value classification.
 
 Run from project root:
     python src/train_deberta.py
+    python src/train_deberta.py --threshold 0.2 --version v2
+
+Post-audit changes (no behavior change for training itself):
+  • Default output dir is now `output/task1_deberta/` (was `output/task1/`,
+    which collided with run_pipeline.py).
+  • CLI args added: --output_dir / --version / --threshold / --force_overwrite.
+  • A run_config.json is emitted next to the predictions recording the model,
+    LoRA config, threshold, hyperparameters, and timestamp.
 """
 
+import argparse
 import json
 import math
 import os
+import re
+import random
+import shlex
+import subprocess
 import sys
 import tempfile
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
+import numpy as np
 import torch
 import torch.nn as nn
 from torch.optim import AdamW
 from torch.utils.data import DataLoader, Dataset
-from transformers import AutoModel, AutoTokenizer, get_cosine_schedule_with_warmup
+from transformers import AutoModel, AutoTokenizer, get_cosine_schedule_with_warmup, set_seed as hf_set_seed
 from peft import LoraConfig, PeftModel, TaskType, get_peft_model
 from tqdm import tqdm
 
@@ -41,10 +56,57 @@ LR           = 2e-4
 WEIGHT_DECAY = 0.01
 WARMUP_RATIO = 0.1
 PATIENCE     = 4
-THRESHOLD    = 0.3
+
+# Default inference threshold; can be overridden by --threshold.
+DEFAULT_THRESHOLD = 0.3
+THRESHOLD         = DEFAULT_THRESHOLD   # global, set in main()
 
 CHECKPOINT_DIR = BASE_DIR / "checkpoints" / "best_model"
-OUTPUT_DIR     = BASE_DIR / "output" / "task1"
+
+# Canonical DeBERTa-only output (was output/task1/ before the audit fix).
+DEFAULT_OUTPUT_DIR = BASE_DIR / "output" / "task1_deberta"
+
+# OUTPUT_DIR is set in main() after CLI parsing.
+OUTPUT_DIR = DEFAULT_OUTPUT_DIR
+
+
+def _safe_output_dir(base: Path, force_overwrite: bool):
+    """Return (dir, used_timestamped_fallback)."""
+    p1a = base / "pred_task1a.json"
+    p1b = base / "pred_task1b.json"
+    if base.exists() and (p1a.exists() or p1b.exists()) and not force_overwrite:
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        fallback = base.parent / f"{base.name}_{ts}"
+        fallback.mkdir(parents=True, exist_ok=True)
+        return fallback, True
+    base.mkdir(parents=True, exist_ok=True)
+    return base, False
+
+
+def _current_git_commit():
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(BASE_DIR), stderr=subprocess.DEVNULL,
+        ).decode().strip()
+    except Exception:
+        return "unknown"
+
+
+def set_seed(seed: int):
+    """Deterministically seed Python, NumPy, PyTorch, CUDA, and Transformers.
+
+    Only invoked when --seed is explicitly provided; otherwise the prior (unseeded)
+    behavior is preserved exactly. Seeding the global torch generator also makes the
+    DataLoader(shuffle=True) sampler order deterministic.
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+    hf_set_seed(seed)
+
 
 TRAIN_ARTICLES = BASE_DIR / "dataset/train/train_event_base.json"
 TRAIN_LABELS   = BASE_DIR / "dataset/gold_labels/train/train_human_values.json"
@@ -307,11 +369,78 @@ def load_ckpt(device):
     return model
 
 
+# ── CLI ────────────────────────────────────────────────────────────────────────
+def parse_args():
+    ap = argparse.ArgumentParser(description="DeBERTa-v3 + LoRA training for FEHU Task-1 (post-audit).")
+    ap.add_argument("--output_dir", type=str, default=None,
+                    help="Override prediction output dir. "
+                         "Default: output/task1_deberta/  (was output/task1/ before audit fix).")
+    ap.add_argument("--version", type=str, default=None,
+                    help="Optional version tag appended to the output dir.")
+    ap.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD,
+                    help=f"Sigmoid threshold for final inference (default: {DEFAULT_THRESHOLD}).")
+    ap.add_argument("--force_overwrite", action="store_true",
+                    help="Overwrite existing predictions; otherwise a timestamped "
+                         "sibling folder is used.")
+    ap.add_argument("--train_articles", type=str, default=str(TRAIN_ARTICLES),
+                    help="Path to the train event_base JSON (default: official train). "
+                         "If explicitly set to a missing/invalid path, the run fails loudly; "
+                         "there is no silent fallback to the official file.")
+    ap.add_argument("--train_labels", type=str, default=str(TRAIN_LABELS),
+                    help="Path to the train human_values (gold) JSON (default: official train). "
+                         "If explicitly set to a missing/invalid path, the run fails loudly; "
+                         "there is no silent fallback to the official file.")
+    ap.add_argument("--seed", type=int, default=None,
+                    help="If set, deterministically seed Python/NumPy/PyTorch/CUDA/Transformers. "
+                         "Default None preserves the prior (unseeded) behavior.")
+    ap.add_argument("--checkpoint_dir", type=str, default=None,
+                    help=f"Override checkpoint dir (default: {CHECKPOINT_DIR}). Use per-condition "
+                         "dirs to isolate baseline vs augmented checkpoints.")
+    return ap.parse_args()
+
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
+    global THRESHOLD, OUTPUT_DIR, CHECKPOINT_DIR
+    args = parse_args()
+    THRESHOLD = args.threshold
+
+    # Deterministic seeding — only when explicitly requested; default None preserves prior behavior.
+    if args.seed is not None:
+        set_seed(args.seed)
+
+    # Resolve training input paths (defaults = official constants). No silent fallback: an explicitly
+    # provided missing/invalid path fails loudly rather than reverting to the official train file.
+    train_articles = Path(args.train_articles)
+    train_labels   = Path(args.train_labels)
+    for flag, p in (("--train_articles", train_articles), ("--train_labels", train_labels)):
+        if not p.is_file():
+            raise SystemExit(f"ERROR: {flag} path does not exist or is not a file: {p}")
+
+    # Resolve checkpoint dir (default = CHECKPOINT_DIR constant) so baseline/augmented runs can
+    # isolate their checkpoints. Applied to the module global used by save_ckpt/load_ckpt.
+    if args.checkpoint_dir:
+        cp = Path(args.checkpoint_dir)
+        CHECKPOINT_DIR = cp if cp.is_absolute() else (BASE_DIR / cp)
+
+    # Resolve output dir (overwrite-safe).
+    if args.output_dir:
+        out_root = Path(args.output_dir)
+        if not out_root.is_absolute():
+            out_root = BASE_DIR / out_root
+    else:
+        suffix = f"_{args.version}" if args.version else ""
+        out_root = DEFAULT_OUTPUT_DIR if not suffix else (
+            BASE_DIR / "output" / f"task1_deberta{suffix}"
+        )
+    OUTPUT_DIR, used_fallback = _safe_output_dir(out_root, args.force_overwrite)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Device: {device}")
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    print(f"Device:    {device}")
+    print(f"Output:    {OUTPUT_DIR}")
+    if used_fallback:
+        print("  [INFO] Target folder existed → wrote to timestamped sibling.")
+    print(f"Threshold: {THRESHOLD}")
 
     l1l2 = load_l1_to_l2()
 
@@ -319,7 +448,7 @@ def main():
     model, tok = build_model(device)
 
     print("Loading data...")
-    train_ex = build_examples(TRAIN_ARTICLES, TRAIN_LABELS)
+    train_ex = build_examples(train_articles, train_labels)
     dev_ex   = build_examples(DEV_ARTICLES,   DEV_LABELS)
     print(f"  train={len(train_ex)}  dev={len(dev_ex)}")
 
@@ -366,6 +495,54 @@ def main():
         json.dumps(t1b, ensure_ascii=False, indent=2)
     )
     print(f"Written to {OUTPUT_DIR}/")
+
+    # ── run_config.json (post-audit provenance) ────────────────────────────────
+    run_config = {
+        "script":      "src/train_deberta.py",
+        "method":      "deberta_lora",
+        "base_model":  MODEL_NAME,
+        "num_labels":  NUM_LABELS,
+        "max_length":  MAX_LENGTH,
+        "lora_config": {
+            "r": 16, "lora_alpha": 32, "lora_dropout": 0.1,
+            "task_type": "SEQ_CLS",
+        },
+        "threshold":   THRESHOLD,
+        "seed":        args.seed,
+        "hyperparameters": {
+            "batch_size":   BATCH_SIZE,
+            "grad_accum":   GRAD_ACCUM,
+            "max_epochs":   MAX_EPOCHS,
+            "lr":           LR,
+            "weight_decay": WEIGHT_DECAY,
+            "warmup_ratio": WARMUP_RATIO,
+            "patience":     PATIENCE,
+        },
+        "best_dev_task1b_micro_f1": best_f1,
+        "output_dir":    str(OUTPUT_DIR),
+        "checkpoint_dir": str(CHECKPOINT_DIR),
+        "version":       args.version,
+        "command_line":  " ".join(shlex.quote(a) for a in sys.argv),
+        "git_commit":    _current_git_commit(),
+        "device":        str(device),
+        "timestamp":     datetime.now(timezone.utc).isoformat(),
+        "dataset_paths": {
+            "train_articles": str(train_articles),
+            "train_labels":   str(train_labels),
+            "dev_articles":   str(DEV_ARTICLES),
+            "dev_labels":     str(DEV_LABELS),
+            "l1_file":        str(L1_FILE),
+            "l2_file":        str(L2_FILE),
+            "l1_to_l2_file":  str(L1_TO_L2_FILE),
+        },
+        "notes": (
+            "DeBERTa-v3 + LoRA training (post-audit). Default output dir is "
+            "output/task1_deberta/. Pass --threshold to control inference cutoff."
+        ),
+    }
+    (OUTPUT_DIR / "run_config.json").write_text(
+        json.dumps(run_config, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
     # Final evaluation
     from evaluation import (

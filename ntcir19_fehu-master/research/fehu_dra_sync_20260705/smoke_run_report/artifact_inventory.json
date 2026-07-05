@@ -1,0 +1,205 @@
+[
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/output/pred_task1a.json",
+    "size": 152927,
+    "sha256": "b5fb2e56e22a8739a2b6d0dadb1f0f069140168bd256bf45d5256aec26b2b26e",
+    "condition": "baseline",
+    "kind": "prediction/config"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/output/pred_task1b.json",
+    "size": 335731,
+    "sha256": "c38ebddec77a797af8cb1a55dc19f5c28c65b8398134f8b2113817d6dfdcaae6",
+    "condition": "baseline",
+    "kind": "prediction/config"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/output/run_config.json",
+    "size": 2455,
+    "sha256": "245f9cdbf60a09937cfe0ab0257e5fd09d00499791607b77a4d6eb2784d32b41",
+    "condition": "baseline",
+    "kind": "prediction/config"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/checkpoints/README.md",
+    "size": 5174,
+    "sha256": "1b2b263ed4c04572a5cf482e01e2709e4f7d5331bc9983621b39cbebae2c5026",
+    "condition": "baseline",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/checkpoints/adapter_config.json",
+    "size": 1063,
+    "sha256": "948437854d127c0fe2288eaae69796a559a578ba8d1c3dab86ed9fbe0022546f",
+    "condition": "baseline",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/checkpoints/adapter_model.safetensors",
+    "size": 2366064,
+    "sha256": "96134e9fd25efcb10f7a799dbed513324bec37619a708ce64c6999198c89b998",
+    "condition": "baseline",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/checkpoints/classifier.pt",
+    "size": 333674,
+    "sha256": "44cc3cdfedcf1a769aa9cc9eca1aeab1304c6a072d5d5dd8749e5ca82dee81cb",
+    "condition": "baseline",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/checkpoints/tokenizer.json",
+    "size": 8339876,
+    "sha256": "e9ddd853a4a31023721c993458663f2019e3154a05dacf0d2b3c217e53d9bdc8",
+    "condition": "baseline",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/checkpoints/tokenizer_config.json",
+    "size": 538,
+    "sha256": "0dbe41323167ba5f2e1e876ccd05068318dd2378b922bdfd924a389dba3bcc7a",
+    "condition": "baseline",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/logs/end_time.txt",
+    "size": 26,
+    "sha256": "8c7a7879296a5f8d6556493f3af4abbee47fd15e557e8eb9c510ef7671c6719a",
+    "condition": "baseline",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/logs/exit_code.txt",
+    "size": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "condition": "baseline",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/logs/start_time.txt",
+    "size": 26,
+    "sha256": "ce1df54ae8220674499281e384901178178fe9e7104734f07a78173a6a0eae78",
+    "condition": "baseline",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/logs/stderr.log",
+    "size": 81928,
+    "sha256": "96b316ac69514f18773f6912002a107ae771247f5471204de6b2462c1db528c0",
+    "condition": "baseline",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/baseline/logs/stdout.log",
+    "size": 2608,
+    "sha256": "4ef9605f6bebffb7e6867346107d15e7afafff0ef0fd71ce7fba496dfc95b650",
+    "condition": "baseline",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/output/pred_task1a.json",
+    "size": 177040,
+    "sha256": "279de568bb82e5b67b851717dbfd79fea0e43934d3308af073b1c03d335a28ee",
+    "condition": "augmented",
+    "kind": "prediction/config"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/output/pred_task1b.json",
+    "size": 327509,
+    "sha256": "00f06e2648fee1b6c09b5a6b1276e4861735cd1da26690e83ae84eb8e47ce53e",
+    "condition": "augmented",
+    "kind": "prediction/config"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/output/run_config.json",
+    "size": 2464,
+    "sha256": "47119857b7a9b364ccb21d7500f272ddec2455120f0ea638a804638bc44ad61e",
+    "condition": "augmented",
+    "kind": "prediction/config"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/checkpoints/README.md",
+    "size": 5174,
+    "sha256": "1b2b263ed4c04572a5cf482e01e2709e4f7d5331bc9983621b39cbebae2c5026",
+    "condition": "augmented",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/checkpoints/adapter_config.json",
+    "size": 1063,
+    "sha256": "948437854d127c0fe2288eaae69796a559a578ba8d1c3dab86ed9fbe0022546f",
+    "condition": "augmented",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/checkpoints/adapter_model.safetensors",
+    "size": 2366064,
+    "sha256": "342afd1aed2ff51ace6a8e796d501daf6c8fa86cf45ef0bb6273f8865a1c5522",
+    "condition": "augmented",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/checkpoints/classifier.pt",
+    "size": 333674,
+    "sha256": "b4e8b31d1962a76671728523332ff98174643dd59393b262297a0d6fd6fe1a35",
+    "condition": "augmented",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/checkpoints/tokenizer.json",
+    "size": 8339876,
+    "sha256": "e9ddd853a4a31023721c993458663f2019e3154a05dacf0d2b3c217e53d9bdc8",
+    "condition": "augmented",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/checkpoints/tokenizer_config.json",
+    "size": 538,
+    "sha256": "0dbe41323167ba5f2e1e876ccd05068318dd2378b922bdfd924a389dba3bcc7a",
+    "condition": "augmented",
+    "kind": "checkpoint"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/logs/end_time.txt",
+    "size": 26,
+    "sha256": "2f47b04e9670456983f8ced5554e2ca65ef7f32b73bad6525d3f1b8bebf60464",
+    "condition": "augmented",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/logs/exit_code.txt",
+    "size": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "condition": "augmented",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/logs/start_time.txt",
+    "size": 26,
+    "sha256": "ddae7705ebb7cbe0712306a4c1510e008f3dd17ed371bff9f958a7c974c79983",
+    "condition": "augmented",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/logs/stderr.log",
+    "size": 176785,
+    "sha256": "84dc8be8a9f53624ea36b8d69f7e1aba84c4c81174168a6d7fec80f71e03337e",
+    "condition": "augmented",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/augmented/logs/stdout.log",
+    "size": 3863,
+    "sha256": "d2711584979b6b06ef7d42df662700156c17f56af3b79d3b7308eb4b4484c517",
+    "condition": "augmented",
+    "kind": "log"
+  },
+  {
+    "path": "output/research_ablation_smoke_runs/20260704_201355/comparison/detailed_metrics.json",
+    "size": 2536,
+    "sha256": "86b6993d4805a01b82090e55c4340177b9fdb3f1d0a8e1a910c9b6058d9c340f",
+    "condition": "both",
+    "kind": "metrics"
+  }
+]
