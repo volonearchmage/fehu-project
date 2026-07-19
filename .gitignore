@@ -1,0 +1,74 @@
+
+# ============================================================
+# FEHU secrets and local environment
+# ============================================================
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# ML caches and experiment services
+# ============================================================
+.cache/
+**/.cache/
+wandb/
+**/wandb/
+runs/
+**/runs/
+
+# ============================================================
+# Large model checkpoints and weights
+# Keep reports, metrics, JSON and JSONL results in output/
+# ============================================================
+**/checkpoint-*/
+**/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+pytorch_model.bin
+optimizer.pt
+scheduler.pt
+rng_state*.pth
+
+# Temporary generated files
+*.tmp
+*.swp
+
+# ============================================================
+# FEHU secrets and local environment
+# ============================================================
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# ML caches and experiment services
+# ============================================================
+.cache/
+**/.cache/
+wandb/
+**/wandb/
+runs/
+**/runs/
+
+# ============================================================
+# Large model checkpoints and weights
+# Keep reports, metrics, JSON and JSONL results in output/
+# ============================================================
+**/checkpoint-*/
+**/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+pytorch_model.bin
+optimizer.pt
+scheduler.pt
+rng_state*.pth
+
+# Temporary generated files
+*.tmp
+*.swp
