@@ -1,0 +1,31 @@
+{
+  "_comment": [
+    "Sibling (closest-confusable) mapping for the E4c verifier's sibling-label contrast check.",
+    "Rule 1 (structural, computed at runtime, not listed here): every Level-1 value's siblings always include all other Level-1 values under the same official Level-2 category.",
+    "Rule 2 (extra_pairs below): curated cross-Level-2 pairs whose NAMES/DEFINITIONS in the official taxonomy overlap semantically. Curation is from taxonomy semantics only — no dev-set confusion statistics were used.",
+    "Pairs are symmetric; ids are official Level-1 ids as strings.",
+    "Validation (tests/test_families_and_siblings.py): every id is a valid Level-1 id, no self-pairs, and the runtime-merged map is symmetric."
+  ],
+  "extra_pairs": [
+    ["37", "42"],
+    ["30", "42"],
+    ["30", "32"],
+    ["26", "46"],
+    ["27", "30"],
+    ["38", "53"],
+    ["38", "52"],
+    ["16", "17"],
+    ["16", "12"],
+    ["9", "15"],
+    ["21", "43"],
+    ["41", "43"],
+    ["44", "50"],
+    ["50", "51"],
+    ["28", "34"],
+    ["45", "30"],
+    ["22", "37"],
+    ["18", "12"],
+    ["25", "10"],
+    ["47", "42"]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "official_articles": 1228,
+  "round2_articles": 900,
+  "combined_articles": 2128,
+  "round2_modes": {
+    "target_only": 450,
+    "full_multilabel": 450
+  },
+  "round2_known_negative_records": 36,
+  "validations": "all passed (see script docstring)"
+}

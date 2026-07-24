@@ -1,4 +1,3 @@
-
 # ============================================================
 # FEHU secrets and local environment
 # ============================================================
@@ -37,38 +36,30 @@ rng_state*.pth
 *.swp
 
 # ============================================================
-# FEHU secrets and local environment
+# Python caches (belt-and-suspenders; also in ntcir19_fehu-master/.gitignore)
 # ============================================================
-.env
-.env.*
-!.env.example
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+**/.pytest_cache/
 
 # ============================================================
-# ML caches and experiment services
+# API response caches (raw model outputs; regenerable, may be large)
 # ============================================================
-.cache/
-**/.cache/
-wandb/
-**/wandb/
-runs/
-**/runs/
+**/logs/cache_*.json
+**/cache_dev_*.json
+**/cache_test_*.json
 
 # ============================================================
-# Large model checkpoints and weights
-# Keep reports, metrics, JSON and JSONL results in output/
+# External papers / non-code binaries (not project source)
 # ============================================================
-**/checkpoint-*/
-**/checkpoints/
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.onnx
-pytorch_model.bin
-optimizer.pt
-scheduler.pt
-rng_state*.pth
+*.pdf
 
-# Temporary generated files
-*.tmp
-*.swp
+# ============================================================
+# Unnecessarily large regenerable generated/augmented data outputs
+# (kept out of the handoff; reproducible from the augmentation scripts)
+# ============================================================
+**/*_official_plus_900.json

@@ -1,0 +1,7 @@
+system,group,n_labels_group,n_labels_gold_supported,sum_tp,sum_fp,sum_fn,micro_precision,micro_recall,micro_f1,macro_precision_gold_supported,macro_recall_gold_supported,macro_f1_gold_supported,macro_precision_full_universe,macro_recall_full_universe,macro_f1_full_universe
+deberta_baseline,nontarget_90,90,75,835,2299,1415,0.2664,0.3711,0.3102,0.0247,0.0915,0.0378,0.0206,0.0762,0.0315
+augmented_v1,nontarget_90,90,75,707,1603,1543,0.3061,0.3142,0.3101,0.0236,0.0679,0.0323,0.0196,0.0566,0.0269
+augmented_v2,nontarget_90,90,75,1280,3989,970,0.2429,0.5689,0.3405,0.1134,0.2696,0.153,0.0945,0.2246,0.1275
+liu_frozen,nontarget_90,90,75,1180,856,1070,0.5796,0.5244,0.5506,0.4509,0.3477,0.3688,0.3758,0.2898,0.3073
+hybrid_h2,nontarget_90,90,75,1374,1287,876,0.5163,0.6107,0.5596,0.4187,0.4118,0.3919,0.3489,0.3432,0.3266
+hybrid_h3,nontarget_90,90,75,1276,999,974,0.5609,0.5671,0.564,0.429,0.3614,0.3686,0.3575,0.3011,0.3072

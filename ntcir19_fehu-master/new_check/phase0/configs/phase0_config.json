@@ -1,0 +1,87 @@
+{
+  "description": "Phase-0 validation configuration. All paths are relative to the project root (ntcir19_fehu-master/). Read-only inputs; all outputs go to new_check/phase0/outputs/.",
+  "gold_dev_labels": "dataset/gold_labels/dev/dev_human_values.json",
+  "gold_train_labels": "dataset/gold_labels/train/train_human_values.json",
+  "l1_names": "dataset/hv_categories/human_value_level1_values.json",
+  "direction_mapping": "dataset/hv_categories/direction_mapping.json",
+  "targets_source": "output/research_label_aware_low_frequency_augmentation_v2/20260713_163751/02_selected_targets_and_allocation.json",
+  "targets_crosscheck_csv": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/05_historical_18_targets.csv",
+  "v2_target_metrics_crosscheck": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/metrics/target_label_metrics.csv",
+  "v2_supervision_map": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/inputs/supervision_map.json",
+  "v2_train_labels": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/inputs/augmented_train_human_values_v2.json",
+  "v2_probabilities_jsonl": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/02_deberta_actor_probabilities.jsonl",
+  "baseline_train_articles_copy": "output/research_ablation_inputs/20260702_193701/01_baseline_train_event_base.json",
+  "baseline_train_labels_copy": "output/research_ablation_inputs/20260702_193701/02_baseline_train_human_values.json",
+  "official_train_articles": "dataset/train/train_event_base.json",
+  "systems": {
+    "deberta_baseline": {
+      "pred_task1b": "output/research_ablation_smoke_runs/20260704_201355/baseline/output/pred_task1b.json",
+      "run_config": "output/research_ablation_smoke_runs/20260704_201355/baseline/output/run_config.json",
+      "threshold": 0.3,
+      "supervision_policy": "assume_negative (official data only)",
+      "training_data": "official 1228 articles / 3335 actor examples",
+      "probabilities": null,
+      "seed": 42,
+      "family": "deberta",
+      "expected_1b_micro_f1": 0.3023
+    },
+    "augmented_v1": {
+      "pred_task1b": "output/research_augmented_deberta_v1/20260712_231751/predictions/pred_task1b.json",
+      "run_config": "output/research_augmented_deberta_v1/20260712_231751/predictions/run_config.json",
+      "threshold": 0.3,
+      "supervision_policy": "assume_negative (incl. 340 single-label synthetic records)",
+      "training_data": "official + 340 AI-screened silver = 1568 articles",
+      "probabilities": null,
+      "seed": 42,
+      "family": "deberta",
+      "expected_1b_micro_f1": 0.3009
+    },
+    "augmented_v2": {
+      "pred_task1b": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/predictions/pred_task1b.json",
+      "run_config": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/predictions/run_config.json",
+      "threshold": 0.3,
+      "supervision_policy": "masked partial-label (790 target_only masked; 3785 fully supervised)",
+      "training_data": "official + 340 + 900 = 2468 articles / 4575 actor examples",
+      "probabilities": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/02_deberta_actor_probabilities.jsonl",
+      "seed": 42,
+      "family": "deberta",
+      "expected_1b_micro_f1": 0.3306
+    },
+    "liu_frozen": {
+      "pred_task1b": "output/task1/runs/dev_deepseek_deepseek-v4-flash_targeted_more_shot_balanced_temp0p1_max8000/pred_task1b.json",
+      "run_config": null,
+      "threshold": null,
+      "supervision_policy": "prompt-only LLM (no training)",
+      "training_data": "n/a (DeepSeek V4 Flash, Liu targeted_more_shot_balanced prompt, temp 0.1)",
+      "probabilities": null,
+      "seed": null,
+      "family": "llm",
+      "expected_1b_micro_f1": 0.5347
+    },
+    "hybrid_h2": {
+      "pred_task1b": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/14_pred_task1b_h2.json",
+      "run_config": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/00_run_config.json",
+      "threshold": 0.3,
+      "supervision_policy": "inference-time hybrid (Liu + verified DeBERTa v2 additions)",
+      "training_data": "n/a (single DeepSeek V4 Flash pass, temp 0.1)",
+      "probabilities": null,
+      "seed": null,
+      "family": "hybrid",
+      "expected_1b_micro_f1": 0.5433
+    },
+    "hybrid_h3": {
+      "pred_task1b": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/16_pred_task1b_h3.json",
+      "run_config": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/00_run_config.json",
+      "threshold": 0.3,
+      "supervision_policy": "inference-time hybrid (full revision)",
+      "training_data": "n/a (single DeepSeek V4 Flash pass, temp 0.1)",
+      "probabilities": null,
+      "seed": null,
+      "family": "hybrid",
+      "expected_1b_micro_f1": 0.5474
+    }
+  },
+  "global_thresholds": [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5],
+  "oracle_threshold_grid": {"start": 0.01, "stop": 0.6, "step": 0.01},
+  "micro_f1_crosscheck_tolerance": 0.001
+}

@@ -1,0 +1,27 @@
+{
+  "phase": 1,
+  "step": "export_baseline_probabilities",
+  "started": "2026-07-20T13:49:28",
+  "finished": "2026-07-20T13:49:34",
+  "checkpoint": "output/research_ablation_smoke_runs/20260704_201355/baseline/checkpoints",
+  "checkpoint_sha256": {
+    "README.md": "1b2b263ed4c04572a5cf482e01e2709e4f7d5331bc9983621b39cbebae2c5026",
+    "adapter_config.json": "948437854d127c0fe2288eaae69796a559a578ba8d1c3dab86ed9fbe0022546f",
+    "adapter_model.safetensors": "96134e9fd25efcb10f7a799dbed513324bec37619a708ce64c6999198c89b998",
+    "classifier.pt": "44cc3cdfedcf1a769aa9cc9eca1aeab1304c6a072d5d5dd8749e5ca82dee81cb",
+    "tokenizer.json": "e9ddd853a4a31023721c993458663f2019e3154a05dacf0d2b3c217e53d9bdc8",
+    "tokenizer_config.json": "0dbe41323167ba5f2e1e876ccd05068318dd2378b922bdfd924a389dba3bcc7a"
+  },
+  "frozen_pred_sha256": "c38ebddec77a797af8cb1a55dc19f5c28c65b8398134f8b2113817d6dfdcaae6",
+  "validation": "thresholding at 0.30 reproduces frozen baseline pred_task1b.json exactly on all trainer-parity instances",
+  "n_trainer_parity": 456,
+  "n_extra_actors": 3,
+  "torch": "2.6.0+cu124",
+  "device": "NVIDIA GeForce RTX 4090",
+  "output": "new_check/phase1/outputs/baseline_actor_probabilities.jsonl",
+  "constraints": {
+    "no_training": true,
+    "no_api_calls": true,
+    "no_existing_artifact_modified": true
+  }
+}

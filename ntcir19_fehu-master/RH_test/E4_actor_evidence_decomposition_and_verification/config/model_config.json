@@ -1,0 +1,10 @@
+{
+  "_comment": "Model settings for every E4 API stage. Identical to the frozen E1 DeepSeek Flash configuration; changing any value changes cache identity (recorded per run in run_config.json).",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.1,
+  "max_output_tokens": 8000,
+  "request_timeout": 120,
+  "max_retries": 3,
+  "e1_prompt_variant": "targeted_more_shot_balanced"
+}

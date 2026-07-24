@@ -1,0 +1,15 @@
+Title: <<TITLE>>
+
+Numbered sentences:
+<<NUMBERED_SENTENCES>>
+
+Actors:
+<<ACTORS>>
+
+Evidence units per actor:
+<<EVIDENCE_UNITS>>
+
+Candidates to verify:
+<<CANDIDATES>>
+
+Return ONLY a JSON object with a "verdicts" array containing exactly one verdict per candidate ID.
