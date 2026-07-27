@@ -1,0 +1,58 @@
+{
+  "auc_exact_label": 0.6808719599389587,
+  "auc_value_max_dir": 0.663463975476752,
+  "e1_tp_score_dist": {
+    "n": 1328,
+    "p10": 0.1617,
+    "p25": 0.2579,
+    "median": 0.3601,
+    "p75": 0.5045,
+    "mean": 0.376
+  },
+  "e1_fp_score_dist": {
+    "n": 1129,
+    "p10": 0.0757,
+    "p25": 0.1554,
+    "median": 0.2681,
+    "p75": 0.3558,
+    "mean": 0.2705
+  },
+  "removal_sweep": [
+    {
+      "tau_low": 0.01,
+      "removed_tp": 2,
+      "removed_fp": 7,
+      "fp_per_tp_removed": 3.5
+    },
+    {
+      "tau_low": 0.02,
+      "removed_tp": 2,
+      "removed_fp": 20,
+      "fp_per_tp_removed": 10.0
+    },
+    {
+      "tau_low": 0.05,
+      "removed_tp": 13,
+      "removed_fp": 74,
+      "fp_per_tp_removed": 5.692
+    },
+    {
+      "tau_low": 0.1,
+      "removed_tp": 41,
+      "removed_fp": 156,
+      "fp_per_tp_removed": 3.805
+    },
+    {
+      "tau_low": 0.15,
+      "removed_tp": 106,
+      "removed_fp": 271,
+      "fp_per_tp_removed": 2.557
+    },
+    {
+      "tau_low": 0.2,
+      "removed_tp": 215,
+      "removed_fp": 379,
+      "fp_per_tp_removed": 1.763
+    }
+  ]
+}

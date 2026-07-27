@@ -1,0 +1,94 @@
+{
+  "experiment": "E6_e3a_self_segmentation",
+  "stage": "0_self_segmentation",
+  "mode": "dev",
+  "segmenter_model": "deepseek-v4-flash",
+  "temperature": 0.1,
+  "max_output_tokens": 4000,
+  "taxonomy_blind": true,
+  "unit_distribution": {
+    "n_articles": 2,
+    "units_min": 6,
+    "units_median": 12,
+    "units_max": 12,
+    "units_mean": 9.0
+  },
+  "segments": {
+    "1-15231-2-1": [
+      {
+        "id": "0",
+        "subevent": "A mortar attack occurred in northern Faryab province on Thursday morning."
+      },
+      {
+        "id": "1",
+        "subevent": "At least four civilians were killed and 10 others were wounded in the attack."
+      },
+      {
+        "id": "2",
+        "subevent": "The incident happened around 11:00am local time after a mortar round landed in a market in Shareen Tagab district."
+      },
+      {
+        "id": "3",
+        "subevent": "Abdul Karim Yourish, a spokesman for the provincial police chief, said the mortar was fired 'by the Taliban' to target security forces."
+      },
+      {
+        "id": "4",
+        "subevent": "Yourish added that all the victims were civilians who were at the market to shop."
+      },
+      {
+        "id": "5",
+        "subevent": "The Taliban has not commented on the attack."
+      }
+    ],
+    "0-4495-1-1": [
+      {
+        "id": "0",
+        "subevent": "Tunisia Youth Impact uses cooking contests to encourage rural women to vote in the presidential election."
+      },
+      {
+        "id": "1",
+        "subevent": "On October 12, a Voticook cooking contest is held in the rural town of Echamine."
+      },
+      {
+        "id": "2",
+        "subevent": "The national turnout in the first round of the election was 48.98%."
+      },
+      {
+        "id": "3",
+        "subevent": "Wafa Tarhouni explains that the contest is a practice vote where women compete through their dishes."
+      },
+      {
+        "id": "4",
+        "subevent": "Volunteers mimic real voting conditions, replacing ink with a water and shampoo mixture."
+      },
+      {
+        "id": "5",
+        "subevent": "The contest is held at the home of Hinda Jlass, who is participating."
+      },
+      {
+        "id": "6",
+        "subevent": "Hinda Jlass says the event is about getting together and plans to vote in the election for the second time."
+      },
+      {
+        "id": "7",
+        "subevent": "Seven competitors present their dishes to about fifty electors."
+      },
+      {
+        "id": "8",
+        "subevent": "Electors taste the dishes and vote using the same procedure as the real election."
+      },
+      {
+        "id": "9",
+        "subevent": "ISIE members and EU observer Stefan Ziegler are present; Ziegler says it is good for Tunisian democracy."
+      },
+      {
+        "id": "10",
+        "subevent": "After voting, ballots are counted and volunteers point out potential mistakes."
+      },
+      {
+        "id": "11",
+        "subevent": "Najwa Jlass wins the contest and says she will vote in the real election."
+      }
+    ]
+  }
+}

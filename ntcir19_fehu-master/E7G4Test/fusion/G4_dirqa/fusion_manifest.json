@@ -1,0 +1,15 @@
+{
+  "experiment": "E7_calibrated_jury_fusion",
+  "cell": "G4_dirqa",
+  "based_on": "E7G4Test/fusion/G3_veto_add",
+  "based_on_pred_sha256": "c1aecf55d3b4ae4e3d9405f00239918f72d6c4cf63adc3f4abe68e90f10a632e",
+  "qa_model": "deepseek-v4-flash",
+  "temperature": 0.1,
+  "timestamp": "2026-07-26T17:14:29.480806+00:00",
+  "counts": {
+    "flagged": 207,
+    "flipped": 77,
+    "kept": 125,
+    "qa_failed": 5
+  }
+}

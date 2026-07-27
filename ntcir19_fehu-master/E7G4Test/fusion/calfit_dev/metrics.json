@@ -1,0 +1,60 @@
+{
+  "task1b": {
+    "micro_f1": 0.582238776710449,
+    "macro_f1": 0.4264947043585153,
+    "micro_precision": 0.5477683511619329,
+    "micro_recall": 0.6213389121338913,
+    "support_instances": 458,
+    "support_gold_labels": 2390,
+    "support_pred_labels": 2711,
+    "macro_precision": 0.45227284402198104,
+    "macro_recall": 0.4754267660654936,
+    "n_gold_supported_labels": 93
+  },
+  "task1a": {
+    "micro_f1": 0.6872586872586873,
+    "macro_f1": 0.5446008262789166,
+    "micro_precision": 0.6595849802371542,
+    "micro_recall": 0.7173562600752283,
+    "support_instances": 458,
+    "support_gold_labels": 1861,
+    "support_pred_labels": 2024
+  },
+  "drr": {
+    "drr": 0.043654365436543656,
+    "reversals": 97,
+    "denominator": 2222,
+    "ambiguous_gold": 84
+  },
+  "target18": {
+    "tp": 53,
+    "fp": 144,
+    "fn": 87,
+    "micro_precision": 0.26903553299492383,
+    "micro_recall": 0.37857142857142856,
+    "micro_f1": 0.314540059347181
+  },
+  "nontarget90": {
+    "tp": 1432,
+    "fp": 1082,
+    "fn": 818,
+    "micro_precision": 0.569610182975338,
+    "micro_recall": 0.6364444444444445,
+    "micro_f1": 0.6011754827875734
+  },
+  "baseline_e1": {
+    "run": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/20260722_152456",
+    "task1b_micro_f1": 0.5479678151433878,
+    "task1b_macro_f1": 0.3719060216136949,
+    "task1a_micro_f1": 0.657380123225288,
+    "drr": 0.034653465346534656
+  },
+  "delta_vs_e1": {
+    "task1b_micro_f1": 0.03427096156706122,
+    "task1b_macro_f1": 0.05458868274482037,
+    "task1a_micro_f1": 0.02987856403339928,
+    "drr": 0.009000900090009,
+    "target18_micro_f1": 0.06858536679054669,
+    "nontarget90_micro_f1": 0.03264308966284879
+  }
+}

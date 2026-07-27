@@ -1,0 +1,61 @@
+{
+  "articles": 175,
+  "official_actors_total": 479,
+  "actors_with_predictions": 470,
+  "actors_without_predictions": 9,
+  "task1b_labels": 2764,
+  "task1a_labels": 2136,
+  "labels_per_predicted_actor": {
+    "mean": 5.88,
+    "min": 1,
+    "max": 22
+  },
+  "distinct_1b_classes_of_108": 93,
+  "distinct_l1_values_of_54": 54,
+  "direction_distribution": {
+    "aligned(1)": 1884,
+    "contradictory(0)": 880
+  },
+  "top10_classes": [
+    [
+      "1:42",
+      266
+    ],
+    [
+      "1:37",
+      189
+    ],
+    [
+      "1:45",
+      166
+    ],
+    [
+      "0:27",
+      117
+    ],
+    [
+      "1:27",
+      115
+    ],
+    [
+      "0:22",
+      108
+    ],
+    [
+      "0:42",
+      99
+    ],
+    [
+      "0:45",
+      94
+    ],
+    [
+      "1:22",
+      91
+    ],
+    [
+      "0:26",
+      90
+    ]
+  ]
+}

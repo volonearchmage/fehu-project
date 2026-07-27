@@ -1,0 +1,63 @@
+{
+  "experiment": "E5_deberta_auxiliary_fusion",
+  "created": "2026-07-24",
+  "note": "All inputs are frozen artifacts of earlier experiments; E5 never modifies them. sha256 recorded at design time.",
+  "inputs": {
+    "e1_pred_task1b": {
+      "path": "RH_test/E1_fewshot_repair/runs/20260722_152456/pred_task1b.json",
+      "sha256": "6e24e1675e6da3866c429828f3f2ea9d08c4bd73aa03e4068b33a0192c181402"
+    },
+    "e1_pred_task1a": {
+      "path": "RH_test/E1_fewshot_repair/runs/20260722_152456/pred_task1a.json",
+      "sha256": "3227de58485a6976db803da1ab22de30f8bec19353fefbbc78e05a0232908cce"
+    },
+    "v2_checkpoint_adapter": {
+      "path": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/checkpoint/adapter_model.safetensors",
+      "sha256": "3e7d60e70eb94108c33be05610cc5265e3c0017831159a4d487856bf287935ac"
+    },
+    "v2_checkpoint_classifier": {
+      "path": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/checkpoint/classifier.pt",
+      "sha256": "b002981029f5cb8629f9de25eece5faa6446e851999ee13b580d7352b42dbfba"
+    },
+    "v2_run_config": {
+      "path": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/predictions/run_config.json",
+      "sha256": "e8e50a2f729a6a7e25d61d7a8d24825f216d57ce8ac527e4826205d8e2cb012f"
+    },
+    "v2_frozen_pred_task1b": {
+      "path": "output/research_augmented_deberta_v2_unfiltered/20260714_032758/predictions/pred_task1b.json",
+      "sha256": "0e9f69102872c9df296b1ebee02108878ddb8fdb0bbd261a959abbfcf9766c13"
+    },
+    "v2_dev_probabilities": {
+      "path": "output/research_hybrid_deberta_v2_liu_flash/20260714_184515/02_deberta_actor_probabilities.jsonl",
+      "sha256": "7ac24922dd9c9562d2d43c765c017dcc6759cb4c112b8b1024034d518900fc10"
+    },
+    "fp_seed42_probabilities": {
+      "path": "new_check/phase3/runs/Fp_seed42/probabilities.jsonl",
+      "sha256": "7b6847acac5b2f7be5b86545594e0fae243d7abb7665ff0a9c9891528bf1ccf6"
+    },
+    "fp_seed43_probabilities": {
+      "path": "new_check/phase3/runs/Fp_seed43/probabilities.jsonl",
+      "sha256": "c2b498dab7039ae49f35f9cca1c2852b5fdb8db79fd8635561b01bd6f4a0be8d"
+    },
+    "fp_seed44_probabilities": {
+      "path": "new_check/phase3/runs/Fp_seed44/probabilities.jsonl",
+      "sha256": "d6a5f855e17ce717194d258a44bf644c5254e3d762e0b4993a8ebe204d020cd9"
+    },
+    "dev_articles": {
+      "path": "dataset/dev/dev_event_base.json",
+      "sha256": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2"
+    },
+    "dev_gold_1b": {
+      "path": "dataset/gold_labels/dev/dev_human_values.json",
+      "sha256": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d"
+    },
+    "train_gold_1b": {
+      "path": "dataset/gold_labels/train/train_human_values.json",
+      "sha256": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030"
+    },
+    "targets_18": {
+      "path": "output/research_label_aware_low_frequency_augmentation_v2/20260713_163751/02_selected_targets_and_allocation.json",
+      "sha256": "9db24307df17f990095a4687e1d9699baf96d9f30afdbfe1bbacf2775f322fdd"
+    }
+  }
+}
