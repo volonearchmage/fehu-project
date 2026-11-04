@@ -1,0 +1,40 @@
+你作为我的 FEHU Task 2 研究工程师，在 Linux + RTX 4090 上实现并完成第一轮本地 J/S/P 实验。GitHub同步和离线评分验收应已完成。不要只给计划：独立完成代码、必要测试、小样本冒烟、正式训练和官方评分。常规选择自主完成，不反复询问；记录决定、依据和限制。真正受环境/数据阻塞时，诚实记录并完成可做事项。
+
+【阅读顺序】
+先读Git根AGENTS.md、PROJECT_STATE.md；项目根是ntcir19_fehu-master。然后读：
+1. docs/2026-11-03_Task2_组会准备/Task2_研究判断与实验设计.md，尤其第5–8节。
+2. 同目录evidence/grouped_train_split.json、scope_supervision_audit.json、local_data_audit.json。
+3. research/task2_prompt_baseline_v1/subset_evaluation_completed/RESULTS_zh.md和metrics_official.json。
+4. docs/linux_4090_handoff/README.md，及已有output/linux_handoff/environment_report.md。
+本提示词限定第一轮范围；旧文档的长期消融矩阵不是本轮全部执行清单。
+
+【边界与事实】
+- 只用本地GPU训练/推理。可下载官方预训练权重和依赖；不得调用付费推理API、外部教师或付费云GPU。保持USER_STOP.json，不绕过旧API停止指令。
+- 新建research/task2_scope_local_v1与output/task2_scope_local_v1；不覆盖Task1、API原始结果、官方数据和冻结文件。依赖放项目.venv，HF/Torch缓存放项目.cache，不sudo、不改驱动、不提交权重/秘密、不自动push。
+- API历史508事件是非随机完成子集：Task2b F1=27.90%、P=18.10%、R=60.86%、DRR=1.3252%。不能与新模型全DEV直接比较；如比较，另对相同selected_cases评分并注明模型/监督条件不同。
+- Task2b为54价值×2方向=108独立sigmoid，1=aligned、0=contradictory；允许空集、多标签、同价值双方向。Task2a按官方L1→L2映射去重。候选必须来自输入全部actors×subevents，不能用gold预筛。
+
+【实现与验收】
+1. 先跑verify_offline.py。实测GPU/显存、Python/PyTorch/CUDA，根据官方模型卡与依赖文档选兼容版本并锁定，记录answerdotai/ModernBERT-base准确revision/tokenizer；不要提前承诺训练时长。
+2. 采用固定grouped_train_split.json的TRAIN fit/tune/holdout，核查guid覆盖、组无交叉、hash和标签关系。允许无标签近重复审计；若必须调整split，在任何模型成绩产生前统一冻结新manifest并保留旧版，不能按成绩选split。DEV不用于本轮训练/阈值/超参选择；holdout仅配置冻结后评估。gold标签/解释不得进入预测输入。
+3. 实现article–actor bag：同一输入含目标actor、正文、完整编号子事件列表；正文及各子事件分别对有效token均值池化，接共享108维头。J/S共享输入、tokenizer、长度预算、候选、span/pooling、初始权重和batch顺序，新增embedding也一致初始化。验证token span、padding mask、空标签、每个事件输出。
+4. 真实tokenizer审计全部bag长度，预算8192。禁止静默截正文或丢事件；超长时先制定、测试并冻结J/S共同分块/聚合规则再训练，记录偏离初始表示方案之处；不能仅增大position配置假定模型支持。
+5. 按设计第6.2节实现损失，文章每bag一次，子事件按有效事件数及108标签归一化，J/S相同权重：
+   J = mean_subevent_BCE + lambda * article_BCE。
+   S = mean_subevent_BCE + lambda * gold-aware单向文章范围损失。
+   对每个有向标签：pA_up=max(pA,p1,...,pm)，qA_pos=max(pA,y1*p1,...,ym*pm)，LA=-YA*log(qA_pos)-(1-YA)*log(1-pA_up)。用数值稳定的logit等价形式，正确mask。gold mask只用于训练；Task2仍输出子事件自身概率，不将文章gold或预测向下复制。J/S只改变文章损失。
+6. 有意义的测试：article-only正例不能迫使child变正；article负例给最高错误child纠正梯度；child正例支持article；padding不影响结果；双方向/空标签/可变事件数/数值有限；官方格式映射正确。先做fit内小数据过拟合检查，再用20个代表bag（含长输入）forward/backward测时/显存，确认非平凡学习后正式训练。
+
+【第一轮固定预算】
+- ModernBERT-base全参数微调；seed11；lambda1；AdamW；encoder LR2e-5、head LR1e-4；weight_decay0.01；warmup10%后线性衰减；有效batch16bags；优先BF16、microbatch1、累积16、梯度检查点。
+- J/S各3epochs。训练前明确仅依据fit/tune曲线的欠训练延长规则；必要时两者同步至最多6epochs，不单独给S更多预算。第一轮不额外跑其他骨干/种子、解释辅助、过采样或超参大搜索。
+- 同一checkpoint选择规则：各条件在tune联合选择checkpoint及一个全局阈值；阈值0.05–0.95步长0.01，最大化Task2b microF1，同分取较高阈值，checkpoint同分取更早epoch。提前保存规则；另报告固定阈值0.5、micro-AP、P/R曲线。
+- P无额外训练：复用所选J checkpoint缓存，p_article*p_subevent，独立仅在tune按同网格选阈值；不为P另选J checkpoint。报告召回变化。上行max不改变Task2，不能当P改进。
+
+【完成定义】
+1. 保存依赖版本、模型revision、数据/输入hash、split、seed、初始权重hash、训练日志、checkpoint选择、阈值、时间/显存，支持断点恢复。长期进程可靠管理、留日志，不后台启动后就声称完成。
+2. 冻结J/S/P配置/阈值后，评估内部holdout及完整官方DEV。生成匹配范围gold并执行固定官方评分器，报告2a/2b micro/macro F1、P/R、DRR、TP/FP/FN，独立验证。覆盖全部输入候选；失败不能填空。
+3. DEV核对177文章/1526事件/3998候选；另外分别报告与TRAIN正文重叠86条和不重叠91条（先实际复核），可增加相同508事件对照。各层使用各自匹配gold，不混分母。
+4. 报告S−J、P−J、召回变化、原始p_event>p_article违反率、文章独有标签、空标签误报、方向/稀有类诊断及可核对TP/FP/FN案例。集合统计不等于人工语义因果判断，单种子不声称显著或普遍有效。
+5. 原设计tune门槛“提升≥1个F1百分点，或相近召回时FP降低≥10%”只是下一轮投入建议，不是必须达到的成功指标。没有改善也如实报告，不偷看holdout后继续调参救分。
+6. 交付README、冻结配置、复跑命令、正式指标JSON、逐例预测/概率/覆盖表和RESULTS.md，简述实测结论。若环境/资源阻塞，列出已完成项、失败命令、剩余工作和恢复命令；不编造训练/评分成功。

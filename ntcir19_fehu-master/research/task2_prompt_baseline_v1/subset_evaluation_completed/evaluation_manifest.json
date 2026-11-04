@@ -1,0 +1,238 @@
+{
+  "scored_at": "2026-11-04T20:00:07.275484+09:00",
+  "offline_only": true,
+  "new_model_calls": 0,
+  "subset_events": 508,
+  "total_dev_events": 1526,
+  "fraction_of_dev_events": 0.3328964613368283,
+  "articles_with_completed_events": 66,
+  "fully_completed_articles": 50,
+  "candidate_actor_event_pairs": 1328,
+  "explicit_empty_actor_event_predictions": 527,
+  "gold_rows_missing_for_selected_events": [
+    [
+      "0-4472-6-1",
+      "11"
+    ],
+    [
+      "0-4472-6-1",
+      "12"
+    ],
+    [
+      "0-4472-6-1",
+      "4"
+    ],
+    [
+      "0-4472-6-1",
+      "6"
+    ],
+    [
+      "0-4472-6-1",
+      "7"
+    ]
+  ],
+  "selected_min_index": 0,
+  "selected_max_index": 551,
+  "missing_within_reached_prefix": 44,
+  "selection": "All valid cached full-run results before user stopped the experiment; not a random sample",
+  "selection_caveat": "Concurrent completion, output truncation and rate limits leave holes; slow/failed events may be underrepresented",
+  "not_full_dev_score": true,
+  "not_official_test_score": true,
+  "model_alias_counts": {
+    "deepseek-flash": 508
+  },
+  "valid_response_usage": {
+    "prompt_tokens": 1996804,
+    "completion_tokens": 8669748,
+    "total_tokens": 10666552,
+    "prompt_cache_hit_tokens": 1418487,
+    "prompt_cache_miss_tokens": 578317
+  },
+  "all_full_run_returned_attempt_usage": {
+    "prompt_tokens": 2352840,
+    "completion_tokens": 11356724,
+    "total_tokens": 13709564,
+    "prompt_cache_hit_tokens": 1677808,
+    "prompt_cache_miss_tokens": 675032
+  },
+  "returned_attempt_finish_reasons": {
+    "stop": 508,
+    "length": 82
+  },
+  "median_valid_response_seconds": 117.36086375000014,
+  "official_cli_returncode": 0,
+  "official_command": [
+    "C:\\Users\\LloydHuang\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\evaluator\\official_cli.py",
+    "--gold_task2",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\subset_evaluation_completed\\gold_subset.json",
+    "--pred_task2a",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\subset_evaluation_completed\\pred_task2a.json",
+    "--pred_task2b",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\subset_evaluation_completed\\pred_task2b.json",
+    "--out",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\subset_evaluation_completed\\metrics_official.json"
+  ],
+  "official_provenance": {
+    "source_url": "https://raw.githubusercontent.com/ii-research/NTCIR-19-FEHU-resource/c27e19d97c24bd764c2ea520217dba9873fab455/evaluation.py",
+    "commit": "c27e19d97c24bd764c2ea520217dba9873fab455",
+    "original_sha256": "4d325a5d38277c9dfc7a141088b6724c7c0d6c03dcc8f85b90531c6e69157b31",
+    "cli_sha256": "3dddbdc10a3177332f96d3362bc7688d475bf398da3959511f50ff0bc21b0d5f",
+    "only_change": "DEBUG = True -> DEBUG = False; all metric/parser code unchanged"
+  },
+  "source_gold_sha256": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+  "selected_cases_sha256": "b2148e725b336813ade74ccaff9a78d33a68200da3d35a3ce51b20635ab27c85",
+  "prediction_sha256": {
+    "task2a": "a2c6f4d223e382e000b3943ec28f13ace20a8112bc73b4d25faa845d104fa2cc",
+    "task2b": "8fa06686d78ce3c68ea947a67df265f6cd64ad7e81904678a0fc4021e04fe926"
+  },
+  "independent_verification_passed": true,
+  "independent_counts_and_scores": {
+    "task2a": {
+      "tp": 628,
+      "fp": 2161,
+      "fn": 300,
+      "micro_f1": 0.3379069141781006,
+      "micro_precision": 0.22517031193976336,
+      "micro_recall": 0.6767241379310345,
+      "macro_f1": 0.3024323335057585
+    },
+    "task2b": {
+      "tp": 597,
+      "fp": 2701,
+      "fn": 384,
+      "micro_f1": 0.2790371582145361,
+      "micro_precision": 0.18101879927228623,
+      "micro_recall": 0.6085626911314985,
+      "macro_f1": 0.2262606720176537
+    },
+    "drr": {
+      "reversals": 13,
+      "denominator": 981,
+      "ambiguous": 0
+    }
+  },
+  "gold_based_fp_decomposition": {
+    "article_gold_absent_fp": 1308,
+    "article_gold_present_event_gold_absent_fp": 1393
+  },
+  "gold_empty_actor_event_pairs": 716,
+  "gold_empty_pairs_predicted_nonempty": 247,
+  "false_positives_on_gold_empty_pairs": 964,
+  "top_false_positive_directed_labels": [
+    {
+      "task": "task2b",
+      "label": "1:22",
+      "value_name": "Have good health",
+      "gold_support": 19,
+      "predicted": 209,
+      "tp": 16,
+      "fp": 193,
+      "fn": 3,
+      "precision": 0.07655502392344497,
+      "recall": 0.8421052631578947,
+      "f1": 0.14035087719298245,
+      "included_in_macro": true
+    },
+    {
+      "task": "task2b",
+      "label": "1:42",
+      "value_name": "Be responsible",
+      "gold_support": 151,
+      "predicted": 276,
+      "tp": 110,
+      "fp": 166,
+      "fn": 41,
+      "precision": 0.39855072463768115,
+      "recall": 0.7284768211920529,
+      "f1": 0.5152224824355972,
+      "included_in_macro": true
+    },
+    {
+      "task": "task2b",
+      "label": "1:13",
+      "value_name": "Be capable",
+      "gold_support": 24,
+      "predicted": 170,
+      "tp": 23,
+      "fp": 147,
+      "fn": 1,
+      "precision": 0.13529411764705881,
+      "recall": 0.9583333333333334,
+      "f1": 0.23711340206185566,
+      "included_in_macro": true
+    },
+    {
+      "task": "task2b",
+      "label": "1:26",
+      "value_name": "Have a safe country",
+      "gold_support": 27,
+      "predicted": 168,
+      "tp": 24,
+      "fp": 144,
+      "fn": 3,
+      "precision": 0.14285714285714285,
+      "recall": 0.8888888888888888,
+      "f1": 0.24615384615384617,
+      "included_in_macro": true
+    },
+    {
+      "task": "task2b",
+      "label": "1:37",
+      "value_name": "Be helpful",
+      "gold_support": 49,
+      "predicted": 170,
+      "tp": 42,
+      "fp": 128,
+      "fn": 7,
+      "precision": 0.24705882352941178,
+      "recall": 0.8571428571428571,
+      "f1": 0.3835616438356164,
+      "included_in_macro": true
+    },
+    {
+      "task": "task2b",
+      "label": "1:16",
+      "value_name": "Have influence",
+      "gold_support": 12,
+      "predicted": 128,
+      "tp": 8,
+      "fp": 120,
+      "fn": 4,
+      "precision": 0.0625,
+      "recall": 0.6666666666666666,
+      "f1": 0.11428571428571428,
+      "included_in_macro": true
+    },
+    {
+      "task": "task2b",
+      "label": "1:45",
+      "value_name": "Be just",
+      "gold_support": 70,
+      "predicted": 146,
+      "tp": 42,
+      "fp": 104,
+      "fn": 28,
+      "precision": 0.2876712328767123,
+      "recall": 0.6,
+      "f1": 0.3888888888888889,
+      "included_in_macro": true
+    },
+    {
+      "task": "task2b",
+      "label": "1:53",
+      "value_name": "Have an objective view",
+      "gold_support": 8,
+      "predicted": 102,
+      "tp": 7,
+      "fp": 95,
+      "fn": 1,
+      "precision": 0.06862745098039216,
+      "recall": 0.875,
+      "f1": 0.12727272727272726,
+      "included_in_macro": true
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "case_index": 311,
+  "guid": "21-30892-3-1",
+  "subevent_id": "1",
+  "request_sha256": "e642a36a373f72de73d43d600c84d05a0c6358a75e99b9dd44306643a8e5558c",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "21-30892-3-1-0",
+      "values": [
+        {
+          "l1_value": "2",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "28",
+          "direction": "1"
+        },
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "values": [
+        {
+          "l1_value": "2",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "values": [
+        {
+          "l1_value": "2",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "28",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "50",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "50",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "2",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "50",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3523,
+    "completion_tokens": 29983,
+    "total_tokens": 33506,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 29651
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 835
+  },
+  "seconds": 207.12031430000025,
+  "completed_at": "2026-11-04T18:11:44.689115+09:00"
+}

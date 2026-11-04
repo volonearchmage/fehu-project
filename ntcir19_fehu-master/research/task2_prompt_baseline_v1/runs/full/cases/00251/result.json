@@ -1,0 +1,55 @@
+{
+  "case_index": 251,
+  "guid": "2-34752-6-2",
+  "subevent_id": "1",
+  "request_sha256": "f9e4f8ec65b1fe02f253969ae3c0ac194477da8d72fc1be90f3beebe45d3cef0",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "2-34752-6-2-0",
+      "values": [
+        {
+          "l1_value": "47",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "2-34752-6-2-1",
+      "values": [
+        {
+          "l1_value": "47",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "2-34752-6-2-0",
+      "l1_value": "47",
+      "direction": "0"
+    },
+    {
+      "actor": "2-34752-6-2-1",
+      "l1_value": "47",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3390,
+    "completion_tokens": 7577,
+    "total_tokens": 10967,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7515
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 702
+  },
+  "seconds": 49.508126799999445,
+  "completed_at": "2026-11-04T18:08:10.338808+09:00"
+}

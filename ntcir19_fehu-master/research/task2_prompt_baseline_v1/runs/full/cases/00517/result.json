@@ -1,0 +1,85 @@
+{
+  "case_index": 517,
+  "guid": "0-4399-3-1",
+  "subevent_id": "4",
+  "request_sha256": "eb75c1d2a99fd7a5ab9ffc4974031b8201bc175b8ee3685372180313566bf087",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4399-3-1-0",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "38",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "values": []
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "38",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3864,
+    "completion_tokens": 6515,
+    "total_tokens": 10379,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6403
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1176
+  },
+  "seconds": 45.46764540000004,
+  "completed_at": "2026-11-04T18:13:30.949723+09:00"
+}

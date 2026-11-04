@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-04T19:59:18.485882+09:00",
+  "status": "stopped_by_user",
+  "validated_events": 508,
+  "pending_events": 1018,
+  "full_official_scoring_complete": false,
+  "subset_official_scoring_complete": true,
+  "new_model_calls_for_subset_scoring": 0
+}

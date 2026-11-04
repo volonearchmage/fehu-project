@@ -1,0 +1,113 @@
+{
+  "case_index": 341,
+  "guid": "0-4444-1-1",
+  "subevent_id": "3",
+  "request_sha256": "782d4c859005f7469341af904516cd9ce735d66b727c72984f112d54beadc392",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4444-1-1-0",
+      "values": [
+        {
+          "l1_value": "4",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "9",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "0-4444-1-1-1",
+      "values": []
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "values": [
+        {
+          "l1_value": "18",
+          "direction": "1"
+        },
+        {
+          "l1_value": "25",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4444-1-1-0",
+      "l1_value": "4",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-0",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-0",
+      "l1_value": "9",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-0",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "l1_value": "18",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "l1_value": "25",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "l1_value": "30",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4018,
+    "completion_tokens": 18419,
+    "total_tokens": 22437,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 18274
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1330
+  },
+  "seconds": 126.39992750000056,
+  "completed_at": "2026-11-04T18:10:59.927182+09:00"
+}

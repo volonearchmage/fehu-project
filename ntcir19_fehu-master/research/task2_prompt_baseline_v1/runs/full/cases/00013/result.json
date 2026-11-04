@@ -1,0 +1,104 @@
+{
+  "case_index": 13,
+  "guid": "0-4495-1-1",
+  "subevent_id": "9",
+  "request_sha256": "4e56e0c5444d3591172278af9c0c8437805a9d262267b1610cde252663d51c9b",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4495-1-1-0",
+      "values": [
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4495-1-1-1",
+      "values": [
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "0-4495-1-1-2",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4495-1-1-0",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4495-1-1-0",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4495-1-1-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4495-1-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4495-1-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4495-1-1-1",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4495-1-1-1",
+      "l1_value": "30",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3871,
+    "completion_tokens": 21744,
+    "total_tokens": 25615,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 21610
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1183
+  },
+  "seconds": 147.90562799999861,
+  "completed_at": "2026-11-04T18:06:53.972680+09:00"
+}

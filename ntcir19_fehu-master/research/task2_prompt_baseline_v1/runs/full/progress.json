@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-04T18:16:53.840726+09:00",
+  "completed": 1526,
+  "total": 1526,
+  "counts": {
+    "valid": 508,
+    "failed": 34,
+    "cancelled": 47,
+    "fatal": 937
+  },
+  "elapsed_seconds": 748.0114655999987
+}

@@ -1,0 +1,99 @@
+{
+  "case_index": 410,
+  "guid": "0-4560-1-1JPG",
+  "subevent_id": "6",
+  "request_sha256": "e5de0a6951a5eb43518307f8df0a7a8526008c8f4b92c2660a415a45ad45f00e",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "values": [
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "values": [
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "20",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-1-1JPG-2",
+      "values": []
+    },
+    {
+      "actor": "0-4560-1-1JPG-3",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "l1_value": "20",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "l1_value": "45",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3476,
+    "completion_tokens": 30007,
+    "total_tokens": 33483,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 29859
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 788
+  },
+  "seconds": 205.84585270000025,
+  "completed_at": "2026-11-04T18:13:35.951896+09:00"
+}

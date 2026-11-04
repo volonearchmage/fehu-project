@@ -1,0 +1,99 @@
+{
+  "case_index": 249,
+  "guid": "0-4472-6-1",
+  "subevent_id": "14",
+  "request_sha256": "e8eb445d265dc3b0462b327fb9dc79a7aa0c33d03295244ae6256b480b55988d",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4472-6-1-0",
+      "values": [
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "41",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        },
+        {
+          "l1_value": "51",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4472-6-1-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4472-6-1-0",
+      "l1_value": "41",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4472-6-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4472-6-1-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4472-6-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4472-6-1-0",
+      "l1_value": "50",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4472-6-1-0",
+      "l1_value": "51",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3695,
+    "completion_tokens": 12352,
+    "total_tokens": 16047,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12235
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1007
+  },
+  "seconds": 79.81793739999921,
+  "completed_at": "2026-11-04T18:08:38.102742+09:00"
+}

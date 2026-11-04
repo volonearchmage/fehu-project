@@ -1,0 +1,96 @@
+{
+  "case_index": 283,
+  "guid": "12-wiki-img/8436-1/8436-1-2",
+  "subevent_id": "1",
+  "request_sha256": "f3efb06bc1814f4c5f5a6d6c2a0f141ccf61c7d9bf11e386a9cc5ab1d3551777",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-0",
+      "values": [
+        {
+          "l1_value": "6",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "38",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-1",
+      "values": [
+        {
+          "l1_value": "6",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-2",
+      "values": [
+        {
+          "l1_value": "6",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-0",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-0",
+      "l1_value": "6",
+      "direction": "0"
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-0",
+      "l1_value": "38",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-1",
+      "l1_value": "6",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-2",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-2",
+      "l1_value": "6",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4105,
+    "completion_tokens": 29302,
+    "total_tokens": 33407,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 29155
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1417
+  },
+  "seconds": 198.36727830000018,
+  "completed_at": "2026-11-04T18:11:07.704385+09:00"
+}

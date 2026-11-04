@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-04T11:12:06.585738+00:00",
+  "offline_only": true,
+  "new_model_calls": 0,
+  "credentials_read": false,
+  "user_stop_preserved": true,
+  "source_hashes_verified": 6,
+  "frozen_hashes_verified": true,
+  "subset_events": 508,
+  "articles": 66,
+  "candidate_actor_event_pairs": 1328,
+  "raw_responses_verified": 508,
+  "raw_predictions_match_archive": true,
+  "gold_subset_reconstructed": true,
+  "official_provenance": {
+    "source_url": "https://raw.githubusercontent.com/ii-research/NTCIR-19-FEHU-resource/c27e19d97c24bd764c2ea520217dba9873fab455/evaluation.py",
+    "commit": "c27e19d97c24bd764c2ea520217dba9873fab455",
+    "original_sha256": "4d325a5d38277c9dfc7a141088b6724c7c0d6c03dcc8f85b90531c6e69157b31",
+    "cli_sha256": "3dddbdc10a3177332f96d3362bc7688d475bf398da3959511f50ff0bc21b0d5f",
+    "only_change": "DEBUG = True -> DEBUG = False; all metric/parser code unchanged"
+  },
+  "official_command": [
+    "C:\\Users\\LloydHuang\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\evaluator\\official_cli.py",
+    "--gold_task2",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\subset_evaluation_completed\\gold_subset.json",
+    "--pred_task2a",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\subset_evaluation_completed\\pred_task2a.json",
+    "--pred_task2b",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\subset_evaluation_completed\\pred_task2b.json",
+    "--out",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\output\\task2_offline_verification\\metrics_official.json"
+  ],
+  "official_returncode": 0,
+  "official_metrics": {
+    "task2a": {
+      "micro_f1": 0.3379069141781006,
+      "macro_f1": 0.3024323335057585,
+      "micro_precision": 0.22517031193976336,
+      "micro_recall": 0.6767241379310345,
+      "support_instances": 859,
+      "support_gold_labels": 928,
+      "support_pred_labels": 2789
+    },
+    "task2b": {
+      "micro_f1": 0.27903715821453606,
+      "macro_f1": 0.22626067201765374,
+      "micro_precision": 0.18101879927228623,
+      "micro_recall": 0.6085626911314985,
+      "support_instances": 859,
+      "support_gold_labels": 981,
+      "support_pred_labels": 3298,
+      "direction_reverse_rate": 0.013251783893985729,
+      "direction_reverse_count": 13,
+      "direction_reverse_denom_gold_excl": 981,
+      "ambiguous_gold_values_filtered": 0
+    }
+  },
+  "metrics_match_archive": true,
+  "comparison_tolerance": {
+    "relative": 1e-12,
+    "absolute": 1e-12
+  },
+  "historical_files_modified": false,
+  "not_full_dev_score": true,
+  "output_directory": "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\output\\task2_offline_verification"
+}

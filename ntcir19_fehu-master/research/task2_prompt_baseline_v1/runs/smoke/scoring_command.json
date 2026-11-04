@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\Users\\LloydHuang\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\evaluator\\official_cli.py",
+    "--gold_task2",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\runs\\smoke\\gold_subset.json",
+    "--pred_task2a",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\runs\\smoke\\pred_task2a.json",
+    "--pred_task2b",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\runs\\smoke\\pred_task2b.json",
+    "--out",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\runs\\smoke\\metrics_official.json"
+  ],
+  "returncode": 0,
+  "gold_sha256": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+  "official_evaluator": {
+    "source_url": "https://raw.githubusercontent.com/ii-research/NTCIR-19-FEHU-resource/c27e19d97c24bd764c2ea520217dba9873fab455/evaluation.py",
+    "commit": "c27e19d97c24bd764c2ea520217dba9873fab455",
+    "original_sha256": "4d325a5d38277c9dfc7a141088b6724c7c0d6c03dcc8f85b90531c6e69157b31",
+    "cli_sha256": "3dddbdc10a3177332f96d3362bc7688d475bf398da3959511f50ff0bc21b0d5f",
+    "only_change": "DEBUG = True -> DEBUG = False; all metric/parser code unchanged"
+  }
+}

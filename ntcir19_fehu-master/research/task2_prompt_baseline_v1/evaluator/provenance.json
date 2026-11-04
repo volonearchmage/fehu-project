@@ -1,0 +1,7 @@
+{
+  "source_url": "https://raw.githubusercontent.com/ii-research/NTCIR-19-FEHU-resource/c27e19d97c24bd764c2ea520217dba9873fab455/evaluation.py",
+  "commit": "c27e19d97c24bd764c2ea520217dba9873fab455",
+  "original_sha256": "4d325a5d38277c9dfc7a141088b6724c7c0d6c03dcc8f85b90531c6e69157b31",
+  "cli_sha256": "3dddbdc10a3177332f96d3362bc7688d475bf398da3959511f50ff0bc21b0d5f",
+  "only_change": "DEBUG = True -> DEBUG = False; all metric/parser code unchanged"
+}

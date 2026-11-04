@@ -1,0 +1,114 @@
+[
+  {
+    "guid": "0-4495-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Organizing Voticook contests directly encourages civic responsibility through experiential learning.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "44",
+            "l2_value": "16",
+            "explanation": "Targeting young rural women addresses gender and geographic participation disparities.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15231-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "l2_value": "9",
+            "explanation": "The killing and wounding of civilians in a mortar attack is a direct assault on the safety and security of the nation's populace, violating their right to be protected.",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "22",
+            "l2_value": "8",
+            "explanation": "This subevent explicitly describes civilians being killed and wounded, which is the ultimate contradiction to the value of preserving life and maintaining good health and well-being.",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Such violent attacks on civilians create widespread fear and disrupt the social fabric, undermining the stability and order necessary for a functioning community and society.",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "l2_value": "9",
+            "explanation": "The act of a mortar round landing in a public market, a civilian hub, demonstrates a blatant disregard for public safety and contributes to an unsafe national environment.",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Attacking a market, a center for commerce and social interaction, directly disrupts the economic and social activities that are foundational to a stable society, creating chaos.",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "Even if the intended target was security forces, causing civilian casualties demonstrates a gross failure of justice, as it inflicts harm on the innocent and vulnerable.",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "l2_value": "9",
+            "explanation": "The use of indiscriminate weapons like mortars in populated areas, regardless of the intended target, inherently compromises public safety and national security by endangering civilian lives.",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "3",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "By not commenting on the attack, the Taliban evades accountability for the civilian casualties, which is a clear contradiction to the value of being responsible for one's actions.",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "38",
+            "l2_value": "14",
+            "explanation": "The failure to comment or provide a statement about the attack suggests a lack of transparency and honesty regarding their role and the consequences of their actions.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,317 @@
+{
+  "case_index": 64,
+  "guid": "1-15230-2-1",
+  "subevent_id": "3",
+  "request_sha256": "bce2305463a45f003e1ccdf6f0fc2291cbfcf11f43e8931df0162e99dadb19e0",
+  "response_file": "attempt_03.response.json",
+  "actors": [
+    {
+      "actor": "1-15230-2-1-0",
+      "values": [
+        {
+          "l1_value": "1",
+          "direction": "1"
+        },
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "11",
+          "direction": "1"
+        },
+        {
+          "l1_value": "14",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "values": [
+        {
+          "l1_value": "2",
+          "direction": "0"
+        },
+        {
+          "l1_value": "3",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "14",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "28",
+          "direction": "1"
+        },
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "32",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "1-15230-2-1-2",
+      "values": [
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "14",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "values": [
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "14",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-15230-2-1-0",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-0",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-0",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-0",
+      "l1_value": "11",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-0",
+      "l1_value": "14",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "3",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "14",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "28",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "32",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15230-2-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15230-2-1-2",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-2",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-2",
+      "l1_value": "14",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-2",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-2",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-2",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "l1_value": "14",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15230-2-1-3",
+      "l1_value": "45",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4106,
+    "completion_tokens": 31568,
+    "total_tokens": 35674,
+    "prompt_tokens_details": {
+      "cached_tokens": 3968
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 31164
+    },
+    "prompt_cache_hit_tokens": 3968,
+    "prompt_cache_miss_tokens": 138
+  },
+  "seconds": 205.12328519999937,
+  "completed_at": "2026-11-04T18:15:23.720132+09:00"
+}

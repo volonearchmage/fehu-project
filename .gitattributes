@@ -1,0 +1,5 @@
+# Historical experiment evidence is hashed byte-for-byte, including mixed EOLs.
+ntcir19_fehu-master/research/task2_prompt_baseline_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ntcir19_fehu-master/research/task2_prompt_smoke/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ntcir19_fehu-master/output/task2_prompt_smoke/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ntcir19_fehu-master/dataset/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,334 @@
+{
+  "case_index": 230,
+  "guid": "0-4716-1-2",
+  "subevent_id": "0",
+  "request_sha256": "554acae0d304ef00e8a35db72287b862c3e3005975fdcfecb6829d11a0d68615",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4716-1-2-0",
+      "values": [
+        {
+          "l1_value": "0",
+          "direction": "1"
+        },
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "4",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "9",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "19",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "25",
+          "direction": "1"
+        },
+        {
+          "l1_value": "36",
+          "direction": "0"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "49",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "values": [
+        {
+          "l1_value": "2",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "19",
+          "direction": "0"
+        },
+        {
+          "l1_value": "22",
+          "direction": "0"
+        },
+        {
+          "l1_value": "25",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "42",
+          "direction": "0"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "46",
+          "direction": "0"
+        },
+        {
+          "l1_value": "49",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "0",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "4",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "9",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "19",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "25",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "36",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "49",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "50",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "19",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "22",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "25",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "42",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "46",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "49",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "50",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 6753,
+    "completion_tokens": 29166,
+    "total_tokens": 35919,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 28763
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 4065
+  },
+  "seconds": 197.01863839999896,
+  "completed_at": "2026-11-04T18:10:19.611292+09:00"
+}

@@ -1,0 +1,240 @@
+{
+  "case_index": 314,
+  "guid": "21-30892-3-1",
+  "subevent_id": "4",
+  "request_sha256": "5bb9df20c3de5a93a3d6d7018efbd22aa894c5805235491081091c44357281a4",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "21-30892-3-1-0",
+      "values": [
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "28",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        },
+        {
+          "l1_value": "2",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "values": [
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        },
+        {
+          "l1_value": "2",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "values": [
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        },
+        {
+          "l1_value": "2",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "28",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-0",
+      "l1_value": "50",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-1",
+      "l1_value": "50",
+      "direction": "0"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "2",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "21-30892-3-1-2",
+      "l1_value": "50",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3519,
+    "completion_tokens": 28246,
+    "total_tokens": 31765,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 27947
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 831
+  },
+  "seconds": 191.50067519999902,
+  "completed_at": "2026-11-04T18:11:31.347719+09:00"
+}

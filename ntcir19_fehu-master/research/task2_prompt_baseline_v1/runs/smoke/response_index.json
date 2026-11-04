@@ -1,0 +1,97 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "subevent_id": "0",
+    "response_file": "cases\\00000\\attempt_01.response.json",
+    "model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 3107,
+      "completion_tokens": 7504,
+      "total_tokens": 10611,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7409
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3107
+    }
+  },
+  {
+    "guid": "1-15231-2-1",
+    "subevent_id": "1",
+    "response_file": "cases\\00001\\attempt_01.response.json",
+    "model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 3109,
+      "completion_tokens": 8450,
+      "total_tokens": 11559,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8355
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3109
+    }
+  },
+  {
+    "guid": "1-15231-2-1",
+    "subevent_id": "2",
+    "response_file": "cases\\00002\\attempt_01.response.json",
+    "model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 3108,
+      "completion_tokens": 13603,
+      "total_tokens": 16711,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 13486
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3108
+    }
+  },
+  {
+    "guid": "1-15231-2-1",
+    "subevent_id": "3",
+    "response_file": "cases\\00003\\attempt_01.response.json",
+    "model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 3090,
+      "completion_tokens": 11478,
+      "total_tokens": 14568,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 11438
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3090
+    }
+  },
+  {
+    "guid": "0-4495-1-1",
+    "subevent_id": "0",
+    "response_file": "cases\\00004\\attempt_01.response.json",
+    "model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 3870,
+      "completion_tokens": 24466,
+      "total_tokens": 28336,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 24255
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3870
+    }
+  }
+]

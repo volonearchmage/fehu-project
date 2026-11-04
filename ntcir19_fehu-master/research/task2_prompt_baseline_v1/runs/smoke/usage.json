@@ -1,0 +1,14 @@
+{
+  "all_response_attempts": {
+    "prompt_tokens": 16284,
+    "completion_tokens": 65501,
+    "total_tokens": 81785,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 16284
+  },
+  "returned_model_counts": {
+    "deepseek-flash": 5
+  },
+  "response_attempts": 5,
+  "successful_case_latency_sum_seconds": 463.3150428000008
+}

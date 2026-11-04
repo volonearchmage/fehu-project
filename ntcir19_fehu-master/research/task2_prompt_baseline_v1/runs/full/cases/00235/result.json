@@ -1,0 +1,34 @@
+{
+  "case_index": 235,
+  "guid": "0-4472-6-1",
+  "subevent_id": "0",
+  "request_sha256": "2cfb06986d21df2b210c2b8e02e2875c3f151bcd36ef59b1038dfb6f59850f61",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4472-6-1-0",
+      "values": []
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "values": []
+    }
+  ],
+  "labels": [],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3678,
+    "completion_tokens": 2611,
+    "total_tokens": 6289,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2565
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 990
+  },
+  "seconds": 17.706998799998473,
+  "completed_at": "2026-11-04T18:07:25.680059+09:00"
+}

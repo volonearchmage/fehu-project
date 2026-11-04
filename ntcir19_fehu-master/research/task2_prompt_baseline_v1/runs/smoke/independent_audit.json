@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "phase": "smoke",
+  "articles": 2,
+  "subevents": 5,
+  "actor_event_pairs": 11,
+  "empty_actor_event_pairs": 5,
+  "independent_metrics": {
+    "task2a": {
+      "tp": 7,
+      "fp": 16,
+      "fn": 2,
+      "micro_f1": 0.4375,
+      "micro_precision": 0.30434782608695654,
+      "micro_recall": 0.7777777777777778,
+      "macro_f1": 0.5142857142857142
+    },
+    "task2b": {
+      "tp": 9,
+      "fp": 20,
+      "fn": 2,
+      "micro_f1": 0.45,
+      "micro_precision": 0.3103448275862069,
+      "micro_recall": 0.8181818181818182,
+      "macro_f1": 0.5583333333333333
+    },
+    "drr": {
+      "rate": 0.0,
+      "reversed": 0,
+      "exclusive": 11,
+      "ambiguous": 0
+    }
+  },
+  "official_metrics": {
+    "task2a": {
+      "micro_f1": 0.43750000000000006,
+      "macro_f1": 0.5142857142857143,
+      "micro_precision": 0.30434782608695654,
+      "micro_recall": 0.7777777777777778,
+      "support_instances": 7,
+      "support_gold_labels": 9,
+      "support_pred_labels": 23
+    },
+    "task2b": {
+      "micro_f1": 0.45000000000000007,
+      "macro_f1": 0.5583333333333333,
+      "micro_precision": 0.3103448275862069,
+      "micro_recall": 0.8181818181818182,
+      "support_instances": 7,
+      "support_gold_labels": 11,
+      "support_pred_labels": 29,
+      "direction_reverse_rate": 0.0,
+      "direction_reverse_count": 0,
+      "direction_reverse_denom_gold_excl": 11,
+      "ambiguous_gold_values_filtered": 0
+    }
+  },
+  "selected_response_usage": {
+    "prompt_tokens": 16284,
+    "completion_tokens": 65501,
+    "total_tokens": 81785,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 16284
+  },
+  "all_attempt_usage": {
+    "all_response_attempts": {
+      "prompt_tokens": 16284,
+      "completion_tokens": 65501,
+      "total_tokens": 81785,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 16284
+    },
+    "returned_model_counts": {
+      "deepseek-flash": 5
+    },
+    "response_attempts": 5,
+    "successful_case_latency_sum_seconds": 463.3150428000008
+  },
+  "median_case_seconds": 78.6814486000003,
+  "max_case_seconds": 176.1546386000009,
+  "checked_requests": 5,
+  "checked_raw_responses": 5,
+  "all_exported_events_and_candidates_match_inputs": true,
+  "prompt_and_generation_parameters_identical": true,
+  "task2a_projection_verified": true,
+  "all_error_and_metric_exports_reconciled": true
+}

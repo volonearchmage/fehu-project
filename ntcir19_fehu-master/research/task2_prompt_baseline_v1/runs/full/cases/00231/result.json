@@ -1,0 +1,99 @@
+{
+  "case_index": 231,
+  "guid": "0-4716-1-2",
+  "subevent_id": "1",
+  "request_sha256": "632ff08600dcac18abd2a5f6bf15f258eb909544e3acfbc14f11f725a2251ede",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4716-1-2-0",
+      "values": []
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "values": [
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "46",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "l1_value": "46",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 6768,
+    "completion_tokens": 9528,
+    "total_tokens": 16296,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9383
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 4080
+  },
+  "seconds": 64.57978479999838,
+  "completed_at": "2026-11-04T18:08:07.823288+09:00"
+}

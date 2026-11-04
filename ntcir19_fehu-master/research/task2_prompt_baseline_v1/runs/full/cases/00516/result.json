@@ -1,0 +1,140 @@
+{
+  "case_index": 516,
+  "guid": "0-4399-3-1",
+  "subevent_id": "3",
+  "request_sha256": "54d0ec25c4dd3815f760b9e576948c6b20486ed434b5dea7771b6cb9a488d0bc",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4399-3-1-0",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "38",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "values": [
+        {
+          "l1_value": "6",
+          "direction": "0"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "38",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "6",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "30",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3871,
+    "completion_tokens": 13166,
+    "total_tokens": 17037,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12944
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1183
+  },
+  "seconds": 79.44182340000043,
+  "completed_at": "2026-11-04T18:14:03.709525+09:00"
+}

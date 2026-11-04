@@ -1,0 +1,23 @@
+你接手我的 Linux + RTX 4090 FEHU 工作区。本轮只完成 GitHub 同步、离线复现和环境/权限验收，不启动新训练或付费 API。不要反复问问题，常规选择自行处理；真正的访问/系统限制要记录，并继续可做事项。
+
+GitHub：https://github.com/volonearchmage/fehu-project.git，目标 main。
+Git 根是 fehu-project，Python 项目在其 ntcir19_fehu-master 子目录。
+本机旧版本可能只有 Task 1，远程已有 Task 2 方案和508个事件的prompt结果。
+
+1. 先读当前目录和上层适用 AGENTS.md，检查 pwd、git status --short、分支、origin。不要打印 .env、auth.json、token 或完整凭据配置，不全盘搜索个人文件。
+2. 保留 Task 1 工作。若当前仓库 origin 匹配、工作区干净且当前 main 可快进，git fetch origin 后 git merge --ff-only origin/main。若有未提交改动、本地独有提交、不同 origin 或分支分歧，不 reset/clean/强推，不自动stash后覆盖；在当前获准工作区的新空目录 clone main，记录原目录与新目录。若无仓库则在当前工作区 clone 新的 fehu-project 目录，不覆盖同名非空目录。
+3. 核对 HEAD 与 origin/main，记录 SHA；确认根 PROJECT_STATE.md、AGENTS.md，以及项目内 docs/linux_4090_handoff、research/task2_prompt_baseline_v1/USER_STOP.json 和 subset_evaluation_completed 存在。下载后读完整 01_sync_from_github.txt 补全交接。
+4. 读根状态、baseline README/STATUS 和 subset_evaluation_completed/RESULTS_zh.md。付费全量推理已明确停止：508/1526完成，1018未完成。保留 USER_STOP.json，不运行 run_experiment.py run、resume_full.py、旧smoke API脚本；不查询DeepSeek余额、不准备新key。历史命令不是恢复授权。
+5. 实测 Codex 版本/help、当前会话公布的 sandbox/approval/network、工作区临时文件创建/删除、git ls-remote origin、nvidia-smi、Python版本、磁盘与内存。若PyTorch已装，测CUDA可用性和小张量；未装则留第二阶段。不要sudo、升级驱动或改系统安全配置。权限写进配置文件不代表当前会话已生效。
+6. Python3.10+标准库即可复评。从Git根运行：
+   python3 ntcir19_fehu-master/research/task2_prompt_baseline_v1/verify_offline.py
+   python3 ntcir19_fehu-master/research/task2_prompt_baseline_v1/test_protocol.py
+   python3 ntcir19_fehu-master/research/task2_prompt_baseline_v1/test_verify_offline.py
+   新结果写 output/task2_offline_verification，保留 frozen/runs/subset_evaluation_completed 字节。不运行audit_results.py main，它要求全量完成；不改历史hash让检查通过。
+7. 必须复现508事件、1328候选；2a microF1=0.3379069141781006；2b=0.27903715821453606；DRR=0.013251783893985729。检查USER_STOP还在、.env未跟踪。分数仅代表非随机完成子集。
+8. 若新同步工作区干净，建立本地分支 task2-local-4090-YYYYMMDD-HHMM 供下一阶段；不要改变脏工作区分支。写项目 output/linux_handoff/environment_report.md，记录位置/SHA、同步内容、复评结果、实际权限/GPU/Python、阻塞及下一阶段准确cd命令。不要自行push。
+9. 第二阶段建议在新仓库根另启会话：
+   codex --sandbox workspace-write --ask-for-approval never -c sandbox_workspace_write.network_access=true
+   当前会话被sandbox/管理员限制时，记录具体失败并说明所需的重新启动参数，不在会话内自我提权或绕过策略；不要改全局 ~/.codex/config.toml。
+
+完成后简述同步位置、提交、离线评分一致性、4090可见性、下一阶段条件。不要自动开始第二阶段。

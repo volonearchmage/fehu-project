@@ -1,0 +1,75 @@
+{
+  "complete": true,
+  "articles": 2,
+  "subevents": 5,
+  "actor_event_pairs": 11,
+  "empty_actor_event_pairs": 5,
+  "records": [
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "0",
+      "actor": "1-15231-2-1-0",
+      "label_count": 5
+    },
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "0",
+      "actor": "1-15231-2-1-1",
+      "label_count": 0
+    },
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "1",
+      "actor": "1-15231-2-1-0",
+      "label_count": 5
+    },
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "1",
+      "actor": "1-15231-2-1-1",
+      "label_count": 0
+    },
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "2",
+      "actor": "1-15231-2-1-0",
+      "label_count": 5
+    },
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "2",
+      "actor": "1-15231-2-1-1",
+      "label_count": 0
+    },
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "3",
+      "actor": "1-15231-2-1-0",
+      "label_count": 0
+    },
+    {
+      "guid": "1-15231-2-1",
+      "subevent_id": "3",
+      "actor": "1-15231-2-1-1",
+      "label_count": 0
+    },
+    {
+      "guid": "0-4495-1-1",
+      "subevent_id": "0",
+      "actor": "0-4495-1-1-0",
+      "label_count": 7
+    },
+    {
+      "guid": "0-4495-1-1",
+      "subevent_id": "0",
+      "actor": "0-4495-1-1-1",
+      "label_count": 5
+    },
+    {
+      "guid": "0-4495-1-1",
+      "subevent_id": "0",
+      "actor": "0-4495-1-1-2",
+      "label_count": 2
+    }
+  ]
+}

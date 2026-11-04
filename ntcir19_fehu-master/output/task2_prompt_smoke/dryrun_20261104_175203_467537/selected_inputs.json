@@ -1,0 +1,53 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "subevent_id": "0",
+    "subevent": "At least four civilians were killed and 10 others were wounded in a mortar attack in northern Faryab province on Thursday morning.",
+    "actors": [
+      {
+        "actor": "1-15231-2-1-0",
+        "name": "Taliban"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "name": "Civilians"
+      }
+    ],
+    "title": "4 Civilians Killed, 10 Wounded in Faryab Mortar Attack",
+    "content": "At least four civilians were killed and 10 others were wounded in a mortar attack in northern Faryab province on Thursday morning, local officials said. \n\nThe incident happened around 11:00am local time after a mortar round landed in a market in Shareen Tagab district of the province, said Abdul Karim Yourish, a spokesman for the provincial police chief. \n\n“The mortar was fired 'by the Taliban' to target the security forces, but all the victims are civilians who were at the market to shop,” Yourish said.  \n\nThe Taliban has not commented on the attack."
+  },
+  {
+    "guid": "1-15231-2-1",
+    "subevent_id": "1",
+    "subevent": "Around 11:00 am local time, a mortar round landed in a market in Shareen Tagab district of Faryab province.",
+    "actors": [
+      {
+        "actor": "1-15231-2-1-0",
+        "name": "Taliban"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "name": "Civilians"
+      }
+    ],
+    "title": "4 Civilians Killed, 10 Wounded in Faryab Mortar Attack",
+    "content": "At least four civilians were killed and 10 others were wounded in a mortar attack in northern Faryab province on Thursday morning, local officials said. \n\nThe incident happened around 11:00am local time after a mortar round landed in a market in Shareen Tagab district of the province, said Abdul Karim Yourish, a spokesman for the provincial police chief. \n\n“The mortar was fired 'by the Taliban' to target the security forces, but all the victims are civilians who were at the market to shop,” Yourish said.  \n\nThe Taliban has not commented on the attack."
+  },
+  {
+    "guid": "1-15231-2-1",
+    "subevent_id": "2",
+    "subevent": "The mortar was fired by the Taliban to target the security forces, but all the victims are civilians who were at the market to shop.",
+    "actors": [
+      {
+        "actor": "1-15231-2-1-0",
+        "name": "Taliban"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "name": "Civilians"
+      }
+    ],
+    "title": "4 Civilians Killed, 10 Wounded in Faryab Mortar Attack",
+    "content": "At least four civilians were killed and 10 others were wounded in a mortar attack in northern Faryab province on Thursday morning, local officials said. \n\nThe incident happened around 11:00am local time after a mortar round landed in a market in Shareen Tagab district of the province, said Abdul Karim Yourish, a spokesman for the provincial police chief. \n\n“The mortar was fired 'by the Taliban' to target the security forces, but all the victims are civilians who were at the market to shop,” Yourish said.  \n\nThe Taliban has not commented on the attack."
+  }
+]

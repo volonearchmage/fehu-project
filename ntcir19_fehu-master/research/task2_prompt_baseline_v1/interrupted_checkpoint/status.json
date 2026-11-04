@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-04T18:23:10.790967+09:00",
+  "objective_complete": false,
+  "status": "waiting_for_provider_balance",
+  "full_target_events": 1526,
+  "validated_events": 508,
+  "pending_events": 1018,
+  "validated_actor_event_pairs": 1328,
+  "successful_cache_revalidated": true,
+  "smoke_official_scoring_complete": true,
+  "full_scoring_complete": false,
+  "partial_predictions_are_not_a_full_dev_result": true,
+  "provider_balance": {
+    "checked_at": "2026-11-04T18:22:49.770432+09:00",
+    "is_available": false,
+    "balances": [
+      {
+        "currency": "USD",
+        "total_balance": "0.00"
+      },
+      {
+        "currency": "CNY",
+        "total_balance": "-21.98"
+      }
+    ]
+  },
+  "all_returned_attempt_usage": {
+    "prompt_tokens": 2352840,
+    "completion_tokens": 11356724,
+    "total_tokens": 13709564,
+    "prompt_cache_hit_tokens": 1677808,
+    "prompt_cache_miss_tokens": 675032
+  },
+  "response_finish_reasons": {
+    "stop": 508,
+    "length": 82
+  },
+  "technical_error_attempts": {
+    "ValueError: Response missing or truncated": 82,
+    "ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。": 10,
+    "HTTP 429": 116,
+    "HTTP 402": 6
+  },
+  "resume_command": "python -X utf8 ntcir19_fehu-master/research/task2_prompt_baseline_v1/resume_full.py --workers 8",
+  "after_full_run": "python -X utf8 ntcir19_fehu-master/research/task2_prompt_baseline_v1/audit_results.py"
+}

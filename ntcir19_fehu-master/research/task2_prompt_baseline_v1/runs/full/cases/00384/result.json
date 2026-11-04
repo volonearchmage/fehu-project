@@ -1,0 +1,122 @@
+{
+  "case_index": 384,
+  "guid": "15-26821-3-t",
+  "subevent_id": "4",
+  "request_sha256": "331ae539aeda960427a986e9cbba87f9f55e113297b78716a72c07ab0f87eadd",
+  "response_file": "attempt_02.response.json",
+  "actors": [
+    {
+      "actor": "15-26821-3-t-0",
+      "values": [
+        {
+          "l1_value": "9",
+          "direction": "1"
+        },
+        {
+          "l1_value": "11",
+          "direction": "1"
+        },
+        {
+          "l1_value": "12",
+          "direction": "1"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "15-26821-3-t-1",
+      "values": [
+        {
+          "l1_value": "11",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "15-26821-3-t-2",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "15-26821-3-t-0",
+      "l1_value": "9",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-0",
+      "l1_value": "11",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-0",
+      "l1_value": "12",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-0",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-1",
+      "l1_value": "11",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-1",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-1",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "15-26821-3-t-1",
+      "l1_value": "53",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3782,
+    "completion_tokens": 25594,
+    "total_tokens": 29376,
+    "prompt_tokens_details": {
+      "cached_tokens": 3584
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 25441
+    },
+    "prompt_cache_hit_tokens": 3584,
+    "prompt_cache_miss_tokens": 198
+  },
+  "seconds": 167.355935900001,
+  "completed_at": "2026-11-04T18:13:18.694670+09:00"
+}

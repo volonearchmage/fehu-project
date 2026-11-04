@@ -1,0 +1,98 @@
+{
+  "case_index": 229,
+  "guid": "4-35568-7-1",
+  "subevent_id": "6",
+  "request_sha256": "8ada01d700ad113b7f0fdd5a4aae6d8ab4aec39220874d3dcf14883c74a14aa9",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "4-35568-7-1-0",
+      "values": [
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "22",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "46",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "4-35568-7-1-1",
+      "values": []
+    },
+    {
+      "actor": "4-35568-7-1-2",
+      "values": [
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "4-35568-7-1-3",
+      "values": []
+    },
+    {
+      "actor": "4-35568-7-1-4",
+      "values": []
+    },
+    {
+      "actor": "4-35568-7-1-5",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "4-35568-7-1-0",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "4-35568-7-1-0",
+      "l1_value": "22",
+      "direction": "0"
+    },
+    {
+      "actor": "4-35568-7-1-0",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "4-35568-7-1-0",
+      "l1_value": "46",
+      "direction": "0"
+    },
+    {
+      "actor": "4-35568-7-1-2",
+      "l1_value": "45",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4290,
+    "completion_tokens": 29287,
+    "total_tokens": 33577,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 29124
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1602
+  },
+  "seconds": 192.52138530000047,
+  "completed_at": "2026-11-04T18:10:14.795782+09:00"
+}

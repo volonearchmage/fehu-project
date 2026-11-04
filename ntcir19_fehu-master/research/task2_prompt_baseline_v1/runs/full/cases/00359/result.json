@@ -1,0 +1,49 @@
+{
+  "case_index": 359,
+  "guid": "0-4560-2-1JPG",
+  "subevent_id": "6",
+  "request_sha256": "b5ec0c543afe4e62365c84024577f0e68220615ef9079cde27d9c93bde53a15a",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4560-2-1JPG-0",
+      "values": [
+        {
+          "l1_value": "20",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "values": []
+    },
+    {
+      "actor": "0-4560-2-1JPG-2",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4560-2-1JPG-0",
+      "l1_value": "20",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3784,
+    "completion_tokens": 23427,
+    "total_tokens": 27211,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 23353
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1096
+  },
+  "seconds": 154.63485749999927,
+  "completed_at": "2026-11-04T18:11:43.310411+09:00"
+}

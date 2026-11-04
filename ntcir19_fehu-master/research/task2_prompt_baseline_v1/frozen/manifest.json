@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-11-04T18:00:41.001475+09:00",
+  "protocol": {
+    "name": "task2_prompt_baseline_v1",
+    "model": "deepseek-flash",
+    "documented_model_version": "DeepSeek-V4.1-Flash-1017",
+    "thinking": {
+      "type": "enabled"
+    },
+    "reasoning_effort": "max",
+    "max_tokens": 32768,
+    "response_format": {
+      "type": "json_object"
+    },
+    "stream": false,
+    "few_shot_examples": 0,
+    "input": "target subevent + full article + all candidate actors",
+    "label_cap": null,
+    "postprocessing": "exact ID validation, deduplication forbidden, fixed L1-to-L2 projection",
+    "smoke_cases": 5,
+    "max_attempts": 3,
+    "timeout_seconds": 240,
+    "selection": "published DEV input order; no gold-based selection",
+    "official_evaluator_commit": "c27e19d97c24bd764c2ea520217dba9873fab455"
+  },
+  "system_prompt_sha256": "f9f1ac68b86930f74fdcef8115d3a31c62daaea8227e029582ed6021e38f7fd0",
+  "source_hashes": {
+    "dataset\\dev\\dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset\\hv_categories\\human_value_taxonomy.json": "b153e460c64bf172cd1081f34a8242bc74574963951cc1f160f4d6010388f673",
+    "dataset\\hv_categories\\human_value_level1_values.json": "40fa4b78ba7ae7b4f61d23c821dbe70a2a1f3079369fb9ff5f2cb11d79d7f96e",
+    "dataset\\hv_categories\\human_value_level2_values.json": "550ee6de5db3b3f8941ad8a006d4d272774b714aa71b75d9ac9c966fe1ec75c2",
+    "dataset\\hv_categories\\level_1_to_level_2.json": "dc1ef3897a5de000c8a40e3672b12650163832026eb984ab46da57aa8037a1bf",
+    "dataset\\hv_categories\\direction_mapping.json": "da3d9c26ee77a8de4375c6b4c986f6b8d52175d0073e18b810aab5e6b40959a4"
+  },
+  "code_sha256": "8cfbadcbe4d69b0bb930fd731a867c6a53ffc5ab2afb4b55aac7a0cbbfc32f93",
+  "case_manifest_sha256": "9fe252db711f62af36aeded793f767cd0953b4f320a8b29bf7d962b62a24ce94",
+  "articles": 177,
+  "subevents": 1526,
+  "actor_event_pairs": 3998,
+  "python": "3.14.4",
+  "platform": "Windows-10-10.0.19045-SP0"
+}

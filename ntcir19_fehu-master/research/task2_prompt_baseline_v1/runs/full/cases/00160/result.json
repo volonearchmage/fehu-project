@@ -1,0 +1,99 @@
+{
+  "case_index": 160,
+  "guid": "1-15178-2-1",
+  "subevent_id": "8",
+  "request_sha256": "126af15fe87d07244808a44c73ebf49319077d565bec89a848bb07d1891dc159",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "1-15178-2-1-0",
+      "values": [
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "28",
+          "direction": "1"
+        },
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "41",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15178-2-1-1",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-15178-2-1-0",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15178-2-1-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15178-2-1-0",
+      "l1_value": "28",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15178-2-1-0",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15178-2-1-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15178-2-1-0",
+      "l1_value": "41",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15178-2-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3525,
+    "completion_tokens": 11684,
+    "total_tokens": 15209,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 11567
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 837
+  },
+  "seconds": 79.16556470000069,
+  "completed_at": "2026-11-04T18:07:01.480843+09:00"
+}

@@ -1,0 +1,99 @@
+{
+  "case_index": 232,
+  "guid": "0-4716-1-2",
+  "subevent_id": "2",
+  "request_sha256": "3ded05bfcaa8ac66e42b382348e336a3ed482ed44c07b4467c9ae834808148d9",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4716-1-2-0",
+      "values": [
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4716-1-2-1",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4716-1-2-0",
+      "l1_value": "45",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 6755,
+    "completion_tokens": 9132,
+    "total_tokens": 15887,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8987
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 4067
+  },
+  "seconds": 62.41450630000145,
+  "completed_at": "2026-11-04T18:08:06.308938+09:00"
+}

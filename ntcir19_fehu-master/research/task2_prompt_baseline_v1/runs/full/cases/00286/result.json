@@ -1,0 +1,49 @@
+{
+  "case_index": 286,
+  "guid": "12-wiki-img/8436-1/8436-1-2",
+  "subevent_id": "4",
+  "request_sha256": "0b9b70c6986652a862841713c8a9f29bd1865cd50c102448298c4d41d75df4f8",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-0",
+      "values": []
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-1",
+      "values": []
+    },
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-2",
+      "values": [
+        {
+          "l1_value": "6",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "12-wiki-img/8436-1/8436-1-2-2",
+      "l1_value": "6",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4102,
+    "completion_tokens": 12219,
+    "total_tokens": 16321,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12114
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1414
+  },
+  "seconds": 87.18097269999998,
+  "completed_at": "2026-11-04T18:09:21.096513+09:00"
+}

@@ -1,0 +1,130 @@
+{
+  "case_index": 504,
+  "guid": "0-4491-3-3",
+  "subevent_id": "2",
+  "request_sha256": "e68284a9c1dc10c5299bf73136e477c49e2723ad3b71a8aaf5cf7481726e05f3",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4491-3-3-0",
+      "values": [
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4491-3-3-1",
+      "values": []
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "values": [
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "19",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4491-3-3-3",
+      "values": []
+    },
+    {
+      "actor": "0-4491-3-3-4",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4491-3-3-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "19",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "45",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 5028,
+    "completion_tokens": 27232,
+    "total_tokens": 32260,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 27042
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 2340
+  },
+  "seconds": 176.20904639999935,
+  "completed_at": "2026-11-04T18:15:29.747808+09:00"
+}

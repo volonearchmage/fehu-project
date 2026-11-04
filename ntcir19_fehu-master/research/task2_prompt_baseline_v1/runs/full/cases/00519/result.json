@@ -1,0 +1,204 @@
+{
+  "case_index": 519,
+  "guid": "0-4399-3-1",
+  "subevent_id": "6",
+  "request_sha256": "09a99b32979b8e975bfedf165000743bf952c9dd27e162fb5c8b26ddf172d923",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4399-3-1-0",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "values": [
+        {
+          "l1_value": "6",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "values": [
+        {
+          "l1_value": "2",
+          "direction": "0"
+        },
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "38",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "53",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "6",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "38",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "53",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3868,
+    "completion_tokens": 23626,
+    "total_tokens": 27494,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 23371
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1180
+  },
+  "seconds": 153.6842299,
+  "completed_at": "2026-11-04T18:15:21.548051+09:00"
+}

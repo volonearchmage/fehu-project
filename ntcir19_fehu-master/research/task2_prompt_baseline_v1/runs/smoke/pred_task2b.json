@@ -1,0 +1,181 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "22",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "27",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "46",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "22",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "27",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "46",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "22",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "27",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "46",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "3",
+        "subevent_human_values": []
+      }
+    ]
+  },
+  {
+    "guid": "0-4495-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "10",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "21",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "30",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-1",
+            "l1_value": "10",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-1",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-1",
+            "l1_value": "21",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-1",
+            "l1_value": "30",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-1",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-2",
+            "l1_value": "30",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-2",
+            "l1_value": "53",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  }
+]

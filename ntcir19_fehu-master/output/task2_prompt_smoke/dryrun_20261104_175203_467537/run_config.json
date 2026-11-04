@@ -1,0 +1,20 @@
+{
+  "method": "task2_zero_shot_scope_smoke_v1",
+  "status": "dry_run",
+  "timezone": "Asia/Tokyo",
+  "requested_model": "deepseek-flash",
+  "conditions": [
+    "local",
+    "full"
+  ],
+  "few_shot_examples": 0,
+  "selection": "First N DEV subevents in input order; no gold-based selection",
+  "subevents": 3,
+  "candidate_actor_event_pairs": 6,
+  "planned_api_calls": 6,
+  "automatic_retries": 0,
+  "input_sha256": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+  "script_sha256": "631d6ef2add4e84c3079fbb3cf16b64fae293333f1f55e57aeca1c27401e5fa7",
+  "scope_instruction_shared": true,
+  "interpretation": "Pipeline smoke check only; not a full-DEV result or method comparison conclusion"
+}

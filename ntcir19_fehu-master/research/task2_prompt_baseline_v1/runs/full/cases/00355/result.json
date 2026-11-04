@@ -1,0 +1,131 @@
+{
+  "case_index": 355,
+  "guid": "0-4560-2-1JPG",
+  "subevent_id": "2",
+  "request_sha256": "42ee98ad792d93d22ad0ebbfc9495b7f74a018d6c5e5cdd302fe5f4460598386",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4560-2-1JPG-0",
+      "values": [
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "values": [
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "9",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-2-1JPG-2",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4560-2-1JPG-0",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4560-2-1JPG-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-2-1JPG-0",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "l1_value": "9",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4560-2-1JPG-1",
+      "l1_value": "30",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3777,
+    "completion_tokens": 31054,
+    "total_tokens": 34831,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 30881
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1089
+  },
+  "seconds": 206.74718360000043,
+  "completed_at": "2026-11-04T18:12:32.457183+09:00"
+}

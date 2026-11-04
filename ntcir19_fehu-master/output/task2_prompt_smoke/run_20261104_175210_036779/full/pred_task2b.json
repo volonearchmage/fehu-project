@@ -1,0 +1,87 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "27",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l1_value": "26",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "27",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "42",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l1_value": "25",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "46",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l1_value": "25",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  }
+]

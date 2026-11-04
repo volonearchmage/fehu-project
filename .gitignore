@@ -54,3 +54,9 @@ __pycache__/
 **/.pytest_cache/
 
 # 研究文档、PDF、PPT、预测缓存和增强数据属于项目归档。
+
+# Local account details and redundant interrupted archive.
+ntcir19_fehu-master/research/task2_prompt_baseline_v1/account_status.json
+ntcir19_fehu-master/research/task2_prompt_baseline_v1/blocker_audit.json
+ntcir19_fehu-master/research/task2_prompt_baseline_v1/exports/INTERRUPTED_checkpoint_NOT_FULL_RESULTS.zip
+ntcir19_fehu-master/research/task2_prompt_baseline_v1/preflight_frozen_before_line_ending_fix/

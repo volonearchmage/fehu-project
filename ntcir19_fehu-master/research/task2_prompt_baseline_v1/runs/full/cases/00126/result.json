@@ -1,0 +1,100 @@
+{
+  "case_index": 126,
+  "guid": "7-36661-5-2",
+  "subevent_id": "4",
+  "request_sha256": "aff69547bbef0d2077cb132919a4f8004f94bf52d8f0e6ad76afe8072b3a9a6d",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "7-36661-5-2-0",
+      "values": [
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "7-36661-5-2-1",
+      "values": [
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "7-36661-5-2-0",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "7-36661-5-2-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "7-36661-5-2-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "7-36661-5-2-1",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "7-36661-5-2-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "7-36661-5-2-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "7-36661-5-2-1",
+      "l1_value": "37",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3795,
+    "completion_tokens": 28531,
+    "total_tokens": 32326,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 28414
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1107
+  },
+  "seconds": 190.26996990000043,
+  "completed_at": "2026-11-04T18:07:38.613803+09:00"
+}

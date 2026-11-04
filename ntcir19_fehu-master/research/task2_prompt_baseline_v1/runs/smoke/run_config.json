@@ -1,0 +1,37 @@
+{
+  "started_at": "2026-11-04T18:00:41.375954+09:00",
+  "phase": "smoke",
+  "status": "complete",
+  "protocol": {
+    "name": "task2_prompt_baseline_v1",
+    "model": "deepseek-flash",
+    "documented_model_version": "DeepSeek-V4.1-Flash-1017",
+    "thinking": {
+      "type": "enabled"
+    },
+    "reasoning_effort": "max",
+    "max_tokens": 32768,
+    "response_format": {
+      "type": "json_object"
+    },
+    "stream": false,
+    "few_shot_examples": 0,
+    "input": "target subevent + full article + all candidate actors",
+    "label_cap": null,
+    "postprocessing": "exact ID validation, deduplication forbidden, fixed L1-to-L2 projection",
+    "smoke_cases": 5,
+    "max_attempts": 3,
+    "timeout_seconds": 240,
+    "selection": "published DEV input order; no gold-based selection",
+    "official_evaluator_commit": "c27e19d97c24bd764c2ea520217dba9873fab455"
+  },
+  "workers": 5,
+  "events": 5,
+  "actor_event_pairs": 11,
+  "frozen_manifest_sha256": "1c63e10f3398dfe5a79f9d0f864952bf093f511dc8ce5f6a500e509e9b310bb5",
+  "base_url": "https://api.deepseek.com",
+  "smoke_reused_in_full": false,
+  "finished_at": "2026-11-04T18:03:37.540767+09:00",
+  "valid_events": 5,
+  "scored_at": "2026-11-04T18:03:37.648195+09:00"
+}

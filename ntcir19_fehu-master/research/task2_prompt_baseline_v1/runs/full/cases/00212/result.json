@@ -1,0 +1,98 @@
+{
+  "case_index": 212,
+  "guid": "1-16084-3-1",
+  "subevent_id": "4",
+  "request_sha256": "fa3dd669d99fd20ec17bab1582cfed3086fff210b49632c05842b8d29355b2f3",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "1-16084-3-1-0",
+      "values": []
+    },
+    {
+      "actor": "1-16084-3-1-1",
+      "values": [
+        {
+          "l1_value": "5",
+          "direction": "0"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-16084-3-1-2",
+      "values": []
+    },
+    {
+      "actor": "1-16084-3-1-3",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-16084-3-1-1",
+      "l1_value": "5",
+      "direction": "0"
+    },
+    {
+      "actor": "1-16084-3-1-1",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16084-3-1-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16084-3-1-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16084-3-1-1",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16084-3-1-1",
+      "l1_value": "42",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4933,
+    "completion_tokens": 19504,
+    "total_tokens": 24437,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 19364
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 2245
+  },
+  "seconds": 129.46032129999912,
+  "completed_at": "2026-11-04T18:08:58.170875+09:00"
+}

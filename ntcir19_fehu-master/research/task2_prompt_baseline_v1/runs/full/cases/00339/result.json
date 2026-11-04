@@ -1,0 +1,67 @@
+{
+  "case_index": 339,
+  "guid": "0-4444-1-1",
+  "subevent_id": "1",
+  "request_sha256": "c26cb965d8eb5605b866289b178eb828567951f5f3576ce671b1c15f2e2a5b5f",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4444-1-1-0",
+      "values": []
+    },
+    {
+      "actor": "0-4444-1-1-1",
+      "values": []
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "values": [
+        {
+          "l1_value": "18",
+          "direction": "1"
+        },
+        {
+          "l1_value": "25",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4444-1-1-2",
+      "l1_value": "18",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "l1_value": "25",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4444-1-1-2",
+      "l1_value": "27",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4013,
+    "completion_tokens": 13159,
+    "total_tokens": 17172,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13069
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1325
+  },
+  "seconds": 91.15990799999963,
+  "completed_at": "2026-11-04T18:10:20.685375+09:00"
+}

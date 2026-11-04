@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-04T19:59:18.485882+09:00",
+  "requested_by": "user",
+  "instruction": "Stop the expensive full inference run; score only existing completed predictions offline.",
+  "inference_authorized": false,
+  "offline_scoring_complete": true
+}

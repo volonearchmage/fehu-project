@@ -1,0 +1,99 @@
+{
+  "case_index": 236,
+  "guid": "0-4472-6-1",
+  "subevent_id": "1",
+  "request_sha256": "309175c716c1dce95fb68654a87d42a5bb57e1c9033cc980488f2b29de340c32",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4472-6-1-0",
+      "values": []
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "values": [
+        {
+          "l1_value": "18",
+          "direction": "1"
+        },
+        {
+          "l1_value": "23",
+          "direction": "0"
+        },
+        {
+          "l1_value": "25",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        },
+        {
+          "l1_value": "42",
+          "direction": "0"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4472-6-1-1",
+      "l1_value": "18",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "l1_value": "23",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "l1_value": "25",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "l1_value": "42",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4472-6-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3692,
+    "completion_tokens": 12235,
+    "total_tokens": 15927,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12118
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1004
+  },
+  "seconds": 83.03173210000023,
+  "completed_at": "2026-11-04T18:08:31.244756+09:00"
+}

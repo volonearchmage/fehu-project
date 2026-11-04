@@ -1,0 +1,121 @@
+{
+  "case_index": 508,
+  "guid": "0-4491-3-3",
+  "subevent_id": "6",
+  "request_sha256": "0fe1dd04e9ed6bc2c739cf6132ff72f8d0d99f43a2cb5582fa61d428386faf8e",
+  "response_file": "attempt_01.response.json",
+  "actors": [
+    {
+      "actor": "0-4491-3-3-0",
+      "values": [
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "18",
+          "direction": "1"
+        },
+        {
+          "l1_value": "19",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4491-3-3-1",
+      "values": []
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "values": [
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "18",
+          "direction": "1"
+        },
+        {
+          "l1_value": "19",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4491-3-3-3",
+      "values": []
+    },
+    {
+      "actor": "0-4491-3-3-4",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4491-3-3-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-0",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-0",
+      "l1_value": "18",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-0",
+      "l1_value": "19",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "18",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4491-3-3-2",
+      "l1_value": "19",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 5017,
+    "completion_tokens": 22322,
+    "total_tokens": 27339,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 22143
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 2329
+  },
+  "seconds": 143.49974219999967,
+  "completed_at": "2026-11-04T18:15:00.078034+09:00"
+}

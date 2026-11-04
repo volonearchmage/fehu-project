@@ -1,0 +1,50 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-1",
+            "l2_value": "9"
+          }
+        ]
+      },
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-1",
+            "l2_value": "8"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l2_value": "9"
+          }
+        ]
+      },
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l2_value": "16"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l2_value": "9"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l2_value": "8"
+          },
+          {
+            "actor": "1-15231-2-1-1",
+            "l2_value": "9"
+          }
+        ]
+      }
+    ]
+  }
+]
