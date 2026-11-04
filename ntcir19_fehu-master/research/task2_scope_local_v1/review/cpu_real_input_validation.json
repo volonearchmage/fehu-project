@@ -1,0 +1,113 @@
+{
+  "scope": "Three fit bags; tiny synthetic encoder, CPU forward/backward only; no optimizer, no GPU, no pretrained weights",
+  "selected": [
+    {
+      "key": [
+        "33-2677-7-t",
+        "33-2677-7-t-0"
+      ],
+      "original_tokens": 9641,
+      "body_tokens": 9249,
+      "windows": 2,
+      "processed_tokens": 10289,
+      "owned_body_counts": [
+        7800,
+        1449
+      ],
+      "window_tokens": [
+        8192,
+        2097
+      ],
+      "article_supervision_instances": 1,
+      "event_supervision_instances": 9
+    },
+    {
+      "key": [
+        "6-19074-2-4",
+        "6-19074-2-4-0"
+      ],
+      "original_tokens": 3435,
+      "body_tokens": 2449,
+      "windows": 1,
+      "processed_tokens": 3435,
+      "owned_body_counts": [
+        2449
+      ],
+      "window_tokens": [
+        3435
+      ],
+      "article_supervision_instances": 1,
+      "event_supervision_instances": 24
+    },
+    {
+      "key": [
+        "9-21340-1-t",
+        "9-21340-1-t-0"
+      ],
+      "original_tokens": 111,
+      "body_tokens": 27,
+      "windows": 1,
+      "processed_tokens": 111,
+      "owned_body_counts": [
+        27
+      ],
+      "window_tokens": [
+        111
+      ],
+      "article_supervision_instances": 1,
+      "event_supervision_instances": 2
+    }
+  ],
+  "validation": [
+    {
+      "mode": "J",
+      "article_logits_shape": [
+        3,
+        108
+      ],
+      "child_logits_shape": [
+        3,
+        24,
+        108
+      ],
+      "child_mask_counts": [
+        9,
+        24,
+        2
+      ],
+      "loss": 1.4117072820663452,
+      "article_loss": 0.7075874209403992,
+      "event_loss": 0.704119861125946,
+      "finite_gradients": true,
+      "batched_loss_equals_mean_original_bags": true,
+      "parameters_updated": false
+    },
+    {
+      "mode": "S",
+      "article_logits_shape": [
+        3,
+        108
+      ],
+      "child_logits_shape": [
+        3,
+        24,
+        108
+      ],
+      "child_mask_counts": [
+        9,
+        24,
+        2
+      ],
+      "loss": 1.4723867177963257,
+      "article_loss": 0.7682668566703796,
+      "event_loss": 0.704119861125946,
+      "finite_gradients": true,
+      "batched_loss_equals_mean_original_bags": true,
+      "parameters_updated": false
+    }
+  ],
+  "js_identical_logits_before_updates": true,
+  "p_one_score_vector_per_original_event": true,
+  "initial_and_final_parameter_sha256": "0cfb0107d89c2b3220c464b8014a4501ce17903e2e21278c1f6f0a10a4816ee6",
+  "evaluation_gold_read": false
+}

@@ -1,0 +1,8 @@
+# Python 3.11; isolated CPU validation environment only.
+# Install torch from its official CPU index first, then this file from PyPI.
+torch==2.6.0+cpu
+transformers==5.8.1
+tokenizers==0.22.2
+numpy==2.4.4
+safetensors==0.7.0
+huggingface-hub==1.15.0

@@ -1,0 +1,16 @@
+{
+  "schema": "fehu-body-windows-v1",
+  "max_length": 8192,
+  "body_overlap_tokens": 256,
+  "tokenization": "Original full bag encoded once; slice token IDs without retokenizing",
+  "context": "Repeat original actor/article prefix and complete subevent suffix in every window",
+  "body_ownership": "Each original body token belongs to its earliest window; later overlap is context only",
+  "aggregation": "Pool owned body tokens and each complete event per window; weight all scope vectors by owned_body_tokens / original_body_tokens; apply shared head once",
+  "positions": "Reset positions to zero in each window",
+  "supervision": "After aggregation only: one article target and one target per original actor-event; no window loss",
+  "short_bags": "One window with identical original token IDs and scopes",
+  "context_overflow": "Fail explicitly if repeated context leaves no body capacity or overlap is not smaller than capacity",
+  "methods": ["J", "S", "P"],
+  "P": "Reuse J final bag logits; multiply sigmoid(article) by sigmoid(event) after aggregation",
+  "selection_basis": "Input lengths and architectural limit only; no evaluation labels or model scores"
+}

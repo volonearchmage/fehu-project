@@ -1,0 +1,161 @@
+{
+  "schema": "fehu-body-windows-v1",
+  "time": "2026-11-04T21:44:30.492083+09:00",
+  "source_sha256": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "dataset/dev/dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset/test/test_subevent_event_base.json": "65c3e995bf1077b70ec19f0d4bf3d25654e7446d51a785e639dfaad4071b48ee",
+    "docs/2026-11-03_Task2_组会准备/evidence/grouped_train_split.json": "132c37c1ca6973062d507636ee39b8c1b16391479b56cdd823ce0785ae82cb8c"
+  },
+  "config_sha256": "9e9569ac8eb4c4daf8f81ba3fa27dcf758fb6a1b113c937c264da60626ba75e3",
+  "tokenizer_lock_sha256": "1a100a70e3953b58636ec52d806159b3e694b0f453fe590b0587120141375772",
+  "labels_read": false,
+  "model_executed": false,
+  "partitions": {
+    "fit": {
+      "articles": 973,
+      "bags": 2650,
+      "candidates": 23783,
+      "windows": 2651,
+      "max_window_tokens": 8192,
+      "original_tokens": 3502743,
+      "processed_tokens": 3503391,
+      "cache": "fit.chunks.jsonl.gz",
+      "sha256": "657dd813be2b4fb3a8f5374703f15b924997f36cd2ebe8cf1c92b3148a23acb6",
+      "coverage_sha256": "b10920eb9ac599647917ff28c7ba394731bffca63a1b1acbaea46dae6aa5f40d"
+    },
+    "tune": {
+      "articles": 138,
+      "bags": 398,
+      "candidates": 3843,
+      "windows": 398,
+      "max_window_tokens": 3970,
+      "original_tokens": 475306,
+      "processed_tokens": 475306,
+      "cache": "tune.chunks.jsonl.gz",
+      "sha256": "8c7eece4da8d3ce41d16a4aaf7b20906a68c167525f1dca958d50bde7d618099",
+      "coverage_sha256": "2dc68ea300e4d469a060565e52e95455308674509eab4092c5f525b878c34705"
+    },
+    "holdout": {
+      "articles": 117,
+      "bags": 333,
+      "candidates": 2917,
+      "windows": 333,
+      "max_window_tokens": 3735,
+      "original_tokens": 444473,
+      "processed_tokens": 444473,
+      "cache": "holdout.chunks.jsonl.gz",
+      "sha256": "107d4c1d6cc04dd217f756d346a22c9c2748c8edde296a9b377b784dacd50309",
+      "coverage_sha256": "6f134c30ac56e7017c5ac4b2ed09816857b2efd475e4d32426b42dfb2382a580"
+    },
+    "dev": {
+      "articles": 177,
+      "bags": 459,
+      "candidates": 3998,
+      "windows": 459,
+      "max_window_tokens": 7914,
+      "original_tokens": 630206,
+      "processed_tokens": 630206,
+      "cache": "dev.chunks.jsonl.gz",
+      "sha256": "5f326eba543c38af39e56ef678990047f82984c029f25813b8e8e3875bb0ccb5",
+      "coverage_sha256": "7facce3864484627536b4d71205a990cfa556077fbe9103126e8a5e875c3f1a2"
+    },
+    "test2": {
+      "articles": 175,
+      "bags": 444,
+      "candidates": 4126,
+      "windows": 444,
+      "max_window_tokens": 4927,
+      "original_tokens": 567113,
+      "processed_tokens": 567113,
+      "cache": "test2.chunks.jsonl.gz",
+      "sha256": "4abd35e1125042d716893a8596ec74e8689b6a1f2f80a842ab66aa48854af15f",
+      "coverage_sha256": "c97fd0960d2b2354725af1e82bd4153c83556d5730149f23acf5cea53c2d7c03"
+    }
+  },
+  "overlength": [
+    {
+      "partition": "fit",
+      "guid": "33-2677-7-t",
+      "actor_id": "33-2677-7-t-0",
+      "actor_name": "Hacker and AI Research Communities",
+      "token_accounting": {
+        "total": 9641,
+        "categories": {
+          "body": 9249,
+          "event_text": 288,
+          "event_list_markers": 77,
+          "actor_article_header": 25,
+          "model_special": 2
+        },
+        "event_text_tokens": {
+          "0": 56,
+          "1": 31,
+          "2": 25,
+          "3": 24,
+          "4": 37,
+          "5": 28,
+          "6": 22,
+          "7": 28,
+          "8": 37
+        },
+        "special_tokens": [
+          "[CLS]",
+          "[SEP]"
+        ],
+        "body_characters": 32767,
+        "event_characters": 1252
+      },
+      "window_layout": [
+        {
+          "body_start": 0,
+          "body_end": 7800,
+          "owned_start": 0,
+          "tokens": 8192,
+          "owned_tokens": 7800,
+          "aggregate_weight": 0.8433344145313006
+        },
+        {
+          "body_start": 7544,
+          "body_end": 9249,
+          "owned_start": 7800,
+          "tokens": 2097,
+          "owned_tokens": 1449,
+          "aggregate_weight": 0.15666558546869933
+        }
+      ],
+      "event_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "original_tokens": 9641,
+      "body_tokens": 9249,
+      "windows": 2,
+      "processed_tokens": 10289,
+      "owned_body_counts": [
+        7800,
+        1449
+      ],
+      "window_tokens": [
+        8192,
+        2097
+      ],
+      "article_supervision_instances": 1,
+      "event_supervision_instances": 9
+    }
+  ],
+  "implementation_sha256": {
+    "chunking.py": "0f720f5cce534a5d84d901406a72ed7fb991b80b97ee9790995f9bf40709ea2e",
+    "tokenization.py": "ef1a23b72359249b170bc1d65c8233e9151c11cc5602e38599b0dbf077b4174e",
+    "data.py": "4ffa31e65d7fc98d94a062ac1e349aec5fcd5077d240b70cfc04a350f049008b"
+  },
+  "source_unchanged": true,
+  "status": "All input bags covered; window budget and unique body ownership verified; GPU untested"
+}

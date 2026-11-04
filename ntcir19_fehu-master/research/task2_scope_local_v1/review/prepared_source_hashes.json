@@ -1,0 +1,29 @@
+{
+  "chunking_config_sha256": "9e9569ac8eb4c4daf8f81ba3fa27dcf758fb6a1b113c937c264da60626ba75e3",
+  "training_config_sha256": "152560376c6100e233e327bd5d0e50438db9d0a0efaa210a9dc13de54470481b",
+  "input_cache_manifest_sha256": "6de0d32e5f68cd9cb4244cfaf371ff23ba88159f7481a1e95fe22f2be4826f37",
+  "files": {
+    "__init__.py": "1ae5934d793df19262866fc4cdbc954bbdb584c387a32a0b0a92ef608f9ebfa6",
+    "build_chunk_cache.py": "cdfae5beefde2c6d79b58a24ae84ed35ea61784a9a37eefae47ec712e6c2c5dd",
+    "chunk_model.py": "0e036d84b90ce0328c499acc309184d412b0349c62d0be99f3e52dd63dc3ca6f",
+    "chunking.py": "0f720f5cce534a5d84d901406a72ed7fb991b80b97ee9790995f9bf40709ea2e",
+    "chunking_v1.json": "9e9569ac8eb4c4daf8f81ba3fa27dcf758fb6a1b113c937c264da60626ba75e3",
+    "data.py": "4ffa31e65d7fc98d94a062ac1e349aec5fcd5077d240b70cfc04a350f049008b",
+    "gpu_preflight.py": "2d91366e97bd657df110017677c5f86792b928a3ecb98bd88db73d3d374157d5",
+    "losses.py": "331657ac096dbe378a6c54a218d7706d33c01f427a748c11ee0ba95c89aa0cc5",
+    "model.py": "27bff2881ee19f46e431325ca95d48b556cab3acd26b4cb79ee535f21469a6da",
+    "model_lock.json": "14d4362b3f41a6335f6571216ca2471a703fce1c56f58d35fe5027f0bc586f22",
+    "predictions.py": "dd4b50f0207ae3fd2b7cdca69d2ff6d1aa4819badb00487a05f05aa6bf4d4b9c",
+    "prepare.py": "1fd6308666f9bece55f7834305404cf6a7350106eb6a5287cd51a9a9c371764c",
+    "protocol.json": "0763580d3e7c41f0d2d59d1822d06b9171378654b66c725c51d6d140ed99feb5",
+    "tokenization.py": "ef1a23b72359249b170bc1d65c8233e9151c11cc5602e38599b0dbf077b4174e",
+    "tokenizer_lock.json": "1a100a70e3953b58636ec52d806159b3e694b0f453fe590b0587120141375772",
+    "train.py": "94b76783954b7a6fe8f127b16297c98c3c1b7ad7a2083e9bdab140f1d412368e",
+    "training_v1.json": "152560376c6100e233e327bd5d0e50438db9d0a0efaa210a9dc13de54470481b"
+  },
+  "test_files": {
+    "test_chunking.py": "21dda2ce83c34b08d2e729f66558e423f939e503520ecb95c30a8cab1faab967",
+    "test_components.py": "f84dfde8d4f1d9bf476d71e563ec9351b76a892f71c7066bf046cf96ac07bb6f",
+    "test_training_contract.py": "ea3dc8548f55f262ddbd22f1a6988fc1aed0f0bbac6e9ca7431aba41ea54c401"
+  }
+}

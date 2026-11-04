@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "status": "CPU components only; training blocked",
+  "label_index": "2 * int(l1_value) + int(direction); 0 contradictory, 1 aligned",
+  "num_labels": 108,
+  "article_weight": 1.0,
+  "seed": 11,
+  "input": "Target actor, full body, ordered complete numbered subevents; no labels or explanations",
+  "pooling": "Token mean per body/event; same 108-dim linear head",
+  "normalization": "Event BCE: mean valid events and 108 labels per bag, then mean bags; article mean labels then mean bags",
+  "split_seed": "fehu-task2-scope-20261103",
+  "max_length": 8192,
+  "overlength_policy": "Fail closed; no truncation or event dropping. One fit bag is 9641 tokens. Common chunk/aggregation policy must be implemented and frozen before any training.",
+  "js_comparison": "Same model, input, initialization and candidate order; only article loss differs",
+  "threshold_rule": "Tune only; future checkpoint/threshold selection not implemented or executed",
+  "source_sha256": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "dataset/dev/dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset/test/test_subevent_event_base.json": "65c3e995bf1077b70ec19f0d4bf3d25654e7446d51a785e639dfaad4071b48ee",
+    "dataset/gold_labels/train/train_human_values.json": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+    "dataset/hv_categories/human_value_level2_values.json": "550ee6de5db3b3f8941ad8a006d4d272774b714aa71b75d9ac9c966fe1ec75c2",
+    "dataset/hv_categories/human_value_level1_values.json": "40fa4b78ba7ae7b4f61d23c821dbe70a2a1f3079369fb9ff5f2cb11d79d7f96e",
+    "dataset/hv_categories/level_2_to_level_1.json": "c708f7af300f818a81a205b755f4aee6c866e7c798cb9ea8c5908863a2604c8a",
+    "dataset/hv_categories/level_1_to_level_2.json": "dc1ef3897a5de000c8a40e3672b12650163832026eb984ab46da57aa8037a1bf",
+    "dataset/hv_categories/human_value_taxonomy.json": "b153e460c64bf172cd1081f34a8242bc74574963951cc1f160f4d6010388f673",
+    "dataset/hv_categories/direction_mapping.json": "da3d9c26ee77a8de4375c6b4c986f6b8d52175d0073e18b810aab5e6b40959a4",
+    "docs/2026-11-03_Task2_组会准备/evidence/grouped_train_split.json": "132c37c1ca6973062d507636ee39b8c1b16391479b56cdd823ce0785ae82cb8c"
+  },
+  "gpu_experiment": false,
+  "paid_api_calls": 0
+}
