@@ -1,0 +1,10 @@
+{
+  "mean_baseline_auc": 0.5359,
+  "mean_v2_auc": 0.6969,
+  "targets_with_auc_improved": 14,
+  "mean_baseline_oracle_f1": 0.0529,
+  "mean_v2_oracle_f1": 0.1123,
+  "targets_with_oracle_f1_improved": 16,
+  "baseline_target18_recall_at_0.05": 0.9357,
+  "note": "single seed each; v2 differs from baseline in data AND supervision policy; separation deltas are descriptive"
+}

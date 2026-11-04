@@ -1,0 +1,5 @@
+Segmenting 2 dev articles with deepseek-v4-flash
+Segmenting:   0%|          | 0/2 [00:00<?, ?it/s]Segmenting:  50%|█████     | 1/2 [00:07<00:07,  7.11s/it]Segmenting: 100%|██████████| 2/2 [01:07<00:00, 38.67s/it]Segmenting: 100%|██████████| 2/2 [01:07<00:00, 33.94s/it]
+  [WARN] 0-4495-1-1: segmentation attempt 1 failed: empty content
+[done] 2 segmentations -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_190658/smoke/segmentation/e6/segments_dev.json
+unit distribution: {'n_articles': 2, 'units_min': 4, 'units_median': 10, 'units_max': 10, 'units_mean': 7.0}

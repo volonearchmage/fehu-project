@@ -1,0 +1,26 @@
+check_name,status,explanation
+execution_plan_folder_exists,PASS,output/research_ablation_execution_plan/20260702_200824/ present and read.
+ablation_input_folder_exists,PASS,output/research_ablation_inputs/20260702_193701/ present; manifest read.
+dryrun_folder_exists,PASS,output/research_ablation_dryrun/20260702_194637/ present; dryrun manifest read.
+source_files_readable,PASS,"src/train_deberta.py, run_pipeline.py, hybrid_pipeline.py, hybrid_v2.py, run_pipeline_deepseek_flash.py, regenerate_deberta_predictions.py, collect_results.py all read (read-only)."
+evaluation_py_readable,PASS,evaluation.py read for invocation awareness; not modified.
+pipeline_entrypoint_identified,PASS,src/train_deberta.py::main() is the only training entrypoint that consumes train_event_base/train_human_values.
+custom_train_event_path_supported,FAIL,"TRAIN_ARTICLES hardcoded (train_deberta.py:93), consumed at line 401; no CLI/env override to load the augmented event_base."
+custom_train_gold_path_supported,FAIL,"TRAIN_LABELS hardcoded (train_deberta.py:94), consumed at line 401; no CLI/env override to load the augmented gold."
+baseline_augmented_conditions_representable,FAIL,"Baseline coincides with hardcoded official train, but the augmented condition cannot be loaded without editing the constants; A/B not representable as-is."
+output_path_configurable,PASS,--output_dir supported (train_deberta.py:357-359,377-386) with overwrite-safe resolution.
+dev_eval_path_configurable,REVIEW,"DEV_ARTICLES/DEV_LABELS hardcoded (95-96); not settable, but fixed to official dev which is the intended invariant."
+prediction_format_task1b_compatible,PASS,"to_submission emits {guid, article_human_values:[{actor,l1_value,direction}]} (285-304), consumed by parse_task1b."
+evaluator_programmatic_method_available,PASS,"train_deberta.py imports evaluation.parse_task1b/evaluate/direction_reverse_rate_gold_excl and calls them directly (309-312,497-500)."
+evaluation_py_cli_blocked_documented,PASS,evaluation.py:262 DEBUG=True overwrites sys.argv; CLI blocked for arbitrary paths (dry-run exit 1). Documented.
+direction_mapping_policy_preserved,PASS,"Label index l1*2+dir with '0'=contradictory/'1'=aligned matches dataset/hv_categories/direction_mapping.json (1=aligned,0=contradictory)."
+dirty_source_state_documented,PASS,"train_deberta.py, run_pipeline.py, hybrid_pipeline.py modified; several src/*.py and HYBRID_ROADMAP.md/research/ untracked. Recorded in reports."
+no_source_files_modified,PASS,All source files opened read-only; sha256 unchanged before/after.
+no_official_data_modified,PASS,Official dataset files sha256 unchanged; only reads performed.
+no_evaluation_py_modified,PASS,evaluation.py sha256 unchanged (e4a7f89e...8ad47).
+no_existing_output_folders_modified,PASS,execution_plan/ablation_inputs/dryrun folders only read; not written.
+only_new_readiness_folder_written,PASS,Only output/research_ablation_readiness/20260704_193038/ written; git status invariant (output/ gitignored).
+no_training_run,PASS,No training invoked.
+no_inference_run,PASS,No model inference invoked.
+no_ablation_run,PASS,No ablation invoked.
+no_fallback_implementation,PASS,No fallback/shim/wrapper created; blockers reported as-is.

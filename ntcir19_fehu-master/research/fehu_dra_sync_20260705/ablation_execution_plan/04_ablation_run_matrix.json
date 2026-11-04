@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-07-02T20:08:24",
+  "status": "planning_only",
+  "baseline_condition": {
+    "name": "A_baseline",
+    "description": "Official train only; no synthetic candidates.",
+    "augmented_candidates": 0
+  },
+  "augmented_condition": {
+    "name": "B_dra_fehu_augmented",
+    "description": "Official train + 6 verified synthetic candidates.",
+    "augmented_candidates": 6
+  },
+  "invariant_settings": {
+    "model": "same",
+    "prompt_or_training_code": "same",
+    "hyperparameters": "same",
+    "seed": "same (if training is stochastic)",
+    "dev_evaluation_set": "official dev (dataset/dev + dataset/gold_labels/dev)",
+    "evaluator_invocation": "official functions (parse_task1b, evaluate, direction_reverse_rate_gold_excl)",
+    "prediction_formatting": "Task-1b JSON: guid, article_human_values[*].{actor,l1_value,direction}",
+    "official_data": "unmodified"
+  },
+  "changed_factor": "inclusion of the 6 verified synthetic candidates in the training set (Condition B only)",
+  "input_paths": {
+    "baseline_train_event_base": "output/research_ablation_inputs/20260702_193701/01_baseline_train_event_base.json",
+    "baseline_train_human_values": "output/research_ablation_inputs/20260702_193701/02_baseline_train_human_values.json",
+    "augmented_train_event_base": "output/research_ablation_inputs/20260702_193701/03_augmented_train_event_base.json",
+    "augmented_train_human_values": "output/research_ablation_inputs/20260702_193701/04_augmented_train_human_values.json",
+    "official_dev_event_base": "dataset/dev/dev_event_base.json",
+    "official_dev_gold": "dataset/gold_labels/dev/dev_human_values.json"
+  },
+  "future_output_root": "ntcir19_fehu-master/output/research_ablation_runs/<timestamp>/",
+  "required_pre_run_checks": [
+    "verified pool = 6 records, all ACCEPT, all training_ready=false",
+    "baseline counts 1228/1228; augmented counts 1234/1234; augmented == baseline ++ 6 synthetic",
+    "no synthetic guid/actor id collision with official train ids",
+    "official dataset files sha256 recorded",
+    "evaluation.py sha256 recorded",
+    "dirty working tree resolved or path-isolated",
+    "identical training config for A and B confirmed",
+    "explicit human approval recorded"
+  ],
+  "required_post_run_checks": [
+    "official dataset files sha256 unchanged",
+    "evaluation.py sha256 unchanged",
+    "predictions parse cleanly with parse_task1b",
+    "metrics computed via official functions for both conditions",
+    "per-target L1=12 and L1=38 aligned/contradictory breakdowns recorded",
+    "only new output/research_ablation_runs/<timestamp>/ folder written",
+    "A vs B differ only in the augmentation factor"
+  ],
+  "stopping_conditions": [
+    "any official dataset file sha256 changes",
+    "evaluation.py changes",
+    "synthetic id collides with official id",
+    "evaluator raises on derived/prediction format",
+    "A and B training configs differ in any non-augmentation factor",
+    "prediction schema fails parse_task1b"
+  ]
+}

@@ -22,8 +22,8 @@ This is the **NTCIR-19 FEHU** (Fact-based Event-centric Human Value Understandin
 ```bash
 # No installation needed - pure Python
 # For API access, create .env in project root:
-echo "OPENAI_API_KEY=sk-your-key-here" > .env
-echo "GEMINI_API_KEY=your-gemini-key-here" >> .env
+echo "OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>" > .env
+echo "GEMINI_API_KEY=<YOUR_GEMINI_API_KEY>" >> .env
 ```
 
 ### Running the Baseline Pipeline

@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "step1_order_identical": true,
+    "step1_formula_exact": true,
+    "step2_459_expected_calls": true,
+    "step2_cache_exact_coverage": true,
+    "step2_all_calls_success": true,
+    "step2_no_extraneous_items": true,
+    "step2_no_malformed_items": true,
+    "step2_all_items_match_target": true,
+    "step2_no_retries": true,
+    "step2_model_identity": true,
+    "step1_metrics_reproduce": true,
+    "step2_metrics_reproduce": true,
+    "value_agreement_formula_exact": true,
+    "value_agreement_metrics_reproduce": true
+  },
+  "passed": 14,
+  "total": 14,
+  "all_passed": true
+}

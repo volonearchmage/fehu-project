@@ -1,0 +1,64 @@
+{
+  "experiment": "E7_calibrated_jury_fusion",
+  "cell": "G2_veto_noliu",
+  "primary": "E6b",
+  "jurors": [
+    "E1",
+    "E6",
+    "E6c"
+  ],
+  "timestamp": "2026-07-24T15:45:22.610460+00:00",
+  "calibration": {
+    "mode": "crossfit",
+    "folds": {
+      "0": {
+        "theta": 0.2796296296296296,
+        "n_removal_cells": 1222,
+        "n_addition_cells": 727
+      },
+      "1": {
+        "theta": 0.2697368421052631,
+        "n_removal_cells": 1204,
+        "n_addition_cells": 513
+      }
+    }
+  },
+  "inputs": {
+    "E1": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/20260722_152456/pred_task1b.json",
+      "sha256": "6e24e1675e6da3866c429828f3f2ea9d08c4bd73aa03e4068b33a0192c181402"
+    },
+    "Liu": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1/runs/dev_deepseek_deepseek-v4-flash_targeted_more_shot_balanced_temp0p1_max8000/pred_task1b.json",
+      "sha256": "cf7de5cfd08dd6c5c071c25c28813e9aa1d796b3ad010ca4e269c661a11ad609"
+    },
+    "E6": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/runs/20260724_152658/pred_task1b.json",
+      "sha256": "66a62339709b7614a81ee3ec9ca134a5acb1521c78e7274b40977640bfd495e3"
+    },
+    "E6b": {
+      "path": "RH_test/E6b_granularity_control/runs/20260724_224243/pred_task1b.json",
+      "sha256": "237f9566c80615032279316dfff6b265a049f201c4d1116ded5695bd5dfbd93e"
+    },
+    "E6c": {
+      "path": "RH_test/E6c_pro_nonthinking/runs/20260725_002408/pred_task1b.json",
+      "sha256": "41d883ecf4fc5bbd4909661890f2979ae98474d907d7441d767f48c85a87a153"
+    },
+    "v2_probs": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/research_hybrid_deberta_v2_liu_flash/20260714_184515/02_deberta_actor_probabilities.jsonl",
+      "sha256": "7ac24922dd9c9562d2d43c765c017dcc6759cb4c112b8b1024034d518900fc10"
+    },
+    "articles": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/dataset/dev/dev_event_base.json",
+      "sha256": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2"
+    }
+  },
+  "counts": {
+    "primary_labels": 2894,
+    "fused_labels": 2394,
+    "actions": {
+      "remove": 500
+    },
+    "frequent_classes": 38
+  }
+}

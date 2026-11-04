@@ -1,0 +1,92 @@
+{
+  "phase": 0,
+  "started": "2026-07-19T22:17:17",
+  "finished": "2026-07-19T22:17:17",
+  "config": "new_check/phase0/configs/phase0_config.json",
+  "project_root": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master",
+  "inputs_sha256": {
+    "gold_dev_labels": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+    "gold_train_labels": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+    "targets_source": "9db24307df17f990095a4687e1d9699baf96d9f30afdbfe1bbacf2775f322fdd",
+    "v2_supervision_map": "887047e688caad185efbc5d08abc267c052f89014e925f807ff454c9476b9924",
+    "v2_train_labels": "e7e39bdcca2484d6e5e99040edba2ebeabba50256e2aec4b355fc7101c104517",
+    "v2_probabilities_jsonl": "7ac24922dd9c9562d2d43c765c017dcc6759cb4c112b8b1024034d518900fc10",
+    "pred__deberta_baseline": "c38ebddec77a797af8cb1a55dc19f5c28c65b8398134f8b2113817d6dfdcaae6",
+    "pred__augmented_v1": "6fb17f4b7e43c05fa55011e1bd119af9864956eea1c2426d9d69f5710592a2ed",
+    "pred__augmented_v2": "0e9f69102872c9df296b1ebee02108878ddb8fdb0bbd261a959abbfcf9766c13",
+    "pred__liu_frozen": "cf7de5cfd08dd6c5c071c25c28813e9aa1d796b3ad010ca4e269c661a11ad609",
+    "pred__hybrid_h2": "cee97de68099a0969a3f80f8c72850c0bd3dd425523394ff1f1de79ecf1ca765",
+    "pred__hybrid_h3": "8363c20345a2bdc4b6f34852b729bafea789a0e001f0da505530754638b5c657"
+  },
+  "targets_18": [
+    "0:31",
+    "0:48",
+    "0:53",
+    "1:31",
+    "0:16",
+    "1:10",
+    "0:19",
+    "0:20",
+    "1:49",
+    "0:13",
+    "0:37",
+    "0:29",
+    "1:4",
+    "0:2",
+    "0:33",
+    "0:32",
+    "0:40",
+    "0:28"
+  ],
+  "baseline_train_inputs_equal_official": true,
+  "ratio_meta": {
+    "n_official": 3335,
+    "n_v2": 4575,
+    "n_v2_full": 3785,
+    "n_v2_target_only": 790
+  },
+  "settings": {
+    "global_thresholds": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5
+    ],
+    "oracle_threshold_grid": {
+      "start": 0.01,
+      "stop": 0.6,
+      "step": 0.01
+    },
+    "instance_rule": "instances = gold keys | pred keys (official)",
+    "undefined_pr_convention": "safe_div -> 0.0 (official)",
+    "macro_variants": [
+      "gold_supported (official)",
+      "full_universe"
+    ]
+  },
+  "outputs": [
+    "HUMAN_CHECK_REQUIRED.md",
+    "error_categories.csv",
+    "experiment_comparability.csv",
+    "group_metrics_long.csv",
+    "nontarget90_group_metrics.csv",
+    "overall_metrics_all_systems.csv",
+    "per_target_18_metrics.csv",
+    "per_target_oracle_thresholds_v2.csv",
+    "pos_neg_ratio_table.csv",
+    "target18_group_metrics.csv",
+    "threshold_sensitivity_v2.csv"
+  ],
+  "constraints_respected": {
+    "no_training": true,
+    "no_inference": true,
+    "no_api_calls": true,
+    "no_existing_artifact_modified": true
+  }
+}

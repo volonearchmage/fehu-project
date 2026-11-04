@@ -1,0 +1,3 @@
+[2026-08-13T20:42:25+08:00] g4_dirqa attempt 1/20
+261 flagged cells (of 3118 fused labels)
+[done] flagged 261  flipped 84  kept 177  failed 0 -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/fusion/G4_dirqa

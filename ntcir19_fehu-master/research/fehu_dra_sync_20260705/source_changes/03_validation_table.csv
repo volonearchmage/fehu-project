@@ -1,0 +1,25 @@
+check_name,status,explanation
+train_deberta_py_modified,PASS,"src/train_deberta.py edited: added imports, set_seed helper, 4 CLI args, and seed/path/checkpoint resolution in main()."
+only_allowed_source_file_modified,PASS,"Only src/train_deberta.py changed among source files; git status otherwise matches the pre-existing dirty set."
+train_articles_arg_added,PASS,"--train_articles added in parse_args (default = str(TRAIN_ARTICLES)); appears in --help."
+train_labels_arg_added,PASS,"--train_labels added in parse_args (default = str(TRAIN_LABELS)); appears in --help."
+seed_arg_added,PASS,"--seed added (int, default None); appears in --help."
+checkpoint_dir_arg_added,PASS,"--checkpoint_dir added (default None -> existing constant); appears in --help."
+explicit_path_validation_added,PASS,"main() validates train_articles/train_labels with is_file() and raises SystemExit on missing/invalid."
+no_silent_fallback_for_invalid_explicit_paths,PASS,"On invalid explicit path the run raises; no substitution of TRAIN_ARTICLES/TRAIN_LABELS, no hidden loading path."
+default_behavior_preserved,PASS,"No new args -> official train constants, seed=None (unseeded), original checkpoint dir; identical to prior behavior."
+checkpoint_dir_no_longer_forced_shared_when_arg_provided,PASS,"--checkpoint_dir reassigns global CHECKPOINT_DIR used by save_ckpt/load_ckpt, isolating baseline vs augmented."
+seed_control_available_when_arg_provided,PASS,"set_seed seeds random/numpy/torch/cuda/transformers; global torch seed also makes DataLoader shuffle deterministic."
+evaluation_py_unchanged,PASS,"evaluation.py sha256 unchanged (e4a7f89e...8ad47); no evaluator calls modified."
+official_data_unchanged,PASS,"dataset/ train/dev event_base and gold sha256 unchanged before/after."
+no_training_run,PASS,No training executed.
+no_inference_run,PASS,No inference executed.
+no_ablation_run,PASS,No ablation executed.
+py_compile_passed,PASS,"python -m py_compile src/train_deberta.py -> COMPILE_OK (fehu env)."
+help_command_passed,PASS,"python src/train_deberta.py --help ran and exited cleanly (fehu conda env with torch/transformers/numpy)."
+help_text_contains_new_args,PASS,"--help lists --train_articles, --train_labels, --seed, --checkpoint_dir."
+no_commit,PASS,No git commit performed.
+no_branch_switch,PASS,Still on main.
+no_stash,PASS,No git stash performed.
+no_clean,PASS,No git clean performed.
+no_fallback_implementation,PASS,No fallback/shim/wrapper; invalid explicit paths fail loudly.

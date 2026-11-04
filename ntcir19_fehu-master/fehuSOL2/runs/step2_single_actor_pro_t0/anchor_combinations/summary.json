@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "t0_base": {
+      "micro_precision": 0.5101,
+      "micro_recall": 0.5732,
+      "micro_f1": 0.5398,
+      "macro_f1": 0.3914,
+      "drr": 0.0518,
+      "tp": 1370,
+      "fp": 1316,
+      "fn": 1020,
+      "pred_labels": 2686,
+      "task1a_micro_f1": 0.6804,
+      "task1a_macro_f1": 0.5544
+    },
+    "single_actor": {
+      "micro_precision": 0.4373,
+      "micro_recall": 0.6247,
+      "micro_f1": 0.5145,
+      "macro_f1": 0.3623,
+      "drr": 0.0684,
+      "tp": 1493,
+      "fp": 1921,
+      "fn": 897,
+      "pred_labels": 3414,
+      "task1a_micro_f1": 0.6604,
+      "task1a_macro_f1": 0.5358
+    },
+    "directed_intersection": {
+      "micro_precision": 0.5683,
+      "micro_recall": 0.5243,
+      "micro_f1": 0.5454,
+      "macro_f1": 0.3835,
+      "drr": 0.0378,
+      "tp": 1253,
+      "fp": 952,
+      "fn": 1137,
+      "pred_labels": 2205,
+      "task1a_micro_f1": 0.676,
+      "task1a_macro_f1": 0.5581
+    },
+    "union": {
+      "micro_precision": 0.4134,
+      "micro_recall": 0.6736,
+      "micro_f1": 0.5123,
+      "macro_f1": 0.3748,
+      "drr": 0.0824,
+      "tp": 1610,
+      "fp": 2285,
+      "fn": 780,
+      "pred_labels": 3895,
+      "task1a_micro_f1": 0.6628,
+      "task1a_macro_f1": 0.5346
+    },
+    "value_agreement_t0_direction": {
+      "micro_precision": 0.5579,
+      "micro_recall": 0.5343,
+      "micro_f1": 0.5458,
+      "macro_f1": 0.3902,
+      "drr": 0.0455,
+      "tp": 1277,
+      "fp": 1012,
+      "fn": 1113,
+      "pred_labels": 2289,
+      "task1a_micro_f1": 0.6784,
+      "task1a_macro_f1": 0.5607
+    }
+  },
+  "best_micro": "value_agreement_t0_direction"
+}

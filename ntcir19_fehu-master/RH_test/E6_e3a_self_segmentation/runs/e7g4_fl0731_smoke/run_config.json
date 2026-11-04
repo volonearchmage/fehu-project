@@ -1,0 +1,23 @@
+{
+  "experiment": "E6_e3a_self_segmentation",
+  "base_pipeline": "RH_test/E3a_task1_only_subevent/scripts/run_pipeline_e3a.py (frozen, copied)",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.1,
+  "max_output_tokens": 8000,
+  "prompt_variant": "targeted_more_shot_balanced",
+  "mode": "dev",
+  "limit": 3,
+  "segments": "E7G4Flash0731Dev/smoke/segments_e6_dev.json",
+  "deltas": [
+    "E1: D1 deterministic multi-label demos",
+    "E1: D2 full demo content, no 4-label cap",
+    "E1: D3 numeric label caps removed",
+    "E3a: A subevent TEXTS added as reasoning scaffold (task, guideline 7, user prompt, demos)",
+    "E3a: demos keep E1 Task-1 article-level gold ONLY (no subevents_human_values / Task-2 gold)",
+    "E3a: output stays E1 article-level; parser + process_results unchanged",
+    "E6: eval articles' subevents REPLACED by taxonomy-blind self-segmentation (--segments); dataset subevents never used on eval articles",
+    "E6: demos unchanged (training articles keep official subevents -> system prompt byte-identical to E3a)",
+    "isolation: outputs under RH_test/E6_e3a_self_segmentation"
+  ]
+}

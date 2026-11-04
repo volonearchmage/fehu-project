@@ -1,0 +1,126 @@
+{
+  "base_task1b": {
+    "micro_precision": 0.5101,
+    "micro_recall": 0.5732,
+    "micro_f1": 0.5398,
+    "macro_precision": 0.3869,
+    "macro_recall": 0.4624,
+    "macro_f1": 0.3914,
+    "macro_f1_official": 0.3914,
+    "drr": 0.0518,
+    "drr_reversals": 115,
+    "drr_denom": 2222,
+    "drr_ambiguous": 84,
+    "tp": 1370,
+    "fp": 1316,
+    "fn": 1020,
+    "pred_labels": 2686,
+    "labels_per_actor": 5.8519,
+    "distinct_classes": 108
+  },
+  "step2_task1b": {
+    "micro_precision": 0.4373,
+    "micro_recall": 0.6247,
+    "micro_f1": 0.5145,
+    "macro_precision": 0.324,
+    "macro_recall": 0.4957,
+    "macro_f1": 0.3623,
+    "macro_f1_official": 0.3623,
+    "drr": 0.0684,
+    "drr_reversals": 152,
+    "drr_denom": 2222,
+    "drr_ambiguous": 84,
+    "tp": 1493,
+    "fp": 1921,
+    "fn": 897,
+    "pred_labels": 3414,
+    "labels_per_actor": 7.6892,
+    "distinct_classes": 108
+  },
+  "delta": {
+    "micro_precision": -0.0728,
+    "micro_recall": 0.0515,
+    "micro_f1": -0.0253,
+    "macro_f1": -0.0291,
+    "drr": 0.0166,
+    "task1a_micro_f1": -0.02,
+    "task1a_macro_f1": -0.0186
+  },
+  "unique_additions": {
+    "n": 1209,
+    "tp": 240,
+    "fp": 969,
+    "precision": 0.1985
+  },
+  "unique_removals": {
+    "n": 481,
+    "removed_tp": 117,
+    "removed_fp": 364,
+    "removed_group_precision": 0.2432
+  },
+  "attribution_like_fp": {
+    "base": 274,
+    "step2": 450
+  },
+  "actor_count_slices": {
+    "one_actor": {
+      "n_articles": 8,
+      "base": {
+        "tp": 39,
+        "fp": 11,
+        "fn": 23,
+        "precision": 0.78,
+        "recall": 0.629,
+        "f1": 0.6964
+      },
+      "step2": {
+        "tp": 36,
+        "fp": 10,
+        "fn": 26,
+        "precision": 0.7826,
+        "recall": 0.5806,
+        "f1": 0.6667
+      }
+    },
+    "two_to_three_actors": {
+      "n_articles": 144,
+      "base": {
+        "tp": 1090,
+        "fp": 993,
+        "fn": 769,
+        "precision": 0.5233,
+        "recall": 0.5863,
+        "f1": 0.553
+      },
+      "step2": {
+        "tp": 1181,
+        "fp": 1416,
+        "fn": 678,
+        "precision": 0.4548,
+        "recall": 0.6353,
+        "f1": 0.5301
+      }
+    },
+    "four_plus_actors": {
+      "n_articles": 25,
+      "base": {
+        "tp": 241,
+        "fp": 312,
+        "fn": 228,
+        "precision": 0.4358,
+        "recall": 0.5139,
+        "f1": 0.4716
+      },
+      "step2": {
+        "tp": 276,
+        "fp": 495,
+        "fn": 193,
+        "precision": 0.358,
+        "recall": 0.5885,
+        "f1": 0.4452
+      }
+    }
+  },
+  "decision": "RESIDUAL_ONLY",
+  "next_action": "Do not promote standalone Step 2; Step 3 may verify only Step2-minus-baseline additions."
+}

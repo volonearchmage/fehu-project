@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-07-04T20:56:00",
+  "current_verified_count": 6,
+  "target_verified_count": 30,
+  "new_verified_needed": 24,
+  "raw_generation_target": 72,
+  "generation_model_for_future_batches": "DeepSeek V4 Pro",
+  "target_labels": [
+    {
+      "l1_value_id": "22",
+      "l1_value_name": "Have good health",
+      "l2_value_id": "8",
+      "new_aligned": 3,
+      "new_contradictory": 3
+    },
+    {
+      "l1_value_id": "30",
+      "l1_value_name": "Be compliant",
+      "l2_value_id": "11",
+      "new_aligned": 2,
+      "new_contradictory": 2
+    },
+    {
+      "l1_value_id": "38",
+      "l1_value_name": "Be honest",
+      "l2_value_id": "14",
+      "new_aligned": 2,
+      "new_contradictory": 2
+    },
+    {
+      "l1_value_id": "12",
+      "l1_value_name": "Have success",
+      "l2_value_id": "4",
+      "new_aligned": 2,
+      "new_contradictory": 2
+    },
+    {
+      "l1_value_id": "5",
+      "l1_value_name": "Have freedom of action",
+      "l2_value_id": "1",
+      "new_aligned": 2,
+      "new_contradictory": 2
+    },
+    {
+      "l1_value_id": "46",
+      "l1_value_name": "Have a world at peace",
+      "l2_value_id": "16",
+      "new_aligned": 1,
+      "new_contradictory": 1
+    }
+  ],
+  "per_label_direction_plan": "Every target label uses direction-contrastive pairs (equal aligned/contradictory counts) to preserve the direction-consistency design; raw generation is 3x the accepted target per label/direction.",
+  "expected_acceptance_rate": "33-60% conservative (historical tiny-pilot acceptance was 5/6, but stricter direction rules and new labels justify a 3x raw buffer); keep the best candidates up to the per-label targets.",
+  "verification_workflow": [
+    "local structural validation (schema, actor-in-evidence, failure/alignment dominance checks)",
+    "AI-assisted semantic verification (ACCEPT/REVIEW/REJECT_SUGGESTED)",
+    "human ACCEPT/REJECT by Peiyang",
+    "verified-pool update as a new timestamped folder",
+    "training_ready remains false"
+  ],
+  "stopping_conditions": [
+    "any official data or evaluation.py change",
+    "semantic verifier unavailable",
+    "acceptance rate below 20% (regenerate with tightened constraints instead of lowering the bar)",
+    "any candidate requiring direction convention deviation"
+  ],
+  "what_not_to_claim": [
+    "no recall/DRR improvement claims until the expanded A/B run completes with 3-5 seeds",
+    "the smoke run's DRR drop is NOT attributable to the 6 candidates (it concentrates in untouched L1=45)",
+    "single-seed results are trajectory-sensitive (early stop epoch differed 5 vs 11)"
+  ]
+}

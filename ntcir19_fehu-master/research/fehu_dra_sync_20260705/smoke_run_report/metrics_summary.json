@@ -1,0 +1,126 @@
+{
+  "baseline_metrics": {
+    "micro_f1": 0.30231716147719045,
+    "macro_f1": 0.03049637427228421,
+    "micro_precision": 0.2664326738991704,
+    "micro_recall": 0.3493723849372385,
+    "direction_reverse_rate": 0.21647164716471648,
+    "direction_reverse_count": 481,
+    "direction_reverse_denom_gold_excl": 2222,
+    "ambiguous_gold_values_filtered": 84,
+    "support_instances": 456,
+    "support_gold_labels": 2390,
+    "support_pred_labels": 3134,
+    "exact_match_count": 835
+  },
+  "augmented_metrics": {
+    "micro_f1": 0.3059687786960515,
+    "macro_f1": 0.03090085431103878,
+    "micro_precision": 0.27266775777414076,
+    "micro_recall": 0.34853556485355647,
+    "direction_reverse_rate": 0.162016201620162,
+    "direction_reverse_count": 360,
+    "direction_reverse_denom_gold_excl": 2222,
+    "ambiguous_gold_values_filtered": 84,
+    "support_instances": 456,
+    "support_gold_labels": 2390,
+    "support_pred_labels": 3055,
+    "exact_match_count": 833
+  },
+  "delta_metrics": {
+    "micro_f1": 0.003652,
+    "macro_f1": 0.000404,
+    "direction_reverse_rate": -0.054455,
+    "direction_reverse_count_delta": -121,
+    "pred_label_count_delta": -79,
+    "exact_match_count_delta": -2
+  },
+  "per_target": {
+    "baseline": {
+      "L1_12_aligned": {
+        "label": "1:12",
+        "gold_support": 47,
+        "tp": 0,
+        "fp": 0,
+        "fn": 47,
+        "recall": 0.0,
+        "precision": null
+      },
+      "L1_12_contradictory": {
+        "label": "0:12",
+        "gold_support": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "recall": 0.0,
+        "precision": null
+      },
+      "L1_38_aligned": {
+        "label": "1:38",
+        "gold_support": 44,
+        "tp": 0,
+        "fp": 0,
+        "fn": 44,
+        "recall": 0.0,
+        "precision": null
+      },
+      "L1_38_contradictory": {
+        "label": "0:38",
+        "gold_support": 28,
+        "tp": 0,
+        "fp": 0,
+        "fn": 28,
+        "recall": 0.0,
+        "precision": null
+      }
+    },
+    "augmented": {
+      "L1_12_aligned": {
+        "label": "1:12",
+        "gold_support": 47,
+        "tp": 0,
+        "fp": 0,
+        "fn": 47,
+        "recall": 0.0,
+        "precision": null
+      },
+      "L1_12_contradictory": {
+        "label": "0:12",
+        "gold_support": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "recall": 0.0,
+        "precision": null
+      },
+      "L1_38_aligned": {
+        "label": "1:38",
+        "gold_support": 44,
+        "tp": 0,
+        "fp": 0,
+        "fn": 44,
+        "recall": 0.0,
+        "precision": null
+      },
+      "L1_38_contradictory": {
+        "label": "0:38",
+        "gold_support": 28,
+        "tp": 0,
+        "fp": 0,
+        "fn": 28,
+        "recall": 0.0,
+        "precision": null
+      }
+    }
+  },
+  "metric_source_files": [
+    "output/research_ablation_smoke_runs/20260704_201355/baseline/output/pred_task1b.json",
+    "output/research_ablation_smoke_runs/20260704_201355/augmented/output/pred_task1b.json",
+    "dataset/gold_labels/dev/dev_human_values.json",
+    "output/research_ablation_smoke_runs/20260704_201355/comparison/detailed_metrics.json"
+  ],
+  "evaluator_method": "programmatic import of evaluation.py functions (parse_task1b, evaluate, l1_dir_universe, direction_reverse_rate_gold_excl)",
+  "evaluation_py_cli_used": false,
+  "programmatic_evaluator_functions_used": true,
+  "direction_mapping_note": "Authoritative convention (dataset/hv_categories/direction_mapping.json): 1=aligned, 0=contradictory. evaluation.py's DRR internal variable NAMES are inverted, but all reported DRR quantities are direction-symmetric aggregates and therefore numerically correct. Per-target labels here were mapped using the authoritative file, not the evaluator's names."
+}

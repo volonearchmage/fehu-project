@@ -1,0 +1,28 @@
+{
+  "_comment": "SHA-256 snapshot of frozen E1/E2/E3/E3a/Liu source files, taken when E4 was built. tests/test_frozen_unchanged.py compares against this.",
+  "hashes": {
+    "RH_test/E1_fewshot_repair/reports/E1_REPORT.md": "ad4843fd04431714aec3cec0b38d04afd1b75dc4530280c2bc0eb74b38bc2919",
+    "RH_test/E1_fewshot_repair/scripts/analyze_e1.py": "e3d1a7ec51e20f6d056d43bf339ee143a373ea1512bd7ff42868be06d7d29404",
+    "RH_test/E1_fewshot_repair/scripts/build_e1_pipeline.py": "faa17b385086644ed1b0d547b9b831ae20144780ac1c7b09d3f6f771939db75a",
+    "RH_test/E1_fewshot_repair/scripts/run_pipeline_e1.py": "842d71b4cf50a3d5655f12e5ca6d15a337f832c074bbf24ab5ead4ec1bbc88ce",
+    "RH_test/E2_prompt_bias_control/reports/E2_CHANGES.md": "a6d2541e0684231381c07ae1e1d8d8507165e39445142856f547cf4a9e6a3fc0",
+    "RH_test/E2_prompt_bias_control/reports/E2_REPORT.md": "6d014dad8f8e8732ee4bed1c2d16c414692866992f373e0e2fc7223b65bb842a",
+    "RH_test/E2_prompt_bias_control/scripts/analyze_e2.py": "fbad1600530e6ace666bd9b9475f5cec54c82d0e9993b6f98097221c1fb92ff0",
+    "RH_test/E2_prompt_bias_control/scripts/build_e2_pipeline.py": "86cc4bafa1caaa27ebe2065184517e84a7b0ed46127115793d8929b59fcc4119",
+    "RH_test/E2_prompt_bias_control/scripts/run_pipeline_e2.py": "f8f40234a2fa05c3ffd728d5cce7e57756b762dc1e21961990fba06c44b3654e",
+    "RH_test/E3_subevent_decomposition/reports/E3_CHANGES.md": "b249b1f11b39cd9b97d309a28c38a87d77264f70344ec1cc061f86a13c445d45",
+    "RH_test/E3_subevent_decomposition/reports/E3_REPORT_vs_E3a.md": "134cc3c9ceb096f46146c2742096ead771e920307055a021804a83e7aac0483e",
+    "RH_test/E3_subevent_decomposition/scripts/analyze_e3.py": "9267144cb5eace50f4c6785ab4df3838786bb125e8aba79dbfac6cd93ceb077e",
+    "RH_test/E3_subevent_decomposition/scripts/analyze_e3_vs_e3a.py": "1fd5100a06eb367648c828614bf5faf986649522e7086645394e35eed917270b",
+    "RH_test/E3_subevent_decomposition/scripts/build_e3_pipeline.py": "e5991166c632a5ee8a3f23fce148c332e0fbc8418ce856c7c881887c0c3adaab",
+    "RH_test/E3_subevent_decomposition/scripts/offline_check_e3.py": "fa65de42a9fc7fda17ca3a3c5ba37ee3c12cd8ab0d7e769c2c36d5fa6616d2ba",
+    "RH_test/E3_subevent_decomposition/scripts/run_pipeline_e3.py": "d421f34d2773d9e9a861ca2d9f2b6f75da31cc26ba3f14b9b66c941f0e9fbc60",
+    "RH_test/E3a_task1_only_subevent/reports/E3a_CHANGES.md": "3908147f515c652e308e349c5fb4963d70ca2f4c5d93b04b823c8d6cfe0cc77a",
+    "RH_test/E3a_task1_only_subevent/reports/E3a_REPORT.md": "e6ee446bdd764c56fa2a5cc14560a9bd74751140e627db10380d75704ea8eb4c",
+    "RH_test/E3a_task1_only_subevent/scripts/analyze_e3a.py": "df640f1510336e834ea73f62891d4fdae20d4d6228948ed7ad75bf426d857cf4",
+    "RH_test/E3a_task1_only_subevent/scripts/build_e3a_pipeline.py": "3c8905a75ffa728d3c6c55d8ac5c252b1261e6aa3ce51e023c5d17ae1b84bd7d",
+    "RH_test/E3a_task1_only_subevent/scripts/offline_check_e3a.py": "9a5afd9240f67b78495d73e817d2da7a0371be98c5ef6e185a09dc29fc50ee01",
+    "RH_test/E3a_task1_only_subevent/scripts/run_pipeline_e3a.py": "d99988af2b28c0075b9be8929de3cfd89a13ec7c1773fd9d11a9662e45fa6c46",
+    "liu_method/run_pipeline.py": "5861c945ee899ac5edab0ca150d1eb8ea1cf3910d593cda3b17cc7172c0e1b09"
+  }
+}

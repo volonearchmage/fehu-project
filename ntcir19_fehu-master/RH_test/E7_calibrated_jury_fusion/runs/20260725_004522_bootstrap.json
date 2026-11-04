@@ -1,0 +1,89 @@
+{
+  "n_resamples": 10000,
+  "seed": 20260725,
+  "liu_reported_constant": 0.5657,
+  "systems": {
+    "G4": {
+      "point": 0.5817,
+      "ci95": [
+        0.5647,
+        0.599
+      ],
+      "frac_above_liu_reported": 0.9685
+    },
+    "G3": {
+      "point": 0.579,
+      "ci95": [
+        0.5615,
+        0.5966
+      ],
+      "frac_above_liu_reported": 0.9321
+    },
+    "G1": {
+      "point": 0.5608,
+      "ci95": [
+        0.5428,
+        0.5795
+      ],
+      "frac_above_liu_reported": 0.3044
+    },
+    "E6b": {
+      "point": 0.5496,
+      "ci95": [
+        0.5326,
+        0.5669
+      ],
+      "frac_above_liu_reported": 0.0356
+    },
+    "E1": {
+      "point": 0.548,
+      "ci95": [
+        0.5299,
+        0.5665
+      ],
+      "frac_above_liu_reported": 0.0293
+    },
+    "LiuFrozen": {
+      "point": 0.5347,
+      "ci95": [
+        0.5163,
+        0.5534
+      ],
+      "frac_above_liu_reported": 0.0002
+    }
+  },
+  "pairs": {
+    "G4:E1": {
+      "point_delta": 0.0338,
+      "ci95": [
+        0.0201,
+        0.0475
+      ],
+      "p_delta_le_0": 0.0
+    },
+    "G4:LiuFrozen": {
+      "point_delta": 0.047,
+      "ci95": [
+        0.0323,
+        0.0615
+      ],
+      "p_delta_le_0": 0.0
+    },
+    "G3:E1": {
+      "point_delta": 0.031,
+      "ci95": [
+        0.0177,
+        0.0444
+      ],
+      "p_delta_le_0": 0.0
+    },
+    "G4:E6b": {
+      "point_delta": 0.0321,
+      "ci95": [
+        0.0209,
+        0.0433
+      ],
+      "p_delta_le_0": 0.0
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "primary_labels": 2928,
+  "fused_labels": 2764,
+  "actions": {
+    "remove": 529,
+    "add": 365
+  },
+  "frequent_classes": 38
+}
+[done] G3_veto_add -> E7G4Test/fusion/G3_veto_add

@@ -1,0 +1,80 @@
+[
+  {
+    "guid": "aug_prev_rare_positive_32_001_83df110175",
+    "article_human_values": [
+      {
+        "actor": "aug_prev_rare_positive_32_001_83df110175-0",
+        "l1_value": "32",
+        "l2_value": "11",
+        "direction": "1",
+        "explanation": "The group submitted a detailed route plan in advance, designated marshals to ensure crowd compliance with traffic laws, and cleared the area by the agreed time."
+      }
+    ],
+    "subevents_human_values": []
+  },
+  {
+    "guid": "aug_prev_dir_contrast_12_002_aligned_ce1da19f54",
+    "article_human_values": [
+      {
+        "actor": "aug_prev_dir_contrast_12_002_aligned_ce1da19f54-0",
+        "l1_value": "12",
+        "l2_value": "4",
+        "direction": "1",
+        "explanation": "NovaSun Energy set a new world record for solar cell efficiency, reaching 33.2% with its novel tandem design."
+      }
+    ],
+    "subevents_human_values": []
+  },
+  {
+    "guid": "aug_prev_dir_contrast_38_003_contradictory_e969e14138",
+    "article_human_values": [
+      {
+        "actor": "aug_prev_dir_contrast_38_003_contradictory_e969e14138-0",
+        "l1_value": "38",
+        "l2_value": "14",
+        "direction": "0",
+        "explanation": "The company admitted to fabricating client performance data during a regulatory review."
+      }
+    ],
+    "subevents_human_values": []
+  },
+  {
+    "guid": "aug_prev_dir_contrast_38_003_aligned_e969e14138",
+    "article_human_values": [
+      {
+        "actor": "aug_prev_dir_contrast_38_003_aligned_e969e14138-0",
+        "l1_value": "38",
+        "l2_value": "14",
+        "direction": "1",
+        "explanation": "NovaTech Solutions proactively notified all affected users about the security incident and offered free credit monitoring."
+      }
+    ],
+    "subevents_human_values": []
+  },
+  {
+    "guid": "aug_prev_rare_positive_24_004_98671d8d01",
+    "article_human_values": [
+      {
+        "actor": "aug_prev_rare_positive_24_004_98671d8d01-0",
+        "l1_value": "24",
+        "l2_value": "8",
+        "direction": "1",
+        "explanation": "The Metropolitan Police have launched a new community initiative encouraging residents to keep their homes neat and tidy to enhance personal security."
+      }
+    ],
+    "subevents_human_values": []
+  },
+  {
+    "guid": "aug_repl_dir_contrast_12_002_contradictory_3cfa8093d2",
+    "article_human_values": [
+      {
+        "actor": "aug_repl_dir_contrast_12_002_contradictory_3cfa8093d2-0",
+        "l1_value": "12",
+        "l2_value": "4",
+        "direction": "0",
+        "explanation": "Halcyon Motors produced fewer than 4,000 of the 50,000 electric delivery vans it had promised and missed every quarterly milestone in its rollout plan."
+      }
+    ],
+    "subevents_human_values": []
+  }
+]

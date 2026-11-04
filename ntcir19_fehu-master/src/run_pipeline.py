@@ -11,7 +11,7 @@ Usage (from project root):
     python src/run_pipeline.py --mode test --model gpt-4o
 
 API Key Setup — Create '.env' in project root or `export OPENAI_API_KEY=sk-...`:
-    OPENAI_API_KEY=sk-your-key-here
+    OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 
 This script is the post-audit version. Changes vs. the original:
   • --model now actually flows into the API call (was silently ignored).

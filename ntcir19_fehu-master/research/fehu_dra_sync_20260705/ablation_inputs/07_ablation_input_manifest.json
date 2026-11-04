@@ -1,0 +1,170 @@
+{
+  "created_at": "2026-07-02T19:37:01",
+  "source_verified_pool_path": "output/research_verified_candidates/20260702_165107/01_verified_augmented_candidates.jsonl",
+  "source_ablation_preparation_folder": "output/research_ablation_preparation/20260702_165650",
+  "official_train_event_base_path": "dataset/train/train_event_base.json",
+  "official_train_human_values_path": "dataset/gold_labels/train/train_human_values.json",
+  "baseline_train_event_base_path": "output/research_ablation_inputs/20260702_193701/01_baseline_train_event_base.json",
+  "baseline_train_human_values_path": "output/research_ablation_inputs/20260702_193701/02_baseline_train_human_values.json",
+  "augmented_train_event_base_path": "output/research_ablation_inputs/20260702_193701/03_augmented_train_event_base.json",
+  "augmented_train_human_values_path": "output/research_ablation_inputs/20260702_193701/04_augmented_train_human_values.json",
+  "synthetic_event_count": 6,
+  "synthetic_gold_label_count": 6,
+  "verified_candidate_count": 6,
+  "direction_mapping_used": {
+    "1 aligned": "1",
+    "0 contradictory": "0"
+  },
+  "condition_A_baseline": {
+    "train_event_base": 1228,
+    "train_human_values": 1228,
+    "augmented_candidates": 0
+  },
+  "condition_B_augmented": {
+    "train_event_base": 1234,
+    "train_human_values": 1234,
+    "augmented_candidates": 6
+  },
+  "official_file_sha256_before": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "dataset/gold_labels/train/train_human_values.json": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+    "dataset/dev/dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset/gold_labels/dev/dev_human_values.json": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+    "dataset/hv_categories/human_value_level1_values.json": "40fa4b78ba7ae7b4f61d23c821dbe70a2a1f3079369fb9ff5f2cb11d79d7f96e",
+    "dataset/hv_categories/human_value_level2_values.json": "550ee6de5db3b3f8941ad8a006d4d272774b714aa71b75d9ac9c966fe1ec75c2",
+    "dataset/hv_categories/level_1_to_level_2.json": "dc1ef3897a5de000c8a40e3672b12650163832026eb984ab46da57aa8037a1bf",
+    "evaluation.py": "e4a7f89e177fa5767553311d218b42a2c628c2803586f32a3d191d878648ad47"
+  },
+  "official_file_sha256_after": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "dataset/gold_labels/train/train_human_values.json": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+    "dataset/dev/dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset/gold_labels/dev/dev_human_values.json": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+    "dataset/hv_categories/human_value_level1_values.json": "40fa4b78ba7ae7b4f61d23c821dbe70a2a1f3079369fb9ff5f2cb11d79d7f96e",
+    "dataset/hv_categories/human_value_level2_values.json": "550ee6de5db3b3f8941ad8a006d4d272774b714aa71b75d9ac9c966fe1ec75c2",
+    "dataset/hv_categories/level_1_to_level_2.json": "dc1ef3897a5de000c8a40e3672b12650163832026eb984ab46da57aa8037a1bf",
+    "evaluation.py": "e4a7f89e177fa5767553311d218b42a2c628c2803586f32a3d191d878648ad47"
+  },
+  "per_candidate_trace": [
+    {
+      "candidate_id": "prev_rare_positive_32_001_83df110175",
+      "synthetic_guid": "aug_prev_rare_positive_32_001_83df110175",
+      "synthetic_actor_id": "aug_prev_rare_positive_32_001_83df110175-0",
+      "target_l1_value_id": "32",
+      "target_l1_value_name": "Be behaving properly",
+      "target_l2_value_id": "11",
+      "target_direction": "1 aligned",
+      "direction_code": "1",
+      "source_candidate_content_hash": "f43c895b2f5e54b80bf697861bc35a6b40062d4c6c97e6b4b73d62eb3784dc08",
+      "source_files": [
+        "output/research_ai_verification/20260626_214148/05_human_review_sheet_AI_ASSISTED_HUMAN_DECIDED.csv",
+        "output/research_ai_verification/20260626_214148/04_semantic_verification_table.csv",
+        "output/research_ai_verification/20260626_214148/03_semantic_judgments.jsonl",
+        "output/research_ai_verification/20260626_214148/07_review_and_reject_notes.md",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/07_unified_candidate_samples.jsonl",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/08_unified_validation_table.csv"
+      ]
+    },
+    {
+      "candidate_id": "prev_dir_contrast_12_002_aligned_ce1da19f54",
+      "synthetic_guid": "aug_prev_dir_contrast_12_002_aligned_ce1da19f54",
+      "synthetic_actor_id": "aug_prev_dir_contrast_12_002_aligned_ce1da19f54-0",
+      "target_l1_value_id": "12",
+      "target_l1_value_name": "Have success",
+      "target_l2_value_id": "4",
+      "target_direction": "1 aligned",
+      "direction_code": "1",
+      "source_candidate_content_hash": "6ab19a81c3fc69f777a33aa80f7b1e1134e5e3d133d174d6e7108e12bfc34fcd",
+      "source_files": [
+        "output/research_ai_verification/20260626_214148/05_human_review_sheet_AI_ASSISTED_HUMAN_DECIDED.csv",
+        "output/research_ai_verification/20260626_214148/04_semantic_verification_table.csv",
+        "output/research_ai_verification/20260626_214148/03_semantic_judgments.jsonl",
+        "output/research_ai_verification/20260626_214148/07_review_and_reject_notes.md",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/07_unified_candidate_samples.jsonl",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/08_unified_validation_table.csv"
+      ]
+    },
+    {
+      "candidate_id": "prev_dir_contrast_38_003_contradictory_e969e14138",
+      "synthetic_guid": "aug_prev_dir_contrast_38_003_contradictory_e969e14138",
+      "synthetic_actor_id": "aug_prev_dir_contrast_38_003_contradictory_e969e14138-0",
+      "target_l1_value_id": "38",
+      "target_l1_value_name": "Be honest",
+      "target_l2_value_id": "14",
+      "target_direction": "0 contradictory",
+      "direction_code": "0",
+      "source_candidate_content_hash": "50fb661078b36b90a56a1feb37599f4a2025fdf0e1cd286396ca9d951a350cfc",
+      "source_files": [
+        "output/research_ai_verification/20260626_214148/05_human_review_sheet_AI_ASSISTED_HUMAN_DECIDED.csv",
+        "output/research_ai_verification/20260626_214148/04_semantic_verification_table.csv",
+        "output/research_ai_verification/20260626_214148/03_semantic_judgments.jsonl",
+        "output/research_ai_verification/20260626_214148/07_review_and_reject_notes.md",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/07_unified_candidate_samples.jsonl",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/08_unified_validation_table.csv"
+      ]
+    },
+    {
+      "candidate_id": "prev_dir_contrast_38_003_aligned_e969e14138",
+      "synthetic_guid": "aug_prev_dir_contrast_38_003_aligned_e969e14138",
+      "synthetic_actor_id": "aug_prev_dir_contrast_38_003_aligned_e969e14138-0",
+      "target_l1_value_id": "38",
+      "target_l1_value_name": "Be honest",
+      "target_l2_value_id": "14",
+      "target_direction": "1 aligned",
+      "direction_code": "1",
+      "source_candidate_content_hash": "9e96933a3150a8ff5ef41bac419c316df8bfca187f263b7d500baebaa347eed9",
+      "source_files": [
+        "output/research_ai_verification/20260626_214148/05_human_review_sheet_AI_ASSISTED_HUMAN_DECIDED.csv",
+        "output/research_ai_verification/20260626_214148/04_semantic_verification_table.csv",
+        "output/research_ai_verification/20260626_214148/03_semantic_judgments.jsonl",
+        "output/research_ai_verification/20260626_214148/07_review_and_reject_notes.md",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/07_unified_candidate_samples.jsonl",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/08_unified_validation_table.csv"
+      ]
+    },
+    {
+      "candidate_id": "prev_rare_positive_24_004_98671d8d01",
+      "synthetic_guid": "aug_prev_rare_positive_24_004_98671d8d01",
+      "synthetic_actor_id": "aug_prev_rare_positive_24_004_98671d8d01-0",
+      "target_l1_value_id": "24",
+      "target_l1_value_name": "Be neat and tidy",
+      "target_l2_value_id": "8",
+      "target_direction": "1 aligned",
+      "direction_code": "1",
+      "source_candidate_content_hash": "3364ff9f4c5d44f49e8ad7d7e2c0cadacd26975c7b125d3f9cbf809e34de0797",
+      "source_files": [
+        "output/research_ai_verification/20260626_214148/05_human_review_sheet_AI_ASSISTED_HUMAN_DECIDED.csv",
+        "output/research_ai_verification/20260626_214148/04_semantic_verification_table.csv",
+        "output/research_ai_verification/20260626_214148/03_semantic_judgments.jsonl",
+        "output/research_ai_verification/20260626_214148/07_review_and_reject_notes.md",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/07_unified_candidate_samples.jsonl",
+        "output/research_generation_tiny_pilot_repair/20260615_175432/08_unified_validation_table.csv"
+      ]
+    },
+    {
+      "candidate_id": "repl_dir_contrast_12_002_contradictory_3cfa8093d2",
+      "synthetic_guid": "aug_repl_dir_contrast_12_002_contradictory_3cfa8093d2",
+      "synthetic_actor_id": "aug_repl_dir_contrast_12_002_contradictory_3cfa8093d2-0",
+      "target_l1_value_id": "12",
+      "target_l1_value_name": "Have success",
+      "target_l2_value_id": "4",
+      "target_direction": "0 contradictory",
+      "direction_code": "0",
+      "source_candidate_content_hash": "32ea59a19aeb8d4abf316b1f6d7a42d06f396ef9e91f1f4860a3503bb6bdaf73",
+      "source_files": [
+        "output/research_verified_candidates/20260702_132154/01_verified_augmented_candidates.jsonl",
+        "output/research_ai_verification/20260626_214148/05_human_review_sheet_AI_ASSISTED_HUMAN_DECIDED.csv",
+        "output/research_ai_verification/20260626_214148/04_semantic_verification_table.csv",
+        "output/research_ai_verification/20260626_214148/03_semantic_judgments.jsonl",
+        "output/research_ai_verification/20260626_214148/07_review_and_reject_notes.md",
+        "output/research_l1_12_replacement_generation/20260702_163802/01_l1_12_replacement_candidate.jsonl",
+        "output/research_l1_12_replacement_generation/20260702_163802/02_l1_12_replacement_validation_table.csv",
+        "output/research_l1_12_replacement_generation/20260702_163802/03_l1_12_replacement_report.md",
+        "output/research_ai_verification_l1_12_replacement/20260702_164414/03_semantic_verification_judgment.jsonl",
+        "output/research_ai_verification_l1_12_replacement/20260702_164414/04_semantic_verification_table.csv",
+        "output/research_ai_verification_l1_12_replacement/20260702_164414/05_human_review_sheet.csv",
+        "output/research_ai_verification_l1_12_replacement/20260702_164414/06_verification_report.md"
+      ]
+    }
+  ]
+}

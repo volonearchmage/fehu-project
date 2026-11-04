@@ -1,0 +1,42 @@
+{
+  "event_base": "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/dataset/test/test_article_event_base.json",
+  "pred_task1a": "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/DS_final/outputs/pred_task1a.json",
+  "pred_task1b": "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/DS_final/outputs/pred_task1b.json",
+  "mode": "test",
+  "strict": true,
+  "event_guid_count": 175,
+  "task1a": {
+    "n_articles": 175,
+    "n_predictions": 1834,
+    "n_unique_guids": 175,
+    "n_duplicates": 0,
+    "n_bad_actor": 0,
+    "n_bad_l2": 0,
+    "n_unknown_guid": 0,
+    "n_extra_fields": 0,
+    "n_entries_missing_actor": 0,
+    "n_entries_missing_l2": 0,
+    "avg_preds_per_article": 10.48
+  },
+  "task1b": {
+    "n_articles": 175,
+    "n_predictions": 2260,
+    "n_unique_guids": 175,
+    "n_duplicates": 0,
+    "n_bad_actor": 0,
+    "n_bad_l1": 0,
+    "n_bad_direction": 0,
+    "n_unknown_guid": 0,
+    "n_extra_fields": 0,
+    "n_entries_missing_actor": 0,
+    "n_entries_missing_l1": 0,
+    "n_entries_missing_direction": 0,
+    "avg_preds_per_article": 12.914285714285715
+  },
+  "cross_issues": [],
+  "likely_full_submission": true,
+  "status": "clean",
+  "n_invalid_entries": 0,
+  "out_dir": "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/output/research_submission_safety/20260726_211621",
+  "timestamp": "20260726_211621"
+}

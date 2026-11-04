@@ -1,0 +1,16 @@
+[
+  {
+    "guid": "0-4349-1-t",
+    "title": "Death toll rises in Taiwan bridge collapse",
+    "n_subevents": 8,
+    "n_output_labels": 15,
+    "content_chars": 2370
+  },
+  {
+    "guid": "0-4352-3-1",
+    "title": "Limo crash leaves 20 dead in New York state",
+    "n_subevents": 6,
+    "n_output_labels": 10,
+    "content_chars": 2479
+  }
+]

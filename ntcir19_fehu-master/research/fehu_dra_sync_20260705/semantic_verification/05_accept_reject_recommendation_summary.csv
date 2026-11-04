@@ -1,0 +1,23 @@
+semantic_verdict,l1_value_id,direction,risk_level,suggested_training_utility,count,interpretation_note
+ACCEPT_SUGGESTED,12,aligned,LOW,HIGH,5,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,12,aligned,MEDIUM,MEDIUM,1,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,12,contradictory,LOW,HIGH,6,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,22,aligned,LOW,HIGH,8,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,22,aligned,MEDIUM,MEDIUM,1,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,22,contradictory,LOW,HIGH,6,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,22,contradictory,MEDIUM,MEDIUM,3,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,30,aligned,LOW,HIGH,6,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,30,contradictory,LOW,HIGH,6,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,38,aligned,LOW,HIGH,1,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,38,aligned,MEDIUM,MEDIUM,3,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,38,contradictory,LOW,HIGH,5,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,46,aligned,LOW,HIGH,3,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,46,contradictory,LOW,HIGH,3,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,5,aligned,LOW,HIGH,5,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,5,contradictory,LOW,HIGH,2,Clean per AI judgment; final decision remains human.
+ACCEPT_SUGGESTED,5,contradictory,MEDIUM,MEDIUM,3,Clean per AI judgment; final decision remains human.
+REJECT_SUGGESTED,38,aligned,HIGH,LOW,1,"Verified-pool actor conflict (same actor, opposite direction) — recommend reject/regenerate."
+REVIEW_SUGGESTED,38,aligned,HIGH,LOW,1,"Specific concern documented (redundancy, direction ambiguity, or value confusability); human must adjudicate."
+REVIEW_SUGGESTED,38,contradictory,MEDIUM,MEDIUM,1,"Specific concern documented (redundancy, direction ambiguity, or value confusability); human must adjudicate."
+REVIEW_SUGGESTED,5,aligned,MEDIUM,MEDIUM,1,"Specific concern documented (redundancy, direction ambiguity, or value confusability); human must adjudicate."
+REVIEW_SUGGESTED,5,contradictory,MEDIUM,MEDIUM,1,"Specific concern documented (redundancy, direction ambiguity, or value confusability); human must adjudicate."

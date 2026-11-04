@@ -1,0 +1,21 @@
+{
+  "method": "3-way majority vote + Flash direction verification",
+  "variants": [
+    "baseline",
+    "targeted_more_shot_balanced",
+    "compact_strict"
+  ],
+  "flash_model": "deepseek-v4-flash",
+  "pro_model": "deepseek-v4-pro",
+  "temperature": 0.0,
+  "thinking": "disabled",
+  "event_base": "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/dataset/test/test_article_event_base.json",
+  "articles": 175,
+  "majority_vote": {
+    "3_of_3": 1563,
+    "2_of_3": 732,
+    "total": 2295
+  },
+  "flash_flipped": 82,
+  "final_predictions_1b": 2260
+}

@@ -1,0 +1,10 @@
+{
+  "n_nontarget_gold_supported": 75,
+  "n_with_synthetic_positives": 60,
+  "n_without_synthetic_positives": 15,
+  "mean_delta_f1_with_synthetic": 0.131,
+  "mean_delta_f1_without_synthetic": 0.052,
+  "n_improved_with_synthetic": 38,
+  "n_improved_without_synthetic": 4,
+  "note": "single seed, confounded comparison (data + supervision policy changed together); this decomposition is descriptive, not causal"
+}

@@ -1,0 +1,80 @@
+{
+  "source_verified_pool_path": "output/research_verified_candidates/20260702_165107/01_verified_augmented_candidates.jsonl",
+  "verified_candidate_count": 6,
+  "candidate_ids": [
+    "prev_rare_positive_32_001_83df110175",
+    "prev_dir_contrast_12_002_aligned_ce1da19f54",
+    "prev_dir_contrast_38_003_contradictory_e969e14138",
+    "prev_dir_contrast_38_003_aligned_e969e14138",
+    "prev_rare_positive_24_004_98671d8d01",
+    "repl_dir_contrast_12_002_contradictory_3cfa8093d2"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "prev_rare_positive_32_001_83df110175",
+      "target_l1_value_id": "32",
+      "target_l1_value_name": "Be behaving properly",
+      "target_l2_value_id": "11",
+      "target_direction": "1 aligned",
+      "training_ready": false
+    },
+    {
+      "candidate_id": "prev_dir_contrast_12_002_aligned_ce1da19f54",
+      "target_l1_value_id": "12",
+      "target_l1_value_name": "Have success",
+      "target_l2_value_id": "4",
+      "target_direction": "1 aligned",
+      "training_ready": false
+    },
+    {
+      "candidate_id": "prev_dir_contrast_38_003_contradictory_e969e14138",
+      "target_l1_value_id": "38",
+      "target_l1_value_name": "Be honest",
+      "target_l2_value_id": "14",
+      "target_direction": "0 contradictory",
+      "training_ready": false
+    },
+    {
+      "candidate_id": "prev_dir_contrast_38_003_aligned_e969e14138",
+      "target_l1_value_id": "38",
+      "target_l1_value_name": "Be honest",
+      "target_l2_value_id": "14",
+      "target_direction": "1 aligned",
+      "training_ready": false
+    },
+    {
+      "candidate_id": "prev_rare_positive_24_004_98671d8d01",
+      "target_l1_value_id": "24",
+      "target_l1_value_name": "Be neat and tidy",
+      "target_l2_value_id": "8",
+      "target_direction": "1 aligned",
+      "training_ready": false
+    },
+    {
+      "candidate_id": "repl_dir_contrast_12_002_contradictory_3cfa8093d2",
+      "target_l1_value_id": "12",
+      "target_l1_value_name": "Have success",
+      "target_l2_value_id": "4",
+      "target_direction": "0 contradictory",
+      "training_ready": false
+    }
+  ],
+  "pair_completion": {
+    "L1_12_Have_success": {
+      "directions_present": [
+        "0 contradictory",
+        "1 aligned"
+      ],
+      "complete": true
+    },
+    "L1_38_Be_honest": {
+      "directions_present": [
+        "0 contradictory",
+        "1 aligned"
+      ],
+      "complete": true
+    }
+  },
+  "l1_l2_consistency_validated_against_hv_categories": true,
+  "created_at": "2026-07-02T16:56:50"
+}

@@ -1,0 +1,7 @@
+system,fn_target18,fn_nontarget90,fp_target18,fp_nontarget90_gold_supported,fp_on_zero_gold_classes,reversals_on_target18_gold,reversals_on_nontarget_gold,reversals_total
+deberta_baseline,140,1415,0,2299,0,9,472,481
+augmented_v1,140,1543,0,1603,0,9,294,303
+augmented_v2,128,970,146,3989,0,23,617,640
+liu_frozen,112,1070,64,846,10,2,49,51
+hybrid_h2,105,876,101,1272,15,5,74,79
+hybrid_h3,109,974,79,990,9,5,64,69

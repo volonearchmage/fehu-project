@@ -1,0 +1,60 @@
+{
+  "task1b": {
+    "micro_f1": 0.547434554973822,
+    "macro_f1": 0.33819891688984116,
+    "micro_precision": 0.5480083857442348,
+    "micro_recall": 0.5468619246861924,
+    "support_instances": 459,
+    "support_gold_labels": 2390,
+    "support_pred_labels": 2385,
+    "macro_precision": 0.40971485138185837,
+    "macro_recall": 0.334401093988106,
+    "n_gold_supported_labels": 93
+  },
+  "task1a": {
+    "micro_f1": 0.6617297011372653,
+    "macro_f1": 0.5031999936880693,
+    "micro_precision": 0.6515625,
+    "micro_recall": 0.6722192369693714,
+    "support_instances": 459,
+    "support_gold_labels": 1861,
+    "support_pred_labels": 1920
+  },
+  "drr": {
+    "drr": 0.031053105310531053,
+    "reversals": 69,
+    "denominator": 2222,
+    "ambiguous_gold": 84
+  },
+  "target18": {
+    "tp": 31,
+    "fp": 79,
+    "fn": 109,
+    "micro_precision": 0.2818181818181818,
+    "micro_recall": 0.22142857142857142,
+    "micro_f1": 0.24799999999999997
+  },
+  "nontarget90": {
+    "tp": 1276,
+    "fp": 999,
+    "fn": 974,
+    "micro_precision": 0.5608791208791208,
+    "micro_recall": 0.5671111111111111,
+    "micro_f1": 0.5639779005524862
+  },
+  "baseline_e1": {
+    "run": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/20260722_152456",
+    "task1b_micro_f1": 0.5479678151433878,
+    "task1b_macro_f1": 0.3719060216136949,
+    "task1a_micro_f1": 0.657380123225288,
+    "drr": 0.034653465346534656
+  },
+  "delta_vs_e1": {
+    "task1b_micro_f1": -0.0005332601695657857,
+    "task1b_macro_f1": -0.03370710472385374,
+    "task1a_micro_f1": 0.004349577911977209,
+    "drr": -0.0036003600360036032,
+    "target18_micro_f1": 0.0020453074433656737,
+    "nontarget90_micro_f1": -0.004554492572238389
+  }
+}

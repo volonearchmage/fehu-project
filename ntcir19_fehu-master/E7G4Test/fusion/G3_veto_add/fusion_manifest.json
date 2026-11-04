@@ -1,0 +1,56 @@
+{
+  "experiment": "E7_calibrated_jury_fusion",
+  "cell": "G3_veto_add",
+  "primary": "E6b",
+  "jurors": [
+    "E1",
+    "E6",
+    "E6c",
+    "Liu"
+  ],
+  "timestamp": "2026-07-26T17:01:08.968928+00:00",
+  "calibration": {
+    "mode": "apply",
+    "theta": 0.27479182437547306,
+    "loaded_from": "E7G4Test/fusion/calfit_dev/calibration.json"
+  },
+  "inputs": {
+    "E1": {
+      "path": "RH_test/E1_fewshot_repair/runs/e7g4test_20260726/pred_task1b.json",
+      "sha256": "fec561fcd0996147529717e6145c185ee0d2a356cd888acaeecac8df6785633d"
+    },
+    "Liu": {
+      "path": "output/task1/runs/test_deepseek_deepseek-v4-flash_targeted_more_shot_balanced_temp0p1_max8000/pred_task1b.json",
+      "sha256": "7dbe8d8559ec6d6453596517a718a9bb80e40600791463c68576e7ba2bea3175"
+    },
+    "E6": {
+      "path": "RH_test/E6_e3a_self_segmentation/runs/e7g4test_20260726/pred_task1b.json",
+      "sha256": "1a4279374e42daf1e6b40818259dbcc332d52a0ae3976549545aad013949bb27"
+    },
+    "E6b": {
+      "path": "RH_test/E6b_granularity_control/runs/e7g4test_20260726/pred_task1b.json",
+      "sha256": "d0d088a9ae7f0d146bc0a49f46175fc5ad51172b1ba0ae0bfce5b2481fbb7737"
+    },
+    "E6c": {
+      "path": "RH_test/E6c_pro_nonthinking/runs/e7g4test_20260726/pred_task1b.json",
+      "sha256": "9de0d84b9f4347367ad1efd5b5cccc1f11e0633ddc1719b5cdc2c1b97bad4ccf"
+    },
+    "v2_probs": {
+      "path": "E7G4Test/inputs/test_v2_probabilities.jsonl",
+      "sha256": "e99513556b115d89d600841f5113f80a581af42a4a868766b4dfdf86b6464ca2"
+    },
+    "articles": {
+      "path": "dataset/test/test_article_event_base.json",
+      "sha256": "e78019b3c8c5e7ea6823913f079db9f7a90b46fbbe20053658aaa88c61915dce"
+    }
+  },
+  "counts": {
+    "primary_labels": 2928,
+    "fused_labels": 2764,
+    "actions": {
+      "remove": 529,
+      "add": 365
+    },
+    "frequent_classes": 38
+  }
+}

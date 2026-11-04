@@ -1,0 +1,21 @@
+Title: 4 Civilians Killed, 10 Wounded in Faryab Mortar Attack
+
+Article:
+At least four civilians were killed and 10 others were wounded in a mortar attack in northern Faryab province on Thursday morning, local officials said. 
+
+The incident happened around 11:00am local time after a mortar round landed in a market in Shareen Tagab district of the province, said Abdul Karim Yourish, a spokesman for the provincial police chief. 
+
+“The mortar was fired 'by the Taliban' to target the security forces, but all the victims are civilians who were at the market to shop,” Yourish said.  
+
+The Taliban has not commented on the attack.
+
+Actors:
+- Taliban (ID: 1-15231-2-1-0)
+- Civilians (ID: 1-15231-2-1-1)
+
+TARGET ACTOR FOR THIS CALL:
+- Taliban (ID: 1-15231-2-1-0)
+
+Identify human values for this TARGET ACTOR only. The other listed actors are context for attribution and must not appear in the output.
+Every returned item must use actor_id "1-15231-2-1-0" exactly.
+Return ONLY a JSON object with an "items" array. An empty items array is valid when this target actor has no supported value.

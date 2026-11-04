@@ -1,0 +1,17 @@
+{
+  "n_articles": 177,
+  "n_actor_calls": 459,
+  "n_task1a_predictions": 2370,
+  "n_task1b_predictions": 3414,
+  "output_filtering": {
+    "extraneous_items": 0,
+    "malformed_items": 0,
+    "raw_items": 3414,
+    "kept_items": 3414
+  },
+  "cached_success_total": 459,
+  "retry_calls": 0,
+  "system_fingerprints": [
+    "fp_9954b31ca7_prod0820_fp8_kvcache_20260402"
+  ]
+}

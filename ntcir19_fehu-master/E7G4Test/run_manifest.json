@@ -1,0 +1,57 @@
+{
+  "experiment": "E7G4Test \u2014 frozen E7-G4 Task-1 test inference",
+  "date": "2026-07-26/27",
+  "git_commit": "416c8c9836ad0c320833b9d8c0eb51d82a215a39",
+  "frozen_method": {
+    "grid_reference_dev": "RH_test/E7_calibrated_jury_fusion/runs/20260725_004522_G4_dirqa (dev 1b micro 0.5817)",
+    "cell": "G3_veto_add + G4 direction-QA",
+    "primary": "E6b",
+    "jurors": [
+      "E1",
+      "E6",
+      "E6c",
+      "Liu"
+    ],
+    "calibration": "fit on full dev (theta=0.27479), applied to test \u2014 E7G4Test/fusion/calfit_dev/calibration.json",
+    "no_test_gold_used": true,
+    "no_official_subevents_used": true
+  },
+  "inputs": {
+    "test_articles": {
+      "path": "dataset/test/test_article_event_base.json",
+      "sha256": "e78019b3c8c5e7ea6823913f079db9f7a90b46fbbe20053658aaa88c61915dce"
+    },
+    "test_v2_probabilities": {
+      "path": "E7G4Test/inputs/test_v2_probabilities.jsonl",
+      "sha256": "e99513556b115d89d600841f5113f80a581af42a4a868766b4dfdf86b6464ca2"
+    },
+    "calibration": {
+      "path": "E7G4Test/fusion/calfit_dev/calibration.json",
+      "sha256": "7d20755108ff5331bab664cd7229a133461e5acc7342e33feb12445d2de6839b"
+    }
+  },
+  "member_runs": {
+    "E1": "RH_test/E1_fewshot_repair/runs/e7g4test_20260726/ (mirrored E7G4Test/members/E1/)",
+    "Liu": "output/task1/runs/test_deepseek_deepseek-v4-flash_targeted_more_shot_balanced_temp0p1_max8000/ (mirrored E7G4Test/members/Liu/)",
+    "E6": "RH_test/E6_e3a_self_segmentation/runs/e7g4test_20260726/ (mirrored E7G4Test/members/E6/)",
+    "E6b": "RH_test/E6b_granularity_control/runs/e7g4test_20260726/ (mirrored E7G4Test/members/E6b/)",
+    "E6c": "RH_test/E6c_pro_nonthinking/runs/e7g4test_20260726/ (mirrored E7G4Test/members/E6c/)"
+  },
+  "member_pred_sha256": {
+    "E1": "fec561fcd0996147529717e6145c185ee0d2a356cd888acaeecac8df6785633d",
+    "Liu": "7dbe8d8559ec6d6453596517a718a9bb80e40600791463c68576e7ba2bea3175",
+    "E6": "1a4279374e42daf1e6b40818259dbcc332d52a0ae3976549545aad013949bb27",
+    "E6b": "d0d088a9ae7f0d146bc0a49f46175fc5ad51172b1ba0ae0bfce5b2481fbb7737",
+    "E6c": "9de0d84b9f4347367ad1efd5b5cccc1f11e0633ddc1719b5cdc2c1b97bad4ccf"
+  },
+  "final_outputs": {
+    "pred_task1a": {
+      "path": "E7G4Test/pred_task1a.json",
+      "sha256": "cbd8a02175b266f42256f324641b620c7964a7ee9791fbc3b766bb1642dc4cf9"
+    },
+    "pred_task1b": {
+      "path": "E7G4Test/pred_task1b.json",
+      "sha256": "072e168f26a7db94948ec9986697c5925d7fb4070755cdf774b9e939b18986a7"
+    }
+  }
+}

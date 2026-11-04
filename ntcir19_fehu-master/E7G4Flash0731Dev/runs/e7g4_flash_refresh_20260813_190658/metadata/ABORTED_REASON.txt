@@ -1,0 +1,1 @@
+Aborted after official API docs and an isolated probe showed that omitted thinking now defaults to enabled; partial caches are intentionally preserved and must not be mixed with the pinned non-thinking rerun.

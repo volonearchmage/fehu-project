@@ -1,0 +1,42 @@
+{
+  "experiment": "E5_deberta_auxiliary_fusion",
+  "variant": "F0_identity",
+  "variant_config": {
+    "arms": [],
+    "rm_score": "value"
+  },
+  "timestamp": "2026-07-24T03:59:35.920808+00:00",
+  "git_commit": "416c8c9836ad0c320833b9d8c0eb51d82a215a39",
+  "calibration": {
+    "mode": "none"
+  },
+  "inputs": {
+    "articles": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/dataset/dev/dev_event_base.json",
+      "sha256": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2"
+    },
+    "e1_pred_1b": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/20260722_152456/pred_task1b.json",
+      "sha256": "6e24e1675e6da3866c429828f3f2ea9d08c4bd73aa03e4068b33a0192c181402"
+    },
+    "v2_probs": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/research_hybrid_deberta_v2_liu_flash/20260714_184515/02_deberta_actor_probabilities.jsonl",
+      "sha256": "7ac24922dd9c9562d2d43c765c017dcc6759cb4c112b8b1024034d518900fc10"
+    },
+    "train_gold_1b": {
+      "path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/dataset/gold_labels/train/train_human_values.json",
+      "sha256": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030"
+    },
+    "seed_probs": []
+  },
+  "counts": {
+    "articles": 177,
+    "article_actors": 459,
+    "e1_pred_keys": 447,
+    "fused_pred_keys": 447,
+    "e1_pred_labels": 2457,
+    "fused_pred_labels": 2457,
+    "actions": {},
+    "frequent_classes": 38
+  }
+}

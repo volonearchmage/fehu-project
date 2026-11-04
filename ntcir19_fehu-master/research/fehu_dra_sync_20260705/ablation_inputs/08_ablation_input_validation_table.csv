@@ -1,0 +1,36 @@
+check_name,status,explanation
+verified_pool_exists,PASS,Verified pool file present.
+verified_pool_has_6_records,PASS,6 records.
+verified_pool_all_human_accept,PASS,All 6 human_decision=ACCEPT.
+verified_pool_all_verified_true,PASS,All 6 verified_for_candidate_pool=true.
+verified_pool_all_training_ready_false,PASS,All 6 training_ready=false.
+l1_12_pair_complete,PASS,"L1=12 dirs ['0 contradictory', '1 aligned']."
+l1_38_pair_complete,PASS,"L1=38 dirs ['0 contradictory', '1 aligned']."
+official_train_event_base_exists,PASS,Official train_event_base.json present.
+official_train_human_values_exists,PASS,Official train_human_values.json present.
+baseline_event_base_exact_copy,PASS,Baseline event_base parses equal to official train_event_base.
+baseline_human_values_exact_copy,PASS,Baseline human_values parses equal to official train_human_values.
+synthetic_event_additions_count_is_6,PASS,6 synthetic events.
+synthetic_gold_additions_count_is_6,PASS,6 synthetic gold records.
+augmented_event_count_equals_train_plus_6,PASS,1234 == 1228+6.
+augmented_gold_count_equals_train_plus_6,PASS,1234 == 1228+6.
+synthetic_guid_unique,PASS,6 unique guids.
+synthetic_guid_no_collision_with_official_train,PASS,No synthetic guid collides with an official train guid.
+synthetic_actor_id_unique,PASS,6 unique actor ids.
+each_synthetic_event_has_one_actor,PASS,Exactly one actor per synthetic event.
+each_synthetic_gold_has_one_article_label,PASS,Exactly one article_human_values entry each.
+all_l1_l2_mappings_valid,PASS,"Every synthetic (l1,l2) matches hv_categories."
+direction_mapping_consistent_1_aligned_0_contradictory,PASS,All synthetic directions use 1=aligned/0=contradictory; codes match candidate target_direction tokens.
+no_training_ready_true_in_manifest,PASS,Manifest introduces no training_ready=true; all 6 source candidates remain training_ready=false.
+no_extra_labels_added,PASS,No synthetic article carries more than one label.
+no_task2_subevent_labels_added,PASS,All synthetic subevents_human_values are empty.
+official_train_event_base_unchanged,PASS,sha256 unchanged.
+official_train_human_values_unchanged,PASS,sha256 unchanged.
+official_dev_files_unchanged,PASS,dev event_base + gold sha256 unchanged.
+official_hv_category_files_unchanged,PASS,hv_categories sha256 unchanged.
+evaluation_py_unchanged,PASS,evaluation.py sha256 unchanged.
+source_files_unchanged,PASS,No source-file change beyond pre-existing set (git status invariant).
+only_new_ablation_input_folder_written,PASS,Only path written is output/research_ablation_inputs/20260702_193701 (output/ gitignored).
+no_training_run,PASS,No training invoked by this task.
+no_ablation_run,PASS,No ablation invoked by this task.
+no_fallback_implementation,PASS,No fallback paths; every precondition/mapping check raises on failure.

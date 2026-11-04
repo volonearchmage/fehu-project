@@ -1,0 +1,34 @@
+{
+  "_comment": [
+    "Fixed semantic families over the official 54 Level-1 values, defined ONLY from the official taxonomy structure (dataset/hv_categories/level_1_to_level_2.json): each family is a set of official Level-2 categories, grouped by the Schwartz higher-order dimension its Level-2 names encode (Self-direction/Stimulation/Hedonism = openness to change; Achievement/Power/Face = self-enhancement; Security/Tradition/Conformity/Humility = conservation; Benevolence/Universalism = self-transcendence).",
+    "No dev-set statistics were used to build or tune this grouping.",
+    "contrast_l2_ids: Level-2 categories from OTHER families whose values are structurally adjacent on the Schwartz circumplex and therefore easily confused; they are shown in the family prompt as non-assignable contrast values only.",
+    "Validation (tests/test_families_and_siblings.py): the l2_ids of the four families partition all 20 official Level-2 ids exactly, so all 54 Level-1 values are scanned by exactly one family."
+  ],
+  "families": [
+    {
+      "family_id": "openness_to_change",
+      "family_name": "Openness to change (self-direction, stimulation, hedonism)",
+      "l2_ids": ["0", "1", "2", "3"],
+      "contrast_l2_ids": ["4", "8", "11"]
+    },
+    {
+      "family_id": "self_enhancement",
+      "family_name": "Self-enhancement (achievement, power, face)",
+      "l2_ids": ["4", "5", "6", "7"],
+      "contrast_l2_ids": ["2", "3", "9", "16"]
+    },
+    {
+      "family_id": "conservation",
+      "family_name": "Conservation (security, tradition, conformity, humility)",
+      "l2_ids": ["8", "9", "10", "11", "12", "13"],
+      "contrast_l2_ids": ["5", "14", "15", "16"]
+    },
+    {
+      "family_id": "self_transcendence",
+      "family_name": "Self-transcendence (benevolence, universalism)",
+      "l2_ids": ["14", "15", "16", "17", "18", "19"],
+      "contrast_l2_ids": ["8", "9", "10", "13"]
+    }
+  ]
+}

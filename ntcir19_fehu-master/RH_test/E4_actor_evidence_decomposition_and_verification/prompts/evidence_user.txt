@@ -1,0 +1,9 @@
+Title: <<TITLE>>
+
+Numbered sentences:
+<<NUMBERED_SENTENCES>>
+
+Actors:
+<<ACTORS>>
+
+Organize the sentence IDs into evidence units for every actor. Return ONLY a JSON object with an "actors" array.

@@ -1,0 +1,53 @@
+{
+  "baseline_condition": {
+    "name": "A_baseline",
+    "train_data": "official train only (dataset/train/train_event_base.json + dataset/gold_labels/train/train_human_values.json)",
+    "augmented_candidates": [],
+    "evaluation": "official dev (dataset/dev + dataset/gold_labels/dev) via evaluation.py"
+  },
+  "augmented_condition": {
+    "name": "B_dra_fehu_verified_augmentation",
+    "train_data": "official train + 6 verified augmented candidates (derived copies under output/, never under dataset/)",
+    "augmented_candidates": [
+      "prev_rare_positive_32_001_83df110175",
+      "prev_dir_contrast_12_002_aligned_ce1da19f54",
+      "prev_dir_contrast_38_003_contradictory_e969e14138",
+      "prev_dir_contrast_38_003_aligned_e969e14138",
+      "prev_rare_positive_24_004_98671d8d01",
+      "repl_dir_contrast_12_002_contradictory_3cfa8093d2"
+    ],
+    "evaluation": "official dev (same as baseline) via evaluation.py"
+  },
+  "invariant_settings": {
+    "model": "same as baseline (unchanged)",
+    "prompt_or_training_config": "identical between A and B",
+    "hyperparameters_seed_eval_split": "identical between A and B",
+    "evaluation_script": "evaluation.py unchanged",
+    "official_dev_gold": "unchanged"
+  },
+  "only_changed_factor": "inclusion of the 6 verified augmented candidates in the training data (Condition B only)",
+  "prohibited_changes": [
+    "overwriting official train/dev/test files",
+    "writing augmented data under dataset/",
+    "modifying official gold labels",
+    "modifying evaluation.py",
+    "inverting the direction convention (1=aligned, 0=contradictory)",
+    "setting training_ready=true without an explicit later approval step"
+  ],
+  "future_output_location_for_augmented_inputs": "output/research_ablation_inputs/<timestamp>/",
+  "direction_convention": {
+    "1 aligned": "1",
+    "0 contradictory": "0",
+    "inversion": "forbidden"
+  },
+  "required_pre_training_checks": [
+    "verified pool has 6 records, all human_decision=ACCEPT, all verified_for_candidate_pool=true",
+    "L1=12 and L1=38 direction pairs complete",
+    "each derived record traces to candidate_id and source_files",
+    "L1->L2 mapping of every derived label validated against dataset/hv_categories",
+    "no duplicate synthetic guid / actor id",
+    "no synthetic guid collides with an official train/dev/test guid",
+    "official dataset files byte-identical (sha256) before and after derived-input creation",
+    "explicit human approval flips training_ready only in a later task"
+  ]
+}

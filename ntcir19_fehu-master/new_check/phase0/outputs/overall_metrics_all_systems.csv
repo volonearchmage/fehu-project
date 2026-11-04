@@ -1,0 +1,7 @@
+system,micro_precision,micro_recall,micro_f1,macro_precision_gold_supported,macro_recall_gold_supported,macro_f1_gold_supported,drr,reversals,drr_denominator,drr_ambiguous_excluded,distinct_pred_classes
+deberta_baseline,0.2664,0.3494,0.3023,0.0199,0.0738,0.0305,0.2165,481,2222,84,8
+augmented_v1,0.3061,0.2958,0.3009,0.019,0.0547,0.0261,0.1364,303,2222,84,6
+augmented_v2,0.2381,0.5406,0.3306,0.0964,0.2307,0.1303,0.288,640,2222,84,50
+liu_frozen,0.5677,0.5054,0.5347,0.4424,0.3212,0.3385,0.023,51,2222,84,88
+hybrid_h2,0.5038,0.5895,0.5433,0.4022,0.3806,0.3603,0.0356,79,2222,84,89
+hybrid_h3,0.548,0.5469,0.5474,0.4097,0.3344,0.3382,0.0311,69,2222,84,85

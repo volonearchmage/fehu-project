@@ -1,0 +1,16 @@
+{
+  "experiment": "SOL2 Step 2 single-actor prompt",
+  "model": "deepseek-v4-pro",
+  "thinking": "disabled",
+  "temperature": 0.0,
+  "max_tokens": 8000,
+  "user_template_version": "sol2_step2_single_actor_v1",
+  "system_prompt_sha256": "0e89a4bbfae9eb19b9d6180b35f2504a2bdc193be0606a0143ad0682d7999a3b",
+  "prompt_identity_sha256": "693901a51ffa3bde88b5ae56760c3687530bbf9cfb882cefba9106d1aa83d773",
+  "base_runner": "Mathematical_optimization/base/run_pipeline_e1_base.py",
+  "base_runner_sha256": "af4ce261ef4a31b53b069a98e2f30af57e7a53513d8bf3185e3c4457015cd62b",
+  "dev_articles_sha256": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+  "n_dev_articles": 177,
+  "n_dev_actor_calls": 459,
+  "only_prompt_delta": "one target actor per call; full article and complete actor list retained"
+}

@@ -1,0 +1,160 @@
+[2026-08-13T19:50:25+08:00] seg_e6 attempt 1/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:   1%|          | 1/177 [00:01<05:07,  1.75s/it]Segmenting:   1%|          | 2/177 [00:06<09:26,  3.23s/it]Segmenting:   2%|▏         | 3/177 [00:09<10:21,  3.57s/it]Segmenting:   2%|▏         | 4/177 [00:10<07:17,  2.53s/it]Segmenting:   3%|▎         | 5/177 [00:15<09:47,  3.41s/it]Segmenting:   3%|▎         | 6/177 [00:18<09:09,  3.21s/it]Segmenting:   4%|▍         | 7/177 [00:22<09:48,  3.46s/it]Segmenting:   5%|▍         | 8/177 [00:26<09:49,  3.49s/it]Segmenting:   5%|▌         | 9/177 [00:30<10:46,  3.85s/it]Segmenting:   6%|▌         | 10/177 [00:34<10:11,  3.66s/it]Segmenting:   6%|▌         | 11/177 [00:38<10:32,  3.81s/it]Segmenting:   7%|▋         | 12/177 [00:42<11:09,  4.06s/it]Segmenting:   7%|▋         | 13/177 [00:44<09:18,  3.41s/it]Segmenting:   8%|▊         | 14/177 [00:47<08:35,  3.17s/it]Segmenting:   8%|▊         | 15/177 [00:51<09:04,  3.36s/it]Segmenting:   9%|▉         | 16/177 [00:55<10:02,  3.74s/it]Segmenting:  10%|▉         | 17/177 [00:59<10:04,  3.78s/it]Segmenting:  10%|█         | 18/177 [01:04<11:11,  4.22s/it]Segmenting:  11%|█         | 19/177 [01:10<11:51,  4.50s/it]Segmenting:  11%|█▏        | 20/177 [01:13<10:46,  4.12s/it]Segmenting:  12%|█▏        | 21/177 [01:17<10:45,  4.14s/it]Segmenting:  12%|█▏        | 22/177 [01:20<09:29,  3.67s/it]Segmenting:  13%|█▎        | 23/177 [01:22<08:24,  3.27s/it]Segmenting:  14%|█▎        | 24/177 [01:26<08:43,  3.42s/it]Segmenting:  14%|█▍        | 25/177 [01:31<10:16,  4.06s/it]Segmenting:  15%|█▍        | 26/177 [01:37<11:39,  4.63s/it]Segmenting:  15%|█▌        | 27/177 [01:38<08:55,  3.57s/it]Segmenting:  16%|█▌        | 28/177 [01:57<19:50,  7.99s/it]Segmenting:  16%|█▋        | 29/177 [02:04<19:14,  7.80s/it]Segmenting:  17%|█▋        | 30/177 [02:08<16:02,  6.55s/it]Segmenting:  18%|█▊        | 31/177 [02:11<13:42,  5.63s/it]Segmenting:  18%|█▊        | 32/177 [02:15<12:29,  5.17s/it]Segmenting:  19%|█▊        | 33/177 [02:18<10:52,  4.53s/it]Segmenting:  19%|█▉        | 34/177 [02:24<11:40,  4.90s/it]Segmenting:  20%|█▉        | 35/177 [02:29<11:24,  4.82s/it]Segmenting:  20%|██        | 36/177 [02:33<10:41,  4.55s/it]Segmenting:  21%|██        | 37/177 [02:35<09:14,  3.96s/it]Segmenting:  21%|██▏       | 38/177 [02:38<08:23,  3.63s/it]Segmenting:  22%|██▏       | 39/177 [02:42<08:20,  3.63s/it]Segmenting:  23%|██▎       | 40/177 [02:44<07:33,  3.31s/it]Segmenting:  23%|██▎       | 41/177 [02:49<08:18,  3.67s/it]Segmenting:  24%|██▎       | 42/177 [02:52<07:47,  3.46s/it]Segmenting:  24%|██▍       | 43/177 [02:56<08:37,  3.86s/it]Segmenting:  25%|██▍       | 44/177 [03:04<10:42,  4.83s/it]Segmenting:  25%|██▌       | 45/177 [03:07<09:26,  4.29s/it]Segmenting:  26%|██▌       | 46/177 [03:10<09:00,  4.13s/it]Segmenting:  27%|██▋       | 47/177 [03:15<09:33,  4.41s/it]Segmenting:  27%|██▋       | 48/177 [03:19<08:55,  4.15s/it]Segmenting:  28%|██▊       | 49/177 [03:24<09:15,  4.34s/it]Segmenting:  28%|██▊       | 50/177 [03:28<09:12,  4.35s/it]Segmenting:  29%|██▉       | 51/177 [03:32<08:38,  4.12s/it]Segmenting:  29%|██▉       | 52/177 [03:36<08:51,  4.25s/it]Segmenting:  30%|██▉       | 53/177 [03:38<07:08,  3.46s/it]Segmenting:  31%|███       | 54/177 [03:41<06:43,  3.28s/it]Segmenting:  31%|███       | 55/177 [03:43<06:18,  3.10s/it]Segmenting:  32%|███▏      | 56/177 [03:45<05:27,  2.71s/it]Segmenting:  32%|███▏      | 57/177 [03:48<05:31,  2.76s/it]Segmenting:  33%|███▎      | 58/177 [03:51<05:46,  2.91s/it]Segmenting:  33%|███▎      | 59/177 [03:55<05:57,  3.03s/it]Segmenting:  34%|███▍      | 60/177 [03:58<05:58,  3.06s/it]Segmenting:  34%|███▍      | 61/177 [04:03<07:24,  3.83s/it]Segmenting:  35%|███▌      | 62/177 [04:08<07:45,  4.05s/it]Segmenting:  36%|███▌      | 63/177 [04:09<06:11,  3.26s/it]Segmenting:  36%|███▌      | 64/177 [04:13<06:18,  3.35s/it]Segmenting:  37%|███▋      | 65/177 [04:19<07:55,  4.25s/it]Segmenting:  37%|███▋      | 66/177 [04:22<07:03,  3.81s/it]Segmenting:  38%|███▊      | 67/177 [04:24<05:42,  3.12s/it]Segmenting:  38%|███▊      | 68/177 [04:27<05:43,  3.15s/it]Segmenting:  39%|███▉      | 69/177 [04:30<05:53,  3.27s/it]Segmenting:  40%|███▉      | 70/177 [04:34<06:15,  3.51s/it]Segmenting:  40%|████      | 71/177 [04:41<08:03,  4.56s/it]Segmenting:  41%|████      | 72/177 [04:44<06:55,  3.95s/it]Segmenting:  41%|████      | 73/177 [04:47<06:33,  3.79s/it]Segmenting:  42%|████▏     | 74/177 [04:49<05:34,  3.24s/it]Segmenting:  42%|████▏     | 75/177 [04:54<05:58,  3.52s/it]Segmenting:  43%|████▎     | 76/177 [04:58<06:19,  3.75s/it]Segmenting:  44%|████▎     | 77/177 [05:01<05:52,  3.53s/it]Segmenting:  44%|████▍     | 78/177 [05:07<07:06,  4.30s/it]Segmenting:  44%|████▍     | 78/177 [05:46<07:20,  4.45s/it]
+  [WARN] 4-35568-7-1: segmentation attempt 1 failed: 4-35568-7-1: 34 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 1 failed: 0-4448-1-1: 47 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 2 failed: 0-4448-1-1: 45 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 3 failed: 0-4448-1-1: 48 units outside [2, 30]
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 209, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 174, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 127, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4448-1-1 after 3 attempts: 0-4448-1-1: 48 units outside [2, 30]
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T19:56:42+08:00] seg_e6 attempt 2/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 78 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  44%|████▍     | 78/177 [00:40<00:51,  1.91it/s]
+  [WARN] 0-4448-1-1: segmentation attempt 1 failed: 0-4448-1-1: 44 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 2 failed: 0-4448-1-1: 47 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 3 failed: 0-4448-1-1: 49 units outside [2, 30]
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 209, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 174, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 127, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4448-1-1 after 3 attempts: 0-4448-1-1: 49 units outside [2, 30]
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T19:57:54+08:00] seg_e6 attempt 3/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 78 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  44%|████▍     | 78/177 [00:41<00:53,  1.87it/s]
+  [WARN] 0-4448-1-1: segmentation attempt 1 failed: 0-4448-1-1: 49 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 2 failed: 0-4448-1-1: 49 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 3 failed: 0-4448-1-1: 47 units outside [2, 30]
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 209, in <module>
+    if __name__ == "__main__":
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 174, in main
+    continue
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 127, in segment_article
+    time.sleep(3)
+RuntimeError: ABORT: segmentation failed for 0-4448-1-1 after 3 attempts: 0-4448-1-1: 47 units outside [2, 30]
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T19:59:06+08:00] seg_e6 attempt 4/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 78 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  44%|████▍     | 78/177 [00:42<00:54,  1.82it/s]
+  [WARN] 0-4448-1-1: segmentation attempt 1 failed: 0-4448-1-1: 48 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 2 failed: 0-4448-1-1: 51 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 3 failed: 0-4448-1-1: 51 units outside [2, 30]
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 210, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 175, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 128, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4448-1-1 after 3 attempts: 0-4448-1-1: 51 units outside [2, 30]
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T20:00:20+08:00] seg_e6 attempt 5/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 78 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[seg_e6] failed with status 143; retrying in 30 seconds
+[2026-08-13T20:01:07+08:00] seg_e6 attempt 6/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 78 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  44%|████▍     | 78/177 [00:35<00:45,  2.17it/s]
+  [WARN] 0-4448-1-1: segmentation attempt 1 failed: 0-4448-1-1: 43 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 2 failed: 0-4448-1-1: 31 units outside [2, 30]
+  [WARN] 0-4448-1-1: segmentation attempt 3 failed: 0-4448-1-1: 43 units outside [2, 30]
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 212, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 177, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 130, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4448-1-1 after 3 attempts: 0-4448-1-1: 43 units outside [2, 30]
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T20:02:14+08:00] seg_e6 attempt 7/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 78 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[seg_e6] failed with status 143; retrying in 30 seconds
+[2026-08-13T20:02:50+08:00] seg_e6 attempt 8/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 78 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  45%|████▍     | 79/177 [00:18<00:23,  4.17it/s]Segmenting:  45%|████▌     | 80/177 [00:22<00:29,  3.29it/s]Segmenting:  46%|████▌     | 81/177 [00:26<00:36,  2.62it/s]Segmenting:  46%|████▋     | 82/177 [00:31<00:52,  1.82it/s]Segmenting:  47%|████▋     | 83/177 [00:36<01:12,  1.30it/s]Segmenting:  47%|████▋     | 84/177 [00:51<02:31,  1.63s/it]Segmenting:  47%|████▋     | 84/177 [01:16<01:24,  1.10it/s]
+  [WARN] 0-4448-1-1: segmentation attempt 1 failed: 0-4448-1-1: 31 units outside [2, 30]
+  [WARN] 0-4716-3-1: segmentation attempt 1 failed: Expecting ',' delimiter: line 1 column 4185 (char 4184)
+  [WARN] 1-15327-3-t: segmentation attempt 1 failed: Expecting ',' delimiter: line 1 column 4215 (char 4214)
+  [WARN] 1-15327-3-t: segmentation attempt 2 failed: Expecting ',' delimiter: line 1 column 4275 (char 4274)
+  [WARN] 1-15327-3-t: segmentation attempt 3 failed: Expecting ',' delimiter: line 1 column 4608 (char 4607)
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 217, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 182, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 135, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 1-15327-3-t after 3 attempts: Expecting ',' delimiter: line 1 column 4608 (char 4607)
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T20:04:37+08:00] seg_e6 attempt 9/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 84 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[seg_e6] failed with status 143; retrying in 30 seconds
+[2026-08-13T20:05:31+08:00] seg_e6 attempt 10/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 84 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  48%|████▊     | 85/177 [00:05<00:05, 15.50it/s]Segmenting:  49%|████▉     | 87/177 [00:14<00:18,  4.81it/s]Segmenting:  50%|████▉     | 88/177 [00:24<00:38,  2.32it/s]Segmenting:  50%|█████     | 89/177 [00:27<00:45,  1.94it/s]Segmenting:  51%|█████     | 90/177 [00:31<00:55,  1.56it/s]Segmenting:  51%|█████▏    | 91/177 [00:35<01:12,  1.19it/s]Segmenting:  52%|█████▏    | 92/177 [00:36<01:14,  1.14it/s]Segmenting:  53%|█████▎    | 93/177 [00:39<01:31,  1.08s/it]Segmenting:  53%|█████▎    | 94/177 [00:41<01:45,  1.27s/it]Segmenting:  54%|█████▎    | 95/177 [00:47<02:39,  1.95s/it]Segmenting:  54%|█████▍    | 96/177 [00:53<03:26,  2.55s/it]Segmenting:  55%|█████▍    | 97/177 [00:58<04:04,  3.06s/it]Segmenting:  55%|█████▌    | 98/177 [01:00<03:44,  2.84s/it]Segmenting:  56%|█████▌    | 99/177 [01:02<03:37,  2.78s/it]Segmenting:  56%|█████▋    | 100/177 [01:05<03:28,  2.71s/it]Segmenting:  57%|█████▋    | 101/177 [01:09<03:49,  3.02s/it]Segmenting:  58%|█████▊    | 102/177 [01:15<04:46,  3.83s/it]Segmenting:  58%|█████▊    | 103/177 [01:18<04:22,  3.55s/it]Segmenting:  59%|█████▉    | 104/177 [01:22<04:32,  3.73s/it]Segmenting:  59%|█████▉    | 105/177 [01:25<04:11,  3.49s/it]Segmenting:  60%|█████▉    | 106/177 [01:29<04:14,  3.59s/it]Segmenting:  60%|██████    | 107/177 [01:32<04:13,  3.62s/it]Segmenting:  61%|██████    | 108/177 [01:37<04:24,  3.83s/it]Segmenting:  62%|██████▏   | 109/177 [01:39<03:58,  3.51s/it]Segmenting:  62%|██████▏   | 110/177 [01:42<03:33,  3.19s/it]Segmenting:  63%|██████▎   | 111/177 [01:46<03:42,  3.38s/it]Segmenting:  63%|██████▎   | 112/177 [01:50<04:09,  3.83s/it]Segmenting:  64%|██████▍   | 113/177 [01:53<03:32,  3.33s/it]Segmenting:  64%|██████▍   | 114/177 [01:56<03:29,  3.33s/it]Segmenting:  65%|██████▍   | 115/177 [02:01<03:51,  3.73s/it]Segmenting:  66%|██████▌   | 116/177 [02:06<04:23,  4.31s/it]Segmenting:  66%|██████▌   | 117/177 [02:19<06:47,  6.80s/it]Segmenting:  67%|██████▋   | 118/177 [02:24<06:04,  6.17s/it]Segmenting:  67%|██████▋   | 119/177 [02:28<05:24,  5.60s/it]Segmenting:  68%|██████▊   | 120/177 [02:32<04:56,  5.21s/it]Segmenting:  68%|██████▊   | 121/177 [02:35<04:11,  4.50s/it]Segmenting:  69%|██████▉   | 122/177 [02:38<03:40,  4.01s/it]Segmenting:  69%|██████▉   | 123/177 [02:45<04:25,  4.91s/it]Segmenting:  69%|██████▉   | 123/177 [03:04<01:21,  1.50s/it]
+  [WARN] 0-4347-1-1: segmentation attempt 1 failed: Expecting ',' delimiter: line 1 column 1682 (char 1681)
+  [WARN] 9-20780-1-1: segmentation attempt 1 failed: Expecting ',' delimiter: line 1 column 3053 (char 3052)
+  [WARN] 1-16497-7-t: segmentation attempt 1 failed: 1-16497-7-t: 31 units outside [2, 30]
+  [WARN] 1-16497-7-t: segmentation attempt 2 failed: Expecting ',' delimiter: line 1 column 1842 (char 1841)
+  [WARN] 1-16497-7-t: segmentation attempt 3 failed: Expecting ',' delimiter: line 1 column 1918 (char 1917)
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 222, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 187, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 140, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 1-16497-7-t after 3 attempts: Expecting ',' delimiter: line 1 column 1918 (char 1917)
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T20:09:06+08:00] seg_e6 attempt 11/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 123 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  70%|███████   | 124/177 [00:04<00:01, 30.99it/s]Segmenting:  70%|███████   | 124/177 [00:20<00:01, 30.99it/s]Segmenting:  72%|███████▏  | 127/177 [00:29<00:15,  3.16it/s]Segmenting:  72%|███████▏  | 128/177 [00:32<00:17,  2.76it/s]Segmenting:  73%|███████▎  | 130/177 [00:45<00:28,  1.65it/s]Segmenting:  74%|███████▍  | 131/177 [00:50<00:34,  1.32it/s]Segmenting:  75%|███████▍  | 132/177 [00:56<00:43,  1.02it/s]Segmenting:  75%|███████▌  | 133/177 [01:00<00:49,  1.13s/it]Segmenting:  76%|███████▌  | 134/177 [01:04<00:55,  1.29s/it]Segmenting:  76%|███████▋  | 135/177 [01:10<01:14,  1.77s/it]Segmenting:  77%|███████▋  | 136/177 [01:15<01:27,  2.14s/it]Segmenting:  77%|███████▋  | 137/177 [01:20<01:41,  2.53s/it]Segmenting:  78%|███████▊  | 138/177 [01:25<01:54,  2.95s/it]Segmenting:  79%|███████▊  | 139/177 [01:27<01:44,  2.76s/it]Segmenting:  79%|███████▉  | 140/177 [01:31<01:57,  3.16s/it]Segmenting:  80%|███████▉  | 141/177 [01:34<01:48,  3.02s/it]Segmenting:  80%|████████  | 142/177 [01:39<02:04,  3.56s/it]Segmenting:  81%|████████  | 143/177 [01:44<02:12,  3.89s/it]Segmenting:  81%|████████▏ | 144/177 [01:45<01:44,  3.16s/it]Segmenting:  82%|████████▏ | 145/177 [01:53<02:29,  4.67s/it]Segmenting:  82%|████████▏ | 146/177 [01:57<02:16,  4.41s/it]Segmenting:  83%|████████▎ | 147/177 [02:00<01:55,  3.84s/it]Segmenting:  84%|████████▎ | 148/177 [02:05<02:01,  4.18s/it]Segmenting:  84%|████████▍ | 149/177 [02:20<03:29,  7.49s/it]Segmenting:  85%|████████▍ | 150/177 [02:22<02:41,  5.97s/it]Segmenting:  85%|████████▌ | 151/177 [02:27<02:27,  5.69s/it]Segmenting:  86%|████████▌ | 152/177 [02:34<02:26,  5.88s/it]Segmenting:  86%|████████▋ | 153/177 [02:49<03:29,  8.72s/it]Segmenting:  87%|████████▋ | 154/177 [02:53<02:49,  7.37s/it]Segmenting:  88%|████████▊ | 155/177 [02:59<02:31,  6.89s/it]Segmenting:  88%|████████▊ | 156/177 [03:04<02:13,  6.37s/it]Segmenting:  89%|████████▊ | 157/177 [03:11<02:11,  6.57s/it]Segmenting:  89%|████████▉ | 158/177 [03:16<01:56,  6.12s/it]Segmenting:  90%|████████▉ | 159/177 [03:22<01:49,  6.10s/it]Segmenting:  90%|█████████ | 160/177 [03:29<01:48,  6.36s/it]Segmenting:  91%|█████████ | 161/177 [03:33<01:28,  5.56s/it]Segmenting:  92%|█████████▏| 162/177 [03:36<01:10,  4.71s/it]Segmenting:  92%|█████████▏| 163/177 [03:39<00:58,  4.16s/it]Segmenting:  92%|█████████▏| 163/177 [03:54<00:20,  1.44s/it]
+  [WARN] 9-21858-2-t: segmentation attempt 1 failed: 9-21858-2-t: 32 units outside [2, 30]
+  [WARN] 35-wiki-img/5131-6/5131-6-3: segmentation attempt 1 failed: Expecting ',' delimiter: line 1 column 1067 (char 1066)
+  [WARN] 27-33606-1-4: segmentation attempt 1 failed: 27-33606-1-4: 38 units outside [2, 30]
+  [WARN] 0-4716-3-3: segmentation attempt 1 failed: Expecting ',' delimiter: line 1 column 4315 (char 4314)
+  [WARN] 0-4374-2-t: segmentation attempt 1 failed: Expecting ',' delimiter: line 1 column 1717 (char 1716)
+  [WARN] 0-4374-2-t: segmentation attempt 2 failed: Expecting ',' delimiter: line 1 column 1601 (char 1600)
+  [WARN] 0-4374-2-t: segmentation attempt 3 failed: Expecting ',' delimiter: line 1 column 1667 (char 1666)
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 222, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 187, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 140, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4374-2-t after 3 attempts: Expecting ',' delimiter: line 1 column 1667 (char 1666)
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T20:13:31+08:00] seg_e6 attempt 12/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 163 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:  93%|█████████▎| 164/177 [00:03<00:00, 46.84it/s]Segmenting:  93%|█████████▎| 164/177 [00:20<00:00, 46.84it/s]Segmenting:  95%|█████████▍| 168/177 [00:25<00:01,  4.93it/s]Segmenting:  95%|█████████▌| 169/177 [00:28<00:01,  4.06it/s]Segmenting:  97%|█████████▋| 171/177 [00:35<00:02,  2.89it/s]Segmenting:  98%|█████████▊| 173/177 [00:39<00:01,  2.37it/s]Segmenting:  98%|█████████▊| 174/177 [00:45<00:01,  1.68it/s]Segmenting:  99%|█████████▉| 175/177 [00:46<00:01,  1.62it/s]Segmenting:  99%|█████████▉| 176/177 [00:51<00:00,  1.18it/s]Segmenting: 100%|██████████| 177/177 [00:58<00:00,  1.30s/it]Segmenting: 100%|██████████| 177/177 [00:58<00:00,  3.04it/s]
+[done] 177 segmentations -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/segmentation/e6/segments_dev.json
+unit distribution: {'n_articles': 177, 'units_min': 2, 'units_median': 15, 'units_max': 30, 'units_mean': 15.83}

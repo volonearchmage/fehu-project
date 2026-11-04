@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-07-02T19:46:37",
+  "source_ablation_input_folder": "output/research_ablation_inputs/20260702_193701",
+  "dryrun_folder": "output/research_ablation_dryrun/20260702_194637",
+  "official_file_sha256_before": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "dataset/gold_labels/train/train_human_values.json": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+    "dataset/dev/dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset/gold_labels/dev/dev_human_values.json": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+    "dataset/hv_categories/human_value_level1_values.json": "40fa4b78ba7ae7b4f61d23c821dbe70a2a1f3079369fb9ff5f2cb11d79d7f96e",
+    "dataset/hv_categories/human_value_level2_values.json": "550ee6de5db3b3f8941ad8a006d4d272774b714aa71b75d9ac9c966fe1ec75c2",
+    "dataset/hv_categories/level_1_to_level_2.json": "dc1ef3897a5de000c8a40e3672b12650163832026eb984ab46da57aa8037a1bf"
+  },
+  "official_file_sha256_after": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "dataset/gold_labels/train/train_human_values.json": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+    "dataset/dev/dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset/gold_labels/dev/dev_human_values.json": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+    "dataset/hv_categories/human_value_level1_values.json": "40fa4b78ba7ae7b4f61d23c821dbe70a2a1f3079369fb9ff5f2cb11d79d7f96e",
+    "dataset/hv_categories/human_value_level2_values.json": "550ee6de5db3b3f8941ad8a006d4d272774b714aa71b75d9ac9c966fe1ec75c2",
+    "dataset/hv_categories/level_1_to_level_2.json": "dc1ef3897a5de000c8a40e3672b12650163832026eb984ab46da57aa8037a1bf"
+  },
+  "evaluator_file_sha256_before": "e4a7f89e177fa5767553311d218b42a2c628c2803586f32a3d191d878648ad47",
+  "evaluator_file_sha256_after": "e4a7f89e177fa5767553311d218b42a2c628c2803586f32a3d191d878648ad47",
+  "synthetic_record_count": 6,
+  "dryrun_gold_path": "output/research_ablation_dryrun/20260702_194637/02_evaluator_format_dryrun_gold_task1b.json",
+  "dryrun_pred_path": "output/research_ablation_dryrun/20260702_194637/03_evaluator_format_dryrun_pred_task1b.json",
+  "evaluator_result_path": "output/research_ablation_dryrun/20260702_194637/04_evaluator_dryrun_result.json",
+  "evaluator_cli_command_attempted": "/home/szf-4090/桌面/hpy/company-research-agent/.venv/bin/python3 evaluation.py --gold_task1 output/research_ablation_dryrun/20260702_194637/02_evaluator_format_dryrun_gold_task1b.json --pred_task1b output/research_ablation_dryrun/20260702_194637/03_evaluator_format_dryrun_pred_task1b.json",
+  "evaluator_exit_code": 1,
+  "evaluator_stdout_summary": "(empty)",
+  "evaluator_stderr_summary": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/ntcir19_fehu/dataset/gold_labels/test/test_article_human_values.json'",
+  "compatibility_verdict": "COMPATIBLE: official parse_task1b accepted the derived Task-1b format; F1=1.0 and DRR=0 for identical gold/pred. CAVEAT: evaluation.py's shipped CLI hardcodes DEBUG=True (line 262) and cannot be pointed at arbitrary files without editing it; a later ablation run must invoke the functions programmatically or set DEBUG=False.",
+  "no_training_run": true,
+  "no_ablation_run": true,
+  "no_fallback_implementation": true
+}

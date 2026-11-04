@@ -1,0 +1,12 @@
+Title: <<TITLE>>
+
+Numbered sentences:
+<<NUMBERED_SENTENCES>>
+
+Actors:
+<<ACTORS>>
+
+Evidence units per actor:
+<<EVIDENCE_UNITS>>
+
+Scan the family's values for every actor. Return ONLY a JSON object with a "candidates" array.

@@ -1,0 +1,65 @@
+{
+  "experiment": "E7_calibrated_jury_fusion",
+  "cell": "G5_veto_nogate",
+  "primary": "E6b",
+  "jurors": [
+    "E1",
+    "E6",
+    "E6c",
+    "Liu"
+  ],
+  "timestamp": "2026-08-13T12:42:25.036573+00:00",
+  "calibration": {
+    "mode": "crossfit",
+    "folds": {
+      "0": {
+        "theta": 0.23688663282571912,
+        "n_removal_cells": 1720,
+        "n_addition_cells": 1892
+      },
+      "1": {
+        "theta": 0.24720447284345046,
+        "n_removal_cells": 1349,
+        "n_addition_cells": 1151
+      }
+    }
+  },
+  "inputs": {
+    "E1": {
+      "path": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E1/pred_task1b.json",
+      "sha256": "e52a9ab2a0da63b635f3cb0d092c28790677b6ff04ff9864ca83110479ccc57d"
+    },
+    "Liu": {
+      "path": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/Liu/pred_task1b.json",
+      "sha256": "4fdb8cd2726d1f6fe28e67d7e69b8c05df9f9194c6cdd56ca7b14108261cf706"
+    },
+    "E6": {
+      "path": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E6/pred_task1b.json",
+      "sha256": "754594ac6b939908d35dc0bc9be18d55b1a8e9aca9f30308a9e6856a260fed71"
+    },
+    "E6b": {
+      "path": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E6b/pred_task1b.json",
+      "sha256": "1bb8779e078f729896882711c3ac9b4e2a636c9852d8bdd66f0620f08e8ccbf3"
+    },
+    "E6c": {
+      "path": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E6c/pred_task1b.json",
+      "sha256": "19ea5faa32d8565133440a2228dcca5941f0652c902bef1862f030ca868bf68b"
+    },
+    "v2_probs": {
+      "path": "RH_test/E5_deberta_auxiliary_fusion/inputs/dev_fp_seed44_probs.jsonl",
+      "sha256": "9adce035a7e37f80e2b678d3acaaa967498f963d721ee855c011b5ba7b66c515"
+    },
+    "articles": {
+      "path": "dataset/dev/dev_event_base.json",
+      "sha256": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2"
+    }
+  },
+  "counts": {
+    "primary_labels": 3069,
+    "fused_labels": 2250,
+    "actions": {
+      "remove": 819
+    },
+    "frequent_classes": 108
+  }
+}

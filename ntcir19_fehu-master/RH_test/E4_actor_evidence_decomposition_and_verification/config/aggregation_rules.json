@@ -1,0 +1,22 @@
+{
+  "_comment": [
+    "Fixed, task-general aggregation rules for E4. Reviewed BEFORE any experiment; changing this file changes the experiment definition and must be recorded.",
+    "survival: which verifier relevance verdicts let a candidate survive, by view provenance. Candidates found by BOTH the global view and a family view survive on KEEP or UNCERTAIN; single-view candidates survive only on KEEP.",
+    "attribution_reject: candidates whose evidence the verifier attributes to one of these (i.e. NOT the target actor) are removed regardless of relevance. attribution 'actor' keeps; 'uncertain' follows attribution_uncertain_policy.",
+    "direction_resolution: per (actor, l1_value) pair. Opinions are collected from up to three sources: the global-view candidate's direction, the family-view candidate's direction, and the verifier's direction verdict (ignored when 'uncertain'; if several surviving candidates of the pair receive conflicting verifier directions, the verifier's opinion for the pair is treated as 'uncertain'). Final direction = strict majority of non-uncertain opinions; a tie or no opinion drops the pair entirely. This guarantees one direction per (actor, l1_value) and that aligned and contradictory are never both output.",
+    "e4b_direction_conflict: E4b (no verifier) union output only — when global and family views disagree on the direction of the same (actor, l1_value), the global view's direction is kept (deterministic; the global view is the frozen E1 logic).",
+    "verifier_can_add is false and is asserted in code: verdicts must cover exactly the candidate set; any extra verdict is a schema error."
+  ],
+  "survival": {
+    "both_views": ["KEEP", "UNCERTAIN"],
+    "single_view": ["KEEP"]
+  },
+  "attribution_reject": ["other_actor", "narrator", "quoted_speaker", "background"],
+  "attribution_uncertain_policy": "keep",
+  "direction_resolution": {
+    "method": "strict_majority",
+    "tie_policy": "drop_pair"
+  },
+  "e4b_direction_conflict": "prefer_global",
+  "verifier_can_add": false
+}

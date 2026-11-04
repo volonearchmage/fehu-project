@@ -1,0 +1,78 @@
+{
+  "experiment": "E6_e3a_self_segmentation",
+  "stage": "0_self_segmentation",
+  "mode": "dev",
+  "segmenter_model": "deepseek-v4-flash",
+  "temperature": 0.1,
+  "max_output_tokens": 4000,
+  "taxonomy_blind": true,
+  "unit_distribution": {
+    "n_articles": 2,
+    "units_min": 4,
+    "units_median": 10,
+    "units_max": 10,
+    "units_mean": 7.0
+  },
+  "segments": {
+    "1-15231-2-1": [
+      {
+        "id": "0",
+        "subevent": "At least four civilians were killed and 10 others were wounded in a mortar attack in northern Faryab province on Thursday morning."
+      },
+      {
+        "id": "1",
+        "subevent": "The mortar attack occurred around 11:00am local time after a mortar round landed in a market in Shareen Tagab district."
+      },
+      {
+        "id": "2",
+        "subevent": "Abdul Karim Yourish, a spokesman for the provincial police chief, said the mortar was fired by the Taliban to target the security forces, but all the victims were civilians at the market."
+      },
+      {
+        "id": "3",
+        "subevent": "The Taliban has not commented on the attack."
+      }
+    ],
+    "0-4495-1-1": [
+      {
+        "id": "0",
+        "subevent": "Tunisia Youth Impact is using cooking contests to encourage young Tunisian women in rural villages to vote in the country’s presidential election."
+      },
+      {
+        "id": "1",
+        "subevent": "In the first round of the presidential election, the national turnout was just 48.98%."
+      },
+      {
+        "id": "2",
+        "subevent": "On Saturday, October 12, the Voticook cooking contest is held in the rural town of Echamine, ahead of the second round of the presidential election."
+      },
+      {
+        "id": "3",
+        "subevent": "Wafa Tarhouni, president of the association, explains that the contest is a practice vote where women compete through their dishes to be elected by the diners."
+      },
+      {
+        "id": "4",
+        "subevent": "Volunteers from Tunisia Youth Impact simulate real-life voting conditions, replacing the ink with a mixture of water and shampoo."
+      },
+      {
+        "id": "5",
+        "subevent": "Hinda Jlass prepares couscous for the competition in the courtyard of her half-built home and says that the event is a way of getting together with other women, and that she also plans to vote on Sunday, which will be only the second time she has voted in her life."
+      },
+      {
+        "id": "6",
+        "subevent": "At noon, seven competitors from the village present their dishes to around fifty electors, each saying a few words about their dish."
+      },
+      {
+        "id": "7",
+        "subevent": "The electors taste the dishes and vote using the same procedure as the real election, with volunteers guiding them; members of ISIE and EU observer Stefan Ziegler attend, and Ziegler says the event is original and good for Tunisian democracy."
+      },
+      {
+        "id": "8",
+        "subevent": "After the vote, the ballots are counted, and volunteers point out mistakes that might lead to a vote being declared invalid."
+      },
+      {
+        "id": "9",
+        "subevent": "Najwa Jlass, the sister of the hostess, wins the contest and says she is happy to see the community come together and that she will be going to vote 'for real' the next day."
+      }
+    ]
+  }
+}

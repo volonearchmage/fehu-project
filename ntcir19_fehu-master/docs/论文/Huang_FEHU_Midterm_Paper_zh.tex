@@ -1,0 +1,826 @@
+% 忠实中文译稿；保留英文的研究主张、公式、数值、引用与局限。参考文献保留原文书目信息。
+% 编译：tectonic Huang_FEHU_Midterm_Paper_zh.tex（同目录须保留 fehu_paper_style.sty）。
+\documentclass[12pt,a4paper]{article}
+\usepackage{fehu_paper_style}
+\hypersetup{pdftitle={新闻中面向行为主体的价值观识别：诊断引导增强与频次门控融合},pdfauthor={Peiyang Huang},pdflang={zh-CN}}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\appendixname}{附录}
+\floatname{algorithm}{算法}
+\titleformat{\section}{\normalfont\sffamily\fontsize{14}{18}\selectfont\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalfont\sffamily\fontsize{12}{16}\selectfont\bfseries}{\thesubsection}{0.8em}{}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{22mm}
+{\large 早稻田大学\\信息生产系统研究科\par}
+\vspace{23mm}
+{\Large 中期研究论文（中文译稿）\par}
+\vspace{14mm}
+{\LARGE\bfseries 新闻中面向行为主体的价值观识别：\\诊断引导增强与频次门控融合\par}
+\vspace{22mm}
+{\large Peiyang Huang\par}
+\vspace{6mm}
+{\large 指导教师：Mizuho Iwaihara 教授\par}
+\vfill
+{\large 2026 年 9 月\par}
+\vspace{10mm}
+\begin{minipage}{0.88\textwidth}\small
+本文在 NTCIR-19 参赛论文的基础上，展开数据增强实验与系统分析，并提出最终学位论文尚需完成的实验。
+\end{minipage}
+\end{titlepage}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\begin{abstract}
+新闻报道往往通过行动及其后果隐含地呈现人类价值观。识别这些价值观，有助于分析新闻如何通过行为描述刻画个人和机构。这类分析需要结合行为主体与事件语境，因为同一篇报道可能涉及角色和利益不同的多个主体。NTCIR-19 FEHU（基于事实、以事件为中心的人类价值观理解）旨在评估系统能否从事实性新闻中识别与特定行为主体相关的价值观，并判断报道中的行为与这些价值观一致还是相悖。本文仅研究 Task~1，即针对给定的行为主体集合进行文章级价值观识别。
+
+本研究关注低频标签的监督不足，以及扩大预测覆盖时出现的误报和方向错误。DRA-FEHU 根据错误诊断生成补充训练样本，并比较完整标签监督与部分标签监督。在推理阶段，WAIPS-02 结合不同提示的多数投票与独立的方向仲裁。WAIPS-03 对文章进行分段以形成初始预测，再通过频次门控融合，利用辅助提示预测和编码器分数调整标签集合，并对方向判断存在分歧的预测进行选择性检查。
+\end{abstract}
+\vspace{8pt}
+\noindent\textbf{关键词：}人类价值观识别；行为主体归属；部分标签监督；数据增强；校准融合；NTCIR-19 FEHU。
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{引言}
+\subsection{研究背景与问题}
+新闻文章描述涉及个人和机构的行动、意图与后果。例如，一篇有关制裁的报道可能讨论一个政府的安全利益，以及另一个群体遭受的伤害。识别与安全相关的主题，只是理解该报道所表达价值观的第一步。系统还必须确定这一判断适用于哪个行为主体，并判断报道中的行为是在支持还是违背相关价值观。混淆这些决策，可能产生主题上看似合理、但行为主体或方向错误的标签。
+
+针对行为主体的价值观识别，有助于分析新闻如何刻画机构，以及如何报道影响公共福祉的行为。预测针对给定标注体系下文章描述的行动，并非测量行为主体持久的道德品格。
+
+NTCIR-19 FEHU 通过以事件为中心的人类价值观识别，将这一问题明确化~\cite{fehuoverview}。Task~1 提供文章和行为主体标识符。Task-1a 要求为每个文章--行为主体对预测粗粒度价值观，而 Task-1b 要求预测细粒度价值观及其一致或相悖方向。因此，该基准将多标签识别与归属判断、方向推理联系起来。其层级结构也使困难能够在两种粒度上显现：系统可能识别出大类，却混淆细粒度价值观或其方向。
+
+我的早期实验反复暴露出一种权衡。保守的编码器预测只覆盖少量带方向类别，并漏掉许多困难标签。基于提示的系统能够找回更多价值观，但也会生成缺乏支持的标签，或给有效的价值观附上错误方向。有时，扩大候选池反而使性能下降，因为假阳性增长得比真阳性更快。因此，我研究如何补全遗漏的价值观，同时区分纳入标签所需的证据与判定方向所需的证据。
+
+\subsection{研究目标与工作假设}
+研究目标是在规模较小、类别不均衡的训练集和官方输入协议下，改善以行为主体为条件的人类价值观识别。我聚焦于 Task~1：它要求进行文章级解释，但不提供 Task~2 所使用的官方子事件。我的工作假设是，\emph{价值观补全、精确率控制和方向判定应被视为相互关联、但分别控制的决策}。即使这些决策共享同一个模型，系统也应区分它们的证据和错误类型。
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\node[box,text width=3.85cm,minimum height=22mm] at (-4.65,0) {价值观补全\\DRA 训练；候选添加};
+\node[box,text width=3.85cm,minimum height=22mm] at (0,0) {精确率控制\\提示多数投票；门控删除};
+\node[box,text width=3.85cm,minimum height=22mm] at (4.65,0) {方向判定\\Flash 仲裁；选择性问答};
+\end{tikzpicture}
+\caption{三个分析视角及其对应方法。实际融合流程见图~\ref{fig:fghf}。}
+\label{fig:decisions}
+\end{figure}
+
+\subsection{个人贡献及与参赛论文的关系}
+我的工作包括 DRA-FEHU、WAIPS-02 和 WAIPS-03/E7-G4 系统的设计与分析。共同撰写的 NTCIR-19 参赛稿报告了提交结果~\cite{waipspaper}，本文进一步展开以下方法与实验：
+\begin{enumerate}
+\item DRA-FEHU 为冻结的 18 个诊断目标生成样本，通过三个种子的对比，分析增强数据及未列标签的处理方式如何影响排序和阈值化识别。
+\item WAIPS-02 由三种提示变体的一致性决定是否纳入标签，再使用 Flash 预测仲裁方向。
+\item FGHF 对分段主预测进行频次门控的删除与添加，再检查方向分歧。保存的各阶段输出支持分别统计收益与错误。
+\end{enumerate}
+增强实验单独评估编码器。融合实验使用历史 v2 分数，其与重复训练运行的精确对应关系尚不完整，因此该实验没有分离数据增强对完整系统的影响。
+
+WAIPS-01 是 Liu Dongyang 的标签感知集成系统，不属于我的个人方法贡献。E7 使用其中一个历史目标标签提示作为辅助预测来源，未使用完整集成系统。
+
+\subsection{文章结构}
+第~\ref{sec:related} 节介绍相关工作，第~\ref{sec:problem} 节定义任务与研究问题，第~\ref{sec:methods} 节给出方法，第~\ref{sec:eval} 节评估数据增强、选择性融合及官方测试表现，第~\ref{sec:conclusion} 节总结已完成的贡献，并概述最终学位论文的拓展方向。
+
+\sectionbreak
+\section{相关工作}\label{sec:related}
+\subsection{从论证中的价值观识别到主体条件的新闻分析}
+Kiesel 等人~\cite{kiesel2022} 使用 54 个细粒度价值观定义论证中的人类价值观识别任务。ValueEval 则在多个论证来源上评估 20 个较宽泛的类别~\cite{valueeval}。层级清单支持同时比较常见概念与低频细分价值观。FEHU 将这一设置拓展到包含多个行为主体的新闻：正确预测既要确定谁的行动体现某种价值观，也要判断该行动与价值观一致还是相悖。
+
+更广泛的 NEVU 资源在文章和子事件等多个范围组织主体条件标注~\cite{nevu}。FEHU 使用明确规定输入和输出边界的任务发布版本~\cite{fehuoverview}。本研究使用 FEHU Task~1 划分，其数据规模应与完整 NEVU 集合区分。多粒度结构也为最终学位论文拟开展的 Task~2 拓展提供了动机。
+
+
+\subsection{合成监督与诊断引导的数据增强}
+数据增强通过构造新样本提供额外任务监督。Feng 等人~\cite{feng2021} 的综述指出，其作用取决于能否保持文本与标签之间的关系。对 FEHU 而言，这种关系还包括行为主体和方向：仅保留新闻主题，并不能保留行动支持还是违背价值观的含义。因此，DRA-FEHU 针对经过诊断的带方向标签生成样本，并记录生成模式和监督范围。
+
+EAVIT 使用解释式监督和合成样本训练本地价值观检测器，再由检测器缩小传入在线模型的价值观定义范围，由在线模型作最终判断~\cite{eavit}。FGHF 的信息流不同：提示系统提供主预测与候选集合，本地编码器分数参与修订。DRA-FEHU 还在生成的新闻记录中指定行为主体、细粒度价值观和方向，并比较完整与部分监督。本文没有设置条件匹配的 EAVIT 基线，以上比较用于说明方法差异。
+
+
+\subsection{部分标签、不均衡与负例的含义}
+在多标签任务中，未提及的标签不一定是经过验证的负例。当合成样本针对某一目标价值观生成时，这一点尤为重要：即使生成请求未要求穷尽标注，文本也可能表达其他价值观。将所有遗漏标签视为负例，可能引入系统性监督错误。Durand 等人~\cite{durand2019} 研究部分标签下的多标签学习，为区分未知条目与已观察到的监督提供了相关先例。我的掩码目标将这一区分应用于生成的 FEHU 记录。
+
+掩码规定哪些条目接受监督，类别权重改变这些条目对损失的贡献，负例下采样则进一步改变正负比例。解释增强结果时，需要区分这些机制：额外样本扩展价值观覆盖，监督规则则控制其标签如何参与训练。
+
+本地分类器采用 DeBERTaV3~\cite{debertav3} 和低秩适配 LoRA~\cite{lora}，以较少的可训练参数支持重复本地训练。评估同时包含阈值化分类与目标标签排序，对应编码器作为识别器和辅助评分器的两种作用。
+
+\subsection{提示多样性、聚合与相关错误}
+多个模型输出能够提供互补证据。自一致性方法聚合采样得到的推理路径~\cite{selfconsistency}；WAIPS-02 则对同一篇文章使用三种提示形式，并要求精确的带方向标签一致。WAIPS-03 进一步结合在中间分段和模型配置上有所不同的输出。由于这些成员共享文章和分类体系，一致程度被用作支持分数，而非独立观测。
+
+
+分段先将完整文章转化为较短的事件描述，再进行预测，以减少上下文干扰。粒度影响每个行为主体可用的证据：过细分段可能重复证据，过粗分段则可能混合行动与后果。自主分段实验在保留文章--行为主体输出单位的同时，改变这一中间表示。
+
+\subsection{校准与基于 F1 的决策}
+校准将分数与经验上的预测正确性联系起来。Guo 等人~\cite{guo2017} 区分了分类准确率与经过校准的置信度。FGHF 使用保序回归，将组合支持分数映射为开发集候选的正确性，并分别拟合删除与添加的映射。
+
+Lipton 等人~\cite{lipton2014} 在校准概率条件下，将 F1 最优阈值与最优 F1 的一半联系起来。E7 使用的是主系统观测 F1 的一半，属于启发式规则：主系统 F1 并非融合预测器的最优值，校准合并了不同标签，候选决策也受到约束。
+
+开发集对比与官方测试结果分别报告，以区分模型选择和最终评估~\cite{cawley2010}。校准与评估按文章分组，使同一篇文章中的行为主体保持在一起，从而在划分拟合折和计算配对区间时保留依赖单位~\cite{dror2018}。
+
+
+\sectionbreak
+\section{问题定义与研究问题}\label{sec:problem}
+\subsection{输入、标签与评估单位}
+令 $x_i=(t_i,b_i)$ 表示文章 $i$ 的标题和正文，$A_i$ 表示给定的行为主体集合。每篇文章都有全局标识符 $g_i$；行为主体标识符 $a\in A_i$ 在该文章内部解释。Task~1 的输入为 $(x_i,A_i)$，输出单位为 $u=(g_i,a)$，而不是单独一篇文章，也不是跨文章合并后的行为主体名称。即使多个行为主体名称在语义上相关，系统也必须保留给定标识符。
+
+令 $V=\{0,\ldots,53\}$ 为细粒度 Level-1 价值观标签集，$C=\{0,\ldots,19\}$ 为粗粒度 Level-2 标签集。官方层级提供映射 $h:V\rightarrow C$。层级编号可能不符合直觉：Level~1 更细，Level~2 更宽泛。令 $D=\{0,1\}$，其中 $0$ 表示相悖（contradictory），$1$ 表示一致（aligned）。Task-1b 预测集合
+\begin{equation}
+\widehat{Y}_u\subseteq V\times D.
+\label{eq:output}
+\end{equation}
+共有 108 个可能的带方向标签。一种便于编码器使用的索引是 $k(v,d)=2v+d$。我的系统通过以下投影得到 Task-1a 预测：
+\begin{equation}
+\widehat{Z}_u=\{h(v):(v,d)\in\widehat{Y}_u\}.
+\label{eq:projection}
+\end{equation}
+投影去除方向，并合并属于同一粗粒度类别的细粒度价值观。因此，仅修正方向可以改变 Task-1b，而保持 Task-1a 不变。
+
+官方输出是由文章记录构成的 JSON 列表，每条记录包含文章标识符及行为主体标注。细粒度标签标注存储行为主体标识符、Level-1 标识符和方向。评估器将这些标注转换为以 $u$ 为索引的集合，因此重复项不会增加得分。当文章通过不同行动支持两种方向时，同一个细粒度价值观可以同时具有两个方向。
+
+Task~2 使用不同单位 $(g_i,s,a)$，其中 $s$ 标识给定的子事件。Task-2a 和 Task-2b 使用对应的粗粒度及带方向标签集。本文不声称取得了 Task~2 结果。尤其不能假定训练和开发阶段可用的官方子事件也可用于 Task~1 测试推理。分段模型可以根据测试文章生成中间文本，但不能读取该文章未提供的官方 Task~2 结构。
+
+\subsection{学习目标与错误类型}
+学习问题是估计与标注价值观匹配的集合值函数 $f(x_i,a)$，同时处理标签区分、输出数量和方向判定。分析区分遗漏价值观、缺乏支持的价值观、方向反转，以及归属于错误行为主体四类错误。前三类由预测集合测量，案例还考察证据与指定行为主体之间的关系。粗粒度 F1、带方向 F1 和 DRR 分别反映这些错误的不同方面。
+
+\Needspace{14\baselineskip}
+\subsection{研究问题}
+\begin{description}
+\item[RQ1：识别在哪里失败？] 标签频次、中间表示和方向如何影响基于提示与基于编码器的识别？
+\item[RQ2：增强改变了什么？] 在相同训练协议下，目标增强如何改变标签排序与阈值化预测？掩码的作用是否随生成数据组成而变化？
+\item[RQ3：选择性融合改变了什么？] 删除、添加、频次门控与方向检查如何影响固定主系统的精确率与召回率平衡？
+\end{description}
+
+\sectionbreak
+
+\section{诊断引导的数据增强与选择性推理}\label{sec:methods}
+\subsection{方法概览与共同数据处理}
+三种方法共享官方文章标识符、行为主体标识符和价值观层级。DRA-FEHU 通过目标标签增强改进本地模型训练，WAIPS-02 聚合提示预测，频次门控异构融合 FGHF 则利用辅助预测成员的支持和本地编码器的连续标签分数修订主预测。
+
+所有数据连接都使用标识符，而非数组位置。训练文章按文章标识符与金标准标注匹配，标签按给定行为主体标识符分组。本地编码器为每个有标签的文章--行为主体单位构造一个样本。提示流水线将行为主体列表与文章一同提供，并要求模型复用这些标识符。输出时，细粒度价值观标识符会对照标签集检查，再通过官方层级转换。这种统一表示使预测集合、编码器分数和辅助预测成员投票能够对齐，无需比较自由文本形式的行为主体名称。
+
+提示流程结合训练示例、分类体系、文章及其行为主体列表，再将模型响应解析为细粒度预测和投影后的粗粒度预测。E1 使用两个完整示例，并移除早期对示例标签数量和输出数量的限制，使模型能够返回文章支持的价值观。
+
+\subsection{DRA-FEHU：选择增强对象}
+DRA-FEHU 使用基线诊断阶段选定并冻结的 18 个带方向标签，记为 $T$。它们的官方训练正例不超过 130 个，开发集至少有三个正例，且仅官方数据的种子 42 基线在阈值 0.30 下召回率为零。其中 14 个为相悖方向、四个为一致方向，跨越 12 个粗粒度类别。增强旨在为训练支持不足、且已有识别失败的标签补充样本。下文列出选定标签；最终选择过程未完整保存在归档中。
+
+目标指标仅适用于这个通过开发集选择的子集，因此与完整标签空间指标同时报告。按存档中的“方向:价值观”记法，$T$ 为 0:31、0:48、0:53、0:16、0:19、0:20、0:13、0:37、0:29、0:2、0:33、0:32、0:40、0:28、1:31、1:10、1:49 和 1:4。
+
+生成过程要求构造新闻风格记录，其中明确的行为主体体现目标带方向价值观。第一轮经过模型语义筛查后提供 340 个样本；第二轮提供 900 条记录，即每个目标 50 条，其构成见表~\ref{tab:augmentation}。方向对比用于区分支持与违背，情境变换用于改变事件上下文，困难负例请求用于区分主题相关与证据充分。
+
+\begin{table}[htbp]
+\centering\small
+\caption{第二轮生成及监督范围。90 条困难负例请求属于生成模式，不代表 90 个经过验证的负例标注。}
+\label{tab:augmentation}
+\begin{tabularx}{\textwidth}{@{}Yr lY@{}}
+\toprule
+生成模式 & 记录数 & 监督范围 & 预期区分 \\
+\midrule
+目标标签上下文生成 & 450 & 完整 & 面向目标的示例 \\
+方向对比 & 180 & 部分 & 一致与相悖 \\
+情境变换 & 180 & 部分 & 不同事件上下文 \\
+困难负例 & 90 & 部分 & 主题相关与证据充分 \\
+\midrule
+合计 & 900 & 完整 450；部分 450 & 36 个明确的已知负例 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+第一轮经过自动语义筛查，第二轮仅通过结构检查。六样本人工试点不足以估计全部 1,240 条记录的质量。生成模式也不同于实际标注范围：第二轮只有 36 条记录带有明确的已知负例。
+
+合并数据包含 2,468 条文章记录和 4,575 个训练主体单位，其中 3,785 个为完整监督、790 个为部分监督。一篇文章可以提供多个主体单位，因此文章数与主体单位数分别报告。
+
+\subsection{带掩码的编码器监督与辅助证据}
+本地模型将文章标题、正文及以行为主体为条件的文本字段共同编码。分类头把池化后的表示映射为 108 个 logit，再通过相互独立的 sigmoid 函数得到 $p_{u,\ell}$。对于训练单位 $u$，令 $y_{u,\ell}\in\{0,1\}$ 表示可用目标值，$m_{u,\ell}\in\{0,1\}$ 表示该目标是否受到监督。官方记录和合成的完整多标签记录使用全一掩码。部分监督记录只监督已知正例及明确已知的负例，其余所有条目的掩码均为零。
+
+对于小批量 $B$，实现中的目标函数为
+\begin{equation}
+\mathcal{L}(B)=\frac{\sum_{u\in B}\sum_{\ell}m_{u,\ell}
+\left[-w^+_\ell y_{u,\ell}\log p_{u,\ell}
+-(1-y_{u,\ell})\log(1-p_{u,\ell})\right]}
+{\sum_{u\in B}\sum_{\ell}m_{u,\ell}}.
+\label{eq:maskedloss}
+\end{equation}
+正例权重根据受到监督的条目计算：
+\begin{equation}
+w^+_\ell=\operatorname{clip}\!\left(\sqrt{\frac{n^-_\ell}{n^+_\ell}},1,10\right),
+\label{eq:weights}
+\end{equation}
+实现使用 $\max(n^+_\ell,1)$ 作为分母，正例权重仅作用于损失中的正例项。
+
+掩码避免将未知合成标签作为负例监督。N1 和 N3 进一步对所选目标的受监督负例下采样，在计算损失权重之前，分别保留约每正例一个或三个负例。这会改变有效训练比例，因此评估在召回率之外也考察目标精确率与排序。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\node[box,text width=7.1cm] (data) {官方记录 + 生成记录\\完整或部分文章--主体标签};
+\node[box,text width=7.1cm,below=6mm of data] (mask) {\begin{tabular}{lcc}C/Fp 部分监督条目 & $y$ & $m$\\已知正例 & 1 & 1\\已知负例 & 0 & 1\\未知 & -- & 0\end{tabular}\\B/Gp 未列条目：$y=0,m=1$};
+\node[box,text width=7.1cm,below=6mm of mask] (encoder) {DeBERTaV3 + LoRA\\按所选监督方式计算二元交叉熵};
+\node[box,text width=7.1cm,below=6mm of encoder] (eval) {A/B/C/Fp/Gp：三个种子\\独立评估阈值为 0.30};
+\node[box,text width=4.5cm,anchor=north west] (export) at ([xshift=10mm]data.north east) {历史增强 v2 编码器};
+\node[box,text width=4.5cm,below=8mm of export] (scores) {连续概率\\为候选标签提供支持};
+\node[box,text width=4.5cm,below=8mm of scores] (fusion) {FGHF 支持分数\\与提示证据结合};
+\node[font=\small\bfseries,above=4mm of data] {重复训练研究};
+\node[font=\small\bfseries,above=4mm of export] {归档的融合输入};
+\draw[arr] (data) -- (mask);
+\draw[arr] (mask) -- (encoder);
+\draw[arr] (encoder) -- (eval);
+\draw[arr] (export) -- (scores);
+\draw[arr] (scores) -- (fusion);
+\draw[gray,dashed] ([xshift=5mm,yshift=7mm]data.north east) -- ([xshift=5mm]eval.south east);
+\end{tikzpicture}
+\caption{编码器监督与归档融合分数。掩码条件不将未知项计入损失，非掩码条件将未列标签视为负例。}
+\label{fig:dra}
+\end{figure}
+
+FGHF 使用编码器连续分数，为提示系统提供的候选补充证据。融合采用归档的增强 v2 导出，与编码器重复实验分开记录。这样，融合可以利用标签分数，而不必将输出限制在编码器的固定阈值预测中。
+
+\subsection{WAIPS-02：带方向仲裁的提示多数投票}
+WAIPS-02 使用三种 Pro 提示变体：基线提示、定向且示例更均衡的提示，以及紧凑的严格提示。每个变体产生集合 $S_u^{(j)}\subseteq V\times D$。多数集合为
+\begin{equation}
+M_u=\left\{\ell:\sum_{j=1}^{3}\mathbf{1}[\ell\in S_u^{(j)}]\geq2\right\}.
+\label{eq:majority}
+\end{equation}
+一致性要求精确匹配：行为主体、细粒度价值观和方向都必须相同。不同成员以相反方向支持同一个价值观，并不会自动构成带方向标签的多数。
+
+单独生成的 Flash 预测为其识别出的价值观提供方向查找函数 $q_u(v)$。对每个 $(v,d)\in M_u$，若查找结果不存在，WAIPS-02 保留 $d$；否则使用 $q_u(v)$。随后对结果去重，并投影到 Task-1a。历史实现为每个文章--行为主体--价值观键存储一个方向；如果 Flash 同时提供两个方向，则由最后遇到的条目决定查找结果。这种顺序敏感情况是保留流程的一项局限，未来修订应明确处理。
+
+仲裁复用完整的 Flash 预测，并在多数集合已覆盖的价值观范围内改变方向。在测试数据上，2,295 个多数元组经过仲裁和集合去重后，变为 2,260 个最终带方向元组。流程保留下来的合法双方向预测仍然存在。
+
+这一设计的出发点较为保守：提示一致性提供纳入决策，另一模型的输出提供方向偏好。这限制了缺乏支持的候选数量，但也可能丢失仅被一个提示识别到的有效标签。WAIPS-02 的简单性使其成为与 FGHF 进行系统级比较的有用参照，不过，两者的模型调用预算不同，仅凭分数无法分离聚合规则的影响。
+
+\subsection{WAIPS-03：粒度受控的主预测}
+FGHF 从 E6b 开始。E6b 是一个自主分段流水线，根据文章标题和正文生成较短的事件描述。分段提示不使用价值观分类体系。随后的预测提示接收生成片段与行为主体列表，再产生文章级带方向价值观。训练示例可以使用官方训练子事件描述，但测试分段由 Task~1 文章本身生成。
+
+最初的 E6 配置倾向于生成更细的描述，在开发集上的分段数量中位数为 12。E6b 要求生成约六至九个片段，中位数为八。E6c 复用 E6b 分段，并使用 Pro 非思考模式预测器。该设计检验减少碎片化是否能为主体条件判断提供更好的上下文。生成片段是摘要，不能保证是逐字摘取的证据跨度；因此，它们有助于 F1，并不证明其事实完整性。
+
+对于每个单位 $u$，令 $P_u$ 表示 E6b 主预测集合。四个历史辅助预测成员提供额外预测：E1、E6、E6c，以及第~1.3 节提到的目标标签提示组件。本地编码器提供 $p_{u,\ell}$。这些成员的提示、中间表示或模型配置不同；它们在这种实际意义上是异构的，但其错误仍可能高度相关。
+
+\subsection{支持分数、频次门控与校准}
+令 $J_u^{(j)}$ 为辅助预测成员 $j$ 的预测集合。对于候选 $\ell=(v,d)$，定义
+\begin{align}
+e_u(\ell)&=\sum_j\mathbf{1}[\ell\in J_u^{(j)}],\\
+r_u(v)&=\sum_j\mathbf{1}[\exists d'\!:\,(v,d')\in J_u^{(j)}],\\
+o_u(\ell)&=r_u(v)-e_u(\ell).
+\end{align}
+其中，$o_u$ 统计支持该价值观、但不支持精确带方向元组的辅助预测成员数量。预测了两个方向的成员会对 $e_u$ 和 $r_u$ 作出贡献，而不会对 $o_u$ 作出贡献。删除与添加分数分别为
+\begin{align}
+s_{\mathrm{rm}}(u,\ell)&=e_u(\ell)+0.25\,o_u(\ell)+\max_{d'\in D}p_{u,(v,d')},\label{eq:removal}\\
+s_{\mathrm{add}}(u,\ell)&=e_u(\ell)+p_{u,\ell}.\label{eq:addition}
+\end{align}
+删除接受同一价值观的跨方向支持，并取编码器在两个方向上的最大分数；添加使用精确的带方向支持及候选方向的编码器分数。
+
+训练频次门控集合为
+\begin{equation}
+F=\{\ell:n_\ell>130\}.
+\label{eq:gate}
+\end{equation}
+门控根据官方训练数据计数，包含 108 个带方向标签中的 38 个。只有这些标签可以被删除或添加，较低频的主预测直接保留。18 个增强目标全部位于门控之外，即 $T\cap F=\varnothing$，但仍可接受方向检查。阈值在开发阶段选定，用于保护缺少校准依据的标签。
+
+删除和添加各拟合一个保序回归模型，每个模型合并不同标签的候选样本。删除候选来自主预测元组；添加候选来自细粒度价值观未出现在原始主集合中的辅助预测元组。监督目标是精确带方向标签是否属于开发集金标准。文章标识符的确定性哈希将数据分成两折，每折使用另一折拟合的校准器评分，同一篇文章中的主体始终位于同一折。
+
+运行阈值为主系统在拟合折上的 Micro-F1 的一半。测试推理使用在完整开发集上拟合并保存的校准器，阈值约为 0.27479，无需测试金标准。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\node[box,fill=gray!8,draw=gray,text width=13cm] (offline) {离线：开发集候选分数 + 金标准 $\rightarrow c_{\rm rm},c_{\rm add}$\\开发集交叉拟合；测试使用完整开发集拟合结果};
+\node[box,text width=7cm,anchor=north west] (primary) at ([yshift=-8mm]offline.south west) {文章 + 给定主体 $\rightarrow$ E6b 主预测集合};
+\node[box,text width=4.2cm,anchor=north east] (aux) at ([yshift=-8mm]offline.south east) {四路辅助预测\\+ 历史编码器分数};
+\node[box,text width=7cm,below=6mm of primary] (gate) {按官方训练频次对主预测元组分组};
+\node[box,text width=2.8cm,minimum height=16mm,anchor=north west] (low) at ([yshift=-7mm]gate.south west) {$n_\ell\leq130$\\保留主预测元组};
+\node[box,text width=2.8cm,minimum height=16mm,anchor=north east] (remove) at ([yshift=-7mm]gate.south east) {$n_\ell>130$\\校准删除};
+\node[box,text width=2.8cm,minimum height=16mm,below=6mm of remove] (add) {校准添加\\仅考虑高频候选};
+\node[box,text width=7cm,anchor=north] (merge) at ($(gate.center |- add.south)+(0,-0.7)$) {合并剩余主预测与添加项};
+\node[box,text width=7cm,below=6mm of merge] (qa) {选择性 Flash 方向检查\\存在分歧的单方向价值观};
+\node[box,text width=7cm,below=6mm of qa] (out) {Task-1b 预测集合 $\rightarrow$ Task-1a 投影};
+\draw[arr] (primary) -- (gate);
+\draw[arr] (gate.south -| low.north) -- (low.north);
+\draw[arr] (gate.south -| remove.north) -- (remove.north);
+\draw[arr] (remove) -- (add);
+\draw[arr] (low.south) -- (merge.north -| low.south);
+\draw[arr] (add.south) -- (merge.north -| add.south);
+\draw[arr] (merge) -- (qa);
+\draw[arr] (qa) -- (out);
+\coordinate (rmaux) at ([yshift=-2mm]remove.east);
+\coordinate (adaux) at ([yshift=-2mm]add.east);
+\coordinate (rmcal) at ([yshift=2mm]remove.east);
+\coordinate (adcal) at ([yshift=2mm]add.east);
+\coordinate (calroute) at ([xshift=3mm]offline.east);
+\draw[arr] (aux.south) |- (qa.east);
+\draw[arr] (aux.south |- rmaux) -- (rmaux);
+\draw[arr] (aux.south |- adaux) -- (adaux);
+\draw[arr,dashed,draw=gray] (offline.east) -- (calroute) |- (rmcal);
+\draw[arr,dashed,draw=gray] (calroute |- rmcal) |- (adcal);
+\end{tikzpicture}
+\caption{FGHF 的频次分支与校准。虚线传入离线拟合的校准映射。删除至少保留一个主预测元组；每个主体最多添加两个带方向元组。}
+\label{fig:fghf}
+\end{figure}
+
+\subsection{融合算法与选择性方向检查}
+算法~\ref{alg:fusion} 给出保留的删除和添加流程。先处理校准删除分数较低的元组，同时为主集合非空的行为主体至少保留一个标签。添加阶段考虑删除后尚未出现其价值观的评审候选，每个行为主体最多纳入两个带方向元组。至少保留一个标签的约束，是继承自实际系统的启发式规则；任务本身允许空预测。
+
+\begin{algorithm}[htbp]
+\centering
+\begin{minipage}{0.96\textwidth}\small
+\hrule\vspace{6pt}
+\textbf{对行为主体主预测集合进行频次门控修订}\par
+\textit{输入：}主集合 $P_u$；辅助预测成员并集 $C_u$；高频集合 $F$；校准分数映射 $c_{\mathrm{rm}},c_{\mathrm{add}}$；阈值 $\theta$。\par
+\begin{enumerate}[label=\arabic*.,itemsep=4pt]
+\item 置 $R\leftarrow P_u$。
+\item 将满足 $c_{\mathrm{rm}}(s_{\mathrm{rm}}(u,\ell))<\theta$ 的 $\ell\in R\cap F$ 按校准分数升序排列。
+\item 对排序后的每个 $\ell$，仅在 $|R|>1$ 时从 $R$ 中移除。
+\item 记录保留下来的价值观集合 $V_R=\{v:(v,d)\in R\}$。
+\item 构造 $B=\{(v,d)\in C_u\cap F:v\notin V_R,\ c_{\mathrm{add}}(s_{\mathrm{add}}(u,(v,d)))\geq\theta\}$。
+\item 将 $B$ 中校准分数最高的两个元组加入 $R$；若 $|B|<2$，则全部加入。分数相同的情况按实现中的确定性规则处理。
+\item 对 $R$ 中存在相反方向评审预测的每个单方向价值观，请求仅检查方向的问答。应用有效返回方向；若记录的请求失败，则保留当前方向。
+\item 返回所得集合及按式~\eqref{eq:projection} 得到的粗粒度投影。
+\end{enumerate}
+\vspace{3pt}\hrule
+\end{minipage}
+\caption{部署时的决策逻辑。第~6 步使用第~4 步记录的价值观集合，可以纳入新添加价值观的两个方向。第~7 步失败时保留原方向，描述的是历史运行行为。}
+\label{alg:fusion}
+\end{algorithm}
+
+添加在删除之后执行，因此可以重新考虑已从主预测中删除的价值观。添加校准使用原始主集合定义候选，两者存在的候选分布差异留待后续实验检查。每主体两项的限制也允许同一新价值观的两个方向同时加入，与任务的标注形式一致。
+
+当融合结果中的某个单方向价值观至少有一个辅助预测成员支持相反方向时，触发方向问答检查。问题包含文章、行为主体和价值观定义，但不透露当前提出的方向，要求 Flash 模型在一致与相悖之间选择。已经具有双方向的预测不触发检查。其依据是：只在集成暴露分歧的位置投入一次额外决策，而不是假定一致性能够证明方向正确。
+
+开发集方向检查共处理 176 项，其中 46 项翻转、123 项不变，七次请求失败后保留原方向。测试集检查 207 项，其中 77 项翻转、125 项不变，五次请求失败后保留原方向。方向检查保持价值观本身及 Task-1a 投影不变。第~\ref{sec:eval} 节进一步分析开发集方向检查的结果。
+
+\sectionbreak
+\section{评估与讨论}\label{sec:eval}
+\subsection{实验设计}
+评估包括基线表示对比、编码器重复训练和融合阶段比较。编码器实验使用种子 42、43、44；提示与融合结果来自保存的预测，官方测试分数来自任务概述与参赛稿。附录给出结果与归档产物的对应关系。
+
+
+\subsection{数据集、样本覆盖与信息边界}
+本研究使用项目中保留的官方 FEHU 发布数据。表~\ref{tab:data} 区分文章、给定行为主体以及具有正例金标准标注的行为主体。历史本地编码器加载器从有标签行为主体中构造了 3,335 个训练单位和 456 个开发单位。完整开发事件库提供 459 个行为主体。尽管额外的三个开发行为主体没有文章级正例金标准标签，这仍是不同的覆盖约定，因为预测器仍可能在这些行为主体上产生假阳性。编码器与提示系统之间的比较必须保留这一区分。
+
+\begin{table}[htbp]
+\centering\small
+\caption{保留事件库和金标准文件的计数。“金标准主体数”统计具有文章级正例标注的文章--行为主体单位。两个测试输入包含不同文章；Task~2 测试子事件不是 Task~1 的隐藏资源。}
+\label{tab:data}
+\begin{tabularx}{\textwidth}{@{}Yrrrr@{}}
+\toprule
+划分／输入 & 文章数 & 给定主体数 & 金标准主体数 & 子事件数 \\
+\midrule
+训练集 & 1,228 & 3,381 & 3,335 & 10,822 \\
+开发集 & 177 & 459 & 456 & 1,526 \\
+Task~1 测试集 & 175 & 479 & 未公开 & 未提供 \\
+\midrule
+Task~2 测试集 & 175 & 444 & 未公开 & 1,616 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+训练集有 16,905 个唯一带方向文章--行为主体标签，投影后有 13,371 个粗粒度标签。开发集有 2,390 个带方向标签和 1,861 个粗粒度标签。93 个带方向类别在开发集中具有正例支持。训练集、开发集、Task~1 测试集和 Task~2 测试集的文章标识符两两不交。这一标识符检查表明，划分文件没有复用同一文章记录，但不能证明新闻报道在语义上相互独立，也不能排除不同划分中存在相关事件。
+
+图~\ref{fig:frequency} 将长尾分布与增强、融合对应起来。训练支持度从零到 1,735 个正例文章--主体单位不等，三个带方向标签没有正例。18 个增强目标位于长尾部分，均不属于可增删的 38 个标签。16,905 个元组共享 1,228 篇文章，不能视为同等数量的独立文档。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{semilogyaxis}[width=0.94\textwidth,height=6.2cm,xlabel={按训练支持度排序的带方向标签},ylabel={正例文章--主体单位（对数轴）},xmin=0,xmax=108,ymin=0.8,ymax=2300,grid=major,grid style={gray!16},tick label style={font=\small},label style={font=\small},legend style={font=\small,at={(0.99,0.97)},anchor=north east,draw=none,fill=white},clip=false]
+\path[fill=blue!7] (axis cs:0,0.8) rectangle (axis cs:38.5,2300);
+\addplot[blue,thick] coordinates {(1,1735) (2,1065) (3,993) (4,636) (5,597) (6,565) (7,473) (8,453) (9,450) (10,433) (11,364) (12,347) (13,344) (14,329) (15,308) (16,296) (17,291) (18,290) (19,287) (20,285) (21,281) (22,276) (23,263) (24,240) (25,230) (26,224) (27,210) (28,209) (29,203) (30,199) (31,198) (32,191) (33,183) (34,183) (35,181) (36,179) (37,162) (38,141) (39,128) (40,123) (41,122) (42,114) (43,108) (44,107) (45,103) (46,98) (47,82) (48,81) (49,76) (50,76) (51,75) (52,75) (53,74) (54,62) (55,59) (56,56) (57,51) (58,51) (59,49) (60,47) (61,46) (62,46) (63,45) (64,42) (65,40) (66,40) (67,38) (68,37) (69,35) (70,33) (71,33) (72,27) (73,26) (74,24) (75,23) (76,22) (77,21) (78,21) (79,16) (80,16) (81,14) (82,14) (83,14) (84,12) (85,11) (86,10) (87,10) (88,10) (89,9) (90,7) (91,6) (92,6) (93,6) (94,5) (95,5) (96,4) (97,4) (98,3) (99,3) (100,3) (101,2) (102,2) (103,1) (104,1) (105,1)};\addlegendentry{训练支持度}
+\addplot[gold,dashed,thick] coordinates {(0,130) (108,130)};\addlegendentry{阈值：130}
+\addplot[only marks,mark=diamond*,gold,mark size=2.8pt] coordinates {(39,128) (49,76) (55,59) (56,56) (57,51) (58,51) (61,46) (62,46) (63,45) (65,40) (66,40) (67,38) (69,35) (71,33) (72,27) (83,14) (84,12) (90,7)};\addlegendentry{18 个增强目标}
+\draw[gray,densely dashed] (axis cs:38.5,0.8) -- (axis cs:38.5,2300);
+\node[font=\small,align=center] at (axis cs:19,3.5) {可删除或添加的\\38 个标签};
+\end{semilogyaxis}
+\end{tikzpicture}
+\caption{训练频次分布：阴影标出 38 类门控范围，菱形标出增强目标。三个零频标签不绘入对数曲线；全部增强目标均位于门控之外。}
+\label{fig:frequency}
+\end{figure}
+
+实验使用经过行为主体对齐修正的训练与开发数据版本。系统对比对应附录列出的已保存预测、指标和配置。
+
+少样本示例取自训练集。目标选择、早停、提示选择、校准和融合选择使用开发集信息。官方 Task~1 测试标签在本地不可用。使用官方开发子事件的实验，例如早期 E3/E3a 诊断，相比 Task~1 测试推理拥有额外中间信息，因此未纳入主要的可直接应用系统比较表。生成式自主分段则是允许的，因为推理时只使用给定文章。
+
+\subsection{评估指标及其解释}
+对于金标准与预测实例键的并集 $U$，定义 $\mathrm{TP}=\sum_u|Y_u\cap\widehat{Y}_u|$、$\mathrm{FP}=\sum_u|\widehat{Y}_u\setminus Y_u|$ 和 $\mathrm{FN}=\sum_u|Y_u\setminus\widehat{Y}_u|$。Micro-F1 为
+\begin{equation}
+\micro=\frac{2\mathrm{TP}}{2\mathrm{TP}+\mathrm{FP}+\mathrm{FN}}.
+\label{eq:micro}
+\end{equation}
+官方宏平均分数在指定标签空间中，仅对金标准具有正例支持的标签计算每标签 F1，再取平均：
+\begin{equation}
+\macro=\frac{1}{|L_G|}\sum_{\ell\in L_G}
+\frac{2\mathrm{TP}_\ell}{2\mathrm{TP}_\ell+\mathrm{FP}_\ell+\mathrm{FN}_\ell},
+\qquad L_G=\{\ell:\mathrm{TP}_\ell+\mathrm{FN}_\ell>0\}.
+\label{eq:macro}
+\end{equation}
+它不是宏平均精确率和宏平均召回率的调和平均。对金标准中不存在的标签所作的预测会影响微平均精确率，但在仅对金标准有正例标签计算的 Macro-F1 中没有单独一项。刻画系统行为需要同时使用这两个指标。
+
+对于方向，令 $E=\{(u,v):|\{d:(v,d)\in Y_u\}|=1\}$，并令 $d^*_{u,v}$ 表示唯一的金标准方向。评估器计算
+\begin{equation}
+\drr=\frac{\sum_{(u,v)\in E}\mathbf{1}[(v,1-d^*_{u,v})\in\widehat{Y}_u]}{|E|}.
+\label{eq:drr}
+\end{equation}
+开发集包含 2,222 个此类金标准方向唯一的配对。另有 84 个行为主体--价值观对具有两个金标准方向，被排除在 DRR 之外。对于金标准方向唯一的价值观，若预测同时包含两个方向，仍计为反转；未预测则不计为反转。因此，空预测系统的 DRR 为零，但没有有效召回；必须将 DRR 与 F1 或覆盖度一同解读。
+
+评分器对标签去重，将缺少的预测视为空集，并将额外预测实例计为假阳性。标识符与格式检查在导出时单独执行。
+
+对于 18 个所选目标，我还报告保留概率分析中的平均每标签 ROC-AUC。它测量被评估行为主体单位上的正负例排序，不是最终多标签 F1，也不能确定可部署阈值。使用各目标的开发集金标准分别选择阈值，只能提供利用答案信息的理想化诊断，而不是无偏测试结果。因此，重复运行图将排序与阈值化输出作为观察同一模型的不同视角。
+
+\subsection{模型、硬件与参数选择}
+本地编码器为 \code{microsoft/deberta-v3-base}，具有 12 层，隐藏维度为 768。官方模型卡报告其骨干参数为 8,600 万，嵌入参数为 9,800 万~\cite{debertacard}。保留的实现增加了一个 108 维输出线性头，并对 query 和 value 投影应用 LoRA。一份保留的冒烟运行配置报告了 589,824 个可训练适配器参数；该计数没有包含所有新增加的分类头参数。
+
+外部模型记录为 \code{deepseek-v4-pro} 和 \code{deepseek-v4-flash}；数据增强使用实验记录所述的 Pro 预览版本。官方组织者对照是另行适配的 Llama-3.1-8B-Instruct 系统~\cite{fehuoverview}。
+
+\begin{table}[htbp]
+\centering\small
+\caption{所报告实验的主要实现设置。}
+\label{tab:settings}
+\begin{tabularx}{\textwidth}{@{}P{3.25cm}YY@{}}
+\toprule
+组件 & 保留设置 & 使用或选择方式 \\
+\midrule
+编码器输入 & 最多 512 个 token；文章与行为主体配对 & 截断限制可访问的文章证据 \\
+LoRA & 秩 16；缩放 32；dropout 为 0.1 & 适配 query/value 投影 \\
+优化 & AdamW；学习率 $2\times10^{-4}$；权重衰减 0.01 & 余弦调度；预热比例 0.1 \\
+训练安排 & 批量 8；梯度累积 4；最多 15 轮 & 早停耐心值 4；按开发集 Micro-F1 选最佳模型 \\
+预测阈值 & 全局 0.30 & 独立编码器的共同工作点 \\
+重复运行 & 种子 42、43、44 & 保留条件使用相同三个种子 \\
+E1 提示 & 两个完整训练示例；温度 0.1 & 提示修复移除示例／输出上限 \\
+WAIPS-02 & 三个 Pro 提示加一次 Flash 预测；温度 0 & 精确多数投票与缓存方向仲裁 \\
+FGHF 门控与分数 & 计数 $>130$；仅价值观支持权重 0.25；最多添加 2 项 & 训练频次门控；开发阶段设计的规则 \\
+FGHF 校准 & 两个文章折；保序映射；$F_1/2$ 阈值 & 开发集交叉拟合；测试前使用完整开发集拟合 \\
+方向问答检查 & Flash；温度 0.1；输出 300 个 token；最多尝试 3 次 & 只检查明确存在分歧的单方向预测 \\
+E6/E6b；E6c & 分别为 Flash、Pro；温度 0.1 & E6c 复用 E6b 分段，并明确关闭思考模式 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+归档的冒烟运行使用 NVIDIA GeForce RTX~4090。软件环境为 Python~3.11.15、PyTorch~2.6.0 和 CUDA~12.4，配套 Transformers~5.8.1 与 PEFT~0.19.1。这些设置描述该次冒烟运行，正式实验的完整环境记录尚未全部保存。
+
+WAIPS-02 在测试时执行四轮文章调用；E7 执行两轮分段、五轮预测，并额外检查方向分歧，因此需要更多请求。不过，各类请求的长度不同，公平的成本比较还需要 token、重试与延迟记录。
+
+\subsection{RQ1：基线诊断与表示方式的影响}
+表~\ref{tab:devsystems} 按系统类型列出保存的开发集输出。仅官方数据的种子 42 编码器，其带方向 Macro-F1 为 0.0305；历史增强编码器达到 0.1303，但 DRR 更高。RQ2 将通过重复训练进一步考察增强及其监督设置。
+
+\begin{table}[htbp]
+\centering\small
+\caption{177 篇文章上的开发集结果。编码器行沿用历史的 456 个有标签行为主体约定；提示与融合文件按 459 个给定行为主体检查。分数来自单次保留输出，并非外部模型重复运行的均值。DRR 越低越好，F1 越高越好。}
+\label{tab:devsystems}
+\begin{tabularx}{\textwidth}{@{}Yrrrrr@{}}
+\toprule
+系统 & 1a Micro & 1a Macro & 1b Micro & 1b Macro & DRR $\downarrow$ \\
+\midrule
+\multicolumn{6}{@{}l}{独立编码器（456 个有标签主体）}\\
+DeBERTa，仅官方数据，种子 42 & 0.5090 & 0.1351 & 0.3023 & 0.0305 & 0.2165 \\
+DeBERTa，历史增强 v2 & 0.5405 & 0.3420 & 0.3306 & 0.1303 & 0.2880 \\
+\midrule
+\multicolumn{6}{@{}l}{提示系统（459 个给定主体）}\\
+E1，修复后的少样本提示 & 0.6574 & 0.5018 & 0.5480 & 0.3719 & 0.0347 \\
+E6，自主分段 & 0.6535 & 0.5260 & 0.5412 & 0.4079 & 0.0504 \\
+E6b，粒度受控分段 & 0.6621 & 0.5286 & 0.5496 & 0.4124 & 0.0459 \\
+E6c，Pro 使用 E6b 片段 & 0.6774 & 0.5600 & 0.5343 & 0.3725 & 0.0657 \\
+WAIPS-02，开发集选定策略 & 0.6840 & 0.5573 & 0.5560 & 0.3816 & 0.0338 \\
+\midrule
+\multicolumn{6}{@{}l}{融合系统}\\
+E7-G4，完整融合 & 0.6874 & 0.5471 & 0.5817 & 0.4308 & 0.0419 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+自主分段对不同指标的影响并不一致。E6 相比 E1 提高了带方向 Macro-F1，却降低了 Micro-F1 并提高 DRR。E6b 的粒度控制改善了相对 E6 的两个带方向 F1，并降低 DRR，但 DRR 仍高于 E1。E6c 的粗粒度分数更高，带方向分数却低于 E6b。这一现象说明，识别相关价值观大类与选择细粒度标签及方向，对预测器提出了不同要求。
+
+RQ1 的对比显示，编码器受限于带方向标签覆盖较窄，提示系统则在扩大覆盖的同时产生无支持标签和反转。E6b 较粗的分段改善了相对 E6 的带方向指标，但保存的生成结果尚不能确定分段在多大程度上修复了主体归属；这一问题需要证据标注。
+
+\subsection{RQ2：诊断引导数据增强的贡献}
+编码器对比考察从仅使用官方数据到加入增强数据的变化，并比较监督规则。A 仅使用官方数据；B 加入第二轮 900 条记录，将未指定标签视为负例；C 对相同记录使用掩码。Fp 合并第一轮 340 条和第二轮 900 条记录并使用掩码，Gp 则将合并数据中未指定的条目视为负例。表~\ref{tab:seeds} 根据保存的逐次运行指标，报告随机种子 42、43、44 的均值与样本标准差。
+
+\begin{table}[htbp]
+\centering\small
+\caption{编码器开发集结果，种子为 42/43/44。SD 是根据保存的四位小数指标计算的样本标准差，不是置信区间。DRR 与目标 Micro-F1 列为种子均值；每次运行的 AUC 先对 18 个目标取平均。}
+\label{tab:seeds}
+\begin{tabularx}{\textwidth}{@{}lYYYrr@{}}
+\toprule
+配置 & 1b Micro $\pm$ SD & 1b Macro $\pm$ SD & 目标 AUC $\pm$ SD & DRR & 目标 F1 \\
+\midrule
+A & $0.3008\pm0.0037$ & $0.0284\pm0.0018$ & $0.5133\pm0.0304$ & 0.1580 & 0.0000 \\
+B & $0.3109\pm0.0043$ & $0.0890\pm0.0370$ & $0.6242\pm0.0108$ & 0.2823 & 0.0319 \\
+C & $0.3099\pm0.0168$ & $0.0470\pm0.0180$ & $0.5770\pm0.0282$ & 0.2196 & 0.0081 \\
+Fp & $0.3211\pm0.0346$ & $0.0878\pm0.0838$ & $0.6318\pm0.1065$ & 0.1772 & 0.0447 \\
+Gp & $0.3030\pm0.0026$ & $0.0779\pm0.0126$ & $0.5981\pm0.0210$ & 0.2850 & 0.0260 \\
+N3 & $0.2347\pm0.0675$ & $0.1074\pm0.0663$ & $0.6079\pm0.1205$ & 0.3188 & 0.0537 \\
+N1 & $0.1434\pm0.0191$ & $0.0424\pm0.0040$ & $0.5066\pm0.0494$ & 0.2975 & 0.0351 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+B 在三个种子中的完整标签空间 Macro-F1 和目标 AUC 均高于 A。不过，在阈值 0.30 下，其目标 Micro-F1 均值只有 0.0319。增强改善了标签排序，但将这些分数转化为可靠的目标预测仍然困难。因此，Macro-F1 与目标 F1 从不同方面反映增强的作用。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.47\textwidth,height=5.5cm,xmin=0.5,xmax=5.5,ymin=0.4,ymax=0.8,ytick={0.4,0.5,0.6,0.7,0.8},xtick={1,2,3,4,5},xticklabels={{A\\0},{B\\900/N},{C\\900/M},{Fp\\1240/M},{Gp\\1240/N}},x tick label style={font=\footnotesize,align=center},yticklabel style={font=\small},scaled y ticks=false,y tick label style={/pgf/number format/fixed},title={(a) 目标平均 ROC-AUC},title style={font=\small},grid=major,grid style={gray!16}]
+\addplot[only marks,color=blue,mark=*,mark size=2.3pt] coordinates {(0.86,0.5359) (1.86,0.6119) (2.86,0.5824) (3.86,0.6113) (4.86,0.6082)};
+\addplot[only marks,color=gold,mark=square*,mark size=2.3pt] coordinates {(1.00,0.4787) (2.00,0.6322) (3.00,0.5465) (4.00,0.5370) (5.00,0.5739)};
+\addplot[only marks,color=ink,mark=triangle*,mark size=2.3pt] coordinates {(1.14,0.5252) (2.14,0.6284) (3.14,0.6022) (4.14,0.7471) (5.14,0.6121)};
+\addplot[black,very thick] coordinates {(0.69,0.513267) (1.31,0.513267)};
+\addplot[black,very thick] coordinates {(1.69,0.624167) (2.31,0.624167)};
+\addplot[black,very thick] coordinates {(2.69,0.577033) (3.31,0.577033)};
+\addplot[black,very thick] coordinates {(3.69,0.631800) (4.31,0.631800)};
+\addplot[black,very thick] coordinates {(4.69,0.598067) (5.31,0.598067)};
+\addplot[gray,dashed] coordinates {(0.5,0.5) (5.5,0.5)};
+\end{axis}
+\end{tikzpicture}\hfill\begin{tikzpicture}
+\begin{axis}[width=0.47\textwidth,height=5.5cm,xmin=0.5,xmax=5.5,ymin=0,ymax=0.2,ytick={0,0.05,0.1,0.15,0.2},xtick={1,2,3,4,5},xticklabels={{A\\0},{B\\900/N},{C\\900/M},{Fp\\1240/M},{Gp\\1240/N}},x tick label style={font=\footnotesize,align=center},yticklabel style={font=\small},scaled y ticks=false,y tick label style={/pgf/number format/fixed},title={(b) Task-1b Macro-F1},title style={font=\small},grid=major,grid style={gray!16}]
+\addplot[only marks,color=blue,mark=*,mark size=2.3pt] coordinates {(0.86,0.0305) (1.86,0.0463) (2.86,0.0495) (3.86,0.0587) (4.86,0.0641)};
+\addplot[only marks,color=gold,mark=square*,mark size=2.3pt] coordinates {(1.00,0.0278) (2.00,0.1078) (3.00,0.0278) (4.00,0.0224) (5.00,0.0809)};
+\addplot[only marks,color=ink,mark=triangle*,mark size=2.3pt] coordinates {(1.14,0.0270) (2.14,0.1128) (3.14,0.0636) (4.14,0.1822) (5.14,0.0888)};
+\addplot[black,very thick] coordinates {(0.69,0.028433) (1.31,0.028433)};
+\addplot[black,very thick] coordinates {(1.69,0.088967) (2.31,0.088967)};
+\addplot[black,very thick] coordinates {(2.69,0.046967) (3.31,0.046967)};
+\addplot[black,very thick] coordinates {(3.69,0.087767) (4.31,0.087767)};
+\addplot[black,very thick] coordinates {(4.69,0.077933) (5.31,0.077933)};
+\end{axis}
+\end{tikzpicture}\par\small
+\tikz\draw[blue,fill=blue] (0,0) circle (2pt);~42\quad
+\tikz\draw[gold,fill=gold] (0,0) rectangle (4pt,4pt);~43\quad
+\tikz\draw[ink,fill=ink] (0,0) -- (4pt,0) -- (2pt,4pt) -- cycle;~44\quad
+\tikz\draw[black,very thick] (0,0) -- (10pt,0);~均值
+\caption{三个种子及其均值。横轴注明新增记录数：N 将未列标签视为负例，M 使用掩码。AUC 参考线为 0.5；Fp 的波动在两个面板中均可见，面板纵轴尺度不同。}
+\label{fig:seedauc}
+\end{figure}
+
+在相同的 900 条记录上，掩码使三个种子的目标 AUC 均下降：C 的平均 Macro-F1 为 0.0470，低于 B 的 0.0890，但 DRR 更低。合并两轮数据后，Fp 的平均 Macro-F1 高于 Gp，标准差却达到 0.0838，且两个种子没有正确预测任何目标正例。图~\ref{fig:seedauc} 显示，较高均值主要由一次运行带动。掩码的作用取决于数据组成，稳定性仍是主要问题。
+
+负例下采样大幅提高目标召回，但精确率仍然很低（表~\ref{tab:negatives}）。增加的预测中有大量假阳性，因此召回提高并未稳定转化为目标 F1 改善。仅减少负例监督，无法解决固定阈值下的目标识别问题。
+
+\begin{table}[htbp]
+\centering\small
+\caption{负例下采样的目标结果。各项均为三种子均值；精确率、召回率与 F1 先按运行计算再平均，无目标预测时精确率记为零。每次运行有 140 个目标金标准正例。}
+\label{tab:negatives}
+\begin{tabularx}{\textwidth}{@{}Yrrrrrr@{}}
+\toprule
+配置 & 目标 TP & 目标 FP & 精确率 & 召回率 & 目标 F1 & AUC \\
+\midrule
+Fp & 12.3 & 125.0 & 0.0299 & 0.0881 & 0.0447 & 0.6318 \\
+N3 & 83.0 & 3,319.0 & 0.0284 & 0.5929 & 0.0537 & 0.6079 \\
+N1 & 131.3 & 7,255.3 & 0.0179 & 0.9381 & 0.0351 & 0.5066 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+RQ2 的结果支持在所测协议下加入这些生成记录，其中 B 条件的证据较为一致。实验尚未分离诊断选择相对等规模普通生成或过采样的额外作用。检查点统一按开发集 Micro-F1 选择，以保持共同训练协议，而主要诊断指标是 Macro-F1 和目标排序。后续需要独立的选择划分，检验这一选择方式及阈值敏感性。
+
+\subsection{RQ3：分阶段融合与精确率--召回率权衡}
+E7 序列从相同的 E6b 主预测出发，依次应用干预。表~\ref{tab:stages} 是核心组件比较。G1 删除支持较弱的高频标签预测；G3 在删除后添加有支持的候选；G4 对 G3 应用选择性方向问答检查。G2 和 G5 这两个诊断分支，在仅删除配置中改变一个辅助预测成员或频次门控。它们应与 G1 比较，不应视为完整 G4 的消融。
+
+\begin{table}[htbp]
+\centering\small
+\caption{177 篇开发文章上的分阶段比较与删除分支对照。G0：E6b；G1：删除；G3：删除与添加；G4：方向检查；G2：去目标提示成员；G5：去门控。P/R 为微平均精确率／召回率。}
+\label{tab:stages}
+\begin{tabularx}{\textwidth}{@{}Yrrrrrrr@{}}
+\toprule
+配置 & 1b P & 1b R & 1b Micro & 1b Macro & DRR & 1a Micro & 元组数 \\
+\midrule
+G0 & 0.5017 & 0.6075 & 0.5496 & 0.4124 & 0.0459 & 0.6621 & 2,894 \\
+G1 & 0.5585 & 0.5632 & 0.5608 & 0.4146 & 0.0374 & 0.6587 & 2,410 \\
+G3 & 0.5389 & 0.6255 & 0.5790 & 0.4266 & 0.0450 & 0.6874 & 2,774 \\
+G4 & 0.5415 & 0.6285 & 0.5817 & 0.4308 & 0.0419 & 0.6874 & 2,774 \\
+\midrule
+\multicolumn{8}{@{}l}{仅删除分支，与 G1 比较}\\
+G2 & 0.5614 & 0.5623 & 0.5619 & 0.4135 & 0.0369 & 0.6582 & 2,394 \\
+G5 & 0.5762 & 0.5644 & 0.5703 & 0.3900 & 0.0410 & 0.6707 & 2,341 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+删除用于过滤综合支持较弱的高频标签预测。它以部分召回为代价提高精确率，使 Micro-F1 从 0.5496 提高至 0.5608。添加随后补回受到辅助预测和编码器支持的标签，提高召回，并将 Micro-F1 提高至 0.5790。两个阶段处理不同错误：删除控制无支持预测，添加处理遗漏。
+
+方向检查处理标签选择后仍然存在的分歧，使 Micro-F1 达到 0.5817，DRR 从 0.0450 降至 0.0419，粗粒度预测保持不变。保存的决策中既有纠错，也有误改，因此其作用体现为较小的净改善。后文案例展示这两种结果。
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.47\textwidth}\centering
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth,height=5.8cm,xmin=-0.2,xmax=3.2,ymin=0.38,ymax=0.61,xtick={0,1,2,3},xticklabels={G0,G1,G3,G4},title={(a) Task-1b F1},title style={font=\small},tick label style={font=\small},grid=major,grid style={gray!16},legend style={font=\small,at={(0.5,-0.17)},anchor=north,legend columns=2,draw=none}]
+\addplot[blue,thick,mark=*] coordinates {(0,0.5496) (1,0.5608) (2,0.5790) (3,0.5817)};\addlegendentry{Micro-F1}
+\addplot[gold,thick,mark=square*] coordinates {(0,0.4124) (1,0.4146) (2,0.4266) (3,0.4308)};\addlegendentry{Macro-F1}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.47\textwidth}\centering
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth,height=5.8cm,xmin=-0.2,xmax=3.2,ymin=0.48,ymax=0.66,xtick={0,1,2,3},xticklabels={G0,G1,G3,G4},title={(b) 精确率与召回率},title style={font=\small},tick label style={font=\small},grid=major,grid style={gray!16},legend style={font=\small,at={(0.5,-0.17)},anchor=north,legend columns=2,draw=none}]
+\addplot[blue,thick,mark=*] coordinates {(0,0.5017) (1,0.5585) (2,0.5389) (3,0.5415)};\addlegendentry{精确率}
+\addplot[gold,thick,mark=square*] coordinates {(0,0.6075) (1,0.5632) (2,0.6255) (3,0.6285)};\addlegendentry{召回率}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\caption{保存阶段的收益与代价。95\% 区间 [0.0209, 0.0433] 仅对应整体 G4 相对 G0 的 Micro-F1 比较。}
+\label{fig:stages}
+\end{figure}
+
+频次门控有助于保持宏平均覆盖。仅删除条件 G1 的 Macro-F1 为 0.4146，高于无门控 G5 的 0.3900；G5 的 Micro-F1 则更高，分别为 0.5703 和 0.5608。门控在这一工作点保护了支持较少的类别。从删除分支移除定向辅助预测成员的 G2 也体现出类似的微平均与宏平均权衡。
+
+所选目标位于频次门控之外，因此删除与添加保留其主预测；Micro-F1 仅在方向检查后从 0.3145 变为 0.3264。这对应门控的设计目的：在校准依据有限时，仍保留低频标签。
+
+文章级配对 bootstrap 使用 10,000 次重采样，得到整体 G4 相对 E6b 的 Micro-F1 差值 0.0321，95\% 区间为 [0.0209, 0.0433]。重采样将每篇文章中的主体保持在一起，比较保存的输出，不衡量重新训练或另选系统带来的波动。
+
+\subsection{官方测试结果与组织者比较}
+表~\ref{tab:test} 转录了保留的 NTCIR 任务概述和参赛论文中报告的官方 Task~1 结果~\cite{fehuoverview,waipspaper}。这些是提交预测的官方成绩，而非新近使用本地测试标签运行的评估。WAIPS-02 对应 DS\_final 的多数投票加仲裁提交；WAIPS-03 对应 E7-G4 融合提交。
+
+\begin{table}[htbp]
+\centering\small
+\caption{官方 Task 1 测试结果：175 篇文章、479 个给定主体。列出全部四个参赛提交，组织者单独列示。主排名依据为 Micro-F1。}
+\label{tab:test}
+\begin{tabularx}{\textwidth}{@{}Yrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{Task 1a} & \multicolumn{2}{c}{Task 1b} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+系统 & Micro-F1 & Macro-F1 & Micro-F1 & Macro-F1 & DRR $\downarrow$ \\
+\midrule
+WAIPS-01 & 0.6589 & 0.5366 & 0.5543 & 0.3277 & 0.0345 \\
+WAIPS-02 & 0.6930 & 0.5646 & 0.5496 & 0.3580 & 0.0395 \\
+WAIPS-03 & 0.6862 & 0.5705 & 0.5808 & 0.3952 & 0.0477 \\
+IIUoT-01 & 0.7042 & 0.5808 & 0.5979 & 0.3930 & 0.0613 \\
+\midrule
+组织者（不排名） & 0.6782 & 0.5405 & 0.6284 & 0.4402 & 0.0386 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+WAIPS-03 的带方向 Micro-F1 和 Macro-F1 高于 WAIPS-02，同时 DRR 更高、粗粒度 Micro-F1 略低。其 Task-1b Macro-F1 在四个参赛提交中数值最高。IIUoT-01 在官方主排名指标 Micro-F1 上领先，组织者基线的两个带方向 F1 均更高。
+
+组织者比较提示了一个有用的后续基线。其报告的 Llama-3.1-8B-Instruct 系统使用 LoRA、4,096 token 上下文，以及文章加子事件训练监督。它与我的 512 token DeBERTa 分类器在骨干模型、上下文长度、目标函数和训练样本上均有差异。更高分数证明本地适配模型可以在该任务中具有竞争力，但不能确定这些差异中的哪一个导致了优势。若要声称子事件监督解释了差距，需要在匹配条件下比较仅文章监督与文章加子事件监督。
+
+WAIPS-03 的开发集与测试集 Micro-F1 接近，分别为 0.5817 和 0.5808；Macro-F1 则从 0.4308 降至 0.3952。由于本地没有测试标签，当前无法计算测试区间，也无法按标签分析这一宏平均下降。
+
+\subsection{方向纠错、歧义与误改案例}
+表~\ref{tab:cases} 给出三个开发集案例及原文片段。引文是新闻中的报道内容，金标准解释则属于另一层标注。它们展示同一方向检查方法如何纠正错误、在两个有支持的方向间切换，以及产生误改。
+
+\begin{table}[htbp]
+\centering\small
+\caption{选取的方向检查案例。价值观 27 为“稳定的社会”，26 为“安全的国家”。主体后缀接在文章标识符后构成完整标识符。引句来自新闻正文，不是金标准解释；中文为对应译文。}
+\label{tab:cases}
+\begin{tabularx}{\textwidth}{@{}P{3.15cm}Y@{}}
+\toprule
+案例与决策 & 报道证据与标注对比 \\
+\midrule
+委内瑞拉制裁\newline\code{0-4491-3-3}，主体 -0\newline 价值观 27：$1\to0$ & 针对“美国政府及盟国”，文章引述 Uzcátegui：“尤其是最近这些制裁，会使局势恶化。”这是受访者的预测。金标准将制裁与不稳定联系起来，仅标注相悖方向；此次翻转纠正了带方向元组。 \\
+\addlinespace
+巴黎警察总部\newline\code{0-4403-2-2}，主体 -1\newline 价值观 27：$0\to1$ & 针对“法国当局与警方”，报道既有“存在失误”的表述，也提出相关隐患“应自动触发警报”。金标准同时标注安全失误和恢复秩序的努力。前后方向均命中金标准，翻转没有增加 TP；该主体--价值观对不进入 DRR 分母。 \\
+\addlinespace
+智利抗议\newline\code{0-4716-3-1}，主体 -1\newline 价值观 26：$1\to0$ & 针对“政府与安全部队”：“他为这一决定辩护，称自己希望维护公共秩序、应对破坏行为和犯罪。”这是报道对政府宣称目的的转述。金标准标注一致方向，方向检查却将正确方向改错。 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+智利报道也讨论了武力及侵权指控，但保存的方向检查没有给出能够确认翻转原因的推理记录。未来证据评估需要区分指定主体的宣称意图、实际行动与行动后果。单独一个标签无法说明哪段原文决定了方向。
+
+\subsection{结果的解释}
+实验支持两项发现：增强在特定监督设置下改善本地编码器，选择性融合改善提交系统。两者之间的因果联系尚未分离。开发集也参与了目标选择与系统决策，因此校准交叉拟合不能消除全部选择偏差~\cite{cawley2010}；官方测试则独立评估了提交系统。最终论文需要优先补充增强对融合的直接对照，改善掩码训练稳定性，并完整保存目标选择与历史 v2 的来源记录。
+
+\sectionbreak
+\section{结论与最终学位论文的后续工作}\label{sec:conclusion}
+\subsection{主要发现与下一步实验}
+生成记录改善了编码器的 Macro-F1 和目标排序，其中 900 条记录、未列标签视为负例的条件表现最一致。掩码在不同数据组成下作用不同，合并数据后仍不稳定。在系统层面，删除与添加改善了精确率和召回率的平衡，方向检查带来较小的最终收益。
+
+下一项实验将固定主预测与辅助预测，在相同校准协议下比较不使用编码器分数、使用仅官方数据分数与增强分数的融合结果。等规模普通生成及官方样本过采样将检验诊断选择相对额外监督的价值。独立的选择划分与生成标签抽样审核，将支持对掩码、阈值及训练稳定性的研究。完整系统比较还将考察校准质量和推理成本。
+
+\subsection{Task 2 与行为主体关联证据}
+Task~2 为文章--子事件--主体元组预测价值观。其给定子事件可以用于检验：更局部的监督是否有助于区分同一文章中的不同行为主体及相反方向。
+
+我将以 8B 指令模型为起点，固定模型、上下文长度和训练预算，比较仅文章监督与文章加子事件监督。同一篇文章的实例置于同一折。Task~1 推理遵守仅使用文章的输入协议，Task~2 使用给定子事件。聚合仍保留整篇文章，因为文章标签未必等于局部预测的并集。
+
+另一项研究将预测价值观及方向关联到主体、报道行动与支持片段。证据标注将纳入相反行动的案例，用于评估所引文本是否支持这一关系。评估将报告证据正确性、粗粒度与带方向 F1、DRR、主体覆盖和推理成本。
+
+
+\FloatBarrier
+\clearpage
+\appendix
+
+\section{证据可追溯性}
+表~\ref{tab:evidence} 将结果与归档产物对应起来。部分源码已有后续修改，因此历史运行以保存的输出与配置为依据。
+
+\begin{table}[htbp]
+\centering\small
+\caption{运行对应关系与证据状态。历史 V2 不能对应为 R2/R3 的某个已确定检查点。}
+\label{tab:evidence}
+\begin{tabularx}{\textwidth}{@{}P{2.3cm}YY@{}}
+\toprule
+编号 & 结果或作用 & 可用证据与限制 \\
+\midrule
+R2 / R3 & A/B/C；Fp/Gp/N1/N3 & 三种子指标与启动设置；未保留全部检查点 \\
+T18 & 目标选择 & 明确目标名单与基线概率；缺少 39 选 18 规则 \\
+V2 & E7 的历史编码器输入 & 冻结预测与概率哈希；原始概率文件及检查点来源不完整 \\
+S6 & E6/E6b/E6c 预测 & 保存的配置、分段及输出 \\
+S7 & G0/G1/G3/G4；G2/G5 对照 & 预测、指标、动作、方向决策与 bootstrap \\
+M2 / M3 & WAIPS-02 / WAIPS-03 测试 & 提交清单与预测集合 \\
+OFF & 官方分数 & 任务概述与参赛稿；本地没有测试金标准 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+WAIPS-02 对全部 175 篇 Task~1 测试文章及 479 个主体给出预测。WAIPS-03 覆盖相同文章，对其中 470 个主体给出非空预测，共有 2,764 个带方向元组和 2,136 个粗粒度元组。两份提交均通过标识符、重复项及投影检查。缺少预测的主体按空集评估；格式检查不等于重现模型训练或验证语义正确性。
+
+
+\FloatBarrier
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{参考文献}
+\begin{thebibliography}{99}
+\raggedright
+\setlength{\itemsep}{6pt}
+\bibitem{fehuoverview}
+Y. Wang, Z. Liu, J. Chen, H. Yu, X. Liu, K. Kim, and A. Jatowt.
+Overview of the NTCIR-19 FEHU Task: Fact-based Event-centric Human-value Understanding.
+Manuscript prepared for NTCIR-19, 2026.
+
+\bibitem{waipspaper}
+P. Huang, D. Liu, L. Lv, and M. Iwaihara.
+WAIPS at the NTCIR-19 FEHU: Label-Aware Prompt Ensembling and Frequency-Gated Heterogeneous Fusion for Human-Value Recognition.
+Manuscript prepared for NTCIR-19, 2026.
+
+\bibitem{kiesel2022}
+J. Kiesel, M. Alshomary, N. Handke, X. Cai, H. Wachsmuth, and B. Stein.
+Identifying the Human Values behind Arguments.
+In \emph{Proceedings of ACL}, pp. 4459--4471, 2022.
+\url{https://aclanthology.org/2022.acl-long.306/}.
+
+\bibitem{valueeval}
+J. Kiesel, M. Alshomary, N. Mirzakhmedova, M. Heinrich, N. Handke, H. Wachsmuth, and B. Stein.
+SemEval-2023 Task 4: ValueEval: Identification of Human Values Behind Arguments.
+In \emph{Proceedings of SemEval}, pp. 2287--2303, 2023.
+\url{https://aclanthology.org/2023.semeval-1.313/}.
+
+\bibitem{nevu}
+Y. Wang, X. Liu, Z. Liu, J. Chen, A. Jatowt, K. Kim, N. Kando, and H. Yu.
+Event-Centric Human Value Understanding in News-Domain Texts: An Actor-Conditioned, Multi-Granularity Benchmark.
+\emph{arXiv:2603.17838}, 2026.
+\url{https://arxiv.org/abs/2603.17838}.
+
+\bibitem{feng2021}
+S. Y. Feng, V. Gangal, J. Wei, S. Chandar, S. Vosoughi, T. Mitamura, and E. Hovy.
+A Survey of Data Augmentation Approaches for NLP.
+In \emph{Findings of ACL-IJCNLP}, pp. 968--988, 2021.
+\url{https://aclanthology.org/2021.findings-acl.84/}.
+
+\bibitem{eavit}
+W. Zhu, Y. Xie, G. Song, and X. Zhang.
+EAVIT: Efficient and Accurate Human Value Identification From Text Data via LLMs.
+In \emph{Proceedings of IJCAI}, pp. 8402--8410, 2025.
+\url{https://doi.org/10.24963/ijcai.2025/934}.
+
+\bibitem{durand2019}
+T. Durand, N. Mehrasa, and G. Mori.
+Learning a Deep ConvNet for Multi-label Classification with Partial Labels.
+In \emph{Proceedings of CVPR}, pp. 647--657, 2019.
+\url{https://arxiv.org/abs/1902.09720}.
+
+\bibitem{debertav3}
+P. He, J. Gao, and W. Chen.
+DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing.
+In \emph{International Conference on Learning Representations}, 2023.
+\url{https://arxiv.org/abs/2111.09543}.
+
+\bibitem{lora}
+E. J. Hu, Y. Shen, P. Wallis, Z. Allen-Zhu, Y. Li, S. Wang, L. Wang, and W. Chen.
+LoRA: Low-Rank Adaptation of Large Language Models.
+In \emph{International Conference on Learning Representations}, 2022.
+\url{https://arxiv.org/abs/2106.09685}.
+
+\bibitem{selfconsistency}
+X. Wang, J. Wei, D. Schuurmans, Q. Le, E. Chi, S. Narang, A. Chowdhery, and D. Zhou.
+Self-Consistency Improves Chain of Thought Reasoning in Language Models.
+In \emph{International Conference on Learning Representations}, 2023.
+\url{https://arxiv.org/abs/2203.11171}.
+
+\bibitem{guo2017}
+C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger.
+On Calibration of Modern Neural Networks.
+In \emph{Proceedings of ICML}, PMLR 70, pp. 1321--1330, 2017.
+\url{https://proceedings.mlr.press/v70/guo17a.html}.
+
+\bibitem{lipton2014}
+Z. C. Lipton, C. Elkan, and B. Narayanaswamy.
+Thresholding Classifiers to Maximize F1 Score.
+\emph{arXiv:1402.1892}, 2014.
+\url{https://arxiv.org/abs/1402.1892}.
+
+\bibitem{cawley2010}
+G. C. Cawley and N. L. C. Talbot.
+On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation.
+\emph{Journal of Machine Learning Research}, 11:2079--2107, 2010.
+\url{https://www.jmlr.org/papers/v11/cawley10a.html}.
+
+\bibitem{dror2018}
+R. Dror, G. Baumer, S. Shlomov, and R. Reichart.
+The Hitchhiker's Guide to Testing Statistical Significance in Natural Language Processing.
+In \emph{Proceedings of ACL}, pp. 1383--1392, 2018.
+\url{https://aclanthology.org/P18-1128/}.
+
+\bibitem{debertacard}
+Microsoft.
+DeBERTa-v3-base model card.
+\url{https://huggingface.co/microsoft/deberta-v3-base}.
+Accessed September 12, 2026.
+\end{thebibliography}
+\end{document}

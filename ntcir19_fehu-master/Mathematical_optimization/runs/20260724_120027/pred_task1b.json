@@ -1,0 +1,62 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "article_human_values": [
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "22",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "26",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "45",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "42",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "40",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "27",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "22",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "26",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "40",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "25",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "36",
+        "direction": "0"
+      }
+    ]
+  }
+]

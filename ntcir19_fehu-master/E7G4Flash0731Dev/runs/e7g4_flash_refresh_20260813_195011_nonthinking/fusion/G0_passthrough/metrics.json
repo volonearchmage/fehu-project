@@ -1,0 +1,27 @@
+{
+  "cell": "G0_passthrough",
+  "task1b": {
+    "micro_f1": 0.4832386884044697,
+    "macro_f1": 0.31102639355775097,
+    "micro_precision": 0.42978168784620396,
+    "micro_recall": 0.5518828451882846,
+    "support_instances": 458,
+    "support_gold_labels": 2390,
+    "support_pred_labels": 3069
+  },
+  "task1a": {
+    "micro_f1": 0.638676844783715,
+    "macro_f1": 0.4747668129762285,
+    "micro_precision": 0.6065732237796037,
+    "micro_recall": 0.6743686190220312,
+    "support_instances": 458,
+    "support_gold_labels": 1861,
+    "support_pred_labels": 2069
+  },
+  "drr": {
+    "drr": 0.05490549054905491,
+    "reversals": 122,
+    "denominator": 2222,
+    "ambiguous_gold": 84
+  }
+}

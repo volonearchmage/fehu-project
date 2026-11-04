@@ -23,6 +23,7 @@ import json
 import math
 import os
 import re
+import random
 import shlex
 import subprocess
 import sys
@@ -31,11 +32,12 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+import numpy as np
 import torch
 import torch.nn as nn
 from torch.optim import AdamW
 from torch.utils.data import DataLoader, Dataset
-from transformers import AutoModel, AutoTokenizer, get_cosine_schedule_with_warmup
+from transformers import AutoModel, AutoTokenizer, get_cosine_schedule_with_warmup, set_seed as hf_set_seed
 from peft import LoraConfig, PeftModel, TaskType, get_peft_model
 from tqdm import tqdm
 
@@ -89,6 +91,22 @@ def _current_git_commit():
         ).decode().strip()
     except Exception:
         return "unknown"
+
+
+def set_seed(seed: int):
+    """Deterministically seed Python, NumPy, PyTorch, CUDA, and Transformers.
+
+    Only invoked when --seed is explicitly provided; otherwise the prior (unseeded)
+    behavior is preserved exactly. Seeding the global torch generator also makes the
+    DataLoader(shuffle=True) sampler order deterministic.
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+    hf_set_seed(seed)
+
 
 TRAIN_ARTICLES = BASE_DIR / "dataset/train/train_event_base.json"
 TRAIN_LABELS   = BASE_DIR / "dataset/gold_labels/train/train_human_values.json"
@@ -364,14 +382,46 @@ def parse_args():
     ap.add_argument("--force_overwrite", action="store_true",
                     help="Overwrite existing predictions; otherwise a timestamped "
                          "sibling folder is used.")
+    ap.add_argument("--train_articles", type=str, default=str(TRAIN_ARTICLES),
+                    help="Path to the train event_base JSON (default: official train). "
+                         "If explicitly set to a missing/invalid path, the run fails loudly; "
+                         "there is no silent fallback to the official file.")
+    ap.add_argument("--train_labels", type=str, default=str(TRAIN_LABELS),
+                    help="Path to the train human_values (gold) JSON (default: official train). "
+                         "If explicitly set to a missing/invalid path, the run fails loudly; "
+                         "there is no silent fallback to the official file.")
+    ap.add_argument("--seed", type=int, default=None,
+                    help="If set, deterministically seed Python/NumPy/PyTorch/CUDA/Transformers. "
+                         "Default None preserves the prior (unseeded) behavior.")
+    ap.add_argument("--checkpoint_dir", type=str, default=None,
+                    help=f"Override checkpoint dir (default: {CHECKPOINT_DIR}). Use per-condition "
+                         "dirs to isolate baseline vs augmented checkpoints.")
     return ap.parse_args()
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
-    global THRESHOLD, OUTPUT_DIR
+    global THRESHOLD, OUTPUT_DIR, CHECKPOINT_DIR
     args = parse_args()
     THRESHOLD = args.threshold
+
+    # Deterministic seeding — only when explicitly requested; default None preserves prior behavior.
+    if args.seed is not None:
+        set_seed(args.seed)
+
+    # Resolve training input paths (defaults = official constants). No silent fallback: an explicitly
+    # provided missing/invalid path fails loudly rather than reverting to the official train file.
+    train_articles = Path(args.train_articles)
+    train_labels   = Path(args.train_labels)
+    for flag, p in (("--train_articles", train_articles), ("--train_labels", train_labels)):
+        if not p.is_file():
+            raise SystemExit(f"ERROR: {flag} path does not exist or is not a file: {p}")
+
+    # Resolve checkpoint dir (default = CHECKPOINT_DIR constant) so baseline/augmented runs can
+    # isolate their checkpoints. Applied to the module global used by save_ckpt/load_ckpt.
+    if args.checkpoint_dir:
+        cp = Path(args.checkpoint_dir)
+        CHECKPOINT_DIR = cp if cp.is_absolute() else (BASE_DIR / cp)
 
     # Resolve output dir (overwrite-safe).
     if args.output_dir:
@@ -398,7 +448,7 @@ def main():
     model, tok = build_model(device)
 
     print("Loading data...")
-    train_ex = build_examples(TRAIN_ARTICLES, TRAIN_LABELS)
+    train_ex = build_examples(train_articles, train_labels)
     dev_ex   = build_examples(DEV_ARTICLES,   DEV_LABELS)
     print(f"  train={len(train_ex)}  dev={len(dev_ex)}")
 
@@ -458,6 +508,7 @@ def main():
             "task_type": "SEQ_CLS",
         },
         "threshold":   THRESHOLD,
+        "seed":        args.seed,
         "hyperparameters": {
             "batch_size":   BATCH_SIZE,
             "grad_accum":   GRAD_ACCUM,
@@ -476,8 +527,8 @@ def main():
         "device":        str(device),
         "timestamp":     datetime.now(timezone.utc).isoformat(),
         "dataset_paths": {
-            "train_articles": str(TRAIN_ARTICLES),
-            "train_labels":   str(TRAIN_LABELS),
+            "train_articles": str(train_articles),
+            "train_labels":   str(train_labels),
             "dev_articles":   str(DEV_ARTICLES),
             "dev_labels":     str(DEV_LABELS),
             "l1_file":        str(L1_FILE),
