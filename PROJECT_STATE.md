@@ -1,4 +1,35 @@
-# FEHU Project State — 2026-11-04
+# FEHU Project State — 2026-11-05
+
+## Latest Linux status — user-reported, 2026-11-05
+
+The user reports that the RTX 4090 blocker is resolved. J/S forward/backward on
+20 real fit bags each, an AdamW update after 16 accumulated bags, the longest bag
+with optimizer state allocated, and checkpoint round-trip checks passed. Reported
+peak memory on the post-update longest bag is 9.44 GiB allocated / 10.19 GiB reserved.
+The Windows agent has not directly read the new Linux GPU reports. Verify them in
+`output/linux_handoff/gpu_recovered_20261105-003426/` and
+`output/task2_scope_local_v1/gpu_preflight_20261105-003426/` under the project root.
+
+Software preparation is on research branch `task2-local-4090-20261104-2033`, with
+previously verified commit `9d162c6dd8e971cd58e1e240891892de129dc62b`; preserve newer
+Linux local work. Formal J/S training has not started; automatic resume is not
+implemented according to the latest report. Use the verified FEHU CUDA Python,
+not the CPU-only project `.venv`.
+
+The subsequent 8-bag, 100-update diagnostic reportedly finished: J F1 0.2778,
+recall 0.1852, AP 0.4833 (TP/FP/FN 5/4/22); S F1 0.5000, recall 0.4074,
+AP 0.5201 (11/6/16); frequency-baseline AP 0.06896. The old numerical gate was
+not met; targeted review reportedly found no remaining concrete implementation
+defect. Preserve the original result at
+`output/task2_scope_local_v1/round1_20261105-012630/RESULTS.md`.
+
+Protocol v2 removes that uncalibrated numerical gate prospectively, without
+relabeling the diagnostic as passed. Next: [full fit/tune T/J/S pilot and P](ntcir19_fehu-master/docs/linux_4090_handoff/06_run_task2_pilot_v2.txt),
+under the [revised research design](ntcir19_fehu-master/docs/linux_4090_handoff/05_task2_research_protocol_v2.md).
+Do not evaluate holdout/DEV model scores during this pilot. The former 04 prompt
+is historical; its hard gate and immediate holdout evaluation are superseded.
+Do not repeat system recovery on the working machine. The sections below retain
+the previous main-branch handoff and historical experiment context.
 
 ## Current handoff
 
@@ -34,7 +65,7 @@ Source of truth: the experiment's `subset_evaluation_completed/metrics_official.
 Successful raw responses and requests are archived. An offline migration verifier
 is included. Local account details and a redundant interrupted ZIP are excluded.
 
-## Next local GPU experiment (not yet implemented/run)
+## Original local GPU experiment plan (historical main-branch handoff)
 
 Read `ntcir19_fehu-master/docs/2026-11-03_Task2_组会准备/Task2_研究判断与实验设计.md`.
 Initial scope: ModernBERT-base J/S with matched inputs/supervision, and P reusing

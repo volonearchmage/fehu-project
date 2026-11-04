@@ -34,5 +34,11 @@ Task-1-only progress summaries.
   prediction. Gold/explanations cannot enter DEV/holdout prediction inputs.
   Select thresholds/checkpoints on tune only.
 - The 508-event API score is a nonrandom completed subset, not full DEV/TEST.
-- Local GPU execution prompt:
-  `ntcir19_fehu-master/docs/linux_4090_handoff/02_task2_local_experiment.txt`.
+- Current local GPU research protocol and execution prompt:
+  `ntcir19_fehu-master/docs/linux_4090_handoff/05_task2_research_protocol_v2.md`
+  and `ntcir19_fehu-master/docs/linux_4090_handoff/06_run_task2_pilot_v2.txt`.
+  Protocol v2 prospectively supersedes the old 04 numerical learning gate and
+  immediate holdout/DEV evaluation. Preserve the failed old diagnostic; run the
+  full fit/tune pilot without using holdout/DEV model scores for development.
+  On Linux, fetch the published documentation at a fixed commit and read it
+  without overwriting newer local research code, caches, or experiment results.
