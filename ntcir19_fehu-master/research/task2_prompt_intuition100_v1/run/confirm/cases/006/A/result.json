@@ -1,0 +1,113 @@
+{
+  "sample_index": 6,
+  "guid": "1-16165-3-2",
+  "subevent_id": "7",
+  "variant": "A",
+  "stage": "confirm",
+  "request_sha256": "2fa52dc5067db1cebb99b4d4a0202d4f9327d11a19019a956980b8a94ee2f6bb",
+  "response_file": "attempt_055.response.json",
+  "actors": [
+    {
+      "actor": "1-16165-3-2-0",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "0"
+        },
+        {
+          "l1_value": "42",
+          "direction": "0"
+        },
+        {
+          "l1_value": "53",
+          "direction": "0"
+        },
+        {
+          "l1_value": "38",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "1-16165-3-2-2",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-16165-3-2-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "22",
+      "direction": "0"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "38",
+      "direction": "0"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "42",
+      "direction": "0"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "53",
+      "direction": "0"
+    },
+    {
+      "actor": "1-16165-3-2-2",
+      "l1_value": "22",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4094,
+    "completion_tokens": 180,
+    "total_tokens": 4274,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1406
+  },
+  "seconds": 1.143216399999801,
+  "completed_at": "2026-11-05T05:12:20.862155+09:00"
+}

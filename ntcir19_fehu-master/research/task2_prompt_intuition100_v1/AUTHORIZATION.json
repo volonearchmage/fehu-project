@@ -1,0 +1,12 @@
+{
+  "scope": "task2_prompt_intuition100_v1",
+  "authorized": true,
+  "created_at": "2026-11-05T05:11:38.685850+09:00",
+  "manifest_sha256": "a2b709b6b7ec0ca90b3096cb31aa5ca5806e73f9183175db5c437c6ab39aa6d9",
+  "max_events": 112,
+  "max_http_attempts": 360,
+  "max_reserved_usd": "1.50",
+  "does_not_authorize_historical_resume": true,
+  "user_instruction": "2026-11-05 user requests a small non-thinking low-temperature multi-direction prompt and fusion experiment followed by 100-event Task 2 testing.",
+  "historical_stop_preserved": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "250316c7-b525-4c7c-a129-22b8edde406a",
+  "object": "chat.completion",
+  "created": 1793823108,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"actors\": [{\"actor\": \"24-31626-2-1-0\", \"values\": [{\"l1_value\": \"44\", \"direction\": \"1\"}, {\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"47\", \"direction\": \"1\"}, {\"l1_value\": \"37\", \"direction\": \"1\"}, {\"l1_value\": \"42\", \"direction\": \"1\"}, {\"l1_value\": \"26\", \"direction\": \"1\"}, {\"l1_value\": \"13\", \"direction\": \"1\"}, {\"l1_value\": \"16\", \"direction\": \"1\"}]}, {\"actor\": \"24-31626-2-1-1\", \"values\": [{\"l1_value\": \"44\", \"direction\": \"1\"}, {\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"37\", \"direction\": \"1\"}, {\"l1_value\": \"42\", \"direction\": \"1\"}, {\"l1_value\": \"21\", \"direction\": \"1\"}]}, {\"actor\": \"24-31626-2-1-2\", \"values\": [{\"l1_value\": \"47\", \"direction\": \"1\"}, {\"l1_value\": \"37\", \"direction\": \"1\"}, {\"l1_value\": \"44\", \"direction\": \"1\"}, {\"l1_value\": \"42\", \"direction\": \"1\"}]}, {\"actor\": \"24-31626-2-1-3\", \"values\": [{\"l1_value\": \"25\", \"direction\": \"1\"}, {\"l1_value\": \"42\", \"direction\": \"1\"}]}, {\"actor\": \"24-31626-2-1-4\", \"values\": [{\"l1_value\": \"13\", \"direction\": \"1\"}, {\"l1_value\": \"11\", \"direction\": \"1\"}, {\"l1_value\": \"37\", \"direction\": \"1\"}]}, {\"actor\": \"24-31626-2-1-5\", \"values\": [{\"l1_value\": \"27\", \"direction\": \"0\"}, {\"l1_value\": \"26\", \"direction\": \"0\"}, {\"l1_value\": \"30\", \"direction\": \"0\"}, {\"l1_value\": \"32\", \"direction\": \"0\"}]}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3795,
+    "completion_tokens": 495,
+    "total_tokens": 4290,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1107
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

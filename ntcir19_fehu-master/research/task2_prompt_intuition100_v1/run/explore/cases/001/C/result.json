@@ -1,0 +1,144 @@
+{
+  "sample_index": 1,
+  "guid": "1-14895-1-t",
+  "subevent_id": "2",
+  "variant": "C",
+  "stage": "explore",
+  "request_sha256": "b52ac98ab12153924c2d0a4d9735446394640cc1e7de90c8faa51f78543011e0",
+  "response_file": "attempt_006.response.json",
+  "actors": [
+    {
+      "actor": "1-14895-1-t-0",
+      "values": [
+        {
+          "l1_value": "9",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "38",
+          "direction": "0"
+        },
+        {
+          "l1_value": "42",
+          "direction": "0"
+        },
+        {
+          "l1_value": "37",
+          "direction": "0"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "12",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-14895-1-t-1",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "38",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "9",
+      "direction": "1"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "12",
+      "direction": "1"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "22",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "37",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "38",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-0",
+      "l1_value": "42",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-1",
+      "l1_value": "22",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-1",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "1-14895-1-t-1",
+      "l1_value": "38",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4744,
+    "completion_tokens": 213,
+    "total_tokens": 4957,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1928
+  },
+  "seconds": 1.5950198999998975,
+  "completed_at": "2026-11-05T05:11:46.704719+09:00"
+}

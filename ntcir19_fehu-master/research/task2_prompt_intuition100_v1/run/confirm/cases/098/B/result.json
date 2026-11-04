@@ -1,0 +1,135 @@
+{
+  "sample_index": 98,
+  "guid": "1-wiki-img/15302-2/15302-2-1",
+  "subevent_id": "3",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "a76dd812995da7a2c81a741ae489ccfb87f3ab04f8f51c397a4860801c2fefc5",
+  "response_file": "attempt_332.response.json",
+  "actors": [
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-0",
+      "values": [
+        {
+          "l1_value": "46",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "47",
+          "direction": "0"
+        },
+        {
+          "l1_value": "22",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-1",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "46",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "47",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-0",
+      "l1_value": "22",
+      "direction": "0"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-0",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-0",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-0",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-0",
+      "l1_value": "46",
+      "direction": "0"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-0",
+      "l1_value": "47",
+      "direction": "0"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-1",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-1",
+      "l1_value": "46",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15302-2/15302-2-1-1",
+      "l1_value": "47",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3974,
+    "completion_tokens": 217,
+    "total_tokens": 4191,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1158
+  },
+  "seconds": 1.4954958000016632,
+  "completed_at": "2026-11-05T05:14:09.650561+09:00"
+}

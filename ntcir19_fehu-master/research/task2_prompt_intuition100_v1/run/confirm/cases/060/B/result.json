@@ -1,0 +1,122 @@
+{
+  "sample_index": 60,
+  "guid": "1-15313-3-t",
+  "subevent_id": "4",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "4ccf7412c9c044d55d439e35029f8f234296e96468135b19c1512b999cace0d7",
+  "response_file": "attempt_218.response.json",
+  "actors": [
+    {
+      "actor": "1-15313-3-t-0",
+      "values": [
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        },
+        {
+          "l1_value": "14",
+          "direction": "1"
+        },
+        {
+          "l1_value": "1",
+          "direction": "1"
+        },
+        {
+          "l1_value": "38",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15313-3-t-1",
+      "values": [
+        {
+          "l1_value": "53",
+          "direction": "0"
+        },
+        {
+          "l1_value": "2",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "1-15313-3-t-2",
+      "values": [
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-15313-3-t-0",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15313-3-t-0",
+      "l1_value": "14",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15313-3-t-0",
+      "l1_value": "38",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15313-3-t-0",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15313-3-t-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15313-3-t-1",
+      "l1_value": "2",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15313-3-t-1",
+      "l1_value": "53",
+      "direction": "0"
+    },
+    {
+      "actor": "1-15313-3-t-2",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15313-3-t-2",
+      "l1_value": "53",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4156,
+    "completion_tokens": 191,
+    "total_tokens": 4347,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1340
+  },
+  "seconds": 1.3552192999995896,
+  "completed_at": "2026-11-05T05:13:24.768280+09:00"
+}

@@ -1,0 +1,7 @@
+# Byte-exact caches reconstructed offline by rebuild_cache.py.
+/frozen/population_dev_inputs.json
+/frozen/explore_inputs.json
+/frozen/confirm_inputs.json
+/run/*/cases/*/*/request.json
+__pycache__/
+*.pyc

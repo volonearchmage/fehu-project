@@ -1,0 +1,44 @@
+{
+  "repository": "volonearchmage/fehu-project",
+  "commit": "0da5687da453dc3f891468c19e8e80c4024d2618",
+  "read_date_jst": "2026-11-05",
+  "note": "Read-only review copies; line endings normalized to LF; original source blob IDs retained. Not training inputs.",
+  "files": [
+    {
+      "local_file": "PILOT_RESULTS.md",
+      "repository_path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/PILOT_RESULTS.md",
+      "blob_sha": "614bf90a03f3335eef22e035f2ab42758c03e3ad",
+      "url": "https://github.com/volonearchmage/fehu-project/blob/0da5687da453dc3f891468c19e8e80c4024d2618/ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/PILOT_RESULTS.md"
+    },
+    {
+      "local_file": "METRIC_AVAILABILITY.md",
+      "repository_path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/METRIC_AVAILABILITY.md",
+      "blob_sha": "44f510aac7cb9ed1104eb2ed808e3b32c47cc01e",
+      "url": "https://github.com/volonearchmage/fehu-project/blob/0da5687da453dc3f891468c19e8e80c4024d2618/ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/METRIC_AVAILABILITY.md"
+    },
+    {
+      "local_file": "learning_curves.csv",
+      "repository_path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/learning_curves.csv",
+      "blob_sha": "0603fc7fc813e3be96b3be4a5b81a3fc1a399c95",
+      "url": "https://github.com/volonearchmage/fehu-project/blob/0da5687da453dc3f891468c19e8e80c4024d2618/ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/learning_curves.csv"
+    },
+    {
+      "local_file": "T_per_label_predictions.csv",
+      "repository_path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/per_label_predictions.csv",
+      "blob_sha": "2104584adfee2327aa179a1cb90db2f95d7b5c20",
+      "url": "https://github.com/volonearchmage/fehu-project/blob/0da5687da453dc3f891468c19e8e80c4024d2618/ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/per_label_predictions.csv"
+    },
+    {
+      "local_file": "J_per_label_predictions.csv",
+      "repository_path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/per_label_predictions.csv",
+      "blob_sha": "0eb3bde20f56b64c81c4bf18e065bf7407e23db4",
+      "url": "https://github.com/volonearchmage/fehu-project/blob/0da5687da453dc3f891468c19e8e80c4024d2618/ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/per_label_predictions.csv"
+    },
+    {
+      "local_file": "S_per_label_predictions.csv",
+      "repository_path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/per_label_predictions.csv",
+      "blob_sha": "b3f403e1b4b3f18d34169cfcb0e40e325059699e",
+      "url": "https://github.com/volonearchmage/fehu-project/blob/0da5687da453dc3f891468c19e8e80c4024d2618/ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/per_label_predictions.csv"
+    }
+  ]
+}

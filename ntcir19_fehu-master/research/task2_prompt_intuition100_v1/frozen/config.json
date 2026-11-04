@@ -1,0 +1,37 @@
+{
+  "experiment": "task2_prompt_intuition100_v1",
+  "explore_events": 12,
+  "confirm_events": 100,
+  "variants": [
+    "A",
+    "B",
+    "C"
+  ],
+  "model": "deepseek-flash",
+  "thinking": {
+    "type": "disabled"
+  },
+  "temperature": 0,
+  "response_format": {
+    "type": "json_object"
+  },
+  "max_tokens": 4096,
+  "stream": false,
+  "workers": 4,
+  "timeout_seconds": 90,
+  "max_initial_attempts": 336,
+  "max_http_attempts": 360,
+  "max_technical_retries": 24,
+  "budget_usd": "1.50",
+  "input_usd_per_million": "0.30",
+  "output_usd_per_million": "1.20",
+  "input_upper_bound": "UTF8 request bytes + 1024",
+  "budget_settlement": "reliable usage at peak uncached rates; otherwise keep full reservation",
+  "primary_selection": "explore Task2b micro-F1 descending; exact ties A,B,C,VETO,CONSENSUS",
+  "fusion": {
+    "VETO": "A intersect (B union C)",
+    "CONSENSUS": "(A intersect B) union (A intersect C) union (B intersect C)",
+    "UNION": "A union B union C; diagnostic only"
+  },
+  "confirmation_selection": "first 100 SHA256(intuition100-v1|guid|subevent_id) among all 1526 DEV events; input only"
+}

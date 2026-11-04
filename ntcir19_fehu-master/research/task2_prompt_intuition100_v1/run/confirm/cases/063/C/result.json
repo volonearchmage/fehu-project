@@ -1,0 +1,126 @@
+{
+  "sample_index": 63,
+  "guid": "17-28164-3-1",
+  "subevent_id": "9",
+  "variant": "C",
+  "stage": "confirm",
+  "request_sha256": "a5aac69bd7fbd9469a7d8a83aeeabb9e0f27f4854ca20f9a9a456c5b3edbbaa4",
+  "response_file": "attempt_228.response.json",
+  "actors": [
+    {
+      "actor": "17-28164-3-1-0",
+      "values": [
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        },
+        {
+          "l1_value": "11",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "17-28164-3-1-1",
+      "values": [
+        {
+          "l1_value": "11",
+          "direction": "1"
+        },
+        {
+          "l1_value": "9",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "17-28164-3-1-0",
+      "l1_value": "11",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-0",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-0",
+      "l1_value": "50",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-1",
+      "l1_value": "9",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-1",
+      "l1_value": "11",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-1",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-1",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "17-28164-3-1-1",
+      "l1_value": "52",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3697,
+    "completion_tokens": 187,
+    "total_tokens": 3884,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 881
+  },
+  "seconds": 1.6059674999996787,
+  "completed_at": "2026-11-05T05:13:28.553654+09:00"
+}

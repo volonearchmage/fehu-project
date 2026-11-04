@@ -1,0 +1,167 @@
+{
+  "sample_index": 21,
+  "guid": "0-4399-3-1",
+  "subevent_id": "4",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "9cc705dbcbcddc1b4e2f677638adcbe63d9f58f268f1b668201e54b7b30697aa",
+  "response_file": "attempt_101.response.json",
+  "actors": [
+    {
+      "actor": "0-4399-3-1-0",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        },
+        {
+          "l1_value": "38",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "values": [
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "9",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "6",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "values": [
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "27",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "38",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "6",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "9",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-1",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "27",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4399-3-1-2",
+      "l1_value": "30",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3991,
+    "completion_tokens": 264,
+    "total_tokens": 4255,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1175
+  },
+  "seconds": 2.0578255000000354,
+  "completed_at": "2026-11-05T05:12:40.172110+09:00"
+}

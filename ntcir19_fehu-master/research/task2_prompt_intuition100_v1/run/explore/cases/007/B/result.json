@@ -1,0 +1,113 @@
+{
+  "sample_index": 7,
+  "guid": "12-wiki-img/7751-1/7751-1-3",
+  "subevent_id": "3",
+  "variant": "B",
+  "stage": "explore",
+  "request_sha256": "9deace802d9ef1b4cdf85d3ce98103e2a82fdd90cc0ea711ec7232f5c17c81b8",
+  "response_file": "attempt_023.response.json",
+  "actors": [
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-0",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-1",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "11",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-2",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-1",
+      "l1_value": "11",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-1",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-2",
+      "l1_value": "21",
+      "direction": "0"
+    },
+    {
+      "actor": "12-wiki-img/7751-1/7751-1-3-2",
+      "l1_value": "22",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4021,
+    "completion_tokens": 204,
+    "total_tokens": 4225,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1205
+  },
+  "seconds": 1.4305024999994203,
+  "completed_at": "2026-11-05T05:11:53.841251+09:00"
+}

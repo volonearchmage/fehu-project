@@ -2,15 +2,15 @@
 
 更新：2026-11-05。此处是迁移、环境维护和下一轮执行说明；实测结论以对应报告为准。
 
-新机器先执行 [提示词 1](01_sync_from_github.txt)，完成同步、离线复评和环境检查。用户于 2026-11-05 回传：现有 4090 已恢复，J/S 真实输入、AdamW 更新、更新后最长输入和 checkpoint 重载检查通过。随后8bags/100步诊断未达旧数值门槛，但存在学习信号，正式训练尚未开始；新的 Linux 原始报告仍需在该机阅读核对。
+新机器首次迁移可执行 [提示词 1](01_sync_from_github.txt)。当前 Linux 4090 已恢复且 v2 全量 fit/tune 训练已完成，无需重复迁移、GPU 修复或旧学习检查。已核验研究提交为 `0da5687da453dc3f891468c19e8e80c4024d2618`；T/J/S tune Task2b micro-F1 为10.58%/10.92%/11.28%，P为11.37%。
 
-当前使用 [研究协议 v2](05_task2_research_protocol_v2.md) 和 [探索实验执行指令](06_run_task2_pilot_v2.txt)：撤销未经任务校准的硬准入门槛，完成全量fit/tune的T/J/S各3epochs及P后处理，保护holdout/DEV供之后冻结的确认阶段。[旧指令04](04_finish_task2_after_gpu_ready.txt)保留供追溯，不能再按其门槛阻止探索或提前打开holdout。
+当前使用 [方法审阅07](07_task2_method_review_20261105.md) 和 [ModernBERT自主研究指令08](08_run_modernbert_adaptive_research.txt)：先诊断正例学习，做匹配的WBCE/ASL对照，再按证据迭代。35%是内部工程目标，不等于官方TEST成绩。沿用[协议v2](05_task2_research_protocol_v2.md)的分组数据与计分契约；[指令06](06_run_task2_pilot_v2.txt)已执行，[旧指令04](04_finish_task2_after_gpu_ready.txt)不再作为准入门槛。
 
-文档发布在 [GitHub main 的交接目录](https://github.com/volonearchmage/fehu-project/tree/main/ntcir19_fehu-master/docs/linux_4090_handoff)。Linux Codex 应按06开头的获取步骤，fetch并固定交接消息中的commit SHA，用git show读取05/06及根AGENTS/PROJECT_STATE，随后在已有研究分支继续执行。不要为了取得文档而pull、切换main或覆盖Linux的新代码与实验结果。
+文档发布在 [GitHub main 的交接目录](https://github.com/volonearchmage/fehu-project/tree/main/ntcir19_fehu-master/docs/linux_4090_handoff)。Linux Codex 应按08开头步骤fetch并固定交接消息中的commit SHA，用git show读取05/07/08及根AGENTS/PROJECT_STATE，在已有研究分支继续。不要为了取得文档而pull、切换main或覆盖Linux的新代码与结果。
 
 [6.17 下的 GPU 恢复流程](03_gpu_recovery_6_17.md) 保留作为维护记录和故障时参考；已恢复的机器无需再次照此重启或登记证书。
 
-[提示词 2](02_task2_local_experiment.txt) 保留原方法与长期目标，当前执行范围以v2为准。DeepSeek prompt子集作为历史参考，不恢复付费实验。研究分支 `task2-local-4090-20261104-2033` 的已核实提交为 `9d162c6dd8e971cd58e1e240891892de129dc62b`，先前软件进度见 [训练前报告](https://github.com/volonearchmage/fehu-project/blob/9d162c6dd8e971cd58e1e240891892de129dc62b/ntcir19_fehu-master/research/task2_scope_local_v1/review/PRETRAINING_REPORT.md)；这些研究改动尚未合并 main，Linux上更新的本地工作必须保留。
+[提示词2](02_task2_local_experiment.txt)及训练前报告保留供追溯。Windows另有用户授权的[非思考Prompt与融合实验09](09_prompt_fusion_experiment_20261105.txt)，与Linux本地训练分开；旧DeepSeek full run停止标记仍保留，Linux不得调用付费API。研究分支 `task2-local-4090-20261104-2033` 尚未合并main，保留该分支及更晚本地工作。
 
 ## 权限与实际测试
 

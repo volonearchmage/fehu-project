@@ -1,0 +1,99 @@
+{
+  "sample_index": 25,
+  "guid": "1-152956-1-4",
+  "subevent_id": "4",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "7d029f40ec06d374e42dc938f0e56981a0e75e49dfb360bcdb29cadac2aaf867",
+  "response_file": "attempt_113.response.json",
+  "actors": [
+    {
+      "actor": "1-152956-1-4-0",
+      "values": [
+        {
+          "l1_value": "12",
+          "direction": "1"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "36",
+          "direction": "1"
+        },
+        {
+          "l1_value": "10",
+          "direction": "1"
+        },
+        {
+          "l1_value": "19",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-152956-1-4-1",
+      "values": [
+        {
+          "l1_value": "15",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-152956-1-4-0",
+      "l1_value": "10",
+      "direction": "1"
+    },
+    {
+      "actor": "1-152956-1-4-0",
+      "l1_value": "12",
+      "direction": "1"
+    },
+    {
+      "actor": "1-152956-1-4-0",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "1-152956-1-4-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "1-152956-1-4-0",
+      "l1_value": "19",
+      "direction": "1"
+    },
+    {
+      "actor": "1-152956-1-4-0",
+      "l1_value": "36",
+      "direction": "1"
+    },
+    {
+      "actor": "1-152956-1-4-1",
+      "l1_value": "15",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3748,
+    "completion_tokens": 145,
+    "total_tokens": 3893,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 932
+  },
+  "seconds": 1.466931900002237,
+  "completed_at": "2026-11-05T05:12:45.081135+09:00"
+}

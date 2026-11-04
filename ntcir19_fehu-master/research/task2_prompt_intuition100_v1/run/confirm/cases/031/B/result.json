@@ -1,0 +1,99 @@
+{
+  "sample_index": 31,
+  "guid": "9-21858-2-t",
+  "subevent_id": "12",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "9cb159ea7cf8e1107c054972fbe6d8b978b0d13a2c57d106d9336f44a5d39ee9",
+  "response_file": "attempt_131.response.json",
+  "actors": [
+    {
+      "actor": "9-21858-2-t-0",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "28",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "28",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "l1_value": "42",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4187,
+    "completion_tokens": 143,
+    "total_tokens": 4330,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1371
+  },
+  "seconds": 1.1233726999998908,
+  "completed_at": "2026-11-05T05:12:50.983703+09:00"
+}

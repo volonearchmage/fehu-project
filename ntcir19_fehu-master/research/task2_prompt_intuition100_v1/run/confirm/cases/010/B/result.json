@@ -1,0 +1,103 @@
+{
+  "sample_index": 10,
+  "guid": "1-16165-3-2",
+  "subevent_id": "8",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "5a40f9c9f167f0631c552de97e5f3b99cc4d2704423cd39ce151f44c651e3194",
+  "response_file": "attempt_068.response.json",
+  "actors": [
+    {
+      "actor": "1-16165-3-2-0",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "0"
+        },
+        {
+          "l1_value": "38",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "1-16165-3-2-2",
+      "values": []
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-16165-3-2-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "38",
+      "direction": "0"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-16165-3-2-1",
+      "l1_value": "53",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4241,
+    "completion_tokens": 165,
+    "total_tokens": 4406,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1425
+  },
+  "seconds": 1.341177800000878,
+  "completed_at": "2026-11-05T05:12:25.969038+09:00"
+}

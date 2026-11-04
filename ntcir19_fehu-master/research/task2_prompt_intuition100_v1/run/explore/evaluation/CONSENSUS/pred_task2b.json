@@ -1,0 +1,882 @@
+[
+  {
+    "guid": "2-35024-5-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "2-35024-5-1-0",
+            "l1_value": "5",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-0",
+            "l1_value": "9",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-0",
+            "l1_value": "16",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-0",
+            "l1_value": "32",
+            "direction": "0"
+          },
+          {
+            "actor": "2-35024-5-1-0",
+            "l1_value": "33",
+            "direction": "0"
+          },
+          {
+            "actor": "2-35024-5-1-1",
+            "l1_value": "9",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-1",
+            "l1_value": "32",
+            "direction": "0"
+          },
+          {
+            "actor": "2-35024-5-1-1",
+            "l1_value": "33",
+            "direction": "0"
+          },
+          {
+            "actor": "2-35024-5-1-1",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-2",
+            "l1_value": "26",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-2",
+            "l1_value": "30",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-2",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-2",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35024-5-1-2",
+            "l1_value": "53",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-14895-1-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "9",
+            "direction": "1"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "12",
+            "direction": "1"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "16",
+            "direction": "1"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "22",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "30",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "38",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "42",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-0",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-1",
+            "l1_value": "22",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-1",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-1",
+            "l1_value": "38",
+            "direction": "0"
+          },
+          {
+            "actor": "1-14895-1-t-1",
+            "l1_value": "45",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "5-5919-7-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "5-5919-7-t-0",
+            "l1_value": "15",
+            "direction": "1"
+          },
+          {
+            "actor": "5-5919-7-t-0",
+            "l1_value": "16",
+            "direction": "1"
+          },
+          {
+            "actor": "5-5919-7-t-0",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "5-5919-7-t-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "5-5919-7-t-0",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "5-5919-7-t-0",
+            "l1_value": "47",
+            "direction": "1"
+          },
+          {
+            "actor": "5-5919-7-t-1",
+            "l1_value": "22",
+            "direction": "0"
+          },
+          {
+            "actor": "5-5919-7-t-1",
+            "l1_value": "42",
+            "direction": "0"
+          },
+          {
+            "actor": "5-5919-7-t-1",
+            "l1_value": "47",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15649-1-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "13",
+        "subevent_human_values": [
+          {
+            "actor": "1-15649-1-t-0",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-0",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-0",
+            "l1_value": "25",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-0",
+            "l1_value": "26",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-0",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-0",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-1",
+            "l1_value": "12",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-1",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-1",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-1",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-1",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-2",
+            "l1_value": "3",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-2",
+            "l1_value": "5",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-2",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-2",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-3",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15649-1-t-3",
+            "l1_value": "25",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "24-31626-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "6",
+        "subevent_human_values": [
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "16",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "26",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-0",
+            "l1_value": "47",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-1",
+            "l1_value": "21",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-1",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-1",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-1",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-1",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-2",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-2",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-2",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-2",
+            "l1_value": "47",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-3",
+            "l1_value": "25",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-3",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-4",
+            "l1_value": "11",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-4",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-4",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "24-31626-2-1-5",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "24-31626-2-1-5",
+            "l1_value": "27",
+            "direction": "0"
+          },
+          {
+            "actor": "24-31626-2-1-5",
+            "l1_value": "30",
+            "direction": "0"
+          },
+          {
+            "actor": "24-31626-2-1-5",
+            "l1_value": "32",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "8-6541-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "8-6541-1-1-0",
+            "l1_value": "5",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-0",
+            "l1_value": "15",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-0",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-0",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-0",
+            "l1_value": "50",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-1",
+            "l1_value": "27",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-1",
+            "l1_value": "28",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-1",
+            "l1_value": "44",
+            "direction": "0"
+          },
+          {
+            "actor": "8-6541-1-1-1",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "8-6541-1-1-1",
+            "l1_value": "50",
+            "direction": "0"
+          },
+          {
+            "actor": "8-6541-1-1-2",
+            "l1_value": "30",
+            "direction": "0"
+          },
+          {
+            "actor": "8-6541-1-1-2",
+            "l1_value": "44",
+            "direction": "0"
+          },
+          {
+            "actor": "8-6541-1-1-2",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "8-6541-1-1-3",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-3",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-4",
+            "l1_value": "1",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-4",
+            "l1_value": "14",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-4",
+            "l1_value": "52",
+            "direction": "1"
+          },
+          {
+            "actor": "8-6541-1-1-4",
+            "l1_value": "53",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "3-18013-2-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "1",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "11",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "12",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "14",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "16",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "18",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "19",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-0",
+            "l1_value": "50",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-1",
+            "l1_value": "1",
+            "direction": "1"
+          },
+          {
+            "actor": "3-18013-2-t-1",
+            "l1_value": "50",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "12-wiki-img/7751-1/7751-1-3",
+    "subevents_human_values": [
+      {
+        "subevent_id": "3",
+        "subevent_human_values": [
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-0",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-0",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-0",
+            "l1_value": "26",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-1",
+            "l1_value": "11",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-1",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-1",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-2",
+            "l1_value": "21",
+            "direction": "0"
+          },
+          {
+            "actor": "12-wiki-img/7751-1/7751-1-3-2",
+            "l1_value": "22",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "9-wiki-img/20391-1/20391-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "4",
+        "subevent_human_values": [
+          {
+            "actor": "9-wiki-img/20391-1/20391-1-1-0",
+            "l1_value": "26",
+            "direction": "1"
+          },
+          {
+            "actor": "9-wiki-img/20391-1/20391-1-1-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "9-wiki-img/20391-1/20391-1-1-0",
+            "l1_value": "45",
+            "direction": "1"
+          },
+          {
+            "actor": "9-wiki-img/20391-1/20391-1-1-0",
+            "l1_value": "53",
+            "direction": "1"
+          },
+          {
+            "actor": "9-wiki-img/20391-1/20391-1-1-1",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "9-wiki-img/20391-1/20391-1-1-1",
+            "l1_value": "42",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "6-wiki-img/18628-2/18628-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "7",
+        "subevent_human_values": [
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "11",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "12",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "13",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "14",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "16",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "26",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-0",
+            "l1_value": "50",
+            "direction": "1"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-1",
+            "l1_value": "45",
+            "direction": "0"
+          },
+          {
+            "actor": "6-wiki-img/18628-2/18628-2-1-1",
+            "l1_value": "50",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "21-30702-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "4",
+        "subevent_human_values": [
+          {
+            "actor": "21-30702-1-1-0",
+            "l1_value": "13",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-0",
+            "l1_value": "18",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-0",
+            "l1_value": "26",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-0",
+            "l1_value": "42",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-0",
+            "l1_value": "53",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-1",
+            "l1_value": "13",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-1",
+            "l1_value": "42",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-2",
+            "l1_value": "38",
+            "direction": "0"
+          },
+          {
+            "actor": "21-30702-1-1-2",
+            "l1_value": "42",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "3-17532-8-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "10",
+        "subevent_human_values": [
+          {
+            "actor": "3-17532-8-t-0",
+            "l1_value": "25",
+            "direction": "1"
+          },
+          {
+            "actor": "3-17532-8-t-0",
+            "l1_value": "26",
+            "direction": "1"
+          },
+          {
+            "actor": "3-17532-8-t-0",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "3-17532-8-t-0",
+            "l1_value": "42",
+            "direction": "1"
+          },
+          {
+            "actor": "3-17532-8-t-2",
+            "l1_value": "22",
+            "direction": "1"
+          },
+          {
+            "actor": "3-17532-8-t-2",
+            "l1_value": "37",
+            "direction": "1"
+          },
+          {
+            "actor": "3-17532-8-t-2",
+            "l1_value": "44",
+            "direction": "1"
+          },
+          {
+            "actor": "3-17532-8-t-2",
+            "l1_value": "45",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  }
+]

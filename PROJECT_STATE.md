@@ -1,5 +1,60 @@
 # FEHU Project State — 2026-11-05
 
+## New authorized work — non-thinking prompts and adaptive ModernBERT
+
+The user now requests a small non-thinking, temperature-zero Task 2 experiment,
+multiple prompt views and fusion gates, with attention to small-sample versus
+full-DEV differences. New scope: `research/task2_prompt_intuition100_v1/` and
+`docs/linux_4090_handoff/09_prompt_fusion_experiment_20261105.txt` (paths under
+`ntcir19_fehu-master/`). It uses 12 TRAIN-fit exploration events and a frozen
+100-event input-only sample from all 1526 DEV events, three prompts each, with a
+shared USD 1.50 conservative spending cap and 360 HTTP attempts maximum. This
+does not authorize historical full-run resumption. The old USER_STOP stays.
+The protocol alone is not evidence of completed calls; use the new run ledger
+and RESULTS_zh.md for actual completion, cost estimates and scores.
+
+The scoped run has now completed: all 336 responses valid, no retries, 100 DEV
+events / 78 articles / 267 candidates. Exploration selected VETO before confirmation.
+Confirmed Task2b F1: A 17.08%, B 17.96%, C 18.06%, VETO 18.39%, CONSENSUS 17.93%,
+UNION 15.63%. VETO removes 128 FP and 3 TP versus A; absolute performance remains
+weak. Peak uncached usage estimate is USD 0.4923756, not an account bill.
+On the shared 35-event historical intersection, old max F1 is 29.29% versus new
+A 18.78% and VETO 21.05%; this is not evidence that non-thinking is more accurate.
+See `research/task2_prompt_intuition100_v1/INTERPRETATION_zh.txt` under the project
+root. The scoped paid run is complete; do not replay it or start full DEV inference.
+For archived verification use `rebuild_cache.py` then `verify_archive.py`, never
+`score` in place because it would rewrite locked evaluation evidence.
+
+Linux autonomous ModernBERT instructions are in
+`ntcir19_fehu-master/docs/linux_4090_handoff/08_run_modernbert_adaptive_research.txt`.
+They extend the completed v2 pilot with fit diagnostics, matched WBCE/ASL
+experiments and evidence-driven further rounds. Tune F1 0.35 is an internal
+engineering target, not a claim of matching an official TEST baseline. Preserve
+the existing research branch, local CUDA environment and one-time holdout boundary.
+The historical review below predates this separate authorization.
+
+## Latest verified review — 2026-11-05
+
+The Linux v2 pilot and its review bundle are now published on research branch
+`task2-local-4090-20261104-2033` at
+`0da5687da453dc3f891468c19e8e80c4024d2618`. The Windows agent directly read the
+published code, PILOT_RESULTS, learning curves, metric availability, and per-label
+tables. T/J/S completed three epochs and 498 updates each; P reuses J. Tune Task2b
+micro-F1 is T 10.58%, J 10.92%, S 11.28%, P 11.37%. No holdout/DEV/TEST model
+evaluation was performed in this pilot. The older preparation status below is historical.
+
+New review: `ntcir19_fehu-master/docs/linux_4090_handoff/07_task2_method_review_20261105.md`.
+It recommends first diagnosing sparse positive-label learning and running a limited
+T weighted-BCE/ASL comparison before further S research. Prompt proposals prioritize
+non-thinking/low and fit-only examples. These are proposals, not newly run results
+or authorization for paid calls. The paid USER_STOP remains in force.
+
+Offline review found 99.27% of output tokens in the 508 successful prompt responses
+were reasoning tokens. This supports a cost investigation, not a causal claim that
+max thinking caused false positives. Official API docs currently route the legacy
+V4 Flash name to V4.1-Flash-1017; temperature has no effect in thinking mode.
+Reproducible review artifacts are under `output/task2_scope_diagnostics/review_20261105/`.
+
 ## Latest Linux status — user-reported, 2026-11-05
 
 The user reports that the RTX 4090 blocker is resolved. J/S forward/backward on

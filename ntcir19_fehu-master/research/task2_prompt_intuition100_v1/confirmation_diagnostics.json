@@ -1,0 +1,382 @@
+{
+  "representativeness": {
+    "input_only": true,
+    "sample": {
+      "events": 100,
+      "articles": 78,
+      "actor_event_pairs": 267,
+      "actor_count_per_event": {
+        "n": 100,
+        "min": 1,
+        "mean": 2.67,
+        "p25": 2.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p90": 4.0,
+        "max": 5
+      },
+      "actor_count_histogram": {
+        "1": 4,
+        "2": 48,
+        "3": 31,
+        "4": 11,
+        "5": 6
+      },
+      "subevent_character_length": {
+        "n": 100,
+        "min": 37,
+        "mean": 120.53,
+        "p25": 95.75,
+        "median": 115.0,
+        "p75": 144.0,
+        "p90": 173.10000000000002,
+        "max": 289
+      },
+      "article_character_length_event_weighted": {
+        "n": 100,
+        "min": 204,
+        "mean": 4223.05,
+        "p25": 2262.5,
+        "median": 3140.0,
+        "p75": 5013.0,
+        "p90": 5985.600000000005,
+        "max": 30632
+      },
+      "article_character_length_unique_articles": {
+        "n": 78,
+        "min": 204,
+        "mean": 4298.820512820513,
+        "p25": 2126.75,
+        "median": 3131.5,
+        "p75": 4957.75,
+        "p90": 6104.799999999998,
+        "max": 30632
+      },
+      "observed_events_per_article": {
+        "n": 78,
+        "min": 1,
+        "mean": 1.2820512820512822,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 2.0,
+        "p90": 2.0,
+        "max": 3
+      },
+      "historical_completed_intersection": {
+        "events": 35,
+        "articles": 31,
+        "actor_event_pairs": 93
+      },
+      "exact_train_body_overlap": {
+        "articles": 33,
+        "events": 41,
+        "actor_event_pairs": 107
+      },
+      "whitespace_normalized_train_body_overlap": {
+        "normalization": "single spaces between content.split() tokens",
+        "articles": 35,
+        "events": 43,
+        "actor_event_pairs": 111
+      },
+      "fully_observed_articles": 0
+    },
+    "population": {
+      "events": 1526,
+      "articles": 177,
+      "actor_event_pairs": 3998,
+      "actor_count_per_event": {
+        "n": 1526,
+        "min": 1,
+        "mean": 2.6199213630406293,
+        "p25": 2.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p90": 4.0,
+        "max": 6
+      },
+      "actor_count_histogram": {
+        "1": 58,
+        "2": 772,
+        "3": 475,
+        "4": 152,
+        "5": 51,
+        "6": 18
+      },
+      "subevent_character_length": {
+        "n": 1526,
+        "min": 37,
+        "mean": 127.86435124508519,
+        "p25": 96.0,
+        "median": 122.0,
+        "p75": 153.0,
+        "p90": 183.0,
+        "max": 353
+      },
+      "article_character_length_event_weighted": {
+        "n": 1526,
+        "min": 197,
+        "mean": 4421.005242463958,
+        "p25": 2084.0,
+        "median": 3177.0,
+        "p75": 5013.0,
+        "p90": 8716.0,
+        "max": 32767
+      },
+      "article_character_length_unique_articles": {
+        "n": 177,
+        "min": 197,
+        "mean": 4326.926553672316,
+        "p25": 1953.0,
+        "median": 3170.0,
+        "p75": 4979.0,
+        "p90": 7882.600000000002,
+        "max": 32767
+      },
+      "observed_events_per_article": {
+        "n": 177,
+        "min": 2,
+        "mean": 8.621468926553673,
+        "p25": 6.0,
+        "median": 9.0,
+        "p75": 11.0,
+        "p90": 13.0,
+        "max": 20
+      },
+      "historical_completed_intersection": {
+        "events": 508,
+        "articles": 66,
+        "actor_event_pairs": 1328
+      },
+      "exact_train_body_overlap": {
+        "articles": 81,
+        "events": 677,
+        "actor_event_pairs": 1793
+      },
+      "whitespace_normalized_train_body_overlap": {
+        "normalization": "single spaces between content.split() tokens",
+        "articles": 86,
+        "events": 718,
+        "actor_event_pairs": 1884
+      }
+    },
+    "event_coverage_fraction": 0.0655307994757536,
+    "article_coverage_fraction": 0.4406779661016949,
+    "plan_change": "Before any model calls, replace the earlier proposed 100-of-508-successes sample with a fixed hash-selected 100 from all 1526 supplied DEV events. The old completion pool was nonrandom and favored completed calls. Historical results are compared only on the resulting intersection, never by replacing sampled events.",
+    "interpretation": [
+      "This describes observed input coverage; similar marginal distributions do not prove representativeness.",
+      "A hash ranking with a fixed pre-outcome seed is a reproducible pseudorandom selection; do not reroll after viewing inputs or labels.",
+      "Under genuine equal-probability event sampling, expanded TP/FP/FN totals are unbiased; their F1 ratio is not exactly unbiased.",
+      "100 events do not cover all 177 articles or guarantee rare-label coverage. This is not a full-DEV result.",
+      "Exact TRAIN body overlap is an input diagnostic, not evidence that a particular model memorized those articles."
+    ]
+  },
+  "bootstrap": {
+    "seed": 20261105,
+    "replicates": 2000,
+    "article_clusters": 78,
+    "method": "paired nonparametric article-cluster percentile bootstrap, resampling observed articles with all their sampled events",
+    "point": {
+      "A": {
+        "tp": 118,
+        "fp": 1079,
+        "fn": 67,
+        "precision": 0.0985797827903091,
+        "recall": 0.6378378378378379,
+        "micro_f1": 0.170767004341534
+      },
+      "B": {
+        "tp": 112,
+        "fp": 950,
+        "fn": 73,
+        "precision": 0.10546139359698682,
+        "recall": 0.6054054054054054,
+        "micro_f1": 0.17963111467522053
+      },
+      "C": {
+        "tp": 120,
+        "fp": 1024,
+        "fn": 65,
+        "precision": 0.1048951048951049,
+        "recall": 0.6486486486486487,
+        "micro_f1": 0.18058690744920994
+      },
+      "VETO": {
+        "tp": 115,
+        "fp": 951,
+        "fn": 70,
+        "precision": 0.10787992495309569,
+        "recall": 0.6216216216216216,
+        "micro_f1": 0.1838529176658673
+      },
+      "CONSENSUS": {
+        "tp": 117,
+        "fp": 1003,
+        "fn": 68,
+        "precision": 0.10446428571428572,
+        "recall": 0.6324324324324324,
+        "micro_f1": 0.1793103448275862
+      },
+      "UNION": {
+        "tp": 126,
+        "fp": 1301,
+        "fn": 59,
+        "precision": 0.08829712683952348,
+        "recall": 0.6810810810810811,
+        "micro_f1": 0.15632754342431762
+      }
+    },
+    "micro_f1_intervals": {
+      "A": [
+        0.1432541477919094,
+        0.19970720720720717
+      ],
+      "B": [
+        0.1520848560561533,
+        0.20753915569442083
+      ],
+      "C": [
+        0.15347902921418435,
+        0.21027340137198358
+      ],
+      "VETO": [
+        0.15312609720166068,
+        0.21607708770630119
+      ],
+      "CONSENSUS": [
+        0.15029675257593644,
+        0.20871054360076727
+      ],
+      "UNION": [
+        0.13403095866788814,
+        0.17948791714614498
+      ]
+    },
+    "paired_differences_descriptive": {
+      "A_minus_B": {
+        "delta_micro_f1": -0.008864110333686531,
+        "percentile_95_interval": [
+          -0.021682912803693822,
+          0.00621496074553712
+        ]
+      },
+      "A_minus_C": {
+        "delta_micro_f1": -0.009819903107675942,
+        "percentile_95_interval": [
+          -0.021071039288203045,
+          0.0008339920822556374
+        ]
+      },
+      "A_minus_CONSENSUS": {
+        "delta_micro_f1": -0.008543340486052209,
+        "percentile_95_interval": [
+          -0.016305737568862767,
+          -0.0009174396064292678
+        ]
+      },
+      "A_minus_UNION": {
+        "delta_micro_f1": 0.014439460917216373,
+        "percentile_95_interval": [
+          0.004837197016629201,
+          0.024041038868735373
+        ]
+      },
+      "A_minus_VETO": {
+        "delta_micro_f1": -0.013085913324333315,
+        "percentile_95_interval": [
+          -0.020381110408997025,
+          -0.00612543163756669
+        ]
+      },
+      "B_minus_C": {
+        "delta_micro_f1": -0.0009557927739894112,
+        "percentile_95_interval": [
+          -0.01496836718409142,
+          0.012020601118966703
+        ]
+      },
+      "B_minus_CONSENSUS": {
+        "delta_micro_f1": 0.00032076984763432237,
+        "percentile_95_interval": [
+          -0.011144531884403704,
+          0.010283019886146187
+        ]
+      },
+      "B_minus_UNION": {
+        "delta_micro_f1": 0.023303571250902905,
+        "percentile_95_interval": [
+          0.009655485052972776,
+          0.03612702459886451
+        ]
+      },
+      "B_minus_VETO": {
+        "delta_micro_f1": -0.0042218029906467835,
+        "percentile_95_interval": [
+          -0.016855042069935215,
+          0.006937485704816724
+        ]
+      },
+      "C_minus_CONSENSUS": {
+        "delta_micro_f1": 0.0012765626216237336,
+        "percentile_95_interval": [
+          -0.007709176440226485,
+          0.010425626020616651
+        ]
+      },
+      "C_minus_UNION": {
+        "delta_micro_f1": 0.024259364024892316,
+        "percentile_95_interval": [
+          0.01547109920452495,
+          0.03340832291383494
+        ]
+      },
+      "C_minus_VETO": {
+        "delta_micro_f1": -0.0032660102166573723,
+        "percentile_95_interval": [
+          -0.013573863434367468,
+          0.007265898440896744
+        ]
+      },
+      "CONSENSUS_minus_UNION": {
+        "delta_micro_f1": 0.022982801403268582,
+        "percentile_95_interval": [
+          0.012106771496883616,
+          0.034022339810185674
+        ]
+      },
+      "CONSENSUS_minus_VETO": {
+        "delta_micro_f1": -0.004542572838281106,
+        "percentile_95_interval": [
+          -0.009099005789156157,
+          0.0007486412477858626
+        ]
+      },
+      "UNION_minus_VETO": {
+        "delta_micro_f1": -0.027525374241549688,
+        "percentile_95_interval": [
+          -0.04082388573314162,
+          -0.015078409017268396
+        ]
+      }
+    },
+    "limitations": [
+      "Partial article clusters from event sampling: this is not a design-exact full-DEV confidence interval.",
+      "Does not measure stochastic model rerun variance, repair prior DEV exposure, or guarantee rare-label coverage.",
+      "All pairwise intervals are descriptive and unadjusted for multiplicity; do not select a new primary using confirmation scores.",
+      "Official prediction format omits empty actor rows; runner actor-coverage validation must pass before exporting."
+    ]
+  },
+  "source_sha256": {
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\frozen\\confirm_inputs.json": "a797f7ebbaa14f8b0909847f4c5362291299716d3aa1c1a744e0b17ed3055e89",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\frozen\\population_dev_inputs.json": "39b742e296cd2df4361b944e247849f90f2425bfe323d048ae5bb29ae3ae8171",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\frozen\\historical_completed_keys.json": "2c84a33a0499ce056782f6c2ff4ad0de72e44520857f8f27d3667f4ad2de6f7a",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\dataset\\train\\train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\diagnostics.py": "0445ef432a31d84bad28bcbe89aabfe08a8114ce974ac4fc6032c91c3ec4027e",
+    "run\\confirm\\evaluation\\A\\pred_task2b.json": "43bfe16dfb915154fc900a560b463442364f87a025fe3d2f6f7d71536d55ccdd",
+    "run\\confirm\\evaluation\\B\\pred_task2b.json": "5c9943c00c5195a8a32e7b0c98d5bf491a00f7874d7f15519d3c7a7e9bbdd17a",
+    "run\\confirm\\evaluation\\C\\pred_task2b.json": "4d55ef50785c65b992ad9a70e6e3bbf4443d16692169adfa76b77db974671e8a",
+    "run\\confirm\\evaluation\\VETO\\pred_task2b.json": "065e782b3869a4460f09f19d73e7d6ffc75185ed8198d2f994c958c336b744cf",
+    "run\\confirm\\evaluation\\CONSENSUS\\pred_task2b.json": "e748d73ddfe709544ae72c400b4a6533827f3e36f33de8ff5c7fe30c91fefeb2",
+    "run\\confirm\\evaluation\\UNION\\pred_task2b.json": "4e80a2137a4f171f4cd451908cf4ba9aab5eb671cdf9ed4977dd245f459a2847",
+    "run\\confirm\\evaluation\\gold_subset.json": "5e054a7123c9c365fe553687611b4b2cdda0a046ec51b194f55dbcf3439f4111"
+  }
+}

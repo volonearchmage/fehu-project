@@ -1,0 +1,99 @@
+{
+  "sample_index": 56,
+  "guid": "2-34752-6-1",
+  "subevent_id": "5",
+  "variant": "C",
+  "stage": "confirm",
+  "request_sha256": "0f384b78cc09e8a09189b348f83178a7f7f17960f464ff3580b50dcad0d13dbc",
+  "response_file": "attempt_207.response.json",
+  "actors": [
+    {
+      "actor": "2-34752-6-1-0",
+      "values": [
+        {
+          "l1_value": "47",
+          "direction": "1"
+        },
+        {
+          "l1_value": "48",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "1",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "2-34752-6-1-1",
+      "values": [
+        {
+          "l1_value": "47",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "47",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "48",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-1",
+      "l1_value": "47",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3517,
+    "completion_tokens": 145,
+    "total_tokens": 3662,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 701
+  },
+  "seconds": 1.221432199999981,
+  "completed_at": "2026-11-05T05:13:20.155144+09:00"
+}

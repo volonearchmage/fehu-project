@@ -1,0 +1,208 @@
+{
+  "sample_index": 3,
+  "guid": "1-15649-1-t",
+  "subevent_id": "13",
+  "variant": "C",
+  "stage": "explore",
+  "request_sha256": "a0381266f1a4e799aabe886ecb65e176d50cd4bc09f7d704c27560240646878f",
+  "response_file": "attempt_012.response.json",
+  "actors": [
+    {
+      "actor": "1-15649-1-t-0",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "25",
+          "direction": "1"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "values": [
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "12",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "3",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15649-1-t-3",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "25",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "25",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "12",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "l1_value": "3",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-3",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-3",
+      "l1_value": "25",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4132,
+    "completion_tokens": 337,
+    "total_tokens": 4469,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1316
+  },
+  "seconds": 1.970508799997333,
+  "completed_at": "2026-11-05T05:11:48.679288+09:00"
+}

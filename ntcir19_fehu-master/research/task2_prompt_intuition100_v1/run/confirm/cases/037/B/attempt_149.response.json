@@ -1,0 +1,28 @@
+{
+  "id": "510912e8-ecb3-4a2e-a260-fdf70c6a00ab",
+  "object": "chat.completion",
+  "created": 1793823177,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"actors\": [{\"actor\": \"0-4495-1-1-0\", \"values\": [{\"l1_value\": \"16\", \"direction\": \"1\"}, {\"l1_value\": \"37\", \"direction\": \"1\"}, {\"l1_value\": \"44\", \"direction\": \"1\"}, {\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"13\", \"direction\": \"1\"}, {\"l1_value\": \"42\", \"direction\": \"1\"}, {\"l1_value\": \"1\", \"direction\": \"1\"}, {\"l1_value\": \"10\", \"direction\": \"1\"}, {\"l1_value\": \"21\", \"direction\": \"1\"}]}, {\"actor\": \"0-4495-1-1-1\", \"values\": [{\"l1_value\": \"21\", \"direction\": \"1\"}, {\"l1_value\": \"10\", \"direction\": \"1\"}, {\"l1_value\": \"16\", \"direction\": \"1\"}, {\"l1_value\": \"44\", \"direction\": \"1\"}, {\"l1_value\": \"12\", \"direction\": \"1\"}]}, {\"actor\": \"0-4495-1-1-2\", \"values\": [{\"l1_value\": \"30\", \"direction\": \"1\"}, {\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"53\", \"direction\": \"1\"}, {\"l1_value\": \"26\", \"direction\": \"1\"}]}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3997,
+    "completion_tokens": 320,
+    "total_tokens": 4317,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1181
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

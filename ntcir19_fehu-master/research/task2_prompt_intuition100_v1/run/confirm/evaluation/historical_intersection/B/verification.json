@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "independent_scores": {
+    "task2a": {
+      "tp": 51,
+      "fp": 261,
+      "fn": 14,
+      "micro_f1": 0.27055702917771884,
+      "micro_precision": 0.16346153846153846,
+      "micro_recall": 0.7846153846153846,
+      "macro_f1": 0.31029087630206736
+    },
+    "task2b": {
+      "tp": 47,
+      "fp": 332,
+      "fn": 23,
+      "micro_f1": 0.20935412026726058,
+      "micro_precision": 0.12401055408970976,
+      "micro_recall": 0.6714285714285714,
+      "macro_f1": 0.2883722741695259
+    },
+    "drr": {
+      "rate": 0.04285714285714286,
+      "reversals": 3,
+      "denominator": 70,
+      "ambiguous": 0
+    }
+  },
+  "official_cli_returncode": 0,
+  "all_cases_validated_from_responses": true,
+  "prediction_sha256": {
+    "task2a": "c41e8d1745c12d253f3cbb113b9fab7bb7c4c679df29f3e3f96e41ae24488530",
+    "task2b": "21318876b287a4e383bdeb7b7f622be0d6fceae60027fe210836a1f1c0580fb6"
+  },
+  "metrics_sha256": "556bea26ead44caaad799b1f12d5073fcbdd05752b81d795813fec8e39e36960"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ba650d04-bb9f-4972-8b8b-6d7c650aed3b",
+  "object": "chat.completion",
+  "created": 1793823167,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"actors\": [{\"actor\": \"1-15800-4-1-0\", \"values\": [{\"l1_value\": \"13\", \"direction\": \"1\"}, {\"l1_value\": \"14\", \"direction\": \"1\"}, {\"l1_value\": \"52\", \"direction\": \"1\"}, {\"l1_value\": \"53\", \"direction\": \"1\"}, {\"l1_value\": \"26\", \"direction\": \"1\"}]}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3741,
+    "completion_tokens": 96,
+    "total_tokens": 3837,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 925
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

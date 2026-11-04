@@ -1,0 +1,180 @@
+{
+  "representativeness": {
+    "input_only": true,
+    "sample": {
+      "events": 100,
+      "articles": 78,
+      "actor_event_pairs": 267,
+      "actor_count_per_event": {
+        "n": 100,
+        "min": 1,
+        "mean": 2.67,
+        "p25": 2.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p90": 4.0,
+        "max": 5
+      },
+      "actor_count_histogram": {
+        "1": 4,
+        "2": 48,
+        "3": 31,
+        "4": 11,
+        "5": 6
+      },
+      "subevent_character_length": {
+        "n": 100,
+        "min": 37,
+        "mean": 120.53,
+        "p25": 95.75,
+        "median": 115.0,
+        "p75": 144.0,
+        "p90": 173.10000000000002,
+        "max": 289
+      },
+      "article_character_length_event_weighted": {
+        "n": 100,
+        "min": 204,
+        "mean": 4223.05,
+        "p25": 2262.5,
+        "median": 3140.0,
+        "p75": 5013.0,
+        "p90": 5985.600000000005,
+        "max": 30632
+      },
+      "article_character_length_unique_articles": {
+        "n": 78,
+        "min": 204,
+        "mean": 4298.820512820513,
+        "p25": 2126.75,
+        "median": 3131.5,
+        "p75": 4957.75,
+        "p90": 6104.799999999998,
+        "max": 30632
+      },
+      "observed_events_per_article": {
+        "n": 78,
+        "min": 1,
+        "mean": 1.2820512820512822,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 2.0,
+        "p90": 2.0,
+        "max": 3
+      },
+      "historical_completed_intersection": {
+        "events": 35,
+        "articles": 31,
+        "actor_event_pairs": 93
+      },
+      "exact_train_body_overlap": {
+        "articles": 33,
+        "events": 41,
+        "actor_event_pairs": 107
+      },
+      "whitespace_normalized_train_body_overlap": {
+        "normalization": "single spaces between content.split() tokens",
+        "articles": 35,
+        "events": 43,
+        "actor_event_pairs": 111
+      },
+      "fully_observed_articles": 0
+    },
+    "population": {
+      "events": 1526,
+      "articles": 177,
+      "actor_event_pairs": 3998,
+      "actor_count_per_event": {
+        "n": 1526,
+        "min": 1,
+        "mean": 2.6199213630406293,
+        "p25": 2.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p90": 4.0,
+        "max": 6
+      },
+      "actor_count_histogram": {
+        "1": 58,
+        "2": 772,
+        "3": 475,
+        "4": 152,
+        "5": 51,
+        "6": 18
+      },
+      "subevent_character_length": {
+        "n": 1526,
+        "min": 37,
+        "mean": 127.86435124508519,
+        "p25": 96.0,
+        "median": 122.0,
+        "p75": 153.0,
+        "p90": 183.0,
+        "max": 353
+      },
+      "article_character_length_event_weighted": {
+        "n": 1526,
+        "min": 197,
+        "mean": 4421.005242463958,
+        "p25": 2084.0,
+        "median": 3177.0,
+        "p75": 5013.0,
+        "p90": 8716.0,
+        "max": 32767
+      },
+      "article_character_length_unique_articles": {
+        "n": 177,
+        "min": 197,
+        "mean": 4326.926553672316,
+        "p25": 1953.0,
+        "median": 3170.0,
+        "p75": 4979.0,
+        "p90": 7882.600000000002,
+        "max": 32767
+      },
+      "observed_events_per_article": {
+        "n": 177,
+        "min": 2,
+        "mean": 8.621468926553673,
+        "p25": 6.0,
+        "median": 9.0,
+        "p75": 11.0,
+        "p90": 13.0,
+        "max": 20
+      },
+      "historical_completed_intersection": {
+        "events": 508,
+        "articles": 66,
+        "actor_event_pairs": 1328
+      },
+      "exact_train_body_overlap": {
+        "articles": 81,
+        "events": 677,
+        "actor_event_pairs": 1793
+      },
+      "whitespace_normalized_train_body_overlap": {
+        "normalization": "single spaces between content.split() tokens",
+        "articles": 86,
+        "events": 718,
+        "actor_event_pairs": 1884
+      }
+    },
+    "event_coverage_fraction": 0.0655307994757536,
+    "article_coverage_fraction": 0.4406779661016949,
+    "plan_change": "Before any model calls, replace the earlier proposed 100-of-508-successes sample with a fixed hash-selected 100 from all 1526 supplied DEV events. The old completion pool was nonrandom and favored completed calls. Historical results are compared only on the resulting intersection, never by replacing sampled events.",
+    "interpretation": [
+      "This describes observed input coverage; similar marginal distributions do not prove representativeness.",
+      "A hash ranking with a fixed pre-outcome seed is a reproducible pseudorandom selection; do not reroll after viewing inputs or labels.",
+      "Under genuine equal-probability event sampling, expanded TP/FP/FN totals are unbiased; their F1 ratio is not exactly unbiased.",
+      "100 events do not cover all 177 articles or guarantee rare-label coverage. This is not a full-DEV result.",
+      "Exact TRAIN body overlap is an input diagnostic, not evidence that a particular model memorized those articles."
+    ]
+  },
+  "source_sha256": {
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\frozen\\confirm_inputs.json": "a797f7ebbaa14f8b0909847f4c5362291299716d3aa1c1a744e0b17ed3055e89",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\frozen\\population_dev_inputs.json": "39b742e296cd2df4361b944e247849f90f2425bfe323d048ae5bb29ae3ae8171",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\frozen\\historical_completed_keys.json": "2c84a33a0499ce056782f6c2ff4ad0de72e44520857f8f27d3667f4ad2de6f7a",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\dataset\\train\\train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\diagnostics.py": "62e4566cdb60ada2a265c45e19cf34b9fdbe0f772a536f73320a7372989ab4ea"
+  }
+}

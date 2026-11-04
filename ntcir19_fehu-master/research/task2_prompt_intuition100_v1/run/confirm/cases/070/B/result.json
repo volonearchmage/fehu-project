@@ -1,0 +1,99 @@
+{
+  "sample_index": 70,
+  "guid": "0-4325-2-1",
+  "subevent_id": "1",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "de4298e8a7e2331647800c51c5e507d4b4a1acbfe72a313196ceba0eb78486b8",
+  "response_file": "attempt_248.response.json",
+  "actors": [
+    {
+      "actor": "0-4325-2-1-0",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4325-2-1-1",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "0"
+        },
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "38",
+          "direction": "0"
+        },
+        {
+          "l1_value": "42",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4325-2-1-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4325-2-1-0",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4325-2-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4325-2-1-1",
+      "l1_value": "22",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4325-2-1-1",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4325-2-1-1",
+      "l1_value": "38",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4325-2-1-1",
+      "l1_value": "42",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3668,
+    "completion_tokens": 145,
+    "total_tokens": 3813,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 852
+  },
+  "seconds": 1.3827565000028699,
+  "completed_at": "2026-11-05T05:13:37.047915+09:00"
+}

@@ -1,0 +1,90 @@
+{
+  "sample_index": 5,
+  "guid": "1-wiki-img/15491-1/15491-1-2",
+  "subevent_id": "7",
+  "variant": "C",
+  "stage": "confirm",
+  "request_sha256": "31848cc9b2bf4d6c5eed0ea341c2fdd2cf06d35dc540041ba431fd3c5d52dd0c",
+  "response_file": "attempt_054.response.json",
+  "actors": [
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-0",
+      "values": [
+        {
+          "l1_value": "1",
+          "direction": "1"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-1",
+      "values": [
+        {
+          "l1_value": "1",
+          "direction": "1"
+        },
+        {
+          "l1_value": "7",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-0",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-0",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-0",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-1",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "1-wiki-img/15491-1/15491-1-2-1",
+      "l1_value": "7",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3650,
+    "completion_tokens": 147,
+    "total_tokens": 3797,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 834
+  },
+  "seconds": 1.365598800002772,
+  "completed_at": "2026-11-05T05:12:21.047849+09:00"
+}

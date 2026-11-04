@@ -1,0 +1,24 @@
+{
+  "task2a": {
+    "micro_f1": 0.2023809523809524,
+    "macro_f1": 0.3431847592838305,
+    "micro_precision": 0.11258278145695365,
+    "micro_recall": 1.0,
+    "support_instances": 37,
+    "support_gold_labels": 17,
+    "support_pred_labels": 151
+  },
+  "task2b": {
+    "micro_f1": 0.17307692307692304,
+    "macro_f1": 0.36294642857142856,
+    "micro_precision": 0.0962566844919786,
+    "micro_recall": 0.8571428571428571,
+    "support_instances": 37,
+    "support_gold_labels": 21,
+    "support_pred_labels": 187,
+    "direction_reverse_rate": 0.0,
+    "direction_reverse_count": 0,
+    "direction_reverse_denom_gold_excl": 21,
+    "ambiguous_gold_values_filtered": 0
+  }
+}

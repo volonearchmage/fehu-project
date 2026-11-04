@@ -1,0 +1,240 @@
+{
+  "sample_index": 5,
+  "guid": "8-6541-1-1",
+  "subevent_id": "0",
+  "variant": "B",
+  "stage": "explore",
+  "request_sha256": "9936dfd95d9a4b6bfca2149556b29ce4c3b5626670f46d08222183de95d09c74",
+  "response_file": "attempt_017.response.json",
+  "actors": [
+    {
+      "actor": "8-6541-1-1-0",
+      "values": [
+        {
+          "l1_value": "5",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "values": [
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "28",
+          "direction": "1"
+        },
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "40",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "values": [
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-3",
+      "values": [
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "values": [
+        {
+          "l1_value": "1",
+          "direction": "1"
+        },
+        {
+          "l1_value": "14",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "28",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "40",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "50",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-3",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-3",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "14",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "50",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "53",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4280,
+    "completion_tokens": 404,
+    "total_tokens": 4684,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1464
+  },
+  "seconds": 2.211252000000968,
+  "completed_at": "2026-11-05T05:11:52.405223+09:00"
+}

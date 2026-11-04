@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\LloydHuang\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_baseline_v1\\evaluator\\official_cli.py",
+    "--gold_task2",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\run\\explore\\evaluation\\gold_subset.json",
+    "--pred_task2a",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\run\\explore\\evaluation\\C\\pred_task2a.json",
+    "--pred_task2b",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\run\\explore\\evaluation\\C\\pred_task2b.json",
+    "--out",
+    "D:\\gra_paper\\fehu-project\\ntcir19_fehu-master\\research\\task2_prompt_intuition100_v1\\run\\explore\\evaluation\\C\\metrics_official.json"
+  ],
+  "returncode": 0,
+  "gold_sha256": "553ec378b37a4536222ca5534173ce23fd955553fe830204e653518a22338416",
+  "evaluator_sha256": "3dddbdc10a3177332f96d3362bc7688d475bf398da3959511f50ff0bc21b0d5f",
+  "provenance": "validated raw A/B/C and fixed set fusion"
+}

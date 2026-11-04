@@ -1,0 +1,90 @@
+{
+  "sample_index": 8,
+  "guid": "9-wiki-img/20391-1/20391-1-1",
+  "subevent_id": "4",
+  "variant": "C",
+  "stage": "explore",
+  "request_sha256": "ecef886525bed478fc3784fac5edf57c7286c1297d818d22fa1e5c4d6b2750c9",
+  "response_file": "attempt_027.response.json",
+  "actors": [
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-0",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-1",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "0"
+        },
+        {
+          "l1_value": "42",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-1",
+      "l1_value": "26",
+      "direction": "0"
+    },
+    {
+      "actor": "9-wiki-img/20391-1/20391-1-1-1",
+      "l1_value": "42",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3318,
+    "completion_tokens": 147,
+    "total_tokens": 3465,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 502
+  },
+  "seconds": 1.5697958000018843,
+  "completed_at": "2026-11-05T05:11:55.416704+09:00"
+}

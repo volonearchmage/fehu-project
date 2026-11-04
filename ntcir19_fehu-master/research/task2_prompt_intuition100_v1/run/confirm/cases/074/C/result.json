@@ -1,0 +1,217 @@
+{
+  "sample_index": 74,
+  "guid": "2-35026-1-t",
+  "subevent_id": "1",
+  "variant": "C",
+  "stage": "confirm",
+  "request_sha256": "27bdabca72b77c55e4d2d343e17f3c09f6b6344a25ad5de65572e591afb85f96",
+  "response_file": "attempt_261.response.json",
+  "actors": [
+    {
+      "actor": "2-35026-1-t-0",
+      "values": [
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        },
+        {
+          "l1_value": "17",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "2-35026-1-t-1",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "2-35026-1-t-2",
+      "values": [
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "25",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "16",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "2-35026-1-t-3",
+      "values": [
+        {
+          "l1_value": "25",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "2-35026-1-t-0",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-0",
+      "l1_value": "17",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-0",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-0",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-1",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-1",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-1",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-1",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-2",
+      "l1_value": "16",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-2",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-2",
+      "l1_value": "25",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-2",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-3",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-3",
+      "l1_value": "25",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-3",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "2-35026-1-t-3",
+      "l1_value": "45",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4147,
+    "completion_tokens": 351,
+    "total_tokens": 4498,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1331
+  },
+  "seconds": 1.7761985000033746,
+  "completed_at": "2026-11-05T05:13:42.779458+09:00"
+}

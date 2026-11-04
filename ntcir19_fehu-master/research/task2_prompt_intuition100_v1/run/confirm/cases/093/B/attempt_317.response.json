@@ -1,0 +1,28 @@
+{
+  "id": "2938fed0-d378-4725-a760-879ac07f1bd0",
+  "object": "chat.completion",
+  "created": 1793823241,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"actors\": [{\"actor\": \"6-19182-2-t-0\", \"values\": [{\"l1_value\": \"42\", \"direction\": \"1\"}, {\"l1_value\": \"38\", \"direction\": \"1\"}, {\"l1_value\": \"13\", \"direction\": \"1\"}, {\"l1_value\": \"53\", \"direction\": \"1\"}]}, {\"actor\": \"6-19182-2-t-1\", \"values\": [{\"l1_value\": \"16\", \"direction\": \"1\"}, {\"l1_value\": \"21\", \"direction\": \"1\"}]}, {\"actor\": \"6-19182-2-t-2\", \"values\": [{\"l1_value\": \"53\", \"direction\": \"1\"}, {\"l1_value\": \"52\", \"direction\": \"1\"}]}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3688,
+    "completion_tokens": 177,
+    "total_tokens": 3865,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 872
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

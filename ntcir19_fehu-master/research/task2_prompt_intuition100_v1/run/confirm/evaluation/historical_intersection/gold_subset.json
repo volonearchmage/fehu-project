@@ -1,0 +1,822 @@
+[
+  {
+    "guid": "0-4399-3-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "4",
+        "subevent_human_values": [
+          {
+            "actor": "0-4399-3-1-0",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Public reassurance about vote security helps maintain social cohesion and trust in institutions.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4407-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "0-4407-1-1-1",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "The overturning of a double-decker bus on a major road represents a significant disruption to social order and the normal functioning of the transportation system.",
+            "direction": "0"
+          },
+          {
+            "actor": "0-4407-1-1-1",
+            "l1_value": "26",
+            "l2_value": "9",
+            "explanation": "The crash of a public transport vehicle like a double-decker bus directly undermines the sense of national safety and security for citizens using these services.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4444-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "0-4444-1-1-2",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Holger Bingmann's warning about catastrophic consequences for exporters is a clear act of responsibility, aiming to inform stakeholders and policymakers about the severe economic risks of a hard Brexit.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4495-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Organizing Voticook contests directly encourages civic responsibility through experiential learning.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4495-1-1-0",
+            "l1_value": "44",
+            "l2_value": "16",
+            "explanation": "Targeting young rural women addresses gender and geographic participation disparities.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4560-1-1JPG",
+    "subevents_human_values": [
+      {
+        "subevent_id": "8",
+        "subevent_human_values": [
+          {
+            "actor": "0-4560-1-1JPG-1",
+            "l1_value": "30",
+            "l2_value": "11",
+            "explanation": "Consulate appearance instead of court violates specific judicial instructions. By choosing an alternative location, Correa deliberately disobeyed the judge's explicit order, which constitutes a clear violation and defiance of the court's authority.",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "9",
+        "subevent_human_values": [
+          {
+            "actor": "0-4560-1-1JPG-1",
+            "l1_value": "38",
+            "l2_value": "14",
+            "explanation": "Unproven accusations of smear campaigns undermine political discourse integrity. By accusing Moreno without providing proof, Correa contributes to a political environment where truth is secondary to political attacks, thus contradicting the value of honesty.",
+            "direction": "0"
+          },
+          {
+            "actor": "0-4560-1-1JPG-3",
+            "l1_value": "38",
+            "l2_value": "14",
+            "explanation": "Being accused of orchestrating a smear campaign directly challenges the honesty and integrity of the current administration. The allegation suggests that the government is using dishonest tactics for political gain against an opponent.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4813-2",
+    "subevents_human_values": [
+      {
+        "subevent_id": "5",
+        "subevent_human_values": [
+          {
+            "actor": "0-4813-2-2",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "By systematically identifying and attributing the multiple failures that led to the crash, the investigators' report serves the principle of justice by creating a clear, evidence-based account for accountability.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4813-2-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "The report's identification of failures by Boeing explicitly points to the company's lack of responsibility in designing and certifying a safe aircraft, making its culpability a matter of public record.",
+            "direction": "0"
+          },
+          {
+            "actor": "0-4813-2-0",
+            "l1_value": "13",
+            "l2_value": "4",
+            "explanation": "Being identified as a source of failure in the official crash report highlights a significant lack of capability in Boeing's design and safety engineering processes, which ultimately led to the disaster.",
+            "direction": "0"
+          },
+          {
+            "actor": "0-4813-2-1",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "The report's finding of failures by Lion Air and its pilots underscores their lack of responsibility in areas like maintenance, logging, and cockpit management, which were contributing factors to the crash.",
+            "direction": "0"
+          },
+          {
+            "actor": "0-4813-2-1",
+            "l1_value": "13",
+            "l2_value": "4",
+            "explanation": "The identification of pilot failures in the report points to a contradiction of the value of being capable, as their performance did not meet the required standards for handling the emergency situation.",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "8",
+        "subevent_human_values": [
+          {
+            "actor": "0-4813-2-2",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "Revoking the certification of the company that supplied the faulty sensor is a punitive action that enforces rules and holds a third party accountable for its role in the failure chain, aligning with social justice.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4813-2-2",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "By revoking the company's certification, the US aviation regulator took responsibility for enforcing standards within the aviation supply chain, acting to prevent such a failure from happening again.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4834-16-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "0-4834-16-t-0",
+            "l1_value": "21",
+            "l2_value": "8",
+            "explanation": "The act of public sector employees joining residents in a rally demonstrates a shared identity and a collective desire to belong to a unified movement for change and mutual support.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4834-16-t-0",
+            "l1_value": "43",
+            "l2_value": "15",
+            "explanation": "Public employees joining residents shows solidarity with communal grievances. This act of unity demonstrates a commitment to supporting their fellow citizens in a shared struggle for better living conditions.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4857-5-2",
+    "subevents_human_values": [
+      {
+        "subevent_id": "7",
+        "subevent_human_values": [
+          {
+            "actor": "0-4857-5-2-1",
+            "l1_value": "22",
+            "l2_value": "8",
+            "explanation": "Power-dependent medical devices become inoperable, endangering vulnerable populations.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "0-4882-1-2",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "0-4882-1-2-0",
+            "l1_value": "12",
+            "l2_value": "4",
+            "explanation": "Safe landing after 780 days validates mission success and operational reliability.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4882-1-2-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Successful recovery ensures safe return of experiments and technology for analysis.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4882-1-2-1",
+            "l1_value": "12",
+            "l2_value": "4",
+            "explanation": "The successful landing is a direct result of the collaborative effort, as noted in the article, making the partners' contribution integral to this achievement.",
+            "direction": "1"
+          },
+          {
+            "actor": "0-4882-1-2-1",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "The safe landing after a long mission demonstrates the partners' shared responsibility in ensuring the vehicle's reliability and the successful recovery of its payload and experiments.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-14903-2-2",
+    "subevents_human_values": [
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "1-14903-2-2-1",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Presidential initiative to safeguard installations demonstrates institutional responsibility. By sending a bill to Congress, the President is taking a formal, procedural step to address the ongoing security crisis and protect national infrastructure.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-14903-2-2-1",
+            "l1_value": "26",
+            "l2_value": "9",
+            "explanation": "The government's bill aims to allow the army to safeguard key installations, which is a measure intended to increase national security and protect the country from further destruction and chaos caused by the ongoing protests.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-14903-2-2-1",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Military deployment proposal aims to restore institutional stability through enhanced security measures.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-14955-1-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "1-14955-1-t-1",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Publicly highlighting Belgium's outlier status without context risks unnecessary panic and international tensions, thereby undermining social and diplomatic stability. The action was intended to create a political contrast rather than foster cooperative understanding.",
+            "direction": "0"
+          }
+        ]
+      },
+      {
+        "subevent_id": "15",
+        "subevent_human_values": [
+          {
+            "actor": "1-14955-1-t-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "The creation and unveiling of a gradual exit strategy from lockdown shows the government is acting responsibly to manage the country's return to normalcy, balancing public health with economic and social needs.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-14955-1-t-0",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Planning a 'gradual exit strategy' from lockdown is a key action aimed at restoring social order and stability. It provides a clear path forward for citizens and businesses, helping to prevent the chaos of an unmanaged reopening.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-14989-2-3",
+    "subevents_human_values": [
+      {
+        "subevent_id": "3",
+        "subevent_human_values": [
+          {
+            "actor": "1-14989-2-3-0",
+            "l1_value": "52",
+            "l2_value": "19",
+            "explanation": "Using measurements to generate mathematical functions is a highly logical and quantitative approach. This reflects a commitment to rational analysis and the scientific method to establish clear, reproducible relationships between variables.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-14989-2-3-0",
+            "l1_value": "0",
+            "l2_value": "0",
+            "explanation": "Developing new mathematical functions to describe biological proportions is an innovative and creative act. It represents a novel approach to solving the problem of estimating size from limited fossil evidence.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15195-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "3",
+        "subevent_human_values": [
+          {
+            "actor": "1-15195-2-1-1",
+            "l1_value": "37",
+            "l2_value": "14",
+            "explanation": "Donating proprietary formula without charge directly supports national COVID-19 testing capacity expansion.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15230-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "9",
+        "subevent_human_values": [
+          {
+            "actor": "1-15230-2-1-2",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "International pressure forcing presidential pardon shows external justice mechanisms influencing local systems.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15230-2-1-3",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "The international outcry that led to Gulnaz's pardon was a successful effort to advocate for justice and correct a severe human rights violation.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15231-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "3",
+        "subevent_human_values": [
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "By not commenting on the attack, the Taliban evades accountability for the civilian casualties, which is a clear contradiction to the value of being responsible for one's actions.",
+            "direction": "0"
+          },
+          {
+            "actor": "1-15231-2-1-0",
+            "l1_value": "38",
+            "l2_value": "14",
+            "explanation": "The failure to comment or provide a statement about the attack suggests a lack of transparency and honesty regarding their role and the consequences of their actions.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15800-4-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "6",
+        "subevent_human_values": [
+          {
+            "actor": "1-15800-4-1-0",
+            "l1_value": "52",
+            "l2_value": "19",
+            "explanation": "Storm transition forecasting applies systematic meteorological modeling approaches.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15800-4-1-0",
+            "l1_value": "53",
+            "l2_value": "19",
+            "explanation": "The forecast about the storm becoming post-tropical is based on an unbiased assessment of meteorological data and models, providing an informed and neutral prediction of its future state.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-15885-8-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "7",
+        "subevent_human_values": [
+          {
+            "actor": "1-15885-8-t-0",
+            "l1_value": "12",
+            "l2_value": "4",
+            "explanation": "The listing of the AstraZeneca/Oxford University vaccine marked another significant success, broadening the portfolio of available vaccines and enhancing the global capacity to fight the pandemic.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15885-8-t-0",
+            "l1_value": "13",
+            "l2_value": "4",
+            "explanation": "This event further demonstrated the capability of researchers and pharmaceutical companies to develop effective vaccines using different, more traditional platforms, which is crucial for diverse global manufacturing and distribution needs.",
+            "direction": "1"
+          }
+        ]
+      },
+      {
+        "subevent_id": "8",
+        "subevent_human_values": [
+          {
+            "actor": "1-15885-8-t-1",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "The rollout of vaccines specifically to protect high-risk and vulnerable people, along with frontline workers, is a clear act of social justice, ensuring that those most in need receive protection first.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15885-8-t-1",
+            "l1_value": "37",
+            "l2_value": "14",
+            "explanation": "COVAX and UNICEF beginning the rollout of two billion doses is a direct and massive act of helpfulness, working to protect the health and welfare of millions in lower-income countries.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-15885-8-t-1",
+            "l1_value": "44",
+            "l2_value": "16",
+            "explanation": "This initiative actively promotes equality by providing countries with an equal opportunity to access vaccines for their most vulnerable populations, regardless of their economic status.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "1-16438-6-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "1-16438-6-t-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Emphasizing precautions reinforces adherence to safety protocols. By drawing attention to the importance of safety measures, WFSA is taking responsibility for the well-being of healthcare workers, guiding them to mitigate the risks associated with caring for COVID-19 patients.",
+            "direction": "1"
+          },
+          {
+            "actor": "1-16438-6-t-0",
+            "l1_value": "22",
+            "l2_value": "8",
+            "explanation": "By emphasizing the use of appropriate precautions, WFSA's actions are aligned with promoting good health for care providers. This guidance is intended to reduce the risk of infection, thereby preserving the health and safety of the medical professionals on the front lines.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "12-wiki-img/8436-1/8436-1-2",
+    "subevents_human_values": [
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "12-wiki-img/8436-1/8436-1-2-1",
+            "l1_value": "6",
+            "l2_value": "1",
+            "explanation": "Students voicing concerns about being watched by classmates underscores their desire for privacy and a comfortable, non-public testing environment, especially for those with accessibility needs they wish to keep private.",
+            "direction": "1"
+          },
+          {
+            "actor": "12-wiki-img/8436-1/8436-1-2-0",
+            "l1_value": "6",
+            "l2_value": "1",
+            "explanation": "The alternative method of having all students visible on webcam, while different from AI proctoring, still contradicts student privacy by forcing them to be watched by their peers in their personal environment.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "15-26821-3-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "5",
+        "subevent_human_values": [
+          {
+            "actor": "15-26821-3-t-1",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Affirming Hurts as QB stabilizes team leadership, promoting organizational stability.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "16-10208-2-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "5",
+        "subevent_human_values": [
+          {
+            "actor": "16-10208-2-1-1",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "The DFL is acting responsibly by proactively considering how to mitigate the financial damage to clubs, showing foresight and care for the economic health of its members during a crisis.",
+            "direction": "1"
+          },
+          {
+            "actor": "16-10208-2-1-1",
+            "l1_value": "37",
+            "l2_value": "14",
+            "explanation": "Considering adjustments to licensing procedures is a helpful measure designed to support clubs facing financial hardship, demonstrating a commitment to the collective welfare of the league's members.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "2-35026-1-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "2-35026-1-t-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Seizing a vessel for unlicensed fishing enforces maritime laws and territorial sovereignty responsibly.",
+            "direction": "1"
+          },
+          {
+            "actor": "2-35026-1-t-0",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "Detaining the boat without conclusive evidence of license violation questions procedural fairness.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "21-30892-3-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "2",
+        "subevent_human_values": [
+          {
+            "actor": "21-30892-3-1-0",
+            "l1_value": "29",
+            "l2_value": "10",
+            "explanation": "Starting a petition against the conference is a manifestation of the religious group's commitment to enforcing their moral and faith-based values within their society.",
+            "direction": "1"
+          },
+          {
+            "actor": "21-30892-3-1-0",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "Mobilizing public opposition through a petition specifically to prevent a minority group from holding a rights conference undermines the principles of fairness and social justice.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "25-3857-2-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "1",
+        "subevent_human_values": [
+          {
+            "actor": "25-3857-2-t-1",
+            "l1_value": "5",
+            "l2_value": "1",
+            "explanation": "The paralysis of the website directly prevented users from performing their desired action of accessing information, thus violating their freedom of action to seek knowledge online.",
+            "direction": "0"
+          },
+          {
+            "actor": "25-3857-2-t-1",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Service paralysis prevented normal information access, damaging digital social stability.",
+            "direction": "0"
+          },
+          {
+            "actor": "25-3857-2-t-2",
+            "l1_value": "2",
+            "l2_value": "0",
+            "explanation": "By preventing users from accessing the encyclopedia, the attack directly obstructed their ability to gather information, which is a fundamental prerequisite for exercising freedom of thought and inquiry.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "25-4120-1-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "7",
+        "subevent_human_values": [
+          {
+            "actor": "25-4120-1-t-0",
+            "l1_value": "45",
+            "l2_value": "16",
+            "explanation": "Highlighting climate-driven food insecurity advocates for equitable future planning.",
+            "direction": "1"
+          },
+          {
+            "actor": "25-4120-1-t-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "By warning the public about the future threat of food shortages due to climate change, the speaker is taking responsibility to inform and alert society to potential crises.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "3-16797-1-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "8",
+        "subevent_human_values": [
+          {
+            "actor": "3-16797-1-t-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Conditioning further disbursements on the fulfillment of milestones and targets ensures that Portugal is accountable for its progress, reflecting a responsible approach to managing and distributing large-scale public funds.",
+            "direction": "1"
+          },
+          {
+            "actor": "3-16797-1-t-0",
+            "l1_value": "38",
+            "l2_value": "14",
+            "explanation": "Milestone-based disbursements ensure transparent use of funds through verifiable progress tracking. This mechanism promotes honesty by requiring tangible proof of implementation before releasing additional financial support.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "3-17441-15-t",
+    "subevents_human_values": [
+      {
+        "subevent_id": "0",
+        "subevent_human_values": [
+          {
+            "actor": "3-17441-15-t-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "The government's pre-pandemic economic growth projections reflect responsible fiscal planning and setting positive economic goals for the country, demonstrating foresight and ambition for national prosperity.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "6-19726-1-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "4",
+        "subevent_human_values": [
+          {
+            "actor": "6-19726-1-1-0",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "Boosting its own production while informing customers about its collaborative efforts shows the company is taking multiple responsible steps to address the supply chain crisis and manage customer expectations effectively.",
+            "direction": "1"
+          },
+          {
+            "actor": "6-19726-1-1-0",
+            "l1_value": "38",
+            "l2_value": "14",
+            "explanation": "By transparently communicating the reasons for its actions to customers—to clear up testing backlogs—Biomérieux demonstrates honesty and fosters trust during a period of significant supply chain stress and uncertainty.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "6-20198-5-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "6",
+        "subevent_human_values": [
+          {
+            "actor": "6-20198-5-1-0",
+            "l1_value": "46",
+            "l2_value": "16",
+            "explanation": "Providing foundational funding for a school that becomes known as the 'ivy league' of jihadist pesantren directly contributes to the infrastructure of violent extremism, contradicting the value of peace by supporting the education of future militants.",
+            "direction": "0"
+          },
+          {
+            "actor": "6-20198-5-1-0",
+            "l1_value": "27",
+            "l2_value": "9",
+            "explanation": "Funding a school associated with jihadist teachings directly undermines the social stability of Indonesia by fostering an environment where extremist ideologies can flourish, leading to the creation of terrorist groups that threaten the nation's security.",
+            "direction": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "7-36661-5-2",
+    "subevents_human_values": [
+      {
+        "subevent_id": "4",
+        "subevent_human_values": [
+          {
+            "actor": "7-36661-5-2-1",
+            "l1_value": "42",
+            "l2_value": "15",
+            "explanation": "By enabling immediate quarantine of infected individuals, the system acts responsibly to protect healthcare workers from infection, thereby safeguarding the integrity of the healthcare response.",
+            "direction": "1"
+          },
+          {
+            "actor": "7-36661-5-2-1",
+            "l1_value": "22",
+            "l2_value": "8",
+            "explanation": "Decreasing the infection risk for hospital staff directly contributes to preserving their health and well-being, which is essential for maintaining the capacity of the healthcare system.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "7-36865-4-1",
+    "subevents_human_values": [
+      {
+        "subevent_id": "4",
+        "subevent_human_values": [
+          {
+            "actor": "7-36865-4-1-2",
+            "l1_value": "22",
+            "l2_value": "8",
+            "explanation": "Italy's decision to place a quarter of the country on lockdown was a drastic but necessary measure to protect public health by curbing the severe COVID-19 outbreak.",
+            "direction": "1"
+          },
+          {
+            "actor": "7-36865-4-1-2",
+            "l1_value": "26",
+            "l2_value": "9",
+            "explanation": "By implementing a large-scale lockdown, the Italian government acted to ensure national security and safety in the face of a rapidly escalating public health emergency.",
+            "direction": "1"
+          }
+        ]
+      }
+    ]
+  }
+]

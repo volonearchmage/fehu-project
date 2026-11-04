@@ -1,0 +1,99 @@
+{
+  "sample_index": 33,
+  "guid": "2-34752-6-1",
+  "subevent_id": "1",
+  "variant": "A",
+  "stage": "confirm",
+  "request_sha256": "00393d62f1aa5a6ed49a38d4a9a08fc3e4a64a532691816b0ab41fb573363bba",
+  "response_file": "attempt_136.response.json",
+  "actors": [
+    {
+      "actor": "2-34752-6-1-0",
+      "values": [
+        {
+          "l1_value": "47",
+          "direction": "1"
+        },
+        {
+          "l1_value": "48",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        },
+        {
+          "l1_value": "1",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "2-34752-6-1-1",
+      "values": [
+        {
+          "l1_value": "47",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "47",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "48",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-0",
+      "l1_value": "53",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "2-34752-6-1-1",
+      "l1_value": "47",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3360,
+    "completion_tokens": 145,
+    "total_tokens": 3505,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 672
+  },
+  "seconds": 1.4977341999983764,
+  "completed_at": "2026-11-05T05:12:53.537105+09:00"
+}

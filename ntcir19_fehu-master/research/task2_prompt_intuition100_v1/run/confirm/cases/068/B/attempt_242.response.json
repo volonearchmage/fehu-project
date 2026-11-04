@@ -1,0 +1,28 @@
+{
+  "id": "3289fb16-6b4f-485c-80b3-9444c4c72c67",
+  "object": "chat.completion",
+  "created": 1793823213,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"actors\": [{\"actor\": \"19-wiki-img/28866-1/28866-1-1-0\", \"values\": [{\"l1_value\": \"22\", \"direction\": \"1\"}, {\"l1_value\": \"42\", \"direction\": \"1\"}, {\"l1_value\": \"25\", \"direction\": \"1\"}, {\"l1_value\": \"13\", \"direction\": \"1\"}, {\"l1_value\": \"10\", \"direction\": \"1\"}]}, {\"actor\": \"19-wiki-img/28866-1/28866-1-1-1\", \"values\": [{\"l1_value\": \"22\", \"direction\": \"1\"}, {\"l1_value\": \"10\", \"direction\": \"1\"}]}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3631,
+    "completion_tokens": 161,
+    "total_tokens": 3792,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 815
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

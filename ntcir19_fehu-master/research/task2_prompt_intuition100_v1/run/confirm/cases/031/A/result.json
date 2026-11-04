@@ -1,0 +1,99 @@
+{
+  "sample_index": 31,
+  "guid": "9-21858-2-t",
+  "subevent_id": "12",
+  "variant": "A",
+  "stage": "confirm",
+  "request_sha256": "b92889c7f180a4bd514cd7698b0d1f9a6b90e6d3c808cb46d16e4a1950e0950c",
+  "response_file": "attempt_130.response.json",
+  "actors": [
+    {
+      "actor": "9-21858-2-t-0",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "28",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "28",
+      "direction": "0"
+    },
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21858-2-t-1",
+      "l1_value": "42",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4035,
+    "completion_tokens": 143,
+    "total_tokens": 4178,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1347
+  },
+  "seconds": 1.2518895999965025,
+  "completed_at": "2026-11-05T05:12:51.041199+09:00"
+}

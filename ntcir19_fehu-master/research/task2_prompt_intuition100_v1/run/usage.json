@@ -1,0 +1,25 @@
+{
+  "returned_attempts": 336,
+  "usage": {
+    "prompt_tokens": 1341312,
+    "completion_tokens": 74985,
+    "total_tokens": 1416297,
+    "prompt_cache_hit_tokens": 920832,
+    "prompt_cache_miss_tokens": 420480,
+    "reasoning_tokens_field_missing_responses": 336,
+    "reasoning_content_nonempty_responses": 0
+  },
+  "models": {
+    "deepseek-flash": 336
+  },
+  "fingerprints": {
+    "bc19ba97cbe016479903222bb1578db6": 336
+  },
+  "known_usage_peak_uncached_estimate_usd": "0.4923756",
+  "global_charge_plus_unsettled_reservations_usd": "0.4923756",
+  "attempts": 336,
+  "technical_retries": 0,
+  "not_account_bill": true,
+  "all_returned_attempts_have_explicit_zero_reasoning": false,
+  "missing_reasoning_usage_is_not_verified_zero": true
+}

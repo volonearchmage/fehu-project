@@ -1,0 +1,181 @@
+{
+  "sample_index": 3,
+  "guid": "1-15649-1-t",
+  "subevent_id": "13",
+  "variant": "B",
+  "stage": "explore",
+  "request_sha256": "409458d9b9af70cd00122d097e12d642143572fb817a1b8e1e03664f991c247c",
+  "response_file": "attempt_011.response.json",
+  "actors": [
+    {
+      "actor": "1-15649-1-t-0",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "25",
+          "direction": "1"
+        },
+        {
+          "l1_value": "13",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "values": [
+        {
+          "l1_value": "13",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "1-15649-1-t-3",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "25",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "13",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-1",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-2",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "1-15649-1-t-3",
+      "l1_value": "22",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4121,
+    "completion_tokens": 295,
+    "total_tokens": 4416,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1305
+  },
+  "seconds": 1.5798400999992737,
+  "completed_at": "2026-11-05T05:11:48.263270+09:00"
+}

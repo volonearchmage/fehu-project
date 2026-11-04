@@ -1,0 +1,213 @@
+{
+  "sample_index": 5,
+  "guid": "8-6541-1-1",
+  "subevent_id": "0",
+  "variant": "A",
+  "stage": "explore",
+  "request_sha256": "516540fc246f815470e025551eb5a81e1d8a806997ea31865a218f234d099a29",
+  "response_file": "attempt_016.response.json",
+  "actors": [
+    {
+      "actor": "8-6541-1-1-0",
+      "values": [
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "values": [
+        {
+          "l1_value": "28",
+          "direction": "1"
+        },
+        {
+          "l1_value": "27",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "values": [
+        {
+          "l1_value": "44",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-3",
+      "values": [
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "values": [
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        },
+        {
+          "l1_value": "14",
+          "direction": "1"
+        },
+        {
+          "l1_value": "1",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-0",
+      "l1_value": "50",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "27",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "28",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-1",
+      "l1_value": "50",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "l1_value": "44",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-2",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "8-6541-1-1-3",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-3",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "1",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "14",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "8-6541-1-1-4",
+      "l1_value": "53",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4128,
+    "completion_tokens": 362,
+    "total_tokens": 4490,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1440
+  },
+  "seconds": 1.7493802000026335,
+  "completed_at": "2026-11-05T05:11:50.434989+09:00"
+}

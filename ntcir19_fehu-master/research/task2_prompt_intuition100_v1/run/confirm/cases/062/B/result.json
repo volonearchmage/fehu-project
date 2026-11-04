@@ -1,0 +1,127 @@
+{
+  "sample_index": 62,
+  "guid": "0-4560-1-1JPG",
+  "subevent_id": "9",
+  "variant": "B",
+  "stage": "confirm",
+  "request_sha256": "5a677c32957ab9f50dc1635fb350abcf21f45fa62fa77f83d7047dc1bfb0a9cf",
+  "response_file": "attempt_224.response.json",
+  "actors": [
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "values": [
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "values": [
+        {
+          "l1_value": "2",
+          "direction": "1"
+        },
+        {
+          "l1_value": "38",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-1-1JPG-2",
+      "values": [
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "0-4560-1-1JPG-3",
+      "values": [
+        {
+          "l1_value": "16",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-0",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "l1_value": "2",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "l1_value": "38",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4560-1-1JPG-2",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "0-4560-1-1JPG-3",
+      "l1_value": "16",
+      "direction": "0"
+    },
+    {
+      "actor": "0-4560-1-1JPG-3",
+      "l1_value": "45",
+      "direction": "0"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 3609,
+    "completion_tokens": 223,
+    "total_tokens": 3832,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 793
+  },
+  "seconds": 1.4323609000057331,
+  "completed_at": "2026-11-05T05:13:26.736278+09:00"
+}

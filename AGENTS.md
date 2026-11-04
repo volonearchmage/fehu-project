@@ -6,6 +6,15 @@ Task-1-only progress summaries.
 
 ## Current execution boundary
 
+- On 2026-11-05 the user separately authorized a small non-thinking Task 2
+  prompt/fusion experiment. Its sole paid scope is
+  `research/task2_prompt_intuition100_v1/`: 12 TRAIN-fit exploration events and
+  100 input-selected full-DEV events, three frozen prompts, shared USD 1.50
+  conservative budget and at most 360 HTTP attempts. Follow its frozen scope,
+  stop flag and ledger; do not repeat or extend it from this file alone.
+  This exception does not authorize resuming the old full run or querying an
+  account. See `docs/linux_4090_handoff/09_prompt_fusion_experiment_20261105.txt`.
+
 - The user stopped paid DeepSeek Task 2 inference on 2026-11-04 because of cost.
   Preserve `research/task2_prompt_baseline_v1/USER_STOP.json` under the project
   root. Do not resume paid inference, query an account, or read/use API keys
@@ -42,3 +51,14 @@ Task-1-only progress summaries.
   full fit/tune pilot without using holdout/DEV model scores for development.
   On Linux, fetch the published documentation at a fixed commit and read it
   without overwriting newer local research code, caches, or experiment results.
+- The v2 pilot has now completed and its review bundle was verified at research
+  commit `0da5687da453dc3f891468c19e8e80c4024d2618`. Read
+  `ntcir19_fehu-master/docs/linux_4090_handoff/07_task2_method_review_20261105.md`
+  for the subsequent method review. Do not rerun the completed pilot merely by
+  following the earlier execution prompt. The review proposes future comparisons;
+  it does not lift the paid-API stop or itself launch new experiments.
+- The user's subsequent request authorizes autonomous Linux ModernBERT research
+  through `docs/linux_4090_handoff/08_run_modernbert_adaptive_research.txt`.
+  Continue evidence-driven fit/tune experiments within that protocol; new seeds
+  on the same tune are not an independent test. Freeze the final plan before
+  one-time holdout evaluation. Do not rerun GPU/system recovery.

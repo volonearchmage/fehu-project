@@ -1,0 +1,28 @@
+{
+  "id": "f36faaf8-8d4c-466f-b4c3-f6ab30289b4f",
+  "object": "chat.completion",
+  "created": 1793823217,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"actors\": [{\"actor\": \"4-35243-6-1-0\", \"values\": [{\"l1_value\": \"26\", \"direction\": \"0\"}, {\"l1_value\": \"27\", \"direction\": \"0\"}, {\"l1_value\": \"45\", \"direction\": \"0\"}, {\"l1_value\": \"46\", \"direction\": \"0\"}, {\"l1_value\": \"22\", \"direction\": \"0\"}, {\"l1_value\": \"37\", \"direction\": \"0\"}, {\"l1_value\": \"30\", \"direction\": \"0\"}]}, {\"actor\": \"4-35243-6-1-1\", \"values\": [{\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"38\", \"direction\": \"1\"}, {\"l1_value\": \"15\", \"direction\": \"1\"}, {\"l1_value\": \"21\", \"direction\": \"1\"}]}, {\"actor\": \"4-35243-6-1-2\", \"values\": [{\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"53\", \"direction\": \"1\"}, {\"l1_value\": \"52\", \"direction\": \"1\"}, {\"l1_value\": \"46\", \"direction\": \"1\"}, {\"l1_value\": \"26\", \"direction\": \"1\"}]}, {\"actor\": \"4-35243-6-1-3\", \"values\": [{\"l1_value\": \"38\", \"direction\": \"0\"}, {\"l1_value\": \"53\", \"direction\": \"0\"}, {\"l1_value\": \"45\", \"direction\": \"0\"}, {\"l1_value\": \"20\", \"direction\": \"0\"}]}, {\"actor\": \"4-35243-6-1-4\", \"values\": [{\"l1_value\": \"46\", \"direction\": \"1\"}, {\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"26\", \"direction\": \"1\"}]}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4214,
+    "completion_tokens": 432,
+    "total_tokens": 4646,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1398
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

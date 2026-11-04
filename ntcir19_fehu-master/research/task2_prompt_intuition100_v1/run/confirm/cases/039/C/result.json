@@ -1,0 +1,212 @@
+{
+  "sample_index": 39,
+  "guid": "9-21834-8-1",
+  "subevent_id": "4",
+  "variant": "C",
+  "stage": "confirm",
+  "request_sha256": "9ea00b2fd1be59e77e6a78be03ffa087d84c4e97d4e2f1a5d44048f448fa584b",
+  "response_file": "attempt_156.response.json",
+  "actors": [
+    {
+      "actor": "9-21834-8-1-0",
+      "values": [
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        },
+        {
+          "l1_value": "14",
+          "direction": "1"
+        },
+        {
+          "l1_value": "15",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "9-21834-8-1-1",
+      "values": [
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "42",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "9-21834-8-1-2",
+      "values": [
+        {
+          "l1_value": "29",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "14",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-0",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-1",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-1",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-1",
+      "l1_value": "42",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-2",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-2",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-2",
+      "l1_value": "29",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-2",
+      "l1_value": "30",
+      "direction": "1"
+    },
+    {
+      "actor": "9-21834-8-1-2",
+      "l1_value": "37",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4220,
+    "completion_tokens": 334,
+    "total_tokens": 4554,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1404
+  },
+  "seconds": 1.9990580000012415,
+  "completed_at": "2026-11-05T05:13:01.543654+09:00"
+}

@@ -1,0 +1,208 @@
+{
+  "sample_index": 3,
+  "guid": "6-18973-1-1",
+  "subevent_id": "1",
+  "variant": "A",
+  "stage": "confirm",
+  "request_sha256": "f1053173608aaded156a875d5d6caf04eb0f74bd3989b5154d35adaaff5fd976",
+  "response_file": "attempt_046.response.json",
+  "actors": [
+    {
+      "actor": "6-18973-1-1-0",
+      "values": [
+        {
+          "l1_value": "15",
+          "direction": "1"
+        },
+        {
+          "l1_value": "21",
+          "direction": "1"
+        },
+        {
+          "l1_value": "50",
+          "direction": "1"
+        },
+        {
+          "l1_value": "44",
+          "direction": "1"
+        },
+        {
+          "l1_value": "38",
+          "direction": "1"
+        },
+        {
+          "l1_value": "5",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "6-18973-1-1-1",
+      "values": [
+        {
+          "l1_value": "26",
+          "direction": "1"
+        },
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "30",
+          "direction": "0"
+        },
+        {
+          "l1_value": "45",
+          "direction": "0"
+        },
+        {
+          "l1_value": "50",
+          "direction": "0"
+        }
+      ]
+    },
+    {
+      "actor": "6-18973-1-1-2",
+      "values": [
+        {
+          "l1_value": "50",
+          "direction": "1"
+        },
+        {
+          "l1_value": "51",
+          "direction": "1"
+        },
+        {
+          "l1_value": "45",
+          "direction": "1"
+        }
+      ]
+    },
+    {
+      "actor": "6-18973-1-1-3",
+      "values": [
+        {
+          "l1_value": "22",
+          "direction": "1"
+        },
+        {
+          "l1_value": "37",
+          "direction": "1"
+        },
+        {
+          "l1_value": "52",
+          "direction": "1"
+        },
+        {
+          "l1_value": "53",
+          "direction": "1"
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "actor": "6-18973-1-1-0",
+      "l1_value": "5",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-0",
+      "l1_value": "15",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-0",
+      "l1_value": "21",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-0",
+      "l1_value": "38",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-0",
+      "l1_value": "44",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-0",
+      "l1_value": "50",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-1",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-1",
+      "l1_value": "26",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-1",
+      "l1_value": "30",
+      "direction": "0"
+    },
+    {
+      "actor": "6-18973-1-1-1",
+      "l1_value": "45",
+      "direction": "0"
+    },
+    {
+      "actor": "6-18973-1-1-1",
+      "l1_value": "50",
+      "direction": "0"
+    },
+    {
+      "actor": "6-18973-1-1-2",
+      "l1_value": "45",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-2",
+      "l1_value": "50",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-2",
+      "l1_value": "51",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-3",
+      "l1_value": "22",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-3",
+      "l1_value": "37",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-3",
+      "l1_value": "52",
+      "direction": "1"
+    },
+    {
+      "actor": "6-18973-1-1-3",
+      "l1_value": "53",
+      "direction": "1"
+    }
+  ],
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 4189,
+    "completion_tokens": 341,
+    "total_tokens": 4530,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 1501
+  },
+  "seconds": 1.7870765999978175,
+  "completed_at": "2026-11-05T05:12:18.124609+09:00"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5b0cfa9c-f3a0-4256-b66b-bc9ad5b7f637",
+  "object": "chat.completion",
+  "created": 1793823153,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"actors\": [{\"actor\": \"0-4560-1-1JPG-0\", \"values\": [{\"l1_value\": \"30\", \"direction\": \"1\"}, {\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"42\", \"direction\": \"1\"}, {\"l1_value\": \"27\", \"direction\": \"1\"}]}, {\"actor\": \"0-4560-1-1JPG-1\", \"values\": [{\"l1_value\": \"30\", \"direction\": \"0\"}, {\"l1_value\": \"5\", \"direction\": \"1\"}, {\"l1_value\": \"15\", \"direction\": \"1\"}, {\"l1_value\": \"38\", \"direction\": \"1\"}]}, {\"actor\": \"0-4560-1-1JPG-2\", \"values\": [{\"l1_value\": \"45\", \"direction\": \"1\"}, {\"l1_value\": \"26\", \"direction\": \"1\"}]}, {\"actor\": \"0-4560-1-1JPG-3\", \"values\": []}]}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3621,
+    "completion_tokens": 236,
+    "total_tokens": 3857,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 805
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}
