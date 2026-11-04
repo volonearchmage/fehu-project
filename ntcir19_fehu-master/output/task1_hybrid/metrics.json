@@ -1,0 +1,58 @@
+{
+  "hybrid": {
+    "task1a": {
+      "micro_f1": 0.4651706404862085,
+      "macro_f1": 0.1957786023413828,
+      "micro_precision": 0.41166735622672734,
+      "micro_recall": 0.5346587855991403,
+      "support_instances": 459,
+      "support_gold_labels": 1861,
+      "support_pred_labels": 2417
+    },
+    "task1b": {
+      "micro_f1": 0.23896858543671692,
+      "macro_f1": 0.03343242520435679,
+      "micro_precision": 0.2111004170676933,
+      "micro_recall": 0.27531380753138074,
+      "support_instances": 459,
+      "support_gold_labels": 2390,
+      "support_pred_labels": 3117
+    },
+    "drr": 0.07425742574257425,
+    "rev": 165,
+    "den": 2222,
+    "amb": 84
+  },
+  "deberta_only": {
+    "task1a": {
+      "micro_f1": 0.5056210584041677,
+      "macro_f1": 0.13419957946795175,
+      "micro_precision": 0.5162374020156775,
+      "micro_recall": 0.4954325631380978,
+      "support_instances": 456,
+      "support_gold_labels": 1861,
+      "support_pred_labels": 1786
+    },
+    "task1b": {
+      "micro_f1": 0.29918530074536315,
+      "macro_f1": 0.032881758959148154,
+      "micro_precision": 0.25540100621485645,
+      "micro_recall": 0.3610878661087866,
+      "support_instances": 456,
+      "support_gold_labels": 2390,
+      "support_pred_labels": 3379
+    },
+    "drr": 0.2376237623762376,
+    "rev": 528,
+    "den": 2222,
+    "amb": 84
+  },
+  "stats": {
+    "n_articles": 177,
+    "n_actors": 459,
+    "total_predictions": 3117,
+    "avg_candidates_per_actor": 15.0,
+    "avg_kept_per_actor": 6.79,
+    "invalid_llm_items": 0
+  }
+}

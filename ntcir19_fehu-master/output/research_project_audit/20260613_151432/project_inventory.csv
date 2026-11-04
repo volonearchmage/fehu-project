@@ -1,0 +1,52 @@
+file_or_folder,exists,type,purpose_if_known,risk_level,notes
+evaluation.py,yes,file,Official scorer,high,"Direction labels inverted in docstring/vars; DRR math still correct"
+dataset/train/train_event_base.json,yes,file,Train articles (1228),low,
+dataset/dev/dev_event_base.json,yes,file,Dev articles (177),low,
+dataset/test/test_article_event_base.json,yes,file,Task-1 test articles (175),low,
+dataset/test/test_subevent_event_base.json,yes,file,Task-2 test articles (175),low,
+dataset/gold_labels/train/train_human_values.json,yes,file,Train gold,low,
+dataset/gold_labels/dev/dev_human_values.json,yes,file,Dev gold,low,
+dataset/hv_categories/human_value_level1_values.json,yes,file,54 L1 mapping,low,
+dataset/hv_categories/human_value_level2_values.json,yes,file,20 L2 mapping,low,
+dataset/hv_categories/level_1_to_level_2.json,yes,file,L1→L2 map,low,
+dataset/hv_categories/direction_mapping.json,yes,file,"aligned=1,contradictory=0",low,Authoritative
+src/run_pipeline.py,yes,script,Prompt-only OAI,high,"--model ignored; writes to output/task1/; cache not model-keyed"
+src/run_pipeline_deepseek_flash.py,yes,script,Prompt-only DeepSeek,medium,"Clean; cache & limit handled correctly"
+src/train_deberta.py,yes,script,DeBERTa training + inference,high,"Writes preds to output/task1/ — collides with run_pipeline.py"
+src/hybrid_pipeline.py,yes,script,Hybrid v1,high,"DEBERTA_OUT=output/task1 is now wrong; cache not LLM-model-keyed"
+src/hybrid_v2.py,yes,script,Hybrid v2,medium,"Well-versioned per provider+model; deprecated datetime.utcnow on line 523"
+src/collect_results.py,yes,script,Aggregate results + cache→submission,medium,"Writes output/task1_prompt/ from cache"
+src/regenerate_deberta_predictions.py,yes,script,Regenerate DeBERTa preds in task1_deberta/,low,
+src/prompts.py,yes,file,Prompt module,low,"Dead code — duplicated in run_pipeline.py; never imported"
+research/fehu_label_diagnosis/label_diagnosis.py,yes,script,Per-label diagnosis,low,"Verified against official scorer"
+research/fehu_label_diagnosis/README.md,yes,doc,Diagnosis usage,low,
+research/fehu_project_audit/README.md,yes,doc,Audit landing page,low,
+output/task1/,yes,dir,Prompt-only OAI predictions (current),high,"Identical to task1_prompt/; DeBERTa results were overwritten"
+output/task1/pred_task1a_4omini.json,yes,file,Manual archive of gpt-4o-mini preds,medium,"Indicates earlier manual rename"
+output/task1/pred_task1b_4omini.json,yes,file,Manual archive of gpt-4o-mini preds,medium,
+output/task1_prompt/,yes,dir,Prompt-only OAI canonical,medium,"No run_config.json — model identity not recorded"
+output/task1_prompt_deepseek_v4_flash/,yes,dir,DS Flash prompt-only full dev,low,"Has run_config + metrics"
+output/task1_prompt_deepseek_v4_flash_limit5/,yes,dir,DS Flash prompt-only limit=5,info,"Clearly marked"
+output/task1_deberta/,yes,dir,DeBERTa-only preds,medium,"No run_config.json"
+output/task1_hybrid/,yes,dir,Hybrid v1 (gpt-4o-mini) preds,low,"Has run_config; no provider field"
+output/task1_hybrid_v2/,yes,dir,Old Hybrid v2 OAI orphan,high,"Predates provider-aware naming; canonical task1_hybrid_v2_openai_gpt_4o_mini/ is MISSING"
+output/task1_hybrid_v2_limit20/,yes,dir,Hybrid v2 OAI limit=20,info,"Clearly marked"
+output/task1_hybrid_v2_deepseek_deepseek_v4_pro/,yes,dir,Hybrid v2 DS Pro full dev,low,"Trustworthy"
+output/task1_hybrid_v2_deepseek_deepseek_v4_flash/,yes,dir,Hybrid v2 DS Flash full dev,low,"Trustworthy"
+output/research_label_diagnosis/20260613_145549/,yes,dir,First diagnosis run (no figures),low,
+output/research_label_diagnosis/20260613_145847/,yes,dir,Second diagnosis run with figures,low,"Numbers verified"
+output/research_label_diagnosis/baseline_diagnosis_full_dev_v1/,yes,dir,Earlier baseline diagnosis,info,
+logs/cache_dev.json,yes,file,run_pipeline.py dev cache,high,"Not keyed by model — gpt-4o-mini and gpt-4o would collide"
+logs/cache_dev_deepseek_v4_flash.json,yes,file,DS Flash prompt cache,low,
+logs/cache_hybrid_dev.json,yes,file,Hybrid v1 cache,medium,"Not LLM-model-keyed"
+logs/cache_hybrid_v2_dev.json,yes,file,Old Hybrid v2 cache,medium,Orphan
+logs/cache_hybrid_v2_dev_deepseek_deepseek_v4_pro.json,yes,file,Hybrid v2 DS Pro cache,low,
+logs/cache_hybrid_v2_dev_deepseek_deepseek_v4_flash.json,yes,file,Hybrid v2 DS Flash cache,low,
+logs/cache_test_openai.json,yes,file,Test-set OAI cache,info,
+.gitignore,yes,file,Git ignore rules,low,Has many duplicate entries
+README.md,yes,doc,Project README,low,
+CLAUDE.md,yes,doc,Coding guidance,low,
+HYBRID_ROADMAP.md,yes,doc,Hybrid roadmap notes,low,Untracked
+pyproject.toml,NO,file,n/a,info,Not present
+requirements.txt,NO,file,n/a,medium,Not present — no pinned deps
+.env,NO,file,n/a,low,Not present (good — no key file at rest)

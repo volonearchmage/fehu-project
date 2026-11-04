@@ -1,0 +1,7 @@
+request_id,augmentation_type,l1_value_id,l1_value_name,direction,direction_name,parse_status,required_fields_status,actor_mention_in_content,evidence_sentence_in_content,label_match_status,direction_match_status,factuality_warning,style_warning,overall_validation_status,recommended_human_action
+prev_dir_contrast_12_002_aligned_ce1da19f54,direction_contrastive,12,Have success,1,aligned,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW: structural checks pass; verify content quality
+prev_dir_contrast_38_003_aligned_e969e14138,direction_contrastive,38,Be honest,1,aligned,PASS,PASS,PASS,FAIL,PASS,PASS,PASS,PASS,FAIL,REJECT: structural validation failed; review and discard
+prev_dir_contrast_38_003_contradictory_e969e14138,direction_contrastive,38,Be honest,0,contradictory,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,WARN,REVIEW: content warnings present; human judgment required
+prev_rare_positive_32_001_83df110175,rare_positive,32,Be behaving properly,1,aligned,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,WARN,REVIEW: content warnings present; human judgment required
+prev_dir_contrast_12_002_contradictory_ce1da19f54,,,,,,FAIL,N/A,N/A,N/A,N/A,N/A,N/A,N/A,FAIL,Check API or parse error
+prev_rare_positive_24_004_98671d8d01,,,,,,FAIL,N/A,N/A,N/A,N/A,N/A,N/A,N/A,FAIL,Check API or parse error

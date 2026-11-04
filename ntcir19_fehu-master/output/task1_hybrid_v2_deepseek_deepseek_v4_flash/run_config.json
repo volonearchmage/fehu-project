@@ -1,0 +1,15 @@
+{
+  "mode": "dev",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "deberta_threshold": 0.2,
+  "top_k": 10,
+  "max_candidates_per_actor": 12,
+  "limit": null,
+  "temperature": 0.0,
+  "output_dir": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/output/task1_hybrid_v2_deepseek_deepseek_v4_flash",
+  "timestamp": "2026-05-19T10:39:30.113639+00:00",
+  "device": "cuda",
+  "checkpoint_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/checkpoints/best_model",
+  "cache_path": "/home/szf-4090/projects/fehu-project/ntcir19_fehu-master/logs/cache_hybrid_v2_dev_deepseek_deepseek_v4_flash.json"
+}

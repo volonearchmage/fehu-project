@@ -1,0 +1,69 @@
+method,l1_value_id,l1_value_name,train_gold_count_l1,dev_gold_count_l1,direction_reverse_count,direction_reverse_rate_label,precision_dir,recall_dir,f1_dir
+DeBERTa_only,45,Be just,1538,206,186,0.9029,0.2266,0.9854,0.3684
+DeBERTa_only,27,Have a stable society,1590,229,192,0.8384,0.2514,0.9694,0.3993
+DeBERTa_only,26,Have a safe country,1018,147,111,0.7551,0.1586,0.7823,0.2638
+Hybrid_v1,22,Have good health,883,122,38,0.3115,0.1333,0.3279,0.1896
+Hybrid_v1,38,Be honest,486,72,12,0.1667,0.0919,0.3611,0.1465
+Hybrid_v1,26,Have a safe country,1018,147,20,0.1361,0.2434,0.2517,0.2475
+Hybrid_v1,45,Be just,1538,206,28,0.1359,0.3333,0.3058,0.319
+Hybrid_v1,30,Be compliant,638,81,11,0.1358,0.104,0.2222,0.1417
+DeBERTa_only,42,Be responsible,2031,282,30,0.1064,0.5175,0.8369,0.6396
+Hybrid_v1,42,Be responsible,2031,282,27,0.0957,0.5282,0.8298,0.6455
+Prompt_DS_Flash,40,Have the own family secured,174,21,2,0.0952,0.2,0.1429,0.1667
+Hybrid_v1,12,Have success,338,54,5,0.0926,0.1168,0.8519,0.2054
+Hybrid_v2_DS_Flash,26,Have a safe country,1018,147,13,0.0884,0.5105,0.6599,0.5757
+Hybrid_v2_OAI_old,26,Have a safe country,1018,147,13,0.0884,0.4964,0.4626,0.4789
+DeBERTa_only,37,Be helpful,682,106,9,0.0849,0.2057,0.8113,0.3282
+Hybrid_v1,37,Be helpful,682,106,9,0.0849,0.223,0.9151,0.3586
+Hybrid_v2_DS_Flash,27,Have a stable society,1590,229,17,0.0742,0.5469,0.4585,0.4988
+Prompt_DS_Flash,5,Have freedom of action,553,72,5,0.0694,0.3636,0.3333,0.3478
+Prompt_DS_Flash,26,Have a safe country,1018,147,10,0.068,0.5932,0.4762,0.5283
+Hybrid_v2_DS_Pro,27,Have a stable society,1590,229,15,0.0655,0.6369,0.4367,0.5181
+Prompt_DS_Flash,25,Have a comfortable life,431,65,4,0.0615,0.3784,0.4308,0.4029
+Hybrid_v2_OAI_old,45,Be just,1538,206,12,0.0583,0.5936,0.5388,0.5649
+Hybrid_v2_DS_Pro,22,Have good health,883,122,7,0.0574,0.6122,0.4918,0.5455
+Hybrid_v2_OAI_old,22,Have good health,883,122,7,0.0574,0.4286,0.1967,0.2697
+Hybrid_v2_OAI_old,42,Be responsible,2031,282,16,0.0567,0.6186,0.6844,0.6498
+Prompt_OAI,42,Be responsible,2031,282,16,0.0567,0.6598,0.5638,0.608
+Hybrid_v2_DS_Pro,26,Have a safe country,1018,147,8,0.0544,0.6273,0.6871,0.6558
+Hybrid_v1,29,Be holding religious faith,255,37,2,0.0541,0.085,0.7027,0.1516
+Prompt_DS_Flash,28,Be respecting traditions,368,58,3,0.0517,0.5862,0.2931,0.3908
+Hybrid_v2_DS_Pro,42,Be responsible,2031,282,14,0.0496,0.7305,0.7305,0.7305
+Prompt_OAI,22,Have good health,883,122,6,0.0492,0.4306,0.2541,0.3196
+Prompt_DS_Flash,45,Be just,1538,206,10,0.0485,0.6893,0.6893,0.6893
+Prompt_OAI,40,Have the own family secured,174,21,1,0.0476,0.0,0.0,0.0
+Hybrid_v2_OAI_old,37,Be helpful,682,106,5,0.0472,0.4133,0.5849,0.4844
+Prompt_OAI,25,Have a comfortable life,431,65,3,0.0462,0.4186,0.2769,0.3333
+Hybrid_v1,27,Have a stable society,1590,229,10,0.0437,0.1429,0.0306,0.0504
+Hybrid_v2_OAI_old,27,Have a stable society,1590,229,10,0.0437,0.5132,0.1703,0.2557
+Hybrid_v2_DS_Flash,42,Be responsible,2031,282,12,0.0426,0.6811,0.727,0.7033
+Hybrid_v1,5,Have freedom of action,553,72,3,0.0417,0.05,0.0139,0.0217
+Prompt_OAI,46,Have a world at peace,364,48,2,0.0417,0.2083,0.1042,0.1389
+Hybrid_v2_DS_Flash,22,Have good health,883,122,5,0.041,0.5882,0.3279,0.4211
+Prompt_OAI,26,Have a safe country,1018,147,6,0.0408,0.623,0.2585,0.3654
+Prompt_DS_Flash,42,Be responsible,2031,282,11,0.039,0.7185,0.7695,0.7432
+Prompt_DS_Flash,37,Be helpful,682,106,4,0.0377,0.4941,0.7925,0.6087
+Hybrid_v2_DS_Pro,30,Be compliant,638,81,3,0.037,0.4792,0.284,0.3566
+Prompt_DS_Flash,30,Be compliant,638,81,3,0.037,0.566,0.3704,0.4478
+Prompt_OAI,21,Have a sense of belonging,382,57,2,0.0351,0.5,0.2807,0.3596
+Prompt_DS_Flash,22,Have good health,883,122,4,0.0328,0.5242,0.5328,0.5285
+Prompt_OAI,44,Have equality,460,66,2,0.0303,0.5556,0.303,0.3922
+Prompt_OAI,45,Be just,1538,206,6,0.0291,0.6687,0.5194,0.5847
+Hybrid_v2_DS_Flash,37,Be helpful,682,106,3,0.0283,0.56,0.6604,0.6061
+Hybrid_v2_DS_Flash,29,Be holding religious faith,255,37,1,0.027,0.7143,0.6757,0.6944
+Hybrid_v2_DS_Pro,29,Be holding religious faith,255,37,1,0.027,0.7667,0.6216,0.6866
+Hybrid_v2_OAI_old,29,Be holding religious faith,255,37,1,0.027,0.6111,0.2973,0.4
+Prompt_DS_Flash,29,Be holding religious faith,255,37,1,0.027,0.8333,0.4054,0.5455
+Prompt_DS_Flash,47,Be protecting the environment,399,39,1,0.0256,0.7097,0.5641,0.6286
+Prompt_OAI,47,Be protecting the environment,399,39,1,0.0256,0.4444,0.2051,0.2807
+Hybrid_v2_DS_Flash,45,Be just,1538,206,5,0.0243,0.6928,0.5146,0.5905
+Hybrid_v2_DS_Pro,45,Be just,1538,206,4,0.0194,0.8071,0.5485,0.6532
+Hybrid_v2_DS_Pro,37,Be helpful,682,106,2,0.0189,0.6449,0.6509,0.6479
+Prompt_DS_Flash,21,Have a sense of belonging,382,57,1,0.0175,0.5714,0.1404,0.2254
+Prompt_OAI,28,Be respecting traditions,368,58,1,0.0172,0.75,0.1034,0.1818
+Hybrid_v2_DS_Pro,25,Have a comfortable life,431,65,1,0.0154,0.55,0.1692,0.2588
+Hybrid_v2_DS_Flash,38,Be honest,486,72,1,0.0139,0.4848,0.2222,0.3048
+Hybrid_v2_DS_Pro,38,Be honest,486,72,1,0.0139,0.5,0.3194,0.3898
+Prompt_DS_Flash,27,Have a stable society,1590,229,3,0.0131,0.75,0.1703,0.2776
+Hybrid_v2_OAI_old,30,Be compliant,638,81,1,0.0123,0.3846,0.1235,0.1869
+Prompt_OAI,30,Be compliant,638,81,1,0.0123,0.4375,0.0864,0.1443

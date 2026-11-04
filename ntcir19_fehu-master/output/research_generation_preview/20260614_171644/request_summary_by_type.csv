@@ -1,0 +1,6 @@
+augmentation_type,n_requests
+paraphrase,4
+rare_positive,4
+hard_negative,4
+direction_contrastive,6
+TOTAL,18

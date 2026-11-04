@@ -1,0 +1,12 @@
+output_dir,tag,exists,pred_task1a_exists,pred_task1b_exists,run_config_exists,metrics_exists,detected_provider,detected_model,detected_limit,likely_full_dev
+output/task1,legacy_duplicate_ambiguous,True,True,True,False,False,unknown,unknown,unknown,True
+output/task1_prompt,canonical_prompt_oai,True,True,True,False,False,unknown,unknown,unknown,True
+output/task1_prompt_deepseek_v4_flash,canonical_prompt_ds_flash,True,True,True,True,True,deepseek,deepseek-v4-flash,None,True
+output/task1_prompt_deepseek_v4_flash_limit5,limit_debug_run,True,True,True,True,True,deepseek,deepseek-v4-flash,5,False
+output/task1_deberta,canonical_deberta,True,True,True,False,False,unknown,unknown,unknown,True
+output/task1_hybrid,canonical_hybrid_v1,True,True,True,True,True,unknown,gpt-4o-mini,None,True
+output/task1_hybrid_v2,orphan_legacy_hybrid_v2,True,True,True,True,True,unknown,gpt-4o-mini,None,True
+output/task1_hybrid_v2_limit20,limit_debug_run,True,True,True,True,True,unknown,gpt-4o-mini,20,False
+output/task1_hybrid_v2_deepseek_deepseek_v4_pro,canonical_hybrid_v2_ds_pro,True,True,True,True,True,deepseek,deepseek-v4-pro,None,True
+output/task1_hybrid_v2_deepseek_deepseek_v4_flash,canonical_hybrid_v2_ds_flash,True,True,True,True,True,deepseek,deepseek-v4-flash,None,True
+output/task1_hybrid_v2_openai_gpt_4o_mini,canonical_hybrid_v2_oai_mini,False,False,False,False,False,unknown,unknown,unknown,False
