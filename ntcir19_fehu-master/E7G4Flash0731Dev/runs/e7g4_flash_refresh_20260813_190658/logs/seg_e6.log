@@ -1,0 +1,51 @@
+[2026-08-13T19:18:12+08:00] seg_e6 attempt 1/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:   1%|          | 1/177 [00:04<14:21,  4.90s/it]Segmenting:   1%|          | 2/177 [00:19<30:18, 10.39s/it]Segmenting:   2%|▏         | 3/177 [00:37<41:15, 14.22s/it]Segmenting:   2%|▏         | 4/177 [00:41<29:20, 10.18s/it]Segmenting:   2%|▏         | 4/177 [02:21<1:41:52, 35.33s/it]
+  [WARN] 0-4931-1-4: segmentation attempt 1 failed: Unterminated string starting at: line 1 column 36 (char 35)
+  [WARN] 0-4931-1-4: segmentation attempt 2 failed: empty content
+  [WARN] 0-4931-1-4: segmentation attempt 3 failed: empty content
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 208, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 173, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 126, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4931-1-4 after 3 attempts: empty content
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T19:21:04+08:00] seg_e6 attempt 2/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 4 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:   2%|▏         | 4/177 [23:43<17:06:15, 355.93s/it]
+  [WARN] 0-4931-1-4: segmentation attempt 1 failed: empty content
+  [WARN] 0-4931-1-4: segmentation attempt 2 failed: empty content
+  [WARN] 0-4931-1-4: segmentation attempt 3 failed: empty content
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 208, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 173, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 126, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4931-1-4 after 3 attempts: empty content
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T19:45:19+08:00] seg_e6 attempt 3/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 4 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:   2%|▏         | 4/177 [03:12<2:19:03, 48.23s/it]
+  [WARN] 0-4931-1-4: segmentation attempt 1 failed: empty content
+  [WARN] 0-4931-1-4: segmentation attempt 2 failed: empty content
+  [WARN] 0-4931-1-4: segmentation attempt 3 failed: empty content
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 209, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 174, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6_e3a_self_segmentation/scripts/run_segmentation_e6.py", line 127, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4931-1-4 after 3 attempts: empty content
+[seg_e6] failed with status 1; retrying in 30 seconds
+[2026-08-13T19:49:02+08:00] seg_e6 attempt 4/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 4 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:   3%|▎         | 5/177 [00:19<11:18,  3.95s/it]Segmenting:   3%|▎         | 6/177 [00:25<12:24,  4.35s/it]

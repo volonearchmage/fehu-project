@@ -557,6 +557,7 @@ def call_openai(client, system_prompt, user_prompt, article_guid, model_name, te
 
 def call_deepseek(client, system_prompt, user_prompt, article_guid, model_name, temperature, max_tokens, request_timeout):
     """Call DeepSeek OpenAI-compatible API with JSON output enabled."""
+    request_max_tokens = max_tokens
     for attempt in range(MAX_RETRIES):
         content = ""
         try:
@@ -567,9 +568,10 @@ def call_deepseek(client, system_prompt, user_prompt, article_guid, model_name, 
                     {"role": "user", "content": user_prompt}
                 ],
                 temperature=temperature,
-                max_tokens=max_tokens,
+                max_tokens=request_max_tokens,
                 response_format={"type": "json_object"},
                 timeout=request_timeout,
+                extra_body={"thinking": {"type": "disabled"}},
             )
 
             content = response.choices[0].message.content.strip()
@@ -581,12 +583,15 @@ def call_deepseek(client, system_prompt, user_prompt, article_guid, model_name, 
             print(f"  [WARN] {article_guid}: JSON parse error (attempt {attempt+1}): {e}")
             print(f"  Response was: {content[:200]}...")
             if attempt < MAX_RETRIES - 1:
+                request_max_tokens = max_tokens * 2
                 time.sleep(2)
             continue
 
         except Exception as e:
             print(f"  [ERROR] {article_guid}: API error (attempt {attempt+1}): {e}")
             if attempt < MAX_RETRIES - 1:
+                if "empty content" in str(e):
+                    request_max_tokens = max_tokens * 2
                 time.sleep(5)
             continue
 
@@ -821,6 +826,10 @@ def main():
                         help="Build and print one prompt preview without calling any API")
     parser.add_argument("--refresh_cache", action="store_true",
                         help="Ignore existing cache entries and call the API again")
+    parser.add_argument("--cache_path", type=str, default=None,
+                        help="Explicit cache file for an isolated run. If omitted, use the legacy logs/cache_* path.")
+    parser.add_argument("--output_dir", type=str, default=None,
+                        help="Explicit prediction directory for an isolated run. If omitted, use the legacy output/task1/runs path.")
     args = parser.parse_args()
 
     default_models = {
@@ -921,12 +930,13 @@ def main():
     temp_tag = str(args.temperature).replace(".", "p")
     token_tag = str(max_output_tokens)
     variant_tag = args.prompt_variant
-    cache_path = os.path.join(
+    cache_path = args.cache_path or os.path.join(
         BASE_DIR,
         "logs",
         f"cache_{args.mode}_{args.provider}_{safe_model_name}_{variant_tag}_temp{temp_tag}_max{token_tag}.json",
     )
-    os.makedirs(os.path.join(BASE_DIR, "logs"), exist_ok=True)
+    cache_parent = os.path.dirname(os.path.abspath(cache_path))
+    os.makedirs(cache_parent, exist_ok=True)
     cache = {}
     if os.path.exists(cache_path):
         with open(cache_path, "r", encoding="utf-8") as f:
@@ -979,7 +989,7 @@ def main():
     # Save output files. Keep each run separate so prompt/model comparisons
     # do not overwrite earlier predictions.
     run_tag = f"{args.mode}_{args.provider}_{safe_model_name}_{variant_tag}_temp{temp_tag}_max{token_tag}"
-    output_dir = os.path.join(OUTPUT_DIR, "runs", run_tag)
+    output_dir = args.output_dir or os.path.join(OUTPUT_DIR, "runs", run_tag)
     os.makedirs(output_dir, exist_ok=True)
 
     task1a_path = os.path.join(output_dir, "pred_task1a.json")

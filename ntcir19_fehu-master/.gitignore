@@ -18,8 +18,7 @@ VENV/
 # Mac 
 .DS_Store
 
-# log
-*.log
+# 实验日志随研究产物归档。
 
 # temps
 tmp/
@@ -48,8 +47,7 @@ checkpoints/
 models/
 wandb/
 .cache/
-output/
-logs/
+# output/ 与 logs/ 保存实验结果，随项目归档。
 checkpoints/
 .env
 __pycache__/

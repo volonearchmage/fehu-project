@@ -1,0 +1,385 @@
+You are an expert in human value analysis for news articles.
+
+TASK: Given a factual news article, a breakdown of the article into numbered subevents (event units extracted from the article), and a list of actors (people, organizations, or groups mentioned in the article), identify which human values each actor's behavior across the article expresses or violates. The subevents are provided so you can examine the article one event unit at a time and not overlook a value expressed in a single part of the story; your FINAL answer is one consolidated article-level list of values per actor.
+
+HUMAN VALUE CATEGORIES (Level-1, 54 values):
+  0: Be creative
+  1: Be curious
+  2: Have freedom of thought
+  3: Be choosing own goals
+  4: Be independent
+  5: Have freedom of action
+  6: Have privacy
+  7: Have an exciting life
+  8: Have a varied life
+  9: Be daring
+  10: Have pleasure
+  11: Be ambitious
+  12: Have success
+  13: Be capable
+  14: Be intellectual
+  15: Be courageous
+  16: Have influence
+  17: Have the right to command
+  18: Have wealth
+  19: Have social recognition
+  20: Have a good reputation
+  21: Have a sense of belonging
+  22: Have good health
+  23: Have no debts
+  24: Be neat and tidy
+  25: Have a comfortable life
+  26: Have a safe country
+  27: Have a stable society
+  28: Be respecting traditions
+  29: Be holding religious faith
+  30: Be compliant
+  31: Be self-disciplined
+  32: Be behaving properly
+  33: Be polite
+  34: Be honoring elders
+  35: Be humble
+  36: Have life accepted as is
+  37: Be helpful
+  38: Be honest
+  39: Be forgiving
+  40: Have the own family secured
+  41: Be loving
+  42: Be responsible
+  43: Have loyalty towards friends
+  44: Have equality
+  45: Be just
+  46: Have a world at peace
+  47: Be protecting the environment
+  48: Have harmony with nature
+  49: Have a world of beauty
+  50: Be broadminded
+  51: Have the wisdom to accept others
+  52: Be logical
+  53: Have an objective view
+
+DIRECTION:
+- "aligned": The actor's behavior supports, upholds, or expresses this value.
+- "contradictory": The actor's behavior violates, undermines, or contradicts this value.
+
+GUIDELINES:
+1. For each actor, identify every value that has clear actor-specific evidence in the article. Do not pad the list with weakly supported values.
+2. Only assign values that have clear evidence in the article text.
+3. Consider both what actors DO and what they SAY.
+4. The same actor can have both aligned and contradictory values.
+5. Different actors in the same event often have opposing value directions.
+6. Common patterns:
+   - Law enforcement/authorities: often aligned with "Be just"(45), "Be responsible"(42), "Have a safe country"(26)
+   - Victims/affected people: often contradicted on "Have good health"(22), "Have a comfortable life"(25)
+   - Organizations responding to crises: often aligned with "Be helpful"(37), "Be honest"(38)
+   - Rule-breakers/criminals: often contradictory to "Be compliant"(30), "Be responsible"(42)
+7. The article is split into numbered subevents. Work through them one at a time and note every value each actor's behavior in that subevent expresses or violates; then merge these observations into a single article-level list per actor, where a value counts if it is expressed in ANY subevent. Use this pass to recover values that appear in only one part of the story.
+
+
+
+COMPACT OUTPUT CALIBRATION:
+1. Output only three fields for each item: "actor_id", "l1_value_id", and "direction".
+2. Do not output "reasoning", explanations, evidence text, markdown, or comments.
+3. For each actor, output every value supported by actor-specific evidence; do not add values without evidence.
+4. A value must be explicit or strongly implied by actor-specific evidence in the article.
+5. Avoid generic moral labels that merely sound related to the event.
+6. If evidence is weak or only article-topic-level, omit the value.
+
+
+TARGETED MORE-SHOT GUIDANCE FOR DIFFICULT LABELS:
+Use these reasoning-style examples as calibration. Do NOT output reasoning in the final answer.
+
+Example A: health impact
+- Situation: An actor provides medical support, warns the public about disease/drugs, prevents injury, or improves access to treatment.
+- Label: "Have good health"(22), direction "aligned".
+- Reasoning pattern: the actor's behavior protects or improves people's physical or mental health.
+- Avoid confusion: do not add this label only because the article is generally about a crisis; the actor must be connected to health protection.
+
+Example B: health harm
+- Situation: An actor causes injury, disease exposure, unsafe conditions, neglects health risks, or blocks treatment.
+- Label: "Have good health"(22), direction "contradictory".
+- Reasoning pattern: the actor's behavior threatens or harms people's health.
+- Avoid confusion: if the actor is only a victim of harm, do not infer unrelated positive values for that actor.
+
+Example C: public order or stability
+- Situation: An actor prevents riots, crime, institutional disruption, social unrest, or restores public order.
+- Label: "Have a stable society"(27), direction "aligned".
+- Reasoning pattern: the actor's behavior maintains social order or institutional stability.
+- Related label: use "Have a safe country"(26) when the evidence is more directly about public/national safety.
+
+Example D: destabilizing action
+- Situation: An actor commits violence, organized crime, public disorder, corruption, or actions that threaten social institutions.
+- Label: "Have a stable society"(27), direction "contradictory".
+- Reasoning pattern: the actor's behavior destabilizes society or undermines public order.
+
+Example E: social recognition / reputation
+- Situation: The article explicitly discusses public status, honor, shame, reputation, recognition, criticism, or loss of face.
+- Label: "Have social recognition"(19) or "Have a good reputation"(20), choose the most specific supported value and direction.
+- Avoid confusion: do not select these labels only because an actor is mentioned in news; there must be evidence about public evaluation.
+
+TARGETED RECOVERY CHECK:
+Before finalizing each actor, re-check whether the article explicitly or strongly implies any of these often-missed values:
+- "Have good health"(22)
+- "Have a stable society"(27)
+- "Have a safe country"(26)
+- "Have social recognition"(19)
+- "Have a good reputation"(20)
+- "Be capable"(13)
+
+Keep the compact output format. Recover these labels only when actor-specific evidence is present.
+
+
+BALANCED TARGETED CALIBRATION:
+1. Keep recall for target labels, but require one concrete actor-specific clue.
+2. For "Have good health"(22):
+   - Use aligned when the actor warns, treats, protects, rescues, prevents harm, or provides health-related support.
+   - Use contradictory when the actor causes injury, illness, unsafe exposure, health risk, or blocks care.
+   - Do not use for a general crisis unless health impact or health protection is directly mentioned.
+3. For "Have a stable society"(27):
+   - Use aligned for maintaining/restoring public order, institutions, or social stability.
+   - Use contradictory for violence, crime, unrest, corruption, or disruption of public order.
+   - If the evidence is mainly about physical/public safety, prefer "Have a safe country"(26).
+4. For "Have social recognition"(19) / "Have a good reputation"(20):
+   - Use only when public status, recognition, reputation, honor, criticism, or shame is explicitly discussed.
+5. Direction check for target labels:
+   - actor mitigates/protects/restores -> usually aligned.
+   - actor causes harm/disruption/risk -> usually contradictory.
+6. If a target label has weak but plausible evidence, keep it only when the actor-specific clue is concrete.
+
+OUTPUT FORMAT: Return ONLY a valid JSON object with an "items" array. Each element in "items" must have:
+- "actor_id": the actor's ID string (e.g., "0-4405-1-3-0")
+- "l1_value_id": the Level-1 value ID as a string (e.g., "42")
+- "direction": either "aligned" or "contradictory"
+Do NOT include a "reasoning" field.
+
+Do NOT include any text before or after the JSON object. No markdown, no explanation.
+
+Example JSON output:
+{
+  "items": [
+    {
+      "actor_id": "0-4405-1-3-0",
+      "l1_value_id": "42",
+      "direction": "aligned"
+    }
+  ]
+}
+
+EXAMPLES:
+
+--- Example 1 ---
+Title: Death toll rises in Taiwan bridge collapse
+Article: Rescue workers have recovered four bodies after a bridge collapsed on three fishing boats in Taiwan on Tuesday. Two people are still missing.  
+
+Among the victims are one Filipino and two Indonesian fishermen. The fourth victim remains unidentified. 
+
+The 21-year-old bridge collapsed Tuesday morning in Nanfangao, a small but crowded fishing village about 60 kilometers (40 miles) east of Tapei on the eastern coast of Taiwan.
+
+Ten people were pulled from the water and sent to the hospital immediately following the collapse. Since Tuesday, hundreds of rescuers have worked to remove the wreckage from the boats as divers search the waters for the missing. 
+
+Three fishing boats were moored below the bridge when the 140-meter-long (460-foot) bridge fell down on top of them.
+
+ Collapsed bridge in Taiwan
+After the storm
+
+Hours earlier Typhoon Mitag had swept through northern Taiwan, bringing high winds and torrential rain.
+
+The sun was shining and the weather was calm when the bridge fell on Tuesday morning. Officials would not say if it was the storm that caused the collapse.
+
+Security video footage shows an oil tanker nearly making it across the bridge before tumbling backwards into the water as the bridge fell. The tanker then burst into flames. The Taiwanese driver was seriously injured. Local media report that at least nine people also fell from the bridge.
+
+Among the injured are Filipino and Indonesian guest workers who had sought shelter from the typhoon on the fishing boats. Workers from these countries regularly operate boats in Taiwan.   
+
+Read more: The world's deadliest hurricanes, typhoons and cyclones
+
+Tourist attraction
+
+The bridge, built in 1998 to replace a lower structure that did not allow large vessels to pass underneath, carries traffic over the busy port. A local tourist attraction known as the "lover's bridge", it is the only single-span arch bridge in Taiwan and the second single arch-cable steel bridge in the world, according to the company that built it.
+
+The collapse came as a shock to many in Taiwan. A high frequency of earthquakes and typhoons in the region has led the country to develop high building standards.
+
+The government is investigating what caused the bridge to fall. It was last reinforced in 2018 and the local bridge authority issued a statement saying it had been "regularly checked and maintained".
+Subevents:
+0: The 21-year-old bridge in Nanfangao, Taiwan, collapsed on Tuesday morning onto three fishing boats moored below.
+1: An oil tanker nearly crossed the collapsing bridge before tumbling backwards into the water; the tanker then burst into flames, and the Taiwanese driver was seriously injured.
+2: Ten people were pulled from the water and sent to the hospital immediately following the collapse.
+3: Hundreds of rescuers have worked to remove the wreckage from the boats as divers search the waters for the missing people.
+4: Among the victims are one Filipino and two Indonesian fishermen; the fourth victim remains unidentified.
+5: Two people are still missing.
+6: The government is investigating what caused the bridge to fall.
+7: The bridge was last reinforced in 2018 and the local bridge authority stated it had been regularly checked and maintained.
+Actors: Rescue Workers and Emergency Responders (ID: 0-4349-1-t-0), Government and Infrastructure Authorities (ID: 0-4349-1-t-1)
+Output:
+[
+  {
+    "actor_id": "0-4349-1-t-0",
+    "l1_value_id": "37",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-0",
+    "l1_value_id": "42",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-0",
+    "l1_value_id": "15",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-0",
+    "l1_value_id": "22",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "42",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "45",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "26",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "30",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "20",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "27",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "26",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "30",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "22",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "40",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4349-1-t-1",
+    "l1_value_id": "21",
+    "direction": "contradictory"
+  }
+]
+
+--- Example 2 ---
+Title: Limo crash leaves 20 dead in New York state
+Article: Twenty people have been killed in a crash involving a stretch limousine taking people to a party in the US state of New York, police say.
+
+All 18 people in the limousine died along with two pedestrians in the incident on Saturday afternoon in the town of Schoharie, police confirmed.
+
+Witnesses described seeing the SUV-style limousine shoot across a junction and hit another car before ploughing into people in a shop car park.
+
+The cause of the crash is unclear.
+
+The victims have not yet been officially named but the New York Times reports that they include four sisters and at least two pairs of newlyweds. All those killed were adults, police say.
+
+It is America's deadliest transport crash since 2009, said the chairman of the National Transportation Safety Board (NTSB), Robert Sumwalt.
+
+What happened?Early reports suggested the car had been taking the group to a wedding reception but later reports said they were travelling to a birthday party.
+
+State police said on Sunday that the passengers in the limousine, described as a 2001 Ford Excursion, would not have been required to wear seatbelts.The driver was also killed in the crash, they said.
+
+A reporter for local news site Spectrum News, Mercedes Williams, tweeted images and footage from the scene of the incident, which took place near a store and cafe on routes 30 and 30A in Schoharie County.
+
+The images show a long line of emergency services vehicles lining the roads, which were closed to traffic.Another image shared on Twitter showed a large vehicle that appeared to have veered off the road and crashed into a tree.Eyewitnesses say a number of people entering and leaving the store were hit in Saturday's incident, local media report.
+
+"I heard this loud bang, I saw a lot of people here at the Apple Barrel [store and cafe] out in the parking lot," said Bridey Finnagen, who lives nearby. "Then I heard screaming."
+
+How is the investigation unfolding?
+New York State Police Cpt Richard O'Brien said several separate police units were involved in the investigation, including an identification unit and a drone team.
+
+Authorities have said they expect investigators to be at the scene for at least five days.
+
+Police said that a phone line had been set up to help assist relatives of the victims.
+
+The NTSB is sending a team of investigators.
+
+The location of the intersection is said to be in a hilly region and local authorities had only recently banned large trucks from using sections of the route.
+Subevents:
+0: Local authorities had recently banned large trucks from using sections of the route at the intersection in the hilly region.
+1: On Saturday afternoon in Schoharie, New York, a stretch limousine carrying 18 people ran through a junction, hit another car, and ploughed into people in a shop car park.
+2: All 18 people in the limousine, including the driver, and two pedestrians were killed in the crash.
+3: Witnesses described seeing the limousine shoot across a junction before the crash.
+4: Police and the National Transportation Safety Board are investigating the crash with several units involved, expecting investigators to be at the scene for at least five days.
+5: Police have set up a phone line to assist relatives of the victims.
+Actors: Authorities and Emergency Responders (ID: 0-4352-3-1-0), Victims and Community (ID: 0-4352-3-1-1), Limousine Operator and Related Parties (ID: 0-4352-3-1-2)
+Output:
+[
+  {
+    "actor_id": "0-4352-3-1-0",
+    "l1_value_id": "42",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4352-3-1-0",
+    "l1_value_id": "37",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4352-3-1-0",
+    "l1_value_id": "26",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4352-3-1-0",
+    "l1_value_id": "45",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4352-3-1-0",
+    "l1_value_id": "21",
+    "direction": "aligned"
+  },
+  {
+    "actor_id": "0-4352-3-1-1",
+    "l1_value_id": "22",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4352-3-1-1",
+    "l1_value_id": "40",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4352-3-1-2",
+    "l1_value_id": "42",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4352-3-1-2",
+    "l1_value_id": "26",
+    "direction": "contradictory"
+  },
+  {
+    "actor_id": "0-4352-3-1-2",
+    "l1_value_id": "22",
+    "direction": "contradictory"
+  }
+]

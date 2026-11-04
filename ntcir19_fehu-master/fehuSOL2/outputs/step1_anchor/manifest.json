@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "t0": {
+      "path": "Mathematical_optimization/temperature_ablation/t0.0/pred_task1b.json",
+      "sha256": "0fbe2bb8c68ac3803abcbca2c2d6fb8139c2b44aadbd3e7c0fc48ce92cd3d79e"
+    },
+    "t01": {
+      "path": "Mathematical_optimization/temperature_ablation/t0.1/pred_task1b.json",
+      "sha256": "e79a89528939e2bb4fe6ed7657ff6869213209d60be28edea80ab82653ef3d79"
+    },
+    "t03": {
+      "path": "Mathematical_optimization/temperature_ablation/t0.3/pred_task1b.json",
+      "sha256": "93250ad8486ff79a32f443ec4b1dc8ed43b348a8fd38b4febc9f58667496ed76"
+    },
+    "gold": {
+      "path": "dataset/gold_labels/dev/dev_human_values.json",
+      "sha256": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d"
+    }
+  },
+  "model_identity": {
+    "model": "deepseek-v4-pro",
+    "thinking": "disabled",
+    "temperatures": [
+      0.0,
+      0.1,
+      0.3
+    ]
+  },
+  "n_articles": 177,
+  "script_sha256": "87fd37dee2b1de85ea276ab157b8f000a0c3b9d4c0fd927b5efeea6aa28d8e15"
+}

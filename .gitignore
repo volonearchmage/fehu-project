@@ -4,6 +4,9 @@
 .env
 .env.*
 !.env.example
+*.key
+*.pem
+secrets.*
 
 # ============================================================
 # ML caches and experiment services
@@ -12,8 +15,7 @@
 **/.cache/
 wandb/
 **/wandb/
-runs/
-**/runs/
+# 实验 runs/、logs/、output/ 随项目保存；机器缓存不上传。
 
 # ============================================================
 # Large model checkpoints and weights
@@ -34,6 +36,11 @@ rng_state*.pth
 # Temporary generated files
 *.tmp
 *.swp
+.DS_Store
+Thumbs.db
+.venv/
+node_modules/
+/tmp/
 
 # ============================================================
 # Python caches (belt-and-suspenders; also in ntcir19_fehu-master/.gitignore)
@@ -46,20 +53,4 @@ __pycache__/
 .pytest_cache/
 **/.pytest_cache/
 
-# ============================================================
-# API response caches (raw model outputs; regenerable, may be large)
-# ============================================================
-**/logs/cache_*.json
-**/cache_dev_*.json
-**/cache_test_*.json
-
-# ============================================================
-# External papers / non-code binaries (not project source)
-# ============================================================
-*.pdf
-
-# ============================================================
-# Unnecessarily large regenerable generated/augmented data outputs
-# (kept out of the handoff; reproducible from the augmentation scripts)
-# ============================================================
-**/*_official_plus_900.json
+# 研究文档、PDF、PPT、预测缓存和增强数据属于项目归档。

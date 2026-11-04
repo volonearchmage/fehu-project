@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "E1",
+      "run_dir": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E1",
+      "task1b_micro_f1": 0.4831,
+      "task1b_micro_p": 0.4885,
+      "task1b_micro_r": 0.4778,
+      "task1b_macro_f1": 0.2652,
+      "task1a_micro_f1": 0.6207,
+      "task1a_macro_f1": 0.4258,
+      "drr": 0.0378,
+      "drr_reversals": 84,
+      "distinct_classes_1b": 108,
+      "labels_1b": 2338
+    },
+    {
+      "name": "Liu",
+      "run_dir": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/Liu",
+      "task1b_micro_f1": 0.4907,
+      "task1b_micro_p": 0.6303,
+      "task1b_micro_r": 0.4017,
+      "task1b_macro_f1": 0.2515,
+      "task1a_micro_f1": 0.6112,
+      "task1a_macro_f1": 0.411,
+      "drr": 0.0252,
+      "drr_reversals": 56,
+      "distinct_classes_1b": 76,
+      "labels_1b": 1523
+    },
+    {
+      "name": "E6",
+      "run_dir": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E6",
+      "task1b_micro_f1": 0.5086,
+      "task1b_micro_p": 0.4625,
+      "task1b_micro_r": 0.5649,
+      "task1b_macro_f1": 0.3248,
+      "task1a_micro_f1": 0.6529,
+      "task1a_macro_f1": 0.4996,
+      "drr": 0.0545,
+      "drr_reversals": 121,
+      "distinct_classes_1b": 99,
+      "labels_1b": 2919
+    },
+    {
+      "name": "E6b",
+      "run_dir": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E6b",
+      "task1b_micro_f1": 0.4832,
+      "task1b_micro_p": 0.4298,
+      "task1b_micro_r": 0.5519,
+      "task1b_macro_f1": 0.311,
+      "task1a_micro_f1": 0.6387,
+      "task1a_macro_f1": 0.4748,
+      "drr": 0.0549,
+      "drr_reversals": 122,
+      "distinct_classes_1b": 108,
+      "labels_1b": 3069
+    },
+    {
+      "name": "E6c",
+      "run_dir": "E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/members/E6c",
+      "task1b_micro_f1": 0.4361,
+      "task1b_micro_p": 0.332,
+      "task1b_micro_r": 0.6351,
+      "task1b_macro_f1": 0.2977,
+      "task1a_micro_f1": 0.6206,
+      "task1a_macro_f1": 0.4708,
+      "drr": 0.0707,
+      "drr_reversals": 157,
+      "distinct_classes_1b": 108,
+      "labels_1b": 4572
+    }
+  ]
+}

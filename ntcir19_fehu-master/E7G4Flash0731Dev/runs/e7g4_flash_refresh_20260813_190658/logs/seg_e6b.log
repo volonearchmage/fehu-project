@@ -1,0 +1,19 @@
+[2026-08-13T19:18:12+08:00] seg_e6b attempt 1/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:   1%|          | 1/177 [00:17<50:14, 17.13s/it]Segmenting:   1%|          | 2/177 [00:40<1:00:55, 20.89s/it]Segmenting:   2%|▏         | 3/177 [01:07<1:08:56, 23.77s/it]Segmenting:   2%|▏         | 4/177 [01:13<48:16, 16.74s/it]  Segmenting:   2%|▏         | 4/177 [02:54<2:05:36, 43.56s/it]
+  [WARN] 0-4931-1-4: segmentation attempt 1 failed: empty content
+  [WARN] 0-4931-1-4: segmentation attempt 2 failed: empty content
+  [WARN] 0-4931-1-4: segmentation attempt 3 failed: empty content
+Traceback (most recent call last):
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6b_granularity_control/scripts/run_segmentation_e6b.py", line 208, in <module>
+    main()
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6b_granularity_control/scripts/run_segmentation_e6b.py", line 173, in main
+    parsed, raw = segment_article(client, args.model, article)
+  File "/Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E6b_granularity_control/scripts/run_segmentation_e6b.py", line 126, in segment_article
+    raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
+RuntimeError: ABORT: segmentation failed for 0-4931-1-4 after 3 attempts: empty content
+[seg_e6b] failed with status 1; retrying in 30 seconds
+[2026-08-13T19:21:37+08:00] seg_e6b attempt 2/20
+Segmenting 177 dev articles with deepseek-v4-flash
+Loaded segmentation cache with 4 articles
+Segmenting:   0%|          | 0/177 [00:00<?, ?it/s]Segmenting:   3%|▎         | 5/177 [24:01<13:46:32, 288.33s/it]Segmenting:   3%|▎         | 6/177 [24:21<10:51:41, 228.66s/it]Segmenting:   4%|▍         | 7/177 [24:49<8:31:07, 180.40s/it] Segmenting:   5%|▍         | 8/177 [25:35<6:51:08, 145.97s/it]Segmenting:   5%|▌         | 9/177 [25:52<5:12:05, 111.46s/it]Segmenting:   6%|▌         | 10/177 [27:22<4:53:14, 105.36s/it]

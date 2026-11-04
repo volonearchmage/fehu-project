@@ -605,6 +605,7 @@ def call_openai(client, system_prompt, user_prompt, article_guid, model_name, te
 
 def call_deepseek(client, system_prompt, user_prompt, article_guid, model_name, temperature, max_tokens, request_timeout):
     """Call DeepSeek OpenAI-compatible API with JSON output enabled."""
+    request_max_tokens = max_tokens
     for attempt in range(MAX_RETRIES):
         content = ""
         try:
@@ -615,7 +616,7 @@ def call_deepseek(client, system_prompt, user_prompt, article_guid, model_name, 
                     {"role": "user", "content": user_prompt}
                 ],
                 temperature=temperature,
-                max_tokens=max_tokens,
+                max_tokens=request_max_tokens,
                 response_format={"type": "json_object"},
                 timeout=request_timeout,
                 # E6c delta: run deepseek-v4-pro in NON-thinking mode
@@ -632,12 +633,15 @@ def call_deepseek(client, system_prompt, user_prompt, article_guid, model_name, 
             print(f"  [WARN] {article_guid}: JSON parse error (attempt {attempt+1}): {e}")
             print(f"  Response was: {content[:200]}...")
             if attempt < MAX_RETRIES - 1:
+                request_max_tokens = max_tokens * 2
                 time.sleep(2)
             continue
 
         except Exception as e:
             print(f"  [ERROR] {article_guid}: API error (attempt {attempt+1}): {e}")
             if attempt < MAX_RETRIES - 1:
+                if "empty content" in str(e):
+                    request_max_tokens = max_tokens * 2
                 time.sleep(5)
             continue
 

@@ -1,0 +1,211 @@
+{
+  "audit_date": "2026-11-03",
+  "timezone": "Asia/Tokyo",
+  "official_repository": "https://github.com/ii-research/NTCIR-19-FEHU-resource",
+  "official_commit": "c27e19d97c24bd764c2ea520217dba9873fab455",
+  "status": "Local data audit only; no new model inference or training",
+  "files": {
+    "dataset/dev/dev_event_base.json": {
+      "sha256": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+      "local_git_blob_sha1": "c2788203e2e4af6850124a126436ac2c2f386fb7",
+      "official_git_blob_sha1": "c2788203e2e4af6850124a126436ac2c2f386fb7",
+      "matches_official": true
+    },
+    "dataset/evaluation_test_data_examples/pred/task1/pred_task1a.json": {
+      "sha256": "05eb9f4a01c266b3bd69616f31c808e47aec4076821abc4530fc818bcda923ae",
+      "local_git_blob_sha1": "e9af1612f116cf6ec6aaa69feb3aeeed375b24d6",
+      "official_git_blob_sha1": "e9af1612f116cf6ec6aaa69feb3aeeed375b24d6",
+      "matches_official": true
+    },
+    "dataset/evaluation_test_data_examples/pred/task1/pred_task1b.json": {
+      "sha256": "fd923a2de8d11065de51ff061f286a00f9ea23d206561cefc6e1ba3843ff9cc4",
+      "local_git_blob_sha1": "608b93cbe3a4f519807599e6606feccf80153566",
+      "official_git_blob_sha1": "608b93cbe3a4f519807599e6606feccf80153566",
+      "matches_official": true
+    },
+    "dataset/evaluation_test_data_examples/pred/task2/pred_task2a.json": {
+      "sha256": "fd8bb8ccb3b222cac84eb0bac0b3f789af2baf8b185b9057e00e7e29aaf44eb1",
+      "local_git_blob_sha1": "fa69cda65cbf977a2459da7c461b047610fffe7e",
+      "official_git_blob_sha1": "fa69cda65cbf977a2459da7c461b047610fffe7e",
+      "matches_official": true
+    },
+    "dataset/evaluation_test_data_examples/pred/task2/pred_task2b.json": {
+      "sha256": "628b931b5f8249eb542858aab44fe19f16bc82826410ea297df8d08058ed452d",
+      "local_git_blob_sha1": "277b19c642afe079bc7782bff5b3d2a588c6d2c7",
+      "official_git_blob_sha1": "277b19c642afe079bc7782bff5b3d2a588c6d2c7",
+      "matches_official": true
+    },
+    "dataset/gold_labels/dev/dev_human_values.json": {
+      "sha256": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d",
+      "local_git_blob_sha1": "94a031db83c15b7b4ec8d5c63d2122c8d6040aaf",
+      "official_git_blob_sha1": "94a031db83c15b7b4ec8d5c63d2122c8d6040aaf",
+      "matches_official": true
+    },
+    "dataset/gold_labels/train/train_human_values.json": {
+      "sha256": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+      "local_git_blob_sha1": "0c6bdab71400a26a75188a587df9e2318697b134",
+      "official_git_blob_sha1": "0c6bdab71400a26a75188a587df9e2318697b134",
+      "matches_official": true
+    },
+    "dataset/hv_categories/direction_mapping.json": {
+      "sha256": "da3d9c26ee77a8de4375c6b4c986f6b8d52175d0073e18b810aab5e6b40959a4",
+      "local_git_blob_sha1": "c55bfe1d1381b4efa28782eaccf678df6d73a372",
+      "official_git_blob_sha1": "c55bfe1d1381b4efa28782eaccf678df6d73a372",
+      "matches_official": true
+    },
+    "dataset/hv_categories/human_value_level1_values.json": {
+      "sha256": "40fa4b78ba7ae7b4f61d23c821dbe70a2a1f3079369fb9ff5f2cb11d79d7f96e",
+      "local_git_blob_sha1": "9c57f73c3476d44a743914e4ed2f9953534f49b1",
+      "official_git_blob_sha1": "9c57f73c3476d44a743914e4ed2f9953534f49b1",
+      "matches_official": true
+    },
+    "dataset/hv_categories/human_value_level2_values.json": {
+      "sha256": "550ee6de5db3b3f8941ad8a006d4d272774b714aa71b75d9ac9c966fe1ec75c2",
+      "local_git_blob_sha1": "9f45d8a880f439e911186c50e28cf4121361daa8",
+      "official_git_blob_sha1": "9f45d8a880f439e911186c50e28cf4121361daa8",
+      "matches_official": true
+    },
+    "dataset/hv_categories/human_value_taxonomy.json": {
+      "sha256": "b153e460c64bf172cd1081f34a8242bc74574963951cc1f160f4d6010388f673",
+      "local_git_blob_sha1": "c59788b2496632220161816388c08beb26c13cde",
+      "official_git_blob_sha1": "c59788b2496632220161816388c08beb26c13cde",
+      "matches_official": true
+    },
+    "dataset/hv_categories/level_1_to_level_2.json": {
+      "sha256": "dc1ef3897a5de000c8a40e3672b12650163832026eb984ab46da57aa8037a1bf",
+      "local_git_blob_sha1": "828d82909e7c7775e6b25d096b57d456385a07d6",
+      "official_git_blob_sha1": "828d82909e7c7775e6b25d096b57d456385a07d6",
+      "matches_official": true
+    },
+    "dataset/hv_categories/level_2_to_level_1.json": {
+      "sha256": "c708f7af300f818a81a205b755f4aee6c866e7c798cb9ea8c5908863a2604c8a",
+      "local_git_blob_sha1": "c934b892d831797e82310e756423f4769128e366",
+      "official_git_blob_sha1": "c934b892d831797e82310e756423f4769128e366",
+      "matches_official": true
+    },
+    "dataset/test/test_article_event_base.json": {
+      "sha256": "e78019b3c8c5e7ea6823913f079db9f7a90b46fbbe20053658aaa88c61915dce",
+      "local_git_blob_sha1": "4c33c0600434f35a526d7577c8c963a895546eff",
+      "official_git_blob_sha1": "4c33c0600434f35a526d7577c8c963a895546eff",
+      "matches_official": true
+    },
+    "dataset/test/test_subevent_event_base.json": {
+      "sha256": "65c3e995bf1077b70ec19f0d4bf3d25654e7446d51a785e639dfaad4071b48ee",
+      "local_git_blob_sha1": "5904365be61663cb371c67206c08a537dd0ff7af",
+      "official_git_blob_sha1": "5904365be61663cb371c67206c08a537dd0ff7af",
+      "matches_official": true
+    },
+    "dataset/train/train_event_base.json": {
+      "sha256": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+      "local_git_blob_sha1": "d1dca267f63e481407288e213456dfbb89b5d42f",
+      "official_git_blob_sha1": "d1dca267f63e481407288e213456dfbb89b5d42f",
+      "matches_official": true
+    },
+    "evaluation.py": {
+      "sha256": "e4a7f89e177fa5767553311d218b42a2c628c2803586f32a3d191d878648ad47",
+      "local_git_blob_sha1": "5e7ee442541571a12226aff425cd4f256200034e",
+      "official_git_blob_sha1": "02ebe16e8a9ff314f6d057270a266d9edfa45ddf",
+      "matches_official": false
+    }
+  },
+  "splits": {
+    "train": {
+      "articles": 1228,
+      "subevents": 10822,
+      "article_actor_candidates": 3381,
+      "subevent_actor_candidates": 30543,
+      "gold_positive_actor_tuples": 12736,
+      "candidate_tuples_without_gold_positive": 17807,
+      "candidate_no_gold_positive_fraction": 0.5830141112529876,
+      "gold_directed_labels": 18665,
+      "gold_positive_subevents": 10688,
+      "subevents_without_gold_positive": 134,
+      "directed_labels_per_positive_actor_tuple": {
+        "1": 7565,
+        "2": 4470,
+        "3": 649,
+        "4": 47,
+        "5": 5
+      },
+      "direction_counts": {
+        "1": 13191,
+        "0": 5474
+      },
+      "max_two_directed_labels_recall_ceiling": 0.9593892311813554,
+      "max_two_directed_labels_unavoidable_misses": 758
+    },
+    "dev": {
+      "articles": 177,
+      "subevents": 1526,
+      "article_actor_candidates": 459,
+      "subevent_actor_candidates": 3998,
+      "gold_positive_actor_tuples": 1800,
+      "candidate_tuples_without_gold_positive": 2198,
+      "candidate_no_gold_positive_fraction": 0.5497748874437218,
+      "gold_directed_labels": 2768,
+      "gold_positive_subevents": 1504,
+      "subevents_without_gold_positive": 22,
+      "directed_labels_per_positive_actor_tuple": {
+        "1": 969,
+        "2": 705,
+        "3": 116,
+        "4": 9,
+        "5": 1
+      },
+      "direction_counts": {
+        "1": 1944,
+        "0": 824
+      },
+      "max_two_directed_labels_recall_ceiling": 0.9505057803468208,
+      "max_two_directed_labels_unavoidable_misses": 137
+    },
+    "test1": {
+      "articles": 175,
+      "subevents": 0,
+      "article_actor_candidates": 479,
+      "subevent_actor_candidates": 0
+    },
+    "test2": {
+      "articles": 175,
+      "subevents": 1616,
+      "article_actor_candidates": 444,
+      "subevent_actor_candidates": 4126
+    }
+  },
+  "overlap_counts": {
+    "train__dev": 0,
+    "train__test1": 0,
+    "train__test2": 0,
+    "dev__test1": 0,
+    "dev__test2": 0,
+    "test1__test2": 0
+  },
+  "evaluator": {
+    "changed_functions": [
+      "main"
+    ],
+    "difference": "Local main() comments out --out file writing. Metric and parser function ASTs are identical. Capture stdout to save metrics.",
+    "direction_documentation_issue": "split_dir_l1 docstring reverses aligned/contradictory names. direction_mapping.json is authoritative: aligned=1, contradictory=0. The DRR calculation is symmetric; the comment does not change scores."
+  },
+  "source_files": {
+    "docs/ppt/Liu_Dongyang__20261015 (1).pptx": {
+      "sha256": "a4e8c7df8ab3303cacc449b5ca433ca5b8ff53e797d5c971ddcccd23b83afbbd",
+      "same_as": "docs/seminar_pre/Liu_Dongyang__20261015 (1).pptx"
+    },
+    "docs/论文/NTCIR_FEHU_TaskOverview (1).pdf": {
+      "sha256": "3fa7b7d79b3637c7ee268b9b9faafa3bff5cf1a22ab4fd9c4a9580ac3b485867"
+    },
+    "docs/paperForAug/NTCIR_FEHU_TaskOverview.pdf": {
+      "sha256": "3fa7b7d79b3637c7ee268b9b9faafa3bff5cf1a22ab4fd9c4a9580ac3b485867"
+    }
+  },
+  "attribution_contrast_feasibility": {
+    "train_directed_positive_labels": 18665,
+    "positives_with_other_actor_unlabeled_candidate": 17646,
+    "positives_with_other_subevent_unlabeled_candidate": 18574,
+    "positives_with_both_candidate_types": 17597,
+    "count_unit": "Positive directed labels with at least one candidate, not distinct negative examples",
+    "status": "Candidate existence count only; semantic negatives have not been verified",
+    "source": "dataset/train/train_event_base.json and dataset/gold_labels/train/train_human_values.json; hashes recorded above"
+  }
+}

@@ -33,7 +33,7 @@ DEFAULT_MODEL = "deepseek-v4-flash"
 TEMPERATURE = 0.1
 MAX_OUTPUT_TOKENS = 4000
 REQUEST_TIMEOUT = 120
-MAX_RETRIES = 3
+MAX_RETRIES = 5
 MIN_UNITS = 2      # official dev range is 2..20 (median 9)
 MAX_UNITS = 30     # hard ceiling; pathological outputs abort
 
@@ -42,13 +42,14 @@ SEGMENTATION_SYSTEM_PROMPT = """You are an expert news editor. Your task is to s
 RULES:
 1. Read the whole article and break it into numbered subevents, in the order they appear in the article.
 2. Each subevent is ONE distinct event, action, statement, or development described in the article, written as a single self-contained sentence (a close paraphrase of the article's wording is fine).
-3. Aim for 6-9 subevents for a typical article; merge closely-related sentences that describe the same development into ONE subevent. Use fewer for very short articles and at most a few more for very long ones. Never fewer than 2.
+3. Aim for 6-9 subevents for a typical article; merge closely-related sentences that describe the same development into ONE subevent. Use fewer for very short articles and at most a few more for very long ones. Never fewer than 2 and never more than 30.
 4. Together the subevents should cover every part of the article that describes something happening; do not skip sections.
 5. Only describe what happened. Do not interpret, evaluate, or judge anyone or anything.
 
 OUTPUT FORMAT: Return ONLY a valid JSON object:
 {"subevents": [{"id": "0", "subevent": "..."}, {"id": "1", "subevent": "..."}]}
-IDs are consecutive integers as strings starting at "0". Do NOT include any text before or after the JSON object. No markdown."""
+IDs are consecutive integers as strings starting at "0". Do NOT include any text before or after the JSON object. No markdown.
+Double quotes and other special characters inside subevent text MUST be validly JSON-escaped."""
 
 
 def build_segmentation_user_prompt(article):
@@ -112,6 +113,7 @@ def segment_article(client, model_name, article):
                 max_tokens=MAX_OUTPUT_TOKENS,
                 response_format={"type": "json_object"},
                 timeout=REQUEST_TIMEOUT,
+                extra_body={"thinking": {"type": "disabled"}},
             )
             content = response.choices[0].message.content.strip()
             if not content:
@@ -122,6 +124,16 @@ def segment_article(client, model_name, article):
             print(f"  [WARN] {guid}: segmentation attempt {attempt + 1} "
                   f"failed: {e}")
             if attempt < MAX_RETRIES - 1:
+                if "units outside" in str(e):
+                    user_prompt += (
+                        "\nThe previous segmentation was too fine-grained. "
+                        "Merge related developments and return 6-20 subevents."
+                    )
+                if isinstance(e, json.JSONDecodeError):
+                    user_prompt += (
+                        "\nThe previous response was malformed JSON. Use short "
+                        "plain sentences and JSON-escape every internal quote."
+                    )
                 time.sleep(3)
     raise RuntimeError(f"ABORT: segmentation failed for {guid} after "
                        f"{MAX_RETRIES} attempts: {last_err}")

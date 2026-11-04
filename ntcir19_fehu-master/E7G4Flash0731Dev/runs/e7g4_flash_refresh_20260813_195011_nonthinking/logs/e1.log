@@ -1,0 +1,253 @@
+[2026-08-13T19:50:25+08:00] e1 attempt 1/20
+Mode: DEV (will evaluate against gold labels)
+Loaded 177 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Processing articles:   0%|          | 0/177 [00:00<?, ?it/s]Processing articles:   1%|          | 1/177 [00:01<05:18,  1.81s/it]Processing articles:   1%|          | 2/177 [00:04<06:40,  2.29s/it]Processing articles:   2%|▏         | 3/177 [00:08<09:13,  3.18s/it]Processing articles:   2%|▏         | 4/177 [00:10<07:39,  2.66s/it]Processing articles:   3%|▎         | 5/177 [00:13<07:39,  2.67s/it]Processing articles:   3%|▎         | 6/177 [00:14<06:38,  2.33s/it]Processing articles:   4%|▍         | 7/177 [00:16<06:15,  2.21s/it]Processing articles:   5%|▍         | 8/177 [00:18<05:51,  2.08s/it]Processing articles:   5%|▌         | 9/177 [00:23<08:07,  2.90s/it]Processing articles:   6%|▌         | 10/177 [00:25<07:18,  2.62s/it]Processing articles:   6%|▌         | 11/177 [00:27<06:51,  2.48s/it]Processing articles:   7%|▋         | 12/177 [00:29<06:43,  2.45s/it]Processing articles:   7%|▋         | 13/177 [00:31<05:59,  2.20s/it]Processing articles:   8%|▊         | 14/177 [00:33<05:50,  2.15s/it]Processing articles:   8%|▊         | 15/177 [00:35<05:28,  2.03s/it]Processing articles:   9%|▉         | 16/177 [00:40<07:53,  2.94s/it]Processing articles:  10%|▉         | 17/177 [00:43<08:20,  3.13s/it]Processing articles:  10%|█         | 18/177 [00:47<08:16,  3.12s/it]Processing articles:  11%|█         | 19/177 [00:49<07:34,  2.88s/it]Processing articles:  11%|█▏        | 20/177 [00:50<06:20,  2.43s/it]Processing articles:  12%|█▏        | 21/177 [00:52<05:45,  2.21s/it]Processing articles:  12%|█▏        | 22/177 [00:54<05:34,  2.16s/it]Processing articles:  13%|█▎        | 23/177 [00:55<04:52,  1.90s/it]Processing articles:  14%|█▎        | 24/177 [00:57<04:35,  1.80s/it]Processing articles:  14%|█▍        | 25/177 [01:01<05:59,  2.37s/it]Processing articles:  15%|█▍        | 26/177 [01:04<06:45,  2.68s/it]Processing articles:  15%|█▌        | 27/177 [01:06<05:59,  2.40s/it]Processing articles:  16%|█▌        | 28/177 [01:10<07:01,  2.83s/it]Processing articles:  16%|█▋        | 29/177 [01:14<08:19,  3.38s/it]Processing articles:  17%|█▋        | 30/177 [01:17<07:56,  3.24s/it]Processing articles:  18%|█▊        | 31/177 [01:19<06:54,  2.84s/it]Processing articles:  18%|█▊        | 32/177 [01:22<07:16,  3.01s/it]Processing articles:  19%|█▊        | 33/177 [01:24<06:18,  2.63s/it]Processing articles:  19%|█▉        | 34/177 [01:27<06:18,  2.65s/it]Processing articles:  20%|█▉        | 35/177 [01:31<07:00,  2.96s/it]Processing articles:  20%|██        | 36/177 [01:33<06:54,  2.94s/it]Processing articles:  21%|██        | 37/177 [01:35<05:54,  2.53s/it]Processing articles:  21%|██▏       | 38/177 [01:38<06:21,  2.75s/it]Processing articles:  22%|██▏       | 39/177 [01:40<05:24,  2.35s/it]Processing articles:  23%|██▎       | 40/177 [01:41<04:31,  1.98s/it]Processing articles:  23%|██▎       | 41/177 [01:43<04:27,  1.97s/it]Processing articles:  24%|██▎       | 42/177 [01:45<04:53,  2.17s/it]Processing articles:  24%|██▍       | 43/177 [01:49<05:33,  2.49s/it]Processing articles:  25%|██▍       | 44/177 [01:51<05:44,  2.59s/it]Processing articles:  25%|██▌       | 45/177 [01:54<05:41,  2.58s/it]Processing articles:  26%|██▌       | 46/177 [01:57<05:37,  2.57s/it]Processing articles:  27%|██▋       | 47/177 [01:58<05:05,  2.35s/it]Processing articles:  27%|██▋       | 48/177 [02:01<05:27,  2.54s/it]Processing articles:  28%|██▊       | 49/177 [02:04<05:37,  2.64s/it]Processing articles:  28%|██▊       | 50/177 [02:07<05:28,  2.58s/it]Processing articles:  29%|██▉       | 51/177 [02:09<05:32,  2.64s/it]Processing articles:  29%|██▉       | 52/177 [02:12<05:23,  2.59s/it]Processing articles:  30%|██▉       | 53/177 [02:14<04:54,  2.37s/it]Processing articles:  31%|███       | 54/177 [02:16<04:46,  2.33s/it]Processing articles:  31%|███       | 55/177 [02:18<04:44,  2.33s/it]Processing articles:  32%|███▏      | 56/177 [02:20<04:04,  2.02s/it]Processing articles:  32%|███▏      | 57/177 [02:21<03:42,  1.85s/it]Processing articles:  33%|███▎      | 58/177 [02:23<03:28,  1.75s/it]Processing articles:  33%|███▎      | 59/177 [02:25<03:47,  1.93s/it]Processing articles:  34%|███▍      | 60/177 [02:27<03:42,  1.90s/it]Processing articles:  34%|███▍      | 61/177 [02:32<05:23,  2.79s/it]Processing articles:  35%|███▌      | 62/177 [02:34<05:13,  2.72s/it]Processing articles:  36%|███▌      | 63/177 [02:36<04:46,  2.51s/it]Processing articles:  36%|███▌      | 64/177 [02:38<04:18,  2.29s/it]Processing articles:  37%|███▋      | 65/177 [04:23<1:01:52, 33.15s/it]Processing articles:  37%|███▋      | 66/177 [04:24<43:34, 23.55s/it]  Processing articles:  38%|███▊      | 67/177 [04:27<31:51, 17.38s/it]Processing articles:  38%|███▊      | 68/177 [04:31<24:05, 13.26s/it]Processing articles:  39%|███▉      | 69/177 [04:33<17:48,  9.90s/it]Processing articles:  40%|███▉      | 70/177 [04:35<13:27,  7.55s/it]Processing articles:  40%|████      | 71/177 [04:57<20:51, 11.81s/it]Processing articles:  41%|████      | 72/177 [04:59<15:29,  8.85s/it]Processing articles:  41%|████      | 73/177 [05:03<13:02,  7.53s/it]Processing articles:  42%|████▏     | 74/177 [05:05<10:08,  5.91s/it]Processing articles:  42%|████▏     | 75/177 [05:08<08:36,  5.07s/it]Processing articles:  43%|████▎     | 76/177 [05:12<07:37,  4.53s/it]Processing articles:  44%|████▎     | 77/177 [05:14<06:12,  3.73s/it]Processing articles:  44%|████▍     | 78/177 [05:16<05:19,  3.23s/it]Processing articles:  45%|████▍     | 79/177 [05:18<04:47,  2.93s/it]Processing articles:  45%|████▌     | 80/177 [05:20<04:21,  2.70s/it]Processing articles:  46%|████▌     | 81/177 [05:21<03:18,  2.06s/it]Processing articles:  46%|████▋     | 82/177 [05:23<03:13,  2.04s/it]Processing articles:  47%|████▋     | 83/177 [05:26<03:54,  2.50s/it]Processing articles:  47%|████▋     | 84/177 [05:29<03:50,  2.48s/it]Processing articles:  48%|████▊     | 85/177 [05:31<03:47,  2.47s/it]Processing articles:  49%|████▊     | 86/177 [05:35<04:14,  2.80s/it]Processing articles:  49%|████▉     | 87/177 [05:39<05:01,  3.35s/it]Processing articles:  50%|████▉     | 88/177 [05:41<04:23,  2.96s/it]Processing articles:  50%|█████     | 89/177 [05:44<04:03,  2.77s/it]Processing articles:  51%|█████     | 90/177 [05:46<03:50,  2.65s/it]Processing articles:  51%|█████▏    | 91/177 [05:49<03:49,  2.67s/it]Processing articles:  52%|█████▏    | 92/177 [05:51<03:43,  2.62s/it]Processing articles:  53%|█████▎    | 93/177 [05:53<03:24,  2.43s/it]Processing articles:  53%|█████▎    | 94/177 [05:56<03:31,  2.55s/it]Processing articles:  54%|█████▎    | 95/177 [05:59<03:35,  2.63s/it]Processing articles:  54%|█████▍    | 96/177 [06:01<03:17,  2.43s/it]Processing articles:  55%|█████▍    | 97/177 [06:03<03:11,  2.39s/it]Processing articles:  55%|█████▌    | 98/177 [06:05<02:52,  2.19s/it]Processing articles:  56%|█████▌    | 99/177 [06:07<02:45,  2.12s/it]Processing articles:  56%|█████▋    | 100/177 [06:09<02:44,  2.13s/it]Processing articles:  57%|█████▋    | 101/177 [06:11<02:37,  2.07s/it]Processing articles:  58%|█████▊    | 102/177 [06:14<03:09,  2.53s/it]Processing articles:  58%|█████▊    | 103/177 [06:17<03:05,  2.51s/it]Processing articles:  59%|█████▉    | 104/177 [06:20<03:11,  2.63s/it]Processing articles:  59%|█████▉    | 105/177 [06:22<02:53,  2.41s/it]Processing articles:  60%|█████▉    | 106/177 [06:23<02:35,  2.18s/it]Processing articles:  60%|██████    | 107/177 [06:25<02:23,  2.05s/it]Processing articles:  61%|██████    | 108/177 [06:27<02:10,  1.89s/it]Processing articles:  62%|██████▏   | 109/177 [06:29<02:24,  2.12s/it]Processing articles:  62%|██████▏   | 110/177 [06:30<02:01,  1.81s/it]Processing articles:  63%|██████▎   | 111/177 [06:33<02:07,  1.93s/it]Processing articles:  63%|██████▎   | 112/177 [06:35<02:16,  2.10s/it]Processing articles:  64%|██████▍   | 113/177 [06:37<02:16,  2.13s/it]Processing articles:  64%|██████▍   | 114/177 [06:40<02:15,  2.15s/it]Processing articles:  65%|██████▍   | 115/177 [06:42<02:18,  2.23s/it]Processing articles:  66%|██████▌   | 116/177 [06:45<02:27,  2.42s/it]Processing articles:  66%|██████▌   | 117/177 [06:47<02:25,  2.43s/it]Processing articles:  67%|██████▋   | 118/177 [06:50<02:21,  2.41s/it]Processing articles:  67%|██████▋   | 119/177 [06:52<02:27,  2.54s/it]Processing articles:  68%|██████▊   | 120/177 [06:55<02:25,  2.55s/it]Processing articles:  68%|██████▊   | 121/177 [06:57<02:09,  2.32s/it]Processing articles:  69%|██████▉   | 122/177 [06:59<01:57,  2.14s/it]Processing articles:  69%|██████▉   | 123/177 [07:03<02:29,  2.77s/it]Processing articles:  70%|███████   | 124/177 [07:05<02:18,  2.61s/it]Processing articles:  71%|███████   | 125/177 [07:07<02:09,  2.48s/it]Processing articles:  71%|███████   | 126/177 [07:13<02:58,  3.51s/it]Processing articles:  72%|███████▏  | 127/177 [07:15<02:33,  3.07s/it]Processing articles:  72%|███████▏  | 128/177 [07:17<02:09,  2.63s/it]Processing articles:  73%|███████▎  | 129/177 [07:23<03:01,  3.78s/it]Processing articles:  73%|███████▎  | 130/177 [07:28<03:12,  4.09s/it]Processing articles:  74%|███████▍  | 131/177 [07:32<03:03,  3.98s/it]Processing articles:  75%|███████▍  | 132/177 [07:34<02:30,  3.34s/it]Processing articles:  75%|███████▌  | 133/177 [07:36<02:14,  3.06s/it]Processing articles:  76%|███████▌  | 134/177 [07:38<02:01,  2.84s/it]Processing articles:  76%|███████▋  | 135/177 [07:43<02:23,  3.41s/it]Processing articles:  77%|███████▋  | 136/177 [07:46<02:09,  3.16s/it]Processing articles:  77%|███████▋  | 137/177 [07:48<01:51,  2.78s/it]Processing articles:  78%|███████▊  | 138/177 [07:50<01:42,  2.62s/it]Processing articles:  79%|███████▊  | 139/177 [07:52<01:40,  2.65s/it]Processing articles:  79%|███████▉  | 140/177 [07:54<01:28,  2.38s/it]Processing articles:  80%|███████▉  | 141/177 [07:56<01:15,  2.11s/it]Processing articles:  80%|████████  | 142/177 [07:58<01:17,  2.21s/it]Processing articles:  81%|████████  | 143/177 [08:00<01:14,  2.19s/it]Processing articles:  81%|████████▏ | 144/177 [08:02<01:06,  2.01s/it]Processing articles:  82%|████████▏ | 145/177 [08:04<01:03,  1.97s/it]Processing articles:  82%|████████▏ | 146/177 [08:06<01:05,  2.12s/it]Processing articles:  83%|████████▎ | 147/177 [08:09<01:08,  2.27s/it]Processing articles:  84%|████████▎ | 148/177 [08:12<01:12,  2.51s/it]Processing articles:  84%|████████▍ | 149/177 [08:14<01:06,  2.39s/it]Processing articles:  85%|████████▍ | 150/177 [08:15<00:55,  2.05s/it]Processing articles:  85%|████████▌ | 151/177 [09:32<10:36, 24.48s/it]Processing articles:  86%|████████▌ | 152/177 [09:35<07:29, 17.98s/it]Processing articles:  86%|████████▋ | 153/177 [09:38<05:27, 13.63s/it]Processing articles:  87%|████████▋ | 154/177 [09:41<03:55, 10.23s/it]Processing articles:  88%|████████▊ | 155/177 [09:44<02:59,  8.18s/it]Processing articles:  88%|████████▊ | 156/177 [09:48<02:26,  6.98s/it]Processing articles:  89%|████████▊ | 157/177 [09:51<01:54,  5.71s/it]Processing articles:  89%|████████▉ | 158/177 [09:53<01:26,  4.57s/it]Processing articles:  90%|████████▉ | 159/177 [09:56<01:13,  4.07s/it]Processing articles:  90%|█████████ | 160/177 [10:00<01:08,  4.02s/it]Processing articles:  91%|█████████ | 161/177 [10:02<00:56,  3.56s/it]Processing articles:  92%|█████████▏| 162/177 [10:04<00:47,  3.15s/it]Processing articles:  92%|█████████▏| 163/177 [10:07<00:41,  2.98s/it]Processing articles:  93%|█████████▎| 164/177 [10:09<00:34,  2.64s/it]Processing articles:  93%|█████████▎| 165/177 [10:11<00:30,  2.52s/it]Processing articles:  94%|█████████▍| 166/177 [10:14<00:29,  2.70s/it]Processing articles:  94%|█████████▍| 167/177 [10:17<00:25,  2.59s/it]Processing articles:  95%|█████████▍| 168/177 [10:19<00:24,  2.67s/it]Processing articles:  95%|█████████▌| 169/177 [10:22<00:20,  2.62s/it]Processing articles:  96%|█████████▌| 170/177 [10:26<00:20,  2.94s/it]Processing articles:  97%|█████████▋| 171/177 [10:28<00:16,  2.82s/it]Processing articles:  97%|█████████▋| 172/177 [10:30<00:13,  2.66s/it]Processing articles:  98%|█████████▊| 173/177 [10:32<00:09,  2.47s/it]Processing articles:  98%|█████████▊| 174/177 [10:36<00:07,  2.65s/it]Processing articles:  99%|█████████▉| 175/177 [10:39<00:05,  2.82s/it]Processing articles:  99%|█████████▉| 176/177 [10:42<00:02,  2.85s/it]Processing articles: 100%|██████████| 177/177 [10:44<00:00,  2.77s/it]Processing articles: 100%|██████████| 177/177 [10:44<00:00,  3.64s/it]
+  [WARN] 1-14823-1-1: JSON parse error (attempt 1): Unterminated string starting at: line 1 column 19088 (char 19087)
+  Response was: {"items": [{"actor_id": "1-14823-1-1-0", "l1_value_id": "42", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_value_id": "45", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_val...
+  [WARN] 1-14823-1-1: JSON parse error (attempt 2): Expecting value: line 1 column 19098 (char 19097)
+  Response was: {"items": [{"actor_id": "1-14823-1-1-0", "l1_value_id": "42", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_value_id": "45", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_val...
+  [WARN] 1-14823-1-1: JSON parse error (attempt 3): Unterminated string starting at: line 1 column 19133 (char 19132)
+  Response was: {"items": [{"actor_id": "1-14823-1-1-0", "l1_value_id": "42", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_value_id": "45", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_val...
+  [FAIL] 1-14823-1-1: All retries failed, returning empty
+  [WARN] 6-18973-1-1: JSON parse error (attempt 1): Expecting value: line 1 column 18979 (char 18978)
+  Response was: {"items": [{"actor_id": "6-18973-1-1-0", "l1_value_id": "15", "direction": "aligned"}, {"actor_id": "6-18973-1-1-0", "l1_value_id": "3", "direction": "aligned"}, {"actor_id": "6-18973-1-1-0", "l1_valu...
+  [WARN] 6-18973-1-1: JSON parse error (attempt 2): Unterminated string starting at: line 1 column 19066 (char 19065)
+  Response was: {"items": [{"actor_id": "6-18973-1-1-0", "l1_value_id": "15", "direction": "aligned"}, {"actor_id": "6-18973-1-1-0", "l1_value_id": "3", "direction": "aligned"}, {"actor_id": "6-18973-1-1-0", "l1_valu...
+
+Saved Task-1a predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1a.json
+Saved Task-1b predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1b.json
+
+Stats:
+  Articles processed: 177
+  Task-1a predictions: 1568 (avg 8.9 per article)
+  Task-1b predictions: 2105 (avg 11.9 per article)
+
+============================================================
+RUNNING EVALUATION ON DEV SET
+============================================================
+
+Task-1a (Level-2, no direction):
+  Micro F1: 0.6270
+  Macro F1: 0.4367
+  Precision: 0.6856
+  Recall: 0.5776
+
+Task-1b (Level-1 + direction):
+  Micro F1: 0.5014
+  Macro F1: 0.2771
+  Precision: 0.5354
+  Recall: 0.4715
+  Direction Reverse Rate: 0.0360 (80/2222)
+[2026-08-13T20:14:30+08:00] e1_empty_refetch attempt 1/10
+Mode: DEV (will evaluate against gold labels)
+Loaded 177 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Loaded cache with 175 processed articles
+Processing articles:   0%|          | 0/177 [00:00<?, ?it/s]Processing articles:  37%|███▋      | 65/177 [01:49<03:08,  1.68s/it]Processing articles:  46%|████▌     | 81/177 [01:50<02:00,  1.26s/it]Processing articles: 100%|██████████| 177/177 [01:50<00:00,  1.61it/s]
+  [WARN] 1-14823-1-1: JSON parse error (attempt 1): Expecting value: line 1 column 19095 (char 19094)
+  Response was: {"items": [{"actor_id": "1-14823-1-1-0", "l1_value_id": "42", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_value_id": "45", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_val...
+  [WARN] 1-14823-1-1: JSON parse error (attempt 2): Expecting value: line 1 column 19163 (char 19162)
+  Response was: {"items": [{"actor_id": "1-14823-1-1-0", "l1_value_id": "42", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_value_id": "45", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_val...
+  [WARN] 1-14823-1-1: JSON parse error (attempt 3): Expecting property name enclosed in double quotes: line 1 column 19106 (char 19105)
+  Response was: {"items": [{"actor_id": "1-14823-1-1-0", "l1_value_id": "42", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_value_id": "45", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_val...
+  [FAIL] 1-14823-1-1: All retries failed, returning empty
+
+Saved Task-1a predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1a.json
+Saved Task-1b predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1b.json
+
+Stats:
+  Articles processed: 177
+  Task-1a predictions: 1568 (avg 8.9 per article)
+  Task-1b predictions: 2105 (avg 11.9 per article)
+
+============================================================
+RUNNING EVALUATION ON DEV SET
+============================================================
+
+Task-1a (Level-2, no direction):
+  Micro F1: 0.6270
+  Macro F1: 0.4367
+  Precision: 0.6856
+  Recall: 0.5776
+
+Task-1b (Level-1 + direction):
+  Micro F1: 0.5014
+  Macro F1: 0.2771
+  Precision: 0.5354
+  Recall: 0.4715
+  Direction Reverse Rate: 0.0360 (80/2222)
+[2026-08-13T20:17:30+08:00] e1 attempt 1/20
+Mode: DEV (will evaluate against gold labels)
+Loaded 177 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Loaded cache with 177 processed articles
+Processing articles:   0%|          | 0/177 [00:00<?, ?it/s]Processing articles: 100%|██████████| 177/177 [00:00<00:00, 61476.63it/s]
+
+Saved Task-1a predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1a.json
+Saved Task-1b predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1b.json
+
+Stats:
+  Articles processed: 177
+  Task-1a predictions: 1568 (avg 8.9 per article)
+  Task-1b predictions: 2105 (avg 11.9 per article)
+
+============================================================
+RUNNING EVALUATION ON DEV SET
+============================================================
+
+Task-1a (Level-2, no direction):
+  Micro F1: 0.6270
+  Macro F1: 0.4367
+  Precision: 0.6856
+  Recall: 0.5776
+
+Task-1b (Level-1 + direction):
+  Micro F1: 0.5014
+  Macro F1: 0.2771
+  Precision: 0.5354
+  Recall: 0.4715
+  Direction Reverse Rate: 0.0360 (80/2222)
+[2026-08-13T20:17:31+08:00] e1_empty_refetch attempt 1/10
+Mode: DEV (will evaluate against gold labels)
+Loaded 177 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Loaded cache with 175 processed articles
+Processing articles:   0%|          | 0/177 [00:00<?, ?it/s]Processing articles:  37%|███▋      | 65/177 [01:10<02:01,  1.09s/it]Processing articles:  46%|████▌     | 81/177 [01:11<01:18,  1.22it/s]Processing articles: 100%|██████████| 177/177 [01:11<00:00,  2.47it/s]
+  [WARN] 1-14823-1-1: JSON parse error (attempt 1): Expecting value: line 1 column 19158 (char 19157)
+  Response was: {"items": [{"actor_id": "1-14823-1-1-0", "l1_value_id": "42", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_value_id": "45", "direction": "aligned"}, {"actor_id": "1-14823-1-1-0", "l1_val...
+
+Saved Task-1a predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1a.json
+Saved Task-1b predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1b.json
+
+Stats:
+  Articles processed: 177
+  Task-1a predictions: 1648 (avg 9.3 per article)
+  Task-1b predictions: 2338 (avg 13.2 per article)
+
+============================================================
+RUNNING EVALUATION ON DEV SET
+============================================================
+
+Task-1a (Level-2, no direction):
+  Micro F1: 0.6207
+  Macro F1: 0.4258
+  Precision: 0.6608
+  Recall: 0.5852
+
+Task-1b (Level-1 + direction):
+  Micro F1: 0.4831
+  Macro F1: 0.2652
+  Precision: 0.4885
+  Recall: 0.4778
+  Direction Reverse Rate: 0.0378 (84/2222)
+[2026-08-13T20:42:20+08:00] e1 attempt 1/20
+Mode: DEV (will evaluate against gold labels)
+Loaded 177 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Loaded cache with 177 processed articles
+Processing articles:   0%|          | 0/177 [00:00<?, ?it/s]Processing articles: 100%|██████████| 177/177 [00:00<00:00, 70122.96it/s]
+
+Saved Task-1a predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1a.json
+Saved Task-1b predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1b.json
+
+Stats:
+  Articles processed: 177
+  Task-1a predictions: 1648 (avg 9.3 per article)
+  Task-1b predictions: 2338 (avg 13.2 per article)
+
+============================================================
+RUNNING EVALUATION ON DEV SET
+============================================================
+
+Task-1a (Level-2, no direction):
+  Micro F1: 0.6207
+  Macro F1: 0.4258
+  Precision: 0.6608
+  Recall: 0.5852
+
+Task-1b (Level-1 + direction):
+  Micro F1: 0.4831
+  Macro F1: 0.2652
+  Precision: 0.4885
+  Recall: 0.4778
+  Direction Reverse Rate: 0.0378 (84/2222)
+[2026-08-13T20:42:21+08:00] e1_empty_refetch attempt 1/10
+Mode: DEV (will evaluate against gold labels)
+Loaded 177 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Loaded cache with 176 processed articles
+Processing articles:   0%|          | 0/177 [00:00<?, ?it/s]Processing articles:  46%|████▌     | 81/177 [00:01<00:01, 59.63it/s]Processing articles: 100%|██████████| 177/177 [00:01<00:00, 130.08it/s]
+
+Saved Task-1a predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1a.json
+Saved Task-1b predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_195011_nonthinking_e1/pred_task1b.json
+
+Stats:
+  Articles processed: 177
+  Task-1a predictions: 1648 (avg 9.3 per article)
+  Task-1b predictions: 2338 (avg 13.2 per article)
+
+============================================================
+RUNNING EVALUATION ON DEV SET
+============================================================
+
+Task-1a (Level-2, no direction):
+  Micro F1: 0.6207
+  Macro F1: 0.4258
+  Precision: 0.6608
+  Recall: 0.5852
+
+Task-1b (Level-1 + direction):
+  Micro F1: 0.4831
+  Macro F1: 0.2652
+  Precision: 0.4885
+  Recall: 0.4778
+  Direction Reverse Rate: 0.0378 (84/2222)

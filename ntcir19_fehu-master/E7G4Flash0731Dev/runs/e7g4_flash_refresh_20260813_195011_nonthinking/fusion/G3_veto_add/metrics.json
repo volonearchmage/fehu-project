@@ -1,0 +1,27 @@
+{
+  "cell": "G3_veto_add",
+  "task1b": {
+    "micro_f1": 0.5196078431372549,
+    "macro_f1": 0.33706860663001414,
+    "micro_precision": 0.45894804361770364,
+    "micro_recall": 0.598744769874477,
+    "support_instances": 459,
+    "support_gold_labels": 2390,
+    "support_pred_labels": 3118
+  },
+  "task1a": {
+    "micro_f1": 0.6609294320137694,
+    "macro_f1": 0.5027669850714667,
+    "micro_precision": 0.6092475067996374,
+    "micro_recall": 0.722192369693713,
+    "support_instances": 459,
+    "support_gold_labels": 1861,
+    "support_pred_labels": 2206
+  },
+  "drr": {
+    "drr": 0.052655265526552655,
+    "reversals": 117,
+    "denominator": 2222,
+    "ambiguous_gold": 84
+  }
+}

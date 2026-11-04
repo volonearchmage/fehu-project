@@ -1,0 +1,172 @@
+[
+  {
+    "guid": "1-15231-2-1",
+    "article_human_values": [
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "22",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "26",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "27",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "30",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "40",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "42",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-0",
+        "l1_value": "45",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "22",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "25",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "26",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "27",
+        "direction": "0"
+      },
+      {
+        "actor": "1-15231-2-1-1",
+        "l1_value": "40",
+        "direction": "0"
+      }
+    ]
+  },
+  {
+    "guid": "0-4495-1-1",
+    "article_human_values": [
+      {
+        "actor": "0-4495-1-1-0",
+        "l1_value": "0",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-0",
+        "l1_value": "5",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-0",
+        "l1_value": "37",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-0",
+        "l1_value": "42",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-0",
+        "l1_value": "44",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-0",
+        "l1_value": "45",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-0",
+        "l1_value": "27",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "3",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "5",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "10",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "12",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "19",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "21",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "28",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "42",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-1",
+        "l1_value": "44",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-2",
+        "l1_value": "42",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-2",
+        "l1_value": "45",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-2",
+        "l1_value": "50",
+        "direction": "1"
+      },
+      {
+        "actor": "0-4495-1-1-2",
+        "l1_value": "27",
+        "direction": "1"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+DeepSeek V4 Flash inference mode is explicitly pinned to non-thinking in every Flash call. This prevents the 2026 API default (thinking enabled) from changing the experimental condition and preserves temperature/max-token semantics.

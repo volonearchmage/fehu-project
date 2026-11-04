@@ -1,0 +1,27 @@
+{
+  "cell": "G5_veto_nogate",
+  "task1b": {
+    "micro_f1": 0.5383620689655172,
+    "macro_f1": 0.32623825896584513,
+    "micro_precision": 0.5551111111111111,
+    "micro_recall": 0.5225941422594143,
+    "support_instances": 458,
+    "support_gold_labels": 2390,
+    "support_pred_labels": 2250
+  },
+  "task1a": {
+    "micro_f1": 0.6595804195804195,
+    "macro_f1": 0.48840461135926666,
+    "micro_precision": 0.6878646441073513,
+    "micro_recall": 0.6335303600214938,
+    "support_instances": 458,
+    "support_gold_labels": 1861,
+    "support_pred_labels": 1714
+  },
+  "drr": {
+    "drr": 0.046804680468046804,
+    "reversals": 104,
+    "denominator": 2222,
+    "ambiguous_gold": 84
+  }
+}

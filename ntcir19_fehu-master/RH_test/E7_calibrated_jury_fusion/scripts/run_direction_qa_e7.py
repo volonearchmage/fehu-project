@@ -74,7 +74,8 @@ def qa_call(client, article, actor_name, value_name, tag):
                            "content": qa_user_prompt(article, actor_name,
                                                      value_name)}],
                 temperature=TEMPERATURE, max_tokens=MAX_TOKENS,
-                response_format={"type": "json_object"}, timeout=TIMEOUT)
+                response_format={"type": "json_object"}, timeout=TIMEOUT,
+                extra_body={"thinking": {"type": "disabled"}})
             content = r.choices[0].message.content.strip()
             d = json.loads(content).get("direction")
             if d not in ("aligned", "contradictory"):
@@ -94,6 +95,12 @@ def main():
     ap.add_argument("--articles", type=Path, default=ARTICLES,
                     help="articles file matching the fused run "
                          "(default: dev; pass the test file for test runs)")
+    ap.add_argument(
+        "--fail_on_qa_error",
+        action="store_true",
+        help=("leave only successful decisions in the cache and fail before "
+              "writing predictions when any QA request is exhausted"),
+    )
     args = ap.parse_args()
 
     out = args.out_dir
@@ -158,7 +165,8 @@ def main():
                 raise FusionError(f"actor {key} not in articles")
             qa_dir, err = qa_call(client, art_by_guid[guid], actor_name,
                                   id_to_name[val], ckey)
-            cache[ckey] = qa_dir if qa_dir else "FAILED"
+            if qa_dir is not None:
+                cache[ckey] = qa_dir
             cache_path.write_text(json.dumps(cache))
         if err:
             n_fail += 1
@@ -176,6 +184,12 @@ def main():
             n_keep += 1
             decisions.append({"guid": guid, "actor_id": actor_id,
                               "label": lab, "qa": qa_dir, "action": "keep"})
+
+    if args.fail_on_qa_error and n_fail:
+        raise FusionError(
+            f"{n_fail} direction-QA request(s) exhausted retries; "
+            "successful decisions were cached, so rerun the same command"
+        )
 
     l1_to_l2 = load_l1_to_l2(HV_DIR)
     fused = {k: v for k, v in fused.items() if v}

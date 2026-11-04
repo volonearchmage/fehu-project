@@ -1,0 +1,18 @@
+{
+  "experiment": "E1_fewshot_repair",
+  "base_pipeline": "liu_method/run_pipeline.py (frozen, copied)",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.1,
+  "max_output_tokens": 8000,
+  "prompt_variant": "baseline",
+  "mode": "dev",
+  "limit": 1,
+  "deltas": [
+    "D1 deterministic multi-label demos",
+    "D2 full demo content, no 4-label cap",
+    "D3 numeric label caps removed",
+    "D4 outputs isolated under RH_test/E1_fewshot_repair",
+    "D5 base-dir discovery from new location"
+  ]
+}

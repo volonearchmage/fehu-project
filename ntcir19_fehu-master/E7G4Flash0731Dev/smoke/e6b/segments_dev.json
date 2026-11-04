@@ -1,0 +1,116 @@
+{
+  "experiment": "E6_e3a_self_segmentation",
+  "stage": "0_self_segmentation",
+  "mode": "dev",
+  "segmenter_model": "deepseek-v4-flash",
+  "temperature": 0.1,
+  "max_output_tokens": 4000,
+  "taxonomy_blind": true,
+  "unit_distribution": {
+    "n_articles": 3,
+    "units_min": 3,
+    "units_median": 8,
+    "units_max": 12,
+    "units_mean": 7.67
+  },
+  "segments": {
+    "1-15231-2-1": [
+      {
+        "id": "0",
+        "subevent": "A mortar round landed in a market in Shareen Tagab district, Faryab province, at around 11:00am local time on Thursday morning, killing at least four civilians and wounding 10 others."
+      },
+      {
+        "id": "1",
+        "subevent": "Abdul Karim Yourish, a spokesman for the provincial police chief, said the mortar was fired by the Taliban to target security forces, but all the victims were civilians shopping at the market."
+      },
+      {
+        "id": "2",
+        "subevent": "The Taliban has not commented on the attack."
+      }
+    ],
+    "0-4495-1-1": [
+      {
+        "id": "0",
+        "subevent": "Tunisia Youth Impact is using cooking contests to encourage young Tunisian women in rural villages to vote in the presidential election, aiming to combat low turnout."
+      },
+      {
+        "id": "1",
+        "subevent": "On Saturday, October 12, a Voticook cooking contest was held in the rural town of Echamine, the day before the country's presidential runoff election."
+      },
+      {
+        "id": "2",
+        "subevent": "The contest simulated real voting conditions, with volunteers replicating electoral procedures and replacing the usual ink with a water and shampoo mixture."
+      },
+      {
+        "id": "3",
+        "subevent": "The hostess, Hinda Jlass, prepared couscous and said the event was a way for women to get together, adding that she planned to vote on Sunday for only the second time in her life."
+      },
+      {
+        "id": "4",
+        "subevent": "At noon, seven other competitors joined Jlass to present their dishes to about fifty electors, who tasted them before voting."
+      },
+      {
+        "id": "5",
+        "subevent": "The electors used the same voting procedure as the real election, with volunteers guiding them; members of the ISIE and EU observer Stefan Ziegler attended, and Ziegler praised the initiative as good for Tunisian democracy."
+      },
+      {
+        "id": "6",
+        "subevent": "After the vote, the ballots were counted and volunteers pointed out common mistakes that could invalidate a vote, such as a signature instead of a cross."
+      },
+      {
+        "id": "7",
+        "subevent": "Najwa Jlass, the hostess's sister, was declared the winner and said she was happy to see the community come together and would vote 'for real' the next day."
+      }
+    ],
+    "6-18979-2-t": [
+      {
+        "id": "0",
+        "subevent": "Crime adapts to societal changes, evolving from individual violations to a differentiated structure, as exemplified by present-day organized crime's flexibility and the Sicilian Cosa Nostra's adaptation to economic change."
+      },
+      {
+        "id": "1",
+        "subevent": "Organized crime has become a series of cross-border networks and alliances, including links between the underworld and legitimate institutions."
+      },
+      {
+        "id": "2",
+        "subevent": "Drug trafficking corrupts and kills police and judges, drives users to crime, and launders proceeds into the legal economy, intertwining common, economic, and organized crime."
+      },
+      {
+        "id": "3",
+        "subevent": "Organized criminals, unlike legitimate businessmen, seek a power monopoly and use any means for profit without regard for others' rights."
+      },
+      {
+        "id": "4",
+        "subevent": "Common criminality and organized crime intersect, but organized crime is distinguished by continuity, hierarchy, diverse skills, and cooperation with peripheral individuals."
+      },
+      {
+        "id": "5",
+        "subevent": "Organized crime develops a mythology and reputation of invincibility that affiliates exploit to intimidate, and this reputation shapes both mafiosi's self-perception and public perception, with mafia hits signaling inner conflicts."
+      },
+      {
+        "id": "6",
+        "subevent": "Defining organized crime is difficult, but informants' confessions have helped document its reality beyond myth."
+      },
+      {
+        "id": "7",
+        "subevent": "Nigerian organized crime groups are less formal, flexible, and bonded by family/tribal loyalties, and they have been described as having three structures: pyramidal hierarchies, clan-type networks, and independent cells."
+      },
+      {
+        "id": "8",
+        "subevent": "According to the Department of Justice, Nigerian criminal groups are globally pervasive and have exploited institutions in many countries, with the United States and Britain as primary targets for heroin trafficking and scams."
+      },
+      {
+        "id": "9",
+        "subevent": "In 1999, U.S. victims reported hundreds of millions of dollars in losses to Nigerian advance-fee frauds, known as '419 scams.'"
+      },
+      {
+        "id": "10",
+        "subevent": "In 1997, Boston authorities arrested a ring of Nigerian check thieves who had stolen over two billion dollars from Boston-area banks, law firms, and a brokerage house."
+      },
+      {
+        "id": "11",
+        "subevent": "The proceeds from Nigerian criminal activities are used to finance narcotics smuggling and distribution operations."
+      }
+    ]
+  }
+}

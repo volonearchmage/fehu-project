@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "run_id": "e7g4_flash_refresh_20260813_195011_nonthinking",
+  "dev_articles": 177,
+  "model": "deepseek-v4-flash",
+  "thinking": "disabled",
+  "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+  "member_caches": {
+    "E1": {"records": 177, "empty": 1, "confirmed_empty": ["2-34752-6-1"]},
+    "Liu": {"records": 177, "empty": 0},
+    "E6": {"records": 177, "empty": 0},
+    "E6b": {"records": 177, "empty": 0},
+    "E6c": {"records": 177, "empty": 0}
+  },
+  "segmentation": {
+    "E6": {"records": 177, "min": 2, "median": 15, "max": 30, "mean": 15.83},
+    "E6b": {"records": 177, "min": 2, "median": 10, "max": 30, "mean": 11.11}
+  },
+  "g4_direction_qa": {"flagged": 261, "flipped": 84, "kept": 177, "failed": 0},
+  "prediction_files_hashed": 22,
+  "unknown_actor_ids": 0,
+  "g4_pred_task1b_sha256": "634d2cc0b13f176c5b3dc81f4747146b3d60be307f15c2c5a5a246dee269a610",
+  "bootstrap_sha256": "b6873befc277d280c5fabba2ae6189ed5362cd123c75517f4f5a3dbbe05d2f89"
+}

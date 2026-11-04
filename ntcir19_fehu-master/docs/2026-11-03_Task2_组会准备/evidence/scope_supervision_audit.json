@@ -1,0 +1,1828 @@
+{
+  "status": "Data audit only, no model results",
+  "date": "2026-11-03",
+  "file_sha256": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "dataset/dev/dev_event_base.json": "2df8cd3f034a9001f7890e8b3cffa503c11a0fd5adf958691c0ebb7a05f3beb2",
+    "dataset/test/test_subevent_event_base.json": "65c3e995bf1077b70ec19f0d4bf3d25654e7446d51a785e639dfaad4071b48ee",
+    "dataset/gold_labels/train/train_human_values.json": "aece2e319c7ffb121403f376d46de47254c99b37bb85d69c13a057e653a7c030",
+    "dataset/gold_labels/dev/dev_human_values.json": "cddb5bd36ed087d5b4a4bc538b29b324829fb34e7e43e2d153668216b4a5ca2d"
+  },
+  "normalization": "collapse whitespace and casefold; punctuation is preserved",
+  "profiles": {
+    "train": {
+      "records": 1228,
+      "unique_normalized_bodies": 912,
+      "repeated_body_groups": 171,
+      "body_or_title_components": 848,
+      "candidate_actor_subevent_tuples": 30543,
+      "all_108_label_cells": 3298644,
+      "directed_subevent_positives": 18665,
+      "positive_density_all_cells": 0.005658385688179749,
+      "positives_contained_in_same_actor_article_gold": 18665,
+      "containment_fraction": 1.0,
+      "containment_violations": [],
+      "article_directed_labels": 16905,
+      "subevent_union_distinct_labels": 12788,
+      "article_labels_without_subevent_label": 4117,
+      "article_only_fraction": 0.24353741496598638,
+      "gold_article_label_cross_subevent_cells": 157716,
+      "gold_article_conditional_density": 0.11834563392426894,
+      "positive_subevents_per_article_actor_label_histogram": {
+        "1": 9098,
+        "2": 2424,
+        "3": 736,
+        "4": 309,
+        "5": 121,
+        "6": 62,
+        "7": 23,
+        "8": 6,
+        "9": 4,
+        "10": 3,
+        "11": 1,
+        "12": 1
+      },
+      "same_subevent_actor_value_both_directions": 12,
+      "explanations_nonempty": 18665,
+      "explanations_unique": 18422,
+      "explanation_word_median": 27,
+      "explanation_word_p95": 36,
+      "observed_directed_classes": 105,
+      "directed_classes_with_lt20_positives": 30,
+      "unidentified_empty_gold_rows": 5,
+      "input_subevents_without_addressed_gold_row": 134
+    },
+    "dev": {
+      "records": 177,
+      "unique_normalized_bodies": 162,
+      "repeated_body_groups": 14,
+      "body_or_title_components": 160,
+      "candidate_actor_subevent_tuples": 3998,
+      "all_108_label_cells": 431784,
+      "directed_subevent_positives": 2768,
+      "positive_density_all_cells": 0.006410612713764289,
+      "positives_contained_in_same_actor_article_gold": 2768,
+      "containment_fraction": 1.0,
+      "containment_violations": [],
+      "article_directed_labels": 2390,
+      "subevent_union_distinct_labels": 1799,
+      "article_labels_without_subevent_label": 591,
+      "article_only_fraction": 0.24728033472803349,
+      "gold_article_label_cross_subevent_cells": 21948,
+      "gold_article_conditional_density": 0.1261162748314197,
+      "positive_subevents_per_article_actor_label_histogram": {
+        "1": 1210,
+        "2": 363,
+        "3": 134,
+        "4": 55,
+        "5": 20,
+        "6": 12,
+        "7": 3,
+        "8": 1,
+        "9": 1
+      },
+      "same_subevent_actor_value_both_directions": 0,
+      "explanations_nonempty": 2768,
+      "explanations_unique": 2737,
+      "explanation_word_median": 26.0,
+      "explanation_word_p95": 36,
+      "observed_directed_classes": 90,
+      "directed_classes_with_lt20_positives": 53,
+      "unidentified_empty_gold_rows": 0,
+      "input_subevents_without_addressed_gold_row": 22
+    }
+  },
+  "overlap": {
+    "train__dev": {
+      "matched_normalized_body_groups": 73,
+      "matched_second_records": 86,
+      "second_record_count": 177,
+      "matched_second_fraction": 0.4858757062146893,
+      "raw_exact_matched_second_records": 81,
+      "matches": [
+        {
+          "second_guid": "0-4495-1-1",
+          "first_guids": [
+            "0-4495-1-2"
+          ],
+          "normalized_body_sha256": "da8a0f9140f50c89d59572e0690fbb6307c4c3b19bd6936c63fb4df8f7b92edd",
+          "title": "Tunisia: How a cooking contest has brought rural voters to the ballot box"
+        },
+        {
+          "second_guid": "13-wiki-img/24416-1/24416-1-1",
+          "first_guids": [
+            "11-22500-2-1",
+            "13-23849-2-1",
+            "13-24934-3-1",
+            "13-wiki-img/25030-1/25030-1-1",
+            "13-wiki-img/25132-1/25132-1-1",
+            "9-21598-10-1"
+          ],
+          "normalized_body_sha256": "accf47fdc13c0721aa9e5ddf4314eaaf2c6eae4c4a6e0d88bd1abf8c5ee476e6",
+          "title": "Inter-city traffic movement to be suspended during Tsagaan Sar"
+        },
+        {
+          "second_guid": "0-4931-1-4",
+          "first_guids": [
+            "0-4931-1-2",
+            "0-4931-1-3"
+          ],
+          "normalized_body_sha256": "0480cb883a0ba17b398bb1922b90773faba66472bac66650befa9b54294e8ab6",
+          "title": "Clutha crash: Inquiry says pilot 'took a chance' to ignore fuel warnings"
+        },
+        {
+          "second_guid": "33-2542-7-1",
+          "first_guids": [
+            "33-2542-7-2"
+          ],
+          "normalized_body_sha256": "5ac26f12d026a70505451a5e70f2f136a8bb12ae11e7499c8e88e02bc24fcd4b",
+          "title": "Marines Took Out Iranian Drone for the Cost of a Tank of Gas"
+        },
+        {
+          "second_guid": "1-15230-2-1",
+          "first_guids": [
+            "1-15230-2-2",
+            "1-15230-2-3"
+          ],
+          "normalized_body_sha256": "8f661967dac976e89d0d0cacd2a2afced521b25a9afd31c73fae3b64b75add61",
+          "title": "Successes and challenges in Afghan girls' education"
+        },
+        {
+          "second_guid": "6-19726-1-1",
+          "first_guids": [
+            "1-15651-1-1",
+            "6-18716-5-1"
+          ],
+          "normalized_body_sha256": "1063d396ded46eebaf8e57a41006025e089dfccf22d1720d4060ad305208cf65",
+          "title": "Exclusive: Canada gets Biomerieux formula for free to produce virus testing chemicals"
+        },
+        {
+          "second_guid": "1-14903-2-2",
+          "first_guids": [
+            "1-14903-2-1"
+          ],
+          "normalized_body_sha256": "e1a99286c4883a1ff53d4c0d6e3088e7c533c04221ea42705556fbed033c66d2",
+          "title": "Chile protesters: ‘The rich and powerful threw the first stone’"
+        },
+        {
+          "second_guid": "7-36661-5-2",
+          "first_guids": [
+            "7-36661-5-1"
+          ],
+          "normalized_body_sha256": "f6fd33340ae615257c20ad3f4df6e2ab104f5f4e48a687e5b642bd66058dc75b",
+          "title": "Devices for rapid diagnosis of coronavirus under development"
+        },
+        {
+          "second_guid": "0-4882-1-2",
+          "first_guids": [
+            "0-4882-1-1"
+          ],
+          "normalized_body_sha256": "93e333a220f281df1c941efe55076698275e7851de8df96f58b54b84e327c00c",
+          "title": "X-37B breaks record, lands after 780 days in orbit"
+        },
+        {
+          "second_guid": "1-15178-2-1",
+          "first_guids": [
+            "1-16103-3-3",
+            "12-7627-2-1",
+            "12-7895-2-1",
+            "3-16902-1-t",
+            "3-17009-3-t",
+            "6-19575-2-1",
+            "7-37228-3-1",
+            "9-20579-2-1",
+            "9-20723-3-1",
+            "9-20917-2-1",
+            "9-21003-2-1",
+            "9-21141-2-1"
+          ],
+          "normalized_body_sha256": "ea64c6d258213e9bfd173708362695b0dd95aeebc55e9e7e62f5a5d6443c1d3e",
+          "title": "Portugal’s Catholic bishops suspend public Masses amid rising COVID-19 cases"
+        },
+        {
+          "second_guid": "1-14989-2-3",
+          "first_guids": [
+            "1-14989-2-1",
+            "1-14989-2-2"
+          ],
+          "normalized_body_sha256": "8f2eb995b39200eae6247e8ddd47aa1457721e31a6885d1410105906a1beff9a",
+          "title": "Study Shows O. Megalodon Was The Largest Shark To Ever Swim In Our Planet’s Oceans"
+        },
+        {
+          "second_guid": "10-6887-1-2",
+          "first_guids": [
+            "10-6887-1-1"
+          ],
+          "normalized_body_sha256": "558b8313f59bf698c108d95dfd83c0d26e34d7afdb8ceb5c59a7c2002d71b82f",
+          "title": "Climate activists invade BlackRock office in Paris"
+        },
+        {
+          "second_guid": "0-4813-2",
+          "first_guids": [
+            "0-4813-1",
+            "0-4813-3"
+          ],
+          "normalized_body_sha256": "1b92a4a19263fafa228a6de0e769d9942af208f28c9dc4bd75058944c3e4c7bd",
+          "title": "Boeing 737 Max Lion Air crash caused by series of failures"
+        },
+        {
+          "second_guid": "1-16084-3-1",
+          "first_guids": [
+            "1-16084-3-2",
+            "1-16084-3-3"
+          ],
+          "normalized_body_sha256": "d376a3eefd1858cfba94733e05641922e579f5516c82e682466491df871bb5da",
+          "title": "Coronavirus doesn't respect barbed wire': concern mounts for Greek camps"
+        },
+        {
+          "second_guid": "4-35568-7-1",
+          "first_guids": [
+            "4-35568-7-2"
+          ],
+          "normalized_body_sha256": "2594f90f1e7397535d2522764831e030a99b11244250e2438591ad0bc7856b9a",
+          "title": "Lukashenko says troops may have helped refugees reach EU"
+        },
+        {
+          "second_guid": "0-4716-1-2",
+          "first_guids": [
+            "0-4716-1-4",
+            "0-4716-1-5"
+          ],
+          "normalized_body_sha256": "7595a606082d1513ead89c63cf543724d7a04d7f88bda90c83b0ed659882941b",
+          "title": "Chile's Struggle to Democratize the State"
+        },
+        {
+          "second_guid": "12-wiki-img/8436-1/8436-1-2",
+          "first_guids": [
+            "12-wiki-img/8436-1/8436-1-1"
+          ],
+          "normalized_body_sha256": "5a1435d352a4558e04e6a607d6c146c5b4e458af9a6ff10a30a552074b41ad75",
+          "title": "University of Manitoba uses anti-cheating software to monitor remote exams"
+        },
+        {
+          "second_guid": "7-36865-4-1",
+          "first_guids": [
+            "7-36797-1-1",
+            "7-37253-3-1"
+          ],
+          "normalized_body_sha256": "4bf88e3570cff52cb81296972f7c4db10651c5863187d8204ef21a642eb7f570",
+          "title": "International Women's Day Marked Across the World"
+        },
+        {
+          "second_guid": "9-20635-1-t",
+          "first_guids": [
+            "6-20078-1-t"
+          ],
+          "normalized_body_sha256": "24491ecde56dae1da56cf4369a7408acc3f2f72dd356ebbb4abab475dcb90e65",
+          "title": "Poll finds majority of parents prefer two-month staggered start to school year"
+        },
+        {
+          "second_guid": "2-34957-1-3",
+          "first_guids": [
+            "2-34957-1-4"
+          ],
+          "normalized_body_sha256": "0fb24855cc2a9122e9fec448774574114a36095ebd0599456840a49f7d79aa8d",
+          "title": "Pope Francis blesses pro-life bells going to Ukraine and Ecuador"
+        },
+        {
+          "second_guid": "0-4560-2-1JPG",
+          "first_guids": [
+            "0-4560-2-2JPG"
+          ],
+          "normalized_body_sha256": "631c2d9be93defb3030386bb8010057b9180eab18b39e15483dadc4a3d509a85",
+          "title": "Ecuador protests: UN calls on government to investigate deaths"
+        },
+        {
+          "second_guid": "3-16797-1-t",
+          "first_guids": [
+            "1-15121-3-t",
+            "1-15677-1-t",
+            "12-7627-1-t",
+            "6-19575-3-t"
+          ],
+          "normalized_body_sha256": "11016d964161168b332120920d90134548086266f500b4cd774d0e3be04683b5",
+          "title": "NextGenerationEU: European Commission endorses Portugal's €16.6 billion recovery and resilience plan"
+        },
+        {
+          "second_guid": "9-21751-1-2",
+          "first_guids": [
+            "9-21751-1-10",
+            "9-21751-1-11",
+            "9-21751-1-4",
+            "9-21751-1-6",
+            "9-21751-1-7",
+            "9-21751-1-8",
+            "9-21751-1-9"
+          ],
+          "normalized_body_sha256": "779979bd7ea98507cc7f9e6b95eef22637cf1806dcf2fb1727b83d80c73f99f6",
+          "title": "Ultra-Orthodox rioters clash with police as some schools flout virus lockdown"
+        },
+        {
+          "second_guid": "0-4560-1-1JPG",
+          "first_guids": [
+            "0-4560-1-2JPG"
+          ],
+          "normalized_body_sha256": "b624ae89406baf4afdbed9f8378aa627c9d25b96e7a02c06463fe3d79b121c95",
+          "title": "Ecuador court orders ex-president Correa's arrest"
+        },
+        {
+          "second_guid": "9-21751-1-3",
+          "first_guids": [
+            "9-21751-1-10",
+            "9-21751-1-11",
+            "9-21751-1-4",
+            "9-21751-1-6",
+            "9-21751-1-7",
+            "9-21751-1-8",
+            "9-21751-1-9"
+          ],
+          "normalized_body_sha256": "779979bd7ea98507cc7f9e6b95eef22637cf1806dcf2fb1727b83d80c73f99f6",
+          "title": "Ultra-Orthodox rioters clash with police as some schools flout virus lockdown"
+        },
+        {
+          "second_guid": "7-36258-7-2",
+          "first_guids": [
+            "4-35452-3-1",
+            "4-35452-3-2",
+            "4-35452-3-3",
+            "4-35452-3-4",
+            "7-36258-7-1"
+          ],
+          "normalized_body_sha256": "28870cd368ce895c9509f0ff99cb3a34cfe5476020102e027bd1c9200dc45901",
+          "title": "First batch of Covid-19 patients transferred to Singapore Expo"
+        },
+        {
+          "second_guid": "0-4857-5-2",
+          "first_guids": [
+            "0-4857-5-1"
+          ],
+          "normalized_body_sha256": "3390a4604fbebc8a51f793fb3ab1ca6345aaf3afbb0e67467bbecc15e046d68f",
+          "title": "Wildfires rage in California as residents scramble without power"
+        },
+        {
+          "second_guid": "1-14991-2-2",
+          "first_guids": [
+            "1-14991-2-1"
+          ],
+          "normalized_body_sha256": "efac078e65dd9e090ed569fe8d4adb25d56d4bf09d041e63f01d298d57009f12",
+          "title": "Some Planets May Be Better for Life Than Earth: Researchers Identify 24 Superhabitable Exoplanets"
+        },
+        {
+          "second_guid": "6-18762-1-1",
+          "first_guids": [
+            "1-15651-1-1",
+            "6-18716-5-1"
+          ],
+          "normalized_body_sha256": "1063d396ded46eebaf8e57a41006025e089dfccf22d1720d4060ad305208cf65",
+          "title": "Exclusive: Canada gets Biomerieux formula for free to produce virus testing chemicals"
+        },
+        {
+          "second_guid": "1-15195-2-1",
+          "first_guids": [
+            "3-17491-6-t"
+          ],
+          "normalized_body_sha256": "016d7411ded34139b0874357bd45b73b294cabb2df107b225f091367a2c4fbbe",
+          "title": "Exclusive: Canada gets Biomerieux formula for free to produce virus testing chemicals"
+        },
+        {
+          "second_guid": "0-4491-3-3",
+          "first_guids": [
+            "0-4491-3-2"
+          ],
+          "normalized_body_sha256": "84ccacd3f3c10c466ee47ab14c7863922ce82a488adfe1a866298a20e24b642e",
+          "title": "US sanctions squeezed Venezuela's Chavismo elites. This time, it's oil."
+        },
+        {
+          "second_guid": "0-4399-3-1",
+          "first_guids": [
+            "0-4399-3-2"
+          ],
+          "normalized_body_sha256": "941139f265f1b26f93c8ef34e4ef44d9be27fcf16280709aa9871cd1df84e925",
+          "title": "Russian Hackers Break Into 2 County Systems, Stoking Election Security Fears"
+        },
+        {
+          "second_guid": "1-16438-6-t",
+          "first_guids": [
+            "1-16356-5-t",
+            "1-16460-7-t",
+            "1-16483-6-t",
+            "1-16491-5-t",
+            "1-16539-5-t"
+          ],
+          "normalized_body_sha256": "9627650701fc71dc2b8fe1f13e1beea0f98d35e22f71a53e5904ffd64578bda6",
+          "title": "Coronavirus – guidance for anaesthesia and perioperative care providers"
+        },
+        {
+          "second_guid": "1-14823-1-1",
+          "first_guids": [
+            "1-14823-1-2",
+            "1-14823-1-3"
+          ],
+          "normalized_body_sha256": "9f4573ab96580360e0f3169441b9214185cd37f6246434e10b642150c6bdb6b6",
+          "title": "Battle lines being drawn over fishing rights"
+        },
+        {
+          "second_guid": "27-33401-5-2",
+          "first_guids": [
+            "27-33401-5-1",
+            "27-33401-5-3"
+          ],
+          "normalized_body_sha256": "fa4578d0203ecf6aaad1cdd934cb7ee6d38d92dca9699e754aca427c270f447d",
+          "title": "Pangkogabwilhan II Cek Situasi Wilayah di Poso Melalui Udara dalam Operasi Tinombala 2020"
+        },
+        {
+          "second_guid": "0-4488-1-1",
+          "first_guids": [
+            "0-4488-1-"
+          ],
+          "normalized_body_sha256": "137d44721474085080748d58e52458dbc1b8787da03d33f9058d0d8c519b4f1f",
+          "title": "How Big Is Boko Haram?"
+        },
+        {
+          "second_guid": "1-14826-2-13",
+          "first_guids": [
+            "1-14826-2-1",
+            "1-14826-2-10",
+            "1-14826-2-11",
+            "1-14826-2-12",
+            "1-14826-2-4",
+            "1-14826-2-6",
+            "1-14826-2-9"
+          ],
+          "normalized_body_sha256": "7daa40a54a878a93964d040f5340a8cc43ad99aa7acae6c6248c75b4fc37c1dc",
+          "title": "Sisolak: ‘We will never, never forget’ those killed in Oct. 1 shooting"
+        },
+        {
+          "second_guid": "0-4716-1-1",
+          "first_guids": [
+            "0-4716-1-4",
+            "0-4716-1-5"
+          ],
+          "normalized_body_sha256": "7595a606082d1513ead89c63cf543724d7a04d7f88bda90c83b0ed659882941b",
+          "title": "Chile's Struggle to Democratize the State"
+        },
+        {
+          "second_guid": "1-16475-1-1",
+          "first_guids": [
+            "1-16475-1-2"
+          ],
+          "normalized_body_sha256": "7b48e4404b401fe74c08e62f1d68cd1132d62daa2322b51471ea0043aaaa7100",
+          "title": "An ultra-rare coin celebrating Julius Caesar's assassination sells for a record $3.5 million"
+        },
+        {
+          "second_guid": "0-4450-1-2",
+          "first_guids": [
+            "0-4450-1-1"
+          ],
+          "normalized_body_sha256": "52249ad0f25c1ff158f7b035c0f008269c5e440ac183775c5abf2d4c52870ac1",
+          "title": "Italy: Death toll continues to rise after migrant ship sinks in Mediterranean"
+        },
+        {
+          "second_guid": "1-14826-2-14",
+          "first_guids": [
+            "1-14826-2-1",
+            "1-14826-2-10",
+            "1-14826-2-11",
+            "1-14826-2-12",
+            "1-14826-2-4",
+            "1-14826-2-6",
+            "1-14826-2-9"
+          ],
+          "normalized_body_sha256": "7daa40a54a878a93964d040f5340a8cc43ad99aa7acae6c6248c75b4fc37c1dc",
+          "title": "Sisolak: ‘We will never, never forget’ those killed in Oct. 1 shooting"
+        },
+        {
+          "second_guid": "0-4448-1-1",
+          "first_guids": [
+            "0-4448-1-3",
+            "0-4448-1-4",
+            "0-4448-1-5",
+            "0-4448-1-6",
+            "0-4448-1-7"
+          ],
+          "normalized_body_sha256": "41973775a68aecc8974c4ba25d0a4f1111cd6d75126adadfe21fa25d47ba4d12",
+          "title": "Accident: UAA AN12 at Lviv on Oct 4th 2019, unconscious descent below the glide path and ground impact"
+        },
+        {
+          "second_guid": "1-wiki-img/15491-1/15491-1-2",
+          "first_guids": [
+            "1-wiki-img/15491-1/15491-1-1"
+          ],
+          "normalized_body_sha256": "e198b2992098f2ea4986e5857006331b337804fb043f59ec5e23ea42f27c9815",
+          "title": "Mars to be at its 'biggest and brightest' as it aligns with Earth"
+        },
+        {
+          "second_guid": "0-4716-3-1",
+          "first_guids": [
+            "0-4716-3-2",
+            "0-4716-3-4"
+          ],
+          "normalized_body_sha256": "9968ce877ddb185273be6931ad2a3a4d3e494643b88887ad119ca08853842606",
+          "title": "Chile protests: What prompted the unrest?"
+        },
+        {
+          "second_guid": "12-wiki-img/8552-1/8552-1-1",
+          "first_guids": [
+            "11-wiki-img/22210-3/22210-3-1",
+            "13-wiki-img/23974-3/23974-3-1",
+            "14-9489-2-1",
+            "19-wiki-img/28842-1/28842-1-1",
+            "24-wiki-img/31289-2/31289-2-1",
+            "4-wiki-img/35713-3/35713-3-1"
+          ],
+          "normalized_body_sha256": "64fa79120d0bd66d026c07d8d83cb278facfc3a4ff92781a5c281974df8d8ee3",
+          "title": "Afghanistan reopens borders with Iran despite virus threat"
+        },
+        {
+          "second_guid": "2-34513-5-t",
+          "first_guids": [
+            "2-34484-7-t"
+          ],
+          "normalized_body_sha256": "04aed2707e6b523ff36390b66514e8a8a07948375c2e50ee4e9863326f1a862e",
+          "title": "Lebanon to hold day of public mourning on Friday, PM says"
+        },
+        {
+          "second_guid": "9-21834-8-1",
+          "first_guids": [
+            "9-21834-8-3"
+          ],
+          "normalized_body_sha256": "e7df4fc003dfeb68fb092c6b3376748c84cada447db556de25e71c7141dafcc6",
+          "title": "Trump, millions go to church online on National Day of Prayer amid coronavirus"
+        },
+        {
+          "second_guid": "17-28164-3-1",
+          "first_guids": [
+            "17-28164-3-2"
+          ],
+          "normalized_body_sha256": "52befb67900fd903ff441dd821e891db87b8b1d23b89691c8230cb7263cf8ca8",
+          "title": "Coyne partners with Rick Ware for two IndyCar entries"
+        },
+        {
+          "second_guid": "1-15241-6-4",
+          "first_guids": [
+            "1-15241-6-1",
+            "1-15241-6-2",
+            "1-15241-6-3"
+          ],
+          "normalized_body_sha256": "5f06b014124cfa084f1fae38708bf928a1ace6f5fd09db7e39eade1a78c16eb2",
+          "title": "Syria battles forest fires for seventh day straight"
+        },
+        {
+          "second_guid": "1-wiki-img/15302-2/15302-2-1",
+          "first_guids": [
+            "1-wiki-img/15302-2/15302-2-2"
+          ],
+          "normalized_body_sha256": "c3bfd675a6fc259e114639291f8d9ef88dccddb892c6478904cd00cc96d5f90b",
+          "title": "Armenia Violates Ceasefire By Hitting Second-Largest Azerbaijani City: 9 Civilians Killed, 34 Injured"
+        },
+        {
+          "second_guid": "6-19298-5-10",
+          "first_guids": [
+            "6-19298-5-4",
+            "6-19298-5-6",
+            "6-19298-5-8"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "5-5883-1-1",
+          "first_guids": [
+            "5-5883-1-2"
+          ],
+          "normalized_body_sha256": "c1620efbc2187697889e181bec9c8db2c78e24154772c05a32f91d929f2d4713",
+          "title": "Esa to start mini space mission series"
+        },
+        {
+          "second_guid": "3-17502-3-t",
+          "first_guids": [
+            "1-16103-3-3",
+            "12-7627-2-1",
+            "12-7895-2-1",
+            "3-16902-1-t",
+            "3-17009-3-t",
+            "6-19575-2-1",
+            "7-37228-3-1",
+            "9-20579-2-1",
+            "9-20723-3-1",
+            "9-20917-2-1",
+            "9-21003-2-1",
+            "9-21141-2-1"
+          ],
+          "normalized_body_sha256": "ea64c6d258213e9bfd173708362695b0dd95aeebc55e9e7e62f5a5d6443c1d3e",
+          "title": "Portugal’s Catholic bishops suspend public Masses amid rising COVID-19 cases"
+        },
+        {
+          "second_guid": "0-4930-1-3",
+          "first_guids": [
+            "0-4930-1-1",
+            "0-4930-1-2",
+            "0-4930-1-4"
+          ],
+          "normalized_body_sha256": "ee74525605c36961195fa17f6a6745598a4e2ab0cd3715ce2bf328bac534fb95",
+          "title": "At least three feared dead after police helicopter crashes into Glasgow pub"
+        },
+        {
+          "second_guid": "1-16165-3-2",
+          "first_guids": [
+            "1-16165-3-1",
+            "1-16165-3-3",
+            "6-19273-19-t"
+          ],
+          "normalized_body_sha256": "90e580242250052511737d95fd231999654ab5a0cd6492fbddd7829a88ed3a90",
+          "title": "Formula One’s Australian Grand Prix cancelled amid coronavirus fears"
+        },
+        {
+          "second_guid": "0-4403-2-2",
+          "first_guids": [
+            "0-4403-2-3"
+          ],
+          "normalized_body_sha256": "1d2550ff31bb8f68d7891fa799c4b19998770109ccb3f2a9645f67bcdfd0f92c",
+          "title": "Paris police killings: Minister calls for 'automatic alerts'"
+        },
+        {
+          "second_guid": "9-21110-8-2",
+          "first_guids": [
+            "9-21110-8-1"
+          ],
+          "normalized_body_sha256": "1148149ddb9f33fbea080282b57a71d37b1030cce9c70ede34a96f11fcff9606",
+          "title": "YouTube tech error censored ‘hundreds of thousands’ of LGBT videos"
+        },
+        {
+          "second_guid": "0-4912-1-1",
+          "first_guids": [
+            "0-4912-1-2"
+          ],
+          "normalized_body_sha256": "c350cd2239164f150956f8c78d4653ee896ad9990d58068428daaafc4f1791f3",
+          "title": "Dozens dead in Cameroon landslide after torrential rain"
+        },
+        {
+          "second_guid": "22-wiki-img/3685-3/3685-3-4",
+          "first_guids": [
+            "22-wiki-img/3685-3/3685-3-1",
+            "22-wiki-img/3685-3/3685-3-5"
+          ],
+          "normalized_body_sha256": "c813d46e362205ea3fe6e74234348062a1d4eff8d7907b217af0606115b94032",
+          "title": "French election: Young alt-right making waves"
+        },
+        {
+          "second_guid": "1-16497-7-t",
+          "first_guids": [
+            "1-16356-5-t",
+            "1-16460-7-t",
+            "1-16483-6-t",
+            "1-16491-5-t",
+            "1-16539-5-t"
+          ],
+          "normalized_body_sha256": "9627650701fc71dc2b8fe1f13e1beea0f98d35e22f71a53e5904ffd64578bda6",
+          "title": "Coronavirus – guidance for anaesthesia and perioperative care providers"
+        },
+        {
+          "second_guid": "7-36885-6-1",
+          "first_guids": [
+            "12-9054-4-1"
+          ],
+          "normalized_body_sha256": "bcb548970e17cb241bdda4fb9be38a57d585b03481cca27429992911b60e7506",
+          "title": "RIT Rallies: Biotechnology alumnus helping Bolivia respond to COVID-19 pandemic"
+        },
+        {
+          "second_guid": "35-5391-7-1",
+          "first_guids": [
+            "25-4148-7-t"
+          ],
+          "normalized_body_sha256": "7ea1069c3659fda33a9748e8ffff9615c9b4fcf84188924dfe7c4dd872e3f0f1",
+          "title": "ISAF's mission in Afghanistan (2001-2014) (Archived)"
+        },
+        {
+          "second_guid": "0-4495-1-4",
+          "first_guids": [
+            "0-4495-1-2"
+          ],
+          "normalized_body_sha256": "da8a0f9140f50c89d59572e0690fbb6307c4c3b19bd6936c63fb4df8f7b92edd",
+          "title": "Tunisia: How a cooking contest has brought rural voters to the ballot box"
+        },
+        {
+          "second_guid": "1-15363-1-2",
+          "first_guids": [
+            "1-15363-1-1",
+            "1-15363-1-3",
+            "1-15363-1-4"
+          ],
+          "normalized_body_sha256": "bad2bae75fe4d176c2bdae5dfcac90a9fed134892075432c5d88b0b2efbcd157",
+          "title": "Czech Kvitova powers past Siegemund to make second French Open semis"
+        },
+        {
+          "second_guid": "27-wiki-img/33289-2/33289-2-1",
+          "first_guids": [
+            "11-22500-2-1",
+            "13-23849-2-1",
+            "13-24934-3-1",
+            "13-wiki-img/25030-1/25030-1-1",
+            "13-wiki-img/25132-1/25132-1-1",
+            "9-21598-10-1"
+          ],
+          "normalized_body_sha256": "accf47fdc13c0721aa9e5ddf4314eaaf2c6eae4c4a6e0d88bd1abf8c5ee476e6",
+          "title": "Inter-city traffic movement to be suspended during Tsagaan Sar"
+        },
+        {
+          "second_guid": "6-19273-8-t",
+          "first_guids": [
+            "6-19074-1-1"
+          ],
+          "normalized_body_sha256": "d921e8c15d7e0cb69a133177365df3ecf7d8d3258c7d81c1d662546d86bfcde1",
+          "title": "Dead-battery anxiety? Learn to live without your phone"
+        },
+        {
+          "second_guid": "0-4621-2-6",
+          "first_guids": [
+            "0-4621-2-2",
+            "0-4621-2-3",
+            "0-4621-2-4",
+            "0-4621-2-5",
+            "0-4621-2-7",
+            "0-4621-2-8"
+          ],
+          "normalized_body_sha256": "01bf5421a92f87625152b041233813fcce2125261951cac1132490eb4f0c57aa",
+          "title": "Climate change activists defy police ban on London protests"
+        },
+        {
+          "second_guid": "1-152956-1-4",
+          "first_guids": [
+            "1-152956-1-1",
+            "1-152956-1-3"
+          ],
+          "normalized_body_sha256": "8405d882bc1c62036f0d77c270a20cc1d66f68632910e4a15d75a7d01e786ab3",
+          "title": "Czech Kvitova powers past Siegemund to make second French Open semis"
+        },
+        {
+          "second_guid": "35-wiki-img/5131-6/5131-6-3",
+          "first_guids": [
+            "35-wiki-img/5131-6/5131-6-2"
+          ],
+          "normalized_body_sha256": "47b33a7a22f6188e5f05f4fbd9165b17accce41a1ff39783320008cb3ac800a8",
+          "title": "Rising from the ashes, Yarloop bounces back after devastating bushfires in 2016"
+        },
+        {
+          "second_guid": "13-24345-2-t",
+          "first_guids": [
+            "17-27797-6-t",
+            "4-35266-7-t"
+          ],
+          "normalized_body_sha256": "cadd1081cdd04fd3a9fdf2ed6a0eb1656e5c622d4d2a90ed2e978d2dcfacb639",
+          "title": "Statement by President von der Leyen on the marketing authorisation of the BioNTech-Pfizer vaccine against COVID-19"
+        },
+        {
+          "second_guid": "0-4621-2-1",
+          "first_guids": [
+            "0-4621-2-2",
+            "0-4621-2-3",
+            "0-4621-2-4",
+            "0-4621-2-5",
+            "0-4621-2-7",
+            "0-4621-2-8"
+          ],
+          "normalized_body_sha256": "01bf5421a92f87625152b041233813fcce2125261951cac1132490eb4f0c57aa",
+          "title": "Climate change activists defy police ban on London protests"
+        },
+        {
+          "second_guid": "27-33606-1-4",
+          "first_guids": [
+            "27-33606-1-2",
+            "27-33606-1-3"
+          ],
+          "normalized_body_sha256": "f3856a2cd45fe174bd223a041d02eda0dc0779b2f992ce819bd9da51acbc2094",
+          "title": "Call for some TLC to address mental health crisis in Fiji"
+        },
+        {
+          "second_guid": "32-2206-1-2",
+          "first_guids": [
+            "32-2206-1-1",
+            "32-2206-1-3"
+          ],
+          "normalized_body_sha256": "328e20b978483596150f3aae0be20d3adade5711c96ac2f47538d721e8016463",
+          "title": "M 8.0 - 78 km NE of Navarro, Peru"
+        },
+        {
+          "second_guid": "0-4377-1-3",
+          "first_guids": [
+            "0-4377-1-1"
+          ],
+          "normalized_body_sha256": "0e882dc5267c2516e4956e6063a89c1f6c8ad00cbb439409bff2213d1c57d434",
+          "title": "One dead in shooting at Smith Tower in Vancouver; suspect in custody"
+        },
+        {
+          "second_guid": "0-4716-3-3",
+          "first_guids": [
+            "0-4716-3-2",
+            "0-4716-3-4"
+          ],
+          "normalized_body_sha256": "9968ce877ddb185273be6931ad2a3a4d3e494643b88887ad119ca08853842606",
+          "title": "Chile protests: What prompted the unrest?"
+        },
+        {
+          "second_guid": "1-14826-2-5",
+          "first_guids": [
+            "1-14826-2-1",
+            "1-14826-2-10",
+            "1-14826-2-11",
+            "1-14826-2-12",
+            "1-14826-2-4",
+            "1-14826-2-6",
+            "1-14826-2-9"
+          ],
+          "normalized_body_sha256": "7daa40a54a878a93964d040f5340a8cc43ad99aa7acae6c6248c75b4fc37c1dc",
+          "title": "Sisolak: ‘We will never, never forget’ those killed in Oct. 1 shooting"
+        },
+        {
+          "second_guid": "17-27091-6-1",
+          "first_guids": [
+            "17-27091-6-2"
+          ],
+          "normalized_body_sha256": "2294587ad52cd9578ba195252bd957e511f21643614d1aa28cd46815fce01f1c",
+          "title": "Azerbaijan starts rebuilding in newly won territories"
+        },
+        {
+          "second_guid": "1-14805-1-4",
+          "first_guids": [
+            "1-14805-1-1",
+            "1-14805-1-2",
+            "1-14805-1-3",
+            "1-14805-1-5"
+          ],
+          "normalized_body_sha256": "0ef5de1bfd0fd7244a2654f925cbb8024c365386d6b19342e409490e33f3d24b",
+          "title": "Dozens killed as huge explosion rips through Lebanon’s Beirut"
+        },
+        {
+          "second_guid": "8-6204-1-3",
+          "first_guids": [
+            "8-6204-1-1",
+            "8-6204-1-2"
+          ],
+          "normalized_body_sha256": "afa6085bf27f731a7f64d3fbd6443437d801f21ec01ae2dde0b41f62feef35fd",
+          "title": "Two people dead after \"unstoppable\" bushfire rips through Kangaroo Island"
+        },
+        {
+          "second_guid": "0-4931-1-1",
+          "first_guids": [
+            "0-4931-1-2",
+            "0-4931-1-3"
+          ],
+          "normalized_body_sha256": "0480cb883a0ba17b398bb1922b90773faba66472bac66650befa9b54294e8ab6",
+          "title": "Clutha crash: Inquiry says pilot 'took a chance' to ignore fuel warnings"
+        },
+        {
+          "second_guid": "1-16056-7-t",
+          "first_guids": [
+            "1-16117-3-t"
+          ],
+          "normalized_body_sha256": "c883b3b376028877be424cc287e88d0dd228b69c289410cd29bae0e0ed067a52",
+          "title": "Colombia extends closure of river, land borders until June 1"
+        },
+        {
+          "second_guid": "21-29910-8-1",
+          "first_guids": [
+            "2-34731-6-1",
+            "24-31760-1-1",
+            "3-17650-8-t"
+          ],
+          "normalized_body_sha256": "d7876ff3c2cf3194d61b1337bda9cd8deb194b7bb6f341a5fbe761151499eb30",
+          "title": "Moscow mayor waives self-isolation rules, travel permits, walking schedule starting June 9"
+        },
+        {
+          "second_guid": "3-18013-3-t",
+          "first_guids": [
+            "6-wiki-img/18504-4/18504-4-1",
+            "6-wiki-img/18504-4/18504-4-2"
+          ],
+          "normalized_body_sha256": "c94ab0593fd29b3b91c409431fd6e1945d3093a61b0a274ca2d4745f55593f6d",
+          "title": "China recovers Chang’e-5 moon samples after complex 23-day mission"
+        },
+        {
+          "second_guid": "0-4378-1-1",
+          "first_guids": [
+            "0-4378-1-2",
+            "0-4378-1-3",
+            "0-4378-1-4"
+          ],
+          "normalized_body_sha256": "36884c297f162807b2f8b110682f15d73a9d8a080a918c6efa993f17b7448923",
+          "title": "Hackers Are Coming for the 2020 Election — And We’re Not Ready"
+        },
+        {
+          "second_guid": "2-34957-1-1",
+          "first_guids": [
+            "2-34957-1-4"
+          ],
+          "normalized_body_sha256": "0fb24855cc2a9122e9fec448774574114a36095ebd0599456840a49f7d79aa8d",
+          "title": "Pope Francis blesses pro-life bells going to Ukraine and Ecuador"
+        },
+        {
+          "second_guid": "3-18136-5-t",
+          "first_guids": [
+            "3-18390-6-t",
+            "9-22114-6-t"
+          ],
+          "normalized_body_sha256": "82d6a4061c9c5a7f75e357f7426524aa9e928a86b0f61992bb61388bc8769719",
+          "title": "Church of England suspends public worship over coronavirus"
+        }
+      ]
+    },
+    "train__test2": {
+      "matched_normalized_body_groups": 62,
+      "matched_second_records": 74,
+      "second_record_count": 175,
+      "matched_second_fraction": 0.4228571428571429,
+      "raw_exact_matched_second_records": 74,
+      "matches": [
+        {
+          "second_guid": "0-4375-3-2",
+          "first_guids": [
+            "0-4375-3-3"
+          ],
+          "normalized_body_sha256": "34100b123f761bd7ff3e0d4512c9b9bfa09f11485dca7bd5e54d6c8328565f59",
+          "title": "Racine woman, 20, in custody related to Huffhines THC vaping case; mother posts bond"
+        },
+        {
+          "second_guid": "5-6054-2-1",
+          "first_guids": [
+            "3-wiki图片/17308-1/17308-1-1"
+          ],
+          "normalized_body_sha256": "f531a9ec3c7447781c8c42a6ff40e689dbaf1db75fd5fe2702257ddd93936a27",
+          "title": "KickassTorrents Domain Seized After Music Industry Complaint"
+        },
+        {
+          "second_guid": "1-14826-2-2",
+          "first_guids": [
+            "1-14826-2-1",
+            "1-14826-2-10",
+            "1-14826-2-11",
+            "1-14826-2-12",
+            "1-14826-2-4",
+            "1-14826-2-6",
+            "1-14826-2-9"
+          ],
+          "normalized_body_sha256": "7daa40a54a878a93964d040f5340a8cc43ad99aa7acae6c6248c75b4fc37c1dc",
+          "title": "Sisolak: ‘We will never, never forget’ those killed in Oct. 1 shooting"
+        },
+        {
+          "second_guid": "4-35557-4-1",
+          "first_guids": [
+            "6-19753-2-1"
+          ],
+          "normalized_body_sha256": "6a65423514ad81ab2e378fa4c5e4f40b95aa68cb20bea1ae4314d993699c848b",
+          "title": "Germany expects record recession in 2020 because of coronavirus"
+        },
+        {
+          "second_guid": "4-36010-8-1",
+          "first_guids": [
+            "4-36010-8-2"
+          ],
+          "normalized_body_sha256": "be924e47c284588dc238fc6c3e4d40c99ec777907ac490ea9f9b1fb910494c19",
+          "title": "Italy’s future is in German hands"
+        },
+        {
+          "second_guid": "26-13829-1-2",
+          "first_guids": [
+            "26-13829-1-4",
+            "26-13829-1-5"
+          ],
+          "normalized_body_sha256": "6b7dc13e9753d83761a00cbbca7d5e785b1634a5be9bc602125d2d888044a082",
+          "title": "UN chief urges Japan, others to meet goals on climate change"
+        },
+        {
+          "second_guid": "12-8952-1-6",
+          "first_guids": [
+            "12-8952-1-1",
+            "12-8952-1-2",
+            "12-8952-1-4"
+          ],
+          "normalized_body_sha256": "ef02db0f62ae8000d05ccfce668d7749c2798d938f37fbffdb5bb2d1eb39f9b1",
+          "title": "Pope’s special Urbi et Orbi blessing: ‘God turns everything to our good’"
+        },
+        {
+          "second_guid": "4-36116-6-1",
+          "first_guids": [
+            "3-17491-6-t"
+          ],
+          "normalized_body_sha256": "016d7411ded34139b0874357bd45b73b294cabb2df107b225f091367a2c4fbbe",
+          "title": "Exclusive: Canada gets Biomerieux formula for free to produce virus testing chemicals"
+        },
+        {
+          "second_guid": "13-wiki-img/24411-3/24411-3-1",
+          "first_guids": [
+            "11-wiki-img/22210-3/22210-3-1",
+            "13-wiki-img/23974-3/23974-3-1",
+            "14-9489-2-1",
+            "19-wiki-img/28842-1/28842-1-1",
+            "24-wiki-img/31289-2/31289-2-1",
+            "4-wiki-img/35713-3/35713-3-1"
+          ],
+          "normalized_body_sha256": "64fa79120d0bd66d026c07d8d83cb278facfc3a4ff92781a5c281974df8d8ee3",
+          "title": "Afghanistan reopens borders with Iran despite virus threat"
+        },
+        {
+          "second_guid": "9-21170-1-1",
+          "first_guids": [
+            "9-21170-1-2"
+          ],
+          "normalized_body_sha256": "84b2017e478dd4169ea8f0b43969ce2c0d6cbce7c4e380ee9ee961986837eb5c",
+          "title": "Domestic violence: Zahra Abrahimzadeh coronial inquest recommendations lead to free legal service"
+        },
+        {
+          "second_guid": "27-32948-2-1",
+          "first_guids": [
+            "11-22500-2-1",
+            "13-23849-2-1",
+            "13-24934-3-1",
+            "13-wiki-img/25030-1/25030-1-1",
+            "13-wiki-img/25132-1/25132-1-1",
+            "9-21598-10-1"
+          ],
+          "normalized_body_sha256": "accf47fdc13c0721aa9e5ddf4314eaaf2c6eae4c4a6e0d88bd1abf8c5ee476e6",
+          "title": "Inter-city traffic movement to be suspended during Tsagaan Sar"
+        },
+        {
+          "second_guid": "18-10856-4-4",
+          "first_guids": [
+            "18-10856-4-3"
+          ],
+          "normalized_body_sha256": "9a4ca592f6c4b740b9272641fef14771db21e9d4fc1981b9038d3380907fef30",
+          "title": "Fortnite's V-Bucks Currency is Another Battleground for a Community at Odds"
+        },
+        {
+          "second_guid": "7-36719-5-1",
+          "first_guids": [
+            "11-wiki-img/22287-3/22287-3-2",
+            "3-wiki-img/17073-7/17073-7-1"
+          ],
+          "normalized_body_sha256": "b969f26936b9c975bdfa3238136e75771fefa929f98ea77ee638b4ac61f938ee",
+          "title": "Malaysia Arrests Thousands Amid Coronavirus Lockdown"
+        },
+        {
+          "second_guid": "1-wiki-img/15675-3/15675-3-1",
+          "first_guids": [
+            "1-wiki-img/15581-3/15581-3-1"
+          ],
+          "normalized_body_sha256": "bf1dd4fac568850d2de315d33c0a8dd7dee22de4512d88cac72a23bf2eeea59c",
+          "title": "New Polish education minister tests positive for coronavirus"
+        },
+        {
+          "second_guid": "11-22768-3-t",
+          "first_guids": [
+            "25-4108-5-t"
+          ],
+          "normalized_body_sha256": "36578f6bcf18eec436356818d966cc12923a6b1d16983893f3b5c25ce30e3ee6",
+          "title": "Dirty digital politics: How users manipulate Twitter to silence foes"
+        },
+        {
+          "second_guid": "1-wiki-img/15446-2/15446-2-2",
+          "first_guids": [
+            "1-wiki-img/15446-2/15446-2-3"
+          ],
+          "normalized_body_sha256": "8ec2b562646ff3b551f4b5fd1a465976ff3733651ccff33516e40f2e88d6833a",
+          "title": "Early-season storms one indicator of active Atlantic hurricane season ahead"
+        },
+        {
+          "second_guid": "1-14831-2-2",
+          "first_guids": [
+            "1-14831-2-1",
+            "1-14831-2-3"
+          ],
+          "normalized_body_sha256": "8c32f221c56bb14bac52746864b9ba7623f545585c9094d32ffb999d4ea8f3f0",
+          "title": "As Nagorno-Karabakh Conflict Expands, Israel-Azerbaijan Arms Trade Thrives"
+        },
+        {
+          "second_guid": "19-29397-1-1",
+          "first_guids": [
+            "19-29397-1-2"
+          ],
+          "normalized_body_sha256": "9c4f7e26c4bf538794c57dd47d98f41d0a8181be216bc03aa1608bb3925e2c38",
+          "title": "Coal power generation to end in 2024 as deadline is brought forward, government promises"
+        },
+        {
+          "second_guid": "35-wiki-img/5131-6/5131-6-4",
+          "first_guids": [
+            "35-wiki-img/5131-6/5131-6-2"
+          ],
+          "normalized_body_sha256": "47b33a7a22f6188e5f05f4fbd9165b17accce41a1ff39783320008cb3ac800a8",
+          "title": "Rising from the ashes, Yarloop bounces back after devastating bushfires in 2016"
+        },
+        {
+          "second_guid": "0-4299-6-3",
+          "first_guids": [
+            "0-4299-6-1",
+            "0-4299-6-2",
+            "0-4299-6-5",
+            "0-4299-6-6"
+          ],
+          "normalized_body_sha256": "9b9671f11a095dbb7154dc6e5c9f906eeccb0b63c1fbeeecfa299d772b1b3e20",
+          "title": "Ukraine deal with pro-Russian rebels at Minsk talks"
+        },
+        {
+          "second_guid": "6-19317-1-1",
+          "first_guids": [
+            "1-16103-3-3",
+            "12-7627-2-1",
+            "12-7895-2-1",
+            "3-16902-1-t",
+            "3-17009-3-t",
+            "6-19575-2-1",
+            "7-37228-3-1",
+            "9-20579-2-1",
+            "9-20723-3-1",
+            "9-20917-2-1",
+            "9-21003-2-1",
+            "9-21141-2-1"
+          ],
+          "normalized_body_sha256": "ea64c6d258213e9bfd173708362695b0dd95aeebc55e9e7e62f5a5d6443c1d3e",
+          "title": "Portugal’s Catholic bishops suspend public Masses amid rising COVID-19 cases"
+        },
+        {
+          "second_guid": "0-4536-1-1",
+          "first_guids": [
+            "0-4536-1-2"
+          ],
+          "normalized_body_sha256": "c2e62afc85ffdd1833b295f9c0def4235cc3668288c17d57d22720f61d1603b4",
+          "title": "Burkina Faso mosque attack kills 15 worshippers"
+        },
+        {
+          "second_guid": "0-4377-1-2",
+          "first_guids": [
+            "0-4377-1-1"
+          ],
+          "normalized_body_sha256": "0e882dc5267c2516e4956e6063a89c1f6c8ad00cbb439409bff2213d1c57d434",
+          "title": "One dead in shooting at Smith Tower in Vancouver; suspect in custody"
+        },
+        {
+          "second_guid": "32-2204-1-2",
+          "first_guids": [
+            "32-2204-1-1",
+            "32-2204-1-3",
+            "32-2204-1-4"
+          ],
+          "normalized_body_sha256": "0de265d971e662d23867c6d2cbb2392b8c263c1648f5b9f9abc30ca218ae42f0",
+          "title": "Sydney commuters to hop aboard high-tech railway future"
+        },
+        {
+          "second_guid": "24-32027-5-3",
+          "first_guids": [
+            "24-32027-5-2"
+          ],
+          "normalized_body_sha256": "60dc3c8ab433c1bc9f58b8b06e78a4aa0621944923e3d07060182402d76ccc5e",
+          "title": "Why the chance of a revived F1 Dutch Grand Prix is so realistic"
+        },
+        {
+          "second_guid": "27-33620-5-1",
+          "first_guids": [
+            "27-33620-5-2"
+          ],
+          "normalized_body_sha256": "e271b2b832278646b5ff63641499c0e532b8d86d2bca8386a4fdc806ccccf613",
+          "title": "Najla Bouden: what next for Tunisia’s first female PM?"
+        },
+        {
+          "second_guid": "0-4315-2-2",
+          "first_guids": [
+            "0-4315-2-1"
+          ],
+          "normalized_body_sha256": "d9c134e36bdc83fc242f36a73949a943206c738639f2d81fb868853b1842a926",
+          "title": "Study reveals uncertainty in how much carbon the ocean absorbs over time\nClimate projections could be off by five years, researchers find."
+        },
+        {
+          "second_guid": "6-19298-5-2",
+          "first_guids": [
+            "6-19298-5-4",
+            "6-19298-5-6",
+            "6-19298-5-8"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "7-36472-3-1",
+          "first_guids": [
+            "17-27057-4-2"
+          ],
+          "normalized_body_sha256": "e3d048e4a9530b46c31b7d453bd16dbc9efbbc1e51c5ba7ea70c89f5bb8ca3a4",
+          "title": "Devices for rapid diagnosis of coronavirus under development"
+        },
+        {
+          "second_guid": "8-6218-1-1",
+          "first_guids": [
+            "8-6218-1-3",
+            "8-6218-1-4"
+          ],
+          "normalized_body_sha256": "844428aa484049572cc1a175dd361dc88dee6bbc148bda0d807a73596fba3cee",
+          "title": "Pennsylvania Turnpike crash involving tour bus, semi-trucks leaves multiple dead; highway closed"
+        },
+        {
+          "second_guid": "6-19298-6-2",
+          "first_guids": [
+            "6-19298-6-1",
+            "6-19298-6-3"
+          ],
+          "normalized_body_sha256": "bc991bdf573e0ab3ace09b3858f174af7992bb530f16e67f9455c503ea1b861b",
+          "title": "Durga Puja in Kolkata"
+        },
+        {
+          "second_guid": "12-8156-5-1",
+          "first_guids": [
+            "11-23369-5-1",
+            "12-8156-5-2"
+          ],
+          "normalized_body_sha256": "628f8bc65f02063813d39dd6ffbc855c502f415b122f55851b37035444a1be86",
+          "title": "Independent filmmakers have found ways to navigate the pandemic and get audiences to films"
+        },
+        {
+          "second_guid": "1-wiki-img/15448-6/15448-6-1",
+          "first_guids": [
+            "1-15203-2-1",
+            "1-15203-2-2"
+          ],
+          "normalized_body_sha256": "d5c7a5080acdcdc6a8e50b99b4b15dd180c8ecca12a006c3ec60ccc9e26d675a",
+          "title": "Experts To Western States: Time To Finally Fight Wildfires With More Fire"
+        },
+        {
+          "second_guid": "8-6365-1-1",
+          "first_guids": [
+            "8-6365-1-2",
+            "8-6365-1-3"
+          ],
+          "normalized_body_sha256": "8521842bda2bec143e9f392d4bb23ce39abb0e830160b22a72be7d5a2894ad36",
+          "title": "India orders antitrust probe of Amazon, Walmart's Flipkart"
+        },
+        {
+          "second_guid": "1-14845-1-1",
+          "first_guids": [
+            "1-14845-1-2",
+            "1-14845-1-3",
+            "1-14845-1-4"
+          ],
+          "normalized_body_sha256": "e29821a3263acf75a3037a8e62c66722152dcdf31ee812ac7c37b4137f9e718b",
+          "title": "Trump flown to hospital after Covid-19 diagnosis"
+        },
+        {
+          "second_guid": "6-19298-5-11",
+          "first_guids": [
+            "6-19298-5-4",
+            "6-19298-5-6",
+            "6-19298-5-8"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "1-14826-2-8",
+          "first_guids": [
+            "1-14826-2-1",
+            "1-14826-2-10",
+            "1-14826-2-11",
+            "1-14826-2-12",
+            "1-14826-2-4",
+            "1-14826-2-6",
+            "1-14826-2-9"
+          ],
+          "normalized_body_sha256": "7daa40a54a878a93964d040f5340a8cc43ad99aa7acae6c6248c75b4fc37c1dc",
+          "title": "Sisolak: ‘We will never, never forget’ those killed in Oct. 1 shooting"
+        },
+        {
+          "second_guid": "0-4957-1-1",
+          "first_guids": [
+            "0-4957-1-2",
+            "0-4957-1-3"
+          ],
+          "normalized_body_sha256": "6913dcd3becf5a7e1e14d37307039f181edc9066c5c8111cd4bea40a07092a93",
+          "title": "Bronze Age monument discovered in Forest of Dean"
+        },
+        {
+          "second_guid": "1-14825-2-2",
+          "first_guids": [
+            "1-14825-2-1"
+          ],
+          "normalized_body_sha256": "17a02b1556f3556bc54760e082c9952c3404d90615527d682ebd552832cfc169",
+          "title": "Festival attacked by Las Vegas shooter had been success story in creating outdoor music destination"
+        },
+        {
+          "second_guid": "6-19074-2-1",
+          "first_guids": [
+            "6-19074-2-2",
+            "6-19074-2-3",
+            "6-19074-2-4",
+            "6-19074-2-5",
+            "6-19074-2-6",
+            "6-19074-2-7",
+            "6-19074-2-8",
+            "6-19074-2-9"
+          ],
+          "normalized_body_sha256": "b02b6bfd6db6b8b631431bc8b4199dcaf8ca06fdc8b409dc9a65e1151dade637",
+          "title": "The QR code has turned COVID-19 check-ins into a golden opportunity for marketing and data companies"
+        },
+        {
+          "second_guid": "11-23172-1-3",
+          "first_guids": [
+            "11-23172-1-1",
+            "11-23172-1-2"
+          ],
+          "normalized_body_sha256": "df2fa7959b2f48c4c588d35a833a9773521fa39b688656b9427f84e05324d482",
+          "title": "Facebook Blocks News in Australia, Diverging With Google on Proposed Law"
+        },
+        {
+          "second_guid": "0-4399-5-2",
+          "first_guids": [
+            "0-4399-5-1"
+          ],
+          "normalized_body_sha256": "ddd3adf93a42d42d91ce5ca4d3ee28027424f699fff72c124cf33563d8671113",
+          "title": "Iran 'hides spyware in wallpaper, restaurant and games apps'"
+        },
+        {
+          "second_guid": "4-35564-2-1",
+          "first_guids": [
+            "4-35564-2-2",
+            "4-35564-2-3"
+          ],
+          "normalized_body_sha256": "9a8eade9b97bafc91c41bb8c1123dc297cb5e5adba3d5453dfe969c6c35643c5",
+          "title": "Australian arts sector left in the cold by Federal Government, claims prominent theatre director"
+        },
+        {
+          "second_guid": "1-14992-1-2",
+          "first_guids": [
+            "1-14992-1-1"
+          ],
+          "normalized_body_sha256": "972025a68ef5f1782ef34a5374c9e9721a652ef8e47778883ec5aab3c0e68598",
+          "title": "In \"historic\" move, Tasmanian devils released on Australian mainland"
+        },
+        {
+          "second_guid": "26-13829-1-1",
+          "first_guids": [
+            "26-13829-1-4",
+            "26-13829-1-5"
+          ],
+          "normalized_body_sha256": "6b7dc13e9753d83761a00cbbca7d5e785b1634a5be9bc602125d2d888044a082",
+          "title": "UN chief urges Japan, others to meet goals on climate change"
+        },
+        {
+          "second_guid": "9-21635-2-1",
+          "first_guids": [
+            "1-16103-3-3",
+            "12-7627-2-1",
+            "12-7895-2-1",
+            "3-16902-1-t",
+            "3-17009-3-t",
+            "6-19575-2-1",
+            "7-37228-3-1",
+            "9-20579-2-1",
+            "9-20723-3-1",
+            "9-20917-2-1",
+            "9-21003-2-1",
+            "9-21141-2-1"
+          ],
+          "normalized_body_sha256": "ea64c6d258213e9bfd173708362695b0dd95aeebc55e9e7e62f5a5d6443c1d3e",
+          "title": "Portugal’s Catholic bishops suspend public Masses amid rising COVID-19 cases"
+        },
+        {
+          "second_guid": "0-4775-4-1",
+          "first_guids": [
+            "0-4775-4-2"
+          ],
+          "normalized_body_sha256": "a79798fc0905525a8512e93f8f458e8b47696bfee95ac284adf3f59fd7e6fabf",
+          "title": "A teen filed sexual harassment charges against her principal in Bangladesh. She was burned to death less than two weeks later."
+        },
+        {
+          "second_guid": "1-wiki-img/15446-2/15446-2-1",
+          "first_guids": [
+            "1-wiki-img/15446-2/15446-2-3"
+          ],
+          "normalized_body_sha256": "8ec2b562646ff3b551f4b5fd1a465976ff3733651ccff33516e40f2e88d6833a",
+          "title": "Early-season storms one indicator of active Atlantic hurricane season ahead"
+        },
+        {
+          "second_guid": "26-13829-1-3",
+          "first_guids": [
+            "26-13829-1-4",
+            "26-13829-1-5"
+          ],
+          "normalized_body_sha256": "6b7dc13e9753d83761a00cbbca7d5e785b1634a5be9bc602125d2d888044a082",
+          "title": "UN chief urges Japan, others to meet goals on climate change"
+        },
+        {
+          "second_guid": "7-36491-4-1",
+          "first_guids": [
+            "7-36491-4-2"
+          ],
+          "normalized_body_sha256": "a7201830906f225fdbbf18659e146645e6ff6301f57e3f1378056319a1cf35e5",
+          "title": "How contact tracing could use Bluetooth to track coronavirus on your smartphone"
+        },
+        {
+          "second_guid": "8-6218-1-2",
+          "first_guids": [
+            "8-6218-1-3",
+            "8-6218-1-4"
+          ],
+          "normalized_body_sha256": "844428aa484049572cc1a175dd361dc88dee6bbc148bda0d807a73596fba3cee",
+          "title": "Pennsylvania Turnpike crash involving tour bus, semi-trucks leaves multiple dead; highway closed"
+        },
+        {
+          "second_guid": "17-26963-1-1",
+          "first_guids": [
+            "17-26963-1-2"
+          ],
+          "normalized_body_sha256": "865bd91bb900a5bf3c3957f4da7a5bc4d1f1e37cfd245861d2f25600e6115112",
+          "title": "Mumbai trump Super Kings to win record fourth IPL title"
+        },
+        {
+          "second_guid": "35-wiki-img/5131-6/5131-6-1",
+          "first_guids": [
+            "35-wiki-img/5131-6/5131-6-2"
+          ],
+          "normalized_body_sha256": "47b33a7a22f6188e5f05f4fbd9165b17accce41a1ff39783320008cb3ac800a8",
+          "title": "Rising from the ashes, Yarloop bounces back after devastating bushfires in 2016"
+        },
+        {
+          "second_guid": "0-4495-1-3",
+          "first_guids": [
+            "0-4495-1-2"
+          ],
+          "normalized_body_sha256": "da8a0f9140f50c89d59572e0690fbb6307c4c3b19bd6936c63fb4df8f7b92edd",
+          "title": "Tunisia: How a cooking contest has brought rural voters to the ballot box"
+        },
+        {
+          "second_guid": "0-4443-2-3",
+          "first_guids": [
+            "0-4443-2-1"
+          ],
+          "normalized_body_sha256": "316ef997c155eed686493f5cceec9015135c23064084224a47529491c4ec0be0",
+          "title": "Central bank of the year: Bank of England"
+        },
+        {
+          "second_guid": "0-4716-1-3",
+          "first_guids": [
+            "0-4716-1-4",
+            "0-4716-1-5"
+          ],
+          "normalized_body_sha256": "7595a606082d1513ead89c63cf543724d7a04d7f88bda90c83b0ed659882941b",
+          "title": "Chile's Struggle to Democratize the State"
+        },
+        {
+          "second_guid": "1-14855-3-1",
+          "first_guids": [
+            "3-17590-6-t"
+          ],
+          "normalized_body_sha256": "d0bda47e2f47d3ec39097fff0cce71913e3f49298855d6cf2b0e500de7352dd3",
+          "title": "Belarus 'Continues To Violate Fundamental Human Rights,' Amnesty Tells UN Committee"
+        },
+        {
+          "second_guid": "17-27935-3-t",
+          "first_guids": [
+            "18-11071-3-2"
+          ],
+          "normalized_body_sha256": "64d16228ea7934806294c8eb9aa4a969fc00be05b766b42c70cf10f89c641946",
+          "title": "Minneapolis’ George Floyd Square features special instructions for White people"
+        },
+        {
+          "second_guid": "0-4745-1-2",
+          "first_guids": [
+            "0-4745-1-1",
+            "0-4745-1-4"
+          ],
+          "normalized_body_sha256": "8c4bf24852e839f7662c2cb629834ad4abfdd67f2fa5c7a53f2fb82a77bbb0b0",
+          "title": "Naruhito: Japan's emperor formally proclaims enthronement in centuries-old ceremony"
+        },
+        {
+          "second_guid": "6-wiki-img/18505-2/18505-2-3",
+          "first_guids": [
+            "6-wiki-img/18505-2/18505-2-1",
+            "6-wiki-img/18505-2/18505-2-2",
+            "6-wiki-img/18505-2/18505-2-4"
+          ],
+          "normalized_body_sha256": "a8dcfb66560a3ecf873a8525d888f118d69ef6ef63b83ccfd27fb61c9d916e3f",
+          "title": "China's Chang'e-5 Moon mission probe touches down"
+        },
+        {
+          "second_guid": "1-15201-2-1",
+          "first_guids": [
+            "1-15201-2-3"
+          ],
+          "normalized_body_sha256": "49a365d4ca16ca8802879728cdf03800d00841fa66f530c77ef88b8493ca8a10",
+          "title": "Coronavirus: Church and religious services off across Wales"
+        },
+        {
+          "second_guid": "0-4443-2-2",
+          "first_guids": [
+            "0-4443-2-1"
+          ],
+          "normalized_body_sha256": "316ef997c155eed686493f5cceec9015135c23064084224a47529491c4ec0be0",
+          "title": "Central bank of the year: Bank of England"
+        },
+        {
+          "second_guid": "15-25482-2-1",
+          "first_guids": [
+            "11-22500-2-1",
+            "13-23849-2-1",
+            "13-24934-3-1",
+            "13-wiki-img/25030-1/25030-1-1",
+            "13-wiki-img/25132-1/25132-1-1",
+            "9-21598-10-1"
+          ],
+          "normalized_body_sha256": "accf47fdc13c0721aa9e5ddf4314eaaf2c6eae4c4a6e0d88bd1abf8c5ee476e6",
+          "title": "Inter-city traffic movement to be suspended during Tsagaan Sar"
+        },
+        {
+          "second_guid": "0-4448-1-2",
+          "first_guids": [
+            "0-4448-1-3",
+            "0-4448-1-4",
+            "0-4448-1-5",
+            "0-4448-1-6",
+            "0-4448-1-7"
+          ],
+          "normalized_body_sha256": "41973775a68aecc8974c4ba25d0a4f1111cd6d75126adadfe21fa25d47ba4d12",
+          "title": "Accident: UAA AN12 at Lviv on Oct 4th 2019, unconscious descent below the glide path and ground impact"
+        },
+        {
+          "second_guid": "0-4403-2-1",
+          "first_guids": [
+            "0-4403-2-3"
+          ],
+          "normalized_body_sha256": "1d2550ff31bb8f68d7891fa799c4b19998770109ccb3f2a9645f67bcdfd0f92c",
+          "title": "Paris police killings: Minister calls for 'automatic alerts'"
+        },
+        {
+          "second_guid": "5-5884-1-1",
+          "first_guids": [
+            "5-5884-1-2",
+            "5-5884-1-3"
+          ],
+          "normalized_body_sha256": "23601d157aaf297106292a0a678e279a8e7fe5041fffc387b5216f2577c66a9c",
+          "title": "Europe's Cheops telescope launches to study far-off worlds"
+        },
+        {
+          "second_guid": "0-4445-1-1",
+          "first_guids": [
+            "0-4445-1-2"
+          ],
+          "normalized_body_sha256": "59f0a9afcd73401799902c008b3e73d6182a88483a2b0f2cd57904407357f753",
+          "title": "Pizza Express set for talks over £1bn debt pile"
+        },
+        {
+          "second_guid": "6-19298-5-1",
+          "first_guids": [
+            "6-19298-5-4",
+            "6-19298-5-6",
+            "6-19298-5-8"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "8-6204-1-4",
+          "first_guids": [
+            "8-6204-1-1",
+            "8-6204-1-2"
+          ],
+          "normalized_body_sha256": "afa6085bf27f731a7f64d3fbd6443437d801f21ec01ae2dde0b41f62feef35fd",
+          "title": "Two people dead after \"unstoppable\" bushfire rips through Kangaroo Island"
+        },
+        {
+          "second_guid": "0-4819-1-5",
+          "first_guids": [
+            "0-4819-1-1",
+            "0-4819-1-3",
+            "0-4819-1-4",
+            "0-4819-1-6"
+          ],
+          "normalized_body_sha256": "26d2674938d34afd2fc9f5c1622e9e2c55ff3eed1d4c2d42bf5ad0c85132b51c",
+          "title": "Essex lorry deaths: Vietnamese families fear relatives among dead"
+        },
+        {
+          "second_guid": "17-27394-3-1",
+          "first_guids": [
+            "17-27394-3-2"
+          ],
+          "normalized_body_sha256": "a4c672522b2bce76ae0be6ddce3ee0faa78cf375756b5524afeac0409888c49f",
+          "title": "Donations flood in to restore Gaza bookshop destroyed by Israeli airstrikes"
+        },
+        {
+          "second_guid": "6-19298-5-3",
+          "first_guids": [
+            "6-19298-5-4",
+            "6-19298-5-6",
+            "6-19298-5-8"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "4-35372-3-2",
+          "first_guids": [
+            "4-35372-3-1"
+          ],
+          "normalized_body_sha256": "0bcd4e7c3b7f9803993a924e1f8862353d91eb85dfb4b627d7737987620b48c6",
+          "title": "What is high tide flooding?"
+        },
+        {
+          "second_guid": "4-35276-3-1",
+          "first_guids": [
+            "1-15862-6-1",
+            "3-18192-1-t",
+            "4-36187-3-1"
+          ],
+          "normalized_body_sha256": "2a09a7ca0226f57ce634ea8a29a8d16eac537ad85239c19459c293c27be4bba8",
+          "title": "Rich, developing nations wrangle over COVID vaccine patents"
+        }
+      ]
+    },
+    "dev__test2": {
+      "matched_normalized_body_groups": 15,
+      "matched_second_records": 22,
+      "second_record_count": 175,
+      "matched_second_fraction": 0.12571428571428572,
+      "raw_exact_matched_second_records": 19,
+      "matches": [
+        {
+          "second_guid": "1-14826-2-2",
+          "first_guids": [
+            "1-14826-2-13",
+            "1-14826-2-14",
+            "1-14826-2-5"
+          ],
+          "normalized_body_sha256": "7daa40a54a878a93964d040f5340a8cc43ad99aa7acae6c6248c75b4fc37c1dc",
+          "title": "Sisolak: ‘We will never, never forget’ those killed in Oct. 1 shooting"
+        },
+        {
+          "second_guid": "4-36116-6-1",
+          "first_guids": [
+            "1-15195-2-1"
+          ],
+          "normalized_body_sha256": "016d7411ded34139b0874357bd45b73b294cabb2df107b225f091367a2c4fbbe",
+          "title": "Exclusive: Canada gets Biomerieux formula for free to produce virus testing chemicals"
+        },
+        {
+          "second_guid": "13-wiki-img/24411-3/24411-3-1",
+          "first_guids": [
+            "12-wiki-img/8552-1/8552-1-1"
+          ],
+          "normalized_body_sha256": "64fa79120d0bd66d026c07d8d83cb278facfc3a4ff92781a5c281974df8d8ee3",
+          "title": "Afghanistan reopens borders with Iran despite virus threat"
+        },
+        {
+          "second_guid": "27-32948-2-1",
+          "first_guids": [
+            "13-wiki-img/24416-1/24416-1-1",
+            "27-wiki-img/33289-2/33289-2-1"
+          ],
+          "normalized_body_sha256": "accf47fdc13c0721aa9e5ddf4314eaaf2c6eae4c4a6e0d88bd1abf8c5ee476e6",
+          "title": "Inter-city traffic movement to be suspended during Tsagaan Sar"
+        },
+        {
+          "second_guid": "35-wiki-img/5131-6/5131-6-4",
+          "first_guids": [
+            "35-wiki-img/5131-6/5131-6-3"
+          ],
+          "normalized_body_sha256": "47b33a7a22f6188e5f05f4fbd9165b17accce41a1ff39783320008cb3ac800a8",
+          "title": "Rising from the ashes, Yarloop bounces back after devastating bushfires in 2016"
+        },
+        {
+          "second_guid": "6-19317-1-1",
+          "first_guids": [
+            "1-15178-2-1",
+            "3-17502-3-t"
+          ],
+          "normalized_body_sha256": "ea64c6d258213e9bfd173708362695b0dd95aeebc55e9e7e62f5a5d6443c1d3e",
+          "title": "Portugal’s Catholic bishops suspend public Masses amid rising COVID-19 cases"
+        },
+        {
+          "second_guid": "0-4377-1-2",
+          "first_guids": [
+            "0-4377-1-3"
+          ],
+          "normalized_body_sha256": "0e882dc5267c2516e4956e6063a89c1f6c8ad00cbb439409bff2213d1c57d434",
+          "title": "One dead in shooting at Smith Tower in Vancouver; suspect in custody"
+        },
+        {
+          "second_guid": "0-4398-1-3",
+          "first_guids": [
+            "0-4398-1-2"
+          ],
+          "normalized_body_sha256": "3d37795c94ae1c2903821fc062f6b019aed5e51af3cb85bf87c5d9ed898de481",
+          "title": "Ecuador protests: State of emergency declared as fuel subsidies end"
+        },
+        {
+          "second_guid": "6-19298-5-2",
+          "first_guids": [
+            "6-19298-5-10"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "6-19298-5-11",
+          "first_guids": [
+            "6-19298-5-10"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "1-14826-2-8",
+          "first_guids": [
+            "1-14826-2-13",
+            "1-14826-2-14",
+            "1-14826-2-5"
+          ],
+          "normalized_body_sha256": "7daa40a54a878a93964d040f5340a8cc43ad99aa7acae6c6248c75b4fc37c1dc",
+          "title": "Sisolak: ‘We will never, never forget’ those killed in Oct. 1 shooting"
+        },
+        {
+          "second_guid": "9-21635-2-1",
+          "first_guids": [
+            "1-15178-2-1",
+            "3-17502-3-t"
+          ],
+          "normalized_body_sha256": "ea64c6d258213e9bfd173708362695b0dd95aeebc55e9e7e62f5a5d6443c1d3e",
+          "title": "Portugal’s Catholic bishops suspend public Masses amid rising COVID-19 cases"
+        },
+        {
+          "second_guid": "35-wiki-img/5131-6/5131-6-1",
+          "first_guids": [
+            "35-wiki-img/5131-6/5131-6-3"
+          ],
+          "normalized_body_sha256": "47b33a7a22f6188e5f05f4fbd9165b17accce41a1ff39783320008cb3ac800a8",
+          "title": "Rising from the ashes, Yarloop bounces back after devastating bushfires in 2016"
+        },
+        {
+          "second_guid": "0-4495-1-3",
+          "first_guids": [
+            "0-4495-1-1",
+            "0-4495-1-4"
+          ],
+          "normalized_body_sha256": "da8a0f9140f50c89d59572e0690fbb6307c4c3b19bd6936c63fb4df8f7b92edd",
+          "title": "Tunisia: How a cooking contest has brought rural voters to the ballot box"
+        },
+        {
+          "second_guid": "0-4716-1-3",
+          "first_guids": [
+            "0-4716-1-1",
+            "0-4716-1-2"
+          ],
+          "normalized_body_sha256": "7595a606082d1513ead89c63cf543724d7a04d7f88bda90c83b0ed659882941b",
+          "title": "Chile's Struggle to Democratize the State"
+        },
+        {
+          "second_guid": "15-25482-2-1",
+          "first_guids": [
+            "13-wiki-img/24416-1/24416-1-1",
+            "27-wiki-img/33289-2/33289-2-1"
+          ],
+          "normalized_body_sha256": "accf47fdc13c0721aa9e5ddf4314eaaf2c6eae4c4a6e0d88bd1abf8c5ee476e6",
+          "title": "Inter-city traffic movement to be suspended during Tsagaan Sar"
+        },
+        {
+          "second_guid": "0-4448-1-2",
+          "first_guids": [
+            "0-4448-1-1"
+          ],
+          "normalized_body_sha256": "41973775a68aecc8974c4ba25d0a4f1111cd6d75126adadfe21fa25d47ba4d12",
+          "title": "Accident: UAA AN12 at Lviv on Oct 4th 2019, unconscious descent below the glide path and ground impact"
+        },
+        {
+          "second_guid": "0-4513-1-t",
+          "first_guids": [
+            "0-4654-1-t"
+          ],
+          "normalized_body_sha256": "7a23c3321452293ac3e323ca48776773ebc813aa8ad5923386e344b987b74dd8",
+          "title": "New York State Department of Health Announces Update on Investigation into Vaping-Associated Pulmonary Illnesses"
+        },
+        {
+          "second_guid": "0-4403-2-1",
+          "first_guids": [
+            "0-4403-2-2"
+          ],
+          "normalized_body_sha256": "1d2550ff31bb8f68d7891fa799c4b19998770109ccb3f2a9645f67bcdfd0f92c",
+          "title": "Paris police killings: Minister calls for 'automatic alerts'"
+        },
+        {
+          "second_guid": "6-19298-5-1",
+          "first_guids": [
+            "6-19298-5-10"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        },
+        {
+          "second_guid": "8-6204-1-4",
+          "first_guids": [
+            "8-6204-1-3"
+          ],
+          "normalized_body_sha256": "afa6085bf27f731a7f64d3fbd6443437d801f21ec01ae2dde0b41f62feef35fd",
+          "title": "Two people dead after \"unstoppable\" bushfire rips through Kangaroo Island"
+        },
+        {
+          "second_guid": "6-19298-5-3",
+          "first_guids": [
+            "6-19298-5-10"
+          ],
+          "normalized_body_sha256": "aff37e485e7cd0b56ab6fdf94a37ab90fccc903bbc289ad58fac60f8b282d0c3",
+          "title": "Kumbh Mela"
+        }
+      ]
+    }
+  }
+}

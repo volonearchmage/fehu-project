@@ -1,0 +1,50 @@
+{
+  "primary_labels": 3069,
+  "fused_labels": 3069,
+  "actions": {},
+  "frequent_classes": 38
+}
+[done] G0_passthrough -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/fusion/G0_passthrough
+G0_passthrough: 1b micro 0.4832 (P 0.4298 R 0.5519) macro 0.3110 | 1a micro 0.6387 macro 0.4748 | DRR 0.0549
+{
+  "primary_labels": 3069,
+  "fused_labels": 2659,
+  "actions": {
+    "remove": 410
+  },
+  "frequent_classes": 38
+}
+[done] G1_veto -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/fusion/G1_veto
+G1_veto: 1b micro 0.5023 (P 0.4769 R 0.5305) macro 0.3221 | 1a micro 0.6421 macro 0.4771 | DRR 0.0491
+{
+  "primary_labels": 3069,
+  "fused_labels": 2631,
+  "actions": {
+    "remove": 438
+  },
+  "frequent_classes": 38
+}
+[done] G2_veto_noliu -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/fusion/G2_veto_noliu
+G2_veto_noliu: 1b micro 0.5027 (P 0.4797 R 0.5280) macro 0.3219 | 1a micro 0.6426 macro 0.4778 | DRR 0.0473
+{
+  "primary_labels": 3069,
+  "fused_labels": 3118,
+  "actions": {
+    "add": 459,
+    "remove": 410
+  },
+  "frequent_classes": 38
+}
+[done] G3_veto_add -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/fusion/G3_veto_add
+G3_veto_add: 1b micro 0.5196 (P 0.4589 R 0.5987) macro 0.3371 | 1a micro 0.6609 macro 0.5028 | DRR 0.0527
+{
+  "primary_labels": 3069,
+  "fused_labels": 2250,
+  "actions": {
+    "remove": 819
+  },
+  "frequent_classes": 108
+}
+[done] G5_veto_nogate -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_195011_nonthinking/fusion/G5_veto_nogate
+G5_veto_nogate: 1b micro 0.5384 (P 0.5551 R 0.5226) macro 0.3262 | 1a micro 0.6596 macro 0.4884 | DRR 0.0468
+G4_dirqa: 1b micro 0.5232 (P 0.4622 R 0.6029) macro 0.3367 | 1a micro 0.6609 macro 0.5028 | DRR 0.0482

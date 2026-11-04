@@ -1,0 +1,64 @@
+% 中英文全文及审稿草稿共用的 A4 单栏学术排版；不是学院的一页概要书模板。
+% 使用 XeLaTeX 或 Tectonic；字体须安装 Times New Roman、Songti SC、Heiti SC、Courier New。
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fehu_paper_style}[2026/09/12 FEHU academic manuscript layout]
+\RequirePackage{fontspec,xeCJK}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}[Scale=0.90]
+% 不请求系统宋体和黑体未声明的 OpenType 脚本标签，中文断行由 xeCJK 处理。
+\setCJKmainfont{Songti SC}[Script={},ItalicFont={Heiti SC}]
+\setCJKsansfont{Heiti SC}[Script={},ItalicFont={Heiti SC}]
+\setCJKmonofont{Songti SC}[Script={},ItalicFont={Heiti SC}]
+\RequirePackage[a4paper,margin=25.4mm,footskip=12mm]{geometry}
+\RequirePackage{amsmath,amssymb}
+% 保持 Unicode 文字字体编码，使公式中的正体字母和运算符正确使用 Times New Roman。
+\RequirePackage[noOT1]{newtxmath}
+\RequirePackage{booktabs,tabularx,longtable,array,graphicx,xcolor}
+\RequirePackage{tikz,pgfplots}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\pgfplotsset{compat=1.18}
+\RequirePackage{enumitem,setspace,caption,placeins,xurl,float,titlesec,needspace}
+\newfloat{algorithm}{htbp}{loa}
+\floatname{algorithm}{Algorithm}
+\RequirePackage[hidelinks,bookmarksnumbered]{hyperref}
+\setstretch{1.15}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{4pt}
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{18pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+% 表格和图注保持可读字号，不通过整体缩放压缩文字。
+\renewcommand{\small}{\@setfontsize\small{10.5}{13}}
+\renewcommand{\footnotesize}{\@setfontsize\footnotesize{10}{12}}
+\renewcommand{\arraystretch}{1.18}
+\captionsetup{font=small,labelfont=bf,skip=7pt}
+\captionsetup[table]{position=top}
+\setlist{itemsep=3pt,topsep=5pt,leftmargin=*}
+\setlist[description]{style=nextline,leftmargin=0pt,labelindent=0pt,labelwidth=0pt,labelsep=0pt}
+\titleformat{\section}{\normalfont\fontsize{14}{18}\selectfont\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalfont\fontsize{12}{16}\selectfont\bfseries}{\thesubsection}{0.8em}{}
+\titlespacing*{\section}{0pt}{18pt}{9pt}
+\titlespacing*{\subsection}{0pt}{13pt}{6pt}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\raggedbottom
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\definecolor{ink}{HTML}{263544}
+\definecolor{blue}{HTML}{246B94}
+\definecolor{gold}{HTML}{BA7828}
+\definecolor{pale}{HTML}{EDF3F7}
+\newcommand{\micro}{\ensuremath{F_{1,\mathrm{micro}}}}
+\newcommand{\macro}{\ensuremath{F_{1,\mathrm{macro}}^{G}}}
+\newcommand{\drr}{\ensuremath{\mathrm{DRR}}}
+\newcommand{\method}{\textsc{FGHF}}
+\newcommand{\dra}{\textsc{DRA-FEHU}}
+\newcommand{\code}[1]{\texttt{\small #1}}
+\newcommand{\source}[1]{\par\vspace{2pt}{\footnotesize\textit{Evidence:} #1\par}}
+\newcommand{\sectionbreak}{\FloatBarrier}
+\tikzset{box/.style={draw=blue,fill=pale,rounded corners=2pt,align=center,font=\small,inner sep=7pt,minimum height=12mm},arr/.style={-{Latex[length=2mm]},thick,draw=ink}}
+\endinput

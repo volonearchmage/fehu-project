@@ -1,0 +1,16 @@
+[e1] purged 2 empty entries (['1-14823-1-1', '2-34752-6-1']) — rerun stage to re-fetch
+[e1] ABORT: unrecovered API failures for ['1-14823-1-1']
+[e1] purged 2 empty entries (['1-14823-1-1', '2-34752-6-1']) — rerun stage to re-fetch
+CONFIRMED_EMPTY e1:2-34752-6-1
+[e1] 1 article(s) confirmed empty by model judgment (re-fetched once, no API failure)
+[liu] cache healthy: 177 articles, 0 empty
+[e6] cache healthy: 177 articles, 0 empty
+[e6b] cache healthy: 177 articles, 0 empty
+[e6c] cache healthy: 177 articles, 0 empty
+[e1] purged 1 empty entries (['2-34752-6-1']) — rerun stage to re-fetch
+CONFIRMED_EMPTY e1:2-34752-6-1
+[e1] 1 article(s) confirmed empty by model judgment (re-fetched once, no API failure)
+[liu] cache healthy: 177 articles, 0 empty
+[e6] cache healthy: 177 articles, 0 empty
+[e6b] cache healthy: 177 articles, 0 empty
+[e6c] cache healthy: 177 articles, 0 empty

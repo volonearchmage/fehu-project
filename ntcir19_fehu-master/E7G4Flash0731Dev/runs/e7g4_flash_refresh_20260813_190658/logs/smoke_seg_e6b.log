@@ -1,0 +1,4 @@
+Segmenting 2 dev articles with deepseek-v4-flash
+Segmenting:   0%|          | 0/2 [00:00<?, ?it/s]Segmenting:  50%|█████     | 1/2 [00:05<00:05,  5.19s/it]Segmenting: 100%|██████████| 2/2 [00:20<00:00, 10.97s/it]Segmenting: 100%|██████████| 2/2 [00:20<00:00, 10.10s/it]
+[done] 2 segmentations -> E7G4Flash0731Dev/runs/e7g4_flash_refresh_20260813_190658/smoke/segmentation/e6b/segments_dev.json
+unit distribution: {'n_articles': 2, 'units_min': 4, 'units_median': 9, 'units_max': 9, 'units_mean': 6.5}

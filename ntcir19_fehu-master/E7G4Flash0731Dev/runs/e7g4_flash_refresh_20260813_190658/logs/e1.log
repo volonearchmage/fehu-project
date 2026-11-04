@@ -1,0 +1,13 @@
+[2026-08-13T19:18:12+08:00] e1 attempt 1/20
+Mode: DEV (will evaluate against gold labels)
+Loaded 177 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Processing articles:   0%|          | 0/177 [00:00<?, ?it/s]Processing articles:   1%|          | 1/177 [00:20<1:00:58, 20.79s/it]Processing articles:   1%|          | 2/177 [01:14<1:56:36, 39.98s/it]Processing articles:   2%|▏         | 3/177 [28:55<37:42:14, 780.08s/it]Processing articles:   2%|▏         | 4/177 [29:16<23:05:37, 480.56s/it]

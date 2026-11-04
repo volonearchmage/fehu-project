@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-08-13T19:50:25.335224+08:00",
+  "requested_model": "deepseek-v4-flash",
+  "response_model": "deepseek-v4-flash",
+  "thinking": "disabled",
+  "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e",
+  "finish_reason": "stop",
+  "content": "{\"status\":\"ok\"}"
+}

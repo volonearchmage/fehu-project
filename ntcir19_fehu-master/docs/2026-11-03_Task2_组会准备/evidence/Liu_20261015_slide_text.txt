@@ -1,0 +1,222 @@
+Source relative to this file: ../../ppt/Liu_Dongyang__20261015 (1).pptx
+SHA256: a4e8c7df8ab3303cacc449b5ca433ca5b8ff53e797d5c971ddcccd23b83afbbd
+Extracted text, slide order preserved. Tables are linearized.
+
+=== Slide 1 ===
+Research Plan and Initial Results
+FEHU Task 2: Human Value Recognition in Subevents
+Exploring Selective Use of Article Context
+Liu Dongyang     2026/10/15
+Data Engineering Lab, IPS, Waseda Univ.
+
+=== Slide 2 ===
+My Previous Work and Current Focus
+2
+Last semester: Task 1
+This semester: Task 2
+◆  Collaborated with Peiyang on our participant paper.
+◆  Prompt design and label-level error analysis.
+◆  Conservative voting + selective label recovery.
+◆  Continue collaborating with Peiyang.
+◆  Study when subevent predictions need article context.
+Focus: use broader context while keeping predictions specific to the current subevent.
+
+=== Slide 3 ===
+FEHU Task 2 Definition
+3
+Prediction unit: (article, subevent, actor)
+Subtask
+Value labels
+Direction
+Task 2a
+20 Level-2 categories
+Not required
+Task 2b
+54 Level-1 values
+Aligned / Contradictory
+◆  The article-level actor list provides candidates; not all participate in every subevent.
+Direction concerns an actor’s conduct, speech, position, or outcome—not a general moral judgement.
+Source: FEHU Task Overview, Section 2.1.
+
+=== Slide 4 ===
+Why Local Evidence May Need Context
+4
+Fictional example
+Article context
+“The city council announced an
+emergency support program.”
+Current subevent
+“It approved funding for
+temporary shelters.”
+Who does “it” refer to?
+Context may clarify the actor
+and purpose of an action.
+Output must still concern
+the current subevent.
+Illustration only; no experimental labels. Motivation: Task Overview, Section 2.1.
+
+=== Slide 5 ===
+The Organizer Baseline and My Question
+5
+Organizer baseline
+◆  Llama-3.1-8B-Instruct + LoRA.
+◆  One model trained on article and subevent instances.
+◆  Input: scope-specific text, actor, Level-1 taxonomy.
+◆  Level-2 output: deterministic mapping.
+My research question
+When should subevent
+inference use
+article context?
+Task Overview §3.5 does not describe a selective context gate. This is not a fine-tuning replication.
+
+=== Slide 6 ===
+Proposed Research Direction
+6
+◆  Use local evidence when sufficient.
+◆  Add context when actor identity or references are unclear.
+◆  Keep output tied to the current subevent.
+Current subevent
+↓
+Context decision (Planned)
+↙                         ↘
+Subevent only
+Subevent + article
+↘                         ↙
+Current-subevent labels
+Proposal only: the context-selection gate has not been implemented.
+
+=== Slide 7 ===
+Research Hypotheses
+7
+H1: Context can recover missing labels
+Article context may clarify actors and references.
+H2: Context can introduce extra errors
+Other events may influence the current prediction.
+H3: Selective context may improve the trade-off
+A gate may retain useful context while limiting interference.
+H1/H2 mechanisms need case analysis. H3 remains untested.
+
+=== Slide 8 ===
+Experimental Workflow
+8
+Development set: 177 articles / 1,526 subevents
+1.  Build the input prompt
+2.  Request Task 2b predictions
+3.  Check completion, JSON structure, and valid IDs
+4.  Map Level-1 predictions to Task 2a labels
+5.  Score both outputs with the evaluator working copy
+Gold labels enter evaluation only; cached recovery and output validation are implemented.
+
+=== Slide 9 ===
+Frozen Baseline B0
+9
+Input: subevent + candidate actors + Level-1 taxonomy
+Setting
+Fixed configuration
+Prompt
+Two official-training demonstrations
+Generation
+Thinking disabled; temperature 0.1
+Output budget
+2,048 tokens
+Label limit
+At most two values per actor
+Prediction
+All candidate actors in one request
+Requested: deepseek-v4-flash   |   Response identifier: deepseek-flash
+Exact remote weights version remains unconfirmed.
+
+=== Slide 10 ===
+Independent Baseline Repeat
+10
+Task 2b • Complete development set
+Metric
+Run 1
+Independent repeat
+Micro-F1
+0.3582
+0.3610
+Macro-F1
+0.1963
+0.2149
+Precision
+0.4994
+0.4987
+Recall
+0.2793
+0.2829
+DRR ↓
+0.00506
+0.00578
+All 1,526 subevents completed and passed validation in both runs.
+Micro-F1 difference: 0.0028; identical subevent predictions: 81.8%.
+Operationally verified, not deterministic: Macro-F1 and individual predictions still vary.
+
+=== Slide 11 ===
+Article Context Comparison
+11
+Task 2b • Complete development set
+Metric
+B0: Subevent only
+B1: + article
+Micro-F1
+0.3582
+0.3905
+Macro-F1
+0.1963
+0.2186
+Precision
+0.4994
+0.4807
+Recall
+0.2793
+0.3288
+DRR ↓
+0.00506
+0.00759
+Higher recall and F1, but lower precision and more reversals.
+Same generation settings/examples. B1 adds article + scope instruction; one B1 run so far.
+
+=== Slide 12 ===
+What Changes with Article Context?
+12
+Task 2b • Directed-label changes: B0 → B1
+Change
+Number of directed labels
+Correct labels recovered by B1
+267
+Correct B0 labels lost in B1
+130
+New false positives in B1
+484
+B0 false positives removed by B1
+276
+Net: 137 more correct labels / 208 more false positives
+Output changes do not establish their causes; case analysis is still needed.
+
+=== Slide 13 ===
+Next Research Stage
+13
+1. Case analysis
+Inspect actor attribution and evidence for recovered/lost labels.
+Check possible influence from unrelated events.
+2. Gate design (Planned)
+Develop interpretable conditions using training data.
+Decide when a subevent needs article context.
+3. Evaluation
+Compare against frozen B0/B1: F1, direction errors, API cost.
+Repeat key comparisons where necessary.
+
+=== Slide 14 ===
+Progress and Questions for Discussion
+14
+Completed
+Frozen baseline + full development-set context comparison
+Proposed direction
+Selective article context for actor-specific subevent predictions
+Questions for discussion
+◆  Is this a suitable research focus for this semester?
+◆  Should I prioritize actor references or evidence-scope control?
+◆  How can 
+Peiyang
+ and I define complementary roles?

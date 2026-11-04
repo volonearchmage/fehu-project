@@ -1,0 +1,38 @@
+Mode: DEV (will evaluate against gold labels)
+Loaded 2 articles
+Project root: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master
+Provider: deepseek
+Model: deepseek-v4-flash
+Temperature: 0.1
+Max output tokens: 8000
+Request timeout: 120s
+Prompt variant: targeted_more_shot_balanced
+Loading few-shot examples from training data...
+Loaded 2 few-shot examples
+Processing articles:   0%|          | 0/2 [00:00<?, ?it/s]Processing articles:  50%|█████     | 1/2 [00:17<00:17, 17.79s/it]Processing articles: 100%|██████████| 2/2 [01:11<00:00, 38.95s/it]Processing articles: 100%|██████████| 2/2 [01:11<00:00, 35.78s/it]
+
+Saved Task-1a predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_190658_smoke_e1/pred_task1a.json
+Saved Task-1b predictions to: /Users/lloydhuang/Documents/GitHub/fehu-project/ntcir19_fehu-master/RH_test/E1_fewshot_repair/runs/e7g4_flash_refresh_20260813_190658_smoke_e1/pred_task1b.json
+
+Stats:
+  Articles processed: 2
+  Task-1a predictions: 17 (avg 8.5 per article)
+  Task-1b predictions: 19 (avg 9.5 per article)
+
+============================================================
+RUNNING EVALUATION ON DEV SET
+============================================================
+Evaluating only the 2 processed dev articles.
+
+Task-1a (Level-2, no direction):
+  Micro F1: 0.6857
+  Macro F1: 0.4824
+  Precision: 0.7059
+  Recall: 0.6667
+
+Task-1b (Level-1 + direction):
+  Micro F1: 0.6190
+  Macro F1: 0.4825
+  Precision: 0.6842
+  Recall: 0.5652
+  Direction Reverse Rate: 0.0000 (0/23)

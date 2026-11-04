@@ -1,0 +1,819 @@
+% 英文中期论文；与中文译稿共用排版。
+% 编译：tectonic Huang_FEHU_Midterm_Paper.tex（同目录须保留 fehu_paper_style.sty）。
+\documentclass[12pt,a4paper]{article}
+\usepackage{fehu_paper_style}
+\hypersetup{pdftitle={Diagnosis-Guided Augmentation and Frequency-Gated Fusion for Actor-Conditioned Human-Value Recognition in News},pdfauthor={Peiyang Huang}}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{22mm}
+{\large Waseda University\\Graduate School of Information, Production and Systems\par}
+\vspace{23mm}
+{\Large Midterm research paper\par}
+\vspace{14mm}
+{\LARGE\bfseries Diagnosis-Guided Augmentation and Frequency-Gated Fusion for Actor-Conditioned Human-Value Recognition in News\par}
+\vspace{22mm}
+{\large Peiyang Huang\par}
+\vspace{6mm}
+{\large Supervisor: Professor Mizuho Iwaihara\par}
+\vfill
+{\large September 2026\par}
+\vspace{10mm}
+\begin{minipage}{0.88\textwidth}\small
+This midterm paper develops the augmentation experiments and system analysis associated with our NTCIR-19 participant manuscript, and sets out the remaining experiments for the final thesis.
+\end{minipage}
+\end{titlepage}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\begin{abstract}
+News reports often describe actions whose implications for human values are left implicit. Recognizing these values can help analyze how individuals and institutions are portrayed through their reported conduct. Such analysis requires attention to the actor and the surrounding events, because the same report may involve people or organizations with different roles and interests. NTCIR-19 FEHU (Fact-based Event-centric Human-value Understanding) aims to evaluate systems that identify values associated with specific actors in factual news and determine whether their reported conduct aligns with or contradicts those values. This paper focuses only on Task~1, which requires value recognition at the article level for a supplied set of actors.
+
+The study addresses limited supervision for infrequent labels, along with false positives and direction errors when expanding prediction coverage. DRA-FEHU uses error diagnosis to guide the generation of additional training examples. It compares two ways of handling unspecified labels: treating them as negative or masking them during training. For inference, WAIPS-02 combines majority voting across prompts with separate direction arbitration. WAIPS-03 first segments each article to obtain initial value predictions. It then uses frequency-gated fusion to revise these predictions with auxiliary prompt outputs and encoder scores, and checks selected disagreements about direction.
+\end{abstract}
+\vspace{8pt}
+\noindent\textbf{Keywords:} human-value recognition; actor attribution; partial-label supervision; data augmentation; calibrated fusion; NTCIR-19 FEHU.
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+\subsection{Background and research problem}
+News articles describe actions, intentions, and consequences involving people and institutions. A report about sanctions, for example, may discuss the security interests of one government and the harm experienced by another population. Recognizing a security-related theme is only the first part of understanding the values expressed by that report. A system must also identify the actor to whom the judgment applies and decide whether the reported conduct supports or violates the relevant value. Confusing those decisions can produce a plausible thematic label with an incorrect actor or direction.
+
+Actor-specific value recognition supports analysis of how news portrays institutions and reports conduct affecting public welfare. The prediction concerns the action described in the article under the supplied annotation scheme; it is not a measurement of an actor's enduring moral character.
+
+NTCIR-19 FEHU makes this problem explicit through event-centric human-value recognition~\cite{fehuoverview}. Task~1 provides articles and actor identifiers. Task-1a requires coarse values for each article--actor pair, whereas Task-1b requires fine values together with alignment or contradiction. The benchmark therefore connects multilabel recognition with attribution and directional reasoning. Its hierarchy also makes the difficulty visible at two resolutions: a system can recognize the general category while confusing the fine value or its direction.
+
+My early experiments exposed a recurring trade-off. Conservative encoder predictions covered few directed classes and missed many difficult labels. Prompt-based systems recovered more values but also generated unsupported labels or attached the wrong direction to a valid value. Increasing the candidate pool sometimes made performance worse because false positives grew faster than true positives. I therefore study how to recover missed values while distinguishing the evidence needed for inclusion from the evidence needed for direction assignment.
+
+\subsection{Research goal and working hypothesis}
+In this study, I aim to improve actor-conditioned human-value recognition using a small, imbalanced training set while following the official input protocol. I focus on Task~1, which requires article-level interpretation without the official subevents supplied for Task~2. My working hypothesis is that \emph{value recovery, precision control, and direction assignment should be treated as related but separately controlled decisions}. The system should distinguish their evidence and error types, even when they share a model.
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\node[box,text width=3.85cm,minimum height=22mm] at (-4.65,0) {Value recovery\\DRA training; candidate addition};
+\node[box,text width=3.85cm,minimum height=22mm] at (0,0) {Precision control\\Prompt majority; gated removal};
+\node[box,text width=3.85cm,minimum height=22mm] at (4.65,0) {Direction assignment\\Flash arbitration; selective QA};
+\end{tikzpicture}
+\caption{Three analytical roles and their associated methods. The actual fusion flow is shown in Figure~\ref{fig:fghf}.}
+\label{fig:decisions}
+\end{figure}
+
+\subsection{Contribution and relationship to the participant paper}
+My work covers the design and analysis of DRA-FEHU, WAIPS-02, and WAIPS-03. WAIPS-03 uses frequency-gated heterogeneous fusion (FGHF) in the E7-G4 configuration. Our joint NTCIR-19 participant manuscript reports the submissions~\cite{waipspaper}. This paper presents the following methods and experiments:
+\begin{enumerate}
+\item DRA-FEHU generates examples for a fixed set of 18 directed labels selected through baseline error analysis. Three-seed comparisons measure how augmentation and the treatment of unspecified labels affect ranking and thresholded recognition.
+\item WAIPS-02 separates inclusion, decided by agreement among three prompt variants, from direction arbitration using a Flash prediction.
+\item FGHF revises primary predictions from segmented articles through frequency-gated removal and addition, then checks direction disagreements. Saved stage outputs allow its gains and errors to be counted separately.
+\end{enumerate}
+The augmentation experiment evaluates the encoder on its own. The fusion experiment uses a historical v2 score export whose exact correspondence to those repeated runs is incomplete; it does not isolate the effect of augmentation on the complete system.
+
+WAIPS-01 is Liu Dongyang's label-aware ensemble and is outside my individual methodological contribution. E7 uses one historical target-label prompt from that work as an auxiliary prediction source, rather than the complete ensemble.
+
+\subsection{Organization}
+Section~\ref{sec:related} reviews related work. Section~\ref{sec:problem} defines the task and research questions. Section~\ref{sec:methods} presents the methods, and Section~\ref{sec:eval} evaluates augmentation, selective fusion, and official test performance. Section~\ref{sec:conclusion} summarizes the main findings and outlines extensions for the final thesis.
+
+\sectionbreak
+\section{Related work}\label{sec:related}
+\subsection{From value recognition in arguments to actor-conditioned news analysis}
+Kiesel et al.~\cite{kiesel2022} formulate human-value identification in arguments using 54 fine values. ValueEval evaluates 20 broader categories across multiple argument sources~\cite{valueeval}. Their hierarchical inventories support comparison across both common concepts and less frequent distinctions. FEHU extends this setting to news containing multiple actors, where a correct prediction must identify whose action expresses a value and whether it aligns with or contradicts that value.
+
+The broader NEVU resource organizes actor-conditioned annotations at multiple scopes, including articles and subevents~\cite{nevu}. FEHU uses a task-specific release with defined input and output boundaries~\cite{fehuoverview}. This study uses the FEHU Task~1 split; its dataset counts should be distinguished from those of the full NEVU collection. The multi-granularity structure also motivates the Task~2 extension proposed for the final thesis.
+
+
+\subsection{Synthetic supervision and diagnosis-guided augmentation}
+Data augmentation supplies additional task supervision by constructing new examples. As reviewed by Feng et al.~\cite{feng2021}, its usefulness depends on preserving the relation between text and labels. For FEHU, this relation includes the actor and direction: preserving a news topic alone does not preserve whether an action supports or violates a value. DRA-FEHU therefore targets directed labels selected through baseline error analysis and records the generation mode and supervision scope.
+
+EAVIT trains a local value detector with explanation-based supervision and synthetic examples. The detector narrows the value definitions passed to an online model, which makes the final value judgment~\cite{eavit}. FGHF reverses that information flow: prompt systems provide the primary and candidate sets, while local encoder scores help revise them. DRA-FEHU additionally specifies an actor, fine value, and direction in generated news records and compares full with partial supervision. These differences define the method's scope; the experiments do not include a matched EAVIT baseline.
+
+
+\subsection{Partial labels, imbalance, and the meaning of a negative example}
+In a multilabel task, an unmentioned label is not always a verified negative. This matters when a synthetic example is generated for one target value: other values may also be expressed even if the generation request did not ask for an exhaustive annotation. Treating every omitted label as negative can introduce systematic supervision errors. Durand et al.~\cite{durand2019} study multilabel learning with partial labels and provide a relevant precedent for distinguishing unknown entries from observed supervision. My masked objective applies that distinction to generated FEHU records.
+
+Masking specifies which entries are supervised, whereas class weighting changes their contribution to the loss. Negative subsampling further changes the positive-to-negative balance. These mechanisms must be distinguished when interpreting the augmentation results: additional examples expand value coverage, while the supervision rule controls how their labels enter training.
+
+The local classifier uses DeBERTaV3~\cite{debertav3} with low-rank adaptation, LoRA~\cite{lora}. These choices support repeated local training with a compact set of trainable parameters. Evaluation includes both thresholded classification and target-label ranking, matching the encoder's roles as a recognizer and an auxiliary scorer.
+
+\subsection{Prompt diversity, aggregation, and correlated errors}
+Multiple model outputs provide complementary evidence. Self-consistency aggregates sampled reasoning paths~\cite{selfconsistency}; WAIPS-02 instead applies three prompt formulations to the same article and requires exact directed-label agreement. WAIPS-03 combines outputs that also differ in intermediate segmentation and model configuration. The members process the same article and use the same taxonomy, so their predictions may be correlated. Their agreement is used as a support score.
+
+
+Segmentation reduces competing context by replacing a full article with shorter event descriptions before prediction. Segmentation granularity affects the context available to the model when predicting values for each actor. Excessive fragmentation can repeat evidence, while overly broad segments can mix actions and consequences. The self-segmentation experiments retain the article--actor output unit while varying this intermediate representation.
+
+\subsection{Calibration and F1-based decisions}
+Calibration relates a score to empirical prediction correctness. Guo et al.~\cite{guo2017} distinguish classification accuracy from calibrated confidence. FGHF uses isotonic regression to map a combined support score to correctness on development candidates, fitting separate maps for removal and addition.
+
+Lipton et al.~\cite{lipton2014} relate the F1-optimal threshold to half the optimal F1 under calibrated-probability conditions. E7 instead uses half the observed primary-system F1. This is a heuristic: the primary F1 is not the fused predictor's optimum, calibration pools different labels, and candidate decisions are constrained.
+
+Development comparisons and official test results are reported separately, following the distinction between model selection and final assessment~\cite{cawley2010}. Grouping by article keeps all actors from the same article together during calibration cross-fitting and paired bootstrap resampling~\cite{dror2018}.
+
+
+\sectionbreak
+\section{Problem definition and research questions}\label{sec:problem}
+\subsection{Input, labels, and evaluation units}
+Let $x_i=(t_i,b_i)$ denote the title and body of article $i$, and let $A_i$ be its supplied actor set. Every article has a global identifier $g_i$; an actor identifier $a\in A_i$ is interpreted within that article. The Task~1 input is $(x_i,A_i)$. The output unit is $u=(g_i,a)$, not an article alone and not an actor name pooled across articles. The system must preserve the supplied identifier even when several actor names are semantically related.
+
+Let $V=\{0,\ldots,53\}$ be the fine, Level-1 value inventory and $C=\{0,\ldots,19\}$ the coarse, Level-2 inventory. The official hierarchy supplies a map $h:V\rightarrow C$. The level numbers can be counterintuitive: Level~1 is the finer inventory, while Level~2 is the broader one. Let $D=\{0,1\}$, where $0$ means contradictory and $1$ means aligned. Task-1b predicts a set
+\begin{equation}
+\widehat{Y}_u\subseteq V\times D.
+\label{eq:output}
+\end{equation}
+There are 108 possible directed labels. A convenient encoder index is $k(v,d)=2v+d$. Task-1a predictions in my systems are obtained by projection,
+\begin{equation}
+\widehat{Z}_u=\{h(v):(v,d)\in\widehat{Y}_u\}.
+\label{eq:projection}
+\end{equation}
+Projection removes direction and merges fine values sharing a coarse category. Consequently, a direction-only correction can change Task-1b while leaving Task-1a unchanged.
+
+The official output is a JSON list of article records, each containing its identifier and actor annotations. A fine-label annotation stores the actor identifier, Level-1 identifier, and direction. The evaluator converts these annotations to sets indexed by $u$, so duplicates do not increase credit. Both directions for one fine value are permitted when the article supports them through different actions.
+
+Task~2 uses a different unit, $(g_i,s,a)$, where $s$ identifies a supplied subevent. Task-2a and Task-2b use the analogous coarse and directed inventories. This paper does not claim Task~2 results. In particular, official subevents available in training and development cannot be assumed available for Task~1 test inference. A segmentation model may derive intermediate text from the test article, but it cannot read the withheld official Task~2 structure for that article.
+
+\subsection{Learning objective and error types}
+The learning problem is to estimate a set-valued function $f(x_i,a)$ matching the annotated values. It combines label discrimination, output cardinality, and direction assignment. The analysis distinguishes missed values, unsupported values, direction reversals, and attribution to the wrong actor. The first three are measured from prediction sets; the cases also examine how evidence relates to a named actor. Coarse F1, directed F1, and DRR capture different aspects of these errors.
+
+\Needspace{14\baselineskip}
+\subsection{Research questions}
+\begin{description}
+\item[RQ1: Where does recognition fail?] How do label frequency, intermediate representation, and direction affect prompt-based and encoder-based recognition?
+\item[RQ2: What changes with augmentation?] Under a common training protocol, how does target augmentation affect label ranking and thresholded predictions? Does masking behave differently across generated-data compositions?
+\item[RQ3: What changes with selective fusion?] How do removal, addition, frequency gating, and direction checking affect the precision--recall balance of a fixed primary system?
+\end{description}
+
+\sectionbreak
+
+\section{Diagnosis-guided augmentation and selective inference}\label{sec:methods}
+\subsection{Overview and common data handling}
+The three approaches share the official article identifiers, actor identifiers, and value hierarchy. DRA-FEHU improves local-model training through targeted augmentation. WAIPS-02 aggregates prompt predictions. FGHF revises a primary prediction using prompt-juror support and the local encoder's continuous label scores.
+
+All joins use identifiers rather than array position. Training articles are matched to their gold annotations by article identifier, and labels are grouped by the supplied actor identifier. The local encoder constructs one sample per labeled article--actor unit. Prompt pipelines present the actor list together with the article and ask the model to reuse those identifiers. At output time, fine-value identifiers are checked against the inventory and converted through the official hierarchy. This common representation allows predicted sets, encoder scores, and juror votes to be aligned without comparing free-text actor names.
+
+The prompting pipeline combines training demonstrations, the taxonomy, the article, and its actor list, then parses the model response into fine and projected coarse predictions. E1 uses two complete demonstrations and removes the early restrictions on example labels and output cardinality, allowing the model to return the values supported by the article.
+
+\subsection{DRA-FEHU: selecting what to augment}
+DRA-FEHU uses a fixed set $T$ of 18 directed labels selected through baseline error analysis. They have at most 130 official-training positives, at least three development positives, and zero recall from the official-only seed-42 baseline at threshold 0.30. Fourteen are contradictory and four aligned, spanning 12 coarse categories. The aim is to supply examples where limited training support coincides with observed recognition failure. The selected labels are listed below; the archive does not fully preserve the final selection procedure.
+
+Target metrics apply to this development-selected subset and are reported alongside full-space metrics. In the archive's direction:value notation, $T$ is 0:31, 0:48, 0:53, 0:16, 0:19, 0:20, 0:13, 0:37, 0:29, 0:2, 0:33, 0:32, 0:40, 0:28, 1:31, 1:10, 1:49, and 1:4.
+
+For data generation, the prompt asks for news-like records that link a specified actor to a target value and direction. The first round supplies 340 examples after model-based semantic screening. The second supplies 900 records, or 50 per target, with the composition shown in Table~\ref{tab:augmentation}. Direction contrasts distinguish support from violation; situation transformations vary the event context; hard-negative requests contrast thematic relevance with sufficient evidence.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Second-round generation and supervision scope. The 90 hard-negative requests are a generation mode, not 90 verified negative annotations.}
+\label{tab:augmentation}
+\begin{tabularx}{\textwidth}{@{}Yr lY@{}}
+\toprule
+Generation mode & Records & Scope & Intended contrast \\
+\midrule
+Targeted in-context & 450 & Full & Target-oriented demonstrations \\
+Direction contrast & 180 & Partial & Aligned versus contradictory \\
+Situation transformation & 180 & Partial & Different event context \\
+Hard negative & 90 & Partial & Relevance versus sufficient evidence \\
+\midrule
+Total & 900 & 450 full; 450 partial & 36 explicit known negatives \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The first round received automated semantic screening; the second passed structural checks only. A six-example human pilot is too small to estimate the quality of all 1,240 records. The generation mode also differs from the observed annotation scope: only 36 second-round records carry explicit known negatives.
+
+The combined data contains 2,468 article records and 4,575 training actor units, including 3,785 with full supervision and 790 with partial supervision. One article can contribute several actor units, so these counts describe different aspects of the training set.
+
+\subsection{Masked encoder supervision and auxiliary evidence}
+The local model encodes the article title and content together with an actor-conditioned text field. A classification head maps the pooled representation to 108 logits, and independent sigmoid functions produce $p_{u,\ell}$. For a training unit $u$, let $y_{u,\ell}\in\{0,1\}$ denote the available target and $m_{u,\ell}\in\{0,1\}$ indicate whether that target is supervised. Official records and synthetic full-multilabel records use an all-one mask. Partial records supervise their known positive and explicitly known negative entries; all other entries have zero mask.
+
+For a minibatch $B$, the implemented objective is
+\begin{equation}
+\mathcal{L}(B)=\frac{\sum_{u\in B}\sum_{\ell}m_{u,\ell}
+\left[-w^+_\ell y_{u,\ell}\log p_{u,\ell}
+-(1-y_{u,\ell})\log(1-p_{u,\ell})\right]}
+{\sum_{u\in B}\sum_{\ell}m_{u,\ell}}.
+\label{eq:maskedloss}
+\end{equation}
+The positive weight is computed from supervised entries,
+\begin{equation}
+w^+_\ell=\operatorname{clip}\!\left(\sqrt{\frac{n^-_\ell}{n^+_\ell}},1,10\right),
+\label{eq:weights}
+\end{equation}
+The implementation uses $\max(n^+_\ell,1)$ in the denominator. Positive weights affect only positive loss terms.
+
+Masking excludes unknown synthetic labels from negative supervision. N1 and N3 further subsample supervised negatives for the selected targets, retaining approximately one or three negatives per positive before computing the loss weights. This changes the effective training balance; target precision and ranking are evaluated alongside recall.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\node[box,text width=7.1cm] (data) {Official records + generated records\\Full or partial article--actor labels};
+\node[box,text width=7.1cm,below=6mm of data] (mask) {\begin{tabular}{lcc}C/Fp partial entry & $y$ & $m$\\Known positive & 1 & 1\\Known negative & 0 & 1\\Unknown & -- & 0\end{tabular}\\B/Gp unspecified entries: $y=0,m=1$};
+\node[box,text width=7.1cm,below=6mm of mask] (encoder) {DeBERTaV3 + LoRA\\Binary cross-entropy with selected supervision};
+\node[box,text width=7.1cm,below=6mm of encoder] (eval) {A/B/C/Fp/Gp: three seeds\\Standalone evaluation at threshold 0.30};
+\node[box,text width=4.5cm,anchor=north west] (export) at ([xshift=10mm]data.north east) {Historical augmented v2 encoder};
+\node[box,text width=4.5cm,below=8mm of export] (scores) {Continuous probabilities\\Support for candidate labels};
+\node[box,text width=4.5cm,below=8mm of scores] (fusion) {FGHF support scores\\Combined with prompt evidence};
+\node[font=\small\bfseries,above=4mm of data] {Repeated training study};
+\node[font=\small\bfseries,above=4mm of export] {Archived fusion input};
+\draw[arr] (data) -- (mask);
+\draw[arr] (mask) -- (encoder);
+\draw[arr] (encoder) -- (eval);
+\draw[arr] (export) -- (scores);
+\draw[arr] (scores) -- (fusion);
+\draw[gray,dashed] ([xshift=5mm,yshift=7mm]data.north east) -- ([xshift=5mm]eval.south east);
+\end{tikzpicture}
+\caption{Encoder supervision and archived fusion scores. Masked conditions exclude unknown entries from the loss; the unmasked conditions treat unspecified labels as negative.}
+\label{fig:dra}
+\end{figure}
+
+FGHF takes continuous encoder scores as supporting evidence for candidates supplied by the prompt systems. It uses an archived augmented v2 export, recorded separately from the repeated encoder experiments. This lets fusion use label scores without restricting its output to the encoder's fixed-threshold predictions.
+
+\subsection{WAIPS-02: prompt majority with direction arbitration}
+WAIPS-02 uses three Pro prompt variants: a baseline, a targeted and more balanced demonstration prompt, and a compact strict prompt. Each produces a set $S_u^{(j)}\subseteq V\times D$. The majority set is
+\begin{equation}
+M_u=\left\{\ell:\sum_{j=1}^{3}\mathbf{1}[\ell\in S_u^{(j)}]\geq2\right\}.
+\label{eq:majority}
+\end{equation}
+Agreement is exact: the actor, fine value, and direction must match. A value supported in opposite directions by different members does not automatically obtain a directed majority.
+
+A separately generated Flash prediction provides a direction lookup $q_u(v)$ for values that it recognizes. For each $(v,d)\in M_u$, WAIPS-02 retains $d$ when the lookup is absent and otherwise uses $q_u(v)$. The result is deduplicated and projected to Task-1a. The lookup stores one direction per article--actor--value key. If Flash returns both directions, the last entry is used, making arbitration sensitive to output order.
+
+Arbitration reuses the complete Flash prediction and changes direction within the majority's value coverage. On test data, 2,295 majority tuples become 2,260 final directed tuples after arbitration and set deduplication. If Flash provides no direction for an actor--value pair, WAIPS-02 retains both directions when both pass the majority vote.
+
+For label inclusion, WAIPS-02 relies on prompt agreement. Flash provides the direction choice. This limits unsupported candidates but may also miss valid labels recognized by only one prompt. WAIPS-02 provides a simple system-level comparison with FGHF. Their model-call budgets differ, so the scores alone do not isolate the effect of the aggregation rule.
+
+\subsection{WAIPS-03: granularity-controlled primary predictions}
+FGHF begins with E6b, a self-segmentation pipeline that derives shorter event descriptions from the article title and body. The segmentation prompt does not use the value taxonomy. A subsequent prediction prompt receives the derived segments and the actor inventory, then produces article-level directed values. Training demonstrations may use official training subevent descriptions, but test segmentation is generated from the Task~1 article itself.
+
+The initial E6 configuration tends to produce finer descriptions, with a development median of 12 segments. E6b asks for approximately six to nine segments and has a median of eight. E6c reuses the E6b segmentation with a Pro non-thinking predictor. The design tests whether reducing fragmentation provides a better context for actor-conditioned judgment. The generated segments are summaries rather than guaranteed verbatim evidence spans, so their usefulness for F1 does not establish their factual completeness.
+
+For each unit $u$, let $P_u$ be the E6b primary set. Four historical jurors supply additional predictions: E1, E6, E6c, and the targeted prompt component noted in Section~1.3. The local encoder supplies $p_{u,\ell}$. The jurors differ in prompts, intermediate representations, or model configurations, but their errors may still be strongly dependent.
+
+\subsection{Support scores, frequency gating, and calibration}
+Let $J_u^{(j)}$ be the set from juror $j$. For a candidate $\ell=(v,d)$, define
+\begin{align}
+e_u(\ell)&=\sum_j\mathbf{1}[\ell\in J_u^{(j)}],\\
+r_u(v)&=\sum_j\mathbf{1}[\exists d'\!:\,(v,d')\in J_u^{(j)}],\\
+o_u(\ell)&=r_u(v)-e_u(\ell).
+\end{align}
+Here $o_u$ counts jurors supporting the value without supporting the exact directed tuple. A juror that predicts both directions contributes to $e_u$ and $r_u$, not to $o_u$. The removal and addition scores are
+\begin{align}
+s_{\mathrm{rm}}(u,\ell)&=e_u(\ell)+0.25\,o_u(\ell)+\max_{d'\in D}p_{u,(v,d')},\label{eq:removal}\\
+s_{\mathrm{add}}(u,\ell)&=e_u(\ell)+p_{u,\ell}.\label{eq:addition}
+\end{align}
+Removal accepts cross-direction support for the same value and uses the encoder's maximum over directions. Addition uses exact directed support and the candidate's directed score.
+
+The train-frequency gate is
+\begin{equation}
+F=\{\ell:n_\ell>130\}.
+\label{eq:gate}
+\end{equation}
+The gate contains 38 of 108 directed labels, counted from official training data. Only these labels can be removed or added; less frequent primary tuples pass through unchanged. All 18 augmentation targets lie outside the gate, so $T\cap F=\varnothing$. Direction QA can still act on them. The cutoff was chosen during development to protect labels with little calibration support.
+
+Removal and addition each use one isotonic regression, pooling candidates across labels. Removal candidates are primary tuples; addition candidates are juror tuples whose fine value is absent from the original primary set. The target is exact directed membership in development gold. Two folds are assigned by a deterministic hash of the article identifier, and each fold is scored using calibrators fitted on the other. Actors from the same article stay together.
+
+The operating threshold is half the primary system's Micro-F1 on the fitting fold. Test inference uses calibrators fitted on the complete development set, with a saved threshold of approximately 0.27479, and requires no test gold.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\node[box,fill=gray!8,draw=gray,text width=13cm] (offline) {Offline: development candidate scores + gold $\rightarrow c_{\rm rm},c_{\rm add}$\\Cross-fit for development; full-development fit for test};
+\node[box,text width=7cm,anchor=north west] (primary) at ([yshift=-8mm]offline.south west) {Article + supplied actors $\rightarrow$ E6b primary set};
+\node[box,text width=4.2cm,anchor=north east] (aux) at ([yshift=-8mm]offline.south east) {Four auxiliary predictions\\+ historical encoder scores};
+\node[box,text width=7cm,below=6mm of primary] (gate) {Official training frequency of each primary label};
+\node[box,text width=2.8cm,minimum height=16mm,anchor=north west] (low) at ([yshift=-7mm]gate.south west) {$n_\ell\leq130$\\Keep labels};
+\node[box,text width=2.8cm,minimum height=16mm,anchor=north east] (remove) at ([yshift=-7mm]gate.south east) {$n_\ell>130$\\Calibrated removal};
+\node[box,text width=2.8cm,minimum height=16mm,below=6mm of remove] (add) {Calibrated addition\\Frequent labels};
+\node[box,text width=7cm,anchor=north] (merge) at ($(gate.center |- add.south)+(0,-0.7)$) {Merge surviving primary tuples and additions};
+\node[box,text width=7cm,below=6mm of merge] (qa) {Selective Flash direction check\\Disputed single-direction values};
+\node[box,text width=7cm,below=6mm of qa] (out) {Task-1b prediction set $\rightarrow$ Task-1a projection};
+\draw[arr] (primary) -- (gate);
+\draw[arr] (gate.south -| low.north) -- (low.north);
+\draw[arr] (gate.south -| remove.north) -- (remove.north);
+\draw[arr] (remove) -- (add);
+\draw[arr] (low.south) -- (merge.north -| low.south);
+\draw[arr] (add.south) -- (merge.north -| add.south);
+\draw[arr] (merge) -- (qa);
+\draw[arr] (qa) -- (out);
+\coordinate (rmaux) at ([yshift=-2mm]remove.east);
+\coordinate (adaux) at ([yshift=-2mm]add.east);
+\coordinate (rmcal) at ([yshift=2mm]remove.east);
+\coordinate (adcal) at ([yshift=2mm]add.east);
+\coordinate (calroute) at ([xshift=3mm]offline.east);
+\draw[arr] (aux.south) |- (qa.east);
+\draw[arr] (aux.south |- rmaux) -- (rmaux);
+\draw[arr] (aux.south |- adaux) -- (adaux);
+\draw[arr,dashed,draw=gray] (offline.east) -- (calroute) |- (rmcal);
+\draw[arr,dashed,draw=gray] (calroute |- rmcal) |- (adcal);
+\end{tikzpicture}
+\caption{FGHF frequency branches and calibration. Dashed arrows supply the offline calibration maps. Removal retains at least one primary tuple; addition admits at most two directed tuples per actor.}
+\label{fig:fghf}
+\end{figure}
+
+\FloatBarrier
+\subsection{Fusion algorithm and selective direction checking}
+Algorithm~\ref{alg:fusion} gives the removal and addition steps. Candidates with lower calibrated removal scores are considered first. For an actor with a nonempty primary set, at least one label is kept. Addition considers juror candidates whose value is absent after removal and admits at most two directed tuples per actor. The minimum-one constraint is a heuristic inherited from the implemented system; the task itself permits empty predictions.
+
+\begin{algorithm}[htbp]
+\centering
+\begin{minipage}{0.96\textwidth}\small
+\hrule\vspace{6pt}
+\textbf{Frequency-gated revision of an actor's primary set}\par
+\textit{Inputs:} primary $P_u$; juror union $C_u$; frequent set $F$; calibrated score maps $c_{\mathrm{rm}},c_{\mathrm{add}}$; threshold $\theta$.\par
+\begin{enumerate}[label=\arabic*.,itemsep=4pt]
+\item Set $R\leftarrow P_u$.
+\item Rank $\ell\in R\cap F$ satisfying $c_{\mathrm{rm}}(s_{\mathrm{rm}}(u,\ell))<\theta$ by ascending calibrated score.
+\item For each ranked $\ell$, remove it from $R$ only if $|R|>1$.
+\item Record the surviving value set $V_R=\{v:(v,d)\in R\}$.
+\item Form $B=\{(v,d)\in C_u\cap F:v\notin V_R,\ c_{\mathrm{add}}(s_{\mathrm{add}}(u,(v,d)))\geq\theta\}$.
+\item Add the top two tuples in $B$ by calibrated score, or all tuples if $|B|<2$; resolve score ties deterministically as in the implementation.
+\item For each single-direction value in $R$ with an opposite-direction juror prediction, request a direction-only check. Apply a valid returned direction; retain the current direction if the recorded request fails.
+\item Return the resulting set and its coarse projection from Equation~\eqref{eq:projection}.
+\end{enumerate}
+\vspace{3pt}\hrule
+\end{minipage}
+\caption{The deployed decision logic. Step~6 uses the value set recorded at Step~4; it can admit both directions of a newly added value. Failure retention in Step~7 describes the historical run behavior.}
+\label{alg:fusion}
+\end{algorithm}
+
+Addition is applied after removal, so it can reconsider a value removed from the primary prediction. Its calibration candidates were defined using the original primary set, leaving a candidate-distribution difference to examine in later experiments. The two-tuple limit also permits both directions of a newly introduced value, consistent with the task's annotation scheme.
+
+Direction QA is triggered when a fused single-direction value has at least one juror supporting the opposite direction. The question contains the article, actor, and value definition without revealing the proposed direction. It asks the Flash model to choose aligned or contradictory. The system skips values that already have both directions. It makes an additional Flash call only when the members disagree about direction. Agreement alone does not guarantee a correct direction.
+
+In the 176 development cases, QA changed 46 directions and left 123 unchanged. The other seven requests failed, and the system kept the directions from before QA. On the test set, 77 of the 207 checks changed the direction and 125 left it unchanged. The other five requests failed, and their directions were also retained. QA preserves value identity and the Task-1a projection. Section~\ref{sec:eval} examines direction-check outcomes.
+
+\clearpage
+\section{Evaluation and discussion}\label{sec:eval}
+\subsection{Experimental design}
+The evaluation compares baseline representations, repeated encoder training, and successive fusion stages. Encoder experiments use seeds 42, 43, and 44. Prompt and fusion results use saved predictions; official test scores come from the task overview and participant manuscript. The appendix maps these results to their artifacts.
+
+
+\subsection{Dataset, sample coverage, and information boundaries}
+The study uses the official FEHU release retained in the project. Table~\ref{tab:data} distinguishes articles, supplied actors, and actors with positive gold annotations. The local encoder loader historically constructs 3,335 training and 456 development units from labeled actors. The full development event base supplies 459 actors. These are different coverage conventions, even though the three additional development actors have no positive article-level gold labels. A predictor can still incur false positives on such actors. Encoder and prompt comparisons must retain that distinction.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Counts from the retained event-base and gold files. Gold actors count article--actor units with positive article-level annotations. The two test inputs contain different articles; Task~2 test subevents are not a hidden resource for Task~1.}
+\label{tab:data}
+\begin{tabularx}{\textwidth}{@{}Yrrrr@{}}
+\toprule
+Split/input & Articles & Supplied actors & Gold actors & Subevents \\
+\midrule
+Training & 1,228 & 3,381 & 3,335 & 10,822 \\
+Development & 177 & 459 & 456 & 1,526 \\
+Task~1 test & 175 & 479 & Withheld & Not supplied \\
+\midrule
+Task~2 test & 175 & 444 & Withheld & 1,616 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The training set has 16,905 unique directed article--actor labels and 13,371 coarse labels after projection. Development has 2,390 directed labels and 1,861 coarse labels. Ninety-three directed classes have positive development support. Article identifiers are disjoint across training, development, Task~1 test, and Task~2 test. This identifier check establishes that the split files do not reuse the same article records. It does not establish semantic independence between news stories or rule out related events across splits.
+
+Figure~\ref{fig:frequency} relates the long-tailed distribution to augmentation and fusion. Training support ranges from zero to 1,735 positive article--actor units. Three directed labels have no positives. The 18 augmentation targets fall in the tail, beyond the 38 labels eligible for removal and addition. The 16,905 tuples share 1,228 articles and should not be treated as independent documents.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{semilogyaxis}[width=0.94\textwidth,height=6.2cm,xlabel={Directed-label rank by training support},ylabel={Positive article--actor units (log scale)},xmin=0,xmax=108,ymin=0.8,ymax=2300,grid=major,grid style={gray!16},tick label style={font=\small},label style={font=\small},legend style={font=\small,at={(0.99,0.97)},anchor=north east,draw=none,fill=white},clip=false]
+\path[fill=blue!7] (axis cs:0,0.8) rectangle (axis cs:38.5,2300);
+\addplot[blue,thick] coordinates {(1,1735) (2,1065) (3,993) (4,636) (5,597) (6,565) (7,473) (8,453) (9,450) (10,433) (11,364) (12,347) (13,344) (14,329) (15,308) (16,296) (17,291) (18,290) (19,287) (20,285) (21,281) (22,276) (23,263) (24,240) (25,230) (26,224) (27,210) (28,209) (29,203) (30,199) (31,198) (32,191) (33,183) (34,183) (35,181) (36,179) (37,162) (38,141) (39,128) (40,123) (41,122) (42,114) (43,108) (44,107) (45,103) (46,98) (47,82) (48,81) (49,76) (50,76) (51,75) (52,75) (53,74) (54,62) (55,59) (56,56) (57,51) (58,51) (59,49) (60,47) (61,46) (62,46) (63,45) (64,42) (65,40) (66,40) (67,38) (68,37) (69,35) (70,33) (71,33) (72,27) (73,26) (74,24) (75,23) (76,22) (77,21) (78,21) (79,16) (80,16) (81,14) (82,14) (83,14) (84,12) (85,11) (86,10) (87,10) (88,10) (89,9) (90,7) (91,6) (92,6) (93,6) (94,5) (95,5) (96,4) (97,4) (98,3) (99,3) (100,3) (101,2) (102,2) (103,1) (104,1) (105,1)};\addlegendentry{Training support}
+\addplot[gold,dashed,thick] coordinates {(0,130) (108,130)};\addlegendentry{Cutoff: 130}
+\addplot[only marks,mark=diamond*,gold,mark size=2.8pt] coordinates {(39,128) (49,76) (55,59) (56,56) (57,51) (58,51) (61,46) (62,46) (63,45) (65,40) (66,40) (67,38) (69,35) (71,33) (72,27) (83,14) (84,12) (90,7)};\addlegendentry{18 augmentation targets}
+\draw[gray,densely dashed] (axis cs:38.5,0.8) -- (axis cs:38.5,2300);
+\node[font=\small,align=center] at (axis cs:19,3.5) {38 labels eligible\\for removal/addition};
+\end{semilogyaxis}
+\end{tikzpicture}
+\caption{Training frequencies, with the 38-label gate shaded and augmentation targets marked. Three zero-frequency labels are omitted from the logarithmic curve. All targets lie outside the gate.}
+\label{fig:frequency}
+\end{figure}
+
+The experiments use the corrected actor-aligned training and development release. Reported system comparisons are tied to the saved predictions, metrics, and configurations listed in the appendix.
+
+Few-shot examples are drawn from training. Target selection, early stopping, prompt choices, calibration, and fusion selection use development information. Official Task~1 test labels are not available locally. Experiments that use official development subevents, such as the earlier E3/E3a diagnostics, have extra intermediate information compared with Task~1 test inference and are excluded from the main directly applicable system table. Generated self-segmentation is allowed because it uses only the supplied article at inference time.
+
+\subsection{Evaluation measures and their interpretation}
+For the union $U$ of gold and predicted instance keys, define $\mathrm{TP}=\sum_u|Y_u\cap\widehat{Y}_u|$, $\mathrm{FP}=\sum_u|\widehat{Y}_u\setminus Y_u|$, and $\mathrm{FN}=\sum_u|Y_u\setminus\widehat{Y}_u|$. Micro-F1 is
+\begin{equation}
+\micro=\frac{2\mathrm{TP}}{2\mathrm{TP}+\mathrm{FP}+\mathrm{FN}}.
+\label{eq:micro}
+\end{equation}
+The official macro score averages per-label F1 over the labels with positive gold support in the specified label universe:
+\begin{equation}
+\macro=\frac{1}{|L_G|}\sum_{\ell\in L_G}
+\frac{2\mathrm{TP}_\ell}{2\mathrm{TP}_\ell+\mathrm{FP}_\ell+\mathrm{FN}_\ell},
+\qquad L_G=\{\ell:\mathrm{TP}_\ell+\mathrm{FN}_\ell>0\}.
+\label{eq:macro}
+\end{equation}
+It is not the harmonic mean of macro-averaged precision and recall. Predictions for a label absent from gold can affect micro precision while receiving no separate term in gold-supported Macro-F1. Both metrics are needed to characterize a system's behavior.
+
+For direction, let $E=\{(u,v):|\{d:(v,d)\in Y_u\}|=1\}$ and let $d^*_{u,v}$ be the unique gold direction. The evaluator computes
+\begin{equation}
+\drr=\frac{\sum_{(u,v)\in E}\mathbf{1}[(v,1-d^*_{u,v})\in\widehat{Y}_u]}{|E|}.
+\label{eq:drr}
+\end{equation}
+Development contains 2,222 such gold-exclusive pairs. Another 84 actor--value pairs have both gold directions and are excluded from DRR. If a prediction contains both directions for an exclusive gold value, it still counts as a reversal. A missing prediction does not count as a reversal. Thus an empty system has zero DRR but no useful recall; DRR must always be read alongside F1 or coverage.
+
+The scorer deduplicates labels, treats missing predictions as empty sets, and counts additional predicted instance keys as false positives. Identifier and schema checks are performed separately during export.
+
+For the 18 selected targets, I additionally report the mean per-label ROC-AUC from retained probability analyses. This measures positive--negative ranking over the evaluated actor units; it is not final multilabel F1 and does not determine a deployable threshold. Thresholds chosen separately using each target's development gold would provide an oracle diagnostic rather than an unbiased test result. The repeated-run plots therefore show ranking and thresholded output as different views of the same model.
+
+\subsection{Models, hardware, and parameter selection}
+The local encoder is \code{microsoft/deberta-v3-base}, with 12 layers and hidden width 768. Its official model card reports 86 million backbone parameters and 98 million embedding parameters~\cite{debertacard}. The retained implementation adds a 108-output linear head and applies LoRA to query and value projections. A preserved smoke-run configuration reports 589,824 trainable adapter parameters; this count does not include every newly added head parameter.
+
+The external models are recorded as \code{deepseek-v4-pro} and \code{deepseek-v4-flash}; augmentation uses the Pro preview described in the experiment records. The official organizer comparison is a separately adapted Llama-3.1-8B-Instruct system~\cite{fehuoverview}.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Principal implementation settings for the reported experiments.}
+\label{tab:settings}
+\begin{tabularx}{\textwidth}{@{}P{3.25cm}YY@{}}
+\toprule
+Component & Recorded setting & How it is used or selected \\
+\midrule
+Encoder input & Maximum 512 tokens; article and actor pair & Truncation limits accessible article evidence \\
+LoRA & Rank 16; scaling 32; dropout 0.1 & Query/value projection adaptation \\
+Optimization & AdamW; learning rate $2\times10^{-4}$; weight decay 0.01 & Cosine schedule; warmup fraction 0.1 \\
+Training schedule & Batch 8; accumulation 4; at most 15 epochs & Patience 4; best development Micro-F1 \\
+Prediction threshold & Global 0.30 & Common standalone encoder operating point \\
+Repeated runs & Seeds 42, 43, 44 & Same three seeds across conditions \\
+E1 prompting & Two complete training examples; temperature 0.1 & Prompt repair removes example/output caps \\
+WAIPS-02 & Three Pro prompts plus one Flash prediction; temperature 0 & Exact majority and cached direction arbitration \\
+FGHF gate and scores & Count $>130$; value-only weight 0.25; at most 2 additions & Train-frequency gate; development-designed rules \\
+FGHF calibration & Two article folds; isotonic maps; $F_1/2$ threshold & Cross-fit on development; full-development fit for test \\
+Direction QA & Flash; temperature 0.1; 300 output tokens; up to 3 attempts & Only explicit single-direction disagreements \\
+E6/E6b; E6c & Flash; Pro, respectively; temperature 0.1 & E6c reuses E6b segments and explicitly disables thinking \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The archived smoke run used an NVIDIA GeForce RTX~4090. Its software environment comprised Python~3.11.15, PyTorch~2.6.0 with CUDA~12.4, Transformers~5.8.1, and PEFT~0.19.1. These settings document that smoke run; complete environment records were not retained for every formal experiment.
+
+WAIPS-02 uses four article passes at test time. E7 uses two segmentation passes, five prediction passes, and additional checks for direction disagreements. It therefore requires more requests, but their different lengths prevent a fair cost comparison without token, retry, and latency measurements.
+
+\subsection{RQ1: baseline diagnosis and the effect of representation}
+Table~\ref{tab:devsystems} groups the saved development outputs by system type. The official-only seed-42 encoder has directed Macro-F1 0.0305; the historical augmented encoder reaches 0.1303 but has higher DRR. RQ2 examines augmentation and its supervision settings through repeated training.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Development results on 177 articles. Encoder rows follow the historical 456 labeled-actor convention; prompt and fusion files are checked against the 459 supplied actors. Scores are single retained outputs, not repeated external-model means. DRR is lower-is-better; F1 is higher-is-better.}
+\label{tab:devsystems}
+\begin{tabularx}{\textwidth}{@{}Yrrrrr@{}}
+\toprule
+System & 1a Micro & 1a Macro & 1b Micro & 1b Macro & DRR $\downarrow$ \\
+\midrule
+\multicolumn{6}{@{}l}{Standalone encoders (456 labeled actors)}\\
+DeBERTa official-only, seed 42 & 0.5090 & 0.1351 & 0.3023 & 0.0305 & 0.2165 \\
+DeBERTa augmented v2, historical & 0.5405 & 0.3420 & 0.3306 & 0.1303 & 0.2880 \\
+\midrule
+\multicolumn{6}{@{}l}{Prompt systems (459 supplied actors)}\\
+E1 repaired few-shot prompt & 0.6574 & 0.5018 & 0.5480 & 0.3719 & 0.0347 \\
+E6 self-segmentation & 0.6535 & 0.5260 & 0.5412 & 0.4079 & 0.0504 \\
+E6b controlled segmentation & 0.6621 & 0.5286 & 0.5496 & 0.4124 & 0.0459 \\
+E6c Pro with E6b segments & 0.6774 & 0.5600 & 0.5343 & 0.3725 & 0.0657 \\
+WAIPS-02 selected dev policy & 0.6840 & 0.5573 & 0.5560 & 0.3816 & 0.0338 \\
+\midrule
+\multicolumn{6}{@{}l}{Fusion system}\\
+E7-G4 complete fusion & 0.6874 & 0.5471 & 0.5817 & 0.4308 & 0.0419 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Compared with E1, E6 raises Task-1b Macro-F1 but lowers Micro-F1 and increases DRR. E6b's granularity control improves both directed F1 measures over E6 and reduces DRR, although DRR remains above E1. E6c obtains stronger coarse scores but lower directed scores than E6b. This pattern suggests that identifying relevant value categories and choosing their fine labels and directions place different demands on the predictor.
+
+For RQ1, encoder recognition is limited by narrow directed-label coverage, while prompt systems trade higher coverage against unsupported labels and reversals. E6b's coarser segmentation improves its directed scores over E6, but the saved generations do not establish how often segmentation repairs actor attribution. That question requires evidence annotations.
+
+\subsection{RQ2: contribution of diagnosis-guided augmentation}
+The encoder comparison isolates the change from official-only to augmented training and examines the supervision rules. A uses official data only. B adds 900 second-round records with unspecified labels treated as negative; C uses the same records with masks. Fp combines the 340 first-round and 900 second-round records with masks, while Gp treats unspecified entries in that combined set as negative. Table~\ref{tab:seeds} reports means and sample standard deviations from seeds 42, 43, and 44, computed from the saved per-run metrics.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Encoder development results, seeds 42/43/44. SD is the sample standard deviation of saved four-decimal run metrics, not a confidence interval. DRR and target Micro-F1 show seed means; AUC averages the 18 target labels within each run.}
+\label{tab:seeds}
+\begin{tabularx}{\textwidth}{@{}lYYYrr@{}}
+\toprule
+Cell & 1b Micro $\pm$ SD & 1b Macro $\pm$ SD & Target AUC $\pm$ SD & DRR & Target F1 \\
+\midrule
+A & $0.3008\pm0.0037$ & $0.0284\pm0.0018$ & $0.5133\pm0.0304$ & 0.1580 & 0.0000 \\
+B & $0.3109\pm0.0043$ & $0.0890\pm0.0370$ & $0.6242\pm0.0108$ & 0.2823 & 0.0319 \\
+C & $0.3099\pm0.0168$ & $0.0470\pm0.0180$ & $0.5770\pm0.0282$ & 0.2196 & 0.0081 \\
+Fp & $0.3211\pm0.0346$ & $0.0878\pm0.0838$ & $0.6318\pm0.1065$ & 0.1772 & 0.0447 \\
+Gp & $0.3030\pm0.0026$ & $0.0779\pm0.0126$ & $0.5981\pm0.0210$ & 0.2850 & 0.0260 \\
+N3 & $0.2347\pm0.0675$ & $0.1074\pm0.0663$ & $0.6079\pm0.1205$ & 0.3188 & 0.0537 \\
+N1 & $0.1434\pm0.0191$ & $0.0424\pm0.0040$ & $0.5066\pm0.0494$ & 0.2975 & 0.0351 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+B improves full-space Macro-F1 and target AUC over A in all three seeds. Its mean target Micro-F1 is nevertheless only 0.0319 at threshold 0.30. The augmentation improves label ranking, but converting those scores into reliable target predictions remains difficult. Macro-F1 and target F1 therefore provide different evidence about the benefit.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.47\textwidth,height=5.5cm,xmin=0.5,xmax=5.5,ymin=0.4,ymax=0.8,ytick={0.4,0.5,0.6,0.7,0.8},xtick={1,2,3,4,5},xticklabels={{A\\0},{B\\900/N},{C\\900/M},{Fp\\1240/M},{Gp\\1240/N}},x tick label style={font=\footnotesize,align=center},yticklabel style={font=\small},scaled y ticks=false,y tick label style={/pgf/number format/fixed},title={(a) Mean target ROC-AUC},title style={font=\small},grid=major,grid style={gray!16}]
+\addplot[only marks,color=blue,mark=*,mark size=2.3pt] coordinates {(0.86,0.5359) (1.86,0.6119) (2.86,0.5824) (3.86,0.6113) (4.86,0.6082)};
+\addplot[only marks,color=gold,mark=square*,mark size=2.3pt] coordinates {(1.00,0.4787) (2.00,0.6322) (3.00,0.5465) (4.00,0.5370) (5.00,0.5739)};
+\addplot[only marks,color=ink,mark=triangle*,mark size=2.3pt] coordinates {(1.14,0.5252) (2.14,0.6284) (3.14,0.6022) (4.14,0.7471) (5.14,0.6121)};
+\addplot[black,very thick] coordinates {(0.69,0.513267) (1.31,0.513267)};
+\addplot[black,very thick] coordinates {(1.69,0.624167) (2.31,0.624167)};
+\addplot[black,very thick] coordinates {(2.69,0.577033) (3.31,0.577033)};
+\addplot[black,very thick] coordinates {(3.69,0.631800) (4.31,0.631800)};
+\addplot[black,very thick] coordinates {(4.69,0.598067) (5.31,0.598067)};
+\addplot[gray,dashed] coordinates {(0.5,0.5) (5.5,0.5)};
+\end{axis}
+\end{tikzpicture}\hfill\begin{tikzpicture}
+\begin{axis}[width=0.47\textwidth,height=5.5cm,xmin=0.5,xmax=5.5,ymin=0,ymax=0.2,ytick={0,0.05,0.1,0.15,0.2},xtick={1,2,3,4,5},xticklabels={{A\\0},{B\\900/N},{C\\900/M},{Fp\\1240/M},{Gp\\1240/N}},x tick label style={font=\footnotesize,align=center},yticklabel style={font=\small},scaled y ticks=false,y tick label style={/pgf/number format/fixed},title={(b) Task-1b Macro-F1},title style={font=\small},grid=major,grid style={gray!16}]
+\addplot[only marks,color=blue,mark=*,mark size=2.3pt] coordinates {(0.86,0.0305) (1.86,0.0463) (2.86,0.0495) (3.86,0.0587) (4.86,0.0641)};
+\addplot[only marks,color=gold,mark=square*,mark size=2.3pt] coordinates {(1.00,0.0278) (2.00,0.1078) (3.00,0.0278) (4.00,0.0224) (5.00,0.0809)};
+\addplot[only marks,color=ink,mark=triangle*,mark size=2.3pt] coordinates {(1.14,0.0270) (2.14,0.1128) (3.14,0.0636) (4.14,0.1822) (5.14,0.0888)};
+\addplot[black,very thick] coordinates {(0.69,0.028433) (1.31,0.028433)};
+\addplot[black,very thick] coordinates {(1.69,0.088967) (2.31,0.088967)};
+\addplot[black,very thick] coordinates {(2.69,0.046967) (3.31,0.046967)};
+\addplot[black,very thick] coordinates {(3.69,0.087767) (4.31,0.087767)};
+\addplot[black,very thick] coordinates {(4.69,0.077933) (5.31,0.077933)};
+\end{axis}
+\end{tikzpicture}\par\small
+\tikz\draw[blue,fill=blue] (0,0) circle (2pt);~42\quad
+\tikz\draw[gold,fill=gold] (0,0) rectangle (4pt,4pt);~43\quad
+\tikz\draw[ink,fill=ink] (0,0) -- (4pt,0) -- (2pt,4pt) -- cycle;~44\quad
+\tikz\draw[black,very thick] (0,0) -- (10pt,0);~Mean
+\caption{Three seeds and their means. Tick labels show added records: N treats unspecified labels as negative; M masks them. The AUC reference is 0.5. Fp variability is visible in both panels; panel scales differ.}
+\label{fig:seedauc}
+\end{figure}
+
+For the same 900 records, masking lowers target AUC in all three seeds. The mean falls from 0.6242 in B to 0.5770 in C. Mean Macro-F1 also falls from 0.0890 to 0.0470, while DRR decreases. When the two rounds are combined, Fp has higher mean Macro-F1 than Gp, but its Macro-F1 standard deviation is 0.0838, and two of the three runs produce no correct target predictions. Figure~\ref{fig:seedauc} shows that the higher mean is driven by one run. The effect of masking depends on the data composition, and training stability still needs improvement.
+
+Negative subsampling substantially increases target recall but leaves precision very low (Table~\ref{tab:negatives}). Many additional predictions are false positives, so the higher recall does not reliably improve target F1. Reducing negative supervision alone does not resolve target recognition at a fixed threshold.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Target results with negative subsampling. All entries are three-seed means; precision, recall, and F1 are calculated per run before averaging, with zero precision for runs without target predictions. Each run has 140 target gold positives.}
+\label{tab:negatives}
+\begin{tabularx}{\textwidth}{@{}Yrrrrrr@{}}
+\toprule
+Cell & Target TP & Target FP & Precision & Recall & Target F1 & AUC \\
+\midrule
+Fp & 12.3 & 125.0 & 0.0299 & 0.0881 & 0.0447 & 0.6318 \\
+N3 & 83.0 & 3,319.0 & 0.0284 & 0.5929 & 0.0537 & 0.6079 \\
+N1 & 131.3 & 7,255.3 & 0.0179 & 0.9381 & 0.0351 & 0.5066 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The RQ2 results support adding these generated records under the tested protocol, particularly condition B. They do not separate the effect of diagnosis-guided selection from equal-sized generic generation or oversampling. Checkpoints were selected by development Micro-F1 to keep a common training protocol, although Macro-F1 and target ranking are the main diagnostic measures. A separate selection split is needed to examine that choice and threshold sensitivity.
+
+\subsection{RQ3: staged fusion and the precision--recall trade-off}
+The E7 experiments start from the same E6b primary predictions and compare the stages in Table~\ref{tab:stages}. G1 removes weak frequent-label predictions. G3 adds supported candidates after removal. G4 applies selective direction QA to G3. The two diagnostic branches, G2 and G5, change a juror or the frequency gate within the removal-only configuration. They should be compared with G1, not treated as complete G4 ablations.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Staged comparison and removal-branch controls on 177 development articles. G0: E6b; G1: removal; G3: removal and addition; G4: direction QA; G2: no target-prompt juror; G5: no gate. P/R are micro precision/recall.}
+\label{tab:stages}
+\begin{tabularx}{\textwidth}{@{}Yrrrrrrr@{}}
+\toprule
+Cell & 1b P & 1b R & 1b Micro & 1b Macro & DRR & 1a Micro & Tuples \\
+\midrule
+G0 & 0.5017 & 0.6075 & 0.5496 & 0.4124 & 0.0459 & 0.6621 & 2,894 \\
+G1 & 0.5585 & 0.5632 & 0.5608 & 0.4146 & 0.0374 & 0.6587 & 2,410 \\
+G3 & 0.5389 & 0.6255 & 0.5790 & 0.4266 & 0.0450 & 0.6874 & 2,774 \\
+G4 & 0.5415 & 0.6285 & 0.5817 & 0.4308 & 0.0419 & 0.6874 & 2,774 \\
+\midrule
+\multicolumn{8}{@{}l}{Removal-only branches, compared with G1}\\
+G2 & 0.5614 & 0.5623 & 0.5619 & 0.4135 & 0.0369 & 0.6582 & 2,394 \\
+G5 & 0.5762 & 0.5644 & 0.5703 & 0.3900 & 0.0410 & 0.6707 & 2,341 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Removal aims to filter frequent-label predictions with weak combined support. It raises precision at the cost of some recall, improving Micro-F1 from 0.5496 to 0.5608. Addition then recovers labels supported by the auxiliary predictions and encoder, raising Micro-F1 to 0.5790 while increasing recall. The two stages address different errors: removal controls unsupported predictions, while addition addresses omissions.
+
+Direction QA addresses disagreements that remain after label selection. It raises Micro-F1 to 0.5817 and reduces DRR from 0.0450 to 0.0419, without changing the coarse predictions. The saved decisions contain both corrections and introduced errors, so its benefit is a small net improvement rather than uniformly better direction judgments. The cases below illustrate both outcomes.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.47\textwidth}\centering
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth,height=5.8cm,xmin=-0.2,xmax=3.2,ymin=0.38,ymax=0.61,xtick={0,1,2,3},xticklabels={G0,G1,G3,G4},title={(a) Task-1b F1},title style={font=\small},tick label style={font=\small},grid=major,grid style={gray!16},legend style={font=\small,at={(0.5,-0.17)},anchor=north,legend columns=2,draw=none}]
+\addplot[blue,thick,mark=*] coordinates {(0,0.5496) (1,0.5608) (2,0.5790) (3,0.5817)};\addlegendentry{Micro-F1}
+\addplot[gold,thick,mark=square*] coordinates {(0,0.4124) (1,0.4146) (2,0.4266) (3,0.4308)};\addlegendentry{Macro-F1}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.47\textwidth}\centering
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth,height=5.8cm,xmin=-0.2,xmax=3.2,ymin=0.48,ymax=0.66,xtick={0,1,2,3},xticklabels={G0,G1,G3,G4},title={(b) Precision and recall},title style={font=\small},tick label style={font=\small},grid=major,grid style={gray!16},legend style={font=\small,at={(0.5,-0.17)},anchor=north,legend columns=2,draw=none}]
+\addplot[blue,thick,mark=*] coordinates {(0,0.5017) (1,0.5585) (2,0.5389) (3,0.5415)};\addlegendentry{Precision}
+\addplot[gold,thick,mark=square*] coordinates {(0,0.6075) (1,0.5632) (2,0.6255) (3,0.6285)};\addlegendentry{Recall}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\caption{Gains and trade-offs across saved stages. The 95\% interval [0.0209, 0.0433] applies only to the overall G4-minus-G0 Micro-F1 comparison.}
+\label{fig:stages}
+\end{figure}
+
+In the removal-only comparison, gated G1 has higher Macro-F1 than ungated G5 (0.4146 versus 0.3900), while G5 has higher Micro-F1 (0.5703 versus 0.5608). The gate protects less-supported classes at this operating point. G2, which removes the targeted-prompt juror from the removal branch, gives a similar micro--macro trade-off.
+
+The selected targets lie outside the frequency gate, so removal and addition preserve their primary predictions. Their Micro-F1 changes only at the QA stage, from 0.3145 to 0.3264. This is the intended role of the gate: low-frequency labels remain available even when calibration support is limited.
+
+\Needspace{5\baselineskip}
+An article-level paired bootstrap with 10,000 resamples gives an overall G4-minus-E6b Micro-F1 difference of 0.0321 and a 95\% interval of [0.0209, 0.0433]. It keeps each article's actors together and compares the saved outputs; it does not measure variation from retraining or selecting another system.
+
+\subsection{Official test results and the organizer comparison}
+Table~\ref{tab:test} reports the official Task~1 scores for the submitted predictions, as recorded in the NTCIR overview and participant paper~\cite{fehuoverview,waipspaper}. WAIPS-02 corresponds to the DS\_final majority-and-arbitration submission. WAIPS-03 corresponds to the E7-G4 fusion submission.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Official Task 1 test results: 175 articles, 479 supplied actors. All four participant submissions are shown; the organizer is listed separately. Primary ranking uses Micro-F1.}
+\label{tab:test}
+\begin{tabularx}{\textwidth}{@{}Yrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{Task 1a} & \multicolumn{2}{c}{Task 1b} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+System & Micro-F1 & Macro-F1 & Micro-F1 & Macro-F1 & DRR $\downarrow$ \\
+\midrule
+WAIPS-01 & 0.6589 & 0.5366 & 0.5543 & 0.3277 & 0.0345 \\
+WAIPS-02 & 0.6930 & 0.5646 & 0.5496 & 0.3580 & 0.0395 \\
+WAIPS-03 & 0.6862 & 0.5705 & 0.5808 & 0.3952 & 0.0477 \\
+IIUoT-01 & 0.7042 & 0.5808 & 0.5979 & 0.3930 & 0.0613 \\
+\midrule
+Organizer (unranked) & 0.6782 & 0.5405 & 0.6284 & 0.4402 & 0.0386 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+WAIPS-03 has higher directed Micro-F1 and Macro-F1 than WAIPS-02, alongside higher DRR and slightly lower coarse Micro-F1. Its Task-1b Macro-F1 is numerically highest among the four participant submissions. IIUoT-01 leads on Micro-F1, the official primary ranking metric; the organizer baseline is higher on both directed F1 measures.
+
+The organizer comparison suggests a useful next baseline. Its reported Llama-3.1-8B-Instruct system uses LoRA, a 4,096-token context, and article plus subevent training supervision. Its configuration differs from my 512-token DeBERTa classifier in backbone, context length, objective, and training examples. The stronger score is evidence that a locally adapted model can be competitive in this task. It does not identify which of those differences caused the advantage. A matched article-only versus article-plus-subevent comparison is needed before claiming that subevent supervision explains the gap.
+
+WAIPS-03's development and test Micro-F1 are close, at 0.5817 and 0.5808, while Macro-F1 falls from 0.4308 to 0.3952. Test labels are unavailable locally, so neither a test interval nor a label-level account of that macro decrease can be computed here.
+
+\subsection{Direction correction, ambiguity, and an introduced error}
+Table~\ref{tab:cases} gives three development cases with source excerpts. The excerpts are statements reported in the news; the gold interpretation is a separate annotation. They show how the same direction-checking procedure can correct an error, switch between two supported directions, or introduce an error.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Selected direction checks. Value 27 is stable society; value 26 is have a safe country. Actor suffixes complete the article identifier. Quotes are from the news text, not gold explanations.}
+\label{tab:cases}
+\begin{tabularx}{\textwidth}{@{}P{3.15cm}Y@{}}
+\toprule
+Case and decision & Reported evidence and annotation comparison \\
+\midrule
+Venezuela sanctions\newline\code{0-4491-3-3}, actor -0\newline Value 27: $1\to0$ & For \emph{US Government and Allied Nations}, the article quotes Uzcátegui: ``The situation will deteriorate with these last sanctions especially.'' This is the interviewee's forecast. Gold links sanctions to instability and assigns only contradiction; the flip corrects the directed tuple. \\
+\addlinespace
+Paris police\newline\code{0-4403-2-2}, actor -1\newline Value 27: $0\to1$ & For \emph{French Authorities and Police}, the report includes ``There was a failing'' and a proposal that concerns ``ought to trigger an `automatic alert'.'' Gold annotates both security failure and efforts to restore order. Both predicted directions match gold; the flip adds no TP and the pair is excluded from DRR. \\
+\addlinespace
+Chile protests\newline\code{0-4716-3-1}, actor -1\newline Value 26: $1\to0$ & For \emph{Government and Security Forces}: ``He justified the decision, saying he wanted to maintain public order against vandals and crime.'' This reports the government's stated purpose. Gold assigns alignment; QA changes a correct direction to a wrong one. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The Chile report also discusses force and allegations of abuse, but the saved QA decision contains no rationale establishing why the model flipped. The cases show why future evidence evaluation must distinguish a reported intention, an action, and its consequences for a specified actor. A label alone cannot show which passage determined the direction.
+
+\subsection{Interpretation of the results}
+The current experiments evaluate augmentation and fusion separately. They do not yet show how much the augmented encoder contributes to the complete fusion system. Development data also guided target selection and system choices, so calibration cross-fitting does not remove all selection bias~\cite{cawley2010}. The official test assesses the submitted systems separately. For the final thesis, the main gaps are a direct augmentation-to-fusion comparison, more stable masked training, and fuller preservation of the target-selection and historical v2 records.
+
+\sectionbreak
+\section{Conclusion and work toward the final thesis}\label{sec:conclusion}
+\subsection{Main findings and next experiments}
+For the local encoder, generated records improve Macro-F1 and target ranking. The 900-record condition with unspecified labels treated as negative gives the most consistent result. The effect of masking changes with data composition, and training with the combined data remains unstable. For the full system, removal and addition improve the balance between precision and recall, while direction checks bring a smaller additional gain.
+
+In the next experiment, I will keep the primary and auxiliary predictions fixed and compare fusion with no encoder scores, official-only scores, and augmented scores under the same calibration protocol. Equal-sized generic generation and official-example oversampling will test whether diagnosis-guided selection adds value beyond extra supervision. I will use a separate selection split and audit a sample of generated labels to study masking, threshold choice, and training stability. The full-system comparison will also include calibration quality and inference cost.
+
+\subsection{Task 2 and actor-linked evidence}
+Task~2 predicts values for article--subevent--actor tuples. Its supplied subevents make it possible to test whether more local supervision helps distinguish actors and opposing directions within an article.
+
+I will compare article-only with article-plus-subevent supervision using the same model, context length, and training budget, starting with an 8B instruction-model baseline. All instances from one article will share a fold. Task~1 inference will retain its article-only input protocol, while Task~2 uses supplied subevents. For article-level aggregation, I will also use information from the full article, because the article-level labels may differ from the union of subevent predictions.
+
+A complementary study will link each predicted value and direction to the actor, reported action, and supporting passage. Evidence annotations, including cases with opposing actions, will let us assess whether the cited text supports that relation. Evaluation will report evidence correctness, coarse and directed F1, DRR, actor coverage, and inference cost.
+
+
+\FloatBarrier
+\clearpage
+\appendix
+
+\section{Evidence traceability}
+Table~\ref{tab:evidence} maps results to archived artifacts. Saved outputs and configurations identify historical runs, since some source files have subsequently changed.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Run identity and evidence status. Historical V2 is not an identified R2/R3 checkpoint.}
+\label{tab:evidence}
+\begin{tabularx}{\textwidth}{@{}P{2.3cm}YY@{}}
+\toprule
+ID & Result or role & Available evidence and limits \\
+\midrule
+R2 / R3 & A/B/C; Fp/Gp/N1/N3 & Three-seed metrics and launch settings; not every checkpoint retained \\
+T18 & Target selection & Explicit target list and baseline probabilities; 39-to-18 rule missing \\
+V2 & Historical encoder input to E7 & Frozen predictions and probability hash; original probability file and checkpoint lineage incomplete \\
+S6 & E6/E6b/E6c predictions & Saved configurations, segments, and outputs \\
+S7 & G0/G1/G3/G4; G2/G5 controls & Predictions, metrics, actions, QA decisions, bootstrap \\
+M2 / M3 & WAIPS-02 / WAIPS-03 test & Submission manifests and prediction sets \\
+OFF & Official scores & Task overview and participant manuscript; no local test gold \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+WAIPS-02 predicts for all 175 Task~1 test articles and 479 actors. WAIPS-03 covers the same articles with nonempty predictions for 470 actors, producing 2,764 directed and 2,136 coarse tuples. Both submissions pass identifier, duplicate, and projection checks. Missing actor predictions are evaluated as empty sets; these format checks do not reproduce model training or validate semantic correctness.
+
+
+\FloatBarrier
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\begin{thebibliography}{99}
+\raggedright
+\setlength{\itemsep}{6pt}
+\bibitem{fehuoverview}
+Y. Wang, Z. Liu, J. Chen, H. Yu, X. Liu, K. Kim, and A. Jatowt.
+Overview of the NTCIR-19 FEHU Task: Fact-based Event-centric Human-value Understanding.
+Manuscript prepared for NTCIR-19, 2026.
+
+\bibitem{waipspaper}
+P. Huang, D. Liu, L. Lv, and M. Iwaihara.
+WAIPS at the NTCIR-19 FEHU: Label-Aware Prompt Ensembling and Frequency-Gated Heterogeneous Fusion for Human-Value Recognition.
+Manuscript prepared for NTCIR-19, 2026.
+
+\bibitem{kiesel2022}
+J. Kiesel, M. Alshomary, N. Handke, X. Cai, H. Wachsmuth, and B. Stein.
+Identifying the Human Values behind Arguments.
+In \emph{Proceedings of ACL}, pp. 4459--4471, 2022.
+\url{https://aclanthology.org/2022.acl-long.306/}.
+
+\bibitem{valueeval}
+J. Kiesel, M. Alshomary, N. Mirzakhmedova, M. Heinrich, N. Handke, H. Wachsmuth, and B. Stein.
+SemEval-2023 Task 4: ValueEval: Identification of Human Values Behind Arguments.
+In \emph{Proceedings of SemEval}, pp. 2287--2303, 2023.
+\url{https://aclanthology.org/2023.semeval-1.313/}.
+
+\bibitem{nevu}
+Y. Wang, X. Liu, Z. Liu, J. Chen, A. Jatowt, K. Kim, N. Kando, and H. Yu.
+Event-Centric Human Value Understanding in News-Domain Texts: An Actor-Conditioned, Multi-Granularity Benchmark.
+\emph{arXiv:2603.17838}, 2026.
+\url{https://arxiv.org/abs/2603.17838}.
+
+\bibitem{feng2021}
+S. Y. Feng, V. Gangal, J. Wei, S. Chandar, S. Vosoughi, T. Mitamura, and E. Hovy.
+A Survey of Data Augmentation Approaches for NLP.
+In \emph{Findings of ACL-IJCNLP}, pp. 968--988, 2021.
+\url{https://aclanthology.org/2021.findings-acl.84/}.
+
+\bibitem{eavit}
+W. Zhu, Y. Xie, G. Song, and X. Zhang.
+EAVIT: Efficient and Accurate Human Value Identification From Text Data via LLMs.
+In \emph{Proceedings of IJCAI}, pp. 8402--8410, 2025.
+\url{https://doi.org/10.24963/ijcai.2025/934}.
+
+\bibitem{durand2019}
+T. Durand, N. Mehrasa, and G. Mori.
+Learning a Deep ConvNet for Multi-label Classification with Partial Labels.
+In \emph{Proceedings of CVPR}, pp. 647--657, 2019.
+\url{https://arxiv.org/abs/1902.09720}.
+
+\bibitem{debertav3}
+P. He, J. Gao, and W. Chen.
+DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing.
+In \emph{International Conference on Learning Representations}, 2023.
+\url{https://arxiv.org/abs/2111.09543}.
+
+\bibitem{lora}
+E. J. Hu, Y. Shen, P. Wallis, Z. Allen-Zhu, Y. Li, S. Wang, L. Wang, and W. Chen.
+LoRA: Low-Rank Adaptation of Large Language Models.
+In \emph{International Conference on Learning Representations}, 2022.
+\url{https://arxiv.org/abs/2106.09685}.
+
+\bibitem{selfconsistency}
+X. Wang, J. Wei, D. Schuurmans, Q. Le, E. Chi, S. Narang, A. Chowdhery, and D. Zhou.
+Self-Consistency Improves Chain of Thought Reasoning in Language Models.
+In \emph{International Conference on Learning Representations}, 2023.
+\url{https://arxiv.org/abs/2203.11171}.
+
+\bibitem{guo2017}
+C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger.
+On Calibration of Modern Neural Networks.
+In \emph{Proceedings of ICML}, PMLR 70, pp. 1321--1330, 2017.
+\url{https://proceedings.mlr.press/v70/guo17a.html}.
+
+\bibitem{lipton2014}
+Z. C. Lipton, C. Elkan, and B. Narayanaswamy.
+Thresholding Classifiers to Maximize F1 Score.
+\emph{arXiv:1402.1892}, 2014.
+\url{https://arxiv.org/abs/1402.1892}.
+
+\bibitem{cawley2010}
+G. C. Cawley and N. L. C. Talbot.
+On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation.
+\emph{Journal of Machine Learning Research}, 11:2079--2107, 2010.
+\url{https://www.jmlr.org/papers/v11/cawley10a.html}.
+
+\bibitem{dror2018}
+R. Dror, G. Baumer, S. Shlomov, and R. Reichart.
+The Hitchhiker's Guide to Testing Statistical Significance in Natural Language Processing.
+In \emph{Proceedings of ACL}, pp. 1383--1392, 2018.
+\url{https://aclanthology.org/P18-1128/}.
+
+\bibitem{debertacard}
+Microsoft.
+DeBERTa-v3-base model card.
+\url{https://huggingface.co/microsoft/deberta-v3-base}.
+Accessed September 12, 2026.
+\end{thebibliography}
+\end{document}

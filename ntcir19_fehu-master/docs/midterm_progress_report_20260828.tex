@@ -1,0 +1,112 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,top=12mm,bottom=12mm,left=14mm,right=14mm]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{tabularx}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{1em}
+\setlist[itemize]{leftmargin=*,nosep,topsep=1pt}
+\setlist[enumerate]{leftmargin=*,nosep,topsep=1pt}
+\renewcommand{\arraystretch}{0.94}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\compactsection}[1]{%
+  \vspace{2pt}\noindent{\normalsize\bfseries #1}\par\vspace{1pt}}
+
+\begin{document}
+\small
+
+\begin{center}
+  {\large\bfseries Midterm Progress Report}\\[-1pt]
+  {\footnotesize Peiyang Huang \hfill August 28, 2026}\\[2pt]
+  {\normalsize\bfseries Diagnosis-Guided Augmentation and Frequency-Gated Fusion\\
+  for Actor-Conditioned Human-Value Recognition}
+\end{center}
+
+\compactsection{Research objective and central idea}
+NTCIR-19 FEHU Task~1 asks systems to identify human values for each actor in a
+news article and, for fine-grained values, predict alignment or contradiction. I
+study a long-tail failure mode: recall-oriented systems recover difficult labels
+but add false positives and direction errors, whereas conservative systems miss
+valid labels. My working hypothesis is that \emph{value recovery, precision control,
+and direction assignment should be treated as related but separate decisions}.
+DRA-FEHU addresses label recovery, while WAIPS--02 and WAIPS--03 implement two
+related but distinct inference strategies for controlling precision and direction.
+
+\compactsection{Research questions}
+\begin{enumerate}
+  \item Where do prompt-based and encoder-based systems fail across label-frequency groups and error types?
+  \item Does DRA-FEHU provide useful auxiliary evidence for the 18 selected rare or difficult directed labels?
+  \item How do WAIPS--02 Three-Way Prompt Majority with Direction Arbitration and WAIPS--03/E7--G4 Frequency-Gated Heterogeneous Fusion trade off recall, precision, and direction stability?
+\end{enumerate}
+
+\compactsection{Method and evaluation outline}
+\begin{enumerate}
+  \item In DRA-FEHU, I use label-level true positives, false positives, false negatives, and direction reversals to select 18 low-frequency or difficult directed labels.
+  \item For these labels, I generate label-conditioned training records and fine-tune DeBERTa-v3-base with LoRA and masked partial-label supervision. The encoder supplies continuous auxiliary evidence rather than final direction decisions.
+  \item For WAIPS--02 Three-Way Prompt Majority with Direction Arbitration, I combine three prompt variants by exact-tuple majority and use a Flash prediction to arbitrate direction.
+  \item For WAIPS--03/E7--G4 Frequency-Gated Heterogeneous Fusion, I use E6b Granularity-Controlled Self-Segmentation as the primary generator and combine prompt jurors with DeBERTa scores through calibrated veto and addition rules, followed by QA only for explicit direction disagreements.
+\end{enumerate}
+
+\compactsection{Initial results}
+\begin{center}
+\footnotesize
+\begin{tabularx}{0.98\textwidth}{@{}lccccY@{}}
+  \toprule
+  System & Split & 1b Micro & 1b Macro & DRR & Interpretation \\
+  \midrule
+  E6b & Dev & .5496 & .4124 & .0459 & Granularity-Controlled Self-Segmentation \\
+  E7--G4 & Dev & .5817 & .4308 & .0419 & Frequency-Gated Heterogeneous Fusion \\
+  WAIPS--01 & Official test & .5543 & .3277 & .0345 & Label-Aware Prompt Ensembling \\
+  WAIPS--02 & Official test & .5496 & .3580 & .0395 & Three-Way Prompt Majority with Direction Arbitration \\
+  WAIPS--03 & Official test & .5808 & .3952 & .0477 & Highest Task-1b Macro-F1 among participant runs \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+The development improvement of E7--G4 over E6b is $+0.0321$ Micro-F1. However,
+the final no-DeBERTa fusion ablation is unavailable; the official gain therefore
+cannot be attributed to augmentation alone.
+
+\compactsection{Contribution boundary}
+My individual contributions are DRA-FEHU, WAIPS--02, and the complete
+WAIPS--03/E7--G4 development line, including every E7--G4 iteration. WAIPS--02
+and WAIPS--03 share some design elements but use distinct decision procedures.
+Label-Aware Prompt Ensembling (WAIPS--01), developed by Liu Dongyang, is retained
+only as a named comparison method.
+
+\compactsection{Planned midterm paper (minimum 20 pages)}
+\begin{center}
+\footnotesize
+\begin{tabularx}{0.98\textwidth}{@{}cYc@{}}
+  \toprule
+  Section & Planned content & Pages \\
+  \midrule
+  1 & Introduction, motivation, research questions, and contributions & 2.0 \\
+  2 & Related work: human values, long-tail learning, augmentation, partial-label supervision, and fusion & 2.0 \\
+  3 & FEHU task, data, label space, and evaluation measures & 1.5 \\
+  4 & DRA-FEHU diagnosis, error taxonomy, and research hypotheses & 2.5 \\
+  5 & DRA-FEHU (1.75), WAIPS--02 (0.75), and WAIPS--03/E7--G4 (2.0) & 4.5 \\
+  6 & Experimental protocol, reproducibility, and WAIPS--01 comparison & 2.0 \\
+  7 & Development results, staged ablations, label-frequency analysis, and official results & 4.0 \\
+  8 & Error analysis, development-to-test transfer, contribution boundaries, and limitations & 2.5 \\
+  9 & Conclusion and future work & 0.5 \\
+  \midrule
+  -- & Body subtotal & 21.5 \\
+  -- & References & 1.5 \\
+  \midrule
+  & \textbf{Planned total} & \textbf{23.0} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\compactsection{Work before the midterm paper}
+I will finalize the individual-contribution statement, add representative error
+cases, complete the focused literature review, and run a clean component ablation
+if the required retained artifacts and computation budget are available.
+
+\end{document}
