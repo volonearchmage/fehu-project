@@ -1,7 +1,9 @@
 # Task 2 训练前准备与真实模型验证
 
-本报告用于研究分支代码审阅。第一阶段的软件准备已完成；真实预训练模型验证将在本报告追加，
-当前尚未完成。GPU 仍不可用，未进行正式训练，也没有新增模型效果指标。
+本报告用于研究分支代码审阅。软件准备与完整预训练 ModernBERT 的两 bag CPU 集成验证已完成。
+GPU 仍不可用，未进行正式训练，也没有新增模型效果指标。
+研究分支为 `task2-local-4090-20261104-2033`；第一阶段审阅提交
+`5794d76c1d08e37cacbba7173ff16d119b6c48af` 已先行推送，随后才开展下述真实模型验证。
 
 ## 已交付与验证边界
 
@@ -58,6 +60,7 @@ transformers 5.8.1、tokenizers 0.22.2；计算在 CPU 上完成。
 从 Git 根实际使用的等价命令（`FEHU_PY` 指向当时的 fehu Python）：
 
 ```bash
+FEHU_PY=/home/szf-4090/miniconda3/envs/fehu/bin/python
 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 TOKENIZERS_PARALLELISM=false \
 PYTHONPATH=ntcir19_fehu-master "$FEHU_PY" -m unittest discover \
   -s ntcir19_fehu-master/research/task2_scope_local_v1/tests -p 'test_*.py' -v
@@ -80,24 +83,126 @@ PYTHONPATH=ntcir19_fehu-master "$FEHU_PY" -m unittest discover \
 
 ## 依赖与复现
 
-CPU 隔离环境配置见 [requirements-cpu.txt](../requirements-cpu.txt)。后续真实模型检查在项目 `.venv/`
-执行，不修改原 FEHU 环境。创建/安装命令仅涉及该项目环境，不涉及系统 apt/dpkg：
+CPU 隔离环境配置见 [requirements-cpu.txt](../requirements-cpu.txt)，实际全部依赖版本见
+[requirements-cpu.lock.txt](../requirements-cpu.lock.txt)，`pip check` 通过。
+真实模型检查在项目 `.venv/` 执行，`include-system-site-packages=false`。
+环境基于原 FEHU 的 Python 3.11.15 创建，依赖单独安装；原环境包清单和三个关键文件的哈希未变。
+以下是环境不存在时的重建命令；本机环境已存在，无需重复创建：
 
 ```bash
-python3.11 -m venv ntcir19_fehu-master/.venv
-ntcir19_fehu-master/.venv/bin/python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.6.0+cpu
-ntcir19_fehu-master/.venv/bin/python -m pip install -r ntcir19_fehu-master/research/task2_scope_local_v1/requirements-cpu.txt
+/home/szf-4090/miniconda3/envs/fehu/bin/python -m venv ntcir19_fehu-master/.venv
+PIP_CONFIG_FILE=/dev/null ntcir19_fehu-master/.venv/bin/python -m pip --isolated install --index-url https://download.pytorch.org/whl/cpu torch==2.6.0+cpu
+PIP_CONFIG_FILE=/dev/null ntcir19_fehu-master/.venv/bin/python -m pip --isolated install --index-url https://pypi.org/simple -r ntcir19_fehu-master/research/task2_scope_local_v1/requirements-cpu.lock.txt
 ```
 
 tokenizer 文件按 lock 中精确 URL 获取到项目 `.cache/` 并核验哈希。新机器需要用 `prepare.py`
 重建输入/监督审计目录，用 `build_chunk_cache.py` 重建窗口缓存；两者要求输出目录不存在。
 仓库只保存哈希清单与小型验证记录，不包含环境、token 缓存或权重。
 
+## 完整预训练模型：真实 CPU 验证
+
+原缓存缺少完整权重。本轮从官方模型的上述固定 revision 下载 `model.safetensors` 和 `config.json`，
+采用无认证 HTTPS，未读取账号或 token。权重 **598,635,032 bytes**，SHA-256：
+`340ac08b74eef0d7bdec2d7981a6a3d4249bf0e6aab60634b72ad02c2b8023a9`。
+校验通过后仅从本地加载，`local_files_only=True, token=False, trust_remote_code=False`。
+原 `model_lock.json` 中 `weights_downloaded=false` 是冻结时的历史状态；下载事实由本次
+[real_cpu_provenance.json](real_cpu_provenance.json) 补充，不改历史锁文件。
+
+模型为完整 **ModernBertModel，22 层，hidden=768，149,014,272 个 encoder 参数**；
+所有编码器权重均来自预训练文件，missing/mismatched/error 均为空。
+加载时仅丢弃预训练 MLM 的 `decoder.bias`、`head.dense.weight`、`head.norm.weight`，
+另初始化 Task 2 的共享 108 维分类头（83,052 参数）。没有使用随机小型编码器替代真实模型。
+
+从冻结 fit 输入覆盖清单按 `(token数, guid, actor_id)` 排序，取两个不同文章的最短完整 bags，
+选定之后才读取它们的 fit 监督。未按标签/分数挑选，也未读取评估标签。
+
+| article | actor | tokens | 完整子事件 | windows |
+| --- | --- | ---: | ---: | ---: |
+| `9-21340-1-t` | `9-21340-1-t-0` | 111 | 2 | 1 |
+| `2-34666-1-1` | `2-34666-1-1-1` | 122 | 1 | 1 |
+
+调用现有真实 tokenizer、冻结分块、`ChunkedScopeModel` 的正文/子事件均值池化、共享 head 和 S 损失，
+在 CPU float32/SDPA 下完成一次 forward、backward、AdamW update。
+encoder/head LR 为 `2e-5/1e-4`，weight decay `.01`，seed 11，CPU 线程 2、interop 1。
+
+| 记录 | 实测结果 |
+| --- | --- |
+| encoder hidden shapes | `[1,111,768]`、`[1,122,768]` |
+| article logits | `[2,108]` |
+| subevent logits / mask | `[2,2,108]` / `[2,2]`，有效事件数 `[2,1]`；第二个 bag 的尾项为 padding |
+| 输出与损失 | 全部有限；S 总损失 1.520659（事件 0.726522 + 文章 0.794138） |
+| 梯度 | 136 个可训练参数张量都有有限梯度；encoder/head 范数 1.595865 / 2.685803 |
+| 一次更新后的参数 | 全部有限；134 个 encoder 张量、2 个 head 张量的 SHA-256 改变 |
+| forward + loss | 0.278371 秒 |
+| backward | 0.619241 秒 |
+| optimizer update | 0.645019 秒 |
+| 上述三阶段合计 | 1.542631 秒 |
+| 验证函数 / 完整进程 | 2.953200 / 4.478140 秒（进程包含 Python 导入与退出） |
+| 进程峰值 RSS | 3,355,724 KiB，约 3.20 GiB |
+
+实际环境：Python 3.11.15、torch **2.6.0+cpu**（`torch.version.cuda=None`）、transformers 5.8.1、
+tokenizers 0.22.2、numpy 2.4.4、safetensors 0.7.0、huggingface-hub 1.15.0。
+损失值仅用于检查数值和链路，不能用来评价模型效果。
+完整结果及逐参数前后哈希见 [real_cpu_result.json](real_cpu_result.json)。
+
+首次执行在更新后写 JSON 时失败：Transformers 的加载信息含 `set`。
+修正记录格式并在更新前检查可序列化性后，重新加载原始权重运行成功。
+**共两个独立、各一步的临时 CPU 更新**，没有连续训练、保存更新后权重或覆盖首次日志；
+上表是第二次成功执行的数据，首次进程耗时 4.500315 秒。
+
+成功执行命令（Git 根；该输出目录现已存在，再复现须换新目录）：
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 TOKENIZERS_PARALLELISM=false \
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_HUB_DISABLE_PROGRESS_BARS=1 \
+PYTHONPATH=ntcir19_fehu-master \
+ntcir19_fehu-master/.venv/bin/python -m research.task2_scope_local_v1.verify_real_cpu \
+  --model-dir ntcir19_fehu-master/.cache/task2_scope_local_v1/model/8949b909ec900327062f0ebf497f51aef5e6f0c8 \
+  --tokenizer-dir ntcir19_fehu-master/.cache/task2_scope_local_v1/tokenizer/8949b909ec900327062f0ebf497f51aef5e6f0c8 \
+  --supervision-dir ntcir19_fehu-master/output/task2_scope_local_v1/20261104-2135 \
+  --out ntcir19_fehu-master/output/task2_scope_local_v1/real_model_20261104-220202/validation_retry
+```
+
+## 未来正式启动命令（本轮未执行）
+
+这些命令须等 GPU 恢复、独立验收及正式训练授权后使用。`.venv` 是 CPU 专用环境；
+未来 GPU 入口使用保留的 FEHU CUDA 环境。验收文件必须匹配当前 boot、代码、输入与模型，不能用本次 CPU 记录替代。
+
+```bash
+FEHU_PY=/home/szf-4090/miniconda3/envs/fehu/bin/python
+FEHU_CACHE=ntcir19_fehu-master/output/task2_scope_local_v1/pretraining_20261104-214022/input_cache_v1
+FEHU_SUPERVISION=ntcir19_fehu-master/output/task2_scope_local_v1/20261104-2135
+FEHU_MODEL=ntcir19_fehu-master/.cache/task2_scope_local_v1/model/8949b909ec900327062f0ebf497f51aef5e6f0c8
+FEHU_GPU_REPORT=ntcir19_fehu-master/output/task2_scope_local_v1/future_gpu_ready.json
+export PYTHONPATH=ntcir19_fehu-master PYTHONDONTWRITEBYTECODE=1
+export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+
+"$FEHU_PY" -m research.task2_scope_local_v1.gpu_preflight \
+  --cache-dir "$FEHU_CACHE" --supervision-dir "$FEHU_SUPERVISION" \
+  --model-dir "$FEHU_MODEL" --out "$FEHU_GPU_REPORT" --execute
+
+"$FEHU_PY" -m research.task2_scope_local_v1.train --method J \
+  --cache-dir "$FEHU_CACHE" --supervision-dir "$FEHU_SUPERVISION" --model-dir "$FEHU_MODEL" \
+  --gpu-ready-report "$FEHU_GPU_REPORT" \
+  --out ntcir19_fehu-master/output/task2_scope_local_v1/future_J_seed11 --execute
+
+"$FEHU_PY" -m research.task2_scope_local_v1.train --method S \
+  --cache-dir "$FEHU_CACHE" --supervision-dir "$FEHU_SUPERVISION" --model-dir "$FEHU_MODEL" \
+  --gpu-ready-report "$FEHU_GPU_REPORT" \
+  --out ntcir19_fehu-master/output/task2_scope_local_v1/future_S_seed11 --execute
+```
+
+所有输出路径必须不存在。J/S 按冻结配置从相同初始权重独立训练；P 是 J 的后处理，不另训模型。
+当前代码不自动恢复断点，阈值和 checkpoint 只能使用 tune 选择。
+
 ## 尚未验证
 
-第一阶段尚未验证完整预训练 ModernBERT-base 的加载及参数更新；这将由第二阶段真实 CPU 检查补充。
+真实预训练 CPU 证据限于两个短 bag、S 损失及一次更新；没有在完整模型上运行超长两窗 bag、J/P 路径或全部划分。
 GPU/4090、CUDA/BF16、8K SDPA 的显存和速度、GPU optimizer 更新、fit 非平凡学习、完整训练与
 tune 推理均未验证；自动 resume 也未实现。`train.py` 默认静态校验，正式入口需要匹配的 GPU 验收记录。
 当前不执行正式训练命令，不以 CPU 小样本检查代替 GPU 冒烟或模型效果。
 
-系统修复保持暂停；USER_STOP.json、官方数据与历史证据保留。不调用付费 API。
+系统修复保持暂停；内核、驱动、启动配置和显示服务未改动，未重启。
+USER_STOP.json 的 SHA-256 保持不变，1,997 个冻结/历史文件检查无变化，main 未修改；
+核验摘要见 [preservation_check.json](preservation_check.json)。不调用付费 API。

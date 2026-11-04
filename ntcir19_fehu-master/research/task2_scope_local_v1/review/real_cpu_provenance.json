@@ -1,0 +1,57 @@
+{
+  "initial_review_commit": "5794d76c1d08e37cacbba7173ff16d119b6c48af",
+  "successful_process": {
+    "command": [
+      "ntcir19_fehu-master/.venv/bin/python",
+      "-m",
+      "research.task2_scope_local_v1.verify_real_cpu",
+      "--model-dir",
+      "ntcir19_fehu-master/.cache/task2_scope_local_v1/model/8949b909ec900327062f0ebf497f51aef5e6f0c8",
+      "--tokenizer-dir",
+      "ntcir19_fehu-master/.cache/task2_scope_local_v1/tokenizer/8949b909ec900327062f0ebf497f51aef5e6f0c8",
+      "--supervision-dir",
+      "ntcir19_fehu-master/output/task2_scope_local_v1/20261104-2135",
+      "--out",
+      "ntcir19_fehu-master/output/task2_scope_local_v1/real_model_20261104-220202/validation_retry"
+    ],
+    "returncode": 0,
+    "process_wall_seconds": 4.478139809998538
+  },
+  "download": {
+    "revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+    "files": {
+      "config.json": {
+        "bytes": 1193,
+        "sha256": "1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f",
+        "url": "https://huggingface.co/answerdotai/ModernBERT-base/resolve/8949b909ec900327062f0ebf497f51aef5e6f0c8/config.json"
+      },
+      "model.safetensors": {
+        "bytes": 598635032,
+        "sha256": "340ac08b74eef0d7bdec2d7981a6a3d4249bf0e6aab60634b72ad02c2b8023a9",
+        "url": "https://huggingface.co/answerdotai/ModernBERT-base/resolve/8949b909ec900327062f0ebf497f51aef5e6f0c8/model.safetensors"
+      }
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "returncode": 1,
+      "process_wall_seconds": 4.500315416000376,
+      "optimizer_steps_reached": 1,
+      "parameters_saved": false,
+      "error": "TypeError: Object of type set is not JSON serializable; reporting failed after successful update checks",
+      "script_sha256": "dcc9129652716c0d6b64df3da5cd838052800367c3a5cb7b3759205912eace8b"
+    },
+    {
+      "attempt": 2,
+      "returncode": 0,
+      "optimizer_steps": 1,
+      "reloaded_original_pretrained_weights": true,
+      "parameters_saved": false
+    }
+  ],
+  "total_independent_disposable_updates": 2,
+  "successful_result_sha256": "61c13f3ed6078840fdf4fbb3b9d2a5e7f5518c1e8b260e145d90de220a436a6b",
+  "dependency_lock_sha256": "b1059aece8678212b7eb90e27549d85f47c1665052c1a2dea3a7dfb8c4a0c342",
+  "pip_check": "No broken requirements found."
+}

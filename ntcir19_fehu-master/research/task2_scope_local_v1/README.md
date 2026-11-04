@@ -1,14 +1,17 @@
 # Task 2 本地 J/S/P：训练前软件准备
 
 2026-11-04 更新：已实现并冻结正文分窗、原始 bag 聚合和 J/S/P 共用输入缓存；
-原有 26 项测试逐项复核，补充后的 47 项 CPU 测试通过。**未训练预训练 ModernBERT，未完成 GPU 实验。**
-4,284 bags 全部可编码为预算内的 4,285 窗口，长输入软件阻塞解除。GPU 仍阻塞，权重尚未下载。
+原有 26 项测试逐项复核，补充后的 47 项 CPU 测试通过。
+本轮已在隔离 `.venv` 加载固定 revision 的完整预训练 ModernBERT，两个短 fit bags 的 CPU
+forward/backward/一次参数更新通过。**这不是模型效果评估或 GPU 实验。**
+4,284 bags 全部可编码为预算内的 4,285 窗口，长输入软件阻塞解除。GPU 仍阻塞。
 完整证据、测试覆盖边界和准确的未来启动命令见
 [训练前报告](review/PRETRAINING_REPORT.md)。审阅证据和数据/缓存哈希清单位于 `review/`；
 token 缓存本体、权重和私人系统诊断日志不提交。
 
 最新安全边界见根 AGENTS.md。保持 AnyDesk、6.17、所有现有内核与 Python 环境；
-没有安装依赖、下载模型权重、调用付费 API 或改 USER_STOP。旧 GPU 执行提示不授权本轮训练。
+本轮仅在新建的项目 `.venv` 安装 CPU 依赖，并下载固定 revision 的公开模型到项目 `.cache`；
+原 FEHU 环境保持不变。没有调用付费 API 或改 USER_STOP。旧 GPU 执行提示不授权正式训练。
 
 ## 组件与输入边界
 
@@ -25,7 +28,7 @@ token 缓存本体、权重和私人系统诊断日志不提交。
 - `build_chunk_cache.py`：全量输入缓存及 hash/coverage 审计，不读取 gold；使用完成的 manifest，
   拒绝覆盖现有目录。最新缓存是报告目录的 `input_cache_v1/`。
 - `model.py`：接受 encoder 的 `last_hidden_state`，每个范围有效 token 均值池化，接同一个 108 维线性头。
-  CPU 测试使用小型合成 encoder；未下载/实例化 ModernBERT 权重，也未验证其 GPU forward。
+  历史 CPU 单元测试使用小型合成 encoder；真实预训练模型 CPU 检查另见 `verify_real_cpu.py`，GPU forward 未验证。
 - `losses.py`：J/S 使用同一 child BCE 和文章权重 1。每 bag 的事件 BCE 除有效事件数×108，
   再对 bag 平均；文章每 bag 计一次。S 正项只在文章及 gold-positive 子事件间取 max，
   负项在文章及所有有效子事件间取 max，使用 softplus 的稳定 logit 等价形式。
@@ -37,6 +40,8 @@ token 缓存本体、权重和私人系统诊断日志不提交。
   `--execute` 需已完成并绑定代码/输入/模型的 GPU 验收文件，无 CPU fallback 或自动下载。
   J/S 各 3 epochs、同种子/顺序；只读取 fit/tune 监督。实现 epoch 保存，尚无自动 resume。
 - `gpu_preflight.py`：未来 GPU 小张量与代表性 bags 的 forward/backward/同步检查；本轮未执行。
+- `verify_real_cpu.py`：仅用两个完整短 fit bags 检查真实模型链路和一次更新，保存形状、有限梯度、
+  参数前后哈希与耗时，不保存更新后权重；固定 `.venv`、CPU torch、离线本地权重和新输出目录。
 
 `protocol.json` 原样保留初版数据/分类表/划分哈希与当时的超长阻塞记录；
 新的分块策略由 `chunking_v1.json` 冻结，训练参数由 `training_v1.json` 冻结。
@@ -50,7 +55,8 @@ token 缓存本体、权重和私人系统诊断日志不提交。
 
 沿用现有 fehu 解释器：Python 3.11.15、PyTorch 2.6.0+cu124、tokenizers 0.22.2、
 transformers 5.8.1、numpy 2.4.4。这是已完成 47 项测试的历史环境；
-新的真实模型 CPU 验证将使用项目隔离 `.venv`，依赖配置见 `requirements-cpu.txt`，原环境保持不变。
+已完成的真实模型 CPU 验证使用项目隔离 `.venv`，核心依赖见 `requirements-cpu.txt`、
+实际全部版本见 `requirements-cpu.lock.txt`，原环境保持不变。精确执行命令和结果见训练前报告。
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 TOKENIZERS_PARALLELISM=false \
@@ -71,6 +77,6 @@ PYTHONPATH=ntcir19_fehu-master \
 原有 `verify_offline.py` 也已对新目录执行，508 事件历史指标和冻结哈希保持一致。
 
 本轮结果见上方训练前报告；本机 output 中的旧 RESULTS 与诊断文件作为历史证据保留。
-剩余工作：固定权重下载/核验、GPU 恢复及验收、真实 ModernBERT 资源/学习验证、
+剩余工作：GPU 恢复及验收、真实 ModernBERT 长输入资源/学习验证、
 正式运行与 tune 选型、自动断点恢复及授权后的最终评分。
 当前没有 checkpoint、J/S/P F1、显存/训练时长或新模型预测，不能据此比较 S−J。
