@@ -1,0 +1,48 @@
+{
+  "schema": "fehu-pilot-v2",
+  "protocol_commit": "d9d070ba1290c30520f8a56c053fb753fe30e956",
+  "model": "answerdotai/ModernBERT-base",
+  "revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+  "seed": 11,
+  "epochs": 3,
+  "methods": {
+    "T": {
+      "mode": "J",
+      "article_weight": 0.0
+    },
+    "J": {
+      "mode": "J",
+      "article_weight": 1.0
+    },
+    "S": {
+      "mode": "S",
+      "article_weight": 1.0
+    }
+  },
+  "encoder_lr": 2e-05,
+  "head_lr": 0.0001,
+  "weight_decay": 0.01,
+  "warmup_fraction": 0.1,
+  "max_grad_norm": 1.0,
+  "effective_batch_bags": 16,
+  "microbatch_bags": 1,
+  "precision": "bf16",
+  "attention": "sdpa",
+  "checkpoint_windows": true,
+  "deterministic_algorithms": true,
+  "cublas_workspace_config": ":4096:8",
+  "max_length": 8192,
+  "body_overlap_tokens": 256,
+  "input_version": "v2-semantic-text-no-opaque-ids",
+  "threshold": "exact global descending tied-score groups, score>=threshold, empty=2.0; float32 probabilities compared after float64 conversion; JSON round-trip",
+  "checkpoint_selection": "max tune Task2b micro-F1, then higher threshold, then earlier epoch",
+  "P": "float32 product of selected J float32 article/event sigmoid probabilities; independent threshold only",
+  "evaluation_scope": [
+    "fit",
+    "tune"
+  ],
+  "automatic_extension": false,
+  "method": "S",
+  "mode": "S",
+  "article_weight": 1.0
+}

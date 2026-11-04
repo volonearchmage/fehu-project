@@ -1,0 +1,68 @@
+{
+  "completed": true,
+  "records": [
+    {
+      "stage": "T",
+      "argv": [
+        "/home/szf-4090/miniconda3/envs/fehu/bin/python",
+        "-m",
+        "research.task2_scope_local_v2.train",
+        "--run",
+        "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution",
+        "--method",
+        "T"
+      ],
+      "started_unix": 1793814455.0610046,
+      "pid": 72859,
+      "returncode": 0,
+      "elapsed_seconds": 796.343385219574
+    },
+    {
+      "stage": "J",
+      "argv": [
+        "/home/szf-4090/miniconda3/envs/fehu/bin/python",
+        "-m",
+        "research.task2_scope_local_v2.train",
+        "--run",
+        "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution",
+        "--method",
+        "J"
+      ],
+      "started_unix": 1793815251.4046457,
+      "pid": 79408,
+      "returncode": 0,
+      "elapsed_seconds": 796.7964959144592
+    },
+    {
+      "stage": "S",
+      "argv": [
+        "/home/szf-4090/miniconda3/envs/fehu/bin/python",
+        "-m",
+        "research.task2_scope_local_v2.train",
+        "--run",
+        "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution",
+        "--method",
+        "S"
+      ],
+      "started_unix": 1793816048.2013192,
+      "pid": 85823,
+      "returncode": 0,
+      "elapsed_seconds": 798.6101639270782
+    },
+    {
+      "stage": "tune_scoring",
+      "argv": [
+        "/home/szf-4090/miniconda3/envs/fehu/bin/python",
+        "-m",
+        "research.task2_scope_local_v2.score",
+        "--run",
+        "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution"
+      ],
+      "started_unix": 1793816846.8116553,
+      "pid": 92248,
+      "returncode": 0,
+      "elapsed_seconds": 5.347739934921265
+    }
+  ],
+  "elapsed_seconds": 2397.098555088043
+}

@@ -1,0 +1,122 @@
+{
+  "root": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648",
+  "files": {
+    "execution/J/epoch_1.pt": {
+      "bytes": 1789361518,
+      "sha256": "10e8b462f580290e2eaf8b3a357085bff3d62608c731141d0e224f56e709feb5"
+    },
+    "execution/J/epoch_2.pt": {
+      "bytes": 1789362414,
+      "sha256": "0be3e7f3037c105d192476a15df9cbb975cca821e1ac067e203468aed71b9860"
+    },
+    "execution/J/epoch_3.pt": {
+      "bytes": 1789363246,
+      "sha256": "bd7dec85cece874669a4e51ee25950a0523bf293c63e38c1f1a403fd36b32502"
+    },
+    "execution/J/tune_scores_epoch_1.json": {
+      "bytes": 13804521,
+      "sha256": "2c34f0ae78c833e98998592e50c3aea65d953c214f82c571e8a9893bf921f2f4"
+    },
+    "execution/J/tune_scores_epoch_2.json": {
+      "bytes": 13904992,
+      "sha256": "546c75c5272bfb775e30e15613154fa4dca0e6407ffa6c489a4ae076337df0f3"
+    },
+    "execution/J/tune_scores_epoch_3.json": {
+      "bytes": 13933884,
+      "sha256": "5100a7e8fadb460571a5828c2146c3d2de2a7ed0f1d72c44dee4173cd377869e"
+    },
+    "execution/S/epoch_1.pt": {
+      "bytes": 1789361518,
+      "sha256": "55309c80b4e4c904295e0559ae7369728d047d91ceb59824e0a1af282301b31e"
+    },
+    "execution/S/epoch_2.pt": {
+      "bytes": 1789362414,
+      "sha256": "3a0dc5b411c1f431dc2e8b5e7b171a3507f56227a699dc129519690e5e4e34cc"
+    },
+    "execution/S/epoch_3.pt": {
+      "bytes": 1789363246,
+      "sha256": "0729d0e2a65be5837c5e79bff770dff692b399fb79de649f74abb1b7338fe782"
+    },
+    "execution/S/tune_scores_epoch_1.json": {
+      "bytes": 13859185,
+      "sha256": "e5b4ebabcdc95bebe61c053a150dcb5cd44ec7edc4652dca878559dbcc7fdebb"
+    },
+    "execution/S/tune_scores_epoch_2.json": {
+      "bytes": 13920183,
+      "sha256": "ca8dfac6b55680b6d77c450cbec44693e3038fbda26a5586e595406d9b373b27"
+    },
+    "execution/S/tune_scores_epoch_3.json": {
+      "bytes": 13935671,
+      "sha256": "1a31a776ba5cc4df74ca3c7e9e840df7dd334bf41f4b7c882b1bf169221f861b"
+    },
+    "execution/T/epoch_1.pt": {
+      "bytes": 1789361518,
+      "sha256": "630bb35a5201d54fec7b4c6a7c5df2c8e1ae5910b71cbc544a0fbad7a7845b44"
+    },
+    "execution/T/epoch_2.pt": {
+      "bytes": 1789362414,
+      "sha256": "2663d2e31e1c3c9135721405ebf236081bd0dfcc1920916a8221f62fd884993a"
+    },
+    "execution/T/epoch_3.pt": {
+      "bytes": 1789363246,
+      "sha256": "cb98efca183999a92b8b2e441f549cde0e9cf64f0232cd7928b19648f4c18445"
+    },
+    "execution/T/tune_scores_epoch_1.json": {
+      "bytes": 13885965,
+      "sha256": "79906fbd31a9a3069d6fba355137ba4a06adef16b45d22551ba4f36349a597e0"
+    },
+    "execution/T/tune_scores_epoch_2.json": {
+      "bytes": 13980392,
+      "sha256": "6b1a08f55088452841fd983625225084b5c56c2f854ab1f5d7acd2d7565287e7"
+    },
+    "execution/T/tune_scores_epoch_3.json": {
+      "bytes": 13993785,
+      "sha256": "56d4989b1bec94eaf0bb73ee291189f715cfbedb7d87036e01db904656eb4c5b"
+    },
+    "execution/input_cache/fit.chunks.jsonl.gz": {
+      "bytes": 7054992,
+      "sha256": "575a7b11a23e4a743a0d4b4b8e73b7853ed53c00316c34fbed9ff7d739260c18"
+    },
+    "execution/input_cache/tune.chunks.jsonl.gz": {
+      "bytes": 504305,
+      "sha256": "71bf72a916eb97e667087aa56c96600b70a8b5f155ad4adcf8c16d2cb6f25099"
+    },
+    "execution/preflight/acceptance_boundary.pt": {
+      "bytes": 1789359598,
+      "sha256": "3d96790203e0506a4a740998f3fc4febc3ca66ba6e57c1ef1b1ce777d24bf99a"
+    },
+    "execution/preflight/initial_tune_scores.json": {
+      "bytes": 12966358,
+      "sha256": "fc1e653cad584bc53daccd5a2c1af520fc92dbac06f84a4d0c9dae0f9c5fdac3"
+    },
+    "execution/tune_evaluation/J/scores.json": {
+      "bytes": 12049043,
+      "sha256": "ce2a6dfe57e813feb5ea7e0610b27e48c01e3e000b3fc112886fd14d67c6c6be"
+    },
+    "execution/tune_evaluation/P/scores.json": {
+      "bytes": 12408348,
+      "sha256": "258db959411983136cc4206a38153f07c062c17e6acc2d4dc37da08aa8d9f791"
+    },
+    "execution/tune_evaluation/S/scores.json": {
+      "bytes": 12051657,
+      "sha256": "7d806bfce628f6dfa1668bf0a2ec5b6f9178a9bd2f81c3fd3d97905dc60b1128"
+    },
+    "execution/tune_evaluation/T/scores.json": {
+      "bytes": 12081010,
+      "sha256": "9bb4d8a2feb6c561b9ac8fe0ae0a317b1d8854b302d756b81a7125b9b9fca2e7"
+    },
+    "input_cache/fit.chunks.jsonl.gz": {
+      "bytes": 7054992,
+      "sha256": "575a7b11a23e4a743a0d4b4b8e73b7853ed53c00316c34fbed9ff7d739260c18"
+    },
+    "input_cache/tune.chunks.jsonl.gz": {
+      "bytes": 504305,
+      "sha256": "71bf72a916eb97e667087aa56c96600b70a8b5f155ad4adcf8c16d2cb6f25099"
+    },
+    "preflight/acceptance_boundary.pt": {
+      "bytes": 1789359470,
+      "sha256": "02bf15f99ee9c487f06b9fa2ca4b0ce077fcc3d1da8c823e946bb634ebc7837e"
+    }
+  },
+  "uploaded": false
+}

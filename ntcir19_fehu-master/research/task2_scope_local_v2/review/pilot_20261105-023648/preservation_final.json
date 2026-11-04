@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "task_start_preserved": {
+      "checked": 150,
+      "mismatches": [],
+      "passed": true
+    },
+    "historical_archive": {
+      "checked": 1997,
+      "mismatches": [],
+      "passed": true
+    },
+    "old_environment_key_files": {
+      "checked": 3,
+      "mismatches": [],
+      "passed": true
+    }
+  },
+  "old_input_caches_unchanged": {
+    "fit": true,
+    "tune": true,
+    "holdout": true,
+    "dev": true,
+    "test2": true
+  },
+  "skipped_sensitive_paths": [],
+  "boot_unchanged": true,
+  "head_unchanged": true,
+  "branch_unchanged": true,
+  "user_stop_sha256": "f4fe69e0b92eb9a3d5190d272df83bfca39c044dfcd329dda9e56a878fc01052",
+  "passed": true
+}

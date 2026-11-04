@@ -1,0 +1,69 @@
+{
+  "method": "J",
+  "epoch": 2,
+  "optimizer_steps": 332,
+  "epoch_updates": 166,
+  "bags": 2650,
+  "microbatches": 2650,
+  "windows": 2651,
+  "order_sha256": "aac2ea8eda27b49f6fb6dbfe1c0f9c6e9caefa27bcff50a4e74c49efcf77cc18",
+  "ordered_bag_keys_sha256": "8c4712badcaf110f514176ca8cf05c33b178113682003629339460fc66d9a33b",
+  "fit_event_loss": 0.03327901345273515,
+  "fit_article_loss": 0.14579096273993547,
+  "fit_total_loss": 0.17906997618950762,
+  "fit_positive_bce": 3.5638668262185753,
+  "fit_negative_bce": 0.011097278176057365,
+  "fit_positive_cells": 14624,
+  "fit_loss_interpretation": "training-mode aggregate over changing parameters; bag-mean event/article, cell-mean positive/negative BCE; T article BCE logged but weight zero",
+  "tune": {
+    "selected": {
+      "threshold": 0.08882029354572296,
+      "tp": 414,
+      "fp": 5326,
+      "fn": 1898,
+      "precision": 0.07212543554006969,
+      "recall": 0.17906574394463667,
+      "micro_f1": 0.10283159463487332,
+      "predicted_positives": 5740
+    },
+    "fixed_05": {
+      "threshold": 0.5,
+      "tp": 3,
+      "fp": 2,
+      "fn": 2309,
+      "precision": 0.6,
+      "recall": 0.0012975778546712802,
+      "micro_f1": 0.002589555459646094,
+      "predicted_positives": 5
+    },
+    "micro_ap": 0.0433203295614429,
+    "candidates": 3843,
+    "label_cells": 415044,
+    "gold_positive_labels": 2312
+  },
+  "best_selection": {
+    "epoch": 2,
+    "threshold": 0.08882029354572296,
+    "tp": 414,
+    "fp": 5326,
+    "fn": 1898,
+    "precision": 0.07212543554006969,
+    "recall": 0.17906574394463667,
+    "micro_f1": 0.10283159463487332,
+    "predicted_positives": 5740
+  },
+  "lr_next": [
+    7.410714285714287e-06,
+    3.705357142857143e-05
+  ],
+  "forward_seconds": 39.260434134001116,
+  "backward_seconds": 207.2679567889718,
+  "optimizer_seconds": 2.940266799005258,
+  "train_seconds": 251.78284927099958,
+  "tune_and_metrics_seconds": 4.423397634000139,
+  "peak_allocated_bytes": 10274691072,
+  "peak_reserved_bytes": 12060721152,
+  "gradients_finite": true,
+  "checkpoint_seconds": 4.198849771000823,
+  "elapsed_seconds": 260.4052435279991
+}

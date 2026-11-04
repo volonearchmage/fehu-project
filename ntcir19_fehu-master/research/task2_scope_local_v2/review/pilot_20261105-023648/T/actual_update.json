@@ -1,0 +1,10 @@
+{
+  "optimizer_step": 2,
+  "lr": [
+    4.0000000000000003e-07,
+    2.0000000000000003e-06
+  ],
+  "before_sha256": "befdcf0a043d4743bafdc17169123513bac67e81e452673f000b5b2c2c1574c4",
+  "after_sha256": "f0246329b517cfcdcfb2650a0ef8a0abe8979f5a38cf83df7d9a402e43af117c",
+  "changed": true
+}

@@ -1,0 +1,5 @@
+# Preserve the bytes of copied evidence and their published SHA-256 values.
+* -text
+# Existing CSV exports use CRLF. The archived terminal table has trailing spaces.
+*.csv whitespace=cr-at-eol
+prior_attempt/preflight_failed.log whitespace=-blank-at-eol

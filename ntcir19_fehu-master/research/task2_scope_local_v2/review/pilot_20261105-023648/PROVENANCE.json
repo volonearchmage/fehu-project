@@ -1,0 +1,16 @@
+{
+  "protocol_commit": "d9d070ba1290c30520f8a56c053fb753fe30e956",
+  "documents": {
+    "PROJECT_STATE.md": "87079d5580e60f4bbd3001b236c0bd9a35b1475c8eda75bbf636531463bab1a3",
+    "AGENTS.md": "018cd3e3c07e54c85fda78471ce07807bca4ee5fa60cf9f6c7fe114333c171ea",
+    "ntcir19_fehu-master/docs/linux_4090_handoff/05_task2_research_protocol_v2.md": "d258ed7ce703872f3a003697d1cf46423e310f15c92b7c97c58a08023827966a",
+    "ntcir19_fehu-master/docs/linux_4090_handoff/06_run_task2_pilot_v2.txt": "3016246bcd4e0cf73aa7e73b4ff45b2ecec98035bfe9cdbf71ee3e33d834a19d"
+  },
+  "head": "9d162c6dd8e971cd58e1e240891892de129dc62b",
+  "branch": "task2-local-4090-20261104-2033",
+  "origin": "https://github.com/volonearchmage/fehu-project.git",
+  "time": "2026-11-05T02:37:07.046495+09:00",
+  "original_run": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution",
+  "report_source_sha256": "4cb1bd3b747788a57e3dc9b226e8bb151e8982adea2102f76895e187402873e8",
+  "publication_task": "Package existing pilot evidence only; no new training, inference or scoring"
+}

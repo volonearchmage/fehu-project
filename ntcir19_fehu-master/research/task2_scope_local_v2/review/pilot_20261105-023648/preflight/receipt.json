@@ -1,0 +1,340 @@
+{
+  "passed": true,
+  "time": "2026-11-05T02:47:26.118159+09:00",
+  "binding": {
+    "schema": "pilot-v2-binding",
+    "protocol_commit": "d9d070ba1290c30520f8a56c053fb753fe30e956",
+    "config": {
+      "schema": "fehu-pilot-v2",
+      "protocol_commit": "d9d070ba1290c30520f8a56c053fb753fe30e956",
+      "model": "answerdotai/ModernBERT-base",
+      "revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+      "seed": 11,
+      "epochs": 3,
+      "methods": {
+        "T": {
+          "mode": "J",
+          "article_weight": 0.0
+        },
+        "J": {
+          "mode": "J",
+          "article_weight": 1.0
+        },
+        "S": {
+          "mode": "S",
+          "article_weight": 1.0
+        }
+      },
+      "encoder_lr": 2e-05,
+      "head_lr": 0.0001,
+      "weight_decay": 0.01,
+      "warmup_fraction": 0.1,
+      "max_grad_norm": 1.0,
+      "effective_batch_bags": 16,
+      "microbatch_bags": 1,
+      "precision": "bf16",
+      "attention": "sdpa",
+      "checkpoint_windows": true,
+      "deterministic_algorithms": true,
+      "cublas_workspace_config": ":4096:8",
+      "max_length": 8192,
+      "body_overlap_tokens": 256,
+      "input_version": "v2-semantic-text-no-opaque-ids",
+      "threshold": "exact global descending tied-score groups, score>=threshold, empty=2.0; float32 probabilities compared after float64 conversion; JSON round-trip",
+      "checkpoint_selection": "max tune Task2b micro-F1, then higher threshold, then earlier epoch",
+      "P": "float32 product of selected J float32 article/event sigmoid probabilities; independent threshold only",
+      "evaluation_scope": [
+        "fit",
+        "tune"
+      ],
+      "automatic_extension": false
+    },
+    "input_manifest_sha256": "a9fb75fb75412af0d98d258fe2c9992438f8fbd7f138de06c675abe9775149a1",
+    "files_sha256": {
+      "research/task2_scope_local_v2/config.json": "421af40fb11394687e20c3c32ab5444ce6579e6e08b03234f7728cb01f2987b8",
+      "research/task2_scope_local_v2/inputs.py": "c1219e3f3f06bbe2477961e0649e32710bd51d584ec39f33a79503c454a26254",
+      "research/task2_scope_local_v2/common.py": "a8b7b9494fc547efb5f255623174190a64d5910912ab71ad5bb599ef5a2a118c",
+      "research/task2_scope_local_v2/metrics.py": "37848ed446f5e6f85d9bdb901108722e2c4376d8848daf567af6df0d8bec62df",
+      "research/task2_scope_local_v2/train.py": "de13659406c7317b7d51e6ef5f2c11ce8f6460b8d46461e36bfcdf076d349724",
+      "research/task2_scope_local_v2/preflight.py": "c61a01124fe57534f16b960dcc18a2e9d24355e2fc4c5a9c99c51ddff8b5e3d1",
+      "research/task2_scope_local_v2/score.py": "a558dd608a07327415172bbe4e15dfbfdfe69e5fdb1c5fe34ca67a9ed8bda941",
+      "research/task2_scope_local_v1/data.py": "4ffa31e65d7fc98d94a062ac1e349aec5fcd5077d240b70cfc04a350f049008b",
+      "research/task2_scope_local_v1/tokenization.py": "ef1a23b72359249b170bc1d65c8233e9151c11cc5602e38599b0dbf077b4174e",
+      "research/task2_scope_local_v1/chunking.py": "0f720f5cce534a5d84d901406a72ed7fb991b80b97ee9790995f9bf40709ea2e",
+      "research/task2_scope_local_v1/chunk_model.py": "0e036d84b90ce0328c499acc309184d412b0349c62d0be99f3e52dd63dc3ca6f",
+      "research/task2_scope_local_v1/model.py": "27bff2881ee19f46e431325ca95d48b556cab3acd26b4cb79ee535f21469a6da",
+      "research/task2_scope_local_v1/losses.py": "331657ac096dbe378a6c54a218d7706d33c01f427a748c11ee0ba95c89aa0cc5",
+      "research/task2_scope_local_v1/train.py": "94b76783954b7a6fe8f127b16297c98c3c1b7ad7a2083e9bdab140f1d412368e",
+      "research/task2_scope_local_v1/build_chunk_cache.py": "cdfae5beefde2c6d79b58a24ae84ed35ea61784a9a37eefae47ec712e6c2c5dd",
+      "research/task2_scope_local_v1/prepare.py": "1fd6308666f9bece55f7834305404cf6a7350106eb6a5287cd51a9a9c371764c",
+      "research/task2_scope_local_v1/model_lock.json": "14d4362b3f41a6335f6571216ca2471a703fce1c56f58d35fe5027f0bc586f22",
+      "research/task2_scope_local_v1/tokenizer_lock.json": "1a100a70e3953b58636ec52d806159b3e694b0f453fe590b0587120141375772",
+      "research/task2_scope_local_v1/training_v1.json": "152560376c6100e233e327bd5d0e50438db9d0a0efaa210a9dc13de54470481b",
+      "research/task2_prompt_baseline_v1/evaluator/official_cli.py": "3dddbdc10a3177332f96d3362bc7688d475bf398da3959511f50ff0bc21b0d5f",
+      "output/task2_scope_local_v1/20261104-2135/fit.supervision.jsonl": "35056b7f13d953c0ed1377ba18801a8dd2a94f95a30598ea875c47536730c42d",
+      "output/task2_scope_local_v2/pilot_20261105-023648/execution/input_cache/fit.chunks.jsonl.gz": "575a7b11a23e4a743a0d4b4b8e73b7853ed53c00316c34fbed9ff7d739260c18",
+      "output/task2_scope_local_v1/20261104-2135/tune.supervision.jsonl": "bdb2acafc332b816085e1ce0dfb2a68514d5c067d6e72822dc8970a2a0f2c0c6",
+      "output/task2_scope_local_v2/pilot_20261105-023648/execution/input_cache/tune.chunks.jsonl.gz": "71bf72a916eb97e667087aa56c96600b70a8b5f155ad4adcf8c16d2cb6f25099"
+    },
+    "model_files_sha256": {
+      "config.json": "1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f",
+      "model.safetensors": "340ac08b74eef0d7bdec2d7981a6a3d4249bf0e6aab60634b72ad02c2b8023a9"
+    },
+    "python": "/home/szf-4090/miniconda3/envs/fehu/bin/python",
+    "versions": {
+      "torch": "2.6.0+cu124",
+      "transformers": "5.8.1",
+      "tokenizers": "0.22.2",
+      "numpy": "2.4.4",
+      "scikit-learn": "1.8.0"
+    },
+    "cuda_build": "12.4",
+    "boot_id": "538b75ba-0663-4607-8cd0-f52ef8234899"
+  },
+  "initial_weights_sha256": "befdcf0a043d4743bafdc17169123513bac67e81e452673f000b5b2c2c1574c4",
+  "method_initial_hashes": {
+    "T": "befdcf0a043d4743bafdc17169123513bac67e81e452673f000b5b2c2c1574c4",
+    "J": "befdcf0a043d4743bafdc17169123513bac67e81e452673f000b5b2c2c1574c4",
+    "S": "befdcf0a043d4743bafdc17169123513bac67e81e452673f000b5b2c2c1574c4"
+  },
+  "forward_backward": {
+    "T": [
+      {
+        "key": [
+          "9-21340-1-t",
+          "9-21340-1-t-0"
+        ],
+        "window_tokens": [
+          90
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          2,
+          108
+        ],
+        "gradient_norm": 1.5743361711502075,
+        "gradients_finite": true,
+        "event_loss": 0.7305134534835815,
+        "article_loss": 0.7092944383621216
+      },
+      {
+        "key": [
+          "0-4722-1-2",
+          "0-4722-1-2-2"
+        ],
+        "window_tokens": [
+          1030
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          6,
+          108
+        ],
+        "gradient_norm": 1.7370023727416992,
+        "gradients_finite": true,
+        "event_loss": 0.7289677262306213,
+        "article_loss": 0.7358275651931763
+      },
+      {
+        "key": [
+          "33-2677-7-t",
+          "33-2677-7-t-0"
+        ],
+        "window_tokens": [
+          8192,
+          1985
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          9,
+          108
+        ],
+        "gradient_norm": 1.6699527502059937,
+        "gradients_finite": true,
+        "event_loss": 0.7112586498260498,
+        "article_loss": 0.714949905872345
+      }
+    ],
+    "J": [
+      {
+        "key": [
+          "9-21340-1-t",
+          "9-21340-1-t-0"
+        ],
+        "window_tokens": [
+          90
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          2,
+          108
+        ],
+        "gradient_norm": 3.257664680480957,
+        "gradients_finite": true,
+        "event_loss": 0.7305134534835815,
+        "article_loss": 0.7092944383621216
+      },
+      {
+        "key": [
+          "0-4722-1-2",
+          "0-4722-1-2-2"
+        ],
+        "window_tokens": [
+          1030
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          6,
+          108
+        ],
+        "gradient_norm": 3.48685359954834,
+        "gradients_finite": true,
+        "event_loss": 0.7289677262306213,
+        "article_loss": 0.7358275651931763
+      },
+      {
+        "key": [
+          "33-2677-7-t",
+          "33-2677-7-t-0"
+        ],
+        "window_tokens": [
+          8192,
+          1985
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          9,
+          108
+        ],
+        "gradient_norm": 3.2396771907806396,
+        "gradients_finite": true,
+        "event_loss": 0.7112586498260498,
+        "article_loss": 0.714949905872345
+      }
+    ],
+    "S": [
+      {
+        "key": [
+          "9-21340-1-t",
+          "9-21340-1-t-0"
+        ],
+        "window_tokens": [
+          90
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          2,
+          108
+        ],
+        "gradient_norm": 3.3659374713897705,
+        "gradients_finite": true,
+        "event_loss": 0.7305134534835815,
+        "article_loss": 0.809651255607605
+      },
+      {
+        "key": [
+          "0-4722-1-2",
+          "0-4722-1-2-2"
+        ],
+        "window_tokens": [
+          1030
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          6,
+          108
+        ],
+        "gradient_norm": 3.60469913482666,
+        "gradients_finite": true,
+        "event_loss": 0.7289677262306213,
+        "article_loss": 0.8105307817459106
+      },
+      {
+        "key": [
+          "33-2677-7-t",
+          "33-2677-7-t-0"
+        ],
+        "window_tokens": [
+          8192,
+          1985
+        ],
+        "article_shape": [
+          1,
+          108
+        ],
+        "event_shape": [
+          1,
+          9,
+          108
+        ],
+        "gradient_norm": 3.580272674560547,
+        "gradients_finite": true,
+        "event_loss": 0.7112586498260498,
+        "article_loss": 0.8217862248420715
+      }
+    ]
+  },
+  "adamw": {
+    "first_lr": [
+      0.0,
+      0.0
+    ],
+    "second_lr": [
+      4.0000000000000003e-07,
+      2.0000000000000003e-06
+    ],
+    "before_sha256": "befdcf0a043d4743bafdc17169123513bac67e81e452673f000b5b2c2c1574c4",
+    "after_sha256": "1d707544b3bc5b309ac17077823561933677aaa0e1479cc00ac5e9bd8b8f87dd",
+    "actual_parameters_updated": true
+  },
+  "updated_longest": {
+    "key": [
+      "33-2677-7-t",
+      "33-2677-7-t-0"
+    ],
+    "windows": [
+      8192,
+      1985
+    ],
+    "elapsed_seconds": 1.5380009029995563,
+    "peak_allocated_bytes": 9675252224,
+    "peak_reserved_bytes": 11431575552
+  },
+  "resume_next_step_exact": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "total_memory": 25217400832,
+  "elapsed_seconds": 30.581707354000173,
+  "no_learning_score_gate": true
+}

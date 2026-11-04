@@ -1,0 +1,1034 @@
+{
+  "schema": "fehu-v2-review-copy-v1",
+  "files": [
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/PILOT_RESULTS.md",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/PILOT_RESULTS.md",
+      "bytes": 15348,
+      "sha256": "4cb1bd3b747788a57e3dc9b226e8bb151e8982adea2102f76895e187402873e8",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/ENGINEERING_CHANGE.md",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/ENGINEERING_CHANGE.md",
+      "bytes": 1333,
+      "sha256": "122c41b905e6b29998dd258c7f078154f46577599808f1117c8bf5a188aeebf7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/frozen.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/frozen.json",
+      "bytes": 5814,
+      "sha256": "0bf07e739de15e32430fc0fde4ed87509daf8feae9c37f18d5e0d198bc38531d",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/config_T.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/config_T.json",
+      "bytes": 1381,
+      "sha256": "53df6e18e394635ec3e412b4c15b8bba96389a7221ea5e0d32556e939d15b590",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/config_J.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/config_J.json",
+      "bytes": 1381,
+      "sha256": "80162012c7da8d68bc4944046280495d0c3179a3068437ecf04d4e06a498d147",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/config_S.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/config_S.json",
+      "bytes": 1381,
+      "sha256": "797f6a9b39015fd3bc359c21d4eded1b83020dd177e86a4ff61910685db147cc",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/launcher.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/launcher.json",
+      "bytes": 973,
+      "sha256": "1faf30f846411742cd8174f95d2728fbb6cc10195b8c519d997d32b9c98c0c39",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/driver_result.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/driver_result.json",
+      "bytes": 2040,
+      "sha256": "df5d1d52f0e0264c560b65b6f78825a94c79e584665329f55353849ace3fc75d",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/stage_completions.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/stage_completions.jsonl",
+      "bytes": 1529,
+      "sha256": "efb726484311a791e5ca82907a887bbf13de47c615b1c5834958ea2fa455c99f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/learning_curves.csv",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/learning_curves.csv",
+      "bytes": 1527,
+      "sha256": "4e533e9484eb3f51babef83c933778db3d6e536ee0486cf30686bc0e6e5dcb58",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/learning_curves.png",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/learning_curves.png",
+      "bytes": 219611,
+      "sha256": "4148d64411a31fc08918b356e3c4845c061efda1f225c945e3e972722d3f6a55",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/learning_curves.pdf",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/learning_curves.pdf",
+      "bytes": 24847,
+      "sha256": "d8e795b2e67293c9ee97ffec75bfee4448c0f18ecc0ef45f72bfce79ab820e90",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_pr_curves.png",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_pr_curves.png",
+      "bytes": 139960,
+      "sha256": "9d296b8c0db5475eef913bcc106cf04171a5bc9caa879eaee907667515bbf704",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_pr_curves.pdf",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_pr_curves.pdf",
+      "bytes": 53805,
+      "sha256": "09c48a6ece7be9deb6f91c5c1772cb408d22d4cf13212d70cb2612b9ca041421",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/training_cost.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/training_cost.json",
+      "bytes": 1583,
+      "sha256": "68b6f4cf5705b8dd8f04cf878f23a454b87f991dedcb507ab47e87675b5fcf0e",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/eta_snapshots.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/eta_snapshots.jsonl",
+      "bytes": 45037,
+      "sha256": "f09925a14bc98c87295f75bf50c6f07e5f73f76e1b89e58a5320c2f252cfaa7a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/source_final_sha256.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/source_final_sha256.json",
+      "bytes": 2427,
+      "sha256": "9cfee62a7d4d83b56f10c2a8874ad873a9c72de357c7e089f2781915826013b0",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/artifacts_final.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/artifacts_final.json",
+      "bytes": 39695,
+      "sha256": "de4f7d4cebc70e5eaf337a849407e84ea208ad621903db163d7fa609370e0285",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/preservation_final.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/preservation_final.json",
+      "bytes": 686,
+      "sha256": "09a0c9d9a58f2697e2c112750b87146b4a7eb5e2b7f703d6d1dc6a4a84bf5eba",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/final_validation.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/final_validation.json",
+      "bytes": 1248,
+      "sha256": "80a76d0f71f495c32768ea3364bbe57e05167f1b1ce00ec1abe001f614b7d973",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/input_cache/manifest.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/input_cache/manifest.json",
+      "bytes": 2466,
+      "sha256": "a9fb75fb75412af0d98d258fe2c9992438f8fbd7f138de06c675abe9775149a1",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/input_cache/fit.coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/input_cache/fit.coverage.json",
+      "bytes": 1590748,
+      "sha256": "ddc1959ca8b100c6672e77c06f3e96293952d500a0a1a75972eb4c919c0d7644",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/input_cache/tune.coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/input_cache/tune.coverage.json",
+      "bytes": 238176,
+      "sha256": "be4453a9ee2bf44bd9a0e7f8f08716761f8631afe568fc0cfeb937951207b689",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/preflight/receipt.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/preflight/receipt.json",
+      "bytes": 10742,
+      "sha256": "596324df4040fb849a28b980f8e13d36bac0048353b36c755e2cfa4a4cf003ea",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/preflight/initial_tune_metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/preflight/initial_tune_metrics.json",
+      "bytes": 722,
+      "sha256": "877db39487f52833b0c089306e593d97cdd50e8dcd9d962f87985503f89fcc99",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/preflight/initial_tune_pr_curve.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/preflight/initial_tune_pr_curve.npz",
+      "bytes": 66346,
+      "sha256": "596aea41609757602de1ca6e23605539d33db518ffc3ef888381ee5be2380321",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/preflight/next_step_comparison.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/preflight/next_step_comparison.json",
+      "bytes": 721,
+      "sha256": "469bcaa5ce991b751d8f9fd7436465dcabcc5fbcc058d8835b0b8021f3b9c87d",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/preflight/resume_consistency.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/preflight/resume_consistency.json",
+      "bytes": 6811,
+      "sha256": "2fbc066d79f97dc5c0d9eff1be54b0148a5f0dcc06dfb6e7fbcb3061400371f3",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/actual_update.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/actual_update.json",
+      "bytes": 288,
+      "sha256": "7b79e297b657eb61e31a8b4c49ae67a393a08ec9de1aa0fd691e98218a981488",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/run_manifest.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/run_manifest.json",
+      "bytes": 7789,
+      "sha256": "c34ed38a456523c220d27ff21b0b82801181fb90ead331f3118327d7058df314",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/selection.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/selection.json",
+      "bytes": 8062,
+      "sha256": "e8bf8258f413d7bc12891b5ff744c8a195bee61d84daada9526d8cd5b87df31a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/training.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/training.jsonl",
+      "bytes": 546367,
+      "sha256": "33f72a8e068c0c76c1ecd26c454031ad697055cc51c34de983c290a908833685",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/epochs.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/epochs.jsonl",
+      "bytes": 5475,
+      "sha256": "1889dd62655c0d0397d61473b6ac99edafc4228fc7a6e1da5ba1c873c4b1e2f8",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/epoch_1.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/epoch_1.json",
+      "bytes": 2083,
+      "sha256": "9f2a01b4246ae661bd3ae26baa50968fa5d9c474281f42bce3aaab682a4b7ee2",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/epoch_2.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/epoch_2.json",
+      "bytes": 2082,
+      "sha256": "e3b4affee0d1a5a8f2064247cb54d5b2ffa6828b7d375484d2588e9804d54294",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/epoch_3.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/epoch_3.json",
+      "bytes": 2054,
+      "sha256": "f28622ab16619f381d4c6a5f87176262276149e2d53892c56c9aa0ff6c7e93ca",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/pr_curve_epoch_1.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/pr_curve_epoch_1.npz",
+      "bytes": 7697,
+      "sha256": "84550721c58c4b44ef499290556679a42c7f47eaa54d151dd738ec80d4743a2a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/pr_curve_epoch_2.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/pr_curve_epoch_2.npz",
+      "bytes": 8573,
+      "sha256": "6bcd608e408a2b90b1e1f02d29b01c1987c11f63494aefabbd53cea4a5c52333",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/T/pr_curve_epoch_3.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/pr_curve_epoch_3.npz",
+      "bytes": 9297,
+      "sha256": "760e62b430dfd6a9b57c67d7ee590cb90e3fd93a85f9821cb1f5577749e010ca",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/actual_update.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/actual_update.json",
+      "bytes": 288,
+      "sha256": "2fcaede0b99894c3538d6ecd22b254235aa116baf426dd299d73ac057e499aa5",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/run_manifest.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/run_manifest.json",
+      "bytes": 7789,
+      "sha256": "cf974584ca12ea6e4f86a9946b71013a2ec7430287ec0b9afbd9d11a2ad238a8",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/selection.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/selection.json",
+      "bytes": 8108,
+      "sha256": "5f5c749bee762193519bb875b650ba3a0d91458653450031eda396e4139ccfac",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/training.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/training.jsonl",
+      "bytes": 545578,
+      "sha256": "fcf491094770d849cd2aaef757394ed28858e1bbf3a0af90c36d23b85a7b6550",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/epochs.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/epochs.jsonl",
+      "bytes": 5521,
+      "sha256": "728d895ed8eb143e4f094d4582fbcab8d9c0fcf6d1acb6748c97584303972fac",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/epoch_1.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/epoch_1.json",
+      "bytes": 2088,
+      "sha256": "4af5d30a70361c8dd4118a1f5f2f992220a97469f82bc8a80709c742c0dbd899",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/epoch_2.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/epoch_2.json",
+      "bytes": 2123,
+      "sha256": "3feadbcdadc70c6624277ade3fa898de7dfa8fe2831cc6aa8fc57bd630677ac8",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/epoch_3.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/epoch_3.json",
+      "bytes": 2054,
+      "sha256": "613a7d2a4bbb11de0b6839665ae53e7e0d70521ee055589228375a96c19cd23e",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/pr_curve_epoch_1.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/pr_curve_epoch_1.npz",
+      "bytes": 11000,
+      "sha256": "4bbeb938c7957ce0ebd5f6b3e0c72c1a5a8f222ac0798c4c0e63e4764c3e4048",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/pr_curve_epoch_2.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/pr_curve_epoch_2.npz",
+      "bytes": 14107,
+      "sha256": "c5a555f105bc44336c130467f3164f0083e37c6c582c551bff05f8b5799bf1ba",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/J/pr_curve_epoch_3.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/pr_curve_epoch_3.npz",
+      "bytes": 13014,
+      "sha256": "cb1d8e7c5af74fd3318ddcc36abb3a05ee8ebf0bd1bba15a106b8e21b73680c4",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/actual_update.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/actual_update.json",
+      "bytes": 288,
+      "sha256": "16b8f334a90fdd5b1a602b26875c5a6f14bb1333241e7a1f41100c48ef6ed19d",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/run_manifest.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/run_manifest.json",
+      "bytes": 7789,
+      "sha256": "6798c49f4d5f967c2d9bc3a16b5253212bb0098a30208844fc3842f8e982b417",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/selection.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/selection.json",
+      "bytes": 8065,
+      "sha256": "8c63d43f708c4418917583b8a4cef9500c883c55976b4fc5298345d94349c55c",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/training.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/training.jsonl",
+      "bytes": 545637,
+      "sha256": "f583e3919704e0c8f41d501478f83c60cdf392921cfde4f702750aab4b7d136e",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/epochs.jsonl",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/epochs.jsonl",
+      "bytes": 5478,
+      "sha256": "83790ed72cb5c15883cb7a79cb79ab2bf9359af5e2c727403fbf08079242f478",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/epoch_1.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/epoch_1.json",
+      "bytes": 2084,
+      "sha256": "090f64a6f089c66a7355973e40a41dc5f7ec8c80014790c63180c854a404ca9f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/epoch_2.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/epoch_2.json",
+      "bytes": 2084,
+      "sha256": "2d91d917014f62c155df9e958c2d1fb8233ed04dbaaceeeac3282ef883df1fdd",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/epoch_3.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/epoch_3.json",
+      "bytes": 2054,
+      "sha256": "1c403c8e7e9ccbde3dc556e5dba430b3c1d10cb293987279a50472e45b23dce0",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/pr_curve_epoch_1.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/pr_curve_epoch_1.npz",
+      "bytes": 11480,
+      "sha256": "c59b64470d90ef74b68862d58ef667555f1631cb864e664fdb38ff8fc34f15b6",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/pr_curve_epoch_2.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/pr_curve_epoch_2.npz",
+      "bytes": 13683,
+      "sha256": "10d077fc9e711c916b30999fc39e932404133b57e43e63eedb47a2abd1fc2fdd",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/S/pr_curve_epoch_3.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/S/pr_curve_epoch_3.npz",
+      "bytes": 13079,
+      "sha256": "728a418609a1ad522e495193709b03e1f088dcac68bd92bc5c9dc464ca1c9e2f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/summary.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/summary.json",
+      "bytes": 78976,
+      "sha256": "d4035116c3ccf78cd60e20b5e0f65d9bf2520b2f6e3fd9f6deb03affb9284459",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/comparisons.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/comparisons.json",
+      "bytes": 61181,
+      "sha256": "43c82fa5cd1cc8b9c59de41631a5cfa4073d663519c21f322ba91cf219ca2406",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/fit_frequency_baseline.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/fit_frequency_baseline.json",
+      "bytes": 4455,
+      "sha256": "d788ca7804ff5376a6aebeed7865857b57a3fa177b690d553645bc30e2f9e4dc",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/fit_frequency_pr_curve.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/fit_frequency_pr_curve.npz",
+      "bytes": 4292,
+      "sha256": "ab26ea0ed5ec69b2b9e866d8681a4920249735c54a7e15f95ba12bc5bccb6807",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/gold_provenance.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/gold_provenance.json",
+      "bytes": 5685,
+      "sha256": "f93958078de8ee32ade449d6853a587b4859d92e1853d336dc72a4f4c8f5baf6",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/tune_gold.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/tune_gold.json",
+      "bytes": 475109,
+      "sha256": "c96fb3a85d302c26a70dc303fb304ba84b6323dcd2a9c8c7396e06babecb4c75",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/diagnostics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/diagnostics.json",
+      "bytes": 156882,
+      "sha256": "db3bb94edac3380713edd790b8cebe924c38fed0954eb517a90d121966eaa7da",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selection.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selection.json",
+      "bytes": 2648,
+      "sha256": "4f9500a0fcc1ae9b81fb48bd367329859706efbad2ec431681cb2cd68fef4921",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/pr_curve.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/pr_curve.npz",
+      "bytes": 9297,
+      "sha256": "760e62b430dfd6a9b57c67d7ee590cb90e3fd93a85f9821cb1f5577749e010ca",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selected/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selected/command.json",
+      "bytes": 1021,
+      "sha256": "99e4534b2e4e401a5d71b796272fbb3be0451a2dfb31ad1238763aab029cdfdd",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selected/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selected/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selected/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selected/metrics.json",
+      "bytes": 820,
+      "sha256": "f9ad88c7420bbd0cb84c46569739c4b84308342a26f8d3710cfef1e5936ced85",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selected/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selected/stdout.json",
+      "bytes": 726,
+      "sha256": "ddb666271cc7a67cf4c0c6ebb4c36f87b000c45cdde828de9cd2e7f82cf9483a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selected/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selected/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selected/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selected/pred_task2a.json",
+      "bytes": 489966,
+      "sha256": "e99597cd43ad50e7e1c05c24a91d519ab0923fa9087c567260f7371e103af956",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/selected/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/selected/pred_task2b.json",
+      "bytes": 610704,
+      "sha256": "9a9af0496c74cd1b1fefa20839d30be5106c91a42aa08458da0aef3cd730c435",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/fixed_05/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/fixed_05/command.json",
+      "bytes": 1021,
+      "sha256": "165590cd89245a2de2ed411680d2fdc0ca12a69ce601c2d6871ebf1d54619a3f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/fixed_05/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/fixed_05/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/fixed_05/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/fixed_05/metrics.json",
+      "bytes": 658,
+      "sha256": "afd17a4079d4cd2b1c8ad88a05cbf57af10c3fd60a6621680c0a8822d6fd7e3f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/fixed_05/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/fixed_05/stdout.json",
+      "bytes": 574,
+      "sha256": "1eaa3bdedf957f254c8b156c6e4a696698064f780dc363dd2fd8796d6681d01b",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/fixed_05/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/fixed_05/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/fixed_05/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/fixed_05/pred_task2a.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/fixed_05/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/fixed_05/pred_task2b.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/diagnostics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/diagnostics.json",
+      "bytes": 157622,
+      "sha256": "8494b8996f4b548c858ac572931c42bf215cdb042707cb3fdf250d1bee7a178e",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selection.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selection.json",
+      "bytes": 2648,
+      "sha256": "1b32f084949fe4c031da9aadeb0105d8bc3e9e2fc3a32762e3dada8a846634fc",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/pr_curve.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/pr_curve.npz",
+      "bytes": 13014,
+      "sha256": "cb1d8e7c5af74fd3318ddcc36abb3a05ee8ebf0bd1bba15a106b8e21b73680c4",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selected/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selected/command.json",
+      "bytes": 1021,
+      "sha256": "4022b42102a7d41b9fa480985a0c35b0acf6aa32ec4e08029a2f02243acabd6e",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selected/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selected/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selected/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selected/metrics.json",
+      "bytes": 820,
+      "sha256": "ed7c91dbd316e6d42820d8b4e7f3ada5d6aaa7cd6c607260f5018cbc7efd4acf",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selected/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selected/stdout.json",
+      "bytes": 726,
+      "sha256": "d52f5aee6d9c50b524061df310985849fb9a82d7b82ed734858b18357654ab03",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selected/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selected/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selected/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selected/pred_task2a.json",
+      "bytes": 612690,
+      "sha256": "85416b53a8a468a9d8732662387c0a9b3e7f85e87593a8970eaae9185a13d6e6",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/selected/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/selected/pred_task2b.json",
+      "bytes": 850008,
+      "sha256": "b082a79f1b80fcc7bfe766daf00b0abb5ddec13dcca349d5512a181996f9d09a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/fixed_05/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/fixed_05/command.json",
+      "bytes": 1021,
+      "sha256": "910781a55993973e89c051a99d58a761a192517af56441bc09279402b606d426",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/fixed_05/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/fixed_05/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/fixed_05/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/fixed_05/metrics.json",
+      "bytes": 658,
+      "sha256": "afd17a4079d4cd2b1c8ad88a05cbf57af10c3fd60a6621680c0a8822d6fd7e3f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/fixed_05/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/fixed_05/stdout.json",
+      "bytes": 574,
+      "sha256": "1eaa3bdedf957f254c8b156c6e4a696698064f780dc363dd2fd8796d6681d01b",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/fixed_05/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/fixed_05/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/fixed_05/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/fixed_05/pred_task2a.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/fixed_05/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/fixed_05/pred_task2b.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/diagnostics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/diagnostics.json",
+      "bytes": 157207,
+      "sha256": "856e7633588a7123fe9db7d501d1ac3b907f9187e75fe64439597ff3b90f0251",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selection.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selection.json",
+      "bytes": 2649,
+      "sha256": "91afe005f996737d638672d68f6e76d61685c8ca311b798cca65f2550931ae27",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/pr_curve.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/pr_curve.npz",
+      "bytes": 13079,
+      "sha256": "728a418609a1ad522e495193709b03e1f088dcac68bd92bc5c9dc464ca1c9e2f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selected/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selected/command.json",
+      "bytes": 1021,
+      "sha256": "38afa1962aa870de1f99b4f28e1fd07e77051161e4c27122fa9f4901d67d8497",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selected/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selected/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selected/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selected/metrics.json",
+      "bytes": 821,
+      "sha256": "0128525036b7d512b655c0c367497204ddf7a28b7c69f16033a793e6a1872af5",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selected/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selected/stdout.json",
+      "bytes": 727,
+      "sha256": "221f5dd579bc4235e89294b1ec640f1acd6b9d1fb70c7eec5241831fa3a99fa6",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selected/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selected/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selected/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selected/pred_task2a.json",
+      "bytes": 492507,
+      "sha256": "7ae06962ac7a6e0a8c4dfad7eacea3397bfa2036f573767abcc6feeb196b9588",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/selected/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/selected/pred_task2b.json",
+      "bytes": 659495,
+      "sha256": "4adbe5893858e7be93faa9946670c061c359264966f76fd3f2904cbc76124b67",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/fixed_05/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/fixed_05/command.json",
+      "bytes": 1021,
+      "sha256": "4888346f884e4a1952fd934c8b76037ce7c775ddf2859a5a154c37321cb7145c",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/fixed_05/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/fixed_05/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/fixed_05/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/fixed_05/metrics.json",
+      "bytes": 658,
+      "sha256": "afd17a4079d4cd2b1c8ad88a05cbf57af10c3fd60a6621680c0a8822d6fd7e3f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/fixed_05/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/fixed_05/stdout.json",
+      "bytes": 574,
+      "sha256": "1eaa3bdedf957f254c8b156c6e4a696698064f780dc363dd2fd8796d6681d01b",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/fixed_05/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/fixed_05/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/fixed_05/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/fixed_05/pred_task2a.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/fixed_05/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/fixed_05/pred_task2b.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/diagnostics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/diagnostics.json",
+      "bytes": 157281,
+      "sha256": "b638038241ac105548ea437ec47f386997a1de42fa6b89e3baf9c73bd4419e19",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selection.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selection.json",
+      "bytes": 2648,
+      "sha256": "8e54921595e088f0da7fdff5d74237b66503e4499b03650c959c7d07db6655d7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/pr_curve.npz",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/pr_curve.npz",
+      "bytes": 606893,
+      "sha256": "daf7122c2d42a30173679279bd54a8389813cd04fafaef620837ba6ea9e56c67",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selected/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selected/command.json",
+      "bytes": 1021,
+      "sha256": "cf6470992c534de3be66d75348adf4c74cd24783e47cdbf6d2487f00707f8b6c",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selected/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selected/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selected/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selected/metrics.json",
+      "bytes": 818,
+      "sha256": "732dd9d7c129ab00779dee790f0ae8dca45909b3a1e587a1951311f9947d753c",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selected/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selected/stdout.json",
+      "bytes": 724,
+      "sha256": "39386f14af2a8350f0dd67549d819799674beaf8baba8e770e15d7e5aae3a5e4",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selected/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selected/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selected/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selected/pred_task2a.json",
+      "bytes": 636335,
+      "sha256": "249800d0e4785b57113e61b3a00e3fc2c564babcaf28526df612340b5d3cd36d",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/selected/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/selected/pred_task2b.json",
+      "bytes": 845893,
+      "sha256": "477ab3074b41832c5d0d5bfa92a411eb4a392c138a5fa84f21a375c3d196c051",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/fixed_05/command.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/command.json",
+      "bytes": 1021,
+      "sha256": "20ed80434bc54a70ab28e186951376f8d3da06058212196b64230b0d83ff739a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/fixed_05/coverage.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/coverage.json",
+      "bytes": 257744,
+      "sha256": "647d0dd4fdf164b49e4b9ad232924598bf676840705b0887cfa922c2776ce3f7",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/fixed_05/metrics.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/metrics.json",
+      "bytes": 658,
+      "sha256": "afd17a4079d4cd2b1c8ad88a05cbf57af10c3fd60a6621680c0a8822d6fd7e3f",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/fixed_05/stdout.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/stdout.json",
+      "bytes": 574,
+      "sha256": "1eaa3bdedf957f254c8b156c6e4a696698064f780dc363dd2fd8796d6681d01b",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/fixed_05/stderr.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/fixed_05/pred_task2a.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/pred_task2a.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/fixed_05/pred_task2b.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/pred_task2b.json",
+      "bytes": 114627,
+      "sha256": "e1d513f89acb5d650820b850a066b6e91b3529c4da6935b13d7eded6bebbfb0a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/prior_attempt/PROTOCOL_CHANGE.md",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/PROTOCOL_CHANGE.md",
+      "bytes": 1640,
+      "sha256": "7ddbffd4cd555f15c5771d1b8b2f2b833a9578a26008129c6b2b9395f256cc51",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/prior_attempt/focused_cpu_checks.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/focused_cpu_checks.json",
+      "bytes": 408,
+      "sha256": "da5e99da6659384758cecc1e9ccf7f9b9a8c8025f53ed083f828a350d9b6dbf6",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/prior_attempt/resume_failure_diagnosis.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/resume_failure_diagnosis.json",
+      "bytes": 52533,
+      "sha256": "5c82d3a3ed8a4411723167c73b702f425b3b9a2339e26957f85e6e06d2b39252",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/prior_attempt/resume_deterministic_diagnosis.json",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/resume_deterministic_diagnosis.json",
+      "bytes": 990,
+      "sha256": "552affeef070e7b457f522a4fa6169495e38cdf6015ea9f449763ce007655052",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/prior_attempt/preflight_failed.log",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/preflight.log",
+      "bytes": 2752,
+      "sha256": "58b8913b54eb18821f92a37d30d802400cd7e23e347ff773047024420a9d7bc9",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/protocol_reference/05_task2_research_protocol_v2.md",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/protocol_reference/05_task2_research_protocol_v2.md",
+      "bytes": 19145,
+      "sha256": "d258ed7ce703872f3a003697d1cf46423e310f15c92b7c97c58a08023827966a",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/protocol_reference/06_run_task2_pilot_v2.txt",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/protocol_reference/06_run_task2_pilot_v2.txt",
+      "bytes": 9152,
+      "sha256": "3016246bcd4e0cf73aa7e73b4ff45b2ecec98035bfe9cdbf71ee3e33d834a19d",
+      "kind": "byte-identical copy"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/T/per_label_predictions.csv",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/T/diagnostics.json",
+      "source_sha256": "db3bb94edac3380713edd790b8cebe924c38fed0954eb517a90d121966eaa7da",
+      "bytes": 9091,
+      "sha256": "d8b11c18cdbac0f41fd1237861b1579a050bc1823bf3ed60c5d27005166da2d7",
+      "kind": "projection of existing per_class records; no metric recomputation"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/J/per_label_predictions.csv",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/J/diagnostics.json",
+      "source_sha256": "8494b8996f4b548c858ac572931c42bf215cdb042707cb3fdf250d1bee7a178e",
+      "bytes": 9888,
+      "sha256": "b6e5ee97f7820331b821203e0d7845c6d082b3f57d5df118129bea767f7ba34a",
+      "kind": "projection of existing per_class records; no metric recomputation"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/S/per_label_predictions.csv",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/S/diagnostics.json",
+      "source_sha256": "856e7633588a7123fe9db7d501d1ac3b907f9187e75fe64439597ff3b90f0251",
+      "bytes": 9466,
+      "sha256": "1b8ab378b702428016aeb97fb80b6d75d856584e444b5077a71c9a1a3d745604",
+      "kind": "projection of existing per_class records; no metric recomputation"
+    },
+    {
+      "path": "ntcir19_fehu-master/research/task2_scope_local_v2/review/pilot_20261105-023648/tune_evaluation/P/per_label_predictions.csv",
+      "source": "ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/diagnostics.json",
+      "source_sha256": "b638038241ac105548ea437ec47f386997a1de42fa6b89e3baf9c73bd4419e19",
+      "bytes": 9546,
+      "sha256": "2c65da028594eaf9054cbf5ebef89cf738dd5c090a95347bc4da356d632422eb",
+      "kind": "projection of existing per_class records; no metric recomputation"
+    }
+  ],
+  "original_results_modified": false,
+  "new_model_execution": false,
+  "new_metric_computation": false
+}

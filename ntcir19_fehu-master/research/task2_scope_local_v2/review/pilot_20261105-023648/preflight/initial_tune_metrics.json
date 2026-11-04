@@ -1,0 +1,30 @@
+{
+  "metrics": {
+    "selected": {
+      "threshold": 0.3647775650024414,
+      "tp": 2034,
+      "fp": 355030,
+      "fn": 278,
+      "precision": 0.005696457777877356,
+      "recall": 0.879757785467128,
+      "micro_f1": 0.011319620675838119,
+      "predicted_positives": 357064
+    },
+    "fixed_05": {
+      "threshold": 0.5,
+      "tp": 775,
+      "fp": 200122,
+      "fn": 1537,
+      "precision": 0.003857698223467747,
+      "recall": 0.3352076124567474,
+      "micro_f1": 0.007627614918630572,
+      "predicted_positives": 200897
+    },
+    "micro_ap": 0.004720775098775112,
+    "candidates": 3843,
+    "label_cells": 415044,
+    "gold_positive_labels": 2312
+  },
+  "epoch": 0,
+  "eligible_for_selection": false
+}

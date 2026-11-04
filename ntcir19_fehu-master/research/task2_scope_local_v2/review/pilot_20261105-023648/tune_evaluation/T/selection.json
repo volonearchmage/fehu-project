@@ -1,0 +1,93 @@
+{
+  "epoch": 3,
+  "selected_checkpoint": "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/T/epoch_3.pt",
+  "metrics": {
+    "selected": {
+      "threshold": 0.048136770725250244,
+      "tp": 333,
+      "fp": 3647,
+      "fn": 1979,
+      "precision": 0.08366834170854272,
+      "recall": 0.1440311418685121,
+      "micro_f1": 0.10584869675778767,
+      "predicted_positives": 3980
+    },
+    "fixed_05": {
+      "threshold": 0.5,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2312,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    "micro_ap": 0.04203120450469543,
+    "candidates": 3843,
+    "label_cells": 415044,
+    "gold_positive_labels": 2312
+  },
+  "official": {
+    "selected": {
+      "task2a": {
+        "micro_f1": 0.12291767750283035,
+        "macro_f1": 0.013921016327521093,
+        "micro_precision": 0.09579026972523318,
+        "micro_recall": 0.17148014440433212,
+        "support_instances": 3843,
+        "support_gold_labels": 2216,
+        "support_pred_labels": 3967,
+        "tp": 380,
+        "fp": 3587,
+        "fn": 1836
+      },
+      "task2b": {
+        "micro_f1": 0.10584869675778767,
+        "macro_f1": 0.005087034005311233,
+        "micro_precision": 0.08366834170854272,
+        "micro_recall": 0.1440311418685121,
+        "support_instances": 3843,
+        "support_gold_labels": 2312,
+        "support_pred_labels": 3980,
+        "direction_reverse_rate": 0.01645021645021645,
+        "direction_reverse_count": 38,
+        "direction_reverse_denom_gold_excl": 2310,
+        "ambiguous_gold_values_filtered": 1,
+        "tp": 333,
+        "fp": 3647,
+        "fn": 1979
+      }
+    },
+    "fixed_05": {
+      "task2a": {
+        "micro_f1": 0.0,
+        "macro_f1": 0.0,
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "support_instances": 1533,
+        "support_gold_labels": 2216,
+        "support_pred_labels": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2216
+      },
+      "task2b": {
+        "micro_f1": 0.0,
+        "macro_f1": 0.0,
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "support_instances": 1533,
+        "support_gold_labels": 2312,
+        "support_pred_labels": 0,
+        "direction_reverse_rate": 0.0,
+        "direction_reverse_count": 0,
+        "direction_reverse_denom_gold_excl": 2310,
+        "ambiguous_gold_values_filtered": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2312
+      }
+    }
+  },
+  "raw_scores_sha256": "56d4989b1bec94eaf0bb73ee291189f715cfbedb7d87036e01db904656eb4c5b"
+}

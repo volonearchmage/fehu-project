@@ -1,0 +1,58 @@
+{
+  "ntcir19_fehu-master/research/task2_scope_local_v2/README.md": {
+    "bytes": 5023,
+    "sha256": "b56699b4a9dc5973955ddba1d1b0f9dcc5626b7985607d5c92f810e2a49654a8"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/__init__.py": {
+    "bytes": 79,
+    "sha256": "d09ceab25f033b8f99a2d36809672dd99050914a687be2eb241896270db7d7d1"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/common.py": {
+    "bytes": 9131,
+    "sha256": "a8b7b9494fc547efb5f255623174190a64d5910912ab71ad5bb599ef5a2a118c"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/config.json": {
+    "bytes": 1226,
+    "sha256": "421af40fb11394687e20c3c32ab5444ce6579e6e08b03234f7728cb01f2987b8"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/driver.py": {
+    "bytes": 1679,
+    "sha256": "cae37821a47005405a0cb25433126ed5402d5bef8bbbdeb49bf1033f05edca53"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/inputs.py": {
+    "bytes": 5834,
+    "sha256": "c1219e3f3f06bbe2477961e0649e32710bd51d584ec39f33a79503c454a26254"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/metrics.py": {
+    "bytes": 2994,
+    "sha256": "37848ed446f5e6f85d9bdb901108722e2c4376d8848daf567af6df0d8bec62df"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/monitor.py": {
+    "bytes": 3074,
+    "sha256": "44f127cc2372500508ebb419e3c7d3e3d62d40974a31ed263d992913ab5fd312"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/preflight.py": {
+    "bytes": 7667,
+    "sha256": "c61a01124fe57534f16b960dcc18a2e9d24355e2fc4c5a9c99c51ddff8b5e3d1"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/preserve.py": {
+    "bytes": 2788,
+    "sha256": "48ac491af0aee90c2125bb86030a5b8384d3aa713091faeb1243c80dab9d470d"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/report.py": {
+    "bytes": 21558,
+    "sha256": "46796ffd2cc8dd56191a3b6715c4282db27c598198a7c4486418935d9ea4654a"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/score.py": {
+    "bytes": 13810,
+    "sha256": "a558dd608a07327415172bbe4e15dfbfdfe69e5fdb1c5fe34ca67a9ed8bda941"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/test_changes.py": {
+    "bytes": 3177,
+    "sha256": "8dafd08a8bf99559802df1f9bad31ad9630a4b28aff8e7349f8318d572c4acf3"
+  },
+  "ntcir19_fehu-master/research/task2_scope_local_v2/train.py": {
+    "bytes": 10850,
+    "sha256": "de13659406c7317b7d51e6ef5f2c11ce8f6460b8d46461e36bfcdf076d349724"
+  }
+}

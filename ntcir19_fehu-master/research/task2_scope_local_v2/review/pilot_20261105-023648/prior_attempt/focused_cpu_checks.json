@@ -1,0 +1,13 @@
+{
+  "command": "PYTHONPATH=ntcir19_fehu-master /home/szf-4090/miniconda3/envs/fehu/bin/python -m unittest research.task2_scope_local_v2.test_changes -v",
+  "tests": [
+    "T_zero_article_gradient",
+    "export_precision_empty",
+    "ids_excluded_tokens_spans",
+    "threshold_ties_empty_bruteforce"
+  ],
+  "passed": 4,
+  "failed": 0,
+  "elapsed_test_seconds": 0.153,
+  "full_47_test_suite_repeated": false
+}

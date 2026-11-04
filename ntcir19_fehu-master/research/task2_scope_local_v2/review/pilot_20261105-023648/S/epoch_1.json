@@ -1,0 +1,69 @@
+{
+  "method": "S",
+  "epoch": 1,
+  "optimizer_steps": 166,
+  "epoch_updates": 166,
+  "bags": 2650,
+  "microbatches": 2650,
+  "windows": 2651,
+  "order_sha256": "fdc42e60c0a354ab61c8ed2997a9ba600916976396e4ac0c32d20db5d243ea26",
+  "ordered_bag_keys_sha256": "bea324e3299c1bce12846f4c7729b723bf5930a2a6b1d78231b3d5fbbf4a1616",
+  "fit_event_loss": 0.14366435062878255,
+  "fit_article_loss": 0.2497972957600119,
+  "fit_total_loss": 0.3934616459948274,
+  "fit_positive_bce": 2.5332823876124406,
+  "fit_negative_bce": 0.1277956569586037,
+  "fit_positive_cells": 14624,
+  "fit_loss_interpretation": "training-mode aggregate over changing parameters; bag-mean event/article, cell-mean positive/negative BCE; T article BCE logged but weight zero",
+  "tune": {
+    "selected": {
+      "threshold": 0.08882029354572296,
+      "tp": 490,
+      "fp": 7058,
+      "fn": 1822,
+      "precision": 0.06491785903550609,
+      "recall": 0.21193771626297578,
+      "micro_f1": 0.09939148073022312,
+      "predicted_positives": 7548
+    },
+    "fixed_05": {
+      "threshold": 0.5,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2312,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    "micro_ap": 0.03563969852923311,
+    "candidates": 3843,
+    "label_cells": 415044,
+    "gold_positive_labels": 2312
+  },
+  "best_selection": {
+    "epoch": 1,
+    "threshold": 0.08882029354572296,
+    "tp": 490,
+    "fp": 7058,
+    "fn": 1822,
+    "precision": 0.06491785903550609,
+    "recall": 0.21193771626297578,
+    "micro_f1": 0.09939148073022312,
+    "predicted_positives": 7548
+  },
+  "lr_next": [
+    1.4821428571428574e-05,
+    7.410714285714286e-05
+  ],
+  "forward_seconds": 38.57316392404573,
+  "backward_seconds": 208.1632964009077,
+  "optimizer_seconds": 2.963368790989989,
+  "train_seconds": 252.6868424739987,
+  "tune_and_metrics_seconds": 4.413223657998969,
+  "peak_allocated_bytes": 10280435712,
+  "peak_reserved_bytes": 12060721152,
+  "gradients_finite": true,
+  "checkpoint_seconds": 4.181046013998639,
+  "elapsed_seconds": 261.2812604319988
+}

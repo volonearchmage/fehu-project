@@ -1,0 +1,61 @@
+FEHU Task 2 全量 fit/tune 探索实验 v2
+日期：2026-11-05，Asia/Tokyo。
+
+【从GitHub取得本轮协议，先执行本节】
+仓库：https://github.com/volonearchmage/fehu-project
+协议发布分支：main。main用于取得最新文档；本轮训练继续使用Linux已有研究分支和最新本地代码。
+研究协议：https://github.com/volonearchmage/fehu-project/blob/main/ntcir19_fehu-master/docs/linux_4090_handoff/05_task2_research_protocol_v2.md
+执行指令：https://github.com/volonearchmage/fehu-project/blob/main/ntcir19_fehu-master/docs/linux_4090_handoff/06_run_task2_pilot_v2.txt
+
+先进入现有Linux Git根（此前为 /home/szf-4090/projects/fehu-project-main-2da2ea5），检查pwd、分支、HEAD、git status和origin地址，保留未提交的GPU恢复、诊断、代码及结果。Git根下面还有ntcir19_fehu-master项目目录。
+
+本节的Git同步操作只获取并读取协议，不执行git pull、reset、clean、checkout覆盖或切换main，不把研究分支替换为main。origin应指向上述仓库；若不同，用独立的参考仓库取得文档，保留现有origin和工作副本。
+
+在origin正确的现有仓库中运行 git fetch origin refs/heads/main。
+优先使用用户交接消息给出的完整发布commit SHA；若消息没有提供，则用 git rev-parse FETCH_HEAD 取得本次获取到的main SHA并立即记录。之后的所有文档读取都固定到同一SHA，不能混用不断变化的main页面。
+
+用 git show <完整发布SHA>:<仓库相对路径> 完整读取以下四份文件：
+- PROJECT_STATE.md
+- AGENTS.md
+- ntcir19_fehu-master/docs/linux_4090_handoff/05_task2_research_protocol_v2.md
+- ntcir19_fehu-master/docs/linux_4090_handoff/06_run_task2_pilot_v2.txt
+
+本机已有的AGENTS.md也要阅读；新协议对旧实验门槛和评估阶段的明确修订以本次固定版本为准。若需要落地文档，写入新建的独立参考目录，不覆盖本机已有文件；保存来源SHA和文档哈希。获取或校验失败时不能声称已读，先在只读参考副本或同SHA的GitHub raw地址重试，不退回旧04指令。
+
+取得并读完协议后直接继续下面的研究任务，不停在“同步完成”，不要求用户逐阶段再批准。代码变更、训练和本轮tune评测按本指令范围完成，保留旧结果。
+
+你继续在已经恢复的 Linux RTX4090 上完成下一轮本地研究实验。本轮目标是完整的T/J/S学习曲线和tune比较，P复用J；不是继续让8个bags达到人为门槛。常规实现自行完成，不反复询问，也不只给准备报告。遇到真实数值、数据或运行故障时保存证据并处理；低分或S没有提升不是工程故障。
+
+【接续与协议修订】
+1. 先读根PROJECT_STATE.md，再读AGENTS.md、原研究设计和最新本机代码。保留当前研究分支及未提交工作，不能用远端旧版本覆盖。
+2. 读本机GPU恢复、GPU_PRECHECK_REPORT、PRETRAINING_REPORT和
+   ntcir19_fehu-master/output/task2_scope_local_v1/round1_20261105-012630/RESULTS.md。
+   旧8bags诊断为J AP=.4833、S AP=.5201、频率基线=.06896，27个正标签；未达到旧F1/Recall门槛，但有学习信号。保留协议、日志和checkpoint，不改写为通过。
+3. 本指令明确替代04中小样本硬准入门槛和紧接holdout/DEV评分的安排。这是看到工程诊断后、全量探索开始前的公开协议修订。另写protocol_v2及变更原因、实际代码/输入哈希，不覆盖旧冻结文件。
+4. 按前述获取步骤完整阅读固定发布SHA下的研究协议05与执行指令06。本机docs尚未更新时直接git show读取，不需要把main合并进研究分支，也不要仅凭旧本地文件启动研究。
+5. 本轮只用既有fit和tune。不得读取holdout/DEV/TEST gold做模型选择或计算模型成绩；已有输入缓存可以核验哈希。保持USER_STOP，禁止付费API、外部教师、付费云GPU和系统维护。
+
+【共同输入与实现】
+6. 复用固定模型/tokenizer revision 8949b909ec900327062f0ebf497f51aef5e6f0c8 和固定grouped split。核对Linux实际render：若仍把actor_id/event_id等文档标识写入模型文本，统一移到元数据，仅保留主体名称、正文、子事件文本和文章内序号。不要声称已证明这些ID导致本次低召回。
+7. 输入若变化，新建v2缓存和manifest；保持完整候选、8192每窗预算及原聚合原则，重新核对全量span/长度/分块覆盖，记录实际最长窗口；保留旧缓存。不改变标签、正文、主体名称或split，不静默丢事件。
+8. 采用同架构同输入的T/J/S：T=事件BCE、文章权重0；J=事件BCE+独立文章BCE、lambda1；S=事件BCE+现有gold-aware范围文章损失、lambda1。T保留全文和共享head，不改成event-only。当前入口若只有J/S，自行做最小配置/CLI适配，冻结每条件实际生效的配置，不轮流改一个全局文件冒充独立冻结。
+9. 沿用已验证的FEHU CUDA解释器，不使用CPU专用.venv。已有GPU/梯度/checkpoint证据按绑定核验；只做输入/代码变化所需的针对性验证，并生成真实匹配receipt，不修改旧receipt伪造通过，不重跑无关整套测试，不再做8bag分数门槛检查。
+
+【三组真实训练】
+10. T/J/S各3epochs、开发seed11、完整2650个fit bags。每组从原始预训练模型和相同新head初始化开始，不用诊断权重；共享样本顺序和初始参数哈希。
+11. AdamW：encoder LR2e-5、head LR1e-4、weight_decay0.01、clip norm1；warmup10%后按完整3epoch总步数线性衰减。BF16、microbatch1、有效batch16、既有梯度检查点；尾组按实际bag数归一化。保持事件BCE按bag内有效事件数×108平均，文章项每bag一次。
+12. 每条件应约166updates/epoch、498updates/3epochs；三组约1494updates，实际以日志核对。顺序运行三组。epoch1是监测点，数值/覆盖正常即继续完成预定3轮，不设置F1最低门槛，不仅为S加预算。
+13. 使用可靠长进程管理和逐epoch日志/checkpoint，保留可显式从完整epoch恢复的状态与命令；不夸称支持未实现的自动resume或累积中途恢复。若需补实现，只补必要恢复和一项下一步一致性检查。实际跟踪到三组完成，不能把后台启动称作完成。
+14. 不自动延长到6轮，不增加种子、骨干、解释、采样或新损失。若3轮不足，作为本轮发现报告；之后的共同新预算要在新运行前冻结完整调度，不能给已衰减到零的旧计划随意续跑。
+
+【tune指标与选择】
+15. 每epoch记录fit事件/文章损失、正负事件BCE、LR、steps、数值状况、时间和显存。tune全部有效候选×108计算P/R/F1、TP/FP/FN、micro-AP、预测正标签数和P/R曲线；排除padding。另报固定阈值0.5的结果，频率基线只从fit标签计算。
+16. 新协议所有T/J/S/P采用同一个全局阈值的精确扫描：将tune原始有限概率降序排序，同分成组，在每组末尾累计TP/FP/FN计算micro-F1；保持score>=threshold语义并包含全空边界。概率应在[0,1]，全空边界用有限阈值2.0作为特殊决策值，不写Infinity。不受旧0.05下限限制，不做108个类阈值，不四舍五入保存阈值；保存重载及导出比较精度须与扫描一致。必要时用一个含并列分数的小例子独立核对扫描逻辑。
+17. T/J/S按最大tune Task2b micro-F1联合选择epoch和阈值，同分较高阈值，再较早epoch。P用选定J checkpoint的p_article*p_event，仅在该checkpoint上选P阈值，不另选epoch、不训练P。保存原始article/event概率和完整候选键。
+18. 在tune上生成官方格式并用固定官方评价器评分；gold必须按tune manifest从TRAIN gold匹配，不拿全部TRAIN gold配tune预测。报告Task2a/2b micro/macro F1、P/R、DRR及计数，并交叉核对。没有现成导出/评分入口就完成最小实现。
+19. 少量诊断记录S正负文章项由article或child承接max的比例、bag事件数、空候选误报、同文多主体差异和原始p_event>p_article关系。上行max后的零违反率是构造性质，不能当方法效果。不要因机制暂不符合预期而更改模型。
+
+【交付与结束】
+20. 保存新协议、全部尝试与缓存、选择记录、覆盖核验、checkpoint、复跑/恢复命令和PILOT_RESULTS.md。结果主表明确是tune开发成绩：T、J、S、P及J-T、S-J、P-J；同时给AP、固定0.5和选阈值指标、训练成本与局限。
+21. 解释曲线支持的事实：是否有学习、是否可能欠训练/过拟合、收益是否仅表现在阈值操作点、S是否比J更好。低分和负结果正常交付，不为了好看追加调参。根据结果提出下一阶段共同预算和机制验证建议，但本轮不自行展开。
+22. 本轮到真实fit/tune探索结果交付即完成。holdout保留给方法/预算/种子/选择规则冻结后的确认阶段，官方DEV和历史508子集对比留到后面。不push、不提交权重/凭据，不修改GPU系统、旧结果和USER_STOP。

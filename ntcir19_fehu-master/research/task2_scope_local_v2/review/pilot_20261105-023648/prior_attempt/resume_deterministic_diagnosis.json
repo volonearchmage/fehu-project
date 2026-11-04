@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "model": "c25f9a5192531e6268a3854519617057a20f51b22c7dc153e91cdeec9dea6236",
+      "optimizer": "dfec3868773f2bbbce93258c424cabd702ce651b6eecf1958fd82744a17e63f0",
+      "scheduler": "3b7106a8df9dc36603e138a65123b8d528fec314f08a7896f757d8ae0be1537e",
+      "rng": "7dbf16e8633dc9426a645f5d67cf83333175dc921849bedada950eadf85800e7",
+      "loss": 25.232776880264282,
+      "group_seconds": 2.500620966999122
+    },
+    {
+      "model": "c25f9a5192531e6268a3854519617057a20f51b22c7dc153e91cdeec9dea6236",
+      "optimizer": "dfec3868773f2bbbce93258c424cabd702ce651b6eecf1958fd82744a17e63f0",
+      "scheduler": "3b7106a8df9dc36603e138a65123b8d528fec314f08a7896f757d8ae0be1537e",
+      "rng": "7dbf16e8633dc9426a645f5d67cf83333175dc921849bedada950eadf85800e7",
+      "loss": 25.232776880264282,
+      "group_seconds": 2.4364376769990486
+    }
+  ],
+  "process_setting": "torch.use_deterministic_algorithms(True), CUBLAS_WORKSPACE_CONFIG=:4096:8"
+}

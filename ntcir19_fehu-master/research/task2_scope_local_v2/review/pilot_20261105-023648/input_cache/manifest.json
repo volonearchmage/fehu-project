@@ -1,0 +1,86 @@
+{
+  "source_sha256": {
+    "dataset/train/train_event_base.json": "aeb1e51716b375740b8345a30a5019a4f731d10e1d9651c3c74b6f5fa91bbc41",
+    "docs/2026-11-03_Task2_组会准备/evidence/grouped_train_split.json": "132c37c1ca6973062d507636ee39b8c1b16391479b56cdd823ce0785ae82cb8c"
+  },
+  "tokenizer_lock_sha256": "1a100a70e3953b58636ec52d806159b3e694b0f453fe590b0587120141375772",
+  "config_sha256": "421af40fb11394687e20c3c32ab5444ce6579e6e08b03234f7728cb01f2987b8",
+  "input_implementation_sha256": "c1219e3f3f06bbe2477961e0649e32710bd51d584ec39f33a79503c454a26254",
+  "labels_read": false,
+  "model_executed": false,
+  "partitions": {
+    "fit": {
+      "articles": 973,
+      "bags": 2650,
+      "events": 8515,
+      "candidates": 23783,
+      "windows": 2651,
+      "max_window_tokens": 8192,
+      "max_original_tokens": 9585,
+      "cache": "fit.chunks.jsonl.gz",
+      "sha256": "575a7b11a23e4a743a0d4b4b8e73b7853ed53c00316c34fbed9ff7d739260c18",
+      "coverage_sha256": "ddc1959ca8b100c6672e77c06f3e96293952d500a0a1a75972eb4c919c0d7644"
+    },
+    "tune": {
+      "articles": 138,
+      "bags": 398,
+      "events": 1288,
+      "candidates": 3843,
+      "windows": 398,
+      "max_window_tokens": 3874,
+      "max_original_tokens": 3874,
+      "cache": "tune.chunks.jsonl.gz",
+      "sha256": "71bf72a916eb97e667087aa56c96600b70a8b5f155ad4adcf8c16d2cb6f25099",
+      "coverage_sha256": "be4453a9ee2bf44bd9a0e7f8f08716761f8631afe568fc0cfeb937951207b689"
+    }
+  },
+  "overlength": [
+    {
+      "partition": "fit",
+      "guid": "33-2677-7-t",
+      "actor_id": "33-2677-7-t-0",
+      "actor_name": "Hacker and AI Research Communities",
+      "event_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "original_tokens": 9585,
+      "body_tokens": 9249,
+      "windows": 2,
+      "processed_tokens": 10177,
+      "owned_body_counts": [
+        7856,
+        1393
+      ],
+      "window_tokens": [
+        8192,
+        1985
+      ],
+      "article_supervision_instances": 1,
+      "event_supervision_instances": 9,
+      "token_accounting": {
+        "body": 9249,
+        "event_text": 288,
+        "model_special": 2,
+        "actor_article_header": 14,
+        "event_list_markers": 32
+      },
+      "aggregate_weights": [
+        0.8493891231484485,
+        0.15061087685155153
+      ]
+    }
+  ],
+  "excluded_partitions": [
+    "holdout",
+    "dev",
+    "test2"
+  ]
+}

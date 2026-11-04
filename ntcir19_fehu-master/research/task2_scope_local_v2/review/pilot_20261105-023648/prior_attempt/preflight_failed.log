@@ -1,0 +1,45 @@
+[transformers] [1mModernBertModel LOAD REPORT[0m from: /home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/.cache/task2_scope_local_v1/model/8949b909ec900327062f0ebf497f51aef5e6f0c8
+Key               | Status     |  | 
+------------------+------------+--+-
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] [1mModernBertModel LOAD REPORT[0m from: /home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/.cache/task2_scope_local_v1/model/8949b909ec900327062f0ebf497f51aef5e6f0c8
+Key               | Status     |  | 
+------------------+------------+--+-
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] [1mModernBertModel LOAD REPORT[0m from: /home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/.cache/task2_scope_local_v1/model/8949b909ec900327062f0ebf497f51aef5e6f0c8
+Key               | Status     |  | 
+------------------+------------+--+-
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] [1mModernBertModel LOAD REPORT[0m from: /home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/.cache/task2_scope_local_v1/model/8949b909ec900327062f0ebf497f51aef5e6f0c8
+Key               | Status     |  | 
+------------------+------------+--+-
+head.dense.weight | UNEXPECTED |  | 
+head.norm.weight  | UNEXPECTED |  | 
+decoder.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/research/task2_scope_local_v2/preflight.py", line 127, in <module>
+    execute(p.parse_args().run.resolve())
+  File "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/research/task2_scope_local_v2/preflight.py", line 101, in execute
+    if hashes != restored_hashes: raise AssertionError("Continuous/resumed next update differs")
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Continuous/resumed next update differs

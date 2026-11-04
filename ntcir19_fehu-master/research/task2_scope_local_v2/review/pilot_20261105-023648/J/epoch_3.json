@@ -1,0 +1,69 @@
+{
+  "method": "J",
+  "epoch": 3,
+  "optimizer_steps": 498,
+  "epoch_updates": 166,
+  "bags": 2650,
+  "microbatches": 2650,
+  "windows": 2651,
+  "order_sha256": "9f1c900236a1833e54ec06e1c07d431843c4011a1cbb2d94199f5ef83fa5ecfe",
+  "ordered_bag_keys_sha256": "7ff6bbe07ed3ceedc4b52b8a99f8b0966801aef9af7f047db73a62f7abb0aa42",
+  "fit_event_loss": 0.031381742738292744,
+  "fit_article_loss": 0.13709698122065023,
+  "fit_total_loss": 0.16847872389937346,
+  "fit_positive_bce": 3.6006795392581616,
+  "fit_negative_bce": 0.009021400206398784,
+  "fit_positive_cells": 14624,
+  "fit_loss_interpretation": "training-mode aggregate over changing parameters; bag-mean event/article, cell-mean positive/negative BCE; T article BCE logged but weight zero",
+  "tune": {
+    "selected": {
+      "threshold": 0.060086652636528015,
+      "tp": 451,
+      "fp": 5497,
+      "fn": 1861,
+      "precision": 0.0758238063214526,
+      "recall": 0.19506920415224913,
+      "micro_f1": 0.10920096852300241,
+      "predicted_positives": 5948
+    },
+    "fixed_05": {
+      "threshold": 0.5,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2312,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    "micro_ap": 0.04821248583551506,
+    "candidates": 3843,
+    "label_cells": 415044,
+    "gold_positive_labels": 2312
+  },
+  "best_selection": {
+    "epoch": 3,
+    "threshold": 0.060086652636528015,
+    "tp": 451,
+    "fp": 5497,
+    "fn": 1861,
+    "precision": 0.0758238063214526,
+    "recall": 0.19506920415224913,
+    "micro_f1": 0.10920096852300241,
+    "predicted_positives": 5948
+  },
+  "lr_next": [
+    0.0,
+    0.0
+  ],
+  "forward_seconds": 38.53488946996549,
+  "backward_seconds": 207.81451880196255,
+  "optimizer_seconds": 2.9424114230005216,
+  "train_seconds": 251.66833570900053,
+  "tune_and_metrics_seconds": 4.41256058199906,
+  "peak_allocated_bytes": 10279206400,
+  "peak_reserved_bytes": 12060721152,
+  "gradients_finite": true,
+  "checkpoint_seconds": 5.723337445999277,
+  "elapsed_seconds": 261.8043801090007
+}

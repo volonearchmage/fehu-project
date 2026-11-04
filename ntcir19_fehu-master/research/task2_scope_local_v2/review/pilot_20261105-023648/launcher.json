@@ -1,0 +1,25 @@
+{
+  "pid": 72858,
+  "argv": [
+    "/home/szf-4090/miniconda3/envs/fehu/bin/python",
+    "-m",
+    "research.task2_scope_local_v2.driver",
+    "--run",
+    "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution"
+  ],
+  "cwd": "/home/szf-4090/projects/fehu-project-main-2da2ea5",
+  "environment_whitelist": {
+    "PYTHONPATH": "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_HUB_DISABLE_PROGRESS_BARS": "1",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "started_unix": 1793814455.0438323,
+  "management": "detached finite subprocess session; sequential T/J/S/score; no auto restart",
+  "driver_sha256": "cae37821a47005405a0cb25433126ed5402d5bef8bbbdeb49bf1033f05edca53"
+}

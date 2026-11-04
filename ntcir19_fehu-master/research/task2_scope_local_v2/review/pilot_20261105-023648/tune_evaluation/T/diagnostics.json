@@ -1,0 +1,6602 @@
+{
+  "per_class": [
+    {
+      "index": 0,
+      "value": "0",
+      "direction": "contradictory",
+      "fit_support": 1,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 1,
+      "value": "0",
+      "direction": "aligned",
+      "fit_support": 162,
+      "tune_support": 12,
+      "ap": 0.004192234567059289,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 2,
+      "value": "1",
+      "direction": "contradictory",
+      "fit_support": 0,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 3,
+      "value": "1",
+      "direction": "aligned",
+      "fit_support": 120,
+      "tune_support": 8,
+      "ap": 0.0033151211380419337,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 4,
+      "value": "2",
+      "direction": "contradictory",
+      "fit_support": 34,
+      "tune_support": 5,
+      "ap": 0.002091568826730383,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 5,
+      "value": "2",
+      "direction": "aligned",
+      "fit_support": 45,
+      "tune_support": 7,
+      "ap": 0.001494006894621801,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 6,
+      "value": "3",
+      "direction": "contradictory",
+      "fit_support": 10,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 7,
+      "value": "3",
+      "direction": "aligned",
+      "fit_support": 62,
+      "tune_support": 7,
+      "ap": 0.004749386946856197,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 8,
+      "value": "4",
+      "direction": "contradictory",
+      "fit_support": 4,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 9,
+      "value": "4",
+      "direction": "aligned",
+      "fit_support": 33,
+      "tune_support": 6,
+      "ap": 0.0018295714781715801,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 10,
+      "value": "5",
+      "direction": "contradictory",
+      "fit_support": 274,
+      "tune_support": 60,
+      "ap": 0.0579458029933065,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 60,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 11,
+      "value": "5",
+      "direction": "aligned",
+      "fit_support": 159,
+      "tune_support": 35,
+      "ap": 0.011339335693197502,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 35,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 12,
+      "value": "6",
+      "direction": "contradictory",
+      "fit_support": 78,
+      "tune_support": 10,
+      "ap": 0.0024714154471804748,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 10,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 13,
+      "value": "6",
+      "direction": "aligned",
+      "fit_support": 33,
+      "tune_support": 8,
+      "ap": 0.003985769159652267,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 14,
+      "value": "7",
+      "direction": "contradictory",
+      "fit_support": 12,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 15,
+      "value": "7",
+      "direction": "aligned",
+      "fit_support": 25,
+      "tune_support": 6,
+      "ap": 0.08450369203538118,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 16,
+      "value": "8",
+      "direction": "contradictory",
+      "fit_support": 3,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 17,
+      "value": "8",
+      "direction": "aligned",
+      "fit_support": 18,
+      "tune_support": 2,
+      "ap": 0.0004938589237320585,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 18,
+      "value": "9",
+      "direction": "contradictory",
+      "fit_support": 1,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 19,
+      "value": "9",
+      "direction": "aligned",
+      "fit_support": 22,
+      "tune_support": 4,
+      "ap": 0.0015063504387316747,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 20,
+      "value": "10",
+      "direction": "contradictory",
+      "fit_support": 3,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 21,
+      "value": "10",
+      "direction": "aligned",
+      "fit_support": 27,
+      "tune_support": 2,
+      "ap": 0.0020717716447253816,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 22,
+      "value": "11",
+      "direction": "contradictory",
+      "fit_support": 1,
+      "tune_support": 1,
+      "ap": 0.0014492753623188406,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 23,
+      "value": "11",
+      "direction": "aligned",
+      "fit_support": 202,
+      "tune_support": 15,
+      "ap": 0.008881568517209747,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 24,
+      "value": "12",
+      "direction": "contradictory",
+      "fit_support": 57,
+      "tune_support": 9,
+      "ap": 0.0020845366833195434,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 25,
+      "value": "12",
+      "direction": "aligned",
+      "fit_support": 287,
+      "tune_support": 22,
+      "ap": 0.014038183955734803,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 5,
+      "fn": 22,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 5
+    },
+    {
+      "index": 26,
+      "value": "13",
+      "direction": "contradictory",
+      "fit_support": 34,
+      "tune_support": 8,
+      "ap": 0.0026240515165070586,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 27,
+      "value": "13",
+      "direction": "aligned",
+      "fit_support": 382,
+      "tune_support": 39,
+      "ap": 0.027954653570918316,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 5,
+      "fn": 39,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 5
+    },
+    {
+      "index": 28,
+      "value": "14",
+      "direction": "contradictory",
+      "fit_support": 2,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 29,
+      "value": "14",
+      "direction": "aligned",
+      "fit_support": 273,
+      "tune_support": 22,
+      "ap": 0.026984774397731268,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 22,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 30,
+      "value": "15",
+      "direction": "contradictory",
+      "fit_support": 4,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 31,
+      "value": "15",
+      "direction": "aligned",
+      "fit_support": 217,
+      "tune_support": 55,
+      "ap": 0.0125160714073442,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 55,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 32,
+      "value": "16",
+      "direction": "contradictory",
+      "fit_support": 19,
+      "tune_support": 4,
+      "ap": 0.007227339546597364,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 33,
+      "value": "16",
+      "direction": "aligned",
+      "fit_support": 115,
+      "tune_support": 18,
+      "ap": 0.011224609572554714,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 34,
+      "value": "17",
+      "direction": "contradictory",
+      "fit_support": 2,
+      "tune_support": 1,
+      "ap": 0.00033233632436025255,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 35,
+      "value": "17",
+      "direction": "aligned",
+      "fit_support": 25,
+      "tune_support": 3,
+      "ap": 0.0007156958928885722,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 36,
+      "value": "18",
+      "direction": "contradictory",
+      "fit_support": 57,
+      "tune_support": 5,
+      "ap": 0.0017596897102464162,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 37,
+      "value": "18",
+      "direction": "aligned",
+      "fit_support": 64,
+      "tune_support": 10,
+      "ap": 0.013603953452608647,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 10,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 38,
+      "value": "19",
+      "direction": "contradictory",
+      "fit_support": 28,
+      "tune_support": 6,
+      "ap": 0.002533678666234937,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 39,
+      "value": "19",
+      "direction": "aligned",
+      "fit_support": 166,
+      "tune_support": 15,
+      "ap": 0.005152862281967089,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 40,
+      "value": "20",
+      "direction": "contradictory",
+      "fit_support": 19,
+      "tune_support": 8,
+      "ap": 0.00616313856216393,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 41,
+      "value": "20",
+      "direction": "aligned",
+      "fit_support": 57,
+      "tune_support": 7,
+      "ap": 0.0032746445077135805,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 42,
+      "value": "21",
+      "direction": "contradictory",
+      "fit_support": 39,
+      "tune_support": 5,
+      "ap": 0.0010892939005728614,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 43,
+      "value": "21",
+      "direction": "aligned",
+      "fit_support": 198,
+      "tune_support": 38,
+      "ap": 0.00965792219981703,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 38,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 44,
+      "value": "22",
+      "direction": "contradictory",
+      "fit_support": 373,
+      "tune_support": 96,
+      "ap": 0.033411329905109276,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 96,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 45,
+      "value": "22",
+      "direction": "aligned",
+      "fit_support": 414,
+      "tune_support": 35,
+      "ap": 0.018734053391439003,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 35,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 46,
+      "value": "23",
+      "direction": "contradictory",
+      "fit_support": 5,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 47,
+      "value": "23",
+      "direction": "aligned",
+      "fit_support": 0,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 48,
+      "value": "24",
+      "direction": "contradictory",
+      "fit_support": 0,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 49,
+      "value": "24",
+      "direction": "aligned",
+      "fit_support": 3,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 50,
+      "value": "25",
+      "direction": "contradictory",
+      "fit_support": 185,
+      "tune_support": 34,
+      "ap": 0.020810578966586703,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 34,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 51,
+      "value": "25",
+      "direction": "aligned",
+      "fit_support": 94,
+      "tune_support": 24,
+      "ap": 0.011508363013143695,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 24,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 52,
+      "value": "26",
+      "direction": "contradictory",
+      "fit_support": 342,
+      "tune_support": 56,
+      "ap": 0.023614635361797476,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 56,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 53,
+      "value": "26",
+      "direction": "aligned",
+      "fit_support": 403,
+      "tune_support": 50,
+      "ap": 0.13224090350794498,
+      "threshold": 0.048136770725250244,
+      "tp": 7,
+      "fp": 7,
+      "fn": 43,
+      "precision": 0.5,
+      "recall": 0.14,
+      "micro_f1": 0.21875,
+      "predicted_positives": 14
+    },
+    {
+      "index": 54,
+      "value": "27",
+      "direction": "contradictory",
+      "fit_support": 774,
+      "tune_support": 150,
+      "ap": 0.05663285505592359,
+      "threshold": 0.048136770725250244,
+      "tp": 2,
+      "fp": 35,
+      "fn": 148,
+      "precision": 0.05405405405405406,
+      "recall": 0.013333333333333334,
+      "micro_f1": 0.0213903743315508,
+      "predicted_positives": 37
+    },
+    {
+      "index": 55,
+      "value": "27",
+      "direction": "aligned",
+      "fit_support": 408,
+      "tune_support": 95,
+      "ap": 0.03555255237975348,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 95,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 56,
+      "value": "28",
+      "direction": "contradictory",
+      "fit_support": 58,
+      "tune_support": 18,
+      "ap": 0.006052193379449506,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 57,
+      "value": "28",
+      "direction": "aligned",
+      "fit_support": 237,
+      "tune_support": 27,
+      "ap": 0.01741370801907815,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 27,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 58,
+      "value": "29",
+      "direction": "contradictory",
+      "fit_support": 31,
+      "tune_support": 3,
+      "ap": 0.0027217632086725175,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 59,
+      "value": "29",
+      "direction": "aligned",
+      "fit_support": 281,
+      "tune_support": 20,
+      "ap": 0.04739517811244848,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 20,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 60,
+      "value": "30",
+      "direction": "contradictory",
+      "fit_support": 227,
+      "tune_support": 49,
+      "ap": 0.022627268112433582,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 49,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 61,
+      "value": "30",
+      "direction": "aligned",
+      "fit_support": 294,
+      "tune_support": 45,
+      "ap": 0.03848547746975196,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 45,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 62,
+      "value": "31",
+      "direction": "contradictory",
+      "fit_support": 5,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 63,
+      "value": "31",
+      "direction": "aligned",
+      "fit_support": 21,
+      "tune_support": 1,
+      "ap": 0.0005157297576070139,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 64,
+      "value": "32",
+      "direction": "contradictory",
+      "fit_support": 48,
+      "tune_support": 15,
+      "ap": 0.003760717053004088,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 65,
+      "value": "32",
+      "direction": "aligned",
+      "fit_support": 1,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 66,
+      "value": "33",
+      "direction": "contradictory",
+      "fit_support": 51,
+      "tune_support": 4,
+      "ap": 0.0012836923190260882,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 67,
+      "value": "33",
+      "direction": "aligned",
+      "fit_support": 42,
+      "tune_support": 6,
+      "ap": 0.003560212510042838,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 68,
+      "value": "34",
+      "direction": "contradictory",
+      "fit_support": 0,
+      "tune_support": 1,
+      "ap": 0.0003748125937031484,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 69,
+      "value": "34",
+      "direction": "aligned",
+      "fit_support": 8,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 70,
+      "value": "35",
+      "direction": "contradictory",
+      "fit_support": 1,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 71,
+      "value": "35",
+      "direction": "aligned",
+      "fit_support": 15,
+      "tune_support": 2,
+      "ap": 0.004228329809725159,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 72,
+      "value": "36",
+      "direction": "contradictory",
+      "fit_support": 1,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 73,
+      "value": "36",
+      "direction": "aligned",
+      "fit_support": 8,
+      "tune_support": 3,
+      "ap": 0.0007278297197165068,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 74,
+      "value": "37",
+      "direction": "contradictory",
+      "fit_support": 26,
+      "tune_support": 8,
+      "ap": 0.001546796133640358,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 75,
+      "value": "37",
+      "direction": "aligned",
+      "fit_support": 687,
+      "tune_support": 77,
+      "ap": 0.03204363862691231,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 77,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 76,
+      "value": "38",
+      "direction": "contradictory",
+      "fit_support": 170,
+      "tune_support": 35,
+      "ap": 0.009419635318339873,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 35,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 77,
+      "value": "38",
+      "direction": "aligned",
+      "fit_support": 246,
+      "tune_support": 42,
+      "ap": 0.03504275015613415,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 42,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 78,
+      "value": "39",
+      "direction": "contradictory",
+      "fit_support": 3,
+      "tune_support": 1,
+      "ap": 0.000286368843069874,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 79,
+      "value": "39",
+      "direction": "aligned",
+      "fit_support": 13,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 80,
+      "value": "40",
+      "direction": "contradictory",
+      "fit_support": 46,
+      "tune_support": 9,
+      "ap": 0.0022839370539552042,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 81,
+      "value": "40",
+      "direction": "aligned",
+      "fit_support": 67,
+      "tune_support": 3,
+      "ap": 0.0007344062033509458,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 82,
+      "value": "41",
+      "direction": "contradictory",
+      "fit_support": 8,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 83,
+      "value": "41",
+      "direction": "aligned",
+      "fit_support": 103,
+      "tune_support": 31,
+      "ap": 0.014411524503006794,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 31,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 84,
+      "value": "42",
+      "direction": "contradictory",
+      "fit_support": 236,
+      "tune_support": 34,
+      "ap": 0.01050500025052499,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 34,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 85,
+      "value": "42",
+      "direction": "aligned",
+      "fit_support": 2315,
+      "tune_support": 319,
+      "ap": 0.11204945816797818,
+      "threshold": 0.048136770725250244,
+      "tp": 319,
+      "fp": 3524,
+      "fn": 0,
+      "precision": 0.083008066614624,
+      "recall": 1.0,
+      "micro_f1": 0.1532916866890918,
+      "predicted_positives": 3843
+    },
+    {
+      "index": 86,
+      "value": "43",
+      "direction": "contradictory",
+      "fit_support": 6,
+      "tune_support": 1,
+      "ap": 0.00033478406427854036,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 87,
+      "value": "43",
+      "direction": "aligned",
+      "fit_support": 52,
+      "tune_support": 7,
+      "ap": 0.0021352213639688174,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 88,
+      "value": "44",
+      "direction": "contradictory",
+      "fit_support": 138,
+      "tune_support": 22,
+      "ap": 0.0054250701004911195,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 22,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 89,
+      "value": "44",
+      "direction": "aligned",
+      "fit_support": 246,
+      "tune_support": 40,
+      "ap": 0.010950557681781744,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 40,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 90,
+      "value": "45",
+      "direction": "contradictory",
+      "fit_support": 365,
+      "tune_support": 63,
+      "ap": 0.03331553997627959,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 63,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 91,
+      "value": "45",
+      "direction": "aligned",
+      "fit_support": 958,
+      "tune_support": 151,
+      "ap": 0.04266910578098709,
+      "threshold": 0.048136770725250244,
+      "tp": 5,
+      "fp": 71,
+      "fn": 146,
+      "precision": 0.06578947368421052,
+      "recall": 0.033112582781456956,
+      "micro_f1": 0.04405286343612335,
+      "predicted_positives": 76
+    },
+    {
+      "index": 92,
+      "value": "46",
+      "direction": "contradictory",
+      "fit_support": 95,
+      "tune_support": 23,
+      "ap": 0.013599407127086249,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 23,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 93,
+      "value": "46",
+      "direction": "aligned",
+      "fit_support": 81,
+      "tune_support": 37,
+      "ap": 0.009027898903502522,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 37,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 94,
+      "value": "47",
+      "direction": "contradictory",
+      "fit_support": 91,
+      "tune_support": 19,
+      "ap": 0.011792339771300175,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 19,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 95,
+      "value": "47",
+      "direction": "aligned",
+      "fit_support": 285,
+      "tune_support": 92,
+      "ap": 0.038835666251246855,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 92,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 96,
+      "value": "48",
+      "direction": "contradictory",
+      "fit_support": 5,
+      "tune_support": 1,
+      "ap": 0.00032658393207054214,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 97,
+      "value": "48",
+      "direction": "aligned",
+      "fit_support": 8,
+      "tune_support": 3,
+      "ap": 0.0013109626060315946,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 98,
+      "value": "49",
+      "direction": "contradictory",
+      "fit_support": 4,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 99,
+      "value": "49",
+      "direction": "aligned",
+      "fit_support": 22,
+      "tune_support": 3,
+      "ap": 0.0014221108313425303,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 100,
+      "value": "50",
+      "direction": "contradictory",
+      "fit_support": 84,
+      "tune_support": 3,
+      "ap": 0.001599570375008697,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 101,
+      "value": "50",
+      "direction": "aligned",
+      "fit_support": 140,
+      "tune_support": 22,
+      "ap": 0.006522229883044696,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 22,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 102,
+      "value": "51",
+      "direction": "contradictory",
+      "fit_support": 5,
+      "tune_support": 2,
+      "ap": 0.0013932523657748078,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 103,
+      "value": "51",
+      "direction": "aligned",
+      "fit_support": 12,
+      "tune_support": 4,
+      "ap": 0.00231058595504077,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 104,
+      "value": "52",
+      "direction": "contradictory",
+      "fit_support": 19,
+      "tune_support": 1,
+      "ap": 0.001851851851851852,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 105,
+      "value": "52",
+      "direction": "aligned",
+      "fit_support": 232,
+      "tune_support": 39,
+      "ap": 0.010160268000237364,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 39,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 106,
+      "value": "53",
+      "direction": "contradictory",
+      "fit_support": 6,
+      "tune_support": 4,
+      "ap": 0.0010767614872504916,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 107,
+      "value": "53",
+      "direction": "aligned",
+      "fit_support": 146,
+      "tune_support": 19,
+      "ap": 0.010237060242242836,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 19,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    }
+  ],
+  "zero_fit_positive_classes": [
+    {
+      "index": 2,
+      "value": "1",
+      "direction": "contradictory",
+      "fit_support": 0,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 47,
+      "value": "23",
+      "direction": "aligned",
+      "fit_support": 0,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 48,
+      "value": "24",
+      "direction": "contradictory",
+      "fit_support": 0,
+      "tune_support": 0,
+      "ap": null,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    {
+      "index": 68,
+      "value": "34",
+      "direction": "contradictory",
+      "fit_support": 0,
+      "tune_support": 1,
+      "ap": 0.0003748125937031484,
+      "threshold": 0.048136770725250244,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    }
+  ],
+  "direction": {
+    "contradictory": {
+      "threshold": 0.048136770725250244,
+      "tp": 2,
+      "fp": 35,
+      "fn": 772,
+      "precision": 0.05405405405405406,
+      "recall": 0.002583979328165375,
+      "micro_f1": 0.004932182490752158,
+      "predicted_positives": 37
+    },
+    "aligned": {
+      "threshold": 0.048136770725250244,
+      "tp": 331,
+      "fp": 3612,
+      "fn": 1207,
+      "precision": 0.08394623383210753,
+      "recall": 0.2152145643693108,
+      "micro_f1": 0.12078087940156906,
+      "predicted_positives": 3943
+    }
+  },
+  "empty_candidates": {
+    "denominator": 2310,
+    "candidates_with_fp": 2310,
+    "fp_labels": 2367
+  },
+  "raw_event_gt_article": {
+    "numerator": 17456,
+    "denominator": 415044,
+    "rate": 0.042058191420668654,
+    "predicted_positive_numerator": 329,
+    "predicted_positive_denominator": 3980
+  },
+  "article_only": {
+    "article_label_pairs": 451,
+    "pairs_with_event_fp": 26,
+    "event_fp": 230
+  },
+  "max_responsibility": {
+    "positive": {
+      "article_only": 1690,
+      "child_only": 221,
+      "tie_article_child": 114
+    },
+    "negative": {
+      "article_only": 30642,
+      "child_only": 5878,
+      "tie_article_child": 4439
+    }
+  },
+  "max_responsibility_note": "S rule applied to raw probabilities; ties separate; no upward-max zero-violation success claim",
+  "bag_event_counts": [
+    11,
+    11,
+    11,
+    11,
+    10,
+    10,
+    10,
+    10,
+    6,
+    6,
+    10,
+    10,
+    10,
+    10,
+    7,
+    7,
+    7,
+    7,
+    6,
+    6,
+    6,
+    15,
+    15,
+    15,
+    15,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    16,
+    16,
+    16,
+    12,
+    12,
+    12,
+    12,
+    5,
+    5,
+    10,
+    10,
+    10,
+    11,
+    11,
+    11,
+    9,
+    9,
+    9,
+    9,
+    9,
+    6,
+    6,
+    6,
+    12,
+    12,
+    19,
+    19,
+    12,
+    12,
+    10,
+    10,
+    10,
+    18,
+    18,
+    18,
+    9,
+    9,
+    9,
+    12,
+    12,
+    12,
+    10,
+    10,
+    10,
+    10,
+    11,
+    11,
+    11,
+    11,
+    17,
+    17,
+    18,
+    18,
+    9,
+    9,
+    3,
+    3,
+    10,
+    10,
+    10,
+    10,
+    10,
+    5,
+    5,
+    5,
+    5,
+    8,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    8,
+    8,
+    8,
+    16,
+    16,
+    7,
+    7,
+    9,
+    9,
+    7,
+    7,
+    7,
+    13,
+    13,
+    13,
+    20,
+    20,
+    20,
+    11,
+    11,
+    11,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    11,
+    11,
+    11,
+    7,
+    7,
+    7,
+    12,
+    12,
+    12,
+    7,
+    7,
+    7,
+    7,
+    4,
+    4,
+    9,
+    9,
+    9,
+    7,
+    7,
+    7,
+    7,
+    10,
+    10,
+    10,
+    8,
+    8,
+    8,
+    8,
+    8,
+    13,
+    13,
+    13,
+    12,
+    12,
+    12,
+    12,
+    17,
+    17,
+    17,
+    17,
+    10,
+    10,
+    10,
+    12,
+    12,
+    12,
+    12,
+    12,
+    18,
+    18,
+    18,
+    18,
+    10,
+    10,
+    12,
+    12,
+    8,
+    8,
+    8,
+    8,
+    11,
+    11,
+    11,
+    11,
+    11,
+    7,
+    7,
+    8,
+    8,
+    8,
+    12,
+    12,
+    12,
+    5,
+    5,
+    10,
+    10,
+    10,
+    10,
+    10,
+    3,
+    3,
+    17,
+    17,
+    17,
+    17,
+    9,
+    9,
+    9,
+    9,
+    9,
+    6,
+    6,
+    6,
+    2,
+    2,
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    5,
+    5,
+    7,
+    7,
+    7,
+    7,
+    7,
+    12,
+    12,
+    12,
+    3,
+    3,
+    7,
+    7,
+    5,
+    5,
+    23,
+    23,
+    23,
+    23,
+    23,
+    11,
+    11,
+    11,
+    11,
+    6,
+    6,
+    6,
+    10,
+    10,
+    10,
+    15,
+    15,
+    7,
+    7,
+    7,
+    11,
+    11,
+    11,
+    10,
+    10,
+    12,
+    12,
+    2,
+    8,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    17,
+    17,
+    7,
+    7,
+    10,
+    10,
+    14,
+    14,
+    14,
+    14,
+    8,
+    8,
+    17,
+    17,
+    3,
+    3,
+    3,
+    3,
+    7,
+    8,
+    11,
+    11,
+    11,
+    11,
+    10,
+    10,
+    10,
+    10,
+    15,
+    15,
+    11,
+    11,
+    11,
+    11,
+    3,
+    3,
+    3,
+    15,
+    15,
+    15,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    10,
+    10,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    6,
+    6,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    11,
+    11,
+    11,
+    11,
+    5,
+    5,
+    13,
+    13,
+    13,
+    13,
+    7,
+    7,
+    13,
+    13,
+    13,
+    5,
+    10,
+    10,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    2,
+    2,
+    8,
+    8,
+    8
+  ],
+  "multi_actor_pairs": [
+    {
+      "guid": "0-4299-6-1",
+      "actors": [
+        "0-4299-6-1-0",
+        "0-4299-6-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.494717572630706e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4299-6-1",
+      "actors": [
+        "0-4299-6-1-0",
+        "0-4299-6-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.0461665159028638e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4299-6-1",
+      "actors": [
+        "0-4299-6-1-0",
+        "0-4299-6-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.834928450853523e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4299-6-1",
+      "actors": [
+        "0-4299-6-1-1",
+        "0-4299-6-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.323745445398495e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4299-6-1",
+      "actors": [
+        "0-4299-6-1-1",
+        "0-4299-6-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 5.3187392004107056e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4299-6-1",
+      "actors": [
+        "0-4299-6-1-2",
+        "0-4299-6-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.914148460002773e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4299-6-2",
+      "actors": [
+        "0-4299-6-2-0",
+        "0-4299-6-2-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 5.4969127382651934e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-2",
+      "actors": [
+        "0-4299-6-2-0",
+        "0-4299-6-2-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.416149523523119e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-2",
+      "actors": [
+        "0-4299-6-2-0",
+        "0-4299-6-2-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.310756630729884e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-2",
+      "actors": [
+        "0-4299-6-2-1",
+        "0-4299-6-2-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.287190839829337e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-2",
+      "actors": [
+        "0-4299-6-2-1",
+        "0-4299-6-2-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 6.967042815328265e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-2",
+      "actors": [
+        "0-4299-6-2-2",
+        "0-4299-6-2-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 6.21138523220671e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-5",
+      "actors": [
+        "0-4299-6-5-0",
+        "0-4299-6-5-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 5.549405838713556e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4299-6-6",
+      "actors": [
+        "0-4299-6-6-0",
+        "0-4299-6-6-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.648193545544658e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-6",
+      "actors": [
+        "0-4299-6-6-0",
+        "0-4299-6-6-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.4097133148289116e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-6",
+      "actors": [
+        "0-4299-6-6-0",
+        "0-4299-6-6-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.462677414063364e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-6",
+      "actors": [
+        "0-4299-6-6-1",
+        "0-4299-6-6-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.861030720010469e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-6",
+      "actors": [
+        "0-4299-6-6-1",
+        "0-4299-6-6-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.43064948841412e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4299-6-6",
+      "actors": [
+        "0-4299-6-6-2",
+        "0-4299-6-6-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.804552457209125e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4309-1-t",
+      "actors": [
+        "0-4309-1-t-0",
+        "0-4309-1-t-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 8.542916748892003e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4309-1-t",
+      "actors": [
+        "0-4309-1-t-0",
+        "0-4309-1-t-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 7.450106558660982e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4309-1-t",
+      "actors": [
+        "0-4309-1-t-0",
+        "0-4309-1-t-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.8891161599950424e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4309-1-t",
+      "actors": [
+        "0-4309-1-t-1",
+        "0-4309-1-t-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.2325692394841954e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4309-1-t",
+      "actors": [
+        "0-4309-1-t-1",
+        "0-4309-1-t-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.299249587262729e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4309-1-t",
+      "actors": [
+        "0-4309-1-t-2",
+        "0-4309-1-t-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.510898201568693e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4352-3-1",
+      "actors": [
+        "0-4352-3-1-0",
+        "0-4352-3-1-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.593452210124168e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4352-3-1",
+      "actors": [
+        "0-4352-3-1-0",
+        "0-4352-3-1-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.271573986700035e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4352-3-1",
+      "actors": [
+        "0-4352-3-1-1",
+        "0-4352-3-1-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 4.633522944964675e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4367-1-t",
+      "actors": [
+        "0-4367-1-t-0",
+        "0-4367-1-t-1"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 2.319459303247708e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4367-1-t",
+      "actors": [
+        "0-4367-1-t-0",
+        "0-4367-1-t-2"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 2.5002033784583118e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4367-1-t",
+      "actors": [
+        "0-4367-1-t-0",
+        "0-4367-1-t-3"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 2.6946134159605906e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4367-1-t",
+      "actors": [
+        "0-4367-1-t-1",
+        "0-4367-1-t-2"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 2.5043700337352483e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4367-1-t",
+      "actors": [
+        "0-4367-1-t-1",
+        "0-4367-1-t-3"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 2.881368599906794e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4367-1-t",
+      "actors": [
+        "0-4367-1-t-2",
+        "0-4367-1-t-3"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 3.2276790632210947e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4371-1-t",
+      "actors": [
+        "0-4371-1-t-0",
+        "0-4371-1-t-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.018449981231242e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4371-1-t",
+      "actors": [
+        "0-4371-1-t-0",
+        "0-4371-1-t-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.087745113858815e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4371-1-t",
+      "actors": [
+        "0-4371-1-t-0",
+        "0-4371-1-t-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.61433739372943e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4371-1-t",
+      "actors": [
+        "0-4371-1-t-1",
+        "0-4371-1-t-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.896516692729805e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4371-1-t",
+      "actors": [
+        "0-4371-1-t-1",
+        "0-4371-1-t-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.567272690443874e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4371-1-t",
+      "actors": [
+        "0-4371-1-t-2",
+        "0-4371-1-t-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.3172436933102154e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4371-2-t",
+      "actors": [
+        "0-4371-2-t-0",
+        "0-4371-2-t-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.718160959478054e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4371-2-t",
+      "actors": [
+        "0-4371-2-t-0",
+        "0-4371-2-t-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.091009927663469e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4371-2-t",
+      "actors": [
+        "0-4371-2-t-1",
+        "0-4371-2-t-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.90291783669791e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4372-1-t",
+      "actors": [
+        "0-4372-1-t-0",
+        "0-4372-1-t-1"
+      ],
+      "candidates": 16,
+      "mean_absolute_raw_probability_difference": 3.9439607428869715e-05,
+      "identical_prediction_candidates": 16
+    },
+    {
+      "guid": "0-4372-1-t",
+      "actors": [
+        "0-4372-1-t-0",
+        "0-4372-1-t-2"
+      ],
+      "candidates": 16,
+      "mean_absolute_raw_probability_difference": 3.1190308854328815e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4372-1-t",
+      "actors": [
+        "0-4372-1-t-1",
+        "0-4372-1-t-2"
+      ],
+      "candidates": 16,
+      "mean_absolute_raw_probability_difference": 3.975599402447524e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "0-4393-2-t",
+      "actors": [
+        "0-4393-2-t-0",
+        "0-4393-2-t-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.8734375923199372e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4393-2-t",
+      "actors": [
+        "0-4393-2-t-0",
+        "0-4393-2-t-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.8825217511585372e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4393-2-t",
+      "actors": [
+        "0-4393-2-t-0",
+        "0-4393-2-t-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.5431778924007913e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4393-2-t",
+      "actors": [
+        "0-4393-2-t-1",
+        "0-4393-2-t-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.289599551885377e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4393-2-t",
+      "actors": [
+        "0-4393-2-t-1",
+        "0-4393-2-t-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.8965094787525703e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4393-2-t",
+      "actors": [
+        "0-4393-2-t-2",
+        "0-4393-2-t-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.3368297015750824e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4397-2-1",
+      "actors": [
+        "0-4397-2-1-0",
+        "0-4397-2-1-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 0.0002012460912939989,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "0-4403-1-1",
+      "actors": [
+        "0-4403-1-1-0",
+        "0-4403-1-1-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.8451138253634174e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4403-1-1",
+      "actors": [
+        "0-4403-1-1-0",
+        "0-4403-1-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.636760779449509e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4403-1-1",
+      "actors": [
+        "0-4403-1-1-1",
+        "0-4403-1-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.872419586819079e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4403-3-1",
+      "actors": [
+        "0-4403-3-1-0",
+        "0-4403-3-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 5.179102887691121e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4403-3-1",
+      "actors": [
+        "0-4403-3-1-0",
+        "0-4403-3-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.929481744023059e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4403-3-1",
+      "actors": [
+        "0-4403-3-1-1",
+        "0-4403-3-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.1815901961528794e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4405-2-1",
+      "actors": [
+        "0-4405-2-1-0",
+        "0-4405-2-1-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 8.354767718172245e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4408-3-1",
+      "actors": [
+        "0-4408-3-1-0",
+        "0-4408-3-1-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.599206651032063e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4408-3-1",
+      "actors": [
+        "0-4408-3-1-0",
+        "0-4408-3-1-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.8955889278888673e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4408-3-1",
+      "actors": [
+        "0-4408-3-1-1",
+        "0-4408-3-1-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.7961486578964984e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4491-3-2",
+      "actors": [
+        "0-4491-3-2-0",
+        "0-4491-3-2-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 1.955086361389768e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4491-3-2",
+      "actors": [
+        "0-4491-3-2-0",
+        "0-4491-3-2-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 1.4317937857862331e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4491-3-2",
+      "actors": [
+        "0-4491-3-2-1",
+        "0-4491-3-2-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 1.7164756431112087e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4495-1-2",
+      "actors": [
+        "0-4495-1-2-0",
+        "0-4495-1-2-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.6863761669108183e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4507-1-1",
+      "actors": [
+        "0-4507-1-1-0",
+        "0-4507-1-1-1"
+      ],
+      "candidates": 19,
+      "mean_absolute_raw_probability_difference": 2.978362190014307e-05,
+      "identical_prediction_candidates": 19
+    },
+    {
+      "guid": "0-4565-1-1jpg",
+      "actors": [
+        "0-4565-1-1jpg-0",
+        "0-4565-1-1jpg-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.3492877831521592e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4578-1-t",
+      "actors": [
+        "0-4578-1-t-0",
+        "0-4578-1-t-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 6.850390189491143e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4578-1-t",
+      "actors": [
+        "0-4578-1-t-0",
+        "0-4578-1-t-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 5.222655055587422e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4578-1-t",
+      "actors": [
+        "0-4578-1-t-1",
+        "0-4578-1-t-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 7.016664409699539e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4621-2-2",
+      "actors": [
+        "0-4621-2-2-0",
+        "0-4621-2-2-1"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 3.5177076199722434e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "0-4621-2-2",
+      "actors": [
+        "0-4621-2-2-0",
+        "0-4621-2-2-2"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 3.318112981797928e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "0-4621-2-2",
+      "actors": [
+        "0-4621-2-2-1",
+        "0-4621-2-2-2"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 3.121115432318239e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "0-4621-2-3",
+      "actors": [
+        "0-4621-2-3-0",
+        "0-4621-2-3-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.283827977854789e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4621-2-3",
+      "actors": [
+        "0-4621-2-3-0",
+        "0-4621-2-3-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.7063208198128844e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4621-2-3",
+      "actors": [
+        "0-4621-2-3-1",
+        "0-4621-2-3-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.098746383928698e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4621-2-4",
+      "actors": [
+        "0-4621-2-4-0",
+        "0-4621-2-4-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 4.369629760607675e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4621-2-4",
+      "actors": [
+        "0-4621-2-4-0",
+        "0-4621-2-4-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 4.991937196421161e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4621-2-4",
+      "actors": [
+        "0-4621-2-4-1",
+        "0-4621-2-4-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.687675672591905e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "0-4621-2-5",
+      "actors": [
+        "0-4621-2-5-0",
+        "0-4621-2-5-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.955797604888816e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4621-2-7",
+      "actors": [
+        "0-4621-2-7-0",
+        "0-4621-2-7-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.33151601134213e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4621-2-8",
+      "actors": [
+        "0-4621-2-8-0",
+        "0-4621-2-8-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.164749313655438e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4621-2-8",
+      "actors": [
+        "0-4621-2-8-0",
+        "0-4621-2-8-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.8916304236864328e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4621-2-8",
+      "actors": [
+        "0-4621-2-8-0",
+        "0-4621-2-8-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.8864453313088276e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4621-2-8",
+      "actors": [
+        "0-4621-2-8-1",
+        "0-4621-2-8-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.7882687822736875e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4621-2-8",
+      "actors": [
+        "0-4621-2-8-1",
+        "0-4621-2-8-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.909845286260613e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4621-2-8",
+      "actors": [
+        "0-4621-2-8-2",
+        "0-4621-2-8-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.6431134033725543e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "0-4638-3-1",
+      "actors": [
+        "0-4638-3-1-0",
+        "0-4638-3-1-1"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.9228978734798243e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "0-4665-2-1",
+      "actors": [
+        "0-4665-2-1-0",
+        "0-4665-2-1-1"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 3.525064738947369e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "0-4693-1-t",
+      "actors": [
+        "0-4693-1-t-0",
+        "0-4693-1-t-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.6270085493689056e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4700-1-1",
+      "actors": [
+        "0-4700-1-1-0",
+        "0-4700-1-1-1"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 0.0005582041886094727,
+      "identical_prediction_candidates": 2
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-0",
+        "0-4745-2-1-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.819031758380502e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-0",
+        "0-4745-2-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.121662393488266e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-0",
+        "0-4745-2-1-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 5.71667771307855e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-0",
+        "0-4745-2-1-4"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.976322304207349e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-1",
+        "0-4745-2-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.009257929822154e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-1",
+        "0-4745-2-1-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 5.041567427623603e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-1",
+        "0-4745-2-1-4"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.926476465831338e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-2",
+        "0-4745-2-1-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.859716028915028e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-2",
+        "0-4745-2-1-4"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 5.0242547392069055e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-1",
+      "actors": [
+        "0-4745-2-1-3",
+        "0-4745-2-1-4"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.3479434787985625e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4745-2-3",
+      "actors": [
+        "0-4745-2-3-0",
+        "0-4745-2-3-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 4.4702763962386936e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "0-4745-2-3",
+      "actors": [
+        "0-4745-2-3-0",
+        "0-4745-2-3-2"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 4.55323861118544e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "0-4745-2-3",
+      "actors": [
+        "0-4745-2-3-0",
+        "0-4745-2-3-3"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 4.387366180135696e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "0-4745-2-3",
+      "actors": [
+        "0-4745-2-3-1",
+        "0-4745-2-3-2"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 4.4999134088693945e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "0-4745-2-3",
+      "actors": [
+        "0-4745-2-3-1",
+        "0-4745-2-3-3"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 5.1534683788540186e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "0-4745-2-3",
+      "actors": [
+        "0-4745-2-3-2",
+        "0-4745-2-3-3"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 4.88184215673418e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "0-4745-2-4",
+      "actors": [
+        "0-4745-2-4-0",
+        "0-4745-2-4-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 2.8734176508064762e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4745-2-4",
+      "actors": [
+        "0-4745-2-4-0",
+        "0-4745-2-4-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 2.9513805943511046e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4745-2-4",
+      "actors": [
+        "0-4745-2-4-0",
+        "0-4745-2-4-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 4.0061750917596294e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4745-2-4",
+      "actors": [
+        "0-4745-2-4-1",
+        "0-4745-2-4-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 2.359607303030013e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4745-2-4",
+      "actors": [
+        "0-4745-2-4-1",
+        "0-4745-2-4-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.103925209197095e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4745-2-4",
+      "actors": [
+        "0-4745-2-4-2",
+        "0-4745-2-4-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.6419210152450466e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4745-2-5",
+      "actors": [
+        "0-4745-2-5-0",
+        "0-4745-2-5-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.1753507546326586e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4745-2-5",
+      "actors": [
+        "0-4745-2-5-0",
+        "0-4745-2-5-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.122759501405415e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4745-2-5",
+      "actors": [
+        "0-4745-2-5-0",
+        "0-4745-2-5-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.0402992028033446e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4745-2-5",
+      "actors": [
+        "0-4745-2-5-1",
+        "0-4745-2-5-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.4470145160741316e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4745-2-5",
+      "actors": [
+        "0-4745-2-5-1",
+        "0-4745-2-5-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.2182627124243746e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "0-4745-2-5",
+      "actors": [
+        "0-4745-2-5-2",
+        "0-4745-2-5-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.59834813607965e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4765-1-1",
+      "actors": [
+        "0-4765-1-1-0",
+        "0-4765-1-1-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 5.319384778246146e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4765-1-1",
+      "actors": [
+        "0-4765-1-1-0",
+        "0-4765-1-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 7.6559538191995e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4765-1-1",
+      "actors": [
+        "0-4765-1-1-1",
+        "0-4765-1-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 6.2151223311149e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4765-1-2",
+      "actors": [
+        "0-4765-1-2-0",
+        "0-4765-1-2-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 9.850625846647071e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4765-1-2",
+      "actors": [
+        "0-4765-1-2-0",
+        "0-4765-1-2-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 7.959978279864622e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4765-1-2",
+      "actors": [
+        "0-4765-1-2-1",
+        "0-4765-1-2-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 8.718813311403479e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "0-4785-9-1",
+      "actors": [
+        "0-4785-9-1-0",
+        "0-4785-9-1-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.9017810464698685e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4785-9-1",
+      "actors": [
+        "0-4785-9-1-0",
+        "0-4785-9-1-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.990052869927173e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4785-9-1",
+      "actors": [
+        "0-4785-9-1-1",
+        "0-4785-9-1-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 5.138013794850041e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "0-4832-1-t",
+      "actors": [
+        "0-4832-1-t-0",
+        "0-4832-1-t-1"
+      ],
+      "candidates": 16,
+      "mean_absolute_raw_probability_difference": 4.939381762125305e-05,
+      "identical_prediction_candidates": 16
+    },
+    {
+      "guid": "0-4842-1-1",
+      "actors": [
+        "0-4842-1-1-0",
+        "0-4842-1-1-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 2.8217935342730946e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4872-2-1",
+      "actors": [
+        "0-4872-2-1-0",
+        "0-4872-2-1-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.8215165745578096e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "0-4910-4-1",
+      "actors": [
+        "0-4910-4-1-0",
+        "0-4910-4-1-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.757150800622724e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4910-4-1",
+      "actors": [
+        "0-4910-4-1-0",
+        "0-4910-4-1-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.468481624370845e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4910-4-1",
+      "actors": [
+        "0-4910-4-1-1",
+        "0-4910-4-1-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.6019704467937274e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "0-4945-1-1",
+      "actors": [
+        "0-4945-1-1-0",
+        "0-4945-1-1-1"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 2.2959736811973557e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "0-4945-1-1",
+      "actors": [
+        "0-4945-1-1-0",
+        "0-4945-1-1-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 5.2272034979802146e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "0-4945-1-1",
+      "actors": [
+        "0-4945-1-1-1",
+        "0-4945-1-1-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 5.2068505094232746e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "0-4953-1-t",
+      "actors": [
+        "0-4953-1-t-0",
+        "0-4953-1-t-1"
+      ],
+      "candidates": 20,
+      "mean_absolute_raw_probability_difference": 3.876115264978984e-05,
+      "identical_prediction_candidates": 20
+    },
+    {
+      "guid": "0-4953-1-t",
+      "actors": [
+        "0-4953-1-t-0",
+        "0-4953-1-t-2"
+      ],
+      "candidates": 20,
+      "mean_absolute_raw_probability_difference": 3.8002579337141167e-05,
+      "identical_prediction_candidates": 20
+    },
+    {
+      "guid": "0-4953-1-t",
+      "actors": [
+        "0-4953-1-t-1",
+        "0-4953-1-t-2"
+      ],
+      "candidates": 20,
+      "mean_absolute_raw_probability_difference": 4.4733208967415895e-05,
+      "identical_prediction_candidates": 20
+    },
+    {
+      "guid": "1-14805-1-1",
+      "actors": [
+        "1-14805-1-1-0",
+        "1-14805-1-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.628275820300272e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-14805-1-1",
+      "actors": [
+        "1-14805-1-1-0",
+        "1-14805-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.688645812522883e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-14805-1-1",
+      "actors": [
+        "1-14805-1-1-1",
+        "1-14805-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.585021099920764e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-14805-1-2",
+      "actors": [
+        "1-14805-1-2-0",
+        "1-14805-1-2-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.167037530819437e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-14805-1-2",
+      "actors": [
+        "1-14805-1-2-0",
+        "1-14805-1-2-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.350316768429729e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-14805-1-2",
+      "actors": [
+        "1-14805-1-2-1",
+        "1-14805-1-2-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.5278274108820553e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-14805-1-3",
+      "actors": [
+        "1-14805-1-3-0",
+        "1-14805-1-3-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.8688286412718088e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-14805-1-3",
+      "actors": [
+        "1-14805-1-3-0",
+        "1-14805-1-3-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.5552706462388604e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14805-1-3",
+      "actors": [
+        "1-14805-1-3-1",
+        "1-14805-1-3-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.673437078473821e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14805-1-5",
+      "actors": [
+        "1-14805-1-5-0",
+        "1-14805-1-5-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.9858358530484467e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-14805-1-5",
+      "actors": [
+        "1-14805-1-5-0",
+        "1-14805-1-5-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.614918313073841e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-14805-1-5",
+      "actors": [
+        "1-14805-1-5-1",
+        "1-14805-1-5-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.2311342440338598e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-14826-2-1",
+      "actors": [
+        "1-14826-2-1-0",
+        "1-14826-2-1-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.7425205894529074e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-1",
+      "actors": [
+        "1-14826-2-1-0",
+        "1-14826-2-1-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 8.301384945365566e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-1",
+      "actors": [
+        "1-14826-2-1-1",
+        "1-14826-2-1-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.388065261842693e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-10",
+      "actors": [
+        "1-14826-2-10-0",
+        "1-14826-2-10-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.627370198707119e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14826-2-10",
+      "actors": [
+        "1-14826-2-10-0",
+        "1-14826-2-10-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.569965888849563e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14826-2-10",
+      "actors": [
+        "1-14826-2-10-1",
+        "1-14826-2-10-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.2104847035442627e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14826-2-11",
+      "actors": [
+        "1-14826-2-11-0",
+        "1-14826-2-11-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.162652206745137e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-11",
+      "actors": [
+        "1-14826-2-11-0",
+        "1-14826-2-11-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.494024555213631e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-11",
+      "actors": [
+        "1-14826-2-11-0",
+        "1-14826-2-11-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.8428844563125895e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-11",
+      "actors": [
+        "1-14826-2-11-1",
+        "1-14826-2-11-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.9001456573408435e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-11",
+      "actors": [
+        "1-14826-2-11-1",
+        "1-14826-2-11-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.3391207188106676e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-11",
+      "actors": [
+        "1-14826-2-11-2",
+        "1-14826-2-11-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.9119151000884514e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-12",
+      "actors": [
+        "1-14826-2-12-0",
+        "1-14826-2-12-1"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 4.1246467002632994e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "1-14826-2-4",
+      "actors": [
+        "1-14826-2-4-0",
+        "1-14826-2-4-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.6293626001196694e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-14826-2-4",
+      "actors": [
+        "1-14826-2-4-0",
+        "1-14826-2-4-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 5.911104632599026e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-14826-2-4",
+      "actors": [
+        "1-14826-2-4-1",
+        "1-14826-2-4-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 5.9850829406239e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-14826-2-6",
+      "actors": [
+        "1-14826-2-6-0",
+        "1-14826-2-6-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.987991635406774e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-6",
+      "actors": [
+        "1-14826-2-6-0",
+        "1-14826-2-6-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.771435953597858e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-6",
+      "actors": [
+        "1-14826-2-6-0",
+        "1-14826-2-6-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.4686783911418856e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-6",
+      "actors": [
+        "1-14826-2-6-1",
+        "1-14826-2-6-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.845305648385966e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-6",
+      "actors": [
+        "1-14826-2-6-1",
+        "1-14826-2-6-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.005717985497088e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-6",
+      "actors": [
+        "1-14826-2-6-2",
+        "1-14826-2-6-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.0786230420550856e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-14826-2-9",
+      "actors": [
+        "1-14826-2-9-0",
+        "1-14826-2-9-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.802151419153368e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-14826-2-9",
+      "actors": [
+        "1-14826-2-9-0",
+        "1-14826-2-9-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.452320806225072e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-14826-2-9",
+      "actors": [
+        "1-14826-2-9-1",
+        "1-14826-2-9-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.422090366491358e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-0",
+        "1-14859-3-t-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 6.09213348744325e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-0",
+        "1-14859-3-t-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 0.00010410836094470815,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-0",
+        "1-14859-3-t-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 0.00018291760426547153,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-0",
+        "1-14859-3-t-4"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 9.748644300055241e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-1",
+        "1-14859-3-t-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 8.902977788238786e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-1",
+        "1-14859-3-t-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 0.00018159023669863086,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-1",
+        "1-14859-3-t-4"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 0.00010009523834418764,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-2",
+        "1-14859-3-t-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 0.00022140312258098102,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-2",
+        "1-14859-3-t-4"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 0.00015025608115171995,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14859-3-t",
+      "actors": [
+        "1-14859-3-t-3",
+        "1-14859-3-t-4"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 0.00015942190408100874,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-14875-2-1",
+      "actors": [
+        "1-14875-2-1-0",
+        "1-14875-2-1-1"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 6.137878376661542e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "1-14875-2-1",
+      "actors": [
+        "1-14875-2-1-0",
+        "1-14875-2-1-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 5.132921912841382e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "1-14875-2-1",
+      "actors": [
+        "1-14875-2-1-1",
+        "1-14875-2-1-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 4.7225268344405476e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "1-14875-2-2",
+      "actors": [
+        "1-14875-2-2-0",
+        "1-14875-2-2-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 4.687965041806887e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14875-2-2",
+      "actors": [
+        "1-14875-2-2-0",
+        "1-14875-2-2-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.708097954494821e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14875-2-2",
+      "actors": [
+        "1-14875-2-2-0",
+        "1-14875-2-2-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.6624909289120866e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14875-2-2",
+      "actors": [
+        "1-14875-2-2-1",
+        "1-14875-2-2-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 5.132112341981818e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14875-2-2",
+      "actors": [
+        "1-14875-2-2-1",
+        "1-14875-2-2-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.898188717559808e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14875-2-2",
+      "actors": [
+        "1-14875-2-2-2",
+        "1-14875-2-2-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.5758196185113015e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14883-3-t",
+      "actors": [
+        "1-14883-3-t-0",
+        "1-14883-3-t-1"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.615062692628723e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-14883-3-t",
+      "actors": [
+        "1-14883-3-t-0",
+        "1-14883-3-t-2"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.80704104718458e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-14883-3-t",
+      "actors": [
+        "1-14883-3-t-0",
+        "1-14883-3-t-3"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.5883508229340085e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-14883-3-t",
+      "actors": [
+        "1-14883-3-t-1",
+        "1-14883-3-t-2"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.7874173044352862e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-14883-3-t",
+      "actors": [
+        "1-14883-3-t-1",
+        "1-14883-3-t-3"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.5551409619375413e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-14883-3-t",
+      "actors": [
+        "1-14883-3-t-2",
+        "1-14883-3-t-3"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.391857145407921e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-14979-3-1",
+      "actors": [
+        "1-14979-3-1-0",
+        "1-14979-3-1-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.7446499519067366e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-14979-3-1",
+      "actors": [
+        "1-14979-3-1-0",
+        "1-14979-3-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.6241241883124327e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-14979-3-1",
+      "actors": [
+        "1-14979-3-1-1",
+        "1-14979-3-1-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.06986264789615e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-0",
+        "1-14979-3-2-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 1.947817194669358e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-0",
+        "1-14979-3-2-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.255359384908203e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-0",
+        "1-14979-3-2-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.1345187610958093e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-0",
+        "1-14979-3-2-4"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.218655635384314e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-1",
+        "1-14979-3-2-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.1436234290415514e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-1",
+        "1-14979-3-2-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.3923944096213185e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-1",
+        "1-14979-3-2-4"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.4872939163433778e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-2",
+        "1-14979-3-2-3"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 3.096678995428158e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-2",
+        "1-14979-3-2-4"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.7127905249707744e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-2",
+      "actors": [
+        "1-14979-3-2-3",
+        "1-14979-3-2-4"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.037753609014836e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-14979-3-3",
+      "actors": [
+        "1-14979-3-3-0",
+        "1-14979-3-3-1"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 3.122038239327646e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "1-14979-3-3",
+      "actors": [
+        "1-14979-3-3-0",
+        "1-14979-3-3-2"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 2.856183140907521e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "1-14979-3-3",
+      "actors": [
+        "1-14979-3-3-0",
+        "1-14979-3-3-3"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 2.564493248884953e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "1-14979-3-3",
+      "actors": [
+        "1-14979-3-3-1",
+        "1-14979-3-3-2"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 2.970727278066247e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "1-14979-3-3",
+      "actors": [
+        "1-14979-3-3-1",
+        "1-14979-3-3-3"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 2.4995658428833625e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "1-14979-3-3",
+      "actors": [
+        "1-14979-3-3-2",
+        "1-14979-3-3-3"
+      ],
+      "candidates": 18,
+      "mean_absolute_raw_probability_difference": 3.156737128484404e-05,
+      "identical_prediction_candidates": 18
+    },
+    {
+      "guid": "1-15102-2-t",
+      "actors": [
+        "1-15102-2-t-0",
+        "1-15102-2-t-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.0919236757671804e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-15145-1-1",
+      "actors": [
+        "1-15145-1-1-0",
+        "1-15145-1-1-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 5.67049781373633e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-15145-1-3",
+      "actors": [
+        "1-15145-1-3-0",
+        "1-15145-1-3-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 5.9509812638646474e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-15145-1-4",
+      "actors": [
+        "1-15145-1-4-0",
+        "1-15145-1-4-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 5.926449362218759e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-15145-1-5",
+      "actors": [
+        "1-15145-1-5-0",
+        "1-15145-1-5-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.996165003823524e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-15145-1-6",
+      "actors": [
+        "1-15145-1-6-0",
+        "1-15145-1-6-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.600864588729849e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-15145-1-6",
+      "actors": [
+        "1-15145-1-6-0",
+        "1-15145-1-6-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 6.064771890549322e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-15145-1-6",
+      "actors": [
+        "1-15145-1-6-1",
+        "1-15145-1-6-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.4439504342859216e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "1-15238-6-t",
+      "actors": [
+        "1-15238-6-t-0",
+        "1-15238-6-t-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 6.46041435030629e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "1-15241-3-1",
+      "actors": [
+        "1-15241-3-1-0",
+        "1-15241-3-1-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 4.901495588085338e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-15241-3-1",
+      "actors": [
+        "1-15241-3-1-0",
+        "1-15241-3-1-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 2.8650769309024327e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-15241-3-1",
+      "actors": [
+        "1-15241-3-1-1",
+        "1-15241-3-1-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 5.0687374554130385e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "1-15241-3-2",
+      "actors": [
+        "1-15241-3-2-0",
+        "1-15241-3-2-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 5.69894425693129e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-15241-3-2",
+      "actors": [
+        "1-15241-3-2-0",
+        "1-15241-3-2-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 6.027103419326545e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-15241-3-2",
+      "actors": [
+        "1-15241-3-2-1",
+        "1-15241-3-2-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 4.384260539132182e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "1-15293-1-1",
+      "actors": [
+        "1-15293-1-1-0",
+        "1-15293-1-1-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 4.284541398562767e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "1-15293-1-4",
+      "actors": [
+        "1-15293-1-4-0",
+        "1-15293-1-4-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.748205408557422e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-15293-1-4",
+      "actors": [
+        "1-15293-1-4-0",
+        "1-15293-1-4-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.059685204454042e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-15293-1-4",
+      "actors": [
+        "1-15293-1-4-1",
+        "1-15293-1-4-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.90097022453254e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-15293-1-5",
+      "actors": [
+        "1-15293-1-5-0",
+        "1-15293-1-5-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.402730701258406e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "1-15551-7-t",
+      "actors": [
+        "1-15551-7-t-0",
+        "1-15551-7-t-1"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 6.727454393389232e-05,
+      "identical_prediction_candidates": 3
+    },
+    {
+      "guid": "1-15600-2-t",
+      "actors": [
+        "1-15600-2-t-0",
+        "1-15600-2-t-1"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 4.892062902686943e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-15600-2-t",
+      "actors": [
+        "1-15600-2-t-0",
+        "1-15600-2-t-2"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 3.93735370099086e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-15600-2-t",
+      "actors": [
+        "1-15600-2-t-0",
+        "1-15600-2-t-3"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 5.563794676324024e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-15600-2-t",
+      "actors": [
+        "1-15600-2-t-1",
+        "1-15600-2-t-2"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 5.8146484344812164e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-15600-2-t",
+      "actors": [
+        "1-15600-2-t-1",
+        "1-15600-2-t-3"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 8.657166949541293e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-15600-2-t",
+      "actors": [
+        "1-15600-2-t-2",
+        "1-15600-2-t-3"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 5.059526793324959e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-0",
+        "1-16084-3-2-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.277405633602613e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-0",
+        "1-16084-3-2-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.5838911044008937e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-0",
+        "1-16084-3-2-3"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.9132835565828583e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-0",
+        "1-16084-3-2-4"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.944209424560361e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-1",
+        "1-16084-3-2-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.8505047199051874e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-1",
+        "1-16084-3-2-3"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.257658439111578e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-1",
+        "1-16084-3-2-4"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.889918037352953e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-2",
+        "1-16084-3-2-3"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.5102994760954484e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-2",
+        "1-16084-3-2-4"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.548954375268347e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-2",
+      "actors": [
+        "1-16084-3-2-3",
+        "1-16084-3-2-4"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 1.933659088401193e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "1-16084-3-3",
+      "actors": [
+        "1-16084-3-3-0",
+        "1-16084-3-3-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 2.689610388457637e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "1-16084-3-3",
+      "actors": [
+        "1-16084-3-3-0",
+        "1-16084-3-3-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 2.963090244318462e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "1-16084-3-3",
+      "actors": [
+        "1-16084-3-3-1",
+        "1-16084-3-3-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.0507172607345346e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "11-22500-2-1",
+      "actors": [
+        "11-22500-2-1-0",
+        "11-22500-2-1-1"
+      ],
+      "candidates": 2,
+      "mean_absolute_raw_probability_difference": 0.0002436900659059002,
+      "identical_prediction_candidates": 1
+    },
+    {
+      "guid": "11-wiki-img/22239-1/22239-1-1",
+      "actors": [
+        "11-wiki-img/22239-1/22239-1-1-0",
+        "11-wiki-img/22239-1/22239-1-1-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.638760694072662e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "11-wiki-img/22239-1/22239-1-1",
+      "actors": [
+        "11-wiki-img/22239-1/22239-1-1-0",
+        "11-wiki-img/22239-1/22239-1-1-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 2.382134680598859e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "11-wiki-img/22239-1/22239-1-1",
+      "actors": [
+        "11-wiki-img/22239-1/22239-1-1-0",
+        "11-wiki-img/22239-1/22239-1-1-3"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.9856099052193726e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "11-wiki-img/22239-1/22239-1-1",
+      "actors": [
+        "11-wiki-img/22239-1/22239-1-1-1",
+        "11-wiki-img/22239-1/22239-1-1-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.321704634013988e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "11-wiki-img/22239-1/22239-1-1",
+      "actors": [
+        "11-wiki-img/22239-1/22239-1-1-1",
+        "11-wiki-img/22239-1/22239-1-1-3"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 4.642165983153254e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "11-wiki-img/22239-1/22239-1-1",
+      "actors": [
+        "11-wiki-img/22239-1/22239-1-1-2",
+        "11-wiki-img/22239-1/22239-1-1-3"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 4.017670747729156e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "12-wiki-img/8436-1/8436-1-1",
+      "actors": [
+        "12-wiki-img/8436-1/8436-1-1-0",
+        "12-wiki-img/8436-1/8436-1-1-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 4.8092663012169024e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "12-wiki-img/8436-1/8436-1-1",
+      "actors": [
+        "12-wiki-img/8436-1/8436-1-1-0",
+        "12-wiki-img/8436-1/8436-1-1-2"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 3.8523213071231215e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "12-wiki-img/8436-1/8436-1-1",
+      "actors": [
+        "12-wiki-img/8436-1/8436-1-1-0",
+        "12-wiki-img/8436-1/8436-1-1-3"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 5.240657138293264e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "12-wiki-img/8436-1/8436-1-1",
+      "actors": [
+        "12-wiki-img/8436-1/8436-1-1-1",
+        "12-wiki-img/8436-1/8436-1-1-2"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 1.98953298860471e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "12-wiki-img/8436-1/8436-1-1",
+      "actors": [
+        "12-wiki-img/8436-1/8436-1-1-1",
+        "12-wiki-img/8436-1/8436-1-1-3"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 2.3384992231580395e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "12-wiki-img/8436-1/8436-1-1",
+      "actors": [
+        "12-wiki-img/8436-1/8436-1-1-2",
+        "12-wiki-img/8436-1/8436-1-1-3"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 2.2909274277346278e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "13-23849-2-1",
+      "actors": [
+        "13-23849-2-1-0",
+        "13-23849-2-1-1"
+      ],
+      "candidates": 2,
+      "mean_absolute_raw_probability_difference": 0.0002459239401138836,
+      "identical_prediction_candidates": 1
+    },
+    {
+      "guid": "13-24934-3-1",
+      "actors": [
+        "13-24934-3-1-0",
+        "13-24934-3-1-1"
+      ],
+      "candidates": 2,
+      "mean_absolute_raw_probability_difference": 0.00034559254062413756,
+      "identical_prediction_candidates": 2
+    },
+    {
+      "guid": "13-wiki-img/25030-1/25030-1-1",
+      "actors": [
+        "13-wiki-img/25030-1/25030-1-1-0",
+        "13-wiki-img/25030-1/25030-1-1-1"
+      ],
+      "candidates": 2,
+      "mean_absolute_raw_probability_difference": 0.00020734897245549492,
+      "identical_prediction_candidates": 1
+    },
+    {
+      "guid": "13-wiki-img/25132-1/25132-1-1",
+      "actors": [
+        "13-wiki-img/25132-1/25132-1-1-0",
+        "13-wiki-img/25132-1/25132-1-1-1"
+      ],
+      "candidates": 2,
+      "mean_absolute_raw_probability_difference": 0.0002252562009272407,
+      "identical_prediction_candidates": 0
+    },
+    {
+      "guid": "15-26821-1-t",
+      "actors": [
+        "15-26821-1-t-0",
+        "15-26821-1-t-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 2.8748365218268225e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-0",
+        "17-27394-3-2-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.5228081436817924e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-0",
+        "17-27394-3-2-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 2.8648881688861858e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-0",
+        "17-27394-3-2-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 2.876922618178897e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-0",
+        "17-27394-3-2-4"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.3740377314240925e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-1",
+        "17-27394-3-2-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.804849930693982e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-1",
+        "17-27394-3-2-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.921662558303781e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-1",
+        "17-27394-3-2-4"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.791450896724152e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-2",
+        "17-27394-3-2-3"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.0036920357603953e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-2",
+        "17-27394-3-2-4"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.9021127991003806e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "17-27394-3-2",
+      "actors": [
+        "17-27394-3-2-3",
+        "17-27394-3-2-4"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.901057315581335e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "18-10856-4-3",
+      "actors": [
+        "18-10856-4-3-0",
+        "18-10856-4-3-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 1.5474743975820824e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "18-10856-4-3",
+      "actors": [
+        "18-10856-4-3-0",
+        "18-10856-4-3-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 1.8178326744991528e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "18-10856-4-3",
+      "actors": [
+        "18-10856-4-3-1",
+        "18-10856-4-3-2"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.3608717499343954e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "19-28339-13-t",
+      "actors": [
+        "19-28339-13-t-0",
+        "19-28339-13-t-1"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 0.00018549480879345885,
+      "identical_prediction_candidates": 3
+    },
+    {
+      "guid": "2-34165-10-t",
+      "actors": [
+        "2-34165-10-t-0",
+        "2-34165-10-t-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 2.0597176564729244e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "2-34731-6-1",
+      "actors": [
+        "2-34731-6-1-0",
+        "2-34731-6-1-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 3.240755985542718e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-0",
+        "2-34753-1-1-1"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 3.052377112486494e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-0",
+        "2-34753-1-1-2"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 2.8667377979883058e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-0",
+        "2-34753-1-1-3"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 2.5603978499288755e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-0",
+        "2-34753-1-1-4"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 3.641204209810786e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-1",
+        "2-34753-1-1-2"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 2.258404390230301e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-1",
+        "2-34753-1-1-3"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 3.029512273914056e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-1",
+        "2-34753-1-1-4"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 3.0671373333432526e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-2",
+        "2-34753-1-1-3"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 2.9017939452560328e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-2",
+        "2-34753-1-1-4"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 2.81298420884633e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-1",
+      "actors": [
+        "2-34753-1-1-3",
+        "2-34753-1-1-4"
+      ],
+      "candidates": 23,
+      "mean_absolute_raw_probability_difference": 3.584090025736328e-05,
+      "identical_prediction_candidates": 23
+    },
+    {
+      "guid": "2-34753-1-2",
+      "actors": [
+        "2-34753-1-2-0",
+        "2-34753-1-2-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.7097440802928072e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "2-34753-1-2",
+      "actors": [
+        "2-34753-1-2-0",
+        "2-34753-1-2-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.0868549100280135e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "2-34753-1-2",
+      "actors": [
+        "2-34753-1-2-0",
+        "2-34753-1-2-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.858634152352459e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "2-34753-1-2",
+      "actors": [
+        "2-34753-1-2-1",
+        "2-34753-1-2-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.935634670592531e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "2-34753-1-2",
+      "actors": [
+        "2-34753-1-2-1",
+        "2-34753-1-2-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.5204657412350477e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "2-34753-1-2",
+      "actors": [
+        "2-34753-1-2-2",
+        "2-34753-1-2-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.538427131465301e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "2-34753-1-3",
+      "actors": [
+        "2-34753-1-3-0",
+        "2-34753-1-3-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 2.8512053558873127e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "2-34753-1-3",
+      "actors": [
+        "2-34753-1-3-0",
+        "2-34753-1-3-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 1.814135567308116e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "2-34753-1-3",
+      "actors": [
+        "2-34753-1-3-1",
+        "2-34753-1-3-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 2.416631181359314e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "2-34753-1-4",
+      "actors": [
+        "2-34753-1-4-0",
+        "2-34753-1-4-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.023212682955933e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "2-34753-1-4",
+      "actors": [
+        "2-34753-1-4-0",
+        "2-34753-1-4-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.4089569709505197e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "2-34753-1-4",
+      "actors": [
+        "2-34753-1-4-1",
+        "2-34753-1-4-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.578752150000246e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "2-34776-7-1",
+      "actors": [
+        "2-34776-7-1-0",
+        "2-34776-7-1-1"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 3.207129416239942e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "21-30296-11-t",
+      "actors": [
+        "21-30296-11-t-0",
+        "21-30296-11-t-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.1560214764325236e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "21-30296-11-t",
+      "actors": [
+        "21-30296-11-t-0",
+        "21-30296-11-t-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 5.089265712297881e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "21-30296-11-t",
+      "actors": [
+        "21-30296-11-t-1",
+        "21-30296-11-t-2"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 4.622633712151871e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "23-12310-1-1",
+      "actors": [
+        "23-12310-1-1-0",
+        "23-12310-1-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 9.425544738142378e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "23-12310-1-1",
+      "actors": [
+        "23-12310-1-1-0",
+        "23-12310-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 5.62878643665839e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "23-12310-1-1",
+      "actors": [
+        "23-12310-1-1-1",
+        "23-12310-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 6.506441332327723e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "23-12348-1-t",
+      "actors": [
+        "23-12348-1-t-0",
+        "23-12348-1-t-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 2.642760933937367e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "24-31760-1-1",
+      "actors": [
+        "24-31760-1-1-0",
+        "24-31760-1-1-1"
+      ],
+      "candidates": 12,
+      "mean_absolute_raw_probability_difference": 2.626804088782749e-05,
+      "identical_prediction_candidates": 12
+    },
+    {
+      "guid": "25-3796-7-t",
+      "actors": [
+        "25-3796-7-t-0",
+        "25-3796-7-t-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 1.928492377003379e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "25-3796-7-t",
+      "actors": [
+        "25-3796-7-t-0",
+        "25-3796-7-t-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 2.9586314903335058e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "25-3796-7-t",
+      "actors": [
+        "25-3796-7-t-0",
+        "25-3796-7-t-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 4.236392433759412e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "25-3796-7-t",
+      "actors": [
+        "25-3796-7-t-1",
+        "25-3796-7-t-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.0007925117927328e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "25-3796-7-t",
+      "actors": [
+        "25-3796-7-t-1",
+        "25-3796-7-t-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 4.4830555082255696e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "25-3796-7-t",
+      "actors": [
+        "25-3796-7-t-2",
+        "25-3796-7-t-3"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.829082716374951e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "25-3935-1-t",
+      "actors": [
+        "25-3935-1-t-0",
+        "25-3935-1-t-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 5.827736446764243e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "25-3935-1-t",
+      "actors": [
+        "25-3935-1-t-0",
+        "25-3935-1-t-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.805093414776809e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "25-3935-1-t",
+      "actors": [
+        "25-3935-1-t-1",
+        "25-3935-1-t-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 5.864781269337982e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "26-13829-1-4",
+      "actors": [
+        "26-13829-1-4-0",
+        "26-13829-1-4-1"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 3.229927677155953e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "26-13829-1-5",
+      "actors": [
+        "26-13829-1-5-0",
+        "26-13829-1-5-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.320177674857732e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "3-16786-1-t",
+      "actors": [
+        "3-16786-1-t-0",
+        "3-16786-1-t-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.093901490232114e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "3-17532-6-t",
+      "actors": [
+        "3-17532-6-t-0",
+        "3-17532-6-t-1"
+      ],
+      "candidates": 14,
+      "mean_absolute_raw_probability_difference": 6.0631029892074706e-05,
+      "identical_prediction_candidates": 14
+    },
+    {
+      "guid": "3-17532-6-t",
+      "actors": [
+        "3-17532-6-t-0",
+        "3-17532-6-t-2"
+      ],
+      "candidates": 14,
+      "mean_absolute_raw_probability_difference": 5.0596685449669146e-05,
+      "identical_prediction_candidates": 14
+    },
+    {
+      "guid": "3-17532-6-t",
+      "actors": [
+        "3-17532-6-t-0",
+        "3-17532-6-t-3"
+      ],
+      "candidates": 14,
+      "mean_absolute_raw_probability_difference": 5.5868710674870285e-05,
+      "identical_prediction_candidates": 14
+    },
+    {
+      "guid": "3-17532-6-t",
+      "actors": [
+        "3-17532-6-t-1",
+        "3-17532-6-t-2"
+      ],
+      "candidates": 14,
+      "mean_absolute_raw_probability_difference": 5.0794097001137085e-05,
+      "identical_prediction_candidates": 14
+    },
+    {
+      "guid": "3-17532-6-t",
+      "actors": [
+        "3-17532-6-t-1",
+        "3-17532-6-t-3"
+      ],
+      "candidates": 14,
+      "mean_absolute_raw_probability_difference": 5.540409547008239e-05,
+      "identical_prediction_candidates": 14
+    },
+    {
+      "guid": "3-17532-6-t",
+      "actors": [
+        "3-17532-6-t-2",
+        "3-17532-6-t-3"
+      ],
+      "candidates": 14,
+      "mean_absolute_raw_probability_difference": 3.517012624008453e-05,
+      "identical_prediction_candidates": 14
+    },
+    {
+      "guid": "3-17588-6-t",
+      "actors": [
+        "3-17588-6-t-0",
+        "3-17588-6-t-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 4.1207092012714214e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "3-17650-8-t",
+      "actors": [
+        "3-17650-8-t-0",
+        "3-17650-8-t-1"
+      ],
+      "candidates": 17,
+      "mean_absolute_raw_probability_difference": 2.9299316986378744e-05,
+      "identical_prediction_candidates": 17
+    },
+    {
+      "guid": "3-18046-5-t",
+      "actors": [
+        "3-18046-5-t-0",
+        "3-18046-5-t-1"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 0.0002141093327175182,
+      "identical_prediction_candidates": 2
+    },
+    {
+      "guid": "30-1007-6-1",
+      "actors": [
+        "30-1007-6-1-0",
+        "30-1007-6-1-1"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 1.9647616513625338e-05,
+      "identical_prediction_candidates": 3
+    },
+    {
+      "guid": "4-35377-6-1",
+      "actors": [
+        "4-35377-6-1-0",
+        "4-35377-6-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.7786338278327624e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35377-6-1",
+      "actors": [
+        "4-35377-6-1-0",
+        "4-35377-6-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.309748600453439e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35377-6-1",
+      "actors": [
+        "4-35377-6-1-0",
+        "4-35377-6-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.136862136464353e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35377-6-1",
+      "actors": [
+        "4-35377-6-1-1",
+        "4-35377-6-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.751861870746671e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35377-6-1",
+      "actors": [
+        "4-35377-6-1-1",
+        "4-35377-6-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.687291249698687e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35377-6-1",
+      "actors": [
+        "4-35377-6-1-2",
+        "4-35377-6-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 4.4337011480183414e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35377-6-2",
+      "actors": [
+        "4-35377-6-2-0",
+        "4-35377-6-2-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.4598920579085606e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "4-35377-6-2",
+      "actors": [
+        "4-35377-6-2-0",
+        "4-35377-6-2-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.1784850084998954e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "4-35377-6-2",
+      "actors": [
+        "4-35377-6-2-0",
+        "4-35377-6-2-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.6141866843940485e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "4-35377-6-2",
+      "actors": [
+        "4-35377-6-2-1",
+        "4-35377-6-2-2"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.4150463222801964e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "4-35377-6-2",
+      "actors": [
+        "4-35377-6-2-1",
+        "4-35377-6-2-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.24209196892291e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "4-35377-6-2",
+      "actors": [
+        "4-35377-6-2-2",
+        "4-35377-6-2-3"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.065315216495138e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "4-35510-1-1",
+      "actors": [
+        "4-35510-1-1-0",
+        "4-35510-1-1-1"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 2.541245345060748e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "4-35540-1-1",
+      "actors": [
+        "4-35540-1-1-0",
+        "4-35540-1-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.101735664704056e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35540-1-1",
+      "actors": [
+        "4-35540-1-1-0",
+        "4-35540-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.6169068347396146e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35540-1-1",
+      "actors": [
+        "4-35540-1-1-0",
+        "4-35540-1-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.8131363738205922e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35540-1-1",
+      "actors": [
+        "4-35540-1-1-1",
+        "4-35540-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.107638513915529e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35540-1-1",
+      "actors": [
+        "4-35540-1-1-1",
+        "4-35540-1-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.3746165544537808e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35540-1-1",
+      "actors": [
+        "4-35540-1-1-2",
+        "4-35540-1-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.5864530912120685e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "4-35573-1-1",
+      "actors": [
+        "4-35573-1-1-0",
+        "4-35573-1-1-1"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 4.065573110567107e-05,
+      "identical_prediction_candidates": 3
+    },
+    {
+      "guid": "4-35573-1-1",
+      "actors": [
+        "4-35573-1-1-0",
+        "4-35573-1-1-2"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 3.0431863391932883e-05,
+      "identical_prediction_candidates": 3
+    },
+    {
+      "guid": "4-35573-1-1",
+      "actors": [
+        "4-35573-1-1-1",
+        "4-35573-1-1-2"
+      ],
+      "candidates": 3,
+      "mean_absolute_raw_probability_difference": 3.9364453074579805e-05,
+      "identical_prediction_candidates": 3
+    },
+    {
+      "guid": "4-35613-3-1",
+      "actors": [
+        "4-35613-3-1-0",
+        "4-35613-3-1-1"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 7.626973696191002e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "4-35613-3-1",
+      "actors": [
+        "4-35613-3-1-0",
+        "4-35613-3-1-2"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 6.363500663464498e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "4-35613-3-1",
+      "actors": [
+        "4-35613-3-1-1",
+        "4-35613-3-1-2"
+      ],
+      "candidates": 15,
+      "mean_absolute_raw_probability_difference": 8.564806858761765e-05,
+      "identical_prediction_candidates": 15
+    },
+    {
+      "guid": "4-35937-6-1",
+      "actors": [
+        "4-35937-6-1-0",
+        "4-35937-6-1-1"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 2.3470138667444525e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-35937-6-1",
+      "actors": [
+        "4-35937-6-1-0",
+        "4-35937-6-1-2"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 3.137983084242377e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-35937-6-1",
+      "actors": [
+        "4-35937-6-1-0",
+        "4-35937-6-1-3"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 4.2574059652569874e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-35937-6-1",
+      "actors": [
+        "4-35937-6-1-1",
+        "4-35937-6-1-2"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 3.248838469584438e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-35937-6-1",
+      "actors": [
+        "4-35937-6-1-1",
+        "4-35937-6-1-3"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 3.4944673475197136e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-35937-6-1",
+      "actors": [
+        "4-35937-6-1-2",
+        "4-35937-6-1-3"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 4.388064216645607e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-36160-1-t",
+      "actors": [
+        "4-36160-1-t-0",
+        "4-36160-1-t-1"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 4.905560692552374e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-36160-1-t",
+      "actors": [
+        "4-36160-1-t-0",
+        "4-36160-1-t-2"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 6.358422884928857e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-36160-1-t",
+      "actors": [
+        "4-36160-1-t-0",
+        "4-36160-1-t-3"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 5.347560686964748e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-36160-1-t",
+      "actors": [
+        "4-36160-1-t-1",
+        "4-36160-1-t-2"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 6.529857475672745e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-36160-1-t",
+      "actors": [
+        "4-36160-1-t-1",
+        "4-36160-1-t-3"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 6.524325120456827e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "4-36160-1-t",
+      "actors": [
+        "4-36160-1-t-2",
+        "4-36160-1-t-3"
+      ],
+      "candidates": 4,
+      "mean_absolute_raw_probability_difference": 5.4672144162597964e-05,
+      "identical_prediction_candidates": 4
+    },
+    {
+      "guid": "5-5733-2-1",
+      "actors": [
+        "5-5733-2-1-0",
+        "5-5733-2-1-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 3.6847727110229985e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "5-6001-6-1",
+      "actors": [
+        "5-6001-6-1-0",
+        "5-6001-6-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.4119384050987007e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "5-6001-6-1",
+      "actors": [
+        "5-6001-6-1-0",
+        "5-6001-6-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.6531125632857884e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "5-6001-6-1",
+      "actors": [
+        "5-6001-6-1-1",
+        "5-6001-6-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.5615492918252666e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "6-18967-2-1",
+      "actors": [
+        "6-18967-2-1-0",
+        "6-18967-2-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.373554382694302e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "6-18967-2-1",
+      "actors": [
+        "6-18967-2-1-0",
+        "6-18967-2-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.7215554975114312e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "6-18967-2-1",
+      "actors": [
+        "6-18967-2-1-0",
+        "6-18967-2-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.916091752218189e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "6-18967-2-1",
+      "actors": [
+        "6-18967-2-1-1",
+        "6-18967-2-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.136198715658024e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "6-18967-2-1",
+      "actors": [
+        "6-18967-2-1-1",
+        "6-18967-2-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.7865550860210703e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "6-18967-2-1",
+      "actors": [
+        "6-18967-2-1-2",
+        "6-18967-2-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.829588166522709e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "6-19074-1-1",
+      "actors": [
+        "6-19074-1-1-0",
+        "6-19074-1-1-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 4.5726637993393076e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "6-20078-1-t",
+      "actors": [
+        "6-20078-1-t-0",
+        "6-20078-1-t-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 5.477321375623238e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "6-20078-1-t",
+      "actors": [
+        "6-20078-1-t-0",
+        "6-20078-1-t-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 5.195771925843133e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "6-20078-1-t",
+      "actors": [
+        "6-20078-1-t-0",
+        "6-20078-1-t-3"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 5.6162983760689943e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "6-20078-1-t",
+      "actors": [
+        "6-20078-1-t-1",
+        "6-20078-1-t-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 6.906025580211002e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "6-20078-1-t",
+      "actors": [
+        "6-20078-1-t-1",
+        "6-20078-1-t-3"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 3.158621430835867e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "6-20078-1-t",
+      "actors": [
+        "6-20078-1-t-2",
+        "6-20078-1-t-3"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 6.078564114686592e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "7-36708-3-t",
+      "actors": [
+        "7-36708-3-t-0",
+        "7-36708-3-t-1"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 2.5084913888401945e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "7-36708-3-t",
+      "actors": [
+        "7-36708-3-t-0",
+        "7-36708-3-t-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 4.697357726699209e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "7-36708-3-t",
+      "actors": [
+        "7-36708-3-t-1",
+        "7-36708-3-t-2"
+      ],
+      "candidates": 9,
+      "mean_absolute_raw_probability_difference": 4.181866789161929e-05,
+      "identical_prediction_candidates": 9
+    },
+    {
+      "guid": "7-36749-1-1",
+      "actors": [
+        "7-36749-1-1-0",
+        "7-36749-1-1-1"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 5.486712790829653e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "7-36749-1-1",
+      "actors": [
+        "7-36749-1-1-0",
+        "7-36749-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.352323657276441e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "7-36749-1-1",
+      "actors": [
+        "7-36749-1-1-0",
+        "7-36749-1-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 3.428419017913416e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "7-36749-1-1",
+      "actors": [
+        "7-36749-1-1-1",
+        "7-36749-1-1-2"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 5.544798406740958e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "7-36749-1-1",
+      "actors": [
+        "7-36749-1-1-1",
+        "7-36749-1-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 5.264124167285019e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "7-36749-1-1",
+      "actors": [
+        "7-36749-1-1-2",
+        "7-36749-1-1-3"
+      ],
+      "candidates": 11,
+      "mean_absolute_raw_probability_difference": 2.9256921553567227e-05,
+      "identical_prediction_candidates": 11
+    },
+    {
+      "guid": "7-37259-1-1",
+      "actors": [
+        "7-37259-1-1-0",
+        "7-37259-1-1-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 0.0001366060856660759,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "8-6386-3-1",
+      "actors": [
+        "8-6386-3-1-0",
+        "8-6386-3-1-1"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 4.306471272453963e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6386-3-1",
+      "actors": [
+        "8-6386-3-1-0",
+        "8-6386-3-1-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 4.5029282182829185e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6386-3-1",
+      "actors": [
+        "8-6386-3-1-0",
+        "8-6386-3-1-3"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 4.499645355957536e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6386-3-1",
+      "actors": [
+        "8-6386-3-1-1",
+        "8-6386-3-1-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 3.1113901224977036e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6386-3-1",
+      "actors": [
+        "8-6386-3-1-1",
+        "8-6386-3-1-3"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 5.139281978715275e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6386-3-1",
+      "actors": [
+        "8-6386-3-1-2",
+        "8-6386-3-1-3"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 5.689603477209658e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6386-6-t",
+      "actors": [
+        "8-6386-6-t-0",
+        "8-6386-6-t-1"
+      ],
+      "candidates": 7,
+      "mean_absolute_raw_probability_difference": 3.5914849297749616e-05,
+      "identical_prediction_candidates": 7
+    },
+    {
+      "guid": "8-6585-1-t",
+      "actors": [
+        "8-6585-1-t-0",
+        "8-6585-1-t-1"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 5.482055770533101e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6585-1-t",
+      "actors": [
+        "8-6585-1-t-0",
+        "8-6585-1-t-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 9.834412473752733e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "8-6585-1-t",
+      "actors": [
+        "8-6585-1-t-1",
+        "8-6585-1-t-2"
+      ],
+      "candidates": 13,
+      "mean_absolute_raw_probability_difference": 8.953893056372845e-05,
+      "identical_prediction_candidates": 13
+    },
+    {
+      "guid": "9-20780-2-1",
+      "actors": [
+        "9-20780-2-1-0",
+        "9-20780-2-1-1"
+      ],
+      "candidates": 10,
+      "mean_absolute_raw_probability_difference": 4.330857724805052e-05,
+      "identical_prediction_candidates": 10
+    },
+    {
+      "guid": "9-21044-7-1",
+      "actors": [
+        "9-21044-7-1-0",
+        "9-21044-7-1-1"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 3.1336971787149435e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "9-21044-7-1",
+      "actors": [
+        "9-21044-7-1-0",
+        "9-21044-7-1-2"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 2.5993909393609675e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "9-21044-7-1",
+      "actors": [
+        "9-21044-7-1-1",
+        "9-21044-7-1-2"
+      ],
+      "candidates": 5,
+      "mean_absolute_raw_probability_difference": 2.1735914331791853e-05,
+      "identical_prediction_candidates": 5
+    },
+    {
+      "guid": "9-21447-7-1",
+      "actors": [
+        "9-21447-7-1-0",
+        "9-21447-7-1-1"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.414383608298836e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "9-21447-7-1",
+      "actors": [
+        "9-21447-7-1-0",
+        "9-21447-7-1-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 2.1176048095286307e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "9-21447-7-1",
+      "actors": [
+        "9-21447-7-1-1",
+        "9-21447-7-1-2"
+      ],
+      "candidates": 6,
+      "mean_absolute_raw_probability_difference": 3.319091568154823e-05,
+      "identical_prediction_candidates": 6
+    },
+    {
+      "guid": "9-21598-10-1",
+      "actors": [
+        "9-21598-10-1-0",
+        "9-21598-10-1-1"
+      ],
+      "candidates": 2,
+      "mean_absolute_raw_probability_difference": 0.00024578962970904457,
+      "identical_prediction_candidates": 0
+    },
+    {
+      "guid": "9-22051-5-t",
+      "actors": [
+        "9-22051-5-t-0",
+        "9-22051-5-t-1"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.11015317290892e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "9-22051-5-t",
+      "actors": [
+        "9-22051-5-t-0",
+        "9-22051-5-t-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 2.4918080978548256e-05,
+      "identical_prediction_candidates": 8
+    },
+    {
+      "guid": "9-22051-5-t",
+      "actors": [
+        "9-22051-5-t-1",
+        "9-22051-5-t-2"
+      ],
+      "candidates": 8,
+      "mean_absolute_raw_probability_difference": 3.391680352419994e-05,
+      "identical_prediction_candidates": 8
+    }
+  ]
+}

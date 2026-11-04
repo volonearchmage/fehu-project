@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/home/szf-4090/miniconda3/envs/fehu/bin/python",
+    "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/research/task2_prompt_baseline_v1/evaluator/official_cli.py",
+    "--gold_task2",
+    "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/tune_gold.json",
+    "--pred_task2a",
+    "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/pred_task2a.json",
+    "--pred_task2b",
+    "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/tune_evaluation/P/fixed_05/pred_task2b.json"
+  ],
+  "evaluator_sha256": "3dddbdc10a3177332f96d3362bc7688d475bf398da3959511f50ff0bc21b0d5f",
+  "returncode": 0,
+  "upstream_commit": "c27e19d97c24bd764c2ea520217dba9873fab455",
+  "upstream_change": "DEBUG=False CLI only"
+}

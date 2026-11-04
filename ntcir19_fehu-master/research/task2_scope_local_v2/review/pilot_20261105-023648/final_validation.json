@@ -1,0 +1,14 @@
+{
+  "frozen_training_scoring_binding_unchanged": true,
+  "source_syntax_valid": true,
+  "all_epoch_orders_match": true,
+  "all_initializations_match": true,
+  "checks_executed": "Read-only receipts, coverage, counters, source bindings and syntax; no additional model execution",
+  "final_git": {
+    "branch": "task2-local-4090-20261104-2033",
+    "head": "9d162c6dd8e971cd58e1e240891892de129dc62b",
+    "main": "2da2ea56d2629fb03f89dae4ac82c282dccc926c",
+    "origin": "https://github.com/volonearchmage/fehu-project.git",
+    "status": "M AGENTS.md\n M PROJECT_STATE.md\n M ntcir19_fehu-master/research/task2_scope_local_v1/README.md\n M ntcir19_fehu-master/research/task2_scope_local_v1/review/PRETRAINING_REPORT.md\n?? ntcir19_fehu-master/output/linux_handoff/\n?? ntcir19_fehu-master/output/task2_offline_verification/20261104-2033/\n?? ntcir19_fehu-master/output/task2_scope_local_v1/\n?? ntcir19_fehu-master/output/task2_scope_local_v2/\n?? ntcir19_fehu-master/research/task2_scope_local_v1/gpu_optimizer_preflight.py\n?? ntcir19_fehu-master/research/task2_scope_local_v1/learning_check.py\n?? ntcir19_fehu-master/research/task2_scope_local_v1/review/gpu_preflight_20261105.json\n?? ntcir19_fehu-master/research/task2_scope_local_v2/"
+  }
+}

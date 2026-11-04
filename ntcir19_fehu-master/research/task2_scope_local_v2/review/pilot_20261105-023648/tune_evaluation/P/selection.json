@@ -1,0 +1,93 @@
+{
+  "epoch": 3,
+  "selected_checkpoint": "/home/szf-4090/projects/fehu-project-main-2da2ea5/ntcir19_fehu-master/output/task2_scope_local_v2/pilot_20261105-023648/execution/J/epoch_3.pt",
+  "metrics": {
+    "selected": {
+      "threshold": 0.023790206760168076,
+      "tp": 468,
+      "fp": 5452,
+      "fn": 1844,
+      "precision": 0.07905405405405405,
+      "recall": 0.20242214532871972,
+      "micro_f1": 0.11370262390670553,
+      "predicted_positives": 5920
+    },
+    "fixed_05": {
+      "threshold": 0.5,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2312,
+      "precision": 0.0,
+      "recall": 0.0,
+      "micro_f1": 0.0,
+      "predicted_positives": 0
+    },
+    "micro_ap": 0.050631266908508714,
+    "candidates": 3843,
+    "label_cells": 415044,
+    "gold_positive_labels": 2312
+  },
+  "official": {
+    "selected": {
+      "task2a": {
+        "micro_f1": 0.1682051282051282,
+        "macro_f1": 0.051531374590682265,
+        "micro_precision": 0.1174785100286533,
+        "micro_recall": 0.296028880866426,
+        "support_instances": 3680,
+        "support_gold_labels": 2216,
+        "support_pred_labels": 5584,
+        "tp": 656,
+        "fp": 4928,
+        "fn": 1560
+      },
+      "task2b": {
+        "micro_f1": 0.11370262390670553,
+        "macro_f1": 0.01819066079876659,
+        "micro_precision": 0.07905405405405405,
+        "micro_recall": 0.20242214532871972,
+        "support_instances": 3680,
+        "support_gold_labels": 2312,
+        "support_pred_labels": 5920,
+        "direction_reverse_rate": 0.046753246753246755,
+        "direction_reverse_count": 108,
+        "direction_reverse_denom_gold_excl": 2310,
+        "ambiguous_gold_values_filtered": 1,
+        "tp": 468,
+        "fp": 5452,
+        "fn": 1844
+      }
+    },
+    "fixed_05": {
+      "task2a": {
+        "micro_f1": 0.0,
+        "macro_f1": 0.0,
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "support_instances": 1533,
+        "support_gold_labels": 2216,
+        "support_pred_labels": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2216
+      },
+      "task2b": {
+        "micro_f1": 0.0,
+        "macro_f1": 0.0,
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "support_instances": 1533,
+        "support_gold_labels": 2312,
+        "support_pred_labels": 0,
+        "direction_reverse_rate": 0.0,
+        "direction_reverse_count": 0,
+        "direction_reverse_denom_gold_excl": 2310,
+        "ambiguous_gold_values_filtered": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2312
+      }
+    }
+  },
+  "raw_scores_sha256": "5100a7e8fadb460571a5828c2146c3d2de2a7ed0f1d72c44dee4173cd377869e"
+}
